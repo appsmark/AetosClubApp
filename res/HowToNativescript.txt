@@ -1,13 +1,11 @@
-# Template for Nativescript apps
-
-# Orientation
+= Orientation
 Adapt App_Resources\Android\src\main\AndroidManifest.xml
 Add in section <activity
 	android:screenOrientation="portrait"
 or
 	android:screenOrientation="landscape"
 
-# Splashscreen
+= Splashscreen
 Generate from root directory with:
 	ns resources generate splashes <path to picture> --background <color>
 	ns resources generate splashes res\splashscreen.png --background yellow
@@ -22,7 +20,7 @@ Adapt App_Resources\Android\src\main\res\drawable-nodpi\splash_screen.xml
 		</item>
 	</layer-list>
 
-# Icon
+= Icon
 Generate from root directory with:
 	ns resources generate icons <path to picture>
 	ns resources generate icons res\ic_launcher.png 
@@ -35,7 +33,7 @@ Adaptive icon background
 Adapt App_Resources\Android\src\main\res\values\ic_launcher_background.xml
     <color name="ic_launcher_background">#FFFFFF</color>
 
-# App name
+= App name
 Set name in App_Resources\Android\src\main\res\values\string.xml
 	<string name="title_activity_kimera">DISPLAY NAME</string>
 	
@@ -49,7 +47,7 @@ Set name in nativescript.config.ts
   id: 'com.appsmark.paardensprong',
   
   
-# App version
+= App version
 Adapt App_Resources\Android\src\main\AndroidManifest.xml
 	android:versionCode="12000"
 	android:versionName="1.2">

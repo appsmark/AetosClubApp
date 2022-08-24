@@ -1,0 +1,1 @@
+ns build android --release --key-store-path res\aetosh11.keystore --key-store-password AppsMark --key-store-alias aetosh11 --key-store-alias-password AppsMark --copy-to res\Horsejump.apk

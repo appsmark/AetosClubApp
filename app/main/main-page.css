@@ -1,0 +1,80 @@
+.title {
+    background: #731816;
+    color:#F9B234;
+    font-size: 25vw;
+    font-weight: bold;
+}
+
+.label_team {
+    color:#F9B234;
+    font-size: 25vw;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20vw;
+}
+
+.button_menu {
+    background-color:#F9B234;
+    border-color: black;
+    border-width: 4vw;
+    border-radius: 150vw;
+    color: black;
+    padding: 15vw;
+    text-align: center;
+    font-size: 30vw;
+    font-weight: bold;
+    height:100vw;
+    width: 275vw;
+}
+
+.page_menu {
+    background: #731816;
+}
+
+.text_game {
+    color:#F9B234;
+    font-size: 30vw;
+    font-weight: bold;
+}
+
+.text_news {
+    color:#F9B234;
+    font-size: 30vw;
+    font-weight: bold;
+}
+
+.text_ranking {
+    color:#F9B234;
+    font-size: 30vw;
+    font-weight: bold;
+}
+
+.text_settings {
+    color:#F9B234;
+    font-size: 30vw;
+    font-weight: bold;
+}
+
+.text_program {
+    color:#F9B234;
+    font-size: 30vw;
+    font-weight: bold;
+}
+
+.text_item_program {
+    color:#F9B234;
+    font-size: 25vw;
+    font-weight: bold;
+}
+
+.text_item_ranking {
+    color:#F9B234;
+    font-size: 25vw;
+    font-weight: bold;
+}
+
+.text_item_news {
+    color:#F9B234;
+    font-size: 15vw;
+    font-weight: bold;
+}

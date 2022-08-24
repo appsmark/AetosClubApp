@@ -1,0 +1,97 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onLoaded" backgroundColor="#731816">
+	<ActionBar flat="true" backgroundColor="#731816">
+		<GridLayout columns="*, 10*, *">
+			<Image col="0" src="~/images/back.png" height="40vw" ontap="tapBack" visibility="{{visibility_back}}" />
+			<Label col="1" class="title" text="{{textTop}}"/>
+			<Image col="2" src="~/images/settings.png" height="40vw" ontap="tapSettings" visibility="{{visibility_button_settings}}" />
+		</GridLayout>
+	</ActionBar>
+	<GridLayout>
+		<StackLayout class="page_menu" row="0" orientation="vertical" horizontalAlignment="center" visibility="{{visibility_menu}}">
+			<Label class="label_team" text="{{textTeam}}"></Label>
+			<Button class="button_menu" text="NIEUWS" ontap="tapNews" />
+			<Button class="button_menu" text="STAND" ontap="tapRanking" />
+			<Button class="button_menu" text="PROGRAMMA" ontap="tapProgram" />
+			<Button class="button_menu" text="WEDSTRIJD" ontap="tapGame" />
+		</StackLayout>
+		<StackLayout row="0" orientation="vertical" horizontalAlignment="center" visibility="{{visibility_ranking}}">
+			<ScrollView orientation="vertical" height="100%">
+				<GridLayout rows="auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto auto, auto, auto">
+					<Label class="text_item_ranking" row="0" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" row="1" text="Neem nu deel aan het oliebollentoernooi dat komende kerstdagen wordt gespeeld. Meld je aan op www.aetos.nl" textWrap="false"/>
+					<Label class="text_item_ranking" row="2" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" row="3" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" row="4" text="Aetos  34-2" textWrap="false"/>
+					<Label class="text_item_ranking" row="5" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" row="6" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" row="7" text="Aetos  34-2" textWrap="false"/>
+					<Label class="text_item_ranking" row="8" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" row="9" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" row="10" text="Aetos  34-2" textWrap="false"/>
+					<Label class="text_item_ranking" row="11" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" row="12" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" row="13" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" row="14" text="Aetos  34-2" textWrap="false"/>
+					<Label class="text_item_ranking" row="15" text="" textWrap="false"/>
+					<Label class="text_item_ranking" row="16" text="" textWrap="false"/>
+					<Label class="text_item_ranking" row="17" text="" textWrap="false"/>
+					<Label class="text_item_ranking" row="18" text="" textWrap="false"/>
+					<Label class="text_item_ranking" row="19" text="" textWrap="false"/>
+				</GridLayout>
+			</ScrollView>">
+		</StackLayout>
+		<StackLayout row="0" orientation="vertical" horizontalAlignment="left" visibility="{{visibility_program}}">
+			<ScrollView orientation="vertical" height="100%">
+				<GridLayout rows="auto, auto,auto, auto,auto, auto,auto, auto,auto, auto,auto, auto,auto, auto, auto">
+					<Label class="text_item_program" row="0" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_program" row="1" text="Aetos  34-2" textWrap="false"/>
+					<Label class="text_item_program" row="2" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_program" row="3" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_program" row="4" text="Aetos  34-2" textWrap="false"/>
+					<Label class="text_item_program" row="5" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_program" row="6" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_program" row="7" text="Aetos  34-2" textWrap="false"/>
+					<Label class="text_item_program" row="8" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_program" row="9" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_program" row="10" text="Aetos  34-2" textWrap="false"/>
+					<Label class="text_item_program" row="11" text="Some text content follows here..." textWrap="false"/>
+				</GridLayout>
+			</ScrollView>">
+		</StackLayout>
+		<StackLayout row="0" orientation="vertical" horizontalAlignment="right" visibility="{{visibility_game}}">
+			<Label class="text_game" text="Aetos - SSS"/>
+		</StackLayout>
+		<StackLayout row="0" orientation="vertical" horizontalAlignment="center" visibility="{{visibility_news}}">
+			<ScrollView orientation="vertical" height="100%">
+				<GridLayout rows="auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto auto, auto, auto">
+					<Label class="text_item_news" row="0" text="Some text content follows here..." textWrap="true"/>
+					<Label class="text_item_news" row="1" text="Neem nu deel aan het oliebollentoernooi dat komende kerstdagen wordt gespeeld. Meld je aan op www.aetos.nl" textWrap="true"/>
+					<Label class="text_item_news" row="2" text="Some text content follows here..." textWrap="true"/>
+					<Label class="text_item_news" row="3" text="Some text content follows here..." textWrap="true"/>
+					<Label class="text_item_news" row="4" text="Neem nu deel aan het oliebollentoernooi dat komende kerstdagen wordt gespeeld. Meld je aan op www.aetos.nl" textWrap="true"/>
+					<Label class="text_item_news" row="5" text="Some text content follows here..." textWrap="true"/>
+					<Label class="text_item_news" row="6" text="Some text content follows here..." textWrap="true"/>
+					<Label class="text_item_news" row="7" text="Neem nu deel aan het oliebollentoernooi dat komende kerstdagen wordt gespeeld. Meld je aan op www.aetos.nl" textWrap="true"/>
+					<Label class="text_item_news" row="8" text="Some text content follows here..." textWrap="true"/>
+					<Label class="text_item_news" row="9" text="Some text content follows here..." textWrap="true"/>
+					<Label class="text_item_news" row="10" text="Neem nu deel aan het oliebollentoernooi dat komende kerstdagen wordt gespeeld. Meld je aan op www.aetos.nl" textWrap="true"/>
+					<Label class="text_item_news" row="11" text="Some text content follows here..." textWrap="true"/>
+					<Label class="text_item_news" row="12" text="Some text content follows here..." textWrap="true"/>
+					<Label class="text_item_news" row="13" text="Some text content follows here..." textWrap="true"/>
+					<Label class="text_item_news" row="14" text="Neem nu deel aan het oliebollentoernooi dat komende kerstdagen wordt gespeeld. Meld je aan op www.aetos.nl" textWrap="true"/>
+					<Label class="text_item_news" row="15" text="" textWrap="true"/>
+					<Label class="text_item_news" row="16" text="" textWrap="true"/>
+					<Label class="text_item_news" row="17" text="" textWrap="true"/>
+					<Label class="text_item_news" row="18" text="" textWrap="true"/>
+					<Label class="text_item_news" row="19" text="" textWrap="true"/>
+				</GridLayout>
+			</ScrollView>">
+		</StackLayout>
+		<StackLayout row="0" orientation="vertical" horizontalAlignment="center" visibility="{{visibility_settings}}">
+			<StackLayout orientation="horizontal">
+				<Button id="team_0" text="{{text_team_0}}" class="button_team" ontap="tapTeam" />
+				<Button id="team_1" text="{{text_team_1}}" class="button_team" ontap="tapTeam" />
+			</StackLayout>
+		</StackLayout>
+	</GridLayout>
+</Page>
