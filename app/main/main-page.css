@@ -5,14 +5,6 @@
     font-weight: bold;
 }
 
-.label_team {
-    color:#F9B234;
-    font-size: 25vw;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20vw;
-}
-
 .button_menu {
     background-color:#F9B234;
     border-color: black;
@@ -32,12 +24,6 @@
 }
 
 .text_game {
-    color:#F9B234;
-    font-size: 30vw;
-    font-weight: bold;
-}
-
-.text_news {
     color:#F9B234;
     font-size: 30vw;
     font-weight: bold;
@@ -75,7 +61,7 @@
 
 .text_item_news {
     color:#F9B234;
-    font-size: 15vw;
+    font-size: 35vw;
     font-weight: bold;
 }
 

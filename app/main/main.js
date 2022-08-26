@@ -64,21 +64,21 @@ export class MainGame {
 		this.hide()
 		this.viewModel.set("visibility_settings", "visible")
 		this.viewModel.set("visibility_back", "visible")
-		this.viewModel.set("visibility_button_set_team", "hidden")
+		this.viewModel.set("visibility_button_set_team", "collapsed")
 		for (var index=0; index < this.data.max_teams; index++) {
 			this.viewModel.set("background_team_" + index, "black")
 		}
 	}
 
 	hide() {
-		this.viewModel.set("visibility_back", "hidden")
-		this.viewModel.set("visibility_game", "hidden")
-		this.viewModel.set("visibility_menu", "hidden")
-		this.viewModel.set("visibility_news", "hidden")
-		this.viewModel.set("visibility_program", "hidden")
-		this.viewModel.set("visibility_ranking", "hidden")
-		this.viewModel.set("visibility_settings", "hidden")
-		this.viewModel.set("visibility_button_settings", "hidden")
+		this.viewModel.set("visibility_back", "collapsed")
+		this.viewModel.set("visibility_game", "collapsed")
+		this.viewModel.set("visibility_menu", "collapsed")
+		this.viewModel.set("visibility_news", "collapsed")
+		this.viewModel.set("visibility_program", "collapsed")
+		this.viewModel.set("visibility_ranking", "collapsed")
+		this.viewModel.set("visibility_settings", "collapsed")
+		this.viewModel.set("visibility_button_settings", "collapsed")
 	}
 
 	indicateTeam(args) {
@@ -115,14 +115,6 @@ export class MainGame {
 	
 		container.removeChildren();
 		container.addChild(this.createHtmlView());
-	}
-	
-	createHtmlView() {
-	
-		const myHtmlView = new HtmlView();
-		myHtmlView.html = "<h1>TEST</h1>";
-	
-		return myHtmlView;
 	}
 
 	rssGetFeedFor(id) {
