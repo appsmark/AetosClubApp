@@ -35,6 +35,7 @@ export class MainGame {
 		this.hide()
 		this.viewModel.set("visibility_back", "visible")
 		this.viewModel.set("visibility_program", "visible")
+		this.rssFeedProgram(this.data.teams[this.team])
 	}
 
 	game() {
@@ -42,7 +43,7 @@ export class MainGame {
 		this.hide()
 		this.viewModel.set("visibility_back", "visible")
 		this.viewModel.set("visibility_game", "visible")
-		this.rssGetFeedFor("H6")
+//		this.rssGetFeedFor(this.data.teams[this.team])
 	}
 
 	news() {
@@ -117,7 +118,7 @@ export class MainGame {
 		container.addChild(this.createHtmlView());
 	}
 
-	rssGetFeedFor(id) {
+	rssFeedProgram(id) {
 		var path
 		if (id[0] === 'H') {
 			path = "heren/";
@@ -125,13 +126,25 @@ export class MainGame {
 			path = "dames/";
 		}
 		path += id.substr(1, 2);
-		console.log("https://api.nevobo.nl/export/team/CNH8Q1U/" + path + "/programma.rss")
 		fetch("https://api.nevobo.nl/export/team/CNH8Q1U/" + path + "/programma.rss")
+		.then((response) => response.text())
 		.then((r) => {
-			this.viewModel.set("getStringResult", r);
-			this.source = r
-			console.log(this.source)
-			this.parseXMLButton()
+			var xml = r
+			var items = xml.split("<item>")
+			var index = 1
+			var new_game = ""
+			var games = []
+			do {
+				new_game = items[index].substring(items[index].indexOf(': ') + 2, items[index].indexOf(']'))
+				games[index] = [new_game.substring(items[index].indexOf('[CDATA[') + 7), new_game]
+				index++
+			}
+			while ((new_game != "") && (index < 10))
+			for (var index_game=1; index_game < 10; index_game++) {
+				console.log(games[index_game])
+				this.viewModel.set("text_item_program_date_" + index_game, games[index_game][0])
+				this.viewModel.set("text_item_program_" + index_game, games[index_game][1])
+			}
 		}).catch((e) => {
 			console.log("ERROR " + e)
 		});
@@ -201,7 +214,8 @@ export class MainGame {
 	// >> (hide)
 	
 	parseXMLButton(args) {
-//		this.source.splice(0);
+		console.log(this.source)
+		//		this.source.splice(0);
 	// << (hide)
 		this.xmlParser.parse(`
 		<Document>

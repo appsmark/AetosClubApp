@@ -75,10 +75,26 @@
 		</StackLayout>
 		<StackLayout id="container" orientation="vertical" horizontalAlignment="left" visibility="{{visibility_program}}">
 			<ScrollView orientation="vertical" height="100%">
+				<StackLayout>
+					<Label class="text_item_program" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_program" text="{{ text_item_program_date_0 }}" textWrap="false"/>
+					<Label class="text_item_program" text="{{ text_item_program_0 }}" textWrap="false"/>
+					<Label class="text_item_program" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_program" text="{{ text_item_program_date_1 }}" textWrap="false"/>
+					<Label class="text_item_program" text="{{ text_item_program_1 }}" textWrap="false"/>
+					<Label class="text_item_program" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_program" text="{{ text_item_program_2 }}" textWrap="false"/>
+					<Label class="text_item_program" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_program" text="{{ text_item_program_3 }}" textWrap="false"/>
+					<Label class="text_item_program" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_program" text="{{ text_item_program_4 }}" textWrap="false"/>
+				</StackLayout>
 			</ScrollView>">
 		</StackLayout>
 		<StackLayout orientation="vertical" horizontalAlignment="right" visibility="{{visibility_game}}">
 			<GridLayout rows="auto *" columns="*">
+               <TextView row="1" col="0" colSpan="2" text="{{ getStringResult }}" editable="false" visibility="{{ getStringResultVisible ? 'visible' : 'collapsed' }}"/>
+  
 			</GridLayout>
 		</StackLayout>
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_news}}">
