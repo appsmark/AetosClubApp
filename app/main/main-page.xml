@@ -1,4 +1,4 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onLoaded" backgroundColor="#731816">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded" backgroundColor="#731816">
 	<ActionBar flat="true" backgroundColor="#731816">
 		<GridLayout columns="*, 10*, *">
 			<Image col="0" src="~/images/back.png" height="40vw" ontap="tapBack" visibility="{{visibility_back}}" />
@@ -8,7 +8,6 @@
 	</ActionBar>
 	<GridLayout>
 		<StackLayout class="page_menu" row="0" orientation="vertical" horizontalAlignment="center" visibility="{{visibility_menu}}">
-			<Label class="label_team" text="{{textTeam}}"></Label>
 			<Button class="button_menu" text="NIEUWS" ontap="tapNews" />
 			<Button class="button_menu" text="STAND" ontap="tapRanking" />
 			<Button class="button_menu" text="PROGRAMMA" ontap="tapProgram" />
@@ -16,9 +15,60 @@
 		</StackLayout>
 		<StackLayout row="0" orientation="vertical" horizontalAlignment="center" visibility="{{visibility_ranking}}">
 			<ScrollView orientation="vertical" height="100%">
-				<GridLayout rows="auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto auto, auto, auto">
-					<Label class="text_item_ranking" row="0" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" row="1" text="Neem nu deel aan het oliebollentoernooi dat komende kerstdagen wordt gespeeld. Meld je aan op www.aetos.nl" textWrap="false"/>
+				<StackLayout>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
+					<Label class="text_item_ranking" text="-------------------------------------" textWrap="false"/>
+					<Label class="text_item_ranking" text="Neem nu deel aan het oliebollentoernooi dat komende kerstdagen wordt gespeeld. Meld je aan op www.aetos.nl" textWrap="false"/>
 					<Label class="text_item_ranking" row="2" text="Some text content follows here..." textWrap="false"/>
 					<Label class="text_item_ranking" row="3" text="Some text content follows here..." textWrap="false"/>
 					<Label class="text_item_ranking" row="4" text="Aetos  34-2" textWrap="false"/>
@@ -32,34 +82,43 @@
 					<Label class="text_item_ranking" row="12" text="Some text content follows here..." textWrap="false"/>
 					<Label class="text_item_ranking" row="13" text="Some text content follows here..." textWrap="false"/>
 					<Label class="text_item_ranking" row="14" text="Aetos  34-2" textWrap="false"/>
-					<Label class="text_item_ranking" row="15" text="" textWrap="false"/>
-					<Label class="text_item_ranking" row="16" text="" textWrap="false"/>
-					<Label class="text_item_ranking" row="17" text="" textWrap="false"/>
-					<Label class="text_item_ranking" row="18" text="" textWrap="false"/>
-					<Label class="text_item_ranking" row="19" text="" textWrap="false"/>
-				</GridLayout>
+					<Label class="text_item_ranking" row="15" text="" textWrap="false" visibility="collapse"/>
+					<Label class="text_item_ranking" row="16" text="" textWrap="false" visibility="collapse"/>
+					<Label class="text_item_ranking" row="17" text="" textWrap="false" visibility="collapse"/>
+					<Label class="text_item_ranking" row="18" text="" textWrap="false" visibility="collapse"/>
+					<Label class="text_item_ranking" row="19" text="" textWrap="false" visibility="collapse"/>
+					<Label class="text_item_ranking" text="LAST LINE" textWrap="false"/>
+				</StackLayout>
 			</ScrollView>">
 		</StackLayout>
-		<StackLayout row="0" orientation="vertical" horizontalAlignment="left" visibility="{{visibility_program}}">
+		<StackLayout id="container" row="0" orientation="vertical" horizontalAlignment="left" visibility="{{visibility_program}}">
 			<ScrollView orientation="vertical" height="100%">
-				<GridLayout rows="auto, auto,auto, auto,auto, auto,auto, auto,auto, auto,auto, auto,auto, auto, auto">
-					<Label class="text_item_program" row="0" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_program" row="1" text="Aetos  34-2" textWrap="false"/>
-					<Label class="text_item_program" row="2" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_program" row="3" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_program" row="4" text="Aetos  34-2" textWrap="false"/>
-					<Label class="text_item_program" row="5" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_program" row="6" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_program" row="7" text="Aetos  34-2" textWrap="false"/>
-					<Label class="text_item_program" row="8" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_program" row="9" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_program" row="10" text="Aetos  34-2" textWrap="false"/>
-					<Label class="text_item_program" row="11" text="Some text content follows here..." textWrap="false"/>
-				</GridLayout>
 			</ScrollView>">
 		</StackLayout>
 		<StackLayout row="0" orientation="vertical" horizontalAlignment="right" visibility="{{visibility_game}}">
-			<Label class="text_game" text="Aetos - SSS"/>
+			<GridLayout rows="auto *" columns="*">
+				<Button row="0" class="btn btn-primary btn-active" text="Parse xml" tap="parseXMLButton"/>
+				<ListView row="1" items="{{ source }}">
+					<ListView.itemTemplate>
+						<GridLayout rows="auto auto auto auto auto auto auto auto auto auto auto" columns="* *">
+							<Label row="0" col="0" text="Attribute" class="attr-label" visibility="{{ attributeName != null ? 'visible' : 'collapsed' }}" textWrap="true" />
+							<Label row="0" col="0" text="Text Result" class="text-label" visibility="{{ significantText != null ? 'visible' : 'collapsed' }}" textWrap="true" />
+							<Label row="0" col="0" text="Element tag" class="element-label" visibility="{{ (significantText === null)  (attributeName === null) ? 'visible' : 'collapsed' }}" textWrap="true" />
+
+							<Label class="p-15" row="1" col="0" text="Type" textWrap="true"/>
+							<Label class="p-15" row="1" col="1" textWrap="true" text="{{ eventType }}"/>
+							<Label class="p-15" visibility="{{ elementName != null ? 'visible' : 'collapsed' }}" row="2" col="0" text="Element Name: " textWrap="true"/>
+							<Label class="p-15" visibility="{{ elementName != null ? 'visible' : 'collapsed' }}" row="2" col="1" textWrap="true" text="{{ elementName }}"/>
+							<Label class="p-15" visibility="{{ attributeName != null ? 'visible' : 'collapsed' }}" row="3" col="0" text="Attribute Name: " textWrap="true"/>
+							<Label class="p-15" visibility="{{ attributeName != null ? 'visible' : 'collapsed' }}" row="3" col="1" textWrap="true" text="{{ attributeName }}"/>
+							<Label class="p-15" visibility="{{ result != null ? 'visible' : 'collapsed' }}" row="4" col="0" text="Result: " textWrap="true"/>
+							<Label class="p-15" visibility="{{ result != null ? 'visible' : 'collapsed' }}" row="4" col="1" textWrap="true" text="{{ result }}"/>
+							<Label class="p-15" visibility="{{ significantText != null ? 'visible' : 'collapsed' }}" row="5" col="0" text="Text result: " textWrap="true"/>
+							<Label class="p-15" visibility="{{ significantText != null ? 'visible' : 'collapsed' }}" row="5" col="1" textWrap="true" text="{{ significantText }}"/>
+						</GridLayout>
+					</ListView.itemTemplate>
+				</ListView>
+			</GridLayout>
 		</StackLayout>
 		<StackLayout row="0" orientation="vertical" horizontalAlignment="center" visibility="{{visibility_news}}">
 			<ScrollView orientation="vertical" height="100%">
@@ -89,8 +148,36 @@
 		</StackLayout>
 		<StackLayout row="0" orientation="vertical" horizontalAlignment="center" visibility="{{visibility_settings}}">
 			<StackLayout orientation="horizontal">
-				<Button id="team_0" text="{{text_team_0}}" class="button_team" ontap="tapTeam" />
-				<Button id="team_1" text="{{text_team_1}}" class="button_team" ontap="tapTeam" />
+				<Button id="team_0" class="button_team" text="{{text_team_0}}" color="{{background_team_0}}" ontap="tapTeam" />
+				<Button id="team_1" class="button_team" text="{{text_team_1}}" color="{{background_team_1}}" ontap="tapTeam" />
+				<Button id="team_2" class="button_team" text="{{text_team_2}}" color="{{background_team_2}}" ontap="tapTeam" />
+				<Button id="team_3" class="button_team" text="{{text_team_3}}" color="{{background_team_3}}" ontap="tapTeam" />
+			</StackLayout>
+			<StackLayout orientation="horizontal">
+				<Button id="team_4" class="button_team" text="{{text_team_4}}" color="{{background_team_4}}" ontap="tapTeam" />
+				<Button id="team_5" class="button_team" text="{{text_team_5}}" color="{{background_team_5}}" ontap="tapTeam" />
+				<Button id="team_6" class="button_team" text="{{text_team_6}}" color="{{background_team_6}}" ontap="tapTeam" />
+				<Button id="team_7" class="button_team" text="{{text_team_7}}" color="{{background_team_7}}" ontap="tapTeam" />
+			</StackLayout>
+			<StackLayout orientation="horizontal">
+				<Button id="team_8" class="button_team" text="{{text_team_8}}" color="{{background_team_8}}" ontap="tapTeam" />
+				<Button id="team_9" class="button_team" text="{{text_team_9}}" color="{{background_team_9}}" ontap="tapTeam" />
+				<Button id="team_10" class="button_team" text="{{text_team_10}}" color="{{background_team_10}}" ontap="tapTeam" />
+			</StackLayout>
+			<StackLayout orientation="horizontal">
+				<Button id="team_11" class="button_team" text="{{text_team_11}}" color="{{background_team_11}}" ontap="tapTeam" />
+				<Button id="team_12" class="button_team" text="{{text_team_12}}" color="{{background_team_12}}" ontap="tapTeam" />
+				<Button id="team_13" class="button_team" text="{{text_team_13}}" color="{{background_team_13}}" ontap="tapTeam" />
+				<Button id="team_14" class="button_team" text="{{text_team_14}}" color="{{background_team_14}}" ontap="tapTeam" />
+			</StackLayout>
+			<StackLayout orientation="horizontal">
+				<Button id="team_15" class="button_team" text="{{text_team_15}}" color="{{background_team_15}}" ontap="tapTeam" />
+				<Button id="team_16" class="button_team" text="{{text_team_16}}" color="{{background_team_16}}" ontap="tapTeam" />
+				<Button id="team_17" class="button_team" text="{{text_team_17}}" color="{{background_team_17}}" ontap="tapTeam" />
+				<Button id="team_18" class="button_team" text="{{text_team_18}}" color="{{background_team_18}}" ontap="tapTeam" />
+			</StackLayout>
+			<StackLayout horizontalAlignment="center" verticalAlignment="bottom" orientation="horizontal">
+				<Button class="button_menu" text="INSTELLEN" ontap="tapSetTeam" visibility="{{visibility_button_set_team}}" />
 			</StackLayout>
 		</StackLayout>
 	</GridLayout>

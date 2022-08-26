@@ -78,3 +78,15 @@
     font-size: 15vw;
     font-weight: bold;
 }
+
+.button_team {
+    background-color: #F9B234;
+    border-width: 3vw;
+    border-color: black;
+    color: black;
+    padding: 10vw;
+    text-align: center;
+    font-size: 20vw;
+    font-weight: bold;
+    border-radius: 25vw;
+}
