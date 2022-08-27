@@ -17,77 +17,96 @@
 			<ScrollView orientation="vertical" height="100%">
 				<StackLayout>
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Some text content follows here..." textWrap="false"/>
-					<Label class="text_item_ranking" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_ranking" text="_ _ _ _ _" />
 					<Label class="text_item_ranking" text="Neem nu deel aan het oliebollentoernooi dat komende kerstdagen wordt gespeeld. Meld je aan op www.aetos.nl" textWrap="false"/>
 					<Label class="text_item_ranking" text="LAST LINE" textWrap="false"/>
 				</StackLayout>
 			</ScrollView>">
 		</StackLayout>
-		<StackLayout id="container" orientation="vertical" horizontalAlignment="left" visibility="{{visibility_program}}">
+		<StackLayout id="container" orientation="vertical" horizontalAlignment="center" visibility="{{visibility_program}}">
 			<ScrollView orientation="vertical" height="100%">
 				<StackLayout>
-					<Label class="text_item_program" textAlignment="center" text="_ _ _ _ _" />
-					<Label class="text_item_program" text="{{ text_item_program_date_0 }}" textWrap="false"/>
-					<Label class="text_item_program" text="{{ text_item_program_0 }}" textWrap="false"/>
-					<Label class="text_item_program" textAlignment="center" text="_ _ _ _ _" />
-					<Label class="text_item_program" text="{{ text_item_program_date_1 }}" textWrap="false"/>
-					<Label class="text_item_program" text="{{ text_item_program_1 }}" textWrap="false"/>
-					<Label class="text_item_program" textAlignment="center" text="_ _ _ _ _" />
-					<Label class="text_item_program" text="{{ text_item_program_2 }}" textWrap="false"/>
-					<Label class="text_item_program" textAlignment="center" text="_ _ _ _ _" />
-					<Label class="text_item_program" text="{{ text_item_program_3 }}" textWrap="false"/>
-					<Label class="text_item_program" textAlignment="center" text="_ _ _ _ _" />
-					<Label class="text_item_program" text="{{ text_item_program_4 }}" textWrap="false"/>
+					<Label class="text_item_program" text="--------------------------------------" />
+					<Label class="text_item_program" text="{{ text_item_program_0_date }}" textWrap="false"/>
+					<Label class="text_item_program" text="{{ text_item_program_0_game }}" textWrap="false"/>
+					<Label class="text_item_program" text="--------------------------------------" />
+					<Label class="text_item_program" text="{{ text_item_program_1_date }}" textWrap="false"/>
+					<Label class="text_item_program" text="{{ text_item_program_1_game }}" textWrap="false"/>
+					<Label class="text_item_program" text="--------------------------------------" />
+					<Label class="text_item_program" text="{{ text_item_program_2_date }}" textWrap="false"/>
+					<Label class="text_item_program" text="{{ text_item_program_2_game }}" textWrap="false"/>
+					<Label class="text_item_program" text="--------------------------------------" />
+					<Label class="text_item_program" text="{{ text_item_program_3_date }}" textWrap="false"/>
+					<Label class="text_item_program" text="{{ text_item_program_3_game }}" textWrap="false"/>
+					<Label class="text_item_program" text="--------------------------------------" />
+					<Label class="text_item_program" text="{{ text_item_program_4_date }}" textWrap="false"/>
+					<Label class="text_item_program" text="{{ text_item_program_4_game }}" textWrap="false"/>
+					<Label class="text_item_program" text="--------------------------------------" />
+					<Label class="text_item_program" text="{{ text_item_program_5_date }}" textWrap="false"/>
+					<Label class="text_item_program" text="{{ text_item_program_5_game }}" textWrap="false"/>
+					<Label class="text_item_program" text="--------------------------------------" />
+					<Label class="text_item_program" text="{{ text_item_program_6_date }}" textWrap="false"/>
+					<Label class="text_item_program" text="{{ text_item_program_6_game }}" textWrap="false"/>
+					<Label class="text_item_program" text="--------------------------------------" />
+					<Label class="text_item_program" text="{{ text_item_program_7_date }}" textWrap="false"/>
+					<Label class="text_item_program" text="{{ text_item_program_7_game }}" textWrap="false"/>
+					<Label class="text_item_program" text="--------------------------------------" />
+					<Label class="text_item_program" text="{{ text_item_program_8_date }}" textWrap="false"/>
+					<Label class="text_item_program" text="{{ text_item_program_8_game }}" textWrap="false"/>
+					<Label class="text_item_program" text="--------------------------------------" />
+					<Label class="text_item_program" text="{{ text_item_program_9_date }}" textWrap="false"/>
+					<Label class="text_item_program" text="{{ text_item_program_9_game }}" textWrap="false"/>
+					<Label class="text_item_program" text="--------------------------------------" />
 				</StackLayout>
 			</ScrollView>">
 		</StackLayout>
@@ -101,11 +120,11 @@
 			<ScrollView orientation="vertical" height="100%">
 				<StackLayout>
 					<Label class="text_item_news" text="Some text content follows here..." textWrap="true"/>
-					<Label class="text_item_news" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_news" text="_ _ _ _ _" />
 					<Label class="text_item_news" text="Some text content follows here..." textWrap="true"/>
-					<Label class="text_item_news" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_news" text="_ _ _ _ _" />
 					<Label class="text_item_news" text="Neem nu deel aan het oliebollentoernooi dat komende kerstdagen wordt gespeeld. Meld je aan op www.aetos.nl" textWrap="true"/>
-					<Label class="text_item_news" textAlignment="center" text="_ _ _ _ _" />
+					<Label class="text_item_news" text="_ _ _ _ _" />
 					<Label class="text_item_news" text="Beach vollebal seizoen is weer gestart" textWrap="true"/>
 				</StackLayout>
 			</ScrollView>">
@@ -126,19 +145,17 @@
 			<StackLayout orientation="horizontal">
 				<Button id="team_8" class="button_team" text="{{text_team_8}}" color="{{background_team_8}}" ontap="tapTeam" />
 				<Button id="team_9" class="button_team" text="{{text_team_9}}" color="{{background_team_9}}" ontap="tapTeam" />
-				<Button id="team_10" class="button_team" text="{{text_team_10}}" color="{{background_team_10}}" ontap="tapTeam" />
 			</StackLayout>
 			<StackLayout orientation="horizontal">
+				<Button id="team_10" class="button_team" text="{{text_team_10}}" color="{{background_team_10}}" ontap="tapTeam" />
 				<Button id="team_11" class="button_team" text="{{text_team_11}}" color="{{background_team_11}}" ontap="tapTeam" />
 				<Button id="team_12" class="button_team" text="{{text_team_12}}" color="{{background_team_12}}" ontap="tapTeam" />
 				<Button id="team_13" class="button_team" text="{{text_team_13}}" color="{{background_team_13}}" ontap="tapTeam" />
-				<Button id="team_14" class="button_team" text="{{text_team_14}}" color="{{background_team_14}}" ontap="tapTeam" />
 			</StackLayout>
 			<StackLayout orientation="horizontal">
+				<Button id="team_14" class="button_team" text="{{text_team_14}}" color="{{background_team_14}}" ontap="tapTeam" />
 				<Button id="team_15" class="button_team" text="{{text_team_15}}" color="{{background_team_15}}" ontap="tapTeam" />
 				<Button id="team_16" class="button_team" text="{{text_team_16}}" color="{{background_team_16}}" ontap="tapTeam" />
-				<Button id="team_17" class="button_team" text="{{text_team_17}}" color="{{background_team_17}}" ontap="tapTeam" />
-				<Button id="team_18" class="button_team" text="{{text_team_18}}" color="{{background_team_18}}" ontap="tapTeam" />
 			</StackLayout>
 			<StackLayout horizontalAlignment="center" verticalAlignment="bottom" orientation="horizontal">
 				<Button class="button_menu" text="INSTELLEN" ontap="tapSetTeam" visibility="{{visibility_button_set_team}}" />

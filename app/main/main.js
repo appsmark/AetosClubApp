@@ -131,19 +131,19 @@ export class MainGame {
 		.then((r) => {
 			var xml = r
 			var items = xml.split("<item>")
-			var index = 1
-			var new_game = ""
-			var games = []
-			do {
-				new_game = items[index].substring(items[index].indexOf(': ') + 2, items[index].indexOf(']'))
-				games[index] = [new_game.substring(items[index].indexOf('[CDATA[') + 7), new_game]
-				index++
-			}
-			while ((new_game != "") && (index < 10))
-			for (var index_game=1; index_game < 10; index_game++) {
-				console.log(games[index_game])
-				this.viewModel.set("text_item_program_date_" + index_game, games[index_game][0])
-				this.viewModel.set("text_item_program_" + index_game, games[index_game][1])
+			var game_data = ""
+			var flag_continue = true
+			for (var index = 0; index < items.length - 1; index++) {
+				game_data = items[index + 1].substring(items[index + 1].indexOf('[CDATA[') + 7, items[index + 1].indexOf(']'))
+				game_data = game_data.replace("Vallei Accountants ", "")
+				game_data = game_data.replace(" VC", "")
+				game_data = game_data.replace("SV ", "")
+				game_data = game_data.replace(" Apeldoorn", "")
+				game_data = game_data.replace("Rebo Woningmakelaars ", "")
+				if (game_data != "") {
+					this.viewModel.set("text_item_program_" + index + "_date", game_data.substring(0, game_data.indexOf(": ")))
+					this.viewModel.set("text_item_program_" + index + "_game", game_data.substring(game_data.indexOf(": ") + 2))
+				}
 			}
 		}).catch((e) => {
 			console.log("ERROR " + e)

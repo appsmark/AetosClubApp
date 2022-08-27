@@ -1,6 +1,6 @@
 .title {
     background: #731816;
-    color:#F9B234;
+    color:#00AADE;
     font-size: 25vw;
     font-weight: bold;
 }
@@ -42,14 +42,14 @@
 }
 
 .text_program {
-    color:#F9B234;
+    color:#00DA00;
     font-size: 30vw;
     font-weight: bold;
 }
 
 .text_item_program {
     color:#F9B234;
-    font-size: 15vw;
+    font-size: 20vw;
     font-weight: bold;
 }
 

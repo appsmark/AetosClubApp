@@ -1,5 +1,5 @@
 export class DataGame {
-    max_teams=20
+    max_teams=17
     teams = [
         "D1",
         "D2",
@@ -11,7 +11,6 @@ export class DataGame {
         "D8",
         "D9",
         "D10",
-        "D11",
         "H1",
         "H2",
         "H3",
@@ -19,8 +18,6 @@ export class DataGame {
         "H5",
         "H6",
         "H7",
-        "H8",
-        "H9"
     ]
     
     init() {
