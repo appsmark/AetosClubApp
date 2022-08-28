@@ -1,7 +1,7 @@
 .title {
     background: #731816;
     color:#00AADE;
-    font-size: 25vw;
+    font-size: 30vw;
     font-weight: bold;
 }
 
@@ -41,21 +41,27 @@
     font-weight: bold;
 }
 
-.text_program {
+.text_schedule {
     color:#00DA00;
     font-size: 30vw;
     font-weight: bold;
 }
 
-.text_item_program {
+.text_item_schedule {
     color:#F9B234;
     font-size: 20vw;
     font-weight: bold;
 }
 
-.text_item_ranking {
+.text_ranking_poule {
     color:#F9B234;
     font-size: 25vw;
+    font-weight: bold;
+}
+
+.text_item_ranking {
+    color:#F9B234;
+    font-size: 20vw;
     font-weight: bold;
 }
 

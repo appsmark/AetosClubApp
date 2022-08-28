@@ -66,8 +66,8 @@ export function tapRanking(args) {
 	main.ranking()
 }
 
-export function tapProgram(args) {
-	main.program()
+export function tapSchedule(args) {
+	main.schedule()
 }
 
 export function tapTeam(args) {
