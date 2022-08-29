@@ -7,9 +7,12 @@
 		</GridLayout>
 	</ActionBar>
 	<StackLayout>
+		<StackLayout class="splashscreen" visibility="{{ visibility_splashscreen }}">
+			<Image src="~/images/splashscreen.png" backgroundColor="grey"/>
+		</StackLayout>
 		<StackLayout class="page_menu" orientation="vertical" horizontalAlignment="center" visibility="{{visibility_menu}}">
 			<Label />
-			<Button class="button_menu" text="NIEUWS" ontap="tapNews" />
+			<Button class="button_menu" text="NIEUWS" ontap="tapNews" visibility="collapsed"/>
 			<Button class="button_menu" text="STAND" ontap="tapRanking" />
 			<Button class="button_menu" text="PROGRAMMA" ontap="tapSchedule" />
 			<Button class="button_menu" text="WEDSTRIJD" ontap="tapGame" />
@@ -164,11 +167,20 @@
 				</StackLayout>
 			</ScrollView>">
 		</StackLayout>
-		<StackLayout orientation="vertical" horizontalAlignment="right" visibility="{{visibility_game}}">
-			<GridLayout rows="auto *" columns="*">
-               <TextView row="1" col="0" colSpan="2" text="{{ getStringResult }}" editable="false" visibility="{{ getStringResultVisible ? 'visible' : 'collapsed' }}"/>
-  
-			</GridLayout>
+		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_game}}">
+			<Label />
+			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_date }}"/>
+			<Label />
+			<Label />
+			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_home }}"/>
+			<Label class="text_item_game" horizontalAlignment="center" text="tegen"/>
+			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_visitor }}"/>
+			<Label />
+			<Label />
+			<Label />
+			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_hall }}"/>
+			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_street }}"/>
+			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_town }}"/>
 		</StackLayout>
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_news}}">
 			<ScrollView orientation="vertical" height="100%">

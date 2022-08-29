@@ -72,6 +72,7 @@ export class MainGame {
 		this.hide()
 		this.viewModel.set("visibility_back", "visible")
 		this.viewModel.set("visibility_game", "visible")
+		this.rssFeedGame(this.data.teams[this.data.team][2])
 	}
 
 	news() {
@@ -100,6 +101,7 @@ export class MainGame {
 	}
 
 	hide() {
+		this.viewModel.set("visibility_splashscreen", "collapsed")
 		this.viewModel.set("visibility_back", "collapsed")
 		this.viewModel.set("visibility_game", "collapsed")
 		this.viewModel.set("visibility_menu", "collapsed")
@@ -135,14 +137,43 @@ export class MainGame {
 		}
 	}
 
+	rssFeedGame(id) {
+		fetch("https://api.nevobo.nl/export/team/CNH8Q1U/" + id + "/programma.rss")
+		.then((response) => response.text())
+		.then((r) => {
+			var date = r.substring(r.indexOf("<item>") + 29, r.indexOf("<item>") + 42)
+			var game_data = ""
+			game_data = r.substring(r.indexOf('[CDATA[') + 7)
+			game_data = game_data.substring(0, game_data.indexOf("]]"))
+			game_data = game_data.replace("Vallei Accountants ", "")
+			game_data = game_data.replace(" VC", "")
+			game_data = game_data.replace("SV ", "")
+			game_data = game_data.replace("Rabobank Orion Volleybal Doetinchem ", "Orion ")
+			game_data = game_data.replace(" Apeldoorn", "")
+			game_data = game_data.replace("Rebo Woningmakelaars ", "")
+			var home =  game_data.substring(game_data.indexOf(": ") + 2).split(" - ")[0]
+			var visitor = game_data.split(" - ")[1]
+			var location = r.substring(r.indexOf("Speellocatie:") + 14)
+			location = location.substring(0, location.indexOf(']')).split(",")
+			console.log(location)
+			var xml = r
+			
+			var items = xml.split("<item>")
+			var title = items[1].split("<title>")
+			//console.log(title[0])
+			//console.log(date)
+		this.viewModel.set("text_game_date", date)
+		this.viewModel.set("text_game_home", home)
+		this.viewModel.set("text_game_visitor", visitor)
+		this.viewModel.set("text_game_hall", location[0])
+		this.viewModel.set("text_game_street", location[1])
+		this.viewModel.set("text_game_town", location[2])
+		}).catch((e) => {
+			console.log("ERROR " + e)
+		});
+	}
+
 	rssFeedSchedule(id) {
-		var path
-		if (id[0] === 'H') {
-			path = "heren/";
-		} else {
-			path = "dames/";
-		}
-		path += id.substr(1, 2);
 		fetch("https://api.nevobo.nl/export/team/CNH8Q1U/" + id + "/programma.rss")
 		.then((response) => response.text())
 		.then((r) => {

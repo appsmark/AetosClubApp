@@ -65,6 +65,12 @@
     font-weight: bold;
 }
 
+.text_item_game {
+    color:#F9B234;
+    font-size: 30vw;
+    font-weight: bold;
+}
+
 .text_item_news {
     color:#F9B234;
     font-size: 35vw;
