@@ -155,19 +155,12 @@ export class MainGame {
 			var visitor = game_data.split(" - ")[1]
 			var location = r.substring(r.indexOf("Speellocatie:") + 14)
 			location = location.substring(0, location.indexOf(']')).split(",")
-			console.log(location)
-			var xml = r
-			
-			var items = xml.split("<item>")
-			var title = items[1].split("<title>")
-			//console.log(title[0])
-			//console.log(date)
-		this.viewModel.set("text_game_date", date)
-		this.viewModel.set("text_game_home", home)
-		this.viewModel.set("text_game_visitor", visitor)
-		this.viewModel.set("text_game_hall", location[0])
-		this.viewModel.set("text_game_street", location[1])
-		this.viewModel.set("text_game_town", location[2])
+			this.viewModel.set("text_game_date", date)
+			this.viewModel.set("text_game_home", home)
+			this.viewModel.set("text_game_visitor", visitor)
+			this.viewModel.set("text_game_hall", location[0])
+			this.viewModel.set("text_game_street", location[1])
+			this.viewModel.set("text_game_town", location[2])
 		}).catch((e) => {
 			console.log("ERROR " + e)
 		});

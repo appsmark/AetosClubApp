@@ -1,15 +1,15 @@
 {
-  "name": "com.appsmark.aetos_club_app",
+  "name": "com.appsmark.aetos",
   "main": "app/app.js",
   "version": "8.0.5",
   "author": "Martin Keesen",
-  "description": "TEMPLATE PAGES",
+  "description": "Aetos Club app",
   "license": "None",
   "publishConfig": {
     "access": "public"
   },
   "nativescript": {
-    "id": "com.appsmark.aetos_club_app"
+    "id": "com.appsmark.aetos"
   },
   "files": [
     "app",
@@ -20,9 +20,9 @@
     "jsconfig.json"
   ],
   "keywords": [
-    "Horse",
-    "Jump",
-    "Puzzle"
+    "Sport",
+    "Volleybal",
+    "Ranking"
   ],
   "repository": "-",
   "bugs": {
