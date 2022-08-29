@@ -2,8 +2,6 @@ import { Observable } from '@nativescript/core'
 import { DataGame } from "./data"
 
 export class MainGame {
-	team = 0
-	team_desired = 0
     viewModel = new Observable()
 	data = new DataGame()
 
@@ -14,12 +12,16 @@ export class MainGame {
 
 	init() {
 		this.data.init()
-		this.hide()
-		this.viewModel.set("textTop", "")
-		this.viewModel.set("visibility_menu", "visible")
-		this.viewModel.set("visibility_button_settings", "visible")
-		this.viewModel.set("textTop", "TEAM " + this.data.teams[this.team][0])
 		this.setTeamButtons()
+		if (!this.data.team) {
+			this.settings()
+		} else {
+			this.hide()
+			this.viewModel.set("textTop", "")
+			this.viewModel.set("visibility_menu", "visible")
+			this.viewModel.set("visibility_button_settings", "visible")
+			this.viewModel.set("textTop", "TEAM " + this.data.teams[this.data.team][0])
+		}
 	}
 
 	ranking() {
@@ -27,7 +29,7 @@ export class MainGame {
 		this.hide()
 		this.viewModel.set("visibility_back", "visible")
 		this.viewModel.set("visibility_ranking", "visible")
-		this.rssFeedRanking(this.data.teams[this.team][1])
+		this.rssFeedRanking(this.data.teams[this.data.team][1])
 	}
 
 	schedule() {
@@ -35,12 +37,24 @@ export class MainGame {
 		this.hide()
 		this.viewModel.set("visibility_back", "visible")
 		this.viewModel.set("visibility_schedule", "visible")
-		this.rssFeedSchedule(this.data.teams[this.team][2])
+		this.rssFeedSchedule(this.data.teams[this.data.team][2])
+	}
+
+	hideItems() {
+		for (var index = 0; index < this.data.max_ranking_items; index++) {
+			this.viewModel.set("visibility_item_ranking_" + index, "collapsed")
+		}
+		for (var index = 0; index < this.data.max_schedule_items; index++) {
+			this.viewModel.set("visibility_item_schedule_" + index, "collapsed")
+			this.viewModel.set("visibility_item_schedule_" + index + "_separator", "collapsed")
+		}
 	}
 
 	resetRanking() {
 		for (var index = 0; index < this.data.max_ranking_items; index++) {
-			this.viewModel.set("visibility_item_ranking_" + index, "collapsed")
+			this.viewModel.set("text_item_ranking_" + index + "_team", "")
+			this.viewModel.set("text_item_ranking_" + index + "_games", "")
+			this.viewModel.set("text_item_ranking_" + index + "_points", "")
 		}
 	}
 
@@ -68,7 +82,7 @@ export class MainGame {
 	}
 
 	back() {
-		this.viewModel.set("textTop", "TEAM " + this.data.teams[this.team][0])
+		this.viewModel.set("textTop", "TEAM " + this.data.teams[this.data.team][0])
 		this.hide()
 		this.viewModel.set("visibility_menu", "visible")
 		this.viewModel.set("visibility_button_settings", "visible")
@@ -78,7 +92,7 @@ export class MainGame {
 		this.viewModel.set("textTop", "SELECTEER TEAM")
 		this.hide()
 		this.viewModel.set("visibility_settings", "visible")
-		this.viewModel.set("visibility_back", "visible")
+//		this.viewModel.set("visibility_back", "visible")
 		this.viewModel.set("visibility_button_set_team", "collapsed")
 		for (var index=0; index < this.data.max_teams; index++) {
 			this.viewModel.set("background_team_" + index, "black")
@@ -94,7 +108,7 @@ export class MainGame {
 		this.viewModel.set("visibility_ranking", "collapsed")
 		this.viewModel.set("visibility_settings", "collapsed")
 		this.viewModel.set("visibility_button_settings", "collapsed")
-		this.resetRanking()
+		this.hideItems()
 	}
 
 	indicateTeam(args) {
@@ -102,14 +116,16 @@ export class MainGame {
 			this.viewModel.set("background_team_" + index, "black")
 		}
 		this.viewModel.set("background_team_" + args.object.id.split("_")[1], "#00AADE")
-		this.team_desired = args.object.id.split("_")[1]
+		this.data.team_desired = args.object.id.split("_")[1]
 		this.viewModel.set("visibility_button_set_team", "visible")
 	}
 
 	setTeam(args) {
+		this.resetRanking()
 		this.resetSchedule()
-		this.team = this.team_desired
-		this.viewModel.set("textTeam", "TEAM " + this.data.teams[this.team][0])
+		this.hideItems()
+		this.data.setTeam()
+		this.viewModel.set("textTeam", "TEAM " + this.data.teams[this.data.team][0])
 		this.back()
 	}
 

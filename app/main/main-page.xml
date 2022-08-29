@@ -1,6 +1,6 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded" backgroundColor="#731816">
 	<ActionBar flat="true" backgroundColor="#731816">
-		<GridLayout columns="*, 10*, *">
+		<GridLayout columns="*, 8*, *">
 			<Image col="0" src="~/images/back.png" height="40vw" ontap="tapBack" visibility="{{visibility_back}}" />
 			<Label col="1" class="title" text="{{textTop}}"/>
 			<Image col="2" src="~/images/settings.png" height="40vw" ontap="tapSettings" visibility="{{visibility_button_settings}}" />
@@ -8,6 +8,7 @@
 	</ActionBar>
 	<StackLayout>
 		<StackLayout class="page_menu" orientation="vertical" horizontalAlignment="center" visibility="{{visibility_menu}}">
+			<Label />
 			<Button class="button_menu" text="NIEUWS" ontap="tapNews" />
 			<Button class="button_menu" text="STAND" ontap="tapRanking" />
 			<Button class="button_menu" text="PROGRAMMA" ontap="tapSchedule" />
@@ -16,7 +17,7 @@
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_ranking}}">
 			<Label class="text_ranking_poule" text="{{ text_ranking_poule }}" horizontalAlignment="center" />
 			<Label class="text_ranking_poule" text=" " />
-			<GridLayout rows="{{ rows_ranking }}" columns="*, 2*, *, 10*, *, *, *, *">
+			<GridLayout rows="*, *, *, *, *, *, *, *, *, *, *, *, *" columns="*, 2*, *, 10*, *, *, *, *">
 				<Label class="text_item_ranking" row="0" col="1" text="1" horizontalAlignment="right" />
 				<Label class="text_item_ranking" row="0" col="3" text="{{ text_item_ranking_0_team }}" />
 				<Label class="text_item_ranking" row="0" col="4" text="{{ text_item_ranking_0_games }}" />
@@ -120,28 +121,28 @@
 					<Label class="text_item_schedule" text="----------------------------------------" />
 					<Label class="text_item_schedule" text="{{ text_item_schedule_10_date }}" visibility="{{ visibility_item_schedule_10 }}"/>
 					<Label class="text_item_schedule" text="{{ text_item_schedule_10_game }}" visibility="{{ visibility_item_schedule_10 }}"/>
-					<Label class="text_item_schedule" text="----------------------------------------" />
+					<Label class="text_item_schedule" text="----------------------------------------" visibility="{{ visibility_item_schedule_10_separator }}" />
 					<Label class="text_item_schedule" text="{{ text_item_schedule_11_date }}" visibility="{{ visibility_item_schedule_11 }}"/>
 					<Label class="text_item_schedule" text="{{ text_item_schedule_11_game }}" visibility="{{ visibility_item_schedule_11 }}"/>
-					<Label class="text_item_schedule" text="----------------------------------------" />
+					<Label class="text_item_schedule" text="----------------------------------------" visibility="{{ visibility_item_schedule_11_separator }}" />
 					<Label class="text_item_schedule" text="{{ text_item_schedule_12_date }}" visibility="{{ visibility_item_schedule_12 }}"/>
 					<Label class="text_item_schedule" text="{{ text_item_schedule_12_game }}" visibility="{{ visibility_item_schedule_12 }}"/>
-					<Label class="text_item_schedule" text="----------------------------------------" />
+					<Label class="text_item_schedule" text="----------------------------------------" visibility="{{ visibility_item_schedule_12_separator }}" />
 					<Label class="text_item_schedule" text="{{ text_item_schedule_13_date }}" visibility="{{ visibility_item_schedule_13 }}"/>
 					<Label class="text_item_schedule" text="{{ text_item_schedule_13_game }}" visibility="{{ visibility_item_schedule_13 }}"/>
-					<Label class="text_item_schedule" text="----------------------------------------" />
+					<Label class="text_item_schedule" text="----------------------------------------" visibility="{{ visibility_item_schedule_13_separator }}" />
 					<Label class="text_item_schedule" text="{{ text_item_schedule_14_date }}" visibility="{{ visibility_item_schedule_14 }}"/>
 					<Label class="text_item_schedule" text="{{ text_item_schedule_14_game }}" visibility="{{ visibility_item_schedule_14 }}"/>
-					<Label class="text_item_schedule" text="----------------------------------------" />
+					<Label class="text_item_schedule" text="----------------------------------------" visibility="{{ visibility_item_schedule_14_separator }}" />
 					<Label class="text_item_schedule" text="{{ text_item_schedule_15_date }}" visibility="{{ visibility_item_schedule_15 }}"/>
 					<Label class="text_item_schedule" text="{{ text_item_schedule_15_game }}" visibility="{{ visibility_item_schedule_15 }}"/>
-					<Label class="text_item_schedule" text="----------------------------------------" />
+					<Label class="text_item_schedule" text="----------------------------------------" visibility="{{ visibility_item_schedule_15_separator }}" />
 					<Label class="text_item_schedule" text="{{ text_item_schedule_16_date }}" visibility="{{ visibility_item_schedule_16 }}"/>
 					<Label class="text_item_schedule" text="{{ text_item_schedule_16_game }}" visibility="{{ visibility_item_schedule_16 }}"/>
-					<Label class="text_item_schedule" text="----------------------------------------" />
+					<Label class="text_item_schedule" text="----------------------------------------" visibility="{{ visibility_item_schedule_16_separator }}" />
 					<Label class="text_item_schedule" text="{{ text_item_schedule_17_date }}" visibility="{{ visibility_item_schedule_17 }}"/>
 					<Label class="text_item_schedule" text="{{ text_item_schedule_17_game }}" visibility="{{ visibility_item_schedule_17 }}"/>
-					<Label class="text_item_schedule" text="----------------------------------------" />
+					<Label class="text_item_schedule" text="----------------------------------------" visibility="{{ visibility_item_schedule_17_separator }}" />
 					<Label class="text_item_schedule" text="{{ text_item_schedule_18_date }}" visibility="{{ visibility_item_schedule_18 }}"/>
 					<Label class="text_item_schedule" text="{{ text_item_schedule_18_game }}" visibility="{{ visibility_item_schedule_18 }}"/>
 					<Label class="text_item_schedule" text="----------------------------------------" visibility="{{ visibility_item_schedule_18_separator }}"  />
@@ -172,7 +173,7 @@
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_news}}">
 			<ScrollView orientation="vertical" height="100%">
 				<StackLayout>
-					<Label class="text_item_news" text="Neem deel aan het oliebollentoernooi dat komende kerstvakantie wordt gespeeld. Meld je aan op www.aetos.nl" textWrap="true"/>
+					<Label class="text_item_news" text="Nog geen nieuws" textWrap="true"/>
 				</StackLayout>
 			</ScrollView>">
 		</StackLayout>

@@ -1,7 +1,10 @@
+import { ApplicationSettings } from "@nativescript/core";
 export class DataGame {
     max_ranking_items = 20
     max_schedule_items = 40
     max_teams
+    team
+	team_desired = 0
     teams = [
         ["D1", "regio-oost/DPD", "dames/1"],
         ["D2", "regio-oost/D1M", "dames/2"],
@@ -29,5 +32,11 @@ export class DataGame {
     
     init() {
         this.max_teams = this.teams.length
+        this.team = ApplicationSettings.getNumber("Team")
+    }
+
+    setTeam() {
+		this.team = this.team_desired
+        ApplicationSettings.setNumber("Team", parseInt(this.team))
     }
 }
