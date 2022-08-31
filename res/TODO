@@ -1,1 +1,2 @@
-text="{{ getStringResult }}" editable="false" visibility="{{ getStringResultVisible ? 'visible' : 'collapsed' }}"
+Aanwezigheid voor wedstrijd 
+Reservering beach volley

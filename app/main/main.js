@@ -40,16 +40,6 @@ export class MainGame {
 		this.rssFeedSchedule(this.data.teams[this.data.team][2])
 	}
 
-	hideItems() {
-		for (var index = 0; index < this.data.max_ranking_items; index++) {
-			this.viewModel.set("visibility_item_ranking_" + index, "collapsed")
-		}
-		for (var index = 0; index < this.data.max_schedule_items; index++) {
-			this.viewModel.set("visibility_item_schedule_" + index, "collapsed")
-			this.viewModel.set("visibility_item_schedule_" + index + "_separator", "collapsed")
-		}
-	}
-
 	resetRanking() {
 		for (var index = 0; index < this.data.max_ranking_items; index++) {
 			this.viewModel.set("text_item_ranking_" + index + "_team", "")
@@ -110,7 +100,6 @@ export class MainGame {
 		this.viewModel.set("visibility_ranking", "collapsed")
 		this.viewModel.set("visibility_settings", "collapsed")
 		this.viewModel.set("visibility_button_settings", "collapsed")
-		this.hideItems()
 	}
 
 	indicateTeam(args) {
@@ -125,7 +114,6 @@ export class MainGame {
 	setTeam(args) {
 		this.resetRanking()
 		this.resetSchedule()
-		this.hideItems()
 		this.data.setTeam()
 		this.viewModel.set("textTeam", "TEAM " + this.data.teams[this.data.team][0])
 		this.back()
@@ -184,8 +172,6 @@ export class MainGame {
 				if (game_data != "") {
 					this.viewModel.set("text_item_schedule_" + index + "_date", game_data.substring(0, game_data.indexOf(": ")))
 					this.viewModel.set("text_item_schedule_" + index + "_game", game_data.substring(game_data.indexOf(": ") + 2))
-					this.viewModel.set("visibility_item_schedule_" + index, "visible")
-					this.viewModel.set("visibility_item_schedule_" + index + "_separator", "visible")
 				}
 			}
 		}).catch((e) => {
@@ -224,7 +210,6 @@ export class MainGame {
 				this.viewModel.set("text_item_ranking_" + (index - 1) + "_team", ranking[index].substring(ranking[index].indexOf("[CDATA[") + 7, ranking[index].indexOf("]")))
 				this.viewModel.set("text_item_ranking_" + (index - 1) + "_games", ranking[index].substring(ranking[index].indexOf("<stand:wedstrijden>") + 19, ranking[index].indexOf("</stand:wedstrijden>")))
 				this.viewModel.set("text_item_ranking_" + (index - 1) + "_points", ranking[index].substring(ranking[index].indexOf("<stand:punten>") + 14, ranking[index].indexOf("</stand:punten")))
-				this.viewModel.set("visibility_item_ranking_" + (index - 1), "visible")
 			}
 
 		}).catch((e) => {

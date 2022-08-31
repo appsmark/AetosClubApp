@@ -1,7 +1,7 @@
 import { ApplicationSettings } from "@nativescript/core";
 export class DataGame {
-    max_ranking_items = 20
-    max_schedule_items = 40
+    max_ranking_items = 12
+    max_schedule_items = 2 * this.max_ranking_items
     max_teams
     team
 	team_desired = 0

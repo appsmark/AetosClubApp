@@ -1,7 +1,7 @@
 import { NativeScriptConfig } from '@nativescript/core';
 
 export default {
-  id: 'com.appsmark.aetos_club_app',
+  id: 'com.appsmark.aetos',
   appPath: 'app',
   appResourcesPath: 'App_Resources',
   android: {
