@@ -21,6 +21,7 @@ export class MainGame {
 			this.viewModel.set("visibility_menu", "visible")
 			this.viewModel.set("visibility_button_settings", "visible")
 			this.viewModel.set("textTop", "TEAM " + this.data.teams[this.data.team][0])
+			this.viewModel.set("visibility_beach", "hidden")
 		}
 	}
 
@@ -122,6 +123,17 @@ export class MainGame {
 	setTeamButtons() {
 		for (var index = 0; index < this.data.max_teams; index++) {
 			this.viewModel.set("text_team_" + index, this.data.teams[index][0])
+		}
+	}
+
+	enableBeach(args) {
+		switch(args.object.id.split("_")[1]) {
+			case "0":
+				this.viewModel.set("visibility_beach", "visible")
+				break
+			case "1":
+				this.viewModel.set("visibility_beach", "hidden")
+				break
 		}
 	}
 

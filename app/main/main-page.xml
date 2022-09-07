@@ -16,6 +16,7 @@
 			<Button class="button_menu" text="STAND" ontap="tapRanking" />
 			<Button class="button_menu" text="PROGRAMMA" ontap="tapSchedule" />
 			<Button class="button_menu" text="WEDSTRIJD" ontap="tapGame" />
+			<Button class="button_menu" text="BEACH" ontap="tapBeach" visibility="{{visibility_beach}}"/>
 		</StackLayout>
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_ranking}}">
 			<Label class="text_ranking_poule" text="{{ text_ranking_poule }}" horizontalAlignment="center" />
@@ -207,8 +208,8 @@
 		</StackLayout>
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_settings}}">
 			<StackLayout orientation="horizontal">
-				<Button id="team_0" class="button_team" text="{{text_team_0}}" color="{{background_team_0}}" ontap="tapTeam" />
-				<Button id="team_1" class="button_team" text="{{text_team_1}}" color="{{background_team_1}}" ontap="tapTeam" />
+				<Button id="team_0" class="button_team" text="{{text_team_0}}" color="{{background_team_0}}" ontap="tapTeam" ondoubletap="doubleTapTeam"/>
+				<Button id="team_1" class="button_team" text="{{text_team_1}}" color="{{background_team_1}}" ontap="tapTeam" ondoubletap="doubleTapTeam" />
 				<Button id="team_2" class="button_team" text="{{text_team_2}}" color="{{background_team_2}}" ontap="tapTeam" />
 				<Button id="team_3" class="button_team" text="{{text_team_3}}" color="{{background_team_3}}" ontap="tapTeam" />
 			</StackLayout>

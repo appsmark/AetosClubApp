@@ -85,3 +85,8 @@ export function tapGame(args) {
 export function tapNews(args) {
 	main.news()
 }
+
+export function doubleTapTeam(args) {
+	main.enableBeach(args)
+}
+
