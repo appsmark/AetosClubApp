@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8"/>    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#80b082">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <title>Inloggen - ABeach</title>
+	<meta property="og:title" content="Inloggen"/>
+	<meta property="twitter:title" content="Inloggen"/>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WCW9NDF');</script>    <link rel="stylesheet" href="/dist/styles/main.css"/>
+</head>
+<body  class="players login players-login inloggen" >
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.12&appId=1592178457572036&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <main class="site-main">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section section--white">
+                    <div class="section--inner">
+                        <div class="users form">
+                            <form method="post" accept-charset="utf-8" action="/mijn-account/inloggen">
+                            <div style="display:none;">
+                                <input type="hidden" name="_method" value="POST"/>
+                            </div>
+                            <div class="card-holder">
+                                <div class="card">
+                                    <div class="card-block">
+                                        <div class="form-group">
+                                            <div class="has-float-label">
+                                                <div class="input text">
+                                                    <label for="username">Gebruikersnaam</label>
+                                                    <input type="text" name="username" placeholder="Gebruikersnaam" id="username" class="form-control"/>
+                                                </div>
+                                            </div>
+                                            <div class="has-float-label">
+                                                <div class="input password">
+                                                    <label for="password">Wachtwoord</label>
+                                                    <input type="password" name="password" placeholder="Wachtwoord" id="password" class="form-control"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="button button--outline button--no-icon button--red-damask" type="submit">Inloggen</button>
+                                        </div>
+                                    </div>
+                                </div>
+        </main>
+    </div>
+
+    <!--Start Cookie Script-->
+    <script type="text/javascript" charset="UTF-8" src="//cookie-script.com/s/82644c1157db415603a69f8459a0ab69.js"></script>
+    <!--End Cookie Script-->
+    <script src="/dist/scripts/main.js" async="async" defer="defer"></script>
+</body>
+</html>

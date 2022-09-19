@@ -16,7 +16,7 @@
 			<Button class="button_menu" text="STAND" ontap="tapRanking" />
 			<Button class="button_menu" text="PROGRAMMA" ontap="tapSchedule" />
 			<Button class="button_menu" text="WEDSTRIJD" ontap="tapGame" />
-			<Button class="button_menu" text="BEACH" ontap="tapBeach" visibility="{{visibility_beach}}"/>
+			<Button class="button_menu_beach" text="BEACH" ontap="tapBeach" visibility="{{visibility_beach_button}}"/>
 		</StackLayout>
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_ranking}}">
 			<Label class="text_ranking_poule" text="{{ text_ranking_poule }}" horizontalAlignment="center" />
@@ -237,6 +237,13 @@
 			<StackLayout horizontalAlignment="center" verticalAlignment="bottom" orientation="horizontal">
 				<Button class="button_menu" text="INSTELLEN" ontap="tapSetTeam" visibility="{{visibility_button_set_team}}" />
 			</StackLayout>
+		</StackLayout>
+		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_beach}}">
+			<ScrollView orientation="vertical" height="100%">
+				<StackLayout>
+					<Label class="text_item_beach" text="Nog geen BEACH" textWrap="true"/>
+				</StackLayout>
+			</ScrollView>">
 		</StackLayout>
 	</StackLayout>
 </Page>

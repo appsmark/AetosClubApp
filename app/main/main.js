@@ -21,7 +21,7 @@ export class MainGame {
 			this.viewModel.set("visibility_menu", "visible")
 			this.viewModel.set("visibility_button_settings", "visible")
 			this.viewModel.set("textTop", "TEAM " + this.data.teams[this.data.team][0])
-			this.viewModel.set("visibility_beach", "hidden")
+			this.viewModel.set("visibility_beach_button", "hidden")
 		}
 	}
 
@@ -73,6 +73,13 @@ export class MainGame {
 		this.viewModel.set("visibility_news", "visible")
 	}
 
+	beach() {
+		this.viewModel.set("textTop", "BEACH")
+		this.hide()
+		this.viewModel.set("visibility_back", "visible")
+		this.viewModel.set("visibility_beach", "visible")
+	}
+
 	back() {
 		this.viewModel.set("textTop", "TEAM " + this.data.teams[this.data.team][0])
 		this.hide()
@@ -97,6 +104,7 @@ export class MainGame {
 		this.viewModel.set("visibility_game", "collapsed")
 		this.viewModel.set("visibility_menu", "collapsed")
 		this.viewModel.set("visibility_news", "collapsed")
+		this.viewModel.set("visibility_beach", "collapsed")
 		this.viewModel.set("visibility_schedule", "collapsed")
 		this.viewModel.set("visibility_ranking", "collapsed")
 		this.viewModel.set("visibility_settings", "collapsed")
@@ -129,10 +137,10 @@ export class MainGame {
 	enableBeach(args) {
 		switch(args.object.id.split("_")[1]) {
 			case "0":
-				this.viewModel.set("visibility_beach", "visible")
+				this.viewModel.set("visibility_beach_button", "visible")
 				break
 			case "1":
-				this.viewModel.set("visibility_beach", "hidden")
+				this.viewModel.set("visibility_beach_button", "hidden")
 				break
 		}
 	}
