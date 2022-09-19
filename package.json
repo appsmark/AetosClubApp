@@ -1,15 +1,15 @@
 {
-  "name": "com.appsmark.aetos",
+  "name": "com.appsmark.template",
   "main": "app/app.js",
   "version": "8.0.5",
   "author": "Martin Keesen",
-  "description": "Aetos Club app",
+  "description": "Template app",
   "license": "None",
   "publishConfig": {
     "access": "public"
   },
   "nativescript": {
-    "id": "com.appsmark.aetos"
+    "id": "com.appsmark.template"
   },
   "files": [
     "app",
