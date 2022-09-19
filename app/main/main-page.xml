@@ -12,7 +12,7 @@
 		</StackLayout>
 		<StackLayout class="page_menu" orientation="vertical" horizontalAlignment="center" visibility="{{visibility_menu}}">
 			<Label />
-			<Button class="button_menu" text="NIEUWS" ontap="tapNews" visibility="collapsed"/>
+			<Button class="button_menu" text="NIEUWS" ontap="tapNews" visibility="{{visibility_news_button}}"/>
 			<Button class="button_menu" text="STAND" ontap="tapRanking" />
 			<Button class="button_menu" text="PROGRAMMA" ontap="tapSchedule" />
 			<Button class="button_menu" text="WEDSTRIJD" ontap="tapGame" />
@@ -208,10 +208,10 @@
 		</StackLayout>
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_settings}}">
 			<StackLayout orientation="horizontal">
-				<Button id="team_0" class="button_team" text="{{text_team_0}}" color="{{background_team_0}}" ontap="tapTeam" ondoubletap="doubleTapTeam"/>
+				<Button id="team_0" class="button_team" text="{{text_team_0}}" color="{{background_team_0}}" ontap="tapTeam" ondoubletap="doubleTapTeam" />
 				<Button id="team_1" class="button_team" text="{{text_team_1}}" color="{{background_team_1}}" ontap="tapTeam" ondoubletap="doubleTapTeam" />
-				<Button id="team_2" class="button_team" text="{{text_team_2}}" color="{{background_team_2}}" ontap="tapTeam" />
-				<Button id="team_3" class="button_team" text="{{text_team_3}}" color="{{background_team_3}}" ontap="tapTeam" />
+				<Button id="team_2" class="button_team" text="{{text_team_2}}" color="{{background_team_2}}" ontap="tapTeam" ondoubletap="doubleTapTeam" />
+				<Button id="team_3" class="button_team" text="{{text_team_3}}" color="{{background_team_3}}" ontap="tapTeam" ondoubletap="doubleTapTeam" />
 			</StackLayout>
 			<StackLayout orientation="horizontal">
 				<Button id="team_4" class="button_team" text="{{text_team_4}}" color="{{background_team_4}}" ontap="tapTeam" />
@@ -235,12 +235,16 @@
 				<Button id="team_16" class="button_team" text="{{text_team_16}}" color="{{background_team_16}}" ontap="tapTeam" />
 			</StackLayout>
 			<StackLayout horizontalAlignment="center" verticalAlignment="bottom" orientation="horizontal">
+				<Label text=" " fontSize="20vw"/>
+			</StackLayout>
+			<StackLayout horizontalAlignment="center" verticalAlignment="bottom" orientation="horizontal">
 				<Button class="button_menu" text="INSTELLEN" ontap="tapSetTeam" visibility="{{visibility_button_set_team}}" />
 			</StackLayout>
 		</StackLayout>
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_beach}}">
 			<ScrollView orientation="vertical" height="100%">
 				<StackLayout>
+					<Label class="text_item_beach" text="{{textDate}}" textWrap="true"/>
 					<Label class="text_item_beach" text="Nog geen BEACH" textWrap="true"/>
 				</StackLayout>
 			</ScrollView>">

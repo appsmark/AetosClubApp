@@ -21,8 +21,10 @@ export class MainGame {
 			this.viewModel.set("visibility_menu", "visible")
 			this.viewModel.set("visibility_button_settings", "visible")
 			this.viewModel.set("textTop", "TEAM " + this.data.teams[this.data.team][0])
-			this.viewModel.set("visibility_beach_button", "hidden")
+			this.viewModel.set("visibility_beach_button", "collapsed")
+			this.viewModel.set("visibility_news_button", "collapsed")
 		}
+		this.getCurrentDate()
 	}
 
 	ranking() {
@@ -134,14 +136,21 @@ export class MainGame {
 		}
 	}
 
-	enableBeach(args) {
+	enableButtons(args) {
 		switch(args.object.id.split("_")[1]) {
 			case "0":
 				this.viewModel.set("visibility_beach_button", "visible")
 				break
 			case "1":
-				this.viewModel.set("visibility_beach_button", "hidden")
+				this.viewModel.set("visibility_beach_button", "collapsed")
 				break
+			case "2":
+				this.viewModel.set("visibility_news_button", "visible")
+				break
+			case "3":
+				this.viewModel.set("visibility_news_button", "collapsed")
+				break
+				
 		}
 	}
 
@@ -237,4 +246,8 @@ export class MainGame {
 		});
 	}
 
+	getCurrentDate() {
+		const d = new Date()
+		this.viewModel.set("textDate", this.data.days[d.getDay()] + "dag " + d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear())
+	}
 }

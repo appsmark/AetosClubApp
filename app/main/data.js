@@ -1,5 +1,6 @@
 import { ApplicationSettings } from "@nativescript/core";
 export class DataGame {
+    days = ["Zon", "Maan", "Dins", "Woens", "Donder", "Vrij", "Zater"]
     max_ranking_items = 12
     max_schedule_items = 2 * this.max_ranking_items
     max_teams
