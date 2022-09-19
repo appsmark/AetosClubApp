@@ -90,7 +90,7 @@ export function tapBeach(args) {
 	main.beach()
 }
 
-export function doubleTapTeam(args) {
-	main.enableButtons(args)
+export function doubleTapTitle() {
+	main.enableAllButtons()
 }
 

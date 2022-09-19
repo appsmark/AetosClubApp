@@ -136,21 +136,14 @@ export class MainGame {
 		}
 	}
 
-	enableButtons(args) {
-		switch(args.object.id.split("_")[1]) {
-			case "0":
-				this.viewModel.set("visibility_beach_button", "visible")
-				break
-			case "1":
-				this.viewModel.set("visibility_beach_button", "collapsed")
-				break
-			case "2":
-				this.viewModel.set("visibility_news_button", "visible")
-				break
-			case "3":
-				this.viewModel.set("visibility_news_button", "collapsed")
-				break
-				
+	enableAllButtons() {
+		this.data.all_buttons = !this.data.all_buttons
+		if (this.data.all_buttons) {
+			this.viewModel.set("visibility_beach_button", "collapsed")
+			this.viewModel.set("visibility_news_button", "collapsed")
+		} else {
+			this.viewModel.set("visibility_beach_button", "visible")
+			this.viewModel.set("visibility_news_button", "visible")
 		}
 	}
 
@@ -159,6 +152,12 @@ export class MainGame {
 		.then((response) => response.text())
 		.then((r) => {
 			var date = r.substring(r.indexOf("<item>") + 29, r.indexOf("<item>") + 42)
+			if (date[date.length - 1] == ":") {
+				date = date.substring(0, date.length - 1)
+			}
+			if (date[0] == ":") {
+				date = ""
+			}
 			var game_data = ""
 			game_data = r.substring(r.indexOf('[CDATA[') + 7)
 			game_data = game_data.substring(0, game_data.indexOf("]]"))
@@ -168,6 +167,7 @@ export class MainGame {
 			game_data = game_data.replace("Rabobank Orion Volleybal Doetinchem ", "Orion ")
 			game_data = game_data.replace(" Apeldoorn", "")
 			game_data = game_data.replace("Rebo Woningmakelaars ", "")
+			game_data = game_data.replace("Rensa Family ", "")
 			var home =  game_data.substring(game_data.indexOf(": ") + 2).split(" - ")[0]
 			var visitor = game_data.split(" - ")[1]
 			var location = r.substring(r.indexOf("Speellocatie:") + 14)
@@ -198,6 +198,7 @@ export class MainGame {
 				game_data = game_data.replace("Rabobank Orion Volleybal Doetinchem ", "Orion ")
 				game_data = game_data.replace(" Apeldoorn", "")
 				game_data = game_data.replace("Rebo Woningmakelaars ", "")
+				game_data = game_data.replace("Rensa Family ", "")
 				if (game_data != "") {
 					this.viewModel.set("text_item_schedule_" + index + "_date", game_data.substring(0, game_data.indexOf(": ")))
 					this.viewModel.set("text_item_schedule_" + index + "_game", game_data.substring(game_data.indexOf(": ") + 2))
@@ -227,6 +228,7 @@ export class MainGame {
 				xml = xml.replace("Rabobank Orion Volleybal Doetinchem ", "Orion ")
 				xml = xml.replace(" Apeldoorn", "")
 				xml = xml.replace("Rebo Woningmakelaars ", "")
+				xml = xml.replace("Rensa Family ", "")
 			}
 			var ranking = xml.split("<stand:ranking>")
 			var rows_ranking = "*"
@@ -234,11 +236,15 @@ export class MainGame {
 				rows_ranking += ", *"
 			}
 			this.viewModel.set("rows_ranking", rows_ranking)
-
+			var points
 			for (var index = 1; index < ranking.length; index++) {
 				this.viewModel.set("text_item_ranking_" + (index - 1) + "_team", ranking[index].substring(ranking[index].indexOf("[CDATA[") + 7, ranking[index].indexOf("]")))
 				this.viewModel.set("text_item_ranking_" + (index - 1) + "_games", ranking[index].substring(ranking[index].indexOf("<stand:wedstrijden>") + 19, ranking[index].indexOf("</stand:wedstrijden>")))
-				this.viewModel.set("text_item_ranking_" + (index - 1) + "_points", ranking[index].substring(ranking[index].indexOf("<stand:punten>") + 14, ranking[index].indexOf("</stand:punten")))
+				points = ranking[index].substring(ranking[index].indexOf("<stand:punten>") + 14, ranking[index].indexOf("</stand:punten"))
+				if (points < 0) {
+					points = "X"
+				}
+				this.viewModel.set("text_item_ranking_" + (index - 1) + "_points", points)
 			}
 
 		}).catch((e) => {
