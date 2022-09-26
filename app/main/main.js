@@ -111,6 +111,7 @@ export class MainGame {
 		this.viewModel.set("visibility_ranking", "collapsed")
 		this.viewModel.set("visibility_settings", "collapsed")
 		this.viewModel.set("visibility_button_settings", "collapsed")
+		this.displayAllButtons()
 	}
 
 	indicateTeam(args) {
@@ -136,14 +137,18 @@ export class MainGame {
 		}
 	}
 
-	enableAllButtons() {
-		this.data.all_buttons = !this.data.all_buttons
+	changeStateAllButtons() {
+		this.data.changeStateAllButtons()
+		this.displayAllButtons()
+	}
+
+	displayAllButtons() {
 		if (this.data.all_buttons) {
-			this.viewModel.set("visibility_beach_button", "collapsed")
-			this.viewModel.set("visibility_news_button", "collapsed")
-		} else {
 			this.viewModel.set("visibility_beach_button", "visible")
 			this.viewModel.set("visibility_news_button", "visible")
+		} else {
+			this.viewModel.set("visibility_beach_button", "collapsed")
+			this.viewModel.set("visibility_news_button", "collapsed")
 		}
 	}
 

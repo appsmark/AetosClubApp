@@ -91,6 +91,6 @@ export function tapBeach(args) {
 }
 
 export function doubleTapTitle() {
-	main.enableAllButtons()
+	main.changeStateAllButtons()
 }
 

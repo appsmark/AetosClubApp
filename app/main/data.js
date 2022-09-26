@@ -34,11 +34,16 @@ export class DataGame {
     
     init() {
         this.max_teams = this.teams.length
-        this.team = ApplicationSettings.getNumber("Team")
+        this.team = ApplicationSettings.getNumber("YourTeam")
     }
+
+    changeStateAllButtons() {
+        this.all_buttons = !this.all_buttons
+    }
+		
 
     setTeam() {
 		this.team = this.team_desired
-        ApplicationSettings.setNumber("Team", parseInt(this.team))
+        ApplicationSettings.setNumber("YourTeam", parseInt(this.team))
     }
 }
