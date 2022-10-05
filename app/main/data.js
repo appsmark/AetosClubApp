@@ -2,7 +2,13 @@ import { ApplicationSettings } from "@nativescript/core";
 export class DataGame {
     all_buttons = false
     beach_date  // Date of selected day to show beach info
+    beach_field = 0
+    max_beach_players = 6
+    color_blue = "#00AADE"
+    color_yellow = "#F9B234"
+    color_brown = "#731816"
     days = ["Zon", "Maan", "Dins", "Woens", "Donder", "Vrij", "Zater"]
+    max_fields = 4
     max_ranking_items = 12
     max_schedule_items = 2 * this.max_ranking_items
     max_teams
@@ -33,6 +39,56 @@ export class DataGame {
         ["MA3", "regio-oost/MA2I2", "meisjes-a/3"],
         ];
     
+        players = [
+            "---",
+            "Martin Keesen",
+            "Dick Tuinier",
+            "Erno Breedveld",
+            "Martijn van Duuren",
+            "Hans Heijwegen",
+            "Nathan Derksen",
+            "Rob Jansen",
+            "Jack van der Beek",
+            "Wim de Haan",
+            "Pietje Puk",
+            "Jan Smashmaar",
+            "Strandjutter",
+            "Zo die is goed"
+        ]
+
+        fields = [
+            [
+                [ 1, 0, 0, 0, 0, 0],
+                [ 2, 3, 0, 0, 0, 0],
+                [ 4, 5, 6, 7, 8, 9],
+                [ 0, 0, 0, 0, 0, 0]
+            ],
+            [
+                [ 10, 13, 0, 0, 0, 0],
+                [ 12, 0, 0, 0, 0, 0],
+                [ 0, 0, 0, 0, 0, 0],
+                [ 0, 0, 0, 0, 0, 0]
+            ],
+            [
+                [ 7, 8, 9, 1, 2, 3],
+                [ 3, 10, 11, 0, 0, 0],
+                [ 0, 0, 0, 0, 0, 0],
+                [ 0, 0, 0, 0, 0, 0]
+            ],
+            [
+                [ 4, 5, 6, 7, 0, 0],
+                [ 8, 9, 10, 11, 0, 0],
+                [ 0, 0, 0, 0, 0, 0],
+                [ 0, 0, 0, 0, 0, 0]
+            ],
+            [
+                [ 0, 0, 0, 0, 0, 0],
+                [ 0, 0, 0, 0, 0, 0],
+                [ 0, 0, 0, 0, 0, 0],
+                [ 1, 2, 10, 11, 0, 0]
+            ]
+        ]
+                                        
     init() {
         this.max_teams = this.teams.length
         this.team = ApplicationSettings.getNumber("YourTeam")

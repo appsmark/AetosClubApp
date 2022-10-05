@@ -23,7 +23,7 @@ export class MainGame {
 			this.viewModel.set("textTop", "TEAM " + this.data.teams[this.data.team][0])
 			this.viewModel.set("visibility_beach_button", "collapsed")
 			this.viewModel.set("visibility_news_button", "collapsed")
-		}
+	}
 		this.getCurrentDate()
 //		this.beach()
 	}
@@ -114,7 +114,7 @@ export class MainGame {
 		for (var index=0; index < this.data.max_teams; index++) {
 			this.viewModel.set("background_team_" + index, "black")
 		}
-		this.viewModel.set("background_team_" + args.object.id.split("_")[1], "#00AADE")
+		this.viewModel.set("background_team_" + args.object.id.split("_")[1], this.data.color_blue)
 		this.data.team_desired = args.object.id.split("_")[1]
 		this.viewModel.set("visibility_button_set_team", "visible")
 	}
@@ -144,7 +144,7 @@ export class MainGame {
 	displayAllButtons() {
 		if (this.data.all_buttons) {
 			this.viewModel.set("visibility_beach_button", "visible")
-			this.viewModel.set("visibility_news_button", "visible")
+//			this.viewModel.set("visibility_news_button", "visible")
 		} else {
 			this.viewModel.set("visibility_beach_button", "collapsed")
 			this.viewModel.set("visibility_news_button", "collapsed")
@@ -267,6 +267,7 @@ export class MainGame {
 		this.hide()
 		this.viewModel.set("visibility_back", "visible")
 		this.viewModel.set("visibility_beach", "visible")
+		this.beachShowSelectedField()
 	}
 
 	beachDay(index) {
@@ -276,43 +277,58 @@ export class MainGame {
 			day += 2	// Handle weekend
 		}
 		this.beachEnableDays()
-		this.viewModel.set("background_d" + index, "#00AADE")
-		this.data.beach_date.setDate(d.getDate() + day - 1)
+		this.viewModel.set("background_d" + index, this.data.color_blue)
+		this.data.beach_date.setDate(d.getDate() + day - d.getDay() + 1)
 		this.viewModel.set("textDate", this.data.days[this.data.beach_date.getDay()] + "dag " + this.data.beach_date.getDate() + "-" + this.data.beach_date.getMonth() + "-" + this.data.beach_date.getFullYear())
+		this.beachShowSelectedField()
 	}
 
 	beachField(index) {
 		this.beachResetFields()
-		this.viewModel.set("background_f" + index, "#00AADE")
+		this.viewModel.set("background_f" + index, this.data.color_blue)
+		this.data.beach_field = index
+		this.beachShowSelectedField()
+	}
+
+	beachShowSelectedField() {
+		this.viewModel.set("background_f" + this.data.beach_field, this.data.color_blue)
+		for (var index = 0; index < this.data.max_beach_players; index++) {
+			this.viewModel.set("player_" + index, this.data.players[this.data.fields[this.data.beach_date.getDay() - 1][this.data.beach_field][index]])
+		}
 	}
 
 	beachResetFields() {
 		for (var index = 0; index < this.data.max_fields; index++) {
-			this.viewModel.set("background_f" + index, "#F9B234")
+			this.viewModel.set("background_f" + index, this.data.color_yellow)
 		}
 	}
 
 	beachEnableDays() {
 		const d = new Date()
-		var day = d.getDay()
-		for (var index = 0; index < (day - 1); index++) {
-			this.viewModel.set("background_d" + index, "#731816")
+		var day = d.getDay() - 1
+		for (var index = 0; index < day; index++) {
+			this.viewModel.set("background_d" + index, this.data.color_brown)
 			this.viewModel.set("enabled_d" + index, "false")
 		}
-		for (var index = (day - 1); index < (day + 4); index++) {
-			this.viewModel.set("background_d" + index, "#F9B234")
+		for (var index = day; index < (day + 5); index++) {
+			this.viewModel.set("background_d" + index, this.data.color_yellow)
 			this.viewModel.set("enabled_d" + index, "true")
 		}
-		for (var index = (day + 4); index < 10; index++) {
-			this.viewModel.set("background_d" + index, "#731816")
+		for (var index = (day + 5); index < 10; index++) {
+			this.viewModel.set("background_d" + index, this.data.color_brown)
 			this.viewModel.set("enabled_d" + index, "false")
 		}
+	}
+
+	showSelectedDate() {
+		this.viewModel.set("textDate", this.data.days[this.data.beach_date.getDay()] + "dag " + "-" + this.data.beach_date.getMonth() + "-" + this.data.beach_date.getFullYear())
 	}
 
 	getCurrentDate() {
 		const d = new Date()
 		this.data.beach_date = d
-		this.viewModel.set("textDate", this.data.days[d.getDay()] + "dag " + d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear())
+		this.showSelectedDate()
 		this.beachEnableDays()
+		this.viewModel.set("background_d" + (d.getDay() - 1), this.data.color_blue)
 	}
 }
