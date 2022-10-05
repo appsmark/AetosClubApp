@@ -25,6 +25,7 @@ export class MainGame {
 			this.viewModel.set("visibility_news_button", "collapsed")
 		}
 		this.getCurrentDate()
+//		this.beach()
 	}
 
 	ranking() {
@@ -75,13 +76,6 @@ export class MainGame {
 		this.viewModel.set("visibility_news", "visible")
 	}
 
-	beach() {
-		this.viewModel.set("textTop", "BEACH")
-		this.hide()
-		this.viewModel.set("visibility_back", "visible")
-		this.viewModel.set("visibility_beach", "visible")
-	}
-
 	back() {
 		this.viewModel.set("textTop", "TEAM " + this.data.teams[this.data.team][0])
 		this.hide()
@@ -112,7 +106,9 @@ export class MainGame {
 		this.viewModel.set("visibility_settings", "collapsed")
 		this.viewModel.set("visibility_button_settings", "collapsed")
 		this.displayAllButtons()
-	}
+		this.viewModel.set("visibility_no_data", "collapsed")
+		this.viewModel.set("visibility_item_game", "visible")
+}
 
 	indicateTeam(args) {
 		for (var index=0; index < this.data.max_teams; index++) {
@@ -129,6 +125,9 @@ export class MainGame {
 		this.data.setTeam()
 		this.viewModel.set("textTeam", "TEAM " + this.data.teams[this.data.team][0])
 		this.back()
+		this.rssFeedGame(this.data.teams[this.data.team][2])
+		this.rssFeedRanking(this.data.teams[this.data.team][1])
+		this.rssFeedSchedule(this.data.teams[this.data.team][2])
 	}
 
 	setTeamButtons() {
@@ -185,6 +184,8 @@ export class MainGame {
 			this.viewModel.set("text_game_town", location[2])
 		}).catch((e) => {
 			console.log("ERROR " + e)
+			this.viewModel.set("visibility_no_data", "visible")
+			this.viewModel.set("visibility_item_game", "hidden")
 		});
 	}
 
@@ -211,6 +212,7 @@ export class MainGame {
 			}
 		}).catch((e) => {
 			console.log("ERROR " + e)
+			this.viewModel.set("text_item_schedule_0_date", "GEEN GEGEVENS ONTVANGEN")
 		});
 	}
 
@@ -242,23 +244,75 @@ export class MainGame {
 			}
 			this.viewModel.set("rows_ranking", rows_ranking)
 			var points
+			var ranking_item
 			for (var index = 1; index < ranking.length; index++) {
 				this.viewModel.set("text_item_ranking_" + (index - 1) + "_team", ranking[index].substring(ranking[index].indexOf("[CDATA[") + 7, ranking[index].indexOf("]")))
-				this.viewModel.set("text_item_ranking_" + (index - 1) + "_games", ranking[index].substring(ranking[index].indexOf("<stand:wedstrijden>") + 19, ranking[index].indexOf("</stand:wedstrijden>")))
 				points = ranking[index].substring(ranking[index].indexOf("<stand:punten>") + 14, ranking[index].indexOf("</stand:punten"))
 				if (points < 0) {
 					points = "X"
 				}
+				ranking_item = ranking[index].substring(ranking[index].indexOf("<stand:wedstrijden>") + 19, ranking[index].indexOf("</stand:wedstrijden>")) + "   -"
+				this.viewModel.set("text_item_ranking_" + (index - 1) + "_games", ranking_item)
 				this.viewModel.set("text_item_ranking_" + (index - 1) + "_points", points)
 			}
 
 		}).catch((e) => {
 			console.log("ERROR " + e)
+			this.viewModel.set("text_item_ranking_0_team", "GEEN GEGEVENS ONTVANGEN")
 		});
+	}
+
+	beach() {
+		this.viewModel.set("textTop", "BEACH")
+		this.hide()
+		this.viewModel.set("visibility_back", "visible")
+		this.viewModel.set("visibility_beach", "visible")
+	}
+
+	beachDay(index) {
+		const d = new Date()
+		var day = index
+		if (day > 4) {
+			day += 2	// Handle weekend
+		}
+		this.beachEnableDays()
+		this.viewModel.set("background_d" + index, "#00AADE")
+		this.data.beach_date.setDate(d.getDate() + day - 1)
+		this.viewModel.set("textDate", this.data.days[this.data.beach_date.getDay()] + "dag " + this.data.beach_date.getDate() + "-" + this.data.beach_date.getMonth() + "-" + this.data.beach_date.getFullYear())
+	}
+
+	beachField(index) {
+		this.beachResetFields()
+		this.viewModel.set("background_f" + index, "#00AADE")
+	}
+
+	beachResetFields() {
+		for (var index = 0; index < this.data.max_fields; index++) {
+			this.viewModel.set("background_f" + index, "#F9B234")
+		}
+	}
+
+	beachEnableDays() {
+		const d = new Date()
+		var day = d.getDay()
+		for (var index = 0; index < (day - 1); index++) {
+			this.viewModel.set("background_d" + index, "#731816")
+			this.viewModel.set("enabled_d" + index, "false")
+		}
+		for (var index = (day - 1); index < (day + 4); index++) {
+			this.viewModel.set("background_d" + index, "#F9B234")
+			this.viewModel.set("enabled_d" + index, "true")
+		}
+		for (var index = (day + 4); index < 10; index++) {
+			this.viewModel.set("background_d" + index, "#731816")
+			this.viewModel.set("enabled_d" + index, "false")
+		}
 	}
 
 	getCurrentDate() {
 		const d = new Date()
+		this.data.beach_date = d
 		this.viewModel.set("textDate", this.data.days[d.getDay()] + "dag " + d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear())
+		this.beachEnableDays()
 	}
 }

@@ -90,7 +90,14 @@ export function tapBeach(args) {
 	main.beach()
 }
 
+export function tapDay(args) {
+	main.beachDay(parseInt(args.object.id[1]))
+}
+
+export function tapField(args) {
+	main.beachField(parseInt(args.object.id[1]))
+}
+
 export function doubleTapTitle() {
 	main.changeStateAllButtons()
 }
-

@@ -1,6 +1,7 @@
 import { ApplicationSettings } from "@nativescript/core";
 export class DataGame {
     all_buttons = false
+    beach_date  // Date of selected day to show beach info
     days = ["Zon", "Maan", "Dins", "Woens", "Donder", "Vrij", "Zater"]
     max_ranking_items = 12
     max_schedule_items = 2 * this.max_ranking_items
