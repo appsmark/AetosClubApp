@@ -90,6 +90,10 @@ export function tapBeach(args) {
 	main.beach()
 }
 
+export function tapLogin(args) {
+	main.beachLogin()
+}
+
 export function tapDay(args) {
 	main.beachDay(parseInt(args.object.id[1]))
 }

@@ -13,9 +13,9 @@ export class MainGame {
 	init() {
 		this.data.init()
 		this.setTeamButtons()
-		if (!this.data.team) {
-			this.settings()
-		} else {
+//		if (!this.data.team) {
+//			this.settings()
+//		} else {
 			this.hide()
 			this.viewModel.set("textTop", "")
 			this.viewModel.set("visibility_menu", "visible")
@@ -23,9 +23,9 @@ export class MainGame {
 			this.viewModel.set("textTop", "TEAM " + this.data.teams[this.data.team][0])
 			this.viewModel.set("visibility_beach_button", "collapsed")
 			this.viewModel.set("visibility_news_button", "collapsed")
-	}
+//	}
 		this.getCurrentDate()
-//		this.beach()
+		this.beach()
 	}
 
 	ranking() {
@@ -101,6 +101,7 @@ export class MainGame {
 		this.viewModel.set("visibility_menu", "collapsed")
 		this.viewModel.set("visibility_news", "collapsed")
 		this.viewModel.set("visibility_beach", "collapsed")
+		this.viewModel.set("visibility_beach_login", "collapsed")
 		this.viewModel.set("visibility_schedule", "collapsed")
 		this.viewModel.set("visibility_ranking", "collapsed")
 		this.viewModel.set("visibility_settings", "collapsed")
@@ -139,6 +140,7 @@ export class MainGame {
 	changeStateAllButtons() {
 		this.data.changeStateAllButtons()
 		this.displayAllButtons()
+		this.data.beach_login = false
 	}
 
 	displayAllButtons() {
@@ -266,8 +268,17 @@ export class MainGame {
 		this.viewModel.set("textTop", "BEACH")
 		this.hide()
 		this.viewModel.set("visibility_back", "visible")
-		this.viewModel.set("visibility_beach", "visible")
-		this.beachShowSelectedField()
+		if (this.data.beach_login) {
+			this.viewModel.set("visibility_beach", "visible")
+			this.beachShowSelectedField()
+		} else {
+			this.viewModel.set("visibility_beach_login", "visible")
+		}
+	}
+
+	beachLogin() {
+		this.data.beach_login = true
+		this.beach()
 	}
 
 	beachDay(index) {
@@ -279,7 +290,7 @@ export class MainGame {
 		this.beachEnableDays()
 		this.viewModel.set("background_d" + index, this.data.color_blue)
 		this.data.beach_date.setDate(d.getDate() + day - d.getDay() + 1)
-		this.viewModel.set("textDate", this.data.days[this.data.beach_date.getDay()] + "dag " + this.data.beach_date.getDate() + "-" + this.data.beach_date.getMonth() + "-" + this.data.beach_date.getFullYear())
+		this.showSelectedDate()
 		this.beachShowSelectedField()
 	}
 
@@ -321,7 +332,7 @@ export class MainGame {
 	}
 
 	showSelectedDate() {
-		this.viewModel.set("textDate", this.data.days[this.data.beach_date.getDay()] + "dag " + "-" + this.data.beach_date.getMonth() + "-" + this.data.beach_date.getFullYear())
+		this.viewModel.set("textDate", this.data.days[this.data.beach_date.getDay()] + "dag " + this.data.beach_date.getDate() + "-" + this.data.beach_date.getMonth() + "-" + this.data.beach_date.getFullYear())
 	}
 
 	getCurrentDate() {

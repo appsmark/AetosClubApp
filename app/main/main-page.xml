@@ -234,25 +234,32 @@
 			<StackLayout horizontalAlignment="center" verticalAlignment="bottom" orientation="horizontal">
 				<Button class="button_menu" text="INSTELLEN" ontap="tapSetTeam" visibility="{{visibility_button_set_team}}" />
 			</StackLayout>
+			<StackLayout horizontalAlignment="center" verticalAlignment="bottom" orientation="horizontal">
+				<Button class="button_select_beach" text="BEACH" ontap="tapBeach" visibility="{{visibility_button_beach}}" />
+			</StackLayout>
+		</StackLayout>
+		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_beach_login}}">
+			<TextField hint="Gebruikersnaam" />
+ 			<Button class="button_menu" text="INLOGGEN" ontap="tapLogin" />
 		</StackLayout>
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_beach}}">
 			<StackLayout>
-				<StackLayout orientation="horizontal">
+				<StackLayout orientation="horizontal" horizontalAlignment="center">
 					<Button id="d0" class="button_day" text="M" ontap="tapDay" isEnabled="{{enabled_d0}}" backgroundColor="{{background_d0}}" />
 					<Button id="d1" class="button_day" text="D" ontap="tapDay" isEnabled="{{enabled_d1}}" backgroundColor="{{background_d1}}"/>
 					<Button id="d2" class="button_day" text="W" ontap="tapDay" isEnabled="{{enabled_d2}}" backgroundColor="{{background_d2}}" />
 					<Button id="d3" class="button_day" text="D" ontap="tapDay" isEnabled="{{enabled_d3}}" backgroundColor="{{background_d3}}"/>
 					<Button id="d4" class="button_day" text="V" ontap="tapDay" isEnabled="{{enabled_d4}}" backgroundColor="{{background_d4}}" />
 				</StackLayout>
-				<StackLayout orientation="horizontal">
+				<StackLayout orientation="horizontal" horizontalAlignment="center">
 					<Button id="d5" class="button_day" text="M" ontap="tapDay" isEnabled="{{enabled_d5}}" backgroundColor="{{background_d5}}" />
 					<Button id="d6" class="button_day" text="D" ontap="tapDay" isEnabled="{{enabled_d6}}" backgroundColor="{{background_d6}}" />
 					<Button id="d7" class="button_day" text="W" ontap="tapDay" isEnabled="{{enabled_d7}}" backgroundColor="{{background_d7}}" />
 					<Button id="d8" class="button_day" text="D" ontap="tapDay" isEnabled="{{enabled_d8}}" backgroundColor="{{background_d8}}" />
 					<Button id="d9" class="button_day" text="V" ontap="tapDay" isEnabled="{{enabled_d9}}" backgroundColor="{{background_d9}}" />
 				</StackLayout>
-				<Label class="text_item_beach" text="{{textDate}}" horizontalAlignment="center" />
-				<StackLayout orientation="horizontal">
+				<Label class="text_beach_date" text="{{textDate}}" horizontalAlignment="center" />
+				<StackLayout orientation="horizontal" horizontalAlignment="center">
 					<Button id="f0" class="button_field" text="1" ontap="tapField" backgroundColor="{{background_f0}}" />
 					<Button id="f1" class="button_field" text="2" ontap="tapField" backgroundColor="{{background_f1}}"/>
 					<Button id="f2" class="button_field" text="3" ontap="tapField" backgroundColor="{{background_f2}}" />

@@ -3,10 +3,11 @@ export class DataGame {
     all_buttons = false
     beach_date  // Date of selected day to show beach info
     beach_field = 0
+    beach_login = false
     max_beach_players = 6
-    color_blue = "#00AADE"
-    color_yellow = "#F9B234"
-    color_brown = "#731816"
+    color_blue = "#00AADE"      //   0 170 222
+    color_yellow = "#F9B234"    // 249 178  52
+    color_brown = "#731816"     // 115  24  22
     days = ["Zon", "Maan", "Dins", "Woens", "Donder", "Vrij", "Zater"]
     max_fields = 4
     max_ranking_items = 12
@@ -40,7 +41,7 @@ export class DataGame {
         ];
     
         players = [
-            "---",
+            "--------------",
             "Martin Keesen",
             "Dick Tuinier",
             "Erno Breedveld",
