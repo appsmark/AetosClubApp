@@ -19,6 +19,8 @@
 			<Button class="button_menu" text="NIEUWS" ontap="tapNews" visibility="{{visibility_news_button}}" />
 			<Label text="" visibility="{{visibility_beach_button}}" />
 			<Button class="button_menu_beach" text="BEACH" ontap="tapBeach" visibility="{{visibility_beach_button}}" />
+			<Label text="" visibility="{{visibility_duty_button}}" />
+			<Button class="button_menu_duty" text="ZAALDIENST" ontap="tapDuty" visibility="{{visibility_duty_button}}" />
 		</StackLayout>
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_ranking}}">
 			<Label class="text_ranking_poule" text="{{ text_ranking_poule }}" horizontalAlignment="center" />
@@ -193,6 +195,13 @@
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_street }}" visibility="{{visibility_item_game}}"/>
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_town }}" visibility="{{visibility_item_game}}"/>
 		</StackLayout>
+		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_duty}}">
+			<ScrollView orientation="vertical" height="100%">
+				<StackLayout>
+					<Label class="text_item_duty" text="Nog geen data" textWrap="true"/>
+				</StackLayout>
+			</ScrollView>">
+		</StackLayout>
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_news}}">
 			<ScrollView orientation="vertical" height="100%">
 				<StackLayout>
@@ -265,7 +274,7 @@
 					<Button id="f2" class="button_field" text="3" ontap="tapField" backgroundColor="{{background_f2}}" />
 					<Button id="f3" class="button_field" text="4" ontap="tapField" backgroundColor="{{background_f3}}"/>
 				</StackLayout>
-				<StackLayout orientation="vertical">
+				<StackLayout orientation="vertical" visibility="{{visibilityPlayers}}">
 					<Button id="p0" class="button_player" text="{{player_0}}" ontap="tapPlayer" backgroundColor="{{background_p0}}" />
 					<Button id="p1" class="button_player" text="{{player_1}}" ontap="tapPlayer" backgroundColor="{{background_p1}}" />
 					<Button id="p2" class="button_player" text="{{player_2}}" ontap="tapPlayer" backgroundColor="{{background_p2}}" />

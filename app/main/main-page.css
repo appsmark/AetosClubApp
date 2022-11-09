@@ -19,6 +19,20 @@
     width: 275vw;
 }
 
+.button_menu_duty {
+    background-color:#F9B234;
+    border-color: black;
+    border-width: 4vw;
+    border-radius: 150vw;
+    color: black;
+    padding: 15vw;
+    text-align: center;
+    font-size: 30vw;
+    font-weight: bold;
+    height:100vw;
+    width: 275vw;
+}
+
 .button_menu_beach {
     background-color:#00AADE;
     border-color: black;
@@ -96,6 +110,12 @@
 .text_item_game {
     color:#F9B234;
     font-size: 30vw;
+    font-weight: bold;
+}
+
+.text_item_duty {
+    color:#F9B234;
+    font-size: 35vw;
     font-weight: bold;
 }
 

@@ -13,19 +13,20 @@ export class MainGame {
 	init() {
 		this.data.init()
 		this.setTeamButtons()
-//		if (!this.data.team) {
-//			this.settings()
-//		} else {
+		if (!this.data.team) {
+			this.settings()
+		} else {
 			this.hide()
 			this.viewModel.set("textTop", "")
 			this.viewModel.set("visibility_menu", "visible")
 			this.viewModel.set("visibility_button_settings", "visible")
 			this.viewModel.set("textTop", "TEAM " + this.data.teams[this.data.team][0])
 			this.viewModel.set("visibility_beach_button", "collapsed")
+			this.viewModel.set("visibility_duty_button", "visible")
 			this.viewModel.set("visibility_news_button", "collapsed")
-//	}
+	}
 		this.getCurrentDate()
-		this.beach()
+//		this.beach()
 	}
 
 	ranking() {
@@ -69,6 +70,13 @@ export class MainGame {
 		this.rssFeedGame(this.data.teams[this.data.team][2])
 	}
 
+	duty() {
+		this.viewModel.set("textTop", "ZAALDIENST")
+		this.hide()
+		this.viewModel.set("visibility_back", "visible")
+		this.viewModel.set("visibility_duty", "visible")
+	}
+
 	news() {
 		this.viewModel.set("textTop", "NIEUWS")
 		this.hide()
@@ -97,6 +105,7 @@ export class MainGame {
 	hide() {
 		this.viewModel.set("visibility_splashscreen", "collapsed")
 		this.viewModel.set("visibility_back", "collapsed")
+		this.viewModel.set("visibility_duty", "collapsed")
 		this.viewModel.set("visibility_game", "collapsed")
 		this.viewModel.set("visibility_menu", "collapsed")
 		this.viewModel.set("visibility_news", "collapsed")
@@ -145,9 +154,11 @@ export class MainGame {
 
 	displayAllButtons() {
 		if (this.data.all_buttons) {
+//			this.viewModel.set("visibility_duty_button", "visible")
 			this.viewModel.set("visibility_beach_button", "visible")
 //			this.viewModel.set("visibility_news_button", "visible")
 		} else {
+//			this.viewModel.set("visibility_duty_button", "collapsed")
 			this.viewModel.set("visibility_beach_button", "collapsed")
 			this.viewModel.set("visibility_news_button", "collapsed")
 		}

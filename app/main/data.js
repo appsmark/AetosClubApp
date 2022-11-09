@@ -13,7 +13,7 @@ export class DataGame {
     max_ranking_items = 12
     max_schedule_items = 2 * this.max_ranking_items
     max_teams
-    team
+    team = 15
 	team_desired = 0
     teams = [
         ["D1", "regio-oost/DPD", "dames/1"],

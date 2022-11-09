@@ -1,12 +1,12 @@
 {
     "NativescriptExtend.fileAssociations": [
         {
-            "systemId": "c:\\_Work\\AetosClubAppBeach\\schema\\tns.xsd",
+            "systemId": "c:\\_Work\\AetosClubApp\\schema\\tns.xsd",
             "pattern": "**/**/*.xml"
         },
         {
             "systemId": "http://www.w3.org/2001/XMLSchema.xsd",
-            "pattern": "c:\\_Work\\AetosClubAppBeach\\schema\\tns.xsd"
+            "pattern": "c:\\_Work\\AetosClubApp\\schema\\tns.xsd"
         }
     ],
     "files.exclude": {

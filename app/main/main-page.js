@@ -82,6 +82,10 @@ export function tapGame(args) {
 	main.game()
 }
 
+export function tapDuty(args) {
+	main.duty()
+}
+
 export function tapNews(args) {
 	main.news()
 }
