@@ -8,7 +8,7 @@
 	</ActionBar>
 	<StackLayout>
 		<StackLayout class="splashscreen" visibility="{{ visibility_splashscreen }}">
-			<Image src="~/images/splashscreen.png" backgroundColor="grey"/>
+			<Image src="~/images/splashscreen.png" backgroundColor="#731816"/>
 		</StackLayout>
 		<StackLayout class="page_menu" orientation="vertical" horizontalAlignment="center" visibility="{{visibility_menu}}">
 			<Label />

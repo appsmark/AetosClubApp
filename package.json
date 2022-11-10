@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@nativescript/android": "8.0.0",
+    "@nativescript/ios": "8.3.3",
     "@nativescript/webpack": "^5.0.4"
   },
   "private": "true",
