@@ -26,30 +26,30 @@
 			<Label class="text_ranking_poule" text="{{ text_ranking_poule }}" horizontalAlignment="center" />
 			<Label class="text_ranking_poule" text=" " />
 			<GridLayout rows="*, *, *, *, *, *, *, *, *, *, *, *, *" columns="*, 2*, *, 10*, 4*, 2*, *">
-				<Label class="text_no_data" text="GEEN" visibility="{{visibility_no_data}}"/>
-				<Label class="text_no_data" text="GEGEVENS" visibility="{{visibility_no_data}}"/>
-				<Label class="text_no_data" text="ONTVANGEN" visibility="{{visibility_no_data}}"/>
-				<Label class="text_item_ranking" row="0" col="1" text="1" horizontalAlignment="right" />
+				<Label class="text_no_data" text="GEEN" visibility="{{visibility_no_data_ranking}}"/>
+				<Label class="text_no_data" text="GGEVENS" visibility="{{visibility_no_data_ranking}}"/>
+				<Label class="text_no_data" text="ONTVANGEN" visibility="{{visibility_no_data_ranking}}"/>
+				<Label class="text_item_ranking" row="0" col="1" text="1" horizontalAlignment="right" visibility="{{ text_item_ranking_0_team ? 'visible' : 'collapsed' }}" />
 				<Label class="text_item_ranking" row="0" col="3" text="{{ text_item_ranking_0_team }}" />
 				<Label class="text_item_ranking" row="0" col="4" text="{{ text_item_ranking_0_games }}" horizontalAlignment="right" />
 				<Label class="text_item_ranking" row="0" col="5" text="{{ text_item_ranking_0_points }}" horizontalAlignment="right"/>
-				<Label class="text_item_ranking" row="1" col="1" text="2" horizontalAlignment="right" />
+				<Label class="text_item_ranking" row="1" col="1" text="2" horizontalAlignment="right" visibility="{{ text_item_ranking_1_team ? 'visible' : 'collapsed' }}" />
 				<Label class="text_item_ranking" row="1" col="3" text="{{ text_item_ranking_1_team }}" />
 				<Label class="text_item_ranking" row="1" col="4" text="{{ text_item_ranking_1_games }}" horizontalAlignment="right" />
 				<Label class="text_item_ranking" row="1" col="5" text="{{ text_item_ranking_1_points }}" horizontalAlignment="right" />
-				<Label class="text_item_ranking" row="2" col="1" text="3" horizontalAlignment="right" />
+				<Label class="text_item_ranking" row="2" col="1" text="3" horizontalAlignment="right" visibility="{{ text_item_ranking_2_team ? 'visible' : 'collapsed' }}" />
 				<Label class="text_item_ranking" row="2" col="3" text="{{ text_item_ranking_2_team }}" />
 				<Label class="text_item_ranking" row="2" col="4" text="{{ text_item_ranking_2_games }}" horizontalAlignment="right" />
 				<Label class="text_item_ranking" row="2" col="5" text="{{ text_item_ranking_2_points }}" horizontalAlignment="right" />
-				<Label class="text_item_ranking" row="3" col="1" text="4" horizontalAlignment="right" />
+				<Label class="text_item_ranking" row="3" col="1" text="4" horizontalAlignment="right" visibility="{{ text_item_ranking_3_team ? 'visible' : 'collapsed' }}" />
 				<Label class="text_item_ranking" row="3" col="3" text="{{ text_item_ranking_3_team }}" />
 				<Label class="text_item_ranking" row="3" col="4" text="{{ text_item_ranking_3_games }}" horizontalAlignment="right" />
 				<Label class="text_item_ranking" row="3" col="5" text="{{ text_item_ranking_3_points }}" horizontalAlignment="right" />
-				<Label class="text_item_ranking" row="4" col="1" text="5" horizontalAlignment="right" />
+				<Label class="text_item_ranking" row="4" col="1" text="5" horizontalAlignment="right" visibility="{{ text_item_ranking_4_team ? 'visible' : 'collapsed' }}" />
 				<Label class="text_item_ranking" row="4" col="3" text="{{ text_item_ranking_4_team }}" />
 				<Label class="text_item_ranking" row="4" col="4" text="{{ text_item_ranking_4_games }}" horizontalAlignment="right" />
 				<Label class="text_item_ranking" row="4" col="5" text="{{ text_item_ranking_4_points }}" horizontalAlignment="right" />
-				<Label class="text_item_ranking" row="5" col="1" text="6" horizontalAlignment="right" />
+				<Label class="text_item_ranking" row="5" col="1" text="6" horizontalAlignment="right" visibility="{{ text_item_ranking_5_team ? 'visible' : 'collapsed' }}" />
 				<Label class="text_item_ranking" row="5" col="3" text="{{ text_item_ranking_5_team }}" />
 				<Label class="text_item_ranking" row="5" col="4" text="{{ text_item_ranking_5_games }}" horizontalAlignment="right" />
 				<Label class="text_item_ranking" row="5" col="5" text="{{ text_item_ranking_5_points }}" horizontalAlignment="right" />
@@ -101,7 +101,7 @@
 					<Label class="text_no_data" text="GEEN" visibility="{{visibility_no_data}}"/>
 					<Label class="text_no_data" text="GEGEVENS" visibility="{{visibility_no_data}}"/>
 					<Label class="text_no_data" text="ONTVANGEN" visibility="{{visibility_no_data}}"/>
-					<Label class="text_item_schedule" text="----------------------------------------" />
+					<Label class="text_item_schedule" text="----------------------------------------" visibility="{{ text_item_schedule_0_date ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_schedule" text="{{ text_item_schedule_0_date }}" visibility="{{ text_item_schedule_0_date ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_schedule" text="{{ text_item_schedule_0_game }}" visibility="{{ text_item_schedule_0_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_schedule" text="----------------------------------------" visibility="{{ text_item_schedule_0_game ? 'visible' : 'collapsed' }}" />

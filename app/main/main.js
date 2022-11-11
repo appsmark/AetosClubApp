@@ -196,7 +196,7 @@ export class MainGame {
 			this.viewModel.set("text_game_street", location[1])
 			this.viewModel.set("text_game_town", location[2])
 		}).catch((e) => {
-			console.log("ERROR " + e)
+			console.log("ERROR GAME " + e)
 			this.viewModel.set("visibility_no_data", "visible")
 			this.viewModel.set("visibility_item_game", "hidden")
 		});
@@ -224,8 +224,8 @@ export class MainGame {
 				}
 			}
 		}).catch((e) => {
-			console.log("ERROR " + e)
-			this.viewModel.set("text_item_schedule_0_date", "GEEN GEGEVENS ONTVANGEN")
+			console.log("ERROR SCHEDULE " + e)
+			this.viewModel.set("visibility_no_data", "visible")
 		});
 	}
 
@@ -270,8 +270,9 @@ export class MainGame {
 			}
 
 		}).catch((e) => {
-			console.log("ERROR " + e)
-			this.viewModel.set("text_item_ranking_0_team", "GEEN GEGEVENS ONTVANGEN")
+			console.log("ERROR RANKING " + e)
+			this.viewModel.set("visibility_no_data_ranking", "visible")
+			this.viewModel.set("text_ranking_poule", "GEEN GEGEVENS")
 		});
 	}
 
