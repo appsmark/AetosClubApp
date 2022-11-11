@@ -1,0 +1,9 @@
+/* Import shared style rules */
+@import './main-page-common.css';
+
+.text_item_schedule {
+    color:#F9B234;
+    font-size: 16vw;
+    font-weight: bold;
+}
+

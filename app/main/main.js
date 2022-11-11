@@ -117,6 +117,7 @@ export class MainGame {
 		this.viewModel.set("visibility_button_settings", "collapsed")
 		this.displayAllButtons()
 		this.viewModel.set("visibility_no_data", "collapsed")
+		this.viewModel.set("visibility_no_data_ranking", "collapsed")
 		this.viewModel.set("visibility_item_game", "visible")
 }
 
@@ -188,14 +189,23 @@ export class MainGame {
 			var home =  game_data.substring(game_data.indexOf(": ") + 2).split(" - ")[0]
 			var visitor = game_data.split(" - ")[1]
 			var location = r.substring(r.indexOf("Speellocatie:") + 14)
+			var game_result = ""
 			location = location.substring(0, location.indexOf(']')).split(",")
+			if (game_data.includes("Uitslag")) {
+				date = " "
+				home = game_data.split(" -")[0]
+				visitor = visitor.split(",")[0]
+				location = ""
+				game_result = game_data.substring(game_data.indexOf("Uitslag"))
+			}
 			this.viewModel.set("text_game_date", date)
 			this.viewModel.set("text_game_home", home)
 			this.viewModel.set("text_game_visitor", visitor)
+			this.viewModel.set("text_game_result", game_result)
 			this.viewModel.set("text_game_hall", location[0])
 			this.viewModel.set("text_game_street", location[1])
 			this.viewModel.set("text_game_town", location[2])
-		}).catch((e) => {
+			}).catch((e) => {
 			console.log("ERROR GAME " + e)
 			this.viewModel.set("visibility_no_data", "visible")
 			this.viewModel.set("visibility_item_game", "hidden")
@@ -221,6 +231,10 @@ export class MainGame {
 				if (game_data != "") {
 					this.viewModel.set("text_item_schedule_" + index + "_date", game_data.substring(0, game_data.indexOf(": ")))
 					this.viewModel.set("text_item_schedule_" + index + "_game", game_data.substring(game_data.indexOf(": ") + 2))
+					if (game_data.includes("Uitslag")) {
+						this.viewModel.set("text_item_schedule_" + index + "_date", game_data.substring(0, game_data.indexOf(", ")))
+						this.viewModel.set("text_item_schedule_" + index + "_game", "Uitslag: " + game_data.substring(game_data.indexOf(": ") + 2))
+					}
 				}
 			}
 		}).catch((e) => {

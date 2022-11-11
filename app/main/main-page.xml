@@ -15,24 +15,24 @@
 			<Button class="button_menu" text="STAND" ontap="tapRanking" />
 			<Button class="button_menu" text="PROGRAMMA" ontap="tapSchedule" />
 			<Button class="button_menu" text="WEDSTRIJD" ontap="tapGame" />
+			<Label text="" visibility="{{visibility_duty_button}}" />
+			<Button class="button_menu_duty" text="ZAALDIENST" ontap="tapDuty" visibility="{{visibility_duty_button}}" />
 			<Label text=""  visibility="{{visibility_news_button}}" />
 			<Button class="button_menu" text="NIEUWS" ontap="tapNews" visibility="{{visibility_news_button}}" />
 			<Label text="" visibility="{{visibility_beach_button}}" />
 			<Button class="button_menu_beach" text="BEACH" ontap="tapBeach" visibility="{{visibility_beach_button}}" />
-			<Label text="" visibility="{{visibility_duty_button}}" />
-			<Button class="button_menu_duty" text="ZAALDIENST" ontap="tapDuty" visibility="{{visibility_duty_button}}" />
 		</StackLayout>
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_ranking}}">
 			<Label class="text_ranking_poule" text="{{ text_ranking_poule }}" horizontalAlignment="center" />
 			<Label class="text_ranking_poule" text=" " />
 			<GridLayout rows="*, *, *, *, *, *, *, *, *, *, *, *, *" columns="*, 2*, *, 10*, 4*, 2*, *">
 				<Label class="text_no_data" text="GEEN" visibility="{{visibility_no_data_ranking}}"/>
-				<Label class="text_no_data" text="GGEVENS" visibility="{{visibility_no_data_ranking}}"/>
+				<Label class="text_no_data" text="GEGEVENS" visibility="{{visibility_no_data_ranking}}"/>
 				<Label class="text_no_data" text="ONTVANGEN" visibility="{{visibility_no_data_ranking}}"/>
 				<Label class="text_item_ranking" row="0" col="1" text="1" horizontalAlignment="right" visibility="{{ text_item_ranking_0_team ? 'visible' : 'collapsed' }}" />
-				<Label class="text_item_ranking" row="0" col="3" text="{{ text_item_ranking_0_team }}" />
-				<Label class="text_item_ranking" row="0" col="4" text="{{ text_item_ranking_0_games }}" horizontalAlignment="right" />
-				<Label class="text_item_ranking" row="0" col="5" text="{{ text_item_ranking_0_points }}" horizontalAlignment="right"/>
+				<Label class="text_item_ranking" row="0" col="3" text="{{ text_item_ranking_0_team }}" visibility="{{ text_item_ranking_0_team ? 'visible' : 'collapsed' }}" />
+				<Label class="text_item_ranking" row="0" col="4" text="{{ text_item_ranking_0_games }}" horizontalAlignment="right" visibility="{{ text_item_ranking_0_team ? 'visible' : 'collapsed' }}" />
+				<Label class="text_item_ranking" row="0" col="5" text="{{ text_item_ranking_0_points }}" horizontalAlignment="right" visibility="{{ text_item_ranking_0_team ? 'visible' : 'collapsed' }}" />
 				<Label class="text_item_ranking" row="1" col="1" text="2" horizontalAlignment="right" visibility="{{ text_item_ranking_1_team ? 'visible' : 'collapsed' }}" />
 				<Label class="text_item_ranking" row="1" col="3" text="{{ text_item_ranking_1_team }}" />
 				<Label class="text_item_ranking" row="1" col="4" text="{{ text_item_ranking_1_games }}" horizontalAlignment="right" />
@@ -178,18 +178,19 @@
 			</ScrollView>">
 		</StackLayout>
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_game}}">
-			<Label />
+			<Label class="text_item_game" text="   "/>
 			<Label class="text_no_data" text="GEEN" visibility="{{visibility_no_data}}"/>
 			<Label class="text_no_data" text="GEGEVENS" visibility="{{visibility_no_data}}"/>
 			<Label class="text_no_data" text="ONTVANGEN" visibility="{{visibility_no_data}}"/>
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_date }}" visibility="{{visibility_item_game}}"/>
-			<Label />
+			<Label class="text_item_game" text="   "/>
 			<Label />
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_home }}" visibility="{{visibility_item_game}}"/>
 			<Label class="text_item_game" horizontalAlignment="center" text="tegen" visibility="{{visibility_item_game}}"/>
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_visitor }}" visibility="{{visibility_item_game}}"/>
-			<Label />
-			<Label />
+			<Label class="text_item_game" text="   "/>
+			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_result }}" visibility="{{visibility_item_game}}"/>
+			<Label class="text_item_game" text="   "/>
 			<Label />
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_hall }}" visibility="{{visibility_item_game}}"/>
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_street }}" visibility="{{visibility_item_game}}"/>
