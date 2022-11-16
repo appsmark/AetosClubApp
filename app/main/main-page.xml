@@ -11,7 +11,7 @@
 			<Image src="~/images/splashscreen.png" backgroundColor="#731816"/>
 		</StackLayout>
 		<StackLayout class="page_menu" orientation="vertical" horizontalAlignment="center" visibility="{{visibility_menu}}">
-			<Label />
+			<Label class="spacer" text=""/>
 			<Button class="button_menu" text="STAND" ontap="tapRanking" />
 			<Button class="button_menu" text="PROGRAMMA" ontap="tapSchedule" />
 			<Button class="button_menu" text="WEDSTRIJD" ontap="tapGame" />
