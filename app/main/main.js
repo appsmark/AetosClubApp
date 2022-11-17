@@ -22,7 +22,8 @@ export class MainGame {
 			this.viewModel.set("visibility_button_settings", "visible")
 			this.viewModel.set("textTop", "TEAM " + this.data.teams[this.data.team][0])
 			this.viewModel.set("visibility_beach_button", "collapsed")
-			this.viewModel.set("visibility_duty_button", "visible")
+//			this.viewModel.set("visibility_duty_button", "visible")
+			this.viewModel.set("visibility_duty_button", "collapsed")
 			this.viewModel.set("visibility_news_button", "collapsed")
 	}
 		this.getCurrentDate()
@@ -100,6 +101,7 @@ export class MainGame {
 		for (var index=0; index < this.data.max_teams; index++) {
 			this.viewModel.set("background_team_" + index, "black")
 		}
+		this.viewModel.set("visibility_button_beach", "collapsed")
 	}
 
 	hide() {
@@ -156,7 +158,7 @@ export class MainGame {
 	displayAllButtons() {
 		if (this.data.all_buttons) {
 //			this.viewModel.set("visibility_duty_button", "visible")
-			this.viewModel.set("visibility_beach_button", "visible")
+	//		this.viewModel.set("visibility_beach_button", "visible")
 //			this.viewModel.set("visibility_news_button", "visible")
 		} else {
 //			this.viewModel.set("visibility_duty_button", "collapsed")
@@ -298,7 +300,8 @@ export class MainGame {
 			this.viewModel.set("visibility_beach", "visible")
 			this.beachShowSelectedField()
 		} else {
-			this.viewModel.set("visibility_beach_login", "visible")
+//			this.viewModel.set("visibility_beach_login", "visible")
+			this.viewModel.set("visibility_beach_login", "collapsed")
 		}
 	}
 
