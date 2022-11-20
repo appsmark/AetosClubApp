@@ -59,15 +59,15 @@ export function tapBack(args) {
 }
 
 export function tapSettings(args) {
-	main.settings()
+	main.tapSettings()
 }
 
 export function tapRanking(args) {
-	main.ranking()
+	main.tapRanking()
 }
 
 export function tapSchedule(args) {
-	main.schedule()
+	main.tapSchedule()
 }
 
 export function tapTeam(args) {
@@ -79,31 +79,31 @@ export function tapSetTeam(args) {
 }
 
 export function tapGame(args) {
-	main.game()
+	main.tapGame()
 }
 
 export function tapDuty(args) {
-	main.duty()
+	main.tapDuty()
 }
 
 export function tapNews(args) {
-	main.news()
+	main.tapNews()
 }
 
 export function tapBeach(args) {
-	main.beach()
+	main.tapBeach()
 }
 
 export function tapLogin(args) {
-	main.beachLogin()
+	main.tapBeachLogin()
 }
 
 export function tapDay(args) {
-	main.beachDay(parseInt(args.object.id[1]))
+	main.tapBeachDay(parseInt(args.object.id[1]))
 }
 
 export function tapField(args) {
-	main.beachField(parseInt(args.object.id[1]))
+	main.tapBeachField(parseInt(args.object.id[1]))
 }
 
 export function doubleTapTitle() {
