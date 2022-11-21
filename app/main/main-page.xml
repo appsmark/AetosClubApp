@@ -12,11 +12,16 @@
 		</StackLayout>
 		<StackLayout class="page_menu" orientation="vertical" horizontalAlignment="center" visibility="{{visibility_menu}}">
 			<Label class="spacer" text=""/>
+			<Label class="spacer_menu" text=" "/>
 			<Button class="button_menu" text="STAND" ontap="tapRanking" />
+			<Label class="spacer_menu" text=" "/>
 			<Button class="button_menu" text="PROGRAMMA" ontap="tapSchedule" />
+			<Label class="spacer_menu" text=" "/>
 			<Button class="button_menu" text="WEDSTRIJD" ontap="tapGame" />
+			<Label class="spacer_big_menu" text=" "/>
 			<Label text="" visibility="{{visibility_duty_button}}" />
 			<Button class="button_menu_duty" text="ZAALDIENST" ontap="tapDuty" visibility="{{visibility_duty_button}}" />
+			<Label class="spacer_menu" text=" "/>
 			<Label text=""  visibility="{{visibility_news_button}}" />
 			<Button class="button_menu" text="NIEUWS" ontap="tapNews" visibility="{{visibility_news_button}}" />
 			<Label text="" visibility="{{visibility_beach_button}}" />
@@ -25,7 +30,7 @@
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_ranking}}">
 			<Label class="text_ranking_poule" text="{{ text_ranking_poule }}" horizontalAlignment="center" />
 			<Label class="text_ranking_poule" text=" " />
-			<GridLayout rows="*, *, *, *, *, *, *, *, *, *, *, *, *" columns="*, 2*, *, 10*, 4*, 2*, *">
+			<GridLayout rows="*, *, *, *, *, *, *, *, *, *, *, *, *" columns="*, 2*, *, 10*, 4*, 2*, 2*">
 				<Label class="text_no_data" text="GEEN" visibility="{{visibility_no_data_ranking}}"/>
 				<Label class="text_no_data" text="GEGEVENS" visibility="{{visibility_no_data_ranking}}"/>
 				<Label class="text_no_data" text="ONTVANGEN" visibility="{{visibility_no_data_ranking}}"/>
@@ -199,7 +204,13 @@
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_duty}}">
 			<ScrollView orientation="vertical" height="100%">
 				<StackLayout>
-					<Label class="text_item_duty" text="Nog geen data" textWrap="true"/>
+					<Label class="text_no_data" text="GEEN" visibility="{{visibility_no_data}}"/>
+					<Label class="text_no_data" text="GEGEVENS" visibility="{{visibility_no_data}}"/>
+					<Label class="text_no_data" text="ONTVANGEN" visibility="{{visibility_no_data}}"/>
+					<Label class="text_item_duty" text="----------------------------------------" visibility="{{ text_item_duty_0_date ? 'visible' : 'collapsed' }}"/>
+					<Label class="text_item_duty" text="{{ text_item_duty_0_date }}" visibility="{{ text_item_duty_0_date ? 'visible' : 'collapsed' }}"/>
+					<Label class="text_item_duty" text="{{ text_item_duty_0_game }}" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}"/>
+					<Label class="text_item_duty" text="----------------------------------------" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}" />
 				</StackLayout>
 			</ScrollView>">
 		</StackLayout>

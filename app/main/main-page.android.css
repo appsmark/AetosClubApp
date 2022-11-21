@@ -1,2 +1,10 @@
 /* Import shared style rules */
 @import './main-page-common.css';
+
+.spacer_menu {
+    font-size: 1vw;
+}
+
+.spacer_big_menu {
+    font-size: 2vw;
+}

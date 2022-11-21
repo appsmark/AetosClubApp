@@ -1,6 +1,7 @@
 import { Observable } from '@nativescript/core'
 import { DataGame } from "./data"
 import { Beach } from "./beach"
+import { Duty } from "./duty"
 import { Game } from "./game"
 import { Ranking } from "./ranking"
 import { Schedule } from "./schedule"
@@ -9,6 +10,7 @@ export class MainGame {
     viewModel = new Observable()
 	data = new DataGame()
 	beach = new Beach()
+	duty = new Duty()
 	game = new Game()
 	ranking = new Ranking()
 	schedule = new Schedule()
@@ -21,6 +23,7 @@ export class MainGame {
 	init() {
 		this.data.init()
 		this.beach.init(this.viewModel, this.data)
+		this.duty.init(this.viewModel, this.data)
 		this.game.init(this.viewModel, this.data)
 		this.ranking.init(this.viewModel, this.data)
 		this.schedule.init(this.viewModel, this.data)
@@ -35,7 +38,6 @@ export class MainGame {
 			this.viewModel.set("textTop", "TEAM " + this.data.teams[this.data.team][0])
 			this.viewModel.set("visibility_beach_button", "collapsed")
 			this.viewModel.set("visibility_duty_button", "visible")
-			this.viewModel.set("visibility_duty_button", "collapsed")
 			this.viewModel.set("visibility_news_button", "collapsed")
 	}
 		this.beach.getCurrentDate()
@@ -71,6 +73,7 @@ export class MainGame {
 		this.hide()
 		this.viewModel.set("visibility_back", "visible")
 		this.viewModel.set("visibility_duty", "visible")
+		this.duty.httpRequest(this.data.teams[this.data.team][2])
 	}
 
 	tapNews() {
@@ -84,6 +87,7 @@ export class MainGame {
 		this.viewModel.set("textTop", "TEAM " + this.data.teams[this.data.team][0])
 		this.hide()
 		this.viewModel.set("visibility_menu", "visible")
+		this.viewModel.set("visibility_duty_button", "visible")
 		this.viewModel.set("visibility_button_settings", "visible")
 	}
 
@@ -136,6 +140,7 @@ export class MainGame {
 		this.game.rssFeed(this.data.teams[this.data.team][2])
 		this.ranking.rssFeed(this.data.teams[this.data.team][1])
 		this.schedule.rssFeed(this.data.teams[this.data.team][2])
+		this.duty.httpRequest(this.data.teams[this.data.team][2])
 	}
 
 	setTeamButtons() {

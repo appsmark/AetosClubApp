@@ -1,0 +1,1814 @@
+[
+
+    {
+     "Datum": "Saturday, 17 September 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS MC 4",
+     "Team uit": "N.V.C. MC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D2",
+     "teller": "MC6"
+    },
+    {
+     "Datum": "Saturday, 17 September 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS JC 3",
+     "Team uit": "Blok EVC JC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D2",
+     "teller": "MC5"
+    },
+    {
+     "Datum": "Saturday, 17 September 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS MC 6",
+     "Team uit": "Excelsior MC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H2",
+     "teller": "MC4"
+    },
+    {
+     "Datum": "Saturday, 17 September 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS MC 5",
+     "Team uit": "Scylla MC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H5",
+     "teller": "JC3"
+    },
+    {
+     "Datum": "Saturday, 17 September 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS MB 3",
+     "Team uit": "AETOS MB 4",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H5",
+     "teller": "MB5"
+    },
+    {
+     "Datum": "Saturday, 17 September 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS HS 5",
+     "Team uit": "Scylla HS 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H3",
+     "teller": "MB4"
+    },
+    {
+     "Datum": "Saturday, 17 September 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS HS 2",
+     "Team uit": "Renswouw HS 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Nevobo",
+     "2e scheids": "H3",
+     "teller": "MB3"
+    },
+    {
+     "Datum": "Saturday, 17 September 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS MA 3",
+     "Team uit": "AETOS MA 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H3",
+     "teller": "MC6"
+    },
+
+    {
+     "Datum": "Thursday, 29 September 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS DS 7",
+     "Team uit": "Pajodos DS 2",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "D8",
+     "teller": "D8"
+    },
+
+    {
+     "Datum": "Friday, 30 September 2022",
+     "Tijd": "20:00",
+     "Team thuis": "AETOS DS 5",
+     "Team uit": "TiVoC DS 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "JA1",
+     "teller": "D7"
+    },
+
+    {
+     "Datum": "Saturday, 01 October 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS JC 2",
+     "Team uit": "TiVoC JC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "MB1",
+     "teller": "JC1"
+    },
+    {
+     "Datum": "Saturday, 01 October 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS MB 4",
+     "Team uit": "D.O.S. MB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "MB1",
+     "teller": "MB1"
+    },
+    {
+     "Datum": "Saturday, 01 October 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS JC 1",
+     "Team uit": "Gemini JC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "JA1",
+     "teller": "JC2"
+    },
+    {
+     "Datum": "Saturday, 01 October 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS MB 1",
+     "Team uit": "Weekenders MB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D2",
+     "teller": "MB4"
+    },
+    {
+     "Datum": "Saturday, 01 October 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS MC 1",
+     "Team uit": "Trivos MC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D2",
+     "teller": "MB4"
+    },
+    {
+     "Datum": "Saturday, 01 October 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS DS 2",
+     "Team uit": "Trivos DS 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D1",
+     "teller": "MC1"
+    },
+    {
+     "Datum": "Saturday, 01 October 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS MB 2",
+     "Team uit": "Evoba MB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D1",
+     "teller": "MC1"
+    },
+    {
+     "Datum": "Saturday, 01 October 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS JA 1",
+     "Team uit": "TweeVV JA 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H2",
+     "teller": "JC1"
+    },
+    {
+     "Datum": "Saturday, 01 October 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS DS 1",
+     "Team uit": "SSS DS 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Nevobo",
+     "teller": "MB2"
+    },
+    {
+     "Datum": "Saturday, 01 October 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS HS 2",
+     "Team uit": "Heyendaal HS 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Nevobo   ",
+     "2e scheids": "H3",
+     "teller": "JB1"
+    },
+    {
+     "Datum": "Saturday, 01 October 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS JB 2",
+     "Team uit": "Set Up '69 JB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "JA2",
+     "teller": "JA2"
+    },
+    {
+     "Datum": "Saturday, 01 October 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS HS 1",
+     "Team uit": "VV Utrecht HS 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Nevobo",
+     "teller": "JB2"
+    },
+    {
+     "Datum": "Saturday, 01 October 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS JB 1",
+     "Team uit": "VoCASA JB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H2",
+     "teller": "JB2"
+    },
+    {
+     "Datum": "Saturday, 01 October 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS JA 2",
+     "Team uit": "SDS JA 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H2",
+     "teller": "JB2"
+    },
+    {
+     "Datum": " "
+    },
+    {
+     "Datum": "Saturday, 01 October 2022",
+     "Locatie": "De Laar",
+     "CMV": "08.00 - 10.30  H7 (1) en MB3 (2)"
+    },
+    {
+     "Datum": "Saturday, 01 October 2022",
+     "Locatie": "De Laar",
+     "CMV": "08.30 - 11.00  H6 (1) en MA1 (2)"
+    },
+    {
+     "Datum": "Saturday, 01 October 2022",
+     "Locatie": "De Laar",
+     "CMV": "10.15 - 12.30  H4 (1) en MA2 (2)"
+    },
+
+    {
+     "Datum": "Thursday, 06 October 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS HS 3",
+     "Team uit": "Xanthos HS 1",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "Nevobo",
+     "2e scheids": "H2",
+     "teller": "D5"
+    },
+
+    {
+     "Datum": "Saturday, 08 October 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS JC 3",
+     "Team uit": "Pauwervoll JC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "MA3",
+     "teller": "MC4"
+    },
+    {
+     "Datum": "Saturday, 08 October 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS MC 3",
+     "Team uit": "AETOS MC 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Yvette",
+     "teller": "MC4"
+    },
+    {
+     "Datum": "Saturday, 08 October 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS MC 6",
+     "Team uit": "AETOS MC 5",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "MA3",
+     "teller": "MC4"
+    },
+    {
+     "Datum": "Saturday, 08 October 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS MC 4",
+     "Team uit": "Libero'99 MC 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "MA3",
+     "teller": "MC6"
+    },
+    {
+     "Datum": "Saturday, 08 October 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS MB 5",
+     "Team uit": "SSS MB 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D3",
+     "teller": "MC3"
+    },
+    {
+     "Datum": "Saturday, 08 October 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS DS 10",
+     "Team uit": "SSS DS 8",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D3",
+     "teller": "MC3"
+    },
+    {
+     "Datum": "Saturday, 08 October 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS MA 3",
+     "Team uit": "Excelsior MA 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H6",
+     "teller": "MB5"
+    },
+    {
+     "Datum": "Saturday, 08 October 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS DS 3",
+     "Team uit": "Scylla DS 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H6",
+     "teller": "MB5"
+    },
+    {
+     "Datum": "Saturday, 08 October 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS JC 4",
+     "Team uit": "Toesj JC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H5",
+     "teller": "MB5"
+    },
+    {
+     "Datum": "Saturday, 08 October 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS HS 6",
+     "Team uit": "Woudenberg HS 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H7",
+     "teller": "MA2"
+    },
+    {
+     "Datum": "Saturday, 08 October 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS HS 5",
+     "Team uit": "Heyendaal HS 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H7",
+     "teller": "H6"
+    },
+    {
+     "Datum": "Saturday, 08 October 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS DS 6",
+     "Team uit": "Scylla DS 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D9",
+     "teller": "D9"
+    },
+    {
+     "Datum": "Saturday, 08 October 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS DS 9",
+     "Team uit": "Renswouw DS 4",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D6",
+     "teller": "D6"
+    },
+    {
+     "Datum": "Saturday, 08 October 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS MA 2",
+     "Team uit": "Setash MA 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D6",
+     "teller": "D6"
+    },
+    {
+     "Datum": "Saturday, 08 October 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS HS 7",
+     "Team uit": "Excelsior HS 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H5",
+     "teller": "H6"
+    },
+
+    {
+     "Datum": "Monday, 10 October 2022",
+     "Tijd": "20:00",
+     "Team thuis": "AETOS DS 3",
+     "Team uit": "AETOS DS 5",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "H5",
+     "teller": "D5"
+    },
+
+    {
+     "Datum": "Thursday, 13 October 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS HS 4",
+     "Team uit": "Nuovo HS 1",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "D4",
+     "teller": "D4"
+    },
+    {
+     "Datum": "Thursday, 13 October 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS DS 5",
+     "Team uit": "WaHo DS 2",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "D4",
+     "teller": "D4"
+    },
+    {
+     "Datum": "Thursday, 13 October 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS DS 1",
+     "Team uit": "Nuovo DS 1",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "Silvano",
+     "teller": "D1"
+    },
+
+    {
+     "Datum": "Saturday, 15 October 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS MC 3",
+     "Team uit": "Woudenberg MC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "JA1",
+     "teller": "JB2"
+    },
+    {
+     "Datum": "Saturday, 15 October 2022",
+     "Tijd": "9:00"
+    },
+    {
+     "Datum": "Saturday, 15 October 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS JC 1",
+     "Team uit": "DOS JC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D6",
+     "teller": "JB2"
+    },
+    {
+     "Datum": "Saturday, 15 October 2022",
+     "Tijd": "11:00"
+    },
+    {
+     "Datum": "Saturday, 15 October 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS DS 6",
+     "Team uit": "Pegasus DS 7",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D2",
+     "teller": "MC2"
+    },
+    {
+     "Datum": "Saturday, 15 October 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS JA 1",
+     "Team uit": "SSS JA 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D2",
+     "teller": "MC2"
+    },
+    {
+     "Datum": "Saturday, 15 October 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS MB 3",
+     "Team uit": "TweeVV MB 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D6",
+     "teller": "MB2"
+    },
+    {
+     "Datum": "Saturday, 15 October 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS MB 4",
+     "Team uit": "Gemini MB 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D6",
+     "teller": "JA1"
+    },
+    {
+     "Datum": "Saturday, 15 October 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS DS 2",
+     "Team uit": "SSS DS 4",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D1",
+     "teller": "MB2"
+    },
+    {
+     "Datum": "Saturday, 15 October 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS MB 2",
+     "Team uit": "BSVO MB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": 0,
+     "teller": 0
+    },
+    {
+     "Datum": "Saturday, 15 October 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS DS 1",
+     "Team uit": "Nuovo DS 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "#REF!",
+     "teller": "#REF!"
+    },
+    {
+     "Datum": "Saturday, 15 October 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS HS 2",
+     "Team uit": "Xanthos HS 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Nevobo",
+     "2e scheids": "H3",
+     "teller": "JA2"
+    },
+    {
+     "Datum": "Saturday, 15 October 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS JA 2",
+     "Team uit": "Gemini JA 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H2",
+     "teller": "MB2"
+    },
+    {
+     "Datum": "Saturday, 15 October 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS MB 1",
+     "Team uit": "Trivos MB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D1",
+     "teller": "D1"
+    },
+    {
+     "Datum": "Saturday, 15 October 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS HS 1",
+     "Team uit": "SSS HS 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Nevobo",
+     "teller": "MB2"
+    },
+
+    {
+     "Datum": "Monday, 17 October 2022",
+     "Tijd": "18:15",
+     "Team thuis": "AETOS JC 3",
+     "Team uit": "AETOS JC 4",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "D3",
+     "teller": "D3",
+     "CMV": " "
+    },
+    {
+     "Locatie": " "
+    },
+    {
+     "Datum": "Thursday, 20 October 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS DS 7",
+     "Team uit": "Set Up '69 DS 5",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "D4",
+     "teller": "D4"
+    },
+
+    {
+     "Datum": "Saturday, 22 October 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS MC 6",
+     "Team uit": "Scylla MC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D9",
+     "teller": "MC5"
+    },
+    {
+     "Datum": "Saturday, 22 October 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS DS 3",
+     "Team uit": "Gemini DS 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "?",
+     "teller": "MC5"
+    },
+    {
+     "Datum": "Saturday, 22 October 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS MC 4",
+     "Team uit": "Zeewolde MC 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D9",
+     "teller": "MC5"
+    },
+    {
+     "Datum": "Saturday, 22 October 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS MC 5",
+     "Team uit": "Evoba MC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D3",
+     "teller": "MC6"
+    },
+    {
+     "Datum": "Saturday, 22 October 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS DS 9",
+     "Team uit": "Gemini DS 7",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D3",
+     "teller": "MC4"
+    },
+    {
+     "Datum": "Saturday, 22 October 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS MA 3",
+     "Team uit": "Gemini MA 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D10",
+     "teller": "D10"
+    },
+    {
+     "Datum": "Saturday, 22 October 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS MB 4",
+     "Team uit": "AETOS MB 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D8",
+     "teller": "D8"
+    },
+    {
+     "Datum": "Saturday, 22 October 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS DS 6",
+     "Team uit": "Gemini DS 6",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H6",
+     "teller": "H6"
+    },
+    {
+     "Datum": "Saturday, 22 October 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS DS 8",
+     "Team uit": "Woudenberg DS 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D6",
+     "teller": "MA3"
+    },
+    {
+     "Datum": "Saturday, 22 October 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS HS 6",
+     "Team uit": "AETOS HS 7",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D6",
+     "teller": "MB4"
+    },
+    {
+     "Datum": "Saturday, 22 October 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS DS 10",
+     "Team uit": "WaHo DS 9",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D6",
+     "teller": "MA3"
+    },
+
+    {
+     "Datum": "Saturday, 29 October 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS MC 5",
+     "Team uit": "AETOS MC 6",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D7",
+     "teller": "MC2"
+    },
+    {
+     "Datum": "Saturday, 29 October 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS MC 3",
+     "Team uit": "TweeVV MC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D7",
+     "teller": "MC2"
+    },
+    {
+     "Datum": "Saturday, 29 October 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS DS 9",
+     "Team uit": "AETOS DS 7",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D6",
+     "teller": "MC5"
+    },
+    {
+     "Datum": "Saturday, 29 October 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS MC 2",
+     "Team uit": "TweeVV MC 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H4",
+     "teller": "MC3"
+    },
+    {
+     "Datum": "Saturday, 29 October 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS MA 2",
+     "Team uit": "AETOS MA 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H4",
+     "teller": "MC3"
+    },
+
+    {
+     "Datum": "Thursday, 03 November 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS DS 5",
+     "Team uit": "Setash DS 1",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "D6",
+     "teller": "D10 "
+    },
+
+    {
+     "Datum": "Friday, 04 November 2022",
+     "Tijd": "20:00",
+     "Team thuis": "AETOS DS 4",
+     "Team uit": "Trivos DS 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H4",
+     "teller": "H4"
+    },
+    {
+     "Datum": "Friday, 04 November 2022",
+     "Tijd": "20:00",
+     "Team thuis": "AETOS MA 1",
+     "Team uit": "TweeVV MA 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H3",
+     "teller": "H3"
+    },
+
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS JC 2",
+     "Team uit": "Set Up '69 JC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H5",
+     "teller": "JC1"
+    },
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS MB 2",
+     "Team uit": "Surf MB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H5",
+     "teller": "JC1"
+    },
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS MB 5",
+     "Team uit": "Klarenbeek MB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H5",
+     "teller": "MA2"
+    },
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS HS 5",
+     "Team uit": "TiVoC HS 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D2",
+     "teller": "JC2"
+    },
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS JC 1",
+     "Team uit": "Kidang JC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D2",
+     "teller": "JC2"
+    },
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS MA 2",
+     "Team uit": "Excelsior MA 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D2",
+     "teller": "MB3"
+    },
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS DS 2",
+     "Team uit": "Pegasus DS 5",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D1",
+     "teller": "MA2"
+    },
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS D10",
+     "Team uit": "Labyellov D5",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D1",
+     "teller": "JA2",
+     "CMV": "ipv JB2 wedstrijd"
+    },
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS MB 3",
+     "Team uit": "D.O.S. MB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "MA2",
+     "teller": "JC1"
+    },
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS JA 2",
+     "Team uit": "SSS JA 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Nevobo (+2e scheids H1)",
+     "teller": "D10"
+    },
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS HS 3",
+     "Team uit": "TweeVV HS 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Nevobo  ",
+     "2e scheids": "H1",
+     "teller": "#REF!"
+    },
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS DS 1",
+     "Team uit": "Pegasus DS 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Nevobo",
+     "teller": "MB3"
+    },
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS HS 7",
+     "Team uit": "BSVO HS 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H3",
+     "teller": "JA2"
+    },
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS JA 1",
+     "Team uit": "Volamie JA 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H3",
+     "teller": "JA2"
+    },
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS HS 1",
+     "Team uit": "BVC'73 HS 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Nevobo",
+     "teller": "D1"
+    },
+    {
+     "Datum": " "
+    },
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Locatie": "De Laar",
+     "CMV": "08.00 - 10.30  H7 (1) en MC1 (2)"
+    },
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Locatie": "De Laar",
+     "CMV": "08.30 - 11.00  H7 (1) en MC1 (2)"
+    },
+    {
+     "Datum": "Saturday, 05 November 2022",
+     "Locatie": "De Laar",
+     "CMV": "10.15 - 12.30  H1 (2) en MC1 (2)"
+    },
+
+    {
+     "Datum": "Thursday, 10 November 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS HS 4",
+     "Team uit": "Evoba HS 1",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "D5",
+     "teller": "D5"
+    },
+    {
+     "Datum": "Thursday, 10 November 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS DS 7",
+     "Team uit": "Toesj DS 3",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "D5",
+     "teller": "D5"
+    },
+
+    {
+     "Datum": "Friday, 11 November 2022",
+     "Tijd": "20:00",
+     "Team thuis": "AETOS DS 5",
+     "Team uit": "Set Up '69 DS 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H1",
+     "teller": "H1"
+    },
+    {
+     "Datum": "Friday, 11 November 2022",
+     "Tijd": "20:00",
+     "Team thuis": "AETOS MA 1",
+     "Team uit": "Scylla MA 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H1",
+     "teller": "H1"
+    },
+
+    {
+     "Datum": "Saturday, 12 November 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS MC 4",
+     "Team uit": "Pauwervoll MC 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "JA1",
+     "teller": "MB5"
+    },
+    {
+     "Datum": "Saturday, 12 November 2022",
+     "Tijd": "9:00"
+    },
+    {
+     "Datum": "Saturday, 12 November 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS JC 4",
+     "Team uit": "Pauwervoll JC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "JA1",
+     "teller": "MB5"
+    },
+    {
+     "Datum": "Saturday, 12 November 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS JA 1",
+     "Team uit": "Woudenberg JA 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "MB1",
+     "teller": "MB1"
+    },
+    {
+     "Datum": "Saturday, 12 November 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS JA 2",
+     "Team uit": "Scylla JA 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D2",
+     "teller": "JC4"
+    },
+    {
+     "Datum": "Saturday, 12 November 2022",
+     "Tijd": "11:00"
+    },
+    {
+     "Datum": "Saturday, 12 November 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS MC 1",
+     "Team uit": "Gemini MC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "MA1",
+     "teller": "MA1"
+    },
+    {
+     "Datum": "Saturday, 12 November 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS MB 1",
+     "Team uit": "Dros-Alterno MB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D1",
+     "teller": "MA1"
+    },
+    {
+     "Datum": "Saturday, 12 November 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS DS 2",
+     "Team uit": "WaHo DS 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D1",
+     "teller": "MA1"
+    },
+    {
+     "Datum": "Saturday, 12 November 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS MB 4",
+     "Team uit": "TweeVV MB 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H7",
+     "teller": "JB1"
+    },
+    {
+     "Datum": "Saturday, 12 November 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS MB 2",
+     "Team uit": "Woudenberg MB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H7",
+     "teller": "JB1"
+    },
+    {
+     "Datum": "Saturday, 12 November 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS DS 1",
+     "Team uit": "Heyendaal DS 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Nevobo",
+     "teller": "MC1"
+    },
+    {
+     "Datum": "Saturday, 12 November 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS JB 1",
+     "Team uit": "Engeltherm WSV JB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D7",
+     "teller": "MB4"
+    },
+    {
+     "Datum": "Saturday, 12 November 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS HS 7",
+     "Team uit": "WaHo HS 4",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D7",
+     "teller": "MB4"
+    },
+    {
+     "Datum": "Saturday, 12 November 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS HS 1",
+     "Team uit": "DIOS HS 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Nevobo",
+     "teller": "D1"
+    },
+
+    {
+     "Datum": "Thursday, 17 November 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS D9",
+     "Team uit": "Setash D3",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "H7",
+     "teller": "H7"
+    },
+    {
+     "Datum": "Thursday, 17 November 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS D1",
+     "Team uit": "Voorwaarts D1",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "Nevobo\/Silvano",
+     "teller": "D1"
+    },
+
+    {
+     "Datum": "Friday, 18 November 2022",
+     "Tijd": "20:00",
+     "Team thuis": "AETOS HS 2",
+     "Team uit": "TweeVV HS 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Nevobo",
+     "2e scheids": "H1",
+     "teller": "H4"
+    },
+    {
+     "Datum": "Friday, 18 November 2022",
+     "Tijd": "20:00",
+     "Team thuis": "AETOS DS 6",
+     "Team uit": "Invicta DS 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H4",
+     "teller": "D10"
+    },
+    {
+     "Datum": "Friday, 18 November 2022",
+     "Tijd": "20:00",
+     "Team thuis": "AETOS DS 4",
+     "Team uit": "SSS DS 4",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H4",
+     "teller": "D10"
+    },
+
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS JC 4",
+     "Team uit": "Blok EVC JC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D3",
+     "teller": "MC2"
+    },
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS MC 6",
+     "Team uit": "Xanthos MC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D3",
+     "teller": "MC2"
+    },
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS MC 3",
+     "Team uit": "Set Up '69 MC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D3",
+     "teller": "MC2"
+    },
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS DS 3",
+     "Team uit": "Invicta DS 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H6",
+     "teller": "JC4"
+    },
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS MC 5",
+     "Team uit": "Excelsior MC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H6",
+     "teller": "JC4"
+    },
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS MC 2",
+     "Team uit": "Renswouw MC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H6",
+     "teller": "JC4"
+    },
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS HS 3",
+     "Team uit": "Pegasus HS 4",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Nevobo",
+     "2e scheids": "Edu",
+     "teller": "MC5"
+    },
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS HS 6",
+     "Team uit": "Invicta HS 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H5",
+     "teller": "MC5"
+    },
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS MA 3",
+     "Team uit": "Setash MA 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D9",
+     "teller": "MC5"
+    },
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS HS 5",
+     "Team uit": "Nuovo HS 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H7",
+     "teller": "MA3"
+    },
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS MA 2",
+     "Team uit": "Gemini MA 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H7",
+     "teller": "D10"
+    },
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS DS 9",
+     "Team uit": "Pajodos DS 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D8",
+     "teller": "MA3"
+    },
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS DS 10",
+     "Team uit": "Labyellov DS 5",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H5",
+     "teller": "MA2"
+    },
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS HS 7",
+     "Team uit": "Labyellov HS 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H5",
+     "teller": "MA2"
+    },
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS DS 8",
+     "Team uit": "WaHo DS 8",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D9",
+     "teller": "D9"
+    },
+
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Locatie": "De Laar",
+     "CMV": "08.00 - 10.30  D8 (1) en MB3 (2)"
+    },
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Locatie": "De Laar",
+     "CMV": "08.30 - 11.00  D8 (1) en JC2 (2)"
+    },
+    {
+     "Datum": "Saturday, 19 November 2022",
+     "Locatie": "De Laar",
+     "CMV": "10.15 - 12.30  H2 (2) en JC2 (2)"
+    },
+
+
+    {
+     "Datum": "Thursday, 24 November 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS HS 4",
+     "Team uit": "WaHo HS 2",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "H2",
+     "teller": "D7"
+    },
+    {
+     "Datum": "Thursday, 24 November 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS DS 5",
+     "Team uit": "Scylla DS 1",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "H2",
+     "teller": "D7"
+    },
+    {
+     "Datum": "Thursday, 24 November 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS DS 1",
+     "Team uit": "Heyendaal DS 2",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "Nevobo",
+     "teller": "D7"
+    },
+
+    {
+     "Datum": "Friday, 25 November 2022",
+     "Tijd": "20:00",
+     "Team thuis": "AETOS HS 3",
+     "Team uit": "Heyendaal HS 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Nevobo",
+     "2e scheids": "H2",
+     "teller": "D5"
+    },
+    {
+     "Locatie": " "
+    },
+    {
+     "Datum": "Saturday, 26 November 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS DS 7",
+     "Team uit": "WaHo DS 7",
+     "Locatie": "De Laar",
+     "scheids": "D4",
+     "teller": "JC2"
+    },
+    {
+     "Datum": "Saturday, 26 November 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS MC 1",
+     "Team uit": "Pegasus MC 1",
+     "Locatie": "De Laar",
+     "scheids": "D4",
+     "teller": "JC2"
+    },
+    {
+     "Datum": "Saturday, 26 November 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS JC 1",
+     "Team uit": "Gemini JC 1",
+     "Locatie": "De Laar",
+     "scheids": "D4",
+     "teller": "JC2"
+    },
+    {
+     "Datum": "Saturday, 26 November 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS JC 2",
+     "Team uit": "Woudenberg JC 1",
+     "Locatie": "De Laar",
+     "scheids": "D7",
+     "teller": "JC1"
+    },
+    {
+     "Datum": "Saturday, 26 November 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS JA 2",
+     "Team uit": "Dros-Alterno JA 1",
+     "Locatie": "De Laar",
+     "scheids": "D3",
+     "teller": "JC1"
+    },
+    {
+     "Datum": "Saturday, 26 November 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS DS 2",
+     "Team uit": "Renswouw DS 1",
+     "Locatie": "De Laar",
+     "scheids": "D3",
+     "teller": "JC1"
+    },
+    {
+     "Datum": "Saturday, 26 November 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS MB 3",
+     "Team uit": "Gemini MB 2",
+     "Locatie": "De Laar",
+     "scheids": 0,
+     "teller": "MA1"
+    },
+    {
+     "Datum": "Saturday, 26 November 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS MB 4",
+     "Team uit": "Scylla MB 1",
+     "Locatie": "De Laar",
+     "scheids": 0,
+     "teller": "MA1"
+    },
+    {
+     "Datum": "Saturday, 26 November 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS JB 1",
+     "Team uit": "SSS JB 1",
+     "Locatie": "De Laar",
+     "scheids": "H1",
+     "teller": "JA2"
+    },
+    {
+     "Datum": "Saturday, 26 November 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS MA 1",
+     "Team uit": "TiVoC MA 1",
+     "Locatie": "De Laar",
+     "scheids": "H4",
+     "teller": "MB3"
+    },
+    {
+     "Datum": "Saturday, 26 November 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS HS 1",
+     "Team uit": "Scylla HS 1",
+     "Locatie": "De Laar",
+     "scheids": "Nevobo",
+     "teller": "MB3"
+    },
+    {
+     "Datum": "Saturday, 26 November 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS D10",
+     "Team uit": "Labyellov DS 5",
+     "Locatie": "De Laar",
+     "scheids": "H4",
+     "teller": "MB3"
+    },
+    {
+     "Datum": " "
+    },
+    {
+     "Datum": "Saturday, 26 November 2022",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "CMV": "08.00 - 10.30  H4 (2) en JB1 (1)"
+    },
+    {
+     "Datum": "Saturday, 26 November 2022",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "CMV": "08.30 - 11.00  JB1 (2)"
+    },
+    {
+     "Datum": "Saturday, 26 November 2022",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "CMV": "10.15 - 12.30  JB1 (2)"
+    },
+    {
+     "Locatie": " "
+    },
+    {
+     "Datum": "Thursday, 01 December 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS DS 5",
+     "Team uit": "AETOS DS 3",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "H5",
+     "teller": "D8"
+    },
+
+    {
+     "Datum": "Friday, 02 December 2022",
+     "Tijd": "20:00",
+     "Team thuis": "AETOS DS 4",
+     "Team uit": "AETOS DS 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D5",
+     "teller": "D5"
+    },
+    {
+     "Datum": "Friday, 02 December 2022",
+     "Tijd": "20:00",
+     "Team thuis": "AETOS HS 5",
+     "Team uit": "AETOS HS 4",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H3",
+     "teller": "H3"
+    },
+
+    {
+     "Datum": "Thursday, 08 December 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS HS 4",
+     "Team uit": "TiVoC HS 2",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "D4",
+     "teller": "D8",
+     "CMV": "van 29 sept"
+    },
+
+    {
+     "Datum": "Friday, 09 December 2022",
+     "Tijd": "20:00",
+     "Team thuis": "AETOS DS 4",
+     "Team uit": "Pegasus DS 5",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D3",
+     "teller": "D3"
+    },
+    {
+     "Datum": "Friday, 09 December 2022",
+     "Tijd": "20:00",
+     "Team thuis": "AETOS DS 8",
+     "Team uit": "TweeVV DS 5",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D9",
+     "teller": "D9"
+    },
+
+    {
+     "Datum": "Saturday, 10 December 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS MC 6",
+     "Team uit": "Evoba MC 1",
+     "Locatie": "De Laar",
+     "scheids": "D9",
+     "teller": "MC5"
+    },
+    {
+     "Datum": "Saturday, 10 December 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS MC 4",
+     "Team uit": "TweeVV MC 3",
+     "Locatie": "De Laar",
+     "scheids": "D9",
+     "teller": "MC5"
+    },
+    {
+     "Datum": "Saturday, 10 December 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS MC 5",
+     "Team uit": "Xanthos MC 1",
+     "Locatie": "De Laar",
+     "scheids": "H6",
+     "teller": "MC4"
+    },
+    {
+     "Datum": "Saturday, 10 December 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS DS 9",
+     "Team uit": "D.O.S. DS 3",
+     "Locatie": "De Laar",
+     "scheids": "H6",
+     "teller": "MC6"
+    },
+    {
+     "Datum": "Saturday, 10 December 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS JC 4",
+     "Team uit": "Setash JC 1",
+     "Locatie": "De Laar",
+     "scheids": "H6",
+     "teller": "MC4"
+    },
+    {
+     "Datum": "Saturday, 10 December 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS MB 5",
+     "Team uit": "Libero'99 MB 3",
+     "Locatie": "De Laar",
+     "scheids": "D6",
+     "teller": "JC4"
+    },
+    {
+     "Datum": "Saturday, 10 December 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS HS 6",
+     "Team uit": "Nuovo HS 3",
+     "Locatie": "De Laar",
+     "scheids": "D6",
+     "teller": "JC4"
+    },
+    {
+     "Datum": "Saturday, 10 December 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS JC 3",
+     "Team uit": "Nuovo JC 1",
+     "Locatie": "De Laar",
+     "scheids": "H4",
+     "teller": "JC4",
+     "CMV": "H4 geruild met d6 29 okt"
+    },
+    {
+     "Datum": "Saturday, 10 December 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS JB 1",
+     "Team uit": "VoCASA JB 1",
+     "Locatie": "De Laar",
+     "scheids": "H7",
+     "teller": "JC3"
+    },
+    {
+     "Datum": "Saturday, 10 December 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS HS 2",
+     "Team uit": "Pegasus HS 4",
+     "Locatie": "De Laar",
+     "scheids": "Nevobo",
+     "2e scheids": "H3",
+     "teller": "JC3"
+    },
+    {
+     "Datum": "Saturday, 10 December 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS DS 6",
+     "Team uit": "TweeVV DS 4",
+     "Locatie": "De Laar",
+     "scheids": "H7",
+     "teller": "JC3"
+    },
+    {
+     "Datum": "Saturday, 10 December 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS HS 7",
+     "Team uit": "Setash HS 2",
+     "Locatie": "De Laar",
+     "scheids": "H5",
+     "teller": "JB1"
+    },
+    {
+     "Datum": "Saturday, 10 December 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS DS 3",
+     "Team uit": "TweeVV DS 3",
+     "Locatie": "De Laar",
+     "scheids": "H5",
+     "teller": "JB1"
+    },
+    {
+     "Datum": "Saturday, 10 December 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS DS 10",
+     "Team uit": "WaHo DS 10",
+     "Locatie": "De Laar",
+     "scheids": "H5",
+     "teller": "JB1"
+    },
+
+    {
+     "Datum": "Saturday, 10 December 2022",
+     "Locatie": "Kermisland",
+     "CMV": "08.00 - 10.30  D10 (1) en MC3 (2)"
+    },
+    {
+     "Datum": "Saturday, 10 December 2022",
+     "Locatie": "Kermisland",
+     "CMV": "08.30 - 11.00  D10 (1) en MC3 (2)"
+    },
+    {
+     "Datum": "Saturday, 10 December 2022",
+     "Locatie": "Kermisland",
+     "CMV": "10.15 - 12.30  D10 (2) en MC3 (2)"
+    },
+
+    {
+     "Datum": "Thursday, 15 December 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS HS 4",
+     "Team uit": "AETOS HS 5",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "H3",
+     "teller": "D10"
+    },
+    {
+     "Datum": "Thursday, 15 December 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS DS 7",
+     "Team uit": "AETOS DS 9",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "H3",
+     "teller": "D10"
+    },
+    {
+     "Datum": "Thursday, 15 December 2022",
+     "Tijd": "20:30",
+     "Team thuis": "AETOS DS 1",
+     "Team uit": "Gemini DS 1",
+     "Locatie": "Valkenhuizen, Arnhem",
+     "scheids": "Nevobo",
+     "teller": "D10"
+    },
+
+    {
+     "Datum": "Saturday, 17 December 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS MC 2",
+     "Team uit": "Gemini MC 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D5",
+     "teller": "MB1"
+    },
+    {
+     "Datum": "Saturday, 17 December 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS MB 2",
+     "Team uit": "Gemini MB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D5",
+     "teller": "MB1"
+    },
+    {
+     "Datum": "Saturday, 17 December 2022",
+     "Tijd": "9:00",
+     "Team thuis": "AETOS JC 1",
+     "Team uit": "DOS JC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D5",
+     "teller": "MB1"
+    },
+    {
+     "Datum": "Saturday, 17 December 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS DS 5",
+     "Team uit": "Gemini DS 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D4",
+     "teller": "MB2"
+    },
+    {
+     "Datum": "Saturday, 17 December 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS MB 1",
+     "Team uit": "Orion Volleybal Doetinchem MB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D4",
+     "teller": "MB2"
+    },
+    {
+     "Datum": "Saturday, 17 December 2022",
+     "Tijd": "11:00",
+     "Team thuis": "AETOS MC 1",
+     "Team uit": "SSS MC 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D4",
+     "teller": "MB2"
+    },
+    {
+     "Datum": "Saturday, 17 December 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS HS 3",
+     "Team uit": "AETOS HS 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Nevobo",
+     "2e scheids": "D1",
+     "teller": "JB2"
+    },
+    {
+     "Datum": "Saturday, 17 December 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS JC 2",
+     "Team uit": "Surf JC 2",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H7",
+     "teller": "JB2"
+    },
+    {
+     "Datum": "Saturday, 17 December 2022",
+     "Tijd": "13:00",
+     "Team thuis": "AETOS DS 2",
+     "Team uit": "AETOS DS 4",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H7",
+     "teller": "JB2"
+    },
+    {
+     "Datum": "Saturday, 17 December 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS MB 5",
+     "Team uit": "NVC MB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D4",
+     "teller": "JC 2"
+    },
+    {
+     "Datum": "Saturday, 17 December 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS JB 2",
+     "Team uit": "Zeewolde JB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H1",
+     "teller": "JC2",
+     "CMV": "vervalt"
+    },
+    {
+     "Datum": "Saturday, 17 December 2022",
+     "Tijd": "15:15",
+     "Team thuis": "AETOS MB 3",
+     "Team uit": "Scylla MB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "H1",
+     "teller": "JC2"
+    },
+    {
+     "Datum": "Saturday, 17 December 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS MA 1",
+     "Team uit": "Set Up '69 MA 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D8",
+     "teller": "MB3"
+    },
+    {
+     "Datum": "Saturday, 17 December 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS JB 1",
+     "Team uit": "Orion Volleybal Doetinchem JB 1",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "D8",
+     "teller": "MB3"
+    },
+    {
+     "Datum": "Saturday, 17 December 2022",
+     "Tijd": "17:30",
+     "Team thuis": "AETOS HS 1",
+     "Team uit": "Orion Volleybal Doetinchem HS 3",
+     "Locatie": "Sporthal Elderveld, Arnhem",
+     "scheids": "Nevobo",
+     "teller": "MB3"
+    }
+   ]
