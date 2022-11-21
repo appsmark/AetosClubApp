@@ -1,7 +1,7 @@
 {
   "name": "com.appsmark.aetos",
   "main": "app/app.js",
-  "version": "8.0.5",
+  "version": "2.0.0",
   "author": "Martin Keesen",
   "description": "Aetos Club app",
   "license": "None",
@@ -35,7 +35,7 @@
     "ansi-html-community": "0.0.8"
   },
   "devDependencies": {
-    "@nativescript/android": "~8.3.1",
+    "@nativescript/android": "~8.3.0",
     "@nativescript/ios": "8.3.3",
     "@nativescript/webpack": "^5.0.4"
   },

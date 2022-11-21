@@ -1,0 +1,90 @@
+Datum	Tijd	Team thuis	Team uit	Locatie	scheids	2e scheids	teller
+"Thursday, November 10, 2022"	20:30	AETOS DS 7	Toesj DS 3	"Valkenhuizen, Arnhem"	D5		D5
+"Friday, November 11, 2022"	20:00	AETOS DS 5	Set Up '69 DS 2	"Sporthal Elderveld, Arnhem"	H1		H1
+"Friday, November 11, 2022"	20:00	AETOS MA 1	Scylla MA 1	"Sporthal Elderveld, Arnhem"	H1		H1
+"Saturday, November 12, 2022"	9:00	AETOS MC 4	Pauwervoll MC 2	"Sporthal Elderveld, Arnhem"	JA1		MB5
+"Saturday, November 12, 2022"	9:00	AETOS JC 4	Pauwervoll JC 1	"Sporthal Elderveld, Arnhem"	JA1		MB5
+"Saturday, November 12, 2022"	11:00	AETOS JA 1	Woudenberg JA 1	"Sporthal Elderveld, Arnhem"	MB1		MB1
+"Saturday, November 12, 2022"	11:00	AETOS JA 2	Scylla JA 1	"Sporthal Elderveld, Arnhem"	D2		JC4
+"Saturday, November 12, 2022"	13:00	AETOS MC 1	Gemini MC 1	"Sporthal Elderveld, Arnhem"	MA1		MA1
+"Saturday, November 12, 2022"	13:00	AETOS MB 1	Dros-Alterno MB 1	"Sporthal Elderveld, Arnhem"	D1		MA1
+"Saturday, November 12, 2022"	13:00	AETOS DS 2	WaHo DS 3	"Sporthal Elderveld, Arnhem"	D1		MA1
+"Saturday, November 12, 2022"	15:15	AETOS MB 4	TweeVV MB 2	"Sporthal Elderveld, Arnhem"	H7		JB1
+"Saturday, November 12, 2022"	15:15	AETOS MB 2	Woudenberg MB 1	"Sporthal Elderveld, Arnhem"	H7		JB1
+"Saturday, November 12, 2022"	15:15	AETOS DS 1	Heyendaal DS 3	"Sporthal Elderveld, Arnhem"	Nevobo		MC1
+"Saturday, November 12, 2022"	17:30	AETOS JB 1	Engeltherm WSV JB 1	"Sporthal Elderveld, Arnhem"	D7		MB4
+"Saturday, November 12, 2022"	17:30	AETOS HS 7	WaHo HS 4	"Sporthal Elderveld, Arnhem"	D7		MB4
+"Saturday, November 12, 2022"	17:30	AETOS HS 1	DIOS HS 1	"Sporthal Elderveld, Arnhem"	Nevobo		D1
+"Thursday, November 17, 2022"	20:30	AETOS D9	Setash D3	"Valkenhuizen, Arnhem"	H7		H7
+"Thursday, November 17, 2022"	20:30	AETOS D1	Voorwaarts D1	"Valkenhuizen, Arnhem"	Nevobo/Silvano		D1
+"Friday, November 18, 2022"	20:00	AETOS HS 2	TweeVV HS 2	"Sporthal Elderveld, Arnhem"	Nevobo	H1	H4
+"Friday, November 18, 2022"	20:00	AETOS DS 6	Invicta DS 3	"Sporthal Elderveld, Arnhem"	H4		D10
+"Friday, November 18, 2022"	20:00	AETOS DS 4	SSS DS 4	"Sporthal Elderveld, Arnhem"	H4		D10
+"Saturday, November 19, 2022"	9:00	AETOS JC 4	Blok EVC JC 1	"Sporthal Elderveld, Arnhem"	D3		MC2
+"Saturday, November 19, 2022"	9:00	AETOS MC 6	Xanthos MC 1	"Sporthal Elderveld, Arnhem"	D3		MC2
+"Saturday, November 19, 2022"	9:00	AETOS MC 3	Set Up '69 MC 1	"Sporthal Elderveld, Arnhem"	D3		MC2
+"Saturday, November 19, 2022"	11:00	AETOS DS 3	Invicta DS 1	"Sporthal Elderveld, Arnhem"	H6		JC4
+"Saturday, November 19, 2022"	11:00	AETOS MC 5	Excelsior MC 1	"Sporthal Elderveld, Arnhem"	H6		JC4
+"Saturday, November 19, 2022"	11:00	AETOS MC 2	Renswouw MC 1	"Sporthal Elderveld, Arnhem"	H6		JC4
+"Saturday, November 19, 2022"	13:00	AETOS HS 3	Pegasus HS 4	"Sporthal Elderveld, Arnhem"	Nevobo	Edu	MC5
+"Saturday, November 19, 2022"	13:00	AETOS HS 6	Invicta HS 3	"Sporthal Elderveld, Arnhem"	H5		MC5
+"Saturday, November 19, 2022"	13:00	AETOS MA 3	Setash MA 1	"Sporthal Elderveld, Arnhem"	D9		MC5
+"Saturday, November 19, 2022"	15:15	AETOS HS 5	Nuovo HS 1	"Sporthal Elderveld, Arnhem"	H7		MA3
+"Saturday, November 19, 2022"	15:15	AETOS MA 2	Gemini MA 1	"Sporthal Elderveld, Arnhem"	H7		D10
+"Saturday, November 19, 2022"	15:15	AETOS DS 9	Pajodos DS 2	"Sporthal Elderveld, Arnhem"	D8		MA3
+"Saturday, November 19, 2022"	17:30	AETOS DS 10	Labyellov DS 5	"Sporthal Elderveld, Arnhem"	H5		MA2
+"Saturday, November 19, 2022"	17:30	AETOS HS 7	Labyellov HS 3	"Sporthal Elderveld, Arnhem"	H5		MA2
+"Saturday, November 19, 2022"	17:30	AETOS DS 8	WaHo DS 8	"Sporthal Elderveld, Arnhem"	D9		D9
+"Thursday, November 24, 2022"	20:30	AETOS HS 4	WaHo HS 2	"Valkenhuizen, Arnhem"	H2		D7
+"Thursday, November 24, 2022"	20:30	AETOS DS 5	Scylla DS 1	"Valkenhuizen, Arnhem"	H2		D7
+"Thursday, November 24, 2022"	20:30	AETOS DS 1	Heyendaal DS 2	"Valkenhuizen, Arnhem"	Nevobo		D7
+"Friday, November 25, 2022"	20:00	AETOS HS 3	Heyendaal HS 2	"Sporthal Elderveld, Arnhem"	Nevobo	H2	D5
+"Saturday, November 26, 2022"	11:00	AETOS DS 7	WaHo DS 7	De Laar	D4		JC2
+"Saturday, November 26, 2022"	11:00	AETOS MC 1	Pegasus MC 1	De Laar	D4		JC2
+"Saturday, November 26, 2022"	11:00	AETOS JC 1	Gemini JC 1	De Laar	D4		JC2
+"Saturday, November 26, 2022"	13:00	AETOS JC 2	Woudenberg JC 1	De Laar	D7		JC1
+"Saturday, November 26, 2022"	13:00	AETOS JA 2	Dros-Alterno JA 1	De Laar	D3		JC1
+"Saturday, November 26, 2022"	13:00	AETOS DS 2	Renswouw DS 1	De Laar	D3		JC1
+"Saturday, November 26, 2022"	15:15	AETOS MB 3	Gemini MB 2	De Laar	0		MA1
+"Saturday, November 26, 2022"	15:15	AETOS MB 4	Scylla MB 1	De Laar	0		MA1
+"Saturday, November 26, 2022"	15:15	AETOS JB 1	SSS JB 1	De Laar	H1		JA2
+"Saturday, November 26, 2022"	17:30	AETOS MA 1	TiVoC MA 1	De Laar	H4		MB3
+"Saturday, November 26, 2022"	17:30	AETOS HS 1	Scylla HS 1	De Laar	Nevobo		MB3
+"Saturday, November 26, 2022"	17:30	AETOS D10	Labyellov DS 5	De Laar	H4		MB3
+"Thursday, December 1, 2022"	20:30	AETOS DS 5	AETOS DS 3	"Valkenhuizen, Arnhem"	H5		D8
+"Friday, December 2, 2022"	20:00	AETOS DS 4	AETOS DS 2	"Sporthal Elderveld, Arnhem"	D5		D5
+"Friday, December 2, 2022"	20:00	AETOS HS 5	AETOS HS 4	"Sporthal Elderveld, Arnhem"	H3		H3
+"Thursday, December 8, 2022"	20:30	AETOS HS 4	TiVoC HS 2	"Valkenhuizen, Arnhem"	D4		D8
+"Friday, December 9, 2022"	20:00	AETOS DS 4	Pegasus DS 5	"Sporthal Elderveld, Arnhem"	D3		D3
+"Friday, December 9, 2022"	20:00	AETOS DS 8	TweeVV DS 5	"Sporthal Elderveld, Arnhem"	D9		D9
+"Saturday, December 10, 2022"	9:00	AETOS MC 6	Evoba MC 1	De Laar	D9		MC5
+"Saturday, December 10, 2022"	9:00	AETOS MC 4	TweeVV MC 3	De Laar	D9		MC5
+"Saturday, December 10, 2022"	11:00	AETOS MC 5	Xanthos MC 1	De Laar	H6		MC4
+"Saturday, December 10, 2022"	11:00	AETOS DS 9	D.O.S. DS 3	De Laar	H6		MC6
+"Saturday, December 10, 2022"	11:00	AETOS JC 4	Setash JC 1	De Laar	H6		MC4
+"Saturday, December 10, 2022"	13:00	AETOS MB 5	Libero'99 MB 3	De Laar	D6		JC4
+"Saturday, December 10, 2022"	13:00	AETOS HS 6	Nuovo HS 3	De Laar	D6		JC4
+"Saturday, December 10, 2022"	13:00	AETOS JC 3	Nuovo JC 1	De Laar	H4		JC4
+"Saturday, December 10, 2022"	15:15	AETOS JB 1	VoCASA JB 1	De Laar	H7		JC3
+"Saturday, December 10, 2022"	15:15	AETOS HS 2	Pegasus HS 4	De Laar	Nevobo	H3	JC3
+"Saturday, December 10, 2022"	15:15	AETOS DS 6	TweeVV DS 4	De Laar	H7		JC3
+"Saturday, December 10, 2022"	17:30	AETOS HS 7	Setash HS 2	De Laar	H5		JB1
+"Saturday, December 10, 2022"	17:30	AETOS DS 3	TweeVV DS 3	De Laar	H5		JB1
+"Saturday, December 10, 2022"	17:30	AETOS DS 10	WaHo DS 10	De Laar	H5		JB1
+"Thursday, December 15, 2022"	20:30	AETOS HS 4	AETOS HS 5	"Valkenhuizen, Arnhem"	H3		D10
+"Thursday, December 15, 2022"	20:30	AETOS DS 7	AETOS DS 9	"Valkenhuizen, Arnhem"	H3		D10
+"Thursday, December 15, 2022"	20:30	AETOS DS 1	Gemini DS 1	"Valkenhuizen, Arnhem"	Nevobo		D10
+"Saturday, December 17, 2022"	9:00	AETOS MC 2	Gemini MC 2	"Sporthal Elderveld, Arnhem"	D5		MB1
+"Saturday, December 17, 2022"	9:00	AETOS MB 2	Gemini MB 1	"Sporthal Elderveld, Arnhem"	D5		MB1
+"Saturday, December 17, 2022"	9:00	AETOS JC 1	DOS JC 1	"Sporthal Elderveld, Arnhem"	D5		MB1
+"Saturday, December 17, 2022"	11:00	AETOS DS 5	Gemini DS 3	"Sporthal Elderveld, Arnhem"	D4		MB2
+"Saturday, December 17, 2022"	11:00	AETOS MB 1	Orion Volleybal Doetinchem MB 1	"Sporthal Elderveld, Arnhem"	D4		MB2
+"Saturday, December 17, 2022"	11:00	AETOS MC 1	SSS MC 1	"Sporthal Elderveld, Arnhem"	D4		MB2
+"Saturday, December 17, 2022"	13:00	AETOS HS 3	AETOS HS 2	"Sporthal Elderveld, Arnhem"	Nevobo	D1	JB2
+"Saturday, December 17, 2022"	13:00	AETOS JC 2	Surf JC 2	"Sporthal Elderveld, Arnhem"	H7		JB2
+"Saturday, December 17, 2022"	13:00	AETOS DS 2	AETOS DS 4	"Sporthal Elderveld, Arnhem"	H7		JB2
+"Saturday, December 17, 2022"	15:15	AETOS MB 5	NVC MB 1	"Sporthal Elderveld, Arnhem"	D4		JC 2
+"Saturday, December 17, 2022"	15:15	AETOS MB 3	Scylla MB 1	"Sporthal Elderveld, Arnhem"	H1		JC2
+"Saturday, December 17, 2022"	17:30	AETOS MA 1	Set Up '69 MA 1	"Sporthal Elderveld, Arnhem"	D8		MB3
+"Saturday, December 17, 2022"	17:30	AETOS JB 1	Orion Volleybal Doetinchem JB 1	"Sporthal Elderveld, Arnhem"	D8		MB3
+"Saturday, December 17, 2022"	17:30	AETOS HS 1	Orion Volleybal Doetinchem HS 3	"Sporthal Elderveld, Arnhem"	Nevobo		MB3
