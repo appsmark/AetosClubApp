@@ -1,4 +1,4 @@
-import { Observable } from '@nativescript/core'
+import { Observable, File } from '@nativescript/core'
 import { DataGame } from "./data"
 import { Http } from '@nativescript/core'
 
@@ -12,15 +12,22 @@ export class Duty {
     }
 
     httpRequest(id) {
-		Http.getJSON('http://apps-mark.nl/zaaldienst.json')
-			.then((r) => {
-	
-				console.log(r)
-			this.viewModel.set("text_item_duty_0_date", r)
-		},
-		e => {
-			console.log("ERROR DUTY " + e)
-			this.viewModel.set("visibility_no_data", "visible")
+		fetch("http://apps-mark.nl/zaaldienst.json")
+		.then((response) => response.json())
+		.then((r) => {
+//			console.log(r)
+//var json_data = JSON.parse(r)
+			console.log("Datum " + r.duty.length + "  " + id);
+			for (var i = 0; i < r.duty.length; i++) {
+if (r.duty[i].teller == id) {
+	console.log(r.duty[i].Datum)
+}				
+			}
+		}).catch((err) => {
+			// >> (hide)
+			console.log("Error: ");
+			console.log(err);
+			// << (hide)
 		});
 	}
 

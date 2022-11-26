@@ -73,7 +73,7 @@ export class MainGame {
 		this.hide()
 		this.viewModel.set("visibility_back", "visible")
 		this.viewModel.set("visibility_duty", "visible")
-		this.duty.httpRequest(this.data.teams[this.data.team][2])
+		this.duty.httpRequest(this.data.teams[this.data.team][0])
 	}
 
 	tapNews() {
