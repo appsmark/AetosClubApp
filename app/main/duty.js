@@ -11,17 +11,37 @@ export class Duty {
 		this.data = data
     }
 
+	reset() {
+		for (var index = 0; index < this.data.max_duty_items; index++) {
+			this.viewModel.set("text_item_duty_" + index + "_date", "")
+			this.viewModel.set("text_item_duty_" + index + "_game", "")
+			this.viewModel.set("text_item_duty_" + index + "_role", "")
+		}
+	}
+
     httpRequest(id) {
 		fetch("http://apps-mark.nl/zaaldienst.json")
 		.then((response) => response.json())
 		.then((r) => {
-//			console.log(r)
-//var json_data = JSON.parse(r)
-			console.log("Datum " + r.duty.length + "  " + id);
+			var index = 0
+			var role = ""
 			for (var i = 0; i < r.duty.length; i++) {
-if (r.duty[i].teller == id) {
-	console.log(r.duty[i].Datum)
-}				
+				if ((r.duty[i].teller == id) || (r.duty[i].scheids == id)) {
+					this.viewModel.set("text_item_duty_" + index + "_date", r.duty[i].Datum + "   " + r.duty[i].Tijd)
+					this.viewModel.set("text_item_duty_" + index + "_game", r.duty[i].Thuisteam + " - " + r.duty[i].Uitteam)
+					role = ""
+					if (r.duty[i].scheids == id) {
+						role = "Fluiten"
+						if (r.duty[i].teller == id) {
+							role += " & tellen"
+						}
+					} else {
+						role += "Tellen"
+					}
+					this.viewModel.set("text_item_duty_" + index + "_role", role)
+					
+					index += 1
+				}				
 			}
 		}).catch((err) => {
 			// >> (hide)

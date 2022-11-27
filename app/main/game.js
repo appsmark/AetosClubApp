@@ -15,9 +15,13 @@ export class Game {
 			if (date[date.length - 1] == ":") {
 				date = date.substring(0, date.length - 1)
 			}
-			if (date[0] == ":") {
+			if ((date[0] == ":") || date[0]=="=") {
 				date = ""
 			}
+			date = date.replace("dec.", "december")
+			date = date.replace("nov.", "november")
+			date = date.replace("jan.", "januari")
+			date = date.replace("feb.", "februari")
 			var game_data = ""
 			game_data = r.substring(r.indexOf('[CDATA[') + 7)
 			game_data = game_data.substring(0, game_data.indexOf("]]"))
@@ -29,6 +33,10 @@ export class Game {
 			game_data = game_data.replace("Rebo Woningmakelaars ", "")
 			game_data = game_data.replace("Rensa Family ", "")
 			var home =  game_data.substring(game_data.indexOf(": ") + 2).split(" - ")[0]
+			console.log(date)
+			if ((home = "") || (date=="")) {
+				this.viewModel.set("visibility_item_game", "hidden")
+			}
 			var visitor = game_data.split(" - ")[1]
 			var location = r.substring(r.indexOf("Speellocatie:") + 14)
 			var game_result = ""
@@ -40,6 +48,7 @@ export class Game {
 				location = ""
 				game_result = game_data.substring(game_data.indexOf("Uitslag"))
 			}
+			console.log(home)
 			this.viewModel.set("text_game_date", date)
 			this.viewModel.set("text_game_home", home)
 			this.viewModel.set("text_game_visitor", visitor)

@@ -1,3 +1,3 @@
-ns clean ios
+ns clean
 ns prepare ios
 ns build ios --release --forDevice

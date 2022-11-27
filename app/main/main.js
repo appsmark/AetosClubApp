@@ -132,6 +132,7 @@ export class MainGame {
 	}
 
 	setTeam(args) {
+		this.duty.reset()
 		this.ranking.reset()
 		this.schedule.reset()
 		this.data.setTeam()

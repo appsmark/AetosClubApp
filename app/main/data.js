@@ -10,6 +10,7 @@ export class DataGame {
     color_brown = "#731816"     // 115  24  22
     days = ["Zon", "Maan", "Dins", "Woens", "Donder", "Vrij", "Zater"]
     max_fields = 4
+    max_duty_items = 13
     max_ranking_items = 12
     max_schedule_items = 2 * this.max_ranking_items
     max_teams
