@@ -32,6 +32,12 @@ export class Schedule {
 				game_data = game_data.replace(" Apeldoorn", "")
 				game_data = game_data.replace("Rebo Woningmakelaars ", "")
 				game_data = game_data.replace("Rensa Family ", "")
+				game_data = game_data.replace("nov.", "november")
+				game_data = game_data.replace("dec.", "december")
+				game_data = game_data.replace("jan.", "januari")
+				game_data = game_data.replace("feb.", "februari")
+				game_data = game_data.replace("mrt.", "maart")
+				game_data = game_data.replace("apr.", "april")
 				if (game_data != "") {
 					this.viewModel.set("text_item_schedule_" + index + "_date", game_data.substring(0, game_data.indexOf(": ")))
 					this.viewModel.set("text_item_schedule_" + index + "_game", game_data.substring(game_data.indexOf(": ") + 2))

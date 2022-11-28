@@ -204,77 +204,77 @@
 					<Label class="text_no_data" text="GEEN" visibility="{{visibility_no_data}}"/>
 					<Label class="text_no_data" text="GEGEVENS" visibility="{{visibility_no_data}}"/>
 					<Label class="text_no_data" text="ONTVANGEN" visibility="{{visibility_no_data}}"/>
-					<Label class="text_item_duty" text="----------------------------------------" visibility="{{ text_item_duty_0_date ? 'visible' : 'collapsed' }}"/>
+					<Label class="text_item_duty" text="----------------------------------" visibility="{{ text_item_duty_0_date ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_0_date }}" visibility="{{ text_item_duty_0_date ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_0_game }}" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_0_hall }}" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_0_role }}" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}"/>
-					<Label class="text_item_duty" text="----------------------------------------" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}" />
+					<Label class="text_item_duty" text="----------------------------------" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}" />
 					<Label class="text_item_duty" text="{{ text_item_duty_1_date }}" visibility="{{ text_item_duty_1_date ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_1_game }}" visibility="{{ text_item_duty_1_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_1_hall }}" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_1_role }}" visibility="{{ text_item_duty_1_game ? 'visible' : 'collapsed' }}"/>
-					<Label class="text_item_duty" text="----------------------------------------" visibility="{{ text_item_duty_1_game ? 'visible' : 'collapsed' }}" />
+					<Label class="text_item_duty" text="----------------------------------" visibility="{{ text_item_duty_1_game ? 'visible' : 'collapsed' }}" />
 					<Label class="text_item_duty" text="{{ text_item_duty_2_date }}" visibility="{{ text_item_duty_2_date ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_2_game }}" visibility="{{ text_item_duty_2_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_2_hall }}" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_2_role }}" visibility="{{ text_item_duty_2_game ? 'visible' : 'collapsed' }}"/>
-					<Label class="text_item_duty" text="----------------------------------------" visibility="{{ text_item_duty_2_game ? 'visible' : 'collapsed' }}" />
+					<Label class="text_item_duty" text="----------------------------------" visibility="{{ text_item_duty_2_game ? 'visible' : 'collapsed' }}" />
 					<Label class="text_item_duty" text="{{ text_item_duty_3_date }}" visibility="{{ text_item_duty_3_date ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_3_game }}" visibility="{{ text_item_duty_3_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_3_hall }}" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_3_role }}" visibility="{{ text_item_duty_3_game ? 'visible' : 'collapsed' }}"/>
-					<Label class="text_item_duty" text="----------------------------------------" visibility="{{ text_item_duty_3_game ? 'visible' : 'collapsed' }}" />
+					<Label class="text_item_duty" text="----------------------------------" visibility="{{ text_item_duty_3_game ? 'visible' : 'collapsed' }}" />
 					<Label class="text_item_duty" text="{{ text_item_duty_4_date }}" visibility="{{ text_item_duty_4_date ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_4_game }}" visibility="{{ text_item_duty_4_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_4_hall }}" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_4_role }}" visibility="{{ text_item_duty_4_game ? 'visible' : 'collapsed' }}"/>
-					<Label class="text_item_duty" text="----------------------------------------" visibility="{{ text_item_duty_4_game ? 'visible' : 'collapsed' }}" />
+					<Label class="text_item_duty" text="----------------------------------" visibility="{{ text_item_duty_4_game ? 'visible' : 'collapsed' }}" />
 					<Label class="text_item_duty" text="{{ text_item_duty_5_date }}" visibility="{{ text_item_duty_5_date ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_5_game }}" visibility="{{ text_item_duty_5_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_5_hall }}" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_5_role }}" visibility="{{ text_item_duty_5_game ? 'visible' : 'collapsed' }}"/>
-					<Label class="text_item_duty" text="----------------------------------------" visibility="{{ text_item_duty_5_game ? 'visible' : 'collapsed' }}" />
+					<Label class="text_item_duty" text="----------------------------------" visibility="{{ text_item_duty_5_game ? 'visible' : 'collapsed' }}" />
 					<Label class="text_item_duty" text="{{ text_item_duty_6_date }}" visibility="{{ text_item_duty_6_date ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_6_game }}" visibility="{{ text_item_duty_6_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_6_hall }}" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_6_role }}" visibility="{{ text_item_duty_6_game ? 'visible' : 'collapsed' }}"/>
-					<Label class="text_item_duty" text="----------------------------------------" visibility="{{ text_item_duty_6_game ? 'visible' : 'collapsed' }}" />
+					<Label class="text_item_duty" text="----------------------------------" visibility="{{ text_item_duty_6_game ? 'visible' : 'collapsed' }}" />
 					<Label class="text_item_duty" text="{{ text_item_duty_7_date }}" visibility="{{ text_item_duty_7_date ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_7_game }}" visibility="{{ text_item_duty_7_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_7_hall }}" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_7_role }}" visibility="{{ text_item_duty_7_game ? 'visible' : 'collapsed' }}"/>
-					<Label class="text_item_duty" text="----------------------------------------" visibility="{{ text_item_duty_7_game ? 'visible' : 'collapsed' }}" />
+					<Label class="text_item_duty" text="----------------------------------" visibility="{{ text_item_duty_7_game ? 'visible' : 'collapsed' }}" />
 					<Label class="text_item_duty" text="{{ text_item_duty_8_date }}" visibility="{{ text_item_duty_8_date ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_8_game }}" visibility="{{ text_item_duty_8_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_8_hall }}" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_8_role }}" visibility="{{ text_item_duty_8_game ? 'visible' : 'collapsed' }}"/>
-					<Label class="text_item_duty" text="----------------------------------------" visibility="{{ text_item_duty_8_game ? 'visible' : 'collapsed' }}" />
+					<Label class="text_item_duty" text="----------------------------------" visibility="{{ text_item_duty_8_game ? 'visible' : 'collapsed' }}" />
 					<Label class="text_item_duty" text="{{ text_item_duty_9_date }}" visibility="{{ text_item_duty_9_date ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_9_game }}" visibility="{{ text_item_duty_9_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_9_hall }}" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_9_role }}" visibility="{{ text_item_duty_9_game ? 'visible' : 'collapsed' }}"/>
-					<Label class="text_item_duty" text="----------------------------------------" visibility="{{ text_item_duty_9_game ? 'visible' : 'collapsed' }}" />
+					<Label class="text_item_duty" text="----------------------------------" visibility="{{ text_item_duty_9_game ? 'visible' : 'collapsed' }}" />
 					<Label class="text_item_duty" text="{{ text_item_duty_10_date }}" visibility="{{ text_item_duty_10_date ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_10_game }}" visibility="{{ text_item_duty_10_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_10_hall }}" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_10_role }}" visibility="{{ text_item_duty_10_game ? 'visible' : 'collapsed' }}"/>
-					<Label class="text_item_duty" text="----------------------------------------" visibility="{{ text_item_duty_10_game ? 'visible' : 'collapsed' }}" />
+					<Label class="text_item_duty" text="----------------------------------" visibility="{{ text_item_duty_10_game ? 'visible' : 'collapsed' }}" />
 					<Label class="text_item_duty" text="{{ text_item_duty_11_date }}" visibility="{{ text_item_duty_11_date ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_11_game }}" visibility="{{ text_item_duty_11_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_11_hall }}" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_11_role }}" visibility="{{ text_item_duty_11_game ? 'visible' : 'collapsed' }}"/>
-					<Label class="text_item_duty" text="----------------------------------------" visibility="{{ text_item_duty_11_game ? 'visible' : 'collapsed' }}" />
+					<Label class="text_item_duty" text="----------------------------------" visibility="{{ text_item_duty_11_game ? 'visible' : 'collapsed' }}" />
 					<Label class="text_item_duty" text="{{ text_item_duty_12_date }}" visibility="{{ text_item_duty_12_date ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_12_game }}" visibility="{{ text_item_duty_12_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_12_hall }}" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_12_role }}" visibility="{{ text_item_duty_12_game ? 'visible' : 'collapsed' }}"/>
-					<Label class="text_item_duty" text="----------------------------------------" visibility="{{ text_item_duty_12_game ? 'visible' : 'collapsed' }}" />
+					<Label class="text_item_duty" text="----------------------------------" visibility="{{ text_item_duty_12_game ? 'visible' : 'collapsed' }}" />
 					<Label class="text_item_duty" text="{{ text_item_duty_13_date }}" visibility="{{ text_item_duty_13_date ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_13_game }}" visibility="{{ text_item_duty_13_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_13_hall }}" visibility="{{ text_item_duty_0_game ? 'visible' : 'collapsed' }}"/>
 					<Label class="text_item_duty" text="{{ text_item_duty_13_role }}" visibility="{{ text_item_duty_13_game ? 'visible' : 'collapsed' }}"/>
-					<Label class="text_item_duty" text="----------------------------------------" visibility="{{ text_item_duty_13_game ? 'visible' : 'collapsed' }}" />
+					<Label class="text_item_duty" text="----------------------------------" visibility="{{ text_item_duty_13_game ? 'visible' : 'collapsed' }}" />
 				</StackLayout>
 			</ScrollView>">
 		</StackLayout>
