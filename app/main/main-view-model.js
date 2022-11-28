@@ -9,7 +9,6 @@ export function createViewModel() {
 	viewModel.onTap = (args) => {
 		const button = args.object
 		var index = button.id[1]
-		console.log("onTap " + index)
 	}
 
 	return viewModel

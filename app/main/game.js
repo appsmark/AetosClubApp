@@ -33,7 +33,6 @@ export class Game {
 			game_data = game_data.replace("Rebo Woningmakelaars ", "")
 			game_data = game_data.replace("Rensa Family ", "")
 			var home =  game_data.substring(game_data.indexOf(": ") + 2).split(" - ")[0]
-			console.log(date)
 			if ((home = "") || (date=="")) {
 				this.viewModel.set("visibility_item_game", "hidden")
 			}
@@ -48,7 +47,6 @@ export class Game {
 				location = ""
 				game_result = game_data.substring(game_data.indexOf("Uitslag"))
 			}
-			console.log(home)
 			this.viewModel.set("text_game_date", date)
 			this.viewModel.set("text_game_home", home)
 			this.viewModel.set("text_game_visitor", visitor)

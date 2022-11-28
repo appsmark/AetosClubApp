@@ -29,6 +29,7 @@ export class Duty {
 				if ((r.duty[i].teller == id) || (r.duty[i].scheids == id)) {
 					this.viewModel.set("text_item_duty_" + index + "_date", r.duty[i].Datum + "   " + r.duty[i].Tijd)
 					this.viewModel.set("text_item_duty_" + index + "_game", r.duty[i].Thuisteam + " - " + r.duty[i].Uitteam)
+					this.viewModel.set("text_item_duty_" + index + "_hall", "Sporthal " + r.duty[i].Locatie)
 					role = ""
 					if (r.duty[i].scheids == id) {
 						role = "Fluiten"
@@ -44,10 +45,7 @@ export class Duty {
 				}				
 			}
 		}).catch((err) => {
-			// >> (hide)
-			console.log("Error: ");
 			console.log(err);
-			// << (hide)
 		});
 	}
 
