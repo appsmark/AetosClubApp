@@ -16,6 +16,7 @@ export class Duty {
 			this.viewModel.set("text_item_duty_" + index + "_date", "")
 			this.viewModel.set("text_item_duty_" + index + "_game", "")
 			this.viewModel.set("text_item_duty_" + index + "_role", "")
+			this.viewModel.set("text_item_duty_" + index + "_hall", "")
 		}
 	}
 
@@ -27,8 +28,13 @@ export class Duty {
 			var role = ""
 			for (var i = 0; i < r.duty.length; i++) {
 				if ((r.duty[i].teller == id) || (r.duty[i].scheids == id)) {
-					this.viewModel.set("text_item_duty_" + index + "_date", r.duty[i].Datum + "   " + r.duty[i].Tijd)
-					this.viewModel.set("text_item_duty_" + index + "_game", r.duty[i].Thuisteam + " - " + r.duty[i].Uitteam)
+					if (r.duty[i].Thuisteam == "CMV") {
+						this.viewModel.set("text_item_duty_" + index + "_date", r.duty[i].Datum)
+						this.viewModel.set("text_item_duty_" + index + "_game", r.duty[i].Thuisteam + "   " + r.duty[i].Tijd)
+					} else {
+						this.viewModel.set("text_item_duty_" + index + "_date", r.duty[i].Datum + "   " + r.duty[i].Tijd)
+						this.viewModel.set("text_item_duty_" + index + "_game", r.duty[i].Thuisteam + " - " + r.duty[i].Uitteam)
+					}
 					this.viewModel.set("text_item_duty_" + index + "_hall", "Sporthal " + r.duty[i].Locatie)
 					role = ""
 					if (r.duty[i].scheids == id) {

@@ -1573,17 +1573,10 @@
 		{
 			"Datum": "10 December 2022",
 			"Locatie": "Kermisland",
-			"CMV": "08.00 - 10.30  D10 (1) en MC3 (2)"
-		},
-		{
-			"Datum": "10 December 2022",
-			"Locatie": "Kermisland",
-			"CMV": "08.30 - 11.00  D10 (1) en MC3 (2)"
-		},
-		{
-			"Datum": "10 December 2022",
-			"Locatie": "Kermisland",
-			"CMV": "10.15 - 12.30  D10 (2) en MC3 (2)"
+			"Tijd": "08.00 - 12.30",
+			"Thuisteam": "CMV",
+			"scheids": "D10",
+			"teller": "MC3"
 		},
 		{
 			"Datum": "15 December 2022",

@@ -39,6 +39,7 @@ export class Game {
 			var visitor = game_data.split(" - ")[1]
 			var location = r.substring(r.indexOf("Speellocatie:") + 14)
 			var game_result = ""
+			location = location.replace("Verenigde Naties", "VN")
 			location = location.substring(0, location.indexOf(']')).split(",")
 			if (game_data.includes("Uitslag")) {
 				date = " "
