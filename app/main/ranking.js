@@ -61,7 +61,6 @@ export class Ranking {
 		}).catch((e) => {
 			console.log("ERROR RANKING " + e)
 			this.viewModel.set("visibility_no_data_ranking", "visible")
-			this.viewModel.set("text_ranking_poule", "GEEN GEGEVENS")
 		});
 	}
 

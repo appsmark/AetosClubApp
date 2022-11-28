@@ -29,9 +29,9 @@
 		</StackLayout>
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_ranking}}">
 			<Label class="text_ranking_poule" text="{{ text_ranking_poule }}" horizontalAlignment="center" />
-			<Label class="text_ranking_poule" text=" " />
+			<Label class="text_ranking_poule" text=" "/>
 			<GridLayout rows="*, *, *, *, *, *, *, *, *, *, *, *, *" columns="*, 2*, *, 10*, 4*, 2*, 2*">
-				<Label class="text_no_data" text="GEEN" visibility="{{visibility_no_data_ranking}}"/>
+				<Label class="text_no_data" text="GEEN" visibility="{{visibility_no_data_ranking}}" />
 				<Label class="text_no_data" text="GEGEVENS" visibility="{{visibility_no_data_ranking}}"/>
 				<Label class="text_no_data" text="ONTVANGEN" visibility="{{visibility_no_data_ranking}}"/>
 				<Label class="text_item_ranking" row="0" col="1" text="1" horizontalAlignment="right" visibility="{{ text_item_ranking_0_team ? 'visible' : 'collapsed' }}" />
@@ -192,6 +192,7 @@
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_home }}" visibility="{{visibility_item_game}}"/>
 			<Label class="text_item_game" horizontalAlignment="center" text="tegen" visibility="{{visibility_item_game}}"/>
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_visitor }}" visibility="{{visibility_item_game}}"/>
+			<Label class="spacer_text_item" text="  "/>
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_result }}" visibility="{{visibility_item_game}}"/>
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_hall }}" visibility="{{visibility_item_game}}"/>
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_street }}" visibility="{{visibility_item_game}}"/>

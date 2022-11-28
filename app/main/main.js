@@ -49,6 +49,7 @@ export class MainGame {
 		this.hide()
 		this.viewModel.set("visibility_back", "visible")
 		this.viewModel.set("visibility_ranking", "visible")
+		this.ranking.reset()
 		this.ranking.rssFeed(this.data.teams[this.data.team][1])
 	}
 
