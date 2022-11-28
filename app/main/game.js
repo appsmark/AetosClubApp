@@ -33,7 +33,7 @@ export class Game {
 			game_data = game_data.replace("Rebo Woningmakelaars ", "")
 			game_data = game_data.replace("Rensa Family ", "")
 			var home =  game_data.substring(game_data.indexOf(": ") + 2).split(" - ")[0]
-			if ((home = "") || (date=="")) {
+			if (home.length == 0) {
 				this.viewModel.set("visibility_item_game", "hidden")
 			}
 			var visitor = game_data.split(" - ")[1]

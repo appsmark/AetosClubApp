@@ -188,15 +188,11 @@
 			<Label class="text_no_data" text="GEGEVENS" visibility="{{visibility_no_data}}"/>
 			<Label class="text_no_data" text="ONTVANGEN" visibility="{{visibility_no_data}}"/>
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_date }}" visibility="{{visibility_item_game}}"/>
-			<Label class="text_item_game" text="   "/>
-			<Label />
+			<Label class="spacer_text_item" text="  "/>
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_home }}" visibility="{{visibility_item_game}}"/>
 			<Label class="text_item_game" horizontalAlignment="center" text="tegen" visibility="{{visibility_item_game}}"/>
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_visitor }}" visibility="{{visibility_item_game}}"/>
-			<Label class="text_item_game" text="   "/>
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_result }}" visibility="{{visibility_item_game}}"/>
-			<Label class="text_item_game" text="   "/>
-			<Label />
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_hall }}" visibility="{{visibility_item_game}}"/>
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_street }}" visibility="{{visibility_item_game}}"/>
 			<Label class="text_item_game" horizontalAlignment="center" text="{{ text_game_town }}" visibility="{{visibility_item_game}}"/>
