@@ -26,29 +26,38 @@ export class Duty {
 		.then((r) => {
 			var index = 0
 			var role = ""
-			for (var i = 0; i < r.duty.length; i++) {
-				if ((r.duty[i].teller == id) || (r.duty[i].scheids == id)) {
-					if (r.duty[i].Thuisteam == "CMV") {
-						this.viewModel.set("text_item_duty_" + index + "_date", r.duty[i].Datum)
-						this.viewModel.set("text_item_duty_" + index + "_game", r.duty[i].Thuisteam + "   " + r.duty[i].Tijd)
-					} else {
-						this.viewModel.set("text_item_duty_" + index + "_date", r.duty[i].Datum + "   " + r.duty[i].Tijd)
-						this.viewModel.set("text_item_duty_" + index + "_game", r.duty[i].Thuisteam + " - " + r.duty[i].Uitteam)
-					}
-					this.viewModel.set("text_item_duty_" + index + "_hall", "Sporthal " + r.duty[i].Locatie)
-					role = ""
-					if (r.duty[i].scheids == id) {
-						role = "Fluiten"
-						if (r.duty[i].teller == id) {
-							role += " & tellen"
+			var today = new Date()
+			var duty_date
+			var data = r
+			var visitors
+			for (var i = 0; i < data.duty.length; i++) {
+				duty_date = new Date(data.duty[i].Datum)
+				if ((duty_date.getMonth() >= today.getMonth()) & (duty_date.getDate() >= today.getDate())) {
+					if ((data.duty[i].teller == id) || (data.duty[i].scheids == id)) {
+						if (data.duty[i].Thuisteam == "CMV") {
+							this.viewModel.set("text_item_duty_" + index + "_date", data.duty[i].Datum)
+							this.viewModel.set("text_item_duty_" + index + "_game", data.duty[i].Thuisteam + "   " + data.duty[i].Tijd)
+						} else {
+							this.viewModel.set("text_item_duty_" + index + "_date", data.duty[i].Datum + "   " + data.duty[i].Tijd)
+							visitors = data.duty[i].Uitteam
+							visitors = visitors.replace("Orion Volleybal Doetinchem ", "Orion ")
+							this.viewModel.set("text_item_duty_" + index + "_game", data.duty[i].Thuisteam + " - " + visitors)
 						}
-					} else {
-						role += "Tellen"
+						this.viewModel.set("text_item_duty_" + index + "_hall", "Sporthal " + data.duty[i].Locatie)
+						role = ""
+						if (data.duty[i].scheids == id) {
+							role = "Fluiten"
+							if (data.duty[i].teller == id) {
+								role += " & tellen"
+							}
+						} else {
+							role += "Tellen"
+						}
+						this.viewModel.set("text_item_duty_" + index + "_role", role)
+						
+						index += 1
 					}
-					this.viewModel.set("text_item_duty_" + index + "_role", role)
-					
-					index += 1
-				}				
+				}
 			}
 		}).catch((err) => {
 			console.log(err);
