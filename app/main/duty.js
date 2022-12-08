@@ -30,10 +30,12 @@ export class Duty {
 			var duty_date
 			var data = r
 			var visitors
+			var flag = true
 			for (var i = 0; i < data.duty.length; i++) {
 				duty_date = new Date(data.duty[i].Datum)
 				if ((duty_date.getMonth() >= today.getMonth()) & (duty_date.getDate() >= today.getDate())) {
 					if ((data.duty[i].teller == id) || (data.duty[i].scheids == id)) {
+						flag = false
 						if (data.duty[i].Thuisteam == "CMV") {
 							this.viewModel.set("text_item_duty_" + index + "_date", data.duty[i].Datum)
 							this.viewModel.set("text_item_duty_" + index + "_game", data.duty[i].Thuisteam + "   " + data.duty[i].Tijd)
@@ -58,6 +60,9 @@ export class Duty {
 						index += 1
 					}
 				}
+			}
+			if (flag) {
+				this.viewModel.set("visibility_no_data", "visible")
 			}
 		}).catch((err) => {
 			console.log(err);
