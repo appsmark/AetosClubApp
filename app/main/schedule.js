@@ -32,6 +32,8 @@ export class Schedule {
 				game_data = game_data.replace(" Apeldoorn", "")
 				game_data = game_data.replace("Rebo Woningmakelaars ", "")
 				game_data = game_data.replace("Rensa Family ", "")
+				game_data = game_data.replace("Weghorst Makelaardij ", "")
+				game_data = game_data.replace("Volleybalvereniging ", "VV ")
 				game_data = game_data.replace("nov.", "november")
 				game_data = game_data.replace("dec.", "december")
 				game_data = game_data.replace("jan.", "januari")
@@ -44,6 +46,10 @@ export class Schedule {
 					if (game_data.includes("Uitslag")) {
 						this.viewModel.set("text_item_schedule_" + index + "_date", game_data.substring(0, game_data.indexOf(", ")))
 						this.viewModel.set("text_item_schedule_" + index + "_game", "Uitslag: " + game_data.substring(game_data.indexOf(": ") + 2))
+					}
+					if (game_data.includes("Vervallen")) {
+						this.viewModel.set("text_item_schedule_" + index + "_date", "")
+						this.viewModel.set("text_item_schedule_" + index + "_game", "")
 					}
 				}
 			}

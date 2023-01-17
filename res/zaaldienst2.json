@@ -1,0 +1,1822 @@
+{
+	"duty": [ 
+          {
+            "Datum": "19 januari 2023",
+            "Tijd": "20:30",
+            "Thuisteam": "D5",
+            "Uitteam": "Invicta DS1",
+            "Locatie": "Valkenhuizen",
+            "scheids": "D4",
+            "teller": "MB1"
+          },
+                            {
+   "Datum": "19 januari 2023",
+   "Tijd": "20:30",
+   "Thuisteam": "H4",
+   "Uitteam": "Invicta HS1",
+   "Locatie": "Valkenhuizen",
+   "scheids": "D4",
+   "teller": "MB1"
+ },
+ {
+   "Datum": "20 januari 2023",
+   "Tijd": "18:15",
+   "Thuisteam": "MB6",
+   "Uitteam": "MB5",
+   "Locatie": "Elderveld",
+   "scheids": "D7",
+   "teller": "JA2"
+ },
+ {
+   "Datum": "20 januari 2023",
+   "Tijd": "18:15",
+   "Thuisteam": "MC6",
+   "Uitteam": "MC5",
+   "Locatie": "Elderveld",
+   "scheids": "D7",
+   "teller": "JA2"
+ },
+ {
+   "Datum": "20 januari 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "D7",
+   "Uitteam": "Nuovo DS2",
+   "Locatie": "Elderveld",
+   "scheids": "H4",
+   "teller": "MB6"
+ },
+ {
+   "Datum": "20 januari 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "JA2",
+   "Uitteam": "Avior JA1",
+   "Locatie": "Elderveld",
+   "scheids": "H4",
+   "teller": "MB6"
+ },
+ {
+   "Datum": "20 januari 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "JA1",
+   "Uitteam": "SSS JA1",
+   "Locatie": "Elderveld",
+   "scheids": "H4",
+   "teller": "MB6"
+ },
+ {
+   "Datum": "21 januari 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MB2",
+   "Uitteam": "D.O.S. MB1",
+   "Locatie": "Elderveld",
+   "scheids": "D2",
+   "teller": "MB3"
+ },
+ {
+   "Datum": "21 januari 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MC2",
+   "Uitteam": "Gemini MC2",
+   "Locatie": "Elderveld",
+   "scheids": "D2",
+   "teller": "MB3"
+ },
+ {
+   "Datum": "21 januari 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "MB3",
+   "Uitteam": "Pegasus MB1",
+   "Locatie": "Elderveld",
+   "scheids": "H3",
+   "teller": "MB2"
+ },
+ {
+   "Datum": "21 januari 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "D2",
+   "Uitteam": "Labyellov DS1",
+   "Locatie": "Elderveld",
+   "scheids": "H3",
+   "teller": "MB2"
+ },
+ {
+   "Datum": "21 januari 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "JC2",
+   "Uitteam": "SDSJC1",
+   "Locatie": "Elderveld",
+   "scheids": "JA1",
+   "teller": "MC2"
+ },
+ {
+   "Datum": "21 januari 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "H3",
+   "Uitteam": "TiVoC HS1",
+   "Locatie": "Elderveld",
+   "scheids": "H2",
+   "teller": "JC2"
+ },
+ {
+   "Datum": "21 januari 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "JC1",
+   "Uitteam": "Surf JC1",
+   "Locatie": "Elderveld",
+   "scheids": "D2",
+   "teller": "JC2"
+ },
+ {
+   "Datum": "21 januari 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "MC1",
+   "Uitteam": "Dros-Alterno MC2",
+   "Locatie": "Elderveld",
+   "scheids": "H2",
+   "teller": "JC2"
+ },
+ {
+   "Datum": "21 januari 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "D1",
+   "Uitteam": "Kidang DS1",
+   "Locatie": "Elderveld",
+   "scheids": "",
+   "teller": "MC1"
+ },
+ {
+   "Datum": "21 januari 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "H2",
+   "Uitteam": "Excelsior HS1",
+   "Locatie": "Elderveld",
+   "scheids": "H3",
+   "teller": "MC1"
+ },
+ {
+   "Datum": "21 januari 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "JB1",
+   "Uitteam": "LIVO JB1",
+   "Locatie": "Elderveld",
+   "scheids": "H3",
+   "teller": "MC1"
+ },
+ {
+   "Datum": "21 januari 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "H1",
+   "Uitteam": "SV Dynamo Apeldoorn HS4",
+   "Locatie": "Elderveld",
+   "scheids": "",
+   "teller": "JB1"
+ },
+ {
+   "Datum": "21 januari 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "D10",
+   "Uitteam": "SSS DS8",
+   "Locatie": "Elderveld",
+   "scheids": "D9",
+   "teller": "JB1"
+ },
+ {
+   "Datum": "21 januari 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "MB1",
+   "Uitteam": "SV Dynamo Apeldoorn MB1",
+   "Locatie": "Elderveld",
+   "scheids": "D9",
+   "teller": "JB1"
+ },
+ {
+   "Datum": "23 januari 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "D3",
+   "Uitteam": "TweeVV DS3",
+   "Locatie": "Valkenhuizen",
+   "scheids": "H5",
+   "teller": "D4"
+ },
+ {
+   "Datum": "25 januari 2023",
+   "Tijd": "21:00",
+   "Thuisteam": "H7",
+   "Uitteam": "Setash HS2",
+   "Locatie": "De Laar",
+   "scheids": "D9",
+   "teller": "D10"
+ },
+ {
+   "Datum": "27 januari 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "D4",
+   "Uitteam": "WaHo DS3",
+   "Locatie": "Elderveld",
+   "scheids": "D1",
+   "teller": "MA2"
+ },
+ {
+   "Datum": "27 januari 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "D7",
+   "Uitteam": "D.O.S. DS3",
+   "Locatie": "Elderveld",
+   "scheids": "D9",
+   "teller": "MA2"
+ },
+ {
+   "Datum": "28 januari 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MC2",
+   "Uitteam": "TweeVV MC2",
+   "Locatie": "De Laar",
+   "scheids": "D8",
+   "teller": "MC4"
+ },
+ {
+   "Datum": "28 januari 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MC5",
+   "Uitteam": "MC6",
+   "Locatie": "De Laar",
+   "scheids": "D8",
+   "teller": "MC4"
+ },
+ {
+   "Datum": "28 januari 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "JC3",
+   "Uitteam": "JC4",
+   "Locatie": "De Laar",
+   "scheids": "MA2",
+   "teller": "MC5"
+ },
+ {
+   "Datum": "28 januari 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "D8",
+   "Uitteam": "Xanthos DS2",
+   "Locatie": "De Laar",
+   "scheids": "H5",
+   "teller": "MC2"
+ },
+ {
+   "Datum": "28 januari 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "MC4",
+   "Uitteam": "Set Up '69 MC1",
+   "Locatie": "De Laar",
+   "scheids": "H5",
+   "teller": "MC2"
+ },
+ {
+   "Datum": "28 januari 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "H5",
+   "Uitteam": "Evoba HS1",
+   "Locatie": "De Laar",
+   "scheids": "D3",
+   "teller": "JC3"
+ },
+ {
+   "Datum": "28 januari 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "MA2",
+   "Uitteam": "Excelsior MA1",
+   "Locatie": "De Laar",
+   "scheids": "D6",
+   "teller": "JC3"
+ },
+ {
+   "Datum": "28 januari 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "MB5",
+   "Uitteam": "MB6",
+   "Locatie": "De Laar",
+   "scheids": "D6",
+   "teller": "JC4"
+ },
+ {
+   "Datum": "28 januari 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "D3",
+   "Uitteam": "Woudenberg DS1",
+   "Locatie": "De Laar",
+   "scheids": "H5",
+   "teller": "MA2"
+ },
+ {
+   "Datum": "28 januari 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "D6",
+   "Uitteam": "Xanthos DS1",
+   "Locatie": "De Laar",
+   "scheids": "H5",
+   "teller": "JC3"
+ },
+ {
+   "Datum": "28 januari 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "D9",
+   "Uitteam": "WaHo DS7",
+   "Locatie": "De Laar",
+   "scheids": "D6",
+   "teller": "MB5"
+ },
+ {
+   "Datum": "28 januari 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "H6",
+   "Uitteam": "Excelsior HS2",
+   "Locatie": "De Laar",
+   "scheids": "H5",
+   "teller": "MB5"
+ },
+ {
+   "Datum": "28 januari 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "H7",
+   "Uitteam": "Xanthos HS4",
+   "Locatie": "De Laar",
+   "scheids": "H5",
+   "teller": "MB5"
+ },
+ {
+   "Datum": "2 februari 2023",
+   "Tijd": "20:30",
+   "Thuisteam": "D5",
+   "Uitteam": "TweeVV DS3",
+   "Locatie": "Valkenhuizen",
+   "scheids": "H2",
+   "teller": "D10"
+ },
+ {
+   "Datum": "2 februari 2023",
+   "Tijd": "20:30",
+   "Thuisteam": "H4",
+   "Uitteam": "D.O.S. HS1",
+   "Locatie": "Valkenhuizen",
+   "scheids": "H2",
+   "teller": "D10"
+ },
+ {
+   "Datum": "3 februari 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "D4",
+   "Uitteam": "TiVoC DS1",
+   "Locatie": "Elderveld",
+   "scheids": "H1",
+   "teller": "MA2"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "8:00",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 8:00 tot 10:30",
+   "Locatie": "Valkenhuizen",
+   "scheids": "D4",
+   "teller": ""
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "8:30",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 8:30 tot 10:30",
+   "Locatie": "Valkenhuizen",
+   "scheids": "MB2",
+   "teller": ""
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "10:15",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 10:15 tot 12:15",
+   "Locatie": "Valkenhuizen",
+   "scheids": "D4",
+   "teller": ""
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "10:15",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 10:15 tot 12:00",
+   "Locatie": "Valkenhuizen",
+   "scheids": "",
+   "teller": "MB1"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "JC2",
+   "Uitteam": "Set Up '69 JC1",
+   "Locatie": "Elderveld",
+   "scheids": "JA1",
+   "teller": "MC2"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MB4",
+   "Uitteam": "TweeVV MB2",
+   "Locatie": "Elderveld",
+   "scheids": "D2",
+   "teller": "MC2"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MC3",
+   "Uitteam": "MC4",
+   "Locatie": "Elderveld",
+   "scheids": "JA1",
+   "teller": "JA1"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "D2",
+   "Uitteam": "LIVO DS2",
+   "Locatie": "Elderveld",
+   "scheids": "D1",
+   "teller": "MB4"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "JA1",
+   "Uitteam": "Twente '05 JA1",
+   "Locatie": "Elderveld",
+   "scheids": "H2",
+   "teller": "MB4"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "MC2",
+   "Uitteam": "Setash MC1",
+   "Locatie": "Elderveld",
+   "scheids": "H5",
+   "teller": "MB4"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "H5",
+   "Uitteam": "N.V.C. HS1",
+   "Locatie": "Elderveld",
+   "scheids": "H2",
+   "teller": "JA1"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "H3",
+   "Uitteam": "WaHo HS1",
+   "Locatie": "Elderveld",
+   "scheids": "H2",
+   "teller": "MC2"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "MC1",
+   "Uitteam": "SSS MC1",
+   "Locatie": "Elderveld",
+   "scheids": "H7",
+   "teller": "MC2"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "D1",
+   "Uitteam": "TweeVV DS2",
+   "Locatie": "Elderveld",
+   "scheids": "",
+   "teller": "MC1"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "H2",
+   "Uitteam": "TiVoC HS1",
+   "Locatie": "Elderveld",
+   "scheids": "H3",
+   "teller": "MC1"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "MB3",
+   "Uitteam": "Orion Volleybal MB2",
+   "Locatie": "Elderveld",
+   "scheids": "H7",
+   "teller": "MC1"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "H1",
+   "Uitteam": "Rebelle HS1",
+   "Locatie": "Elderveld",
+   "scheids": "",
+   "teller": "MB3"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "H7",
+   "Uitteam": "H6",
+   "Locatie": "Elderveld",
+   "scheids": "D1",
+   "teller": "MB3"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "JB1",
+   "Uitteam": "Rabobank Orion JB2",
+   "Locatie": "Elderveld",
+   "scheids": "D1",
+   "teller": "MB3"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "MA1",
+   "Uitteam": "TweeVV MA1",
+   "Locatie": "Valkenhuizen",
+   "scheids": "D5",
+   "teller": "JC1"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "MB2",
+   "Uitteam": "SSS MB2",
+   "Locatie": "Valkenhuizen",
+   "scheids": "D5",
+   "teller": "JC1"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "MB1",
+   "Uitteam": "SSS MB1",
+   "Locatie": "Valkenhuizen",
+   "scheids": "H4",
+   "teller": "JA2"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "15:00",
+   "Thuisteam": "JA2",
+   "Uitteam": "Gemini JA1",
+   "Locatie": "Valkenhuizen",
+   "scheids": "H4",
+   "teller": "MB2"
+ },
+ {
+   "Datum": "4 februari 2023",
+   "Tijd": "15:00",
+   "Thuisteam": "JC1",
+   "Uitteam": "VoCASA JC1",
+   "Locatie": "Valkenhuizen",
+   "scheids": "MA1",
+   "teller": "MB2"
+ },
+ {
+   "Datum": "9 februari 2023",
+   "Tijd": "20:30",
+   "Thuisteam": "D7",
+   "Uitteam": "Setash DS3",
+   "Locatie": "Valkenhuizen",
+   "scheids": "H7",
+   "teller": "D5"
+ },
+ {
+   "Datum": "10 februari 2023",
+   "Tijd": "19:00",
+   "Thuisteam": "MB5",
+   "Uitteam": "Bruvoc MB1",
+   "Locatie": "De Laar",
+   "scheids": "D9",
+   "teller": "MA1"
+ },
+ {
+   "Datum": "10 februari 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "H2",
+   "Uitteam": "H3",
+   "Locatie": "Elderveld",
+   "scheids": "H1",
+   "teller": "MB5"
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "8:00",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 8:00 tot 10:30",
+   "Locatie": "Valkenhuizen",
+   "scheids": "JB1",
+   "teller": ""
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "8:30",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 8:00 tot 10:30",
+   "Locatie": "Valkenhuizen",
+   "scheids": "H4",
+   "teller": ""
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "10:15",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 10:15 tot 12:15",
+   "Locatie": "Valkenhuizen",
+   "scheids": "JC1",
+   "teller": ""
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "10:15",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 10:45 tot 12:15",
+   "Locatie": "Valkenhuizen",
+   "scheids": "H4",
+   "teller": ""
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "10:15",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 10:15 tot 12:00",
+   "Locatie": "Valkenhuizen",
+   "scheids": "",
+   "teller": "MC6"
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MB6",
+   "Uitteam": "Langhenkel/HEC MB1",
+   "Locatie": "De Laar",
+   "scheids": "D8",
+   "teller": "MB5"
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MC3",
+   "Uitteam": "Set Up '69 MC1",
+   "Locatie": "De Laar",
+   "scheids": "D8",
+   "teller": "MB5"
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MC5",
+   "Uitteam": "Excelsior MC1",
+   "Locatie": "De Laar",
+   "scheids": "D8",
+   "teller": "JC4"
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "D8",
+   "Uitteam": "Set Up '69 DS6",
+   "Locatie": "De Laar",
+   "scheids": "D6",
+   "teller": "MB6"
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "MB5",
+   "Uitteam": "Avior MB4",
+   "Locatie": "De Laar",
+   "scheids": "D3",
+   "teller": "MB6"
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "MC4",
+   "Uitteam": "Evoba MC1",
+   "Locatie": "De Laar",
+   "scheids": "D9",
+   "teller": "JC4"
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "D3",
+   "Uitteam": "Set Up '69 DS2",
+   "Locatie": "De Laar",
+   "scheids": "H4",
+   "teller": "MC4"
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "D6",
+   "Uitteam": "Set Up '69 DS4",
+   "Locatie": "De Laar",
+   "scheids": "D9",
+   "teller": "MC4"
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "JC4",
+   "Uitteam": "Toesj JC1",
+   "Locatie": "De Laar",
+   "scheids": "MA2",
+   "teller": "MC4"
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "D9",
+   "Uitteam": "Set Up '69 DS5",
+   "Locatie": "De Laar",
+   "scheids": "D6",
+   "teller": "MB4"
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "H6",
+   "Uitteam": "Xanthos HS4",
+   "Locatie": "De Laar",
+   "scheids": "D6",
+   "teller": "MB4"
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "JC3",
+   "Uitteam": "Avior JC2",
+   "Locatie": "De Laar",
+   "scheids": "MA2",
+   "teller": "MB4"
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "JB1",
+   "Uitteam": "WVC Volley JB1",
+   "Locatie": "De Laar",
+   "scheids": "H6",
+   "teller": "JC3"
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "MA2",
+   "Uitteam": "Gemini MA1",
+   "Locatie": "De Laar",
+   "scheids": "H6",
+   "teller": "JC3"
+ },
+ {
+   "Datum": "11 februari 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "MB4",
+   "Uitteam": "Gemini MB1",
+   "Locatie": "De Laar",
+   "scheids": "H6",
+   "teller": "JC3"
+ },
+ {
+   "Datum": "16 februari 2023",
+   "Tijd": "20:30",
+   "Thuisteam": "H4",
+   "Uitteam": "H5",
+   "Locatie": "Valkenhuizen",
+   "scheids": "H1",
+   "teller": "D10"
+ },
+ {
+   "Datum": "17 februari 2023",
+   "Tijd": "18:15",
+   "Thuisteam": "MC4",
+   "Uitteam": "MC3",
+   "Locatie": "Elderveld",
+   "scheids": "D6",
+   "teller": "D6"
+ },
+ {
+   "Datum": "2 march 2023",
+   "Tijd": "20:30",
+   "Thuisteam": "D8",
+   "Uitteam": "Invicta DS4",
+   "Locatie": "Valkenhuizen",
+   "scheids": "D2",
+   "teller": "D6"
+ },
+ {
+   "Datum": "3 march 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "D4",
+   "Uitteam": "Labyellov DS1",
+   "Locatie": "Elderveld",
+   "scheids": "H4",
+   "teller": "JA1"
+ },
+ {
+   "Datum": "3 march 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "H7",
+   "Uitteam": "Invicta HS3",
+   "Locatie": "Elderveld",
+   "scheids": "D7",
+   "teller": "JA1"
+ },
+ {
+   "Datum": "4 march 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "D3",
+   "Uitteam": "TiVoC DS2",
+   "Locatie": "Elderveld",
+   "scheids": "H5",
+   "teller": "MB5"
+ },
+ {
+   "Datum": "4 march 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "JC4",
+   "Uitteam": "JC3",
+   "Locatie": "Elderveld",
+   "scheids": "H5",
+   "teller": "MB5"
+ },
+ {
+   "Datum": "4 march 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "MC5",
+   "Uitteam": "Scylla MC1",
+   "Locatie": "Elderveld",
+   "scheids": "H2",
+   "teller": "MB5"
+ },
+ {
+   "Datum": "4 march 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "D10",
+   "Uitteam": "Invicta DS5",
+   "Locatie": "Elderveld",
+   "scheids": "H6",
+   "teller": "MC5"
+ },
+ {
+   "Datum": "4 march 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "H5",
+   "Uitteam": "Invicta HS1",
+   "Locatie": "Elderveld",
+   "scheids": "H2",
+   "teller": "MC5"
+ },
+ {
+   "Datum": "4 march 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "MB5",
+   "Uitteam": "Langhenkel/HEC MB1",
+   "Locatie": "Elderveld",
+   "scheids": "H2",
+   "teller": "MC5"
+ },
+ {
+   "Datum": "4 march 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "H6",
+   "Uitteam": "BSVO HS1",
+   "Locatie": "Elderveld",
+   "scheids": "D9",
+   "teller": "MA2"
+ },
+ {
+   "Datum": "4 march 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "H2",
+   "Uitteam": "WaHo HS1",
+   "Locatie": "Elderveld",
+   "scheids": "H3",
+   "teller": "MA2"
+ },
+ {
+   "Datum": "4 march 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "MB6",
+   "Uitteam": "Salvora MB2",
+   "Locatie": "Elderveld",
+   "scheids": "D9",
+   "teller": "MA2"
+ },
+ {
+   "Datum": "4 march 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "D9",
+   "Uitteam": "Labyellov DS3",
+   "Locatie": "Elderveld",
+   "scheids": "H6",
+   "teller": "MB6"
+ },
+ {
+   "Datum": "4 march 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "H3",
+   "Uitteam": "Pegasus HS3",
+   "Locatie": "Elderveld",
+   "scheids": "H2",
+   "teller": "MB6"
+ },
+ {
+   "Datum": "4 march 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "MA2",
+   "Uitteam": "LIVO MA1",
+   "Locatie": "Elderveld",
+   "scheids": "H7",
+   "teller": "MB6"
+ },
+ {
+   "Datum": "8 march 2023",
+   "Tijd": "20:30",
+   "Thuisteam": "H1",
+   "Uitteam": "Scylla HS1",
+   "Locatie": "Elderveld",
+   "scheids": "",
+   "teller": "JB1"
+ },
+ {
+   "Datum": "9 march 2023",
+   "Tijd": "20:30",
+   "Thuisteam": "D7",
+   "Uitteam": "Renswouw DS4",
+   "Locatie": "Valkenhuizen",
+   "scheids": "H1",
+   "teller": "D10"
+ },
+ {
+   "Datum": "9 march 2023",
+   "Tijd": "20:30",
+   "Thuisteam": "H4",
+   "Uitteam": "Scylla HS3",
+   "Locatie": "Valkenhuizen",
+   "scheids": "H1",
+   "teller": "D10"
+ },
+ {
+   "Datum": "10 march 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "D5",
+   "Uitteam": "Renswouw DS2",
+   "Locatie": "Elderveld",
+   "scheids": "D1",
+   "teller": "MA1"
+ },
+ {
+   "Datum": "10 march 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "JA1",
+   "Uitteam": "Zeewolde JA1",
+   "Locatie": "Elderveld",
+   "scheids": "D1",
+   "teller": "MA1"
+ },
+ {
+   "Datum": "11 march 2023",
+   "Tijd": "8:00",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 8:00 tot 11:30",
+   "Locatie": "Valkenhuizen",
+   "scheids": "MC3",
+   "teller": ""
+ },
+ {
+   "Datum": "11 march 2023",
+   "Tijd": "8:30",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 8:30 tot 11:45",
+   "Locatie": "Valkenhuizen",
+   "scheids": "D5",
+   "teller": ""
+ },
+ {
+   "Datum": "11 march 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MC4",
+   "Uitteam": "Woudenberg MC1",
+   "Locatie": "De Laar",
+   "scheids": "D7",
+   "teller": "JC2"
+ },
+ {
+   "Datum": "11 march 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MC2",
+   "Uitteam": "Xanthos MC1",
+   "Locatie": "De Laar",
+   "scheids": "D7",
+   "teller": "JC2"
+ },
+ {
+   "Datum": "11 march 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MC6",
+   "Uitteam": "N.V.C. MC1",
+   "Locatie": "De Laar",
+   "scheids": "D7",
+   "teller": "JC2"
+ },
+ {
+   "Datum": "11 march 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "JC2",
+   "Uitteam": "Zeewolde JC1",
+   "Locatie": "De Laar",
+   "scheids": "JA2",
+   "teller": "MC6"
+ },
+ {
+   "Datum": "11 march 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "MB2",
+   "Uitteam": "TweeVV MB1",
+   "Locatie": "De Laar",
+   "scheids": "H5",
+   "teller": "MC4"
+ },
+ {
+   "Datum": "11 march 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "MB3",
+   "Uitteam": "Trivos MB2",
+   "Locatie": "De Laar",
+   "scheids": "H5",
+   "teller": "MC4"
+ },
+ {
+   "Datum": "11 march 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "MB4",
+   "Uitteam": "Kidang MB2",
+   "Locatie": "De Laar",
+   "scheids": "D1",
+   "teller": "MB2"
+ },
+ {
+   "Datum": "11 march 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "MB1",
+   "Uitteam": "Switch'87 MB1",
+   "Locatie": "De Laar",
+   "scheids": "D8",
+   "teller": "MB2"
+ },
+ {
+   "Datum": "11 march 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "MC1",
+   "Uitteam": "Pauwervoll MC1",
+   "Locatie": "De Laar",
+   "scheids": "JA2",
+   "teller": "MB2"
+ },
+ {
+   "Datum": "11 march 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "D1",
+   "Uitteam": "VoCASA DS3",
+   "Locatie": "De Laar",
+   "scheids": "",
+   "teller": "MC1"
+ },
+ {
+   "Datum": "11 march 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "JA2",
+   "Uitteam": "Rivo Rijssen JA1",
+   "Locatie": "De Laar",
+   "scheids": "H1",
+   "teller": "MC1"
+ },
+ {
+   "Datum": "11 march 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "JC1",
+   "Uitteam": "SIOK JC1",
+   "Locatie": "De Laar",
+   "scheids": "D8",
+   "teller": "MC1"
+ },
+ {
+   "Datum": "11 march 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "H1",
+   "Uitteam": "Dros-Alterno HS1",
+   "Locatie": "De Laar",
+   "scheids": "",
+   "teller": "JA2"
+ },
+ {
+   "Datum": "11 march 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "D8",
+   "Uitteam": "TweeVV DS5",
+   "Locatie": "De Laar",
+   "scheids": "D1",
+   "teller": "JA2"
+ },
+ {
+   "Datum": "11 march 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "JB1",
+   "Uitteam": "Bovo JB1",
+   "Locatie": "De Laar",
+   "scheids": "D1",
+   "teller": "JA2"
+ },
+ {
+   "Datum": "17 march 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "D4",
+   "Uitteam": "LIVO DS2",
+   "Locatie": "Elderveld",
+   "scheids": "H3",
+   "teller": "JA2"
+ },
+ {
+   "Datum": "17 march 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "D6",
+   "Uitteam": "WaHo DS5",
+   "Locatie": "Elderveld",
+   "scheids": "H3",
+   "teller": "JA1"
+ },
+ {
+   "Datum": "18 march 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "JC3",
+   "Uitteam": "Nuovo JC2",
+   "Locatie": "Elderveld",
+   "scheids": "D8",
+   "teller": "D8"
+ },
+ {
+   "Datum": "18 march 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MC4",
+   "Uitteam": "Surf MC1",
+   "Locatie": "Elderveld",
+   "scheids": "D9",
+   "teller": "MA2"
+ },
+ {
+   "Datum": "18 march 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "D8",
+   "Uitteam": "WaHo DS6",
+   "Locatie": "Elderveld",
+   "scheids": "D9",
+   "teller": "MA2"
+ },
+ {
+   "Datum": "18 march 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "MA2",
+   "Uitteam": "SV Dynamo MA2",
+   "Locatie": "Elderveld",
+   "scheids": "H5",
+   "teller": "JC4"
+ },
+ {
+   "Datum": "18 march 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "D9",
+   "Uitteam": "Nuovo DS2",
+   "Locatie": "Elderveld",
+   "scheids": "D8",
+   "teller": "JC3"
+ },
+ {
+   "Datum": "18 march 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "H5",
+   "Uitteam": "D.O.S. HS1",
+   "Locatie": "Elderveld",
+   "scheids": "H2",
+   "teller": "JC3"
+ },
+ {
+   "Datum": "18 march 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "JC4",
+   "Uitteam": "WIK Steenderen JC1",
+   "Locatie": "Elderveld",
+   "scheids": "H7",
+   "teller": "JC3"
+ },
+ {
+   "Datum": "18 march 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "H6",
+   "Uitteam": "Labyellov HS3",
+   "Locatie": "Elderveld",
+   "scheids": "H7",
+   "teller": "MA2"
+ },
+ {
+   "Datum": "18 march 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "H2",
+   "Uitteam": "Pegasus HS3",
+   "Locatie": "Elderveld",
+   "scheids": "H3",
+   "teller": "JC4"
+ },
+ {
+   "Datum": "18 march 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "MC3",
+   "Uitteam": "Evoba MC1",
+   "Locatie": "Elderveld",
+   "scheids": "D7",
+   "teller": "JC4"
+ },
+ {
+   "Datum": "18 march 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "D3",
+   "Uitteam": "WaHo DS2",
+   "Locatie": "Elderveld",
+   "scheids": "H2",
+   "teller": "MC3"
+ },
+ {
+   "Datum": "18 march 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "D10",
+   "Uitteam": "WaHo DS9",
+   "Locatie": "Elderveld",
+   "scheids": "H6",
+   "teller": "MC3"
+ },
+ {
+   "Datum": "18 march 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "H7",
+   "Uitteam": "Nuovo HS3",
+   "Locatie": "Elderveld",
+   "scheids": "H6",
+   "teller": "MC3"
+ },
+ {
+   "Datum": "23 march 2023",
+   "Tijd": "20:30",
+   "Thuisteam": "D5",
+   "Uitteam": "Woudenberg DS1",
+   "Locatie": "Valkenhuizen",
+   "scheids": "D4",
+   "teller": "D2"
+ },
+ {
+   "Datum": "23 march 2023",
+   "Tijd": "20:30",
+   "Thuisteam": "H4",
+   "Uitteam": "Heyendaal HS3",
+   "Locatie": "Valkenhuizen",
+   "scheids": "D3",
+   "teller": "D8"
+ },
+ {
+   "Datum": "24 march 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "JA1",
+   "Uitteam": "Woudenberg JA1",
+   "Locatie": "Elderveld",
+   "scheids": "D2",
+   "teller": "JA1"
+ },
+ {
+   "Datum": "24 march 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "MA1",
+   "Uitteam": "Setash MA1",
+   "Locatie": "Elderveld",
+   "scheids": "D2",
+   "teller": "JA1"
+ },
+ {
+   "Datum": "25 march 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "JC2",
+   "Uitteam": "Surf JC2",
+   "Locatie": "De Laar",
+   "scheids": "D7",
+   "teller": "MB3"
+ },
+ {
+   "Datum": "25 march 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MC3",
+   "Uitteam": "Woudenberg MC1",
+   "Locatie": "De Laar",
+   "scheids": "D7",
+   "teller": "MB3"
+ },
+ {
+   "Datum": "25 march 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MC5",
+   "Uitteam": "N.V.C. MC1",
+   "Locatie": "De Laar",
+   "scheids": "D7",
+   "teller": "MB3"
+ },
+ {
+   "Datum": "25 march 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "D7",
+   "Uitteam": "Gemini DS7",
+   "Locatie": "De Laar",
+   "scheids": "D2",
+   "teller": "MC5"
+ },
+ {
+   "Datum": "25 march 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "MB3",
+   "Uitteam": "SIOK MB1",
+   "Locatie": "De Laar",
+   "scheids": "H3",
+   "teller": "MC5"
+ },
+ {
+   "Datum": "25 march 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "MB4",
+   "Uitteam": "Evoba MB1",
+   "Locatie": "De Laar",
+   "scheids": "D2",
+   "teller": "MC5"
+ },
+ {
+   "Datum": "25 march 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "D2",
+   "Uitteam": "Woudenberg DS2",
+   "Locatie": "De Laar",
+   "scheids": "D1",
+   "teller": "MB4"
+ },
+ {
+   "Datum": "25 march 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "H3",
+   "Uitteam": "Renswouw HS2",
+   "Locatie": "De Laar",
+   "scheids": "H1",
+   "teller": "MB4"
+ },
+ {
+   "Datum": "25 march 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "MC2",
+   "Uitteam": "Pegasus MC3",
+   "Locatie": "De Laar",
+   "scheids": "H1",
+   "teller": "MB4"
+ },
+ {
+   "Datum": "25 march 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "D1",
+   "Uitteam": "SSS DS2",
+   "Locatie": "De Laar",
+   "scheids": "",
+   "teller": "MC2"
+ },
+ {
+   "Datum": "25 march 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "JA2",
+   "Uitteam": "Volamie JA1",
+   "Locatie": "De Laar",
+   "scheids": "H1",
+   "teller": "MC2"
+ },
+ {
+   "Datum": "25 march 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "JC1",
+   "Uitteam": "Woudenberg JC1",
+   "Locatie": "De Laar",
+   "scheids": "H1",
+   "teller": "MC2"
+ },
+ {
+   "Datum": "25 march 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "H1",
+   "Uitteam": "Heyendaal HS1",
+   "Locatie": "De Laar",
+   "scheids": "",
+   "teller": "JC1"
+ },
+ {
+   "Datum": "25 march 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "MB1",
+   "Uitteam": "Dros-Alterno MB2",
+   "Locatie": "De Laar",
+   "scheids": "H3",
+   "teller": "JC1"
+ },
+ {
+   "Datum": "25 march 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "MC1",
+   "Uitteam": "TweeVV MC1",
+   "Locatie": "De Laar",
+   "scheids": "JA2",
+   "teller": "JC1"
+ },
+ {
+   "Datum": "30 march 2023",
+   "Tijd": "20:30",
+   "Thuisteam": "H6",
+   "Uitteam": "Scylla HS5",
+   "Locatie": "Valkenhuizen",
+   "scheids": "D3",
+   "teller": "D9"
+ },
+ {
+   "Datum": "31 march 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "D4",
+   "Uitteam": "Woudenberg DS2",
+   "Locatie": "Elderveld",
+   "scheids": "D5",
+   "teller": "JA2"
+ },
+ {
+   "Datum": "31 march 2023",
+   "Tijd": "20:00",
+   "Thuisteam": "D9",
+   "Uitteam": "D.O.S. DS3",
+   "Locatie": "Elderveld",
+   "scheids": "D5",
+   "teller": "JA2"
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "8:00",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 8:00 tot 11:00",
+   "Locatie": "De Laar",
+   "scheids": "D10",
+   "teller": ""
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "8:30",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 8:00 tot 11:00",
+   "Locatie": "De Laar",
+   "scheids": "JC2",
+   "teller": ""
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "8:30",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 8:30 tot 11:00",
+   "Locatie": "De Laar",
+   "scheids": "",
+   "teller": "MC5"
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "10:15",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 10:15 tot 12:00 ",
+   "Locatie": "De Laar",
+   "scheids": "MA1",
+   "teller": ""
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MB5",
+   "Uitteam": "Salvora MB2",
+   "Locatie": "Elderveld",
+   "scheids": "H6",
+   "teller": "MB6"
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MC4",
+   "Uitteam": "TweeVV MC3",
+   "Locatie": "Elderveld",
+   "scheids": "H6",
+   "teller": "MB6"
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "9:00",
+   "Thuisteam": "MC6",
+   "Uitteam": "Scylla MC1",
+   "Locatie": "Elderveld",
+   "scheids": "D3",
+   "teller": "MB6"
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "H6",
+   "Uitteam": "Setash HS2",
+   "Locatie": "Elderveld",
+   "scheids": "D3",
+   "teller": "MC6"
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "MA2",
+   "Uitteam": "TiVoC MA2",
+   "Locatie": "Elderveld",
+   "scheids": "H7",
+   "teller": "MC4"
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "MB6",
+   "Uitteam": "Bruvoc MB1",
+   "Locatie": "Elderveld",
+   "scheids": "D2",
+   "teller": "MC4"
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "D3",
+   "Uitteam": "Setash DS1",
+   "Locatie": "Elderveld",
+   "scheids": "H6",
+   "teller": "JA1"
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "D6",
+   "Uitteam": "Setash DS2",
+   "Locatie": "Elderveld",
+   "scheids": "H7",
+   "teller": "JA1"
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "JC4",
+   "Uitteam": "WIK Steenderen JC1",
+   "Locatie": "Elderveld",
+   "scheids": "H7",
+   "teller": "JA1"
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "D8",
+   "Uitteam": "D.O.S. DS2",
+   "Locatie": "Elderveld",
+   "scheids": "D3",
+   "teller": "JC4"
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "H7",
+   "Uitteam": "Scylla HS5",
+   "Locatie": "Elderveld",
+   "scheids": "D6",
+   "teller": "JC4"
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "JC3",
+   "Uitteam": "Toesj JC1",
+   "Locatie": "Elderveld",
+   "scheids": "JA1",
+   "teller": "MA1"
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "JA1",
+   "Uitteam": "Dros-Alterno JA1",
+   "Locatie": "Elderveld",
+   "scheids": "D3",
+   "teller": "JC3"
+ },
+ {
+   "Datum": "1 april 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "MA1",
+   "Uitteam": "Scylla MA1",
+   "Locatie": "Elderveld",
+   "scheids": "H7",
+   "teller": "JC3"
+ },
+ {
+   "Datum": "13 april 2023",
+   "Tijd": "20:30",
+   "Thuisteam": "D7",
+   "Uitteam": "Labyellov DS3",
+   "Locatie": "Valkenhuizen",
+   "scheids": "D5",
+   "teller": "MA1"
+ },
+ {
+   "Datum": "13 april 2023",
+   "Tijd": "20:30",
+   "Thuisteam": "H4",
+   "Uitteam": "N.V.C. HS1",
+   "Locatie": "Valkenhuizen",
+   "scheids": "D5",
+   "teller": "MA1"
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "8:00",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 8:00 tot 10:30",
+   "Locatie": "De Laar",
+   "scheids": "D7",
+   "teller": ""
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "8:30",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 8:00 tot 10:30",
+   "Locatie": "De Laar",
+   "scheids": "JC2",
+   "teller": ""
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "9:15",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 9:15 tot 11.30",
+   "Locatie": "De Laar",
+   "scheids": "",
+   "teller": "MC3"
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "10:15",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 10:15 tot 11:45",
+   "Locatie": "De Laar",
+   "scheids": "MA1",
+   "teller": ""
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "10:15",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 10:15 tot 11:45",
+   "Locatie": "De Laar",
+   "scheids": "MB1",
+   "teller": ""
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "10:15",
+   "Thuisteam": "CMV",
+   "Uitteam": "CMV 10:15 tot 11:45",
+   "Locatie": "De Laar",
+   "scheids": "MB3",
+   "teller": ""
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "D2",
+   "Uitteam": "TiVoC DS1",
+   "Locatie": "Elderveld",
+   "scheids": "H3",
+   "teller": "MB3"
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "JC1",
+   "Uitteam": "Gemini JC1",
+   "Locatie": "Elderveld",
+   "scheids": "D6",
+   "teller": "MB3"
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "11:00",
+   "Thuisteam": "MB2",
+   "Uitteam": "Woudenberg MB1",
+   "Locatie": "Elderveld",
+   "scheids": "H3",
+   "teller": "MB3"
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "H3",
+   "Uitteam": "Excelsior HS1",
+   "Locatie": "Elderveld",
+   "scheids": "H1",
+   "teller": "JC1"
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "MA1",
+   "Uitteam": "SSS MA1",
+   "Locatie": "Elderveld",
+   "scheids": "D2",
+   "teller": "JC1"
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "13:00",
+   "Thuisteam": "MB3",
+   "Uitteam": "VoCASA MB1",
+   "Locatie": "Elderveld",
+   "scheids": "D2",
+   "teller": "JC1"
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "D1",
+   "Uitteam": "Gemini DS2",
+   "Locatie": "Elderveld",
+   "scheids": "",
+   "teller": "D10"
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "MB1",
+   "Uitteam": "Kidang MB1",
+   "Locatie": "Elderveld",
+   "scheids": "H1",
+   "teller": "JA2"
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "15:15",
+   "Thuisteam": "MC3",
+   "Uitteam": "TweeVV MC3",
+   "Locatie": "Elderveld",
+   "scheids": "H1",
+   "teller": "D10"
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "H1",
+   "Uitteam": "SV Dynamo HS3",
+   "Locatie": "Elderveld",
+   "scheids": "",
+   "teller": "MB1"
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "D10",
+   "Uitteam": "WaHo DS10",
+   "Locatie": "Elderveld",
+   "scheids": "D1",
+   "teller": "MB1"
+ },
+ {
+   "Datum": "15 april 2023",
+   "Tijd": "17:30",
+   "Thuisteam": "JA2",
+   "Uitteam": "Twente '05 JA2",
+   "Locatie": "Elderveld",
+   "scheids": "D1",
+   "teller": "MB1"
+ }
+]
+}

@@ -13,7 +13,7 @@
 		<StackLayout class="page_menu" orientation="vertical" horizontalAlignment="center" visibility="{{visibility_menu}}">
 			<Label class="spacer" text=""/>
 			<Label class="spacer_menu" text=" "/>
-			<Button class="button_menu" text="STAND" ontap="tapRanking" />
+			<Button class="button_menu" text="STAND" ontap="tapRanking" visibility="{{visibility_ranking_button}}" />
 			<Label class="spacer_menu" text=" "/>
 			<Button class="button_menu" text="PROGRAMMA" ontap="tapSchedule" />
 			<Label class="spacer_menu" text=" "/>
@@ -287,40 +287,64 @@
 		</StackLayout>
 		<StackLayout orientation="vertical" horizontalAlignment="center" visibility="{{visibility_settings}}">
 			<StackLayout orientation="horizontal">
-				<Button id="team_0" class="button_team" text="{{text_team_0}}" color="{{background_team_0}}" ontap="tapTeam" />
-				<Button id="team_1" class="button_team" text="{{text_team_1}}" color="{{background_team_1}}" ontap="tapTeam" />
-				<Button id="team_2" class="button_team" text="{{text_team_2}}" color="{{background_team_2}}" ontap="tapTeam" />
-				<Button id="team_3" class="button_team" text="{{text_team_3}}" color="{{background_team_3}}" ontap="tapTeam" />
+				<Button id="team_0" class="button_team" text="{{text_team_0}}" backgroundColor="{{background_team_0}}" color="{{color_team_0}}" ontap="tapTeam" />
+				<Button id="team_1" class="button_team" text="{{text_team_1}}" backgroundColor="{{background_team_1}}" color="{{color_team_1}}" ontap="tapTeam" />
+				<Button id="team_2" class="button_team" text="{{text_team_2}}" backgroundColor="{{background_team_2}}" color="{{color_team_2}}" ontap="tapTeam" />
+				<Button id="team_3" class="button_team" text="{{text_team_3}}" backgroundColor="{{background_team_3}}" color="{{color_team_3}}" ontap="tapTeam" />
 			</StackLayout>
 			<StackLayout orientation="horizontal">
-				<Button id="team_4" class="button_team" text="{{text_team_4}}" color="{{background_team_4}}" ontap="tapTeam" />
-				<Button id="team_5" class="button_team" text="{{text_team_5}}" color="{{background_team_5}}" ontap="tapTeam" />
-				<Button id="team_6" class="button_team" text="{{text_team_6}}" color="{{background_team_6}}" ontap="tapTeam" />
-				<Button id="team_7" class="button_team" text="{{text_team_7}}" color="{{background_team_7}}" ontap="tapTeam" />
+				<Button id="team_4" class="button_team" text="{{text_team_4}}" backgroundColor="{{background_team_4}}" color="{{color_team_4}}" ontap="tapTeam" />
+				<Button id="team_5" class="button_team" text="{{text_team_5}}" backgroundColor="{{background_team_5}}" color="{{color_team_5}}" ontap="tapTeam" />
+				<Button id="team_6" class="button_team" text="{{text_team_6}}" backgroundColor="{{background_team_6}}" color="{{color_team_6}}" ontap="tapTeam" />
+				<Button id="team_7" class="button_team" text="{{text_team_7}}" backgroundColor="{{background_team_7}}" color="{{color_team_7}}" ontap="tapTeam" />
 			</StackLayout>
 			<StackLayout orientation="horizontal">
-				<Button id="team_8" class="button_team" text="{{text_team_8}}" color="{{background_team_8}}" ontap="tapTeam" />
-				<Button id="team_9" class="button_team" text="{{text_team_9}}" color="{{background_team_9}}" ontap="tapTeam" />
+				<Button id="team_8" class="button_team" text="{{text_team_8}}" backgroundColor="{{background_team_8}}" color="{{color_team_8}}" ontap="tapTeam" />
+				<Button id="team_9" class="button_team" text="{{text_team_9}}" backgroundColor="{{background_team_9}}" color="{{color_team_9}}" ontap="tapTeam" />
 			</StackLayout>
 			<StackLayout orientation="horizontal">
-				<Button id="team_10" class="button_team" text="{{text_team_10}}" color="{{background_team_10}}" ontap="tapTeam" />
-				<Button id="team_11" class="button_team" text="{{text_team_11}}" color="{{background_team_11}}" ontap="tapTeam" />
-				<Button id="team_12" class="button_team" text="{{text_team_12}}" color="{{background_team_12}}" ontap="tapTeam" />
-				<Button id="team_13" class="button_team" text="{{text_team_13}}" color="{{background_team_13}}" ontap="tapTeam" />
+				<Button id="team_10" class="button_team" text="{{text_team_10}}" backgroundColor="{{background_team_10}}" color="{{color_team_10}}" ontap="tapTeam" />
+				<Button id="team_11" class="button_team" text="{{text_team_11}}" backgroundColor="{{background_team_11}}" color="{{color_team_11}}" ontap="tapTeam" />
+				<Button id="team_12" class="button_team" text="{{text_team_12}}" backgroundColor="{{background_team_12}}" color="{{color_team_12}}" ontap="tapTeam" />
+				<Button id="team_13" class="button_team" text="{{text_team_13}}" backgroundColor="{{background_team_13}}" color="{{color_team_13}}" ontap="tapTeam" />
 			</StackLayout>
 			<StackLayout orientation="horizontal">
-				<Button id="team_14" class="button_team" text="{{text_team_14}}" color="{{background_team_14}}" ontap="tapTeam" />
-				<Button id="team_15" class="button_team" text="{{text_team_15}}" color="{{background_team_15}}" ontap="tapTeam" />
-				<Button id="team_16" class="button_team" text="{{text_team_16}}" color="{{background_team_16}}" ontap="tapTeam" />
+				<Button id="team_14" class="button_team" text="{{text_team_14}}" backgroundColor="{{background_team_14}}" color="{{color_team_14}}" ontap="tapTeam" />
+				<Button id="team_15" class="button_team" text="{{text_team_15}}" backgroundColor="{{background_team_15}}" color="{{color_team_15}}" ontap="tapTeam" />
+				<Button id="team_16" class="button_team" text="{{text_team_16}}" backgroundColor="{{background_team_16}}" color="{{color_team_16}}" ontap="tapTeam" />
 			</StackLayout>
 			<StackLayout orientation="horizontal">
-				<Button id="team_17" class="button_team" text="{{text_team_17}}" color="{{background_team_17}}" ontap="tapTeam" />
-				<Button id="team_18" class="button_team" text="{{text_team_18}}" color="{{background_team_18}}" ontap="tapTeam" />
+				<Button id="team_17" class="button_team" text="{{text_team_17}}" backgroundColor="{{background_team_17}}" color="{{color_team_17}}" ontap="tapTeam" />
+				<Button id="team_18" class="button_team" text="{{text_team_18}}" backgroundColor="{{background_team_18}}" color="{{color_team_18}}" ontap="tapTeam" />
+				<Button id="team_19" class="button_team" text="{{text_team_19}}" backgroundColor="{{background_team_19}}" color="{{color_team_19}}" ontap="tapTeam" />
+				<Button id="team_20" class="button_team" text="{{text_team_20}}" backgroundColor="{{background_team_20}}" color="{{color_team_20}}" ontap="tapTeam" />
 			</StackLayout>
 			<StackLayout orientation="horizontal">
-				<Button id="team_19" class="button_team" text="{{text_team_19}}" color="{{background_team_19}}" ontap="tapTeam" />
-				<Button id="team_20" class="button_team" text="{{text_team_20}}" color="{{background_team_20}}" ontap="tapTeam" />
-				<Button id="team_21" class="button_team" text="{{text_team_21}}" color="{{background_team_21}}" ontap="tapTeam" />
+				<Button id="team_21" class="button_team" text="{{text_team_21}}" backgroundColor="{{background_team_21}}" color="{{color_team_21}}" ontap="tapTeam" />
+				<Button id="team_22" class="button_team" text="{{text_team_22}}" backgroundColor="{{background_team_22}}" color="{{color_team_22}}" ontap="tapTeam" />
+				<Button id="team_23" class="button_team" text="{{text_team_23}}" backgroundColor="{{background_team_23}}" color="{{color_team_23}}" ontap="tapTeam" />
+			</StackLayout>
+			<StackLayout orientation="horizontal">
+				<Button id="team_24" class="button_team" text="{{text_team_24}}" backgroundColor="{{background_team_24}}" color="{{color_team_24}}" ontap="tapTeam" />
+				<Button id="team_25" class="button_team" text="{{text_team_25}}" backgroundColor="{{background_team_25}}" color="{{color_team_25}}" ontap="tapTeam" />
+				<Button id="team_26" class="button_team" text="{{text_team_26}}" backgroundColor="{{background_team_26}}" color="{{color_team_26}}" ontap="tapTeam" />
+				<Button id="team_27" class="button_team" text="{{text_team_27}}" backgroundColor="{{background_team_27}}" color="{{color_team_27}}" ontap="tapTeam" />
+			</StackLayout>
+			<StackLayout orientation="horizontal">
+				<Button id="team_28" class="button_team" text="{{text_team_28}}" backgroundColor="{{background_team_28}}" color="{{color_team_28}}" ontap="tapTeam" />
+				<Button id="team_29" class="button_team" text="{{text_team_29}}" backgroundColor="{{background_team_29}}" color="{{color_team_29}}" ontap="tapTeam" />
+				<Button id="team_30" class="button_team" text="{{text_team_30}}" backgroundColor="{{background_team_30}}" color="{{color_team_30}}" ontap="tapTeam" />
+				<Button id="team_31" class="button_team" text="{{text_team_31}}" backgroundColor="{{background_team_31}}" color="{{color_team_31}}" ontap="tapTeam" />
+			</StackLayout>
+			<StackLayout orientation="horizontal">
+				<Button id="team_32" class="button_team" text="{{text_team_32}}" backgroundColor="{{background_team_32}}" color="{{color_team_32}}" ontap="tapTeam" />
+				<Button id="team_33" class="button_team" text="{{text_team_33}}" backgroundColor="{{background_team_33}}" color="{{color_team_33}}" ontap="tapTeam" />
+				<Button id="team_34" class="button_team" text="{{text_team_34}}" backgroundColor="{{background_team_34}}" color="{{color_team_34}}" ontap="tapTeam" />
+				<Button id="team_35" class="button_team" text="{{text_team_35}}" backgroundColor="{{background_team_35}}" color="{{color_team_35}}" ontap="tapTeam" />
+			</StackLayout>
+			<StackLayout orientation="horizontal">
+				<Button id="team_36" class="button_team" text="{{text_team_36}}" backgroundColor="{{background_team_36}}" color="{{color_team_36}}" ontap="tapTeam" />
+				<Button id="team_37" class="button_team" text="{{text_team_37}}" backgroundColor="{{background_team_37}}" color="{{color_team_37}}" ontap="tapTeam" />
 			</StackLayout>
 			<StackLayout horizontalAlignment="center" verticalAlignment="bottom" orientation="horizontal">
 				<Label text=" " fontSize="20vw"/>

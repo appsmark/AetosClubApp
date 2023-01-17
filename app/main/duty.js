@@ -31,33 +31,40 @@ export class Duty {
 			var data = r
 			var visitors
 			var flag = true
+			var date_translation
 			for (var i = 0; i < data.duty.length; i++) {
 				duty_date = new Date(data.duty[i].Datum)
-				if ((duty_date.getMonth() >= today.getMonth()) & (duty_date.getDate() >= today.getDate())) {
-					if ((data.duty[i].teller == id) || (data.duty[i].scheids == id)) {
-						flag = false
+				if ((data.duty[i].teller == id) || (data.duty[i].scheids == id)) {
+					if ((duty_date >= today)  ) {
+						if ((data.duty[i].teller == id) || (data.duty[i].scheids.includes(id))) {
+							flag = false
+							date_translation = data.duty[i].Datum
+							date_translation = date_translation.replace("january", "januari")
+							date_translation = date_translation.replace("february", "februari")
+							date_translation = date_translation.replace("march", "maart")
 						if (data.duty[i].Thuisteam == "CMV") {
-							this.viewModel.set("text_item_duty_" + index + "_date", data.duty[i].Datum)
-							this.viewModel.set("text_item_duty_" + index + "_game", data.duty[i].Thuisteam + "   " + data.duty[i].Tijd)
-						} else {
-							this.viewModel.set("text_item_duty_" + index + "_date", data.duty[i].Datum + "   " + data.duty[i].Tijd)
-							visitors = data.duty[i].Uitteam
-							visitors = visitors.replace("Orion Volleybal Doetinchem ", "Orion ")
-							this.viewModel.set("text_item_duty_" + index + "_game", data.duty[i].Thuisteam + " - " + visitors)
-						}
-						this.viewModel.set("text_item_duty_" + index + "_hall", "Sporthal " + data.duty[i].Locatie)
-						role = ""
-						if (data.duty[i].scheids == id) {
-							role = "Fluiten"
-							if (data.duty[i].teller == id) {
-								role += " & tellen"
+								this.viewModel.set("text_item_duty_" + index + "_date", date_translation)
+								this.viewModel.set("text_item_duty_" + index + "_game", data.duty[i].Thuisteam + "   " + data.duty[i].Tijd)
+							} else {
+								this.viewModel.set("text_item_duty_" + index + "_date", date_translation + "   " + data.duty[i].Tijd)
+								visitors = data.duty[i].Uitteam
+								visitors = visitors.replace("Orion Volleybal Doetinchem ", "Orion ")
+								this.viewModel.set("text_item_duty_" + index + "_game", data.duty[i].Thuisteam + " - " + visitors)
 							}
-						} else {
-							role += "Tellen"
+							this.viewModel.set("text_item_duty_" + index + "_hall", "Sporthal " + data.duty[i].Locatie)
+							role = ""
+							if (data.duty[i].scheids == id) {
+								role = "Fluiten"
+								if (data.duty[i].teller == id) {
+									role += " & tellen"
+								}
+							} else {
+								role += "Tellen"
+							}
+							this.viewModel.set("text_item_duty_" + index + "_role", role)
+							
+							index += 1
 						}
-						this.viewModel.set("text_item_duty_" + index + "_role", role)
-						
-						index += 1
 					}
 				}
 			}

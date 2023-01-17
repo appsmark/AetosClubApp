@@ -37,6 +37,11 @@ export class MainGame {
 			this.viewModel.set("visibility_button_settings", "visible")
 			this.viewModel.set("textTop", "TEAM " + this.data.teams[this.data.team][0])
 			this.viewModel.set("visibility_beach_button", "collapsed")
+			if (this.data.team < 17) {
+				this.viewModel.set("visibility_ranking_button", "visible")
+			} else {
+				this.viewModel.set("visibility_ranking_button", "collapsed")
+			}
 			this.viewModel.set("visibility_duty_button", "visible")
 			this.viewModel.set("visibility_news_button", "collapsed")
 	}
@@ -90,6 +95,12 @@ export class MainGame {
 		this.viewModel.set("visibility_menu", "visible")
 		this.viewModel.set("visibility_duty_button", "visible")
 		this.viewModel.set("visibility_button_settings", "visible")
+		if (this.data.team < 17) {
+			this.viewModel.set("visibility_ranking_button", "visible")
+		} else {
+			this.viewModel.set("visibility_ranking_button", "collapsed")
+		}
+
 	}
 
 	tapSettings() {
@@ -99,8 +110,9 @@ export class MainGame {
 //		this.viewModel.set("visibility_back", "visible")
 		this.viewModel.set("visibility_button_set_team", "collapsed")
 		for (var index=0; index < this.data.max_teams; index++) {
-			this.viewModel.set("background_team_" + index, "black")
+			this.viewModel.set("background_team_" + index, this.data.color_yellow)
 		}
+		this.viewModel.set("background_team_" + this.data.team, this.data.color_blue)
 		this.viewModel.set("visibility_button_beach", "collapsed")
 	}
 
@@ -125,7 +137,8 @@ export class MainGame {
 
 	indicateTeam(args) {
 		for (var index=0; index < this.data.max_teams; index++) {
-			this.viewModel.set("background_team_" + index, "black")
+			this.viewModel.set("background_team_" + index, this.data.color_yellow)
+			this.viewModel.set("color_team_" + index, "black")
 		}
 		this.viewModel.set("background_team_" + args.object.id.split("_")[1], this.data.color_blue)
 		this.data.team_desired = args.object.id.split("_")[1]
