@@ -28,9 +28,14 @@ export class Ranking {
 			poule = poule.replace("Dames ", "")
 			poule = poule.replace("Heren ", "")
 			poule = poule.replace("Tweede ", "2e ")
+			poule = poule.replace("2e helft ", "")
+			poule = poule.replace("Eerste helft ", "")
+			poule = poule.replace("klaasse", "klasse")
 			this.viewModel.set("text_ranking_poule", poule)
 
 			for (var count=0; count < 10; count++) {
+				xml = xml.replace("Volleybalvereniging ", "")
+				xml = xml.replace("/HEC", "")
 				xml = xml.replace("Vallei Accountants ", "")
 				xml = xml.replace(" VC", "")
 				xml = xml.replace("SV ", "")
@@ -38,6 +43,7 @@ export class Ranking {
 				xml = xml.replace(" Apeldoorn", "")
 				xml = xml.replace("Rebo Woningmakelaars ", "")
 				xml = xml.replace("Rensa Family ", "")
+				xml = xml.replace("Weghorst Makelaardij ", "")
 			}
 			var ranking = xml.split("<stand:ranking>")
 			var rows_ranking = "*"

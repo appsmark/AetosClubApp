@@ -37,11 +37,7 @@ export class MainGame {
 			this.viewModel.set("visibility_button_settings", "visible")
 			this.viewModel.set("textTop", "TEAM " + this.data.teams[this.data.team][0])
 			this.viewModel.set("visibility_beach_button", "collapsed")
-			if (this.data.team < 17) {
-				this.viewModel.set("visibility_ranking_button", "visible")
-			} else {
-				this.viewModel.set("visibility_ranking_button", "collapsed")
-			}
+			this.viewModel.set("visibility_ranking_button", "visible")
 			this.viewModel.set("visibility_duty_button", "visible")
 			this.viewModel.set("visibility_news_button", "collapsed")
 	}
@@ -95,12 +91,7 @@ export class MainGame {
 		this.viewModel.set("visibility_menu", "visible")
 		this.viewModel.set("visibility_duty_button", "visible")
 		this.viewModel.set("visibility_button_settings", "visible")
-		if (this.data.team < 17) {
-			this.viewModel.set("visibility_ranking_button", "visible")
-		} else {
-			this.viewModel.set("visibility_ranking_button", "collapsed")
-		}
-
+		this.viewModel.set("visibility_ranking_button", "visible")
 	}
 
 	tapSettings() {
