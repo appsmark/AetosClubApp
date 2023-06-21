@@ -26,9 +26,6 @@ class _MainScreen extends State<MainScreen> {
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
-    double statusBarHeight = MediaQuery.of(context).padding.top;
-    double buttonFontSize = 35;
-    //0.8 * screenWidth;
     double buttonWidth = 0.8 * screenWidth;
     double spacingButtons = 0.02 * screenHeight;
     return Scaffold(
@@ -56,10 +53,6 @@ class _MainScreen extends State<MainScreen> {
       body: Column(
         children: [
           Container(
-            height: statusBarHeight,
-            color: Colors.red,
-          ),
-          Container(
             color: const Color(0xFF731816),
             height: 0.8 * screenHeight,
             width: screenWidth,
@@ -77,8 +70,8 @@ class _MainScreen extends State<MainScreen> {
                       shape: const StadiumBorder(),
                       side: const BorderSide(color: Colors.black, width: 4),
                       backgroundColor: const Color(0xFFF9B234)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(28),
+                  child: const Padding(
+                    padding: EdgeInsets.all(28),
                     child: FittedBox(
                       fit: BoxFit.fitWidth,
                       child: Text(
