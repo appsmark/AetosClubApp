@@ -1,0 +1,31 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onPageLoaded" backgroundColor="#731816">
+	<ActionBar flat="true" backgroundColor="#731816">
+		<StackLayout orientation="horizontal">
+			<Label class="title" text="{{textTop}}" horizontalAlignment="center" />
+		</StackLayout>
+	</ActionBar>
+	<StackLayout>
+		<StackLayout class="splashscreen" visibility="{{ visibility_splashscreen }}">
+			<Image src="~/images/splashscreen.png" backgroundColor="#731816"/>
+		</StackLayout>
+		<StackLayout class="page_menu" orientation="vertical" horizontalAlignment="center" visibility="{{visibility_menu}}">
+			<Label class="spacer" text=""/>
+			<Label class="spacer_menu" text=" "/>
+			<Button class="button_menu" text="STAND" ontap="tapRanking" visibility="{{visibility_ranking_button}}" />
+			<Label class="spacer_menu" text=" "/>
+			<Button class="button_menu" text="PROGRAMMA" ontap="tapSchedule" />
+			<Label class="spacer_menu" text=" "/>
+			<Button class="button_menu" text="WEDSTRIJD" ontap="tapGame" />
+			<Label class="spacer_big_menu" text=" "/>
+			<Label text="" visibility="{{visibility_duty_button}}" />
+			<Button class="button_menu_duty" text="ZAALDIENST" ontap="tapDuty" />
+			<Label class="spacer_menu" text=" "/>
+			<Label text=""  visibility="{{visibility_news_button}}" />
+			<Button class="button_menu" text="NIEUWS" ontap="tapNews" visibility="{{visibility_news_button}}" />
+			<Label text="" visibility="{{visibility_beach_button}}" />
+			<Button class="button_menu_beach" text="BEACH" ontap="tapBeach" visibility="{{visibility_beach_button}}" />
+			<Label class="spacer_big_menu" text=" "/>
+			<Image src="~/images/settings.png" horizontalAlignment="center" height="40vw" ontap="tapSettings" />
+		</StackLayout>
+	</StackLayout>
+</Page>

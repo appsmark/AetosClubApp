@@ -1,0 +1,21 @@
+@import '../app-common.css';
+
+Label.title {
+    background: #731816;
+    color:#00AADE;
+    font-size: 27vw;
+    font-weight: bold;
+}
+
+Label.text_no_data {
+    color:#F9B234;
+    font-size: 35vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+Label.text_item_duty {
+    color:#F9B234;
+    font-size: 20vw;
+    font-weight: bold;
+}
