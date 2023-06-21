@@ -28,6 +28,7 @@ class _MainScreen extends State<MainScreen> {
     double screenWidth = MediaQuery.of(context).size.width;
     double statusBarHeight = MediaQuery.of(context).padding.top;
     double buttonWidth = 0.8 * screenWidth;
+    double spacingButtons = 0.02 * screenHeight;
     return Scaffold(
       backgroundColor: const Color(0xFF731816),
       appBar: AppBar(
@@ -83,6 +84,7 @@ class _MainScreen extends State<MainScreen> {
                         )),
                   ),
                 ),
+                Container(height: spacingButtons),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -104,6 +106,7 @@ class _MainScreen extends State<MainScreen> {
                         )),
                   ),
                 ),
+                Container(height: spacingButtons),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -125,6 +128,7 @@ class _MainScreen extends State<MainScreen> {
                         )),
                   ),
                 ),
+                Container(height: 2 * spacingButtons),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
