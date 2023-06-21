@@ -27,6 +27,8 @@ class _MainScreen extends State<MainScreen> {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     double statusBarHeight = MediaQuery.of(context).padding.top;
+    double buttonFontSize = 35;
+    //0.8 * screenWidth;
     double buttonWidth = 0.8 * screenWidth;
     double spacingButtons = 0.02 * screenHeight;
     return Scaffold(
@@ -75,13 +77,18 @@ class _MainScreen extends State<MainScreen> {
                       shape: const StadiumBorder(),
                       side: const BorderSide(color: Colors.black, width: 4),
                       backgroundColor: const Color(0xFFF9B234)),
-                  child: const Padding(
-                    padding: EdgeInsets.all(28),
-                    child: Text('STAND',
+                  child: Padding(
+                    padding: const EdgeInsets.all(28),
+                    child: FittedBox(
+                      fit: BoxFit.fitWidth,
+                      child: Text(
+                        'STAND',
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 35,
-                        )),
+                          fontSize: 45,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 Container(height: spacingButtons),
@@ -99,11 +106,14 @@ class _MainScreen extends State<MainScreen> {
                       backgroundColor: const Color(0xFFF9B234)),
                   child: const Padding(
                     padding: EdgeInsets.all(28.0),
-                    child: Text('PROGRAMMA',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 35,
-                        )),
+                    child: FittedBox(
+                      fit: BoxFit.fitWidth,
+                      child: Text('PROGRAMMA',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 35,
+                          )),
+                    ),
                   ),
                 ),
                 Container(height: spacingButtons),
@@ -121,11 +131,14 @@ class _MainScreen extends State<MainScreen> {
                       backgroundColor: const Color(0xFFF9B234)),
                   child: const Padding(
                     padding: EdgeInsets.all(28.0),
-                    child: Text('WEDSTRIJD',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 35,
-                        )),
+                    child: FittedBox(
+                      fit: BoxFit.fitWidth,
+                      child: Text('WEDSTRIJD',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 35,
+                          )),
+                    ),
                   ),
                 ),
                 Container(height: 2 * spacingButtons),
@@ -143,11 +156,14 @@ class _MainScreen extends State<MainScreen> {
                       backgroundColor: const Color(0xFFF9B234)),
                   child: const Padding(
                     padding: EdgeInsets.all(28.0),
-                    child: Text('ZAALDIENST',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 35,
-                        )),
+                    child: FittedBox(
+                      fit: BoxFit.fitWidth,
+                      child: Text('ZAALDIENST',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 35,
+                          )),
+                    ),
                   ),
                 ),
               ],
