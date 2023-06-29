@@ -12,7 +12,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreen extends State<MainScreen> {
-  bool enableSchedule = false;
+  bool enableSchedule = true;
 
   @override
   void initState() {
@@ -61,117 +61,77 @@ class _MainScreen extends State<MainScreen> {
             width: screenWidth,
             child: Column(
               children: [
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Ranking()));
-                  },
-                  style: ElevatedButton.styleFrom(
-                      fixedSize: Size(buttonWidth, 90),
-                      shape: const StadiumBorder(),
-                      side: const BorderSide(color: Colors.black, width: 4),
-                      backgroundColor: const Color(0xFFF9B234)),
-                  child: const Padding(
-                    padding: EdgeInsets.all(28),
-                    child: FittedBox(
-                      fit: BoxFit.fitWidth,
-                      child: Text(
-                        'STAND',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 45,
-                        ),
-                      ),
-                    ),
-                  ),
+                ButtonMainScreen(
+                  buttonWidth: buttonWidth,
+                  text: "STAND",
+                  buttonEnabled: enableSchedule,
                 ),
                 Container(height: spacingButtons),
-                ElevatedButton(
-                  onPressed: enableSchedule
-                      ? () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Ranking()));
-                        }
-                      : null,
-                  style: ElevatedButton.styleFrom(
-                      fixedSize: Size(buttonWidth, 90),
-                      shape: const StadiumBorder(),
-                      side: const BorderSide(color: Colors.black, width: 4),
-                      backgroundColor: const Color(0xFFF9B234)),
-                  child: const Padding(
-                    padding: EdgeInsets.all(28.0),
-                    child: FittedBox(
-                      fit: BoxFit.fitWidth,
-                      child: Text('PROGRAMMA',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 35,
-                          )),
-                    ),
-                  ),
+                ButtonMainScreen(
+                  buttonWidth: buttonWidth,
+                  text: "PROGRAMMA",
+                  buttonEnabled: false,
                 ),
                 Container(height: spacingButtons),
-                ElevatedButton(
-                  onPressed: enableSchedule
-                      ? () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Ranking()));
-                        }
-                      : null,
-                  style: ElevatedButton.styleFrom(
-                      fixedSize: Size(buttonWidth, 90),
-                      shape: const StadiumBorder(),
-                      side: const BorderSide(color: Colors.black, width: 4),
-                      backgroundColor: const Color(0xFFF9B234)),
-                  child: const Padding(
-                    padding: EdgeInsets.all(28.0),
-                    child: FittedBox(
-                      fit: BoxFit.fitWidth,
-                      child: Text('WEDSTRIJD',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 35,
-                          )),
-                    ),
-                  ),
+                ButtonMainScreen(
+                  buttonWidth: buttonWidth,
+                  text: "WEDSTRIJD",
+                  buttonEnabled: false,
                 ),
-                Container(height: 2 * spacingButtons),
-                ElevatedButton(
-                  onPressed: enableSchedule
-                      ? () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Ranking()));
-                        }
-                      : null,
-                  style: ElevatedButton.styleFrom(
-                      fixedSize: Size(buttonWidth, 90),
-                      shape: const StadiumBorder(),
-                      side: const BorderSide(color: Colors.black, width: 4),
-                      backgroundColor: const Color(0xFFF9B234)),
-                  child: const Padding(
-                    padding: EdgeInsets.all(28.0),
-                    child: FittedBox(
-                      fit: BoxFit.fitWidth,
-                      child: Text('ZAALDIENST',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 35,
-                          )),
-                    ),
-                  ),
+                Container(height: spacingButtons),
+                Container(height: spacingButtons),
+                ButtonMainScreen(
+                  buttonWidth: buttonWidth,
+                  text: "ZAALDIENST",
+                  buttonEnabled: true,
                 ),
               ],
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class ButtonMainScreen extends StatelessWidget {
+  const ButtonMainScreen(
+      {super.key,
+      required this.buttonWidth,
+      required this.text,
+      required this.buttonEnabled});
+
+  final double buttonWidth;
+  final String text;
+  // ignore: prefer_typing_uninitialized_variables
+  final buttonEnabled;
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: buttonEnabled
+          ? () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Ranking()));
+            }
+          : null,
+      style: ElevatedButton.styleFrom(
+          fixedSize: Size(buttonWidth, 90),
+          shape: const StadiumBorder(),
+          side: const BorderSide(color: Colors.black, width: 4),
+          backgroundColor: const Color(0xFFF9B234)),
+      child: Padding(
+        padding: const EdgeInsets.all(28),
+        child: FittedBox(
+          fit: BoxFit.fitWidth,
+          child: Text(
+            text,
+            style: const TextStyle(
+              color: Colors.black,
+              fontSize: 45,
+            ),
+          ),
+        ),
       ),
     );
   }
