@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'ranking.dart';
 import 'settingsscreen.dart';
 import 'rss.dart';
+import 'data.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -13,6 +14,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreen extends State<MainScreen> {
   bool enableSchedule = true;
+  Data data = Data();
 
   @override
   void initState() {
@@ -45,9 +47,9 @@ class _MainScreen extends State<MainScreen> {
             },
           ),
         ],
-        title: const Text(
-          "TEAM H6",
-          style: TextStyle(color: Color(0xFF00AADE), fontSize: 35),
+        title: Text(
+          "Team ${data.currentTeam}",
+          style: const TextStyle(color: Color(0xFF00AADE), fontSize: 35),
         ),
         backgroundColor: const Color(0xFF731816),
         centerTitle: true,
@@ -61,6 +63,7 @@ class _MainScreen extends State<MainScreen> {
             width: screenWidth,
             child: Column(
               children: [
+                Container(height: spacingButtons),
                 ButtonMainScreen(
                   buttonWidth: buttonWidth,
                   text: "STAND",
@@ -111,8 +114,12 @@ class ButtonMainScreen extends StatelessWidget {
     return ElevatedButton(
       onPressed: buttonEnabled
           ? () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const Ranking()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => Ranking(
+                            listOfItems: data.getTeams(),
+                          )));
             }
           : null,
       style: ElevatedButton.styleFrom(
