@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Template Flutter',
+      title: 'Aetos Team App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

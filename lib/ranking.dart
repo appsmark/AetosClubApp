@@ -14,21 +14,23 @@ class Ranking extends StatefulWidget {
 
 class _RankingState extends State<Ranking> {
   //const Ranking({super.key});
-  late Data data = Data();
+  Data data = Data();
 
   @override
   Widget build(BuildContext context) {
     var listOfItems = data.getTeams();
     return Scaffold(
-      backgroundColor: Colors.white, // const Color(0xFF731816),
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF731816),
-        centerTitle: true,
-        title: const Text(
-          "STAND",
-          style: TextStyle(color: Color(0xFF00AADE), fontSize: 35),
+        backgroundColor: Colors.white, // const Color(0xFF731816),
+        appBar: AppBar(
+          backgroundColor: const Color(0xFF731816),
+          centerTitle: true,
+          title: const Text(
+            "STAND",
+            style: TextStyle(color: Color(0xFF00AADE), fontSize: 35),
+          ),
         ),
-      ),
+
+        /*
       body: ListView.builder(
           itemCount: listOfItems.length,
           itemBuilder: (BuildContext context, int index) {
@@ -41,12 +43,35 @@ class _RankingState extends State<Ranking> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(listOfItems[index].toString()),
+                    Text(listOfItems[index].team() +
+                        "     " +
+                        listOfItems[index].pointsPro()),
                   ],
                 ),
               ),
             );
           }),
-    );
+          */
+        body: ListView.separated(
+          separatorBuilder: (context, inta) {
+            return const Divider(
+              color: Colors.black,
+            );
+          },
+          // shrinkWrap: true,
+          itemBuilder: (BuildContext context, int index) {
+            return GridView.count(
+              shrinkWrap: true,
+              crossAxisCount: 3,
+              childAspectRatio: 2.0,
+              children: [
+                Center(child: Text(listOfItems[index].team())),
+                Center(child: Text(listOfItems[index].pointsPro())),
+                Center(child: Text(listOfItems[index].team())),
+              ],
+            );
+          },
+          itemCount: listOfItems.length,
+        ));
   }
 }

@@ -40,15 +40,13 @@ class _MainScreen extends State<MainScreen> {
           GestureDetector(
             child: const Icon(Icons.more_vert),
             onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const SettingsScreen()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SettingsScreen()));
             },
           ),
         ],
         title: Text(
-          "Team ${data.currentTeam}",
+          "TEAM ${data.currentTeam}",
           style: const TextStyle(color: Color(0xFF00AADE), fontSize: 35),
         ),
         backgroundColor: const Color(0xFF731816),

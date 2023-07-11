@@ -4,6 +4,7 @@ class Data {
   static final Data _data = Data._internal();
   final List _teams = [];
   final currentTeam = "H6";
+  final List listOfTeams = ["DS1, DS2, DS3"];
 
   factory Data() {
     return _data;
@@ -29,9 +30,12 @@ class TeamData {
 
   TeamData(this.name, this.points);
 
-  @override
-  String toString() {
+  String pointsPro() {
+    return points.toString();
+  }
+
+  String team() {
     name = name.replaceAll("Vallei Accountants ", "");
-    return '{ $name, $points }';
+    return name;
   }
 }
