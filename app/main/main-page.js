@@ -72,6 +72,7 @@ export function tapSchedule(args) {
 
 export function tapTeam(args) {
 	main.indicateTeam(args)
+	main.setTeam(args)
 }
 
 export function tapSetTeam(args) {

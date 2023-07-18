@@ -146,14 +146,15 @@
 
 .button_team {
     background-color: #F9B234;
-    border-width: 3vw;
+    border-width: 2vw;
     border-color: black;
     color: black;
     text-align: center;
     font-size: 15vw;
     font-weight: bold;
     border-radius: 25vw;
-    height: 35vw;
+    height: 10vw;
+    width:50vw;
 }
 
 .button_day {
