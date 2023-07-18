@@ -22,6 +22,7 @@ export class Game {
 			date = date.replace("nov.", "november")
 			date = date.replace("jan.", "januari")
 			date = date.replace("feb.", "februari")
+			date = date.replace("0:00", "")
 			var game_data = ""
 			game_data = r.substring(r.indexOf('[CDATA[') + 7)
 			game_data = game_data.substring(0, game_data.indexOf("]]"))

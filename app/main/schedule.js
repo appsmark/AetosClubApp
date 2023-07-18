@@ -30,6 +30,13 @@ export class Schedule {
 				game_data = game_data.replace("SV ", "")
 				game_data = game_data.replace("Rabobank Orion Volleybal Doetinchem ", "Orion ")
 				game_data = game_data.replace(" Apeldoorn", "")
+				game_data = game_data.replace("ROOT ", "")
+				game_data = game_data.replace("Jumbo Van Andel-", "")
+				game_data = game_data.replace("Sportclub W", "W")
+				game_data = game_data.replace("'Topklimaat in Volleybal'", "")
+				game_data = game_data.replace("HevaV", "Heva VCV")
+				game_data = game_data.replace("Dros-", "")
+
 				game_data = game_data.replace("Rebo Woningmakelaars ", "")
 				game_data = game_data.replace("Rensa Family ", "")
 				game_data = game_data.replace("Weghorst Makelaardij ", "")
@@ -40,6 +47,7 @@ export class Schedule {
 				game_data = game_data.replace("feb.", "februari")
 				game_data = game_data.replace("mrt.", "maart")
 				game_data = game_data.replace("apr.", "april")
+				game_data = game_data.replace("0:00", "")
 				if (game_data != "") {
 					this.viewModel.set("text_item_schedule_" + index + "_date", game_data.substring(0, game_data.indexOf(": ")))
 					this.viewModel.set("text_item_schedule_" + index + "_game", game_data.substring(game_data.indexOf(": ") + 2))
