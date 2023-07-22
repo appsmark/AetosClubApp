@@ -14,7 +14,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreen extends State<MainScreen> {
   bool enableSchedule = true;
-  Data data = Data();
+  String theTeam = "xxx";
 
   @override
   void initState() {
@@ -33,6 +33,7 @@ class _MainScreen extends State<MainScreen> {
     double screenWidth = MediaQuery.of(context).size.width;
     double buttonWidth = 0.8 * screenWidth;
     double spacingButtons = 0.02 * screenHeight;
+    Data data = Data();
     return Scaffold(
       backgroundColor: const Color(0xFF731816),
       appBar: AppBar(
@@ -46,7 +47,7 @@ class _MainScreen extends State<MainScreen> {
           ),
         ],
         title: Text(
-          "TEAM ${data.currentTeam}",
+          "TEAM ${data.currentTeam} $theTeam",
           style: const TextStyle(color: Color(0xFF00AADE), fontSize: 35),
         ),
         backgroundColor: const Color(0xFF731816),

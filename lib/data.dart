@@ -3,8 +3,28 @@ import 'package:flutter/material.dart';
 class Data {
   static final Data _data = Data._internal();
   final List _teams = [];
-  final currentTeam = "H6";
-  final List listOfTeams = ["DS1, DS2, DS3"];
+  var currentTeam = "H6";
+  List listOfTeams = [
+    'D1',
+    'D2',
+    'D3',
+    'D4',
+    'D5',
+    'D6',
+    'D7',
+    'D8',
+    'D9',
+    'D10',
+    'H1',
+    'H2',
+    'H3',
+    'H4',
+    'H5',
+    'H6',
+    'H7',
+    'H8',
+    'H9',
+  ];
 
   factory Data() {
     return _data;
@@ -19,10 +39,16 @@ class Data {
     }
   }
 
+  List getAllTeams() {
+    return listOfTeams;
+  }
+
   List getTeams() {
     return _teams;
   }
 }
+
+final data = Data(); // NEW
 
 class TeamData {
   String name;

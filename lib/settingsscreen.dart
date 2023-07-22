@@ -1,24 +1,95 @@
 import 'package:flutter/material.dart';
 import 'data.dart';
 
-class SettingsScreen extends StatelessWidget {
-  SettingsScreen({super.key});
+class SettingsScreen extends StatefulWidget {
+  SettingsScreen({Key? key}) : super(key: key);
+
+  @override
+  _SettingsScreenState createState() => _SettingsScreenState();
+}
+
+class _SettingsScreenState extends State<SettingsScreen> {
   Data data = Data();
+//  SettingsScreen({super.key});
   bool buttonEnabled = true;
+  // Initial Selected Value
+
+  // List of items in our dropdown menu
+  // var items = data.getAllTeams();
+  //var items = data.listOfTeams;
+
+  var items = [
+    'D1',
+    'D2',
+    'D3',
+    'D4',
+    'D5',
+    'D6',
+    'D7',
+    'D8',
+    'D9',
+    'D10',
+    'H1',
+    'H2',
+    'H3',
+    'H4',
+    'H5',
+    'H6',
+    'H7',
+    'H8',
+    'H9',
+  ];
 
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     double buttonWidth = 0.8 * screenWidth;
+    Data data = Data();
+    //   List items = data.listOfTeams;
+    String dropdownvalue = data.currentTeam;
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF731816),
-        centerTitle: true,
-        title: const Text(
-          "SELECTEER TEAM",
-          style: TextStyle(color: Color(0xFF00AADE), fontSize: 25),
+        appBar: AppBar(
+          backgroundColor: const Color(0xFF731816),
+          centerTitle: true,
+          title: const Text(
+            "SELECTEER TEAM",
+            style: TextStyle(color: Color(0xFF00AADE), fontSize: 25),
+          ),
         ),
-      ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              DropdownButton(
+                // Initial Value
+                value: dropdownvalue,
+                autofocus: true,
+                // Down Arrow Icon
+                icon: const Icon(Icons.keyboard_arrow_down),
+
+                // Array list of items
+                items: items.map((String items) {
+                  return DropdownMenuItem(
+                    value: items,
+                    child: Text(
+                      items,
+                      style: TextStyle(color: Color(0xFF00AADE), fontSize: 25),
+                    ),
+                  );
+                }).toList(),
+                // After selecting the desired option,it will
+                // change button value to selected value
+                onChanged: (String? newValue) {
+                  setState(() {
+                    dropdownvalue = newValue!;
+                    data.currentTeam = newValue;
+                  });
+                },
+              ),
+            ],
+          ),
+
+/*
       body: ListView.builder(
           itemCount: data.listOfTeams.length,
           itemBuilder: (BuildContext context, int index) {
@@ -57,6 +128,7 @@ class SettingsScreen extends StatelessWidget {
               ),
             );
           }),
-    );
+*/
+        ));
   }
 }

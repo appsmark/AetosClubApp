@@ -2,8 +2,6 @@ import 'package:http/http.dart' as http;
 import 'package:xml/xml.dart';
 import 'data.dart';
 
-Data data = Data();
-
 Future<bool> getRSS() async {
   var result = false;
   var url =
