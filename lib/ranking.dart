@@ -13,9 +13,6 @@ class Ranking extends StatefulWidget {
 }
 
 class _RankingState extends State<Ranking> {
-  //const Ranking({super.key});
-  Data data = Data();
-
   @override
   Widget build(BuildContext context) {
     var listOfItems = data.getTeams();

@@ -33,7 +33,6 @@ class _MainScreen extends State<MainScreen> {
     double screenWidth = MediaQuery.of(context).size.width;
     double buttonWidth = 0.8 * screenWidth;
     double spacingButtons = 0.02 * screenHeight;
-    Data data = Data();
     return Scaffold(
       backgroundColor: const Color(0xFF731816),
       appBar: AppBar(
@@ -41,8 +40,10 @@ class _MainScreen extends State<MainScreen> {
           GestureDetector(
             child: const Icon(Icons.more_vert),
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SettingsScreen()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const SettingsScreen()));
             },
           ),
         ],

@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'data.dart';
 
 class SettingsScreen extends StatefulWidget {
-  SettingsScreen({Key? key}) : super(key: key);
+  const SettingsScreen({Key? key}) : super(key: key);
 
   @override
-  _SettingsScreenState createState() => _SettingsScreenState();
+//  _SettingsScreenState createState() => _SettingsScreenState();
+  State<SettingsScreen> createState() => _SettingsScreenState();
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  Data data = Data();
-//  SettingsScreen({super.key});
   bool buttonEnabled = true;
   // Initial Selected Value
 
@@ -42,10 +41,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
-    double buttonWidth = 0.8 * screenWidth;
-    Data data = Data();
-    //   List items = data.listOfTeams;
     String dropdownvalue = data.currentTeam;
     return Scaffold(
         appBar: AppBar(
@@ -73,7 +68,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     value: items,
                     child: Text(
                       items,
-                      style: TextStyle(color: Color(0xFF00AADE), fontSize: 25),
+                      style: const TextStyle(
+                          color: Color(0xFF00AADE), fontSize: 25),
                     ),
                   );
                 }).toList(),
