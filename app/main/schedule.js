@@ -36,6 +36,7 @@ export class Schedule {
 				game_data = game_data.replace("'Topklimaat in Volleybal'", "")
 				game_data = game_data.replace("HevaV", "Heva VCV")
 				game_data = game_data.replace("Dros-", "")
+				game_data = game_data.replace("Bultman-Hartholt ", "")
 
 				game_data = game_data.replace("Rebo Woningmakelaars ", "")
 				game_data = game_data.replace("Rensa Family ", "")

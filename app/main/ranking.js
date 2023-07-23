@@ -51,6 +51,7 @@ export class Ranking {
 				xml = xml.replace("HevaV", "Heva VCV")
 				xml = xml.replace("Steenderen ", "")
 				xml = xml.replace("Dros-", "")
+				xml = xml.replace("Bultman-Hartholt ", "")
 			}
 			var ranking = xml.split("<stand:ranking>")
 			var rows_ranking = "*"
