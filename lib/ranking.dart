@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'data.dart';
+import 'rss.dart';
 
 class Ranking extends StatefulWidget {
   final List listOfItems;
@@ -13,6 +14,12 @@ class Ranking extends StatefulWidget {
 }
 
 class _RankingState extends State<Ranking> {
+  @override
+  void initState() {
+    super.initState();
+    getRSS("nationale-competitie/2BH");
+  }
+
   @override
   Widget build(BuildContext context) {
     var listOfItems = data.getTeams();

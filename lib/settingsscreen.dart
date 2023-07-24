@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'data.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -12,6 +13,15 @@ class SettingsScreen extends StatefulWidget {
 class _SettingsScreenState extends State<SettingsScreen> {
   bool buttonEnabled = true;
   // Initial Selected Value
+  String dropdownvalue = "H9";
+  var tt = CurrentTeam();
+
+  @override
+  void initState() {
+    var ttt = CurrentTeam();
+//    dropdownvalue = ttt.get();
+    super.initState();
+  }
 
   // List of items in our dropdown menu
   // var items = data.getAllTeams();
@@ -41,7 +51,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    String dropdownvalue = data.currentTeam;
     return Scaffold(
         appBar: AppBar(
           backgroundColor: const Color(0xFF731816),
@@ -78,53 +87,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 onChanged: (String? newValue) {
                   setState(() {
                     dropdownvalue = newValue!;
-                    data.currentTeam = newValue;
+                    var newT = context.read<CurrentTeam>();
+                    newT.set(newValue);
                   });
                 },
               ),
             ],
           ),
-
-/*
-      body: ListView.builder(
-          itemCount: data.listOfTeams.length,
-          itemBuilder: (BuildContext context, int index) {
-            return GestureDetector(
-              onTap: () {
-                debugPrint('Tapped on item #$index');
-              },
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          fixedSize: Size(buttonWidth, 90),
-                          shape: const StadiumBorder(),
-                          side: const BorderSide(color: Colors.black, width: 4),
-                          backgroundColor: const Color(0xFFF9B234)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(28),
-                        child: FittedBox(
-                          fit: BoxFit.fitWidth,
-                          child: Text(
-                            data.listOfTeams[index].toString(),
-                            style: const TextStyle(
-                              color: Colors.black,
-                              fontSize: 45,
-                            ),
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            );
-          }),
-*/
         ));
   }
 }

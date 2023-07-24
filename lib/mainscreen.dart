@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 import 'ranking.dart';
 import 'settingsscreen.dart';
-import 'rss.dart';
 import 'data.dart';
 
 class MainScreen extends StatefulWidget {
@@ -14,7 +14,6 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreen extends State<MainScreen> {
   bool enableSchedule = true;
-  String theTeam = "xxx";
 
   @override
   void initState() {
@@ -23,8 +22,6 @@ class _MainScreen extends State<MainScreen> {
     // Suppress statusbar
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
         overlays: [SystemUiOverlay.bottom]);
-
-    getRSS();
   }
 
   @override
@@ -36,6 +33,7 @@ class _MainScreen extends State<MainScreen> {
     return Scaffold(
       backgroundColor: const Color(0xFF731816),
       appBar: AppBar(
+        centerTitle: true,
         actions: [
           GestureDetector(
             child: const Icon(Icons.more_vert),
@@ -47,12 +45,13 @@ class _MainScreen extends State<MainScreen> {
             },
           ),
         ],
-        title: Text(
-          "TEAM ${data.currentTeam} $theTeam",
-          style: const TextStyle(color: Color(0xFF00AADE), fontSize: 35),
-        ),
+        title: Consumer<CurrentTeam>(
+            builder: (context, counter, child) => Text(
+                  "TEAM ${counter.value}",
+                  style:
+                      const TextStyle(color: Color(0xFF00AADE), fontSize: 35),
+                )),
         backgroundColor: const Color(0xFF731816),
-        centerTitle: true,
         elevation: 0,
       ),
       body: Column(
