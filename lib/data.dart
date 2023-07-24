@@ -121,7 +121,25 @@ class TeamData {
   }
 
   String team() {
+    name = name.replaceAll("Volleybalvereniging ", "");
+    name = name.replaceAll("/HEC", "");
     name = name.replaceAll("Vallei Accountants ", "");
+    name = name.replaceAll(" VC", "");
+    name = name.replaceAll("SV ", "");
+    name = name.replaceAll("Rabobank Orion Volleybal Doetinchem ", "Orion ");
+    name = name.replaceAll(" Apeldoorn", "");
+    name = name.replaceAll("Rebo Woningmakelaars ", "");
+    name = name.replaceAll("Rensa Family ", "");
+    name = name.replaceAll("Weghorst Makelaardij ", "");
+    name = name.replaceAll("Jumbo Van Andel-", "");
+    name = name.replaceAll("ROOT ", "");
+    name = name.replaceAll("Sportclub W", "W");
+    name = name.replaceAll("'Topklimaat in Volleybal'", "");
+    name = name.replaceAll("HevaV", "Heva VCV");
+    name = name.replaceAll("Steenderen ", "");
+    name = name.replaceAll("Dros-", "");
+    name = name.replaceAll("Bultman-Hartholt ", "");
+
     return name;
   }
 }
