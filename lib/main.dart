@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_template/rss.dart';
 import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'mainscreen.dart';
 import 'data.dart';
 
@@ -10,7 +10,7 @@ void main() {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(
     ChangeNotifierProvider(
-      create: (context) => CurrentTeam(),
+      create: (context) => Team(),
       child: const MyApp(),
     ),
   );
@@ -24,21 +24,11 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _counter = "";
-
   @override
   void initState() {
     super.initState();
-    //   _loadCounter();
-    getStringValuesSF();
-  }
-
-  getStringValuesSF() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    String? stringValue = prefs.getString('team') ?? "D2";
-    var newT = context.read<CurrentTeam>();
-    newT.set(stringValue);
-    return stringValue;
+    team.getStoredTeam();
+    getRSS(team.getRanking());
   }
 
   @override

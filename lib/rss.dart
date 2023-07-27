@@ -3,18 +3,16 @@ import 'package:xml/xml.dart';
 import 'data.dart';
 import 'package:flutter/material.dart';
 
-Future<bool> getRSS(competition) async {
+Future<bool> getRSS(urlRSS) async {
   var result = false;
-  var url =
-      Uri.parse("https://api.nevobo.nl/export/poule/$competition/stand.rss");
-//      "https://api.nevobo.nl/export/poule/regio-oost/$competition/stand.rss");
+  var url = Uri.parse(urlRSS);
 
   // Await the http get response, then decode the json-formatted response.
   var response = await http.get(url);
   var xml = "";
   if (response.statusCode == 200) {
     //     debugPrint('======');
-    debugPrint(response.body);
+    //debugPrint(response.body);
     xml =
         '<?xml version="1.0" encoding="UTF-8"?>\n<ranks>\n${response.body.substring(response.body.indexOf('<stand'))}';
     xml = xml.substring(0, xml.indexOf('</channel'));
@@ -22,8 +20,9 @@ Future<bool> getRSS(competition) async {
     xml = '$xml\n</ranks>';
     result = true;
   } else {
-    //print('Request failed with status: ${response.statusCode}.');
+    debugPrint('Request failed with status: ${response.statusCode}.');
   }
+  data.clear();
   final document = XmlDocument.parse(xml);
 
   final rank = document.findElements('ranks').first;

@@ -45,9 +45,9 @@ class _MainScreen extends State<MainScreen> {
             },
           ),
         ],
-        title: Consumer<CurrentTeam>(
+        title: Consumer<Team>(
             builder: (context, counter, child) => Text(
-                  "TEAM ${counter.value}",
+                  "TEAM ${counter.team}",
                   style:
                       const TextStyle(color: Color(0xFF00AADE), fontSize: 35),
                 )),

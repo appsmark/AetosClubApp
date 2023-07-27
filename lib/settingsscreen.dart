@@ -1,25 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+//import 'package:provider/provider.dart';
 import 'data.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({Key? key}) : super(key: key);
 
   @override
-//  _SettingsScreenState createState() => _SettingsScreenState();
   State<SettingsScreen> createState() => _SettingsScreenState();
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
   bool buttonEnabled = true;
   // Initial Selected Value
-  String dropdownvalue = "H9";
-  var tt = CurrentTeam();
+  String dropdownvalue = team.get();
 
   @override
   void initState() {
-    var ttt = CurrentTeam();
-//    dropdownvalue = ttt.get();
     super.initState();
   }
 
@@ -38,6 +34,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     'D8',
     'D9',
     'D10',
+    'D11',
     'H1',
     'H2',
     'H3',
@@ -86,9 +83,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 // change button value to selected value
                 onChanged: (String? newValue) {
                   setState(() {
+                    team.set(newValue);
                     dropdownvalue = newValue!;
-                    var newT = context.read<CurrentTeam>();
-                    newT.set(newValue);
+                    //                   var newT = context.read<Team>();
+                    //                 newT.set(newValue);
                   });
                 },
               ),

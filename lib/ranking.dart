@@ -17,24 +17,23 @@ class _RankingState extends State<Ranking> {
   @override
   void initState() {
     super.initState();
-    getRSS("nationale-competitie/2BH");
+    getRSS(team.getRanking());
   }
 
   @override
   Widget build(BuildContext context) {
     var listOfItems = data.getTeams();
     return Scaffold(
-        backgroundColor: Colors.white, // const Color(0xFF731816),
-        appBar: AppBar(
-          backgroundColor: const Color(0xFF731816),
-          centerTitle: true,
-          title: const Text(
-            "STAND",
-            style: TextStyle(color: Color(0xFF00AADE), fontSize: 35),
-          ),
+      backgroundColor: Colors.white, // const Color(0xFF731816),
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF731816),
+        centerTitle: true,
+        title: const Text(
+          "STAND",
+          style: TextStyle(color: Color(0xFF00AADE), fontSize: 35),
         ),
+      ),
 
-        /*
       body: ListView.builder(
           itemCount: listOfItems.length,
           itemBuilder: (BuildContext context, int index) {
@@ -55,7 +54,8 @@ class _RankingState extends State<Ranking> {
               ),
             );
           }),
-          */
+
+      /*
         body: ListView.separated(
           separatorBuilder: (context, inta) {
             return const Divider(
@@ -77,5 +77,7 @@ class _RankingState extends State<Ranking> {
           },
           itemCount: listOfItems.length,
         ));
+        */
+    );
   }
 }
