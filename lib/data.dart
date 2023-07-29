@@ -3,8 +3,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class Team with ChangeNotifier {
   static final Team _team = Team._internal();
-  String team = ""; // = "H9";
-  final List teamsInfo = [
+  String currentTeam = ""; // = "H9";
+  List teamsInfo = [
     ["D1", "regio-oost/DPC", "dames/1"],
     ["D2", "regio-oost/D1L", "dames/2"],
     ["D3", "regio-oost/D1L", "dames/3"],
@@ -58,35 +58,39 @@ class Team with ChangeNotifier {
 
   Team._internal();
 
+  void clear() {
+    currentTeam = "";
+  }
+
   Future<void> getStoredTeam() async {
     final prefs = await SharedPreferences.getInstance();
-    team = (prefs.getString('team') ?? "H8");
-    set(team);
-    debugPrint(team);
+    currentTeam = (prefs.getString('team') ?? "H8");
+    set(currentTeam);
+    debugPrint("Get stored $currentTeam");
   }
 
   void setStoredTeam(value) async {
     final prefs = await SharedPreferences.getInstance();
-    prefs.setString('team', value);
+    prefs.setString('currentTeam', value);
   }
 
   void set(newValue) {
-    team = newValue;
+    currentTeam = newValue;
     notifyListeners();
-    setStoredTeam(team);
+    setStoredTeam(currentTeam);
   }
 
   String get() {
-    debugPrint("request '$team'");
-    return team;
+    debugPrint("request '$currentTeam'");
+    return currentTeam;
   }
 
   String getRanking() {
-    debugPrint("getRanking for $team");
+    debugPrint("getRanking for $currentTeam");
     String competition =
         "https://api.nevobo.nl/export/poule/${teamsInfo[1][1]}/stand.rss";
     for (var index = 0; index < teamsInfo.length; index++) {
-      if (team == teamsInfo[index][0]) {
+      if (currentTeam == teamsInfo[index][0]) {
         competition =
             "https://api.nevobo.nl/export/poule/${teamsInfo[index][1]}/stand.rss";
         debugPrint("poule ${teamsInfo[index][0]}  $competition");
@@ -126,6 +130,7 @@ class Data with ChangeNotifier {
   ];
 
   factory Data() {
+    debugPrint("INIT DATA");
     return _data;
   }
 
@@ -147,6 +152,7 @@ class Data with ChangeNotifier {
   }
 
   List getTeams() {
+    notifyListeners();
     return _teams;
   }
 }

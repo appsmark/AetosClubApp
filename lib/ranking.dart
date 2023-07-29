@@ -7,6 +7,7 @@ class Ranking extends StatefulWidget {
 
 //  final List listOfItems = teams  Ranking({Key? key}) : super(key: key);
   //final List listOfItems = List.generate(10, (index) => 'Sample Item - $index');
+//  const Ranking({Key? key, required this.listOfItems}) : super(key: key);
   const Ranking({Key? key, required this.listOfItems}) : super(key: key);
 
   @override
@@ -14,15 +15,18 @@ class Ranking extends StatefulWidget {
 }
 
 class _RankingState extends State<Ranking> {
+  var listOfItems = data.getTeams();
+
   @override
   void initState() {
     super.initState();
     getRSS(team.getRanking());
+    listOfItems = data.getTeams();
   }
 
   @override
   Widget build(BuildContext context) {
-    var listOfItems = data.getTeams();
+    listOfItems = data.getTeams();
     return Scaffold(
       backgroundColor: Colors.white, // const Color(0xFF731816),
       appBar: AppBar(

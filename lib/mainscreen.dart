@@ -45,12 +45,15 @@ class _MainScreen extends State<MainScreen> {
             },
           ),
         ],
+        title: Text("HOPPA"),
+        /*
         title: Consumer<Team>(
             builder: (context, counter, child) => Text(
-                  "TEAM ${counter.team}",
+                  "TEAM ${counter.currentTeam}",
                   style:
                       const TextStyle(color: Color(0xFF00AADE), fontSize: 35),
                 )),
+        */
         backgroundColor: const Color(0xFF731816),
         elevation: 0,
       ),

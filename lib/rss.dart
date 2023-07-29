@@ -11,13 +11,18 @@ Future<bool> getRSS(urlRSS) async {
   var response = await http.get(url);
   var xml = "";
   if (response.statusCode == 200) {
-    //     debugPrint('======');
-    //debugPrint(response.body);
+    debugPrint('======');
+//    debugPrint(response.body);
+
     xml =
         '<?xml version="1.0" encoding="UTF-8"?>\n<ranks>\n${response.body.substring(response.body.indexOf('<stand'))}';
+
     xml = xml.substring(0, xml.indexOf('</channel'));
+
     //   xml = xml.replaceAll('stand:puntenvoor>0', 'stand:puntenvoor:>3');
     xml = '$xml\n</ranks>';
+    //   debugPrint(xml);
+    debugPrint('======');
     result = true;
   } else {
     debugPrint('Request failed with status: ${response.statusCode}.');
