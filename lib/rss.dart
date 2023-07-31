@@ -11,7 +11,7 @@ Future<bool> getRSS(urlRSS) async {
   var response = await http.get(url);
   var xml = "";
   if (response.statusCode == 200) {
-    debugPrint('======');
+    //   debugPrint('======');
 //    debugPrint(response.body);
 
     xml =

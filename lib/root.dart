@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:provider/provider.dart';
+import 'package:provider/provider.dart';
 import 'data.dart';
 import 'mainscreen.dart';
 
@@ -11,15 +11,22 @@ class Root extends StatefulWidget {
 }
 
 class _RootState extends State<Root> {
+  Team team = Team();
+
   @override
   void initState() {
     super.initState();
-    team.getStoredTeam();
-    data.clear();
+    team.get();
+//    team.getStoredTeam();
+    //   data.clear();
   }
 
   @override
   Widget build(BuildContext context) {
-    return const MainScreen();
+    return ChangeNotifierProvider(
+      create: (context) => Team(),
+      child: const MainScreen(),
+    );
+//    return const MainScreen();
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+//import 'package:flutter/services.dart';
 import 'ranking.dart';
 import 'settingsscreen.dart';
 import 'data.dart';
@@ -15,17 +15,20 @@ class MainScreen extends StatefulWidget {
 class _MainScreen extends State<MainScreen> {
   bool enableSchedule = true;
 
+  Team team = Team();
+
   @override
   void initState() {
     super.initState();
 
     // Suppress statusbar
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
-        overlays: [SystemUiOverlay.bottom]);
+    //   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+    //      overlays: [SystemUiOverlay.bottom]);
   }
 
   @override
   Widget build(BuildContext context) {
+//    debugPrint("Team retrieved = ${team.currentTeam}");
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     double buttonWidth = 0.8 * screenWidth;
@@ -45,7 +48,10 @@ class _MainScreen extends State<MainScreen> {
             },
           ),
         ],
-        title: Text("HOPPA"),
+        title: Text(
+          "TEAM ${team.currentTeam}",
+          style: const TextStyle(color: Color(0xFF00AADE), fontSize: 35),
+        ),
         /*
         title: Consumer<Team>(
             builder: (context, counter, child) => Text(

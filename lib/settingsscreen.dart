@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:provider/provider.dart';
 import 'data.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -11,87 +10,76 @@ class SettingsScreen extends StatefulWidget {
 
 class _SettingsScreenState extends State<SettingsScreen> {
   bool buttonEnabled = true;
+  Team team = Team();
   // Initial Selected Value
-  String dropdownvalue = team.get();
+  late String dropdownvalue; // = team.get();
+  TeamInfo teamInfo = TeamInfo();
+  List<String> items = [];
 
   @override
   void initState() {
     super.initState();
+    dropdownvalue = team.get();
+    for (int index = 0; index < teamInfo.teamsInfo.length; index++) {
+      items.add(teamInfo.teamsInfo[index][0]);
+    }
   }
-
-  // List of items in our dropdown menu
-  // var items = data.getAllTeams();
-  //var items = data.listOfTeams;
-
-  var items = [
-    'D1',
-    'D2',
-    'D3',
-    'D4',
-    'D5',
-    'D6',
-    'D7',
-    'D8',
-    'D9',
-    'D10',
-    'D11',
-    'H1',
-    'H2',
-    'H3',
-    'H4',
-    'H5',
-    'H6',
-    'H7',
-    'H8',
-    'H9',
-  ];
 
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
+    double spacing = 0.05 * screenHeight;
     return Scaffold(
         appBar: AppBar(
           backgroundColor: const Color(0xFF731816),
           centerTitle: true,
           title: const Text(
-            "SELECTEER TEAM",
+            "INSTELLINGEN",
             style: TextStyle(color: Color(0xFF00AADE), fontSize: 25),
           ),
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              DropdownButton(
-                // Initial Value
-                value: dropdownvalue,
-                autofocus: true,
-                // Down Arrow Icon
-                icon: const Icon(Icons.keyboard_arrow_down),
+        body: Column(
+          children: [
+            Container(height: spacing),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  "TEAM: ",
+                  style: TextStyle(color: Color(0xFF00AADE), fontSize: 25),
+                ),
+                DropdownButton(
+                  // Initial Value
+                  value: dropdownvalue,
+                  autofocus: true,
+                  // Down Arrow Icon
+                  icon: const Icon(Icons.keyboard_arrow_down),
 
-                // Array list of items
-                items: items.map((String items) {
-                  return DropdownMenuItem(
-                    value: items,
-                    child: Text(
-                      items,
-                      style: const TextStyle(
-                          color: Color(0xFF00AADE), fontSize: 25),
-                    ),
-                  );
-                }).toList(),
-                // After selecting the desired option,it will
-                // change button value to selected value
-                onChanged: (String? newValue) {
-                  setState(() {
-                    team.set(newValue);
-                    dropdownvalue = newValue!;
-                    //                   var newT = context.read<Team>();
-                    //                 newT.set(newValue);
-                  });
-                },
-              ),
-            ],
-          ),
+                  // Array list of items
+                  items: items.map((String items) {
+                    return DropdownMenuItem(
+                      value: items,
+                      child: Text(
+                        items,
+                        style: const TextStyle(
+                            // backgroundColor: Color(0xFF731816),
+                            color: Color(0xFF00AADE),
+                            fontSize: 25),
+                      ),
+                    );
+                  }).toList(),
+                  // After selecting the desired option,it will
+                  // change button value to selected value
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      team.set(newValue);
+                      dropdownvalue = newValue!;
+                    });
+                  },
+                ),
+              ],
+            ),
+          ],
         ));
   }
 }

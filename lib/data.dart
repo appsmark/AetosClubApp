@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class Team with ChangeNotifier {
-  static final Team _team = Team._internal();
-  String currentTeam = ""; // = "H9";
+class TeamInfo {
   List teamsInfo = [
     ["D1", "regio-oost/DPC", "dames/1"],
     ["D2", "regio-oost/D1L", "dames/2"],
@@ -51,46 +49,12 @@ class Team with ChangeNotifier {
     ["MC7", "regio-oost/MC3M1", "meisjes-c/7"],
   ];
 
-  factory Team() {
-    debugPrint("INITIALIZING");
-    return _team;
-  }
-
-  Team._internal();
-
-  void clear() {
-    currentTeam = "";
-  }
-
-  Future<void> getStoredTeam() async {
-    final prefs = await SharedPreferences.getInstance();
-    currentTeam = (prefs.getString('team') ?? "H8");
-    set(currentTeam);
-    debugPrint("Get stored $currentTeam");
-  }
-
-  void setStoredTeam(value) async {
-    final prefs = await SharedPreferences.getInstance();
-    prefs.setString('currentTeam', value);
-  }
-
-  void set(newValue) {
-    currentTeam = newValue;
-    notifyListeners();
-    setStoredTeam(currentTeam);
-  }
-
-  String get() {
-    debugPrint("request '$currentTeam'");
-    return currentTeam;
-  }
-
-  String getRanking() {
-    debugPrint("getRanking for $currentTeam");
+  String getRanking(team) {
+    debugPrint("getRanking for $team");
     String competition =
         "https://api.nevobo.nl/export/poule/${teamsInfo[1][1]}/stand.rss";
     for (var index = 0; index < teamsInfo.length; index++) {
-      if (currentTeam == teamsInfo[index][0]) {
+      if (team == teamsInfo[index][0]) {
         competition =
             "https://api.nevobo.nl/export/poule/${teamsInfo[index][1]}/stand.rss";
         debugPrint("poule ${teamsInfo[index][0]}  $competition");
@@ -101,33 +65,59 @@ class Team with ChangeNotifier {
   }
 }
 
+class Team with ChangeNotifier {
+  static final Team _team = Team._internal();
+  String currentTeam = ""; // = "H9";
+
+  factory Team() {
+    debugPrint("INITIALIZING");
+    return _team;
+  }
+
+  Team._internal();
+
+  void clear() {
+    currentTeam = "";
+  }
+/*
+  Future<void> getStoredTeam() async {
+    final prefs = await SharedPreferences.getInstance();
+    currentTeam = (prefs.getString('team') ?? "H9");
+    set(currentTeam);
+    debugPrint("Get stored $currentTeam");
+  }
+*/
+
+  getStoredTeam() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    currentTeam = (prefs.getString('team') ?? "H9");
+    set(currentTeam);
+    debugPrint("Get stored $currentTeam");
+  }
+
+  setStoredTeam(value) async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setString('team', value);
+  }
+
+  void set(newValue) {
+    currentTeam = newValue;
+//    notifyListeners();
+    setStoredTeam(currentTeam);
+  }
+
+  String get() {
+    debugPrint("request '$currentTeam'");
+    getStoredTeam();
+    return currentTeam;
+  }
+}
+
 final team = Team();
 
 class Data with ChangeNotifier {
   static final Data _data = Data._internal();
   final List _teams = [];
-
-  List listOfTeams = [
-    'D1',
-    'D2',
-    'D3',
-    'D4',
-    'D5',
-    'D6',
-    'D7',
-    'D8',
-    'D9',
-    'D10',
-    'H1',
-    'H2',
-    'H3',
-    'H4',
-    'H5',
-    'H6',
-    'H7',
-    'H8',
-    'H9',
-  ];
 
   factory Data() {
     debugPrint("INIT DATA");
@@ -145,10 +135,6 @@ class Data with ChangeNotifier {
     if (_teams.length > 10) {
       debugPrint("${_teams[0]} ${_teams[1]} ${_teams[10]}");
     }
-  }
-
-  List getAllTeams() {
-    return listOfTeams;
   }
 
   List getTeams() {

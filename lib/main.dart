@@ -9,7 +9,10 @@ import 'root.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Device orientation
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
   // Suppress statusbar
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
       overlays: [SystemUiOverlay.bottom]);

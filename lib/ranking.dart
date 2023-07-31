@@ -17,10 +17,14 @@ class Ranking extends StatefulWidget {
 class _RankingState extends State<Ranking> {
   var listOfItems = data.getTeams();
 
+  Team team = Team();
+  TeamInfo teamInfo = TeamInfo();
+
   @override
   void initState() {
     super.initState();
-    getRSS(team.getRanking());
+//    getRSS(team.getRanking());
+    getRSS(teamInfo.getRanking(team.currentTeam));
     listOfItems = data.getTeams();
   }
 
