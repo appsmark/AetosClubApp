@@ -35,6 +35,9 @@ class _RankingState extends State<Ranking> {
       backgroundColor: Colors.white, // const Color(0xFF731816),
       appBar: AppBar(
         backgroundColor: const Color(0xFF731816),
+        leading: const BackButton(
+          color: Color(0xFF00AADE),
+        ),
         centerTitle: true,
         title: const Text(
           "STAND",

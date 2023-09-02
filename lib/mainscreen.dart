@@ -39,7 +39,10 @@ class _MainScreen extends State<MainScreen> {
         centerTitle: true,
         actions: [
           GestureDetector(
-            child: const Icon(Icons.more_vert),
+            child: const Icon(
+              Icons.more_vert,
+              color: Color(0xFF00AADE),
+            ),
             onTap: () {
               Navigator.push(
                   context,

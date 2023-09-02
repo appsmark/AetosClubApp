@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'data.dart';
+import 'rss.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({Key? key}) : super(key: key);
@@ -32,6 +33,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: const Color(0xFF731816),
+          leading: const BackButton(
+            color: Color(0xFF00AADE),
+          ),
           centerTitle: true,
           title: const Text(
             "INSTELLINGEN",
@@ -74,6 +78,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     setState(() {
                       team.set(newValue);
                       dropdownvalue = newValue!;
+                      getRSS(teamInfo.getRanking(team.currentTeam));
                     });
                   },
                 ),
