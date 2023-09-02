@@ -67,7 +67,7 @@ class TeamInfo {
 
 class Team with ChangeNotifier {
   static final Team _team = Team._internal();
-  String currentTeam = ""; // = "H9";
+  String currentTeam = "H9";
 
   factory Team() {
     debugPrint("INITIALIZING");
@@ -79,22 +79,22 @@ class Team with ChangeNotifier {
   void clear() {
     currentTeam = "";
   }
-/*
+
   Future<void> getStoredTeam() async {
     final prefs = await SharedPreferences.getInstance();
     currentTeam = (prefs.getString('team') ?? "H9");
     set(currentTeam);
     debugPrint("Get stored $currentTeam");
   }
-*/
 
+/*
   getStoredTeam() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     currentTeam = (prefs.getString('team') ?? "H9");
     set(currentTeam);
     debugPrint("Get stored $currentTeam");
   }
-
+*/
   setStoredTeam(value) async {
     final prefs = await SharedPreferences.getInstance();
     prefs.setString('team', value);

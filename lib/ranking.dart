@@ -5,9 +5,6 @@ import 'rss.dart';
 class Ranking extends StatefulWidget {
   final List listOfItems;
 
-//  final List listOfItems = teams  Ranking({Key? key}) : super(key: key);
-  //final List listOfItems = List.generate(10, (index) => 'Sample Item - $index');
-//  const Ranking({Key? key, required this.listOfItems}) : super(key: key);
   const Ranking({Key? key, required this.listOfItems}) : super(key: key);
 
   @override
@@ -16,35 +13,97 @@ class Ranking extends StatefulWidget {
 
 class _RankingState extends State<Ranking> {
   var listOfItems = data.getTeams();
-
+  int i = 0;
   Team team = Team();
   TeamInfo teamInfo = TeamInfo();
 
   @override
   void initState() {
     super.initState();
-//    getRSS(team.getRanking());
     getRSS(teamInfo.getRanking(team.currentTeam));
     listOfItems = data.getTeams();
+  }
+
+  String ranking() {
+    for (int i = 0; i < 5; i++) {}
+    return ("hoppa");
   }
 
   @override
   Widget build(BuildContext context) {
     listOfItems = data.getTeams();
     return Scaffold(
-      backgroundColor: Colors.white, // const Color(0xFF731816),
-      appBar: AppBar(
         backgroundColor: const Color(0xFF731816),
-        leading: const BackButton(
-          color: Color(0xFF00AADE),
+        appBar: AppBar(
+          backgroundColor: const Color(0xFF731816),
+          leading: const BackButton(
+            color: Color(0xFF00AADE),
+          ),
+          centerTitle: true,
+          title: const Text(
+            "STAND",
+            style: TextStyle(color: Color(0xFF00AADE), fontSize: 35),
+          ),
         ),
-        centerTitle: true,
-        title: const Text(
-          "STAND",
-          style: TextStyle(color: Color(0xFF00AADE), fontSize: 35),
-        ),
-      ),
-
+        body: ListView.builder(
+            itemCount: listOfItems.length,
+            itemBuilder: (BuildContext ctxt, int index) {
+              return Row(children: [
+/*
+                CircleAvatar(
+                    child: Text(
+                  index.toString(),
+                  style: TextStyle(fontSize: 20),
+                )),
+  */
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: 35,
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        index.toString(),
+                        style:
+                            TextStyle(color: Color(0xFFF9B234), fontSize: 20),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 140,
+                  child: Text(
+                    listOfItems[index].team(),
+                    style: TextStyle(color: Color(0xFFF9B234), fontSize: 20),
+                  ),
+                ),
+                SizedBox(
+                  width: 10,
+                  child: Text(
+                    listOfItems[index].pointsPro(),
+                    style: TextStyle(color: Color(0xFFF9B234), fontSize: 20),
+                  ),
+                ),
+                SizedBox(
+                  width: 20,
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "-",
+                      style: TextStyle(color: Color(0xFFF9B234), fontSize: 20),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 10,
+                  child: Text(
+                    listOfItems[index].pointsPro(),
+                    style: TextStyle(color: Color(0xFFF9B234), fontSize: 20),
+                  ),
+                ),
+              ]);
+            })
+/*
       body: ListView.builder(
           itemCount: listOfItems.length,
           itemBuilder: (BuildContext context, int index) {
@@ -65,8 +124,8 @@ class _RankingState extends State<Ranking> {
               ),
             );
           }),
-
-      /*
+*/
+/*
         body: ListView.separated(
           separatorBuilder: (context, inta) {
             return const Divider(
@@ -89,6 +148,6 @@ class _RankingState extends State<Ranking> {
           itemCount: listOfItems.length,
         ));
         */
-    );
+        );
   }
 }

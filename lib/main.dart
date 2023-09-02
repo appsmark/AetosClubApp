@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'data.dart';
 import 'root.dart';
 
 // Device orientation
@@ -16,6 +17,9 @@ void main() {
   // Suppress statusbar
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
       overlays: [SystemUiOverlay.bottom]);
+
+  Team team = Team();
+  team.getStoredTeam();
 
   runApp(
     const MyApp(),

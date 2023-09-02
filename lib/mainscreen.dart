@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-//import 'package:flutter/services.dart';
-import 'ranking.dart';
-import 'settingsscreen.dart';
 import 'data.dart';
+import 'ranking.dart';
+import 'rss.dart';
+import 'settingsscreen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -16,19 +15,17 @@ class _MainScreen extends State<MainScreen> {
   bool enableSchedule = true;
 
   Team team = Team();
+  TeamInfo teamInfo = TeamInfo();
 
   @override
   void initState() {
     super.initState();
-
-    // Suppress statusbar
-    //   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
-    //      overlays: [SystemUiOverlay.bottom]);
+    team.get();
+    getRSS(teamInfo.getRanking(team.currentTeam));
   }
 
   @override
   Widget build(BuildContext context) {
-//    debugPrint("Team retrieved = ${team.currentTeam}");
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     double buttonWidth = 0.8 * screenWidth;
@@ -55,14 +52,6 @@ class _MainScreen extends State<MainScreen> {
           "TEAM ${team.currentTeam}",
           style: const TextStyle(color: Color(0xFF00AADE), fontSize: 35),
         ),
-        /*
-        title: Consumer<Team>(
-            builder: (context, counter, child) => Text(
-                  "TEAM ${counter.currentTeam}",
-                  style:
-                      const TextStyle(color: Color(0xFF00AADE), fontSize: 35),
-                )),
-        */
         backgroundColor: const Color(0xFF731816),
         elevation: 0,
       ),
