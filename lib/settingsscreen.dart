@@ -31,6 +31,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     double screenHeight = MediaQuery.of(context).size.height;
     double spacing = 0.05 * screenHeight;
     return Scaffold(
+        backgroundColor: const Color(0xFF731816),
         appBar: AppBar(
           backgroundColor: const Color(0xFF731816),
           leading: const BackButton(
@@ -39,7 +40,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           centerTitle: true,
           title: const Text(
             "INSTELLINGEN",
-            style: TextStyle(color: Color(0xFF00AADE), fontSize: 25),
+            style: TextStyle(color: Color(0xFF00AADE), fontSize: 35),
           ),
         ),
         body: Column(
@@ -50,7 +51,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               children: [
                 const Text(
                   "TEAM: ",
-                  style: TextStyle(color: Color(0xFF00AADE), fontSize: 25),
+                  style: TextStyle(color: Color(0xFFF9B234), fontSize: 25),
                 ),
                 DropdownButton(
                   // Initial Value
@@ -66,8 +67,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       child: Text(
                         items,
                         style: const TextStyle(
-                            // backgroundColor: Color(0xFF731816),
-                            color: Color(0xFF00AADE),
+                            //backgroundColor: Color(0xFF731816),
+                            color: Color(0xFFF9B234), //Color(0xFF00AADE),
                             fontSize: 25),
                       ),
                     );

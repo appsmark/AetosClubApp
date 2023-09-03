@@ -13,16 +13,14 @@ Future<bool> getRSS(urlRSS) async {
   if (response.statusCode == 200) {
     //   debugPrint('======');
 //    debugPrint(response.body);
-
     xml =
-        '<?xml version="1.0" encoding="UTF-8"?>\n<ranks>\n${response.body.substring(response.body.indexOf('<stand'))}';
+        '<?xml version="1.0" encoding="UTF-8"?>\n<ranks>\n${response.body.substring(response.body.indexOf('<item'))}';
 
     xml = xml.substring(0, xml.indexOf('</channel'));
 
     //   xml = xml.replaceAll('stand:puntenvoor>0', 'stand:puntenvoor:>3');
     xml = '$xml\n</ranks>';
-    //   debugPrint(xml);
-    debugPrint('======');
+    //debugPrint(xml);
     result = true;
   } else {
     debugPrint('Request failed with status: ${response.statusCode}.');
@@ -31,6 +29,18 @@ Future<bool> getRSS(urlRSS) async {
   final document = XmlDocument.parse(xml);
 
   final rank = document.findElements('ranks').first;
+
+  final item = rank.findElements('item').first;
+  String comp = item.findElements('title').toString();
+  comp = comp.substring(6 + comp.indexOf("Stand"), comp.indexOf("]"));
+  comp = comp.replaceAll("Dames ", "");
+  comp = comp.replaceAll("Heren ", "");
+  if (comp.indexOf("helft") > 0) {
+    comp = comp.substring(0, comp.indexOf("Eerste helft"));
+    comp = comp.substring(0, comp.indexOf("Tweede helft"));
+  }
+  comp = comp.replaceAll("Tweede", "2e");
+  data.setCompetition(comp);
 
   final rankings = rank.findElements('stand:ranking');
   for (final ranking in rankings) {

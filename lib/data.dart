@@ -118,6 +118,7 @@ final team = Team();
 class Data with ChangeNotifier {
   static final Data _data = Data._internal();
   final List _teams = [];
+  String competition = "";
 
   factory Data() {
     debugPrint("INIT DATA");
@@ -140,6 +141,10 @@ class Data with ChangeNotifier {
   List getTeams() {
     notifyListeners();
     return _teams;
+  }
+
+  setCompetition(String value) {
+    competition = value;
   }
 }
 
