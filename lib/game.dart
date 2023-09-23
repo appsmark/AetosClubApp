@@ -2,17 +2,16 @@ import 'package:flutter/material.dart';
 import 'data.dart';
 import 'rss.dart';
 
-class Ranking extends StatefulWidget {
-  // final List listOfItems;
+class Game extends StatefulWidget {
+  final List listOfItems;
 
-  const Ranking({Key? key}) : super(key: key);
-//  const Ranking({Key? key, required this.listOfItems}) : super(key: key);
+  const Game({Key? key, required this.listOfItems}) : super(key: key);
 
   @override
-  State<Ranking> createState() => _RankingState();
+  State<Game> createState() => _GameState();
 }
 
-class _RankingState extends State<Ranking> {
+class _GameState extends State<Game> {
   var listOfItems = data.getTeams();
   int i = 0;
   Team team = Team();
@@ -21,13 +20,12 @@ class _RankingState extends State<Ranking> {
   @override
   void initState() {
     super.initState();
-    getRSS(teamInfo.getRanking(team.currentTeam));
+    getRSS(teamInfo.getSchedule(team.currentTeam));
     listOfItems = data.getTeams();
   }
 
   @override
   Widget build(BuildContext context) {
-    debugPrint("ranking");
     listOfItems = data.getTeams();
     return Scaffold(
         backgroundColor: const Color(0xFF731816),
@@ -38,7 +36,7 @@ class _RankingState extends State<Ranking> {
           ),
           centerTitle: true,
           title: const Text(
-            "STAND",
+            "WEDSTRIJD",
             style: TextStyle(color: Color(0xFF00AADE), fontSize: 35),
           ),
         ),
@@ -85,12 +83,8 @@ class _RankingState extends State<Ranking> {
                           width: 180,
                           child: Text(
                             listOfItems[index].team(),
-                            style: listOfItems[index].team() ==
-                                    "AETOS ${team.currentTeam}"
-                                ? const TextStyle(
-                                    color: Color(0xFF00AADE), fontSize: 20)
-                                : const TextStyle(
-                                    color: Color(0xFFF9B234), fontSize: 20),
+                            style: const TextStyle(
+                                color: Color(0xFFF9B234), fontSize: 20),
                           ),
                         ),
                         SizedBox(

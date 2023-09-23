@@ -37,7 +37,7 @@ class TeamInfo {
     ["MA5", "regio-oost/MA3D1", "meisjes-a/5"],
     ["MB1", "regio-oost/MBHC1", "meisjes-b/1"],
     ["MB2", "regio-oost/MB1H1", "meisjes-b/2"],
-    ["MB3", "regio-oost/MB2K1", "meisjes-b/3"],
+    ["MB3", "regio-oost/MB2L1", "meisjes-b/3"],
     ["MB4", "regio-oost/MB3I1", "meisjes-b/4"],
     ["MB5", "regio-oost/MB3I1", "meisjes-b/5"],
     ["MC1", "regio-oost/MC1E1", "meisjes-c/1"],
@@ -47,6 +47,7 @@ class TeamInfo {
     ["MC5", "regio-oost/MC3N1", "meisjes-c/5"],
     ["MC6", "regio-oost/MC3M1", "meisjes-c/6"],
     ["MC7", "regio-oost/MC3M1", "meisjes-c/7"],
+    ["N6 1", "regio-oost/CN61A1", "meisjes-c/7"],
   ];
 
   String getRanking(team) {
@@ -60,6 +61,20 @@ class TeamInfo {
         debugPrint("poule ${teamsInfo[index][0]}  $competition");
       }
     }
+    return competition;
+  }
+
+  String getSchedule(team) {
+    debugPrint("getSchedule for $team");
+    String competition =
+        "https://api.nevobo.nl/export/team/CNH8Q1U/${teamsInfo[1][2]}/programma.rss";
+    for (var index = 0; index < teamsInfo.length; index++) {
+      if (team == teamsInfo[index][0]) {
+        competition =
+            "https://api.nevobo.nl/export/team/CNH8Q1U/${teamsInfo[index][2]}/programma.rss";
+        debugPrint("poule ${teamsInfo[index][0]}  $competition");
+      }
+    }
 
     return competition;
   }
@@ -68,6 +83,7 @@ class TeamInfo {
 class Team with ChangeNotifier {
   static final Team _team = Team._internal();
   String currentTeam = "H9";
+  String alternativeTeam = "H1";
 
   factory Team() {
     debugPrint("INITIALIZING");
@@ -87,14 +103,6 @@ class Team with ChangeNotifier {
     debugPrint("Get stored $currentTeam");
   }
 
-/*
-  getStoredTeam() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    currentTeam = (prefs.getString('team') ?? "H9");
-    set(currentTeam);
-    debugPrint("Get stored $currentTeam");
-  }
-*/
   setStoredTeam(value) async {
     final prefs = await SharedPreferences.getInstance();
     prefs.setString('team', value);
@@ -106,10 +114,8 @@ class Team with ChangeNotifier {
     setStoredTeam(currentTeam);
   }
 
-  String get() {
-    debugPrint("request '$currentTeam'");
-    getStoredTeam();
-    return currentTeam;
+  setAlternativeTeam(String value) {
+    alternativeTeam = value;
   }
 }
 
@@ -117,6 +123,7 @@ final team = Team();
 
 class Data with ChangeNotifier {
   static final Data _data = Data._internal();
+  final List _games = [];
   final List _teams = [];
   String competition = "";
 
@@ -129,13 +136,20 @@ class Data with ChangeNotifier {
 
   void clear() {
     _teams.clear();
+    _games.clear();
   }
 
   void addTeam(name, points) {
     _teams.add(TeamData(name, points));
-    if (_teams.length > 10) {
-      debugPrint("${_teams[0]} ${_teams[1]} ${_teams[10]}");
-    }
+  }
+
+  void addGame(date) {
+    _games.add(GameData(date));
+  }
+
+  List getGames() {
+    //   notifyListeners();
+    return _games;
   }
 
   List getTeams() {
@@ -179,7 +193,19 @@ class TeamData {
     name = name.replaceAll("Steenderen ", "");
     name = name.replaceAll("Dros-", "");
     name = name.replaceAll("Bultman-Hartholt ", "");
+    name = name.replaceAll(" DS ", " D");
+    name = name.replaceAll(" HS ", " H");
 
     return name;
+  }
+}
+
+class GameData {
+  String date;
+
+  GameData(this.date);
+
+  String game() {
+    return date;
   }
 }

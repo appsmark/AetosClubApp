@@ -17,7 +17,7 @@ void main() {
   // Suppress statusbar
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
       overlays: [SystemUiOverlay.bottom]);
-
+  debugPrint("main");
   Team team = Team();
   team.getStoredTeam();
 

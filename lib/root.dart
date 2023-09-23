@@ -16,9 +16,7 @@ class _RootState extends State<Root> {
   @override
   void initState() {
     super.initState();
-    team.get();
-//    team.getStoredTeam();
-    //   data.clear();
+    team.currentTeam;
   }
 
   @override
@@ -27,6 +25,5 @@ class _RootState extends State<Root> {
       create: (context) => Team(),
       child: const MainScreen(),
     );
-//    return const MainScreen();
   }
 }
