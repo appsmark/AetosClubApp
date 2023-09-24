@@ -995,6 +995,72 @@
 
     {
         "Datum": "4 november 2023",
+        "Tijd": "8:00",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV 8:00 tot 10:00",
+        "Locatie": "De Laar",
+        "scheids": "H7",
+        "teller": ""
+      },
+      
+      {
+        "Datum": "4 november 2023",
+        "Tijd": "8:00",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV 8:00 tot 10:00",
+        "Locatie": "De Laar",
+        "scheids": "MA2",
+        "teller": ""
+      },
+      {
+        "Datum": "4 november 2023",
+        "Tijd": "8:45",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV 8:45 tot 10:00",
+        "Locatie": "De Laar",
+        "scheids": "MA2",
+        "teller": "JB1"
+      },
+      {
+        "Datum": "4 november 2023",
+        "Tijd": "8:45",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV 8:45 tot 10:00",
+        "Locatie": "De Laar",
+        "scheids": "H4",
+        "teller": "MB5"
+      },
+      {
+        "Datum": "4 november 2023",
+        "Tijd": "9:45",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV 9:45 tot 11:30",
+        "Locatie": "De Laar",
+        "scheids": "",
+        "teller": "JC2"
+      },
+      {
+        "Datum": "4 november 2023",
+        "Tijd": "9:45",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV 9:45 tot 12:30",
+        "Locatie": "De Laar",
+        "scheids": "D9",
+        "teller": ""
+      },
+      {
+        "Datum": "4 november 2023",
+        "Tijd": "9:45",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV 9:45 tot 12:30",
+        "Locatie": "De Laar",
+        "scheids": "JA2",
+        "teller": ""
+      },
+      
+
+    {
+        "Datum": "4 november 2023",
         "Tijd": "9:00",
         "Thuisteam": "AETOS MC2",
         "Uitteam": "AETOS MC1",
@@ -1576,6 +1642,94 @@
         "scheids": "H7",
         "teller": "H7"
     },
+
+
+    {
+        "Datum": "9 december 2023",
+        "Tijd": "8:00",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV 8:00 tot 10:00",
+        "Locatie": "De Laar",
+        "scheids": "",
+        "teller": "MB2"
+      },
+      
+      {
+        "Datum": "9 december 2023",
+        "Tijd": "8:00",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV 8:00 tot 10:00",
+        "Locatie": "De Laar",
+        "scheids": "",
+        "teller": "MB5"
+      },
+      {
+        "Datum": "9 december 2023",
+        "Tijd": "8:00",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV 8:00 tot 10:00",
+        "Locatie": "De Laar",
+        "scheids": "",
+        "teller": "JC3"
+      },
+      {
+        "Datum": "9 december 2023",
+        "Tijd": "8:45",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV 8:45 tot 10:30",
+        "Locatie": "De Laar",
+        "scheids": "H4",
+        "teller": ""
+      },
+      {
+        "Datum": "9 december 2023",
+        "Tijd": "8:45",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV 8:45 tot 10:30",
+        "Locatie": "De Laar",
+        "scheids": "H9",
+        "teller": ""
+      },
+      {
+        "Datum": "9 december 2023",
+        "Tijd": "8:45",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV 8:45 tot 10:30",
+        "Locatie": "De Laar",
+        "scheids": "D11",
+        "teller": ""
+      },
+      {
+        "Datum": "9 december 2023",
+        "Tijd": "10:15",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV 10:15 tot 11:30",
+        "Locatie": "De Laar",
+        "scheids": "JA1",
+        "teller": "JA1"
+      },
+      {
+        "Datum": "9 december 2023",
+        "Tijd": "10:15",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV 10:15 tot 12:30",
+        "Locatie": "De Laar",
+        "scheids": "JA2",
+        "teller": ""
+      },
+      {
+        "Datum": "9 december 2023",
+        "Tijd": "10:15",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV 10:15 tot 12:30",
+        "Locatie": "De Laar",
+        "scheids": "MA3",
+        "teller": ""
+      },
+      
+
+
+
 
     {
         "Datum": "9 december 2023",
