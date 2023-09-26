@@ -144,18 +144,6 @@
     text-align: center;
 }
 
-.button_team {
-    background-color: #F9B234;
-    border-width: 3vw;
-    border-color: black;
-    color: black;
-    text-align: center;
-    font-size: 15vw;
-    font-weight: bold;
-    border-radius: 25vw;
-    height: 35vw;
-}
-
 .button_day {
     background-color: #F9B234;
     width: 40vw;

@@ -133,7 +133,7 @@ export class MainGame {
 		}
 		this.viewModel.set("background_team_" + args.object.id.split("_")[1], this.data.color_blue)
 		this.data.team_desired = args.object.id.split("_")[1]
-		this.viewModel.set("visibility_button_set_team", "visible")
+//		this.viewModel.set("visibility_button_set_team", "visible")
 	}
 
 	setTeam(args) {

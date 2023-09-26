@@ -12,3 +12,16 @@
 .spacer_text_item {
     font-size: 25vw;
 }
+
+.button_team {
+    background-color: #F9B234;
+    border-width: 2vw;
+    border-color: black;
+    color: black;
+    text-align: center;
+    font-size: 15vw;
+    font-weight: bold;
+    border-radius: 25vw;
+    height: 40vw;
+    width:65vw;
+}
