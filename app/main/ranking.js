@@ -62,14 +62,6 @@ export class Ranking {
 				xml = xml.replace(" Komeet", "")
 				xml = xml.replace("Bielderman Koetsier/", "")
 				xml = xml.replace("Bultman-Hartholt ", "")
-				xml = xml.replace(" MA ", " MA")
-				xml = xml.replace(" MB ", " MB")
-				xml = xml.replace(" MC ", " MC")
-				xml = xml.replace(" JA ", " JA")
-				xml = xml.replace(" JB ", " JB")
-				xml = xml.replace(" JC ", " JC")
-				xml = xml.replace(" HS ", " H")
-				xml = xml.replace(" DS ", " D")
 			}
 			var ranking = xml.split("<stand:ranking>")
 			var rows_ranking = "*"
@@ -79,8 +71,19 @@ export class Ranking {
 			this.viewModel.set("rows_ranking", rows_ranking)
 			var points
 			var ranking_item
+			var team
 			for (var index = 1; index < ranking.length; index++) {
-				this.viewModel.set("text_item_ranking_" + (index - 1) + "_team", ranking[index].substring(ranking[index].indexOf("[CDATA[") + 7, ranking[index].indexOf("]")))
+				team = ranking[index].substring(ranking[index].indexOf("[CDATA[") + 7, ranking[index].indexOf("]"))
+				team = team.replace(" MA ", " MA")
+				team = team.replace(" MB ", " MB")
+				team = team.replace(" MC ", " MC")
+				team = team.replace(" JA ", " JA")
+				team = team.replace(" JB ", " JB")
+				team = team.replace(" JC ", " JC")
+				team = team.replace(" HS ", " H")
+				team = team.replace(" DS ", " D")
+				//this.viewModel.set("text_item_ranking_" + (index - 1) + "_team", ranking[index].substring(ranking[index].indexOf("[CDATA[") + 7, ranking[index].indexOf("]")))
+				this.viewModel.set("text_item_ranking_" + (index - 1) + "_team", team)
 				points = ranking[index].substring(ranking[index].indexOf("<stand:punten>") + 14, ranking[index].indexOf("</stand:punten"))
 				if (points < 0) {
 					points = "X"
