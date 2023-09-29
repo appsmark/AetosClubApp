@@ -60,6 +60,9 @@ export class Schedule {
 
 				game_data = game_data.replace("Rebo Woningmakelaars ", "")
 				game_data = game_data.replace("Rensa Family ", "")
+				game_data = game_data.replace("Ikvolleybal.nl/", "")
+				game_data = game_data.replace("TiMaX/", "")
+				game_data = game_data.replace("VoCASA/", "")
 				game_data = game_data.replace("Weghorst Makelaardij ", "")
 				game_data = game_data.replace("Volleybalvereniging ", "VV ")
 				game_data = game_data.replace("sep.", "september")

@@ -62,6 +62,9 @@ export class Ranking {
 				xml = xml.replace(" Komeet", "")
 				xml = xml.replace("Bielderman Koetsier/", "")
 				xml = xml.replace("Bultman-Hartholt ", "")
+				xml = xml.replace("VoCASA/", "")
+				xml = xml.replace("Ikvolleybal.nl/", "")
+
 			}
 			var ranking = xml.split("<stand:ranking>")
 			var rows_ranking = "*"

@@ -341,13 +341,12 @@
 				<Button id="team_42" class="button_team" text="{{text_team_42}}" backgroundColor="{{background_team_42}}" color="{{color_team_42}}" ontap="tapTeam" />
 			</StackLayout>
 			<StackLayout orientation="horizontal">
-				<Button id="team_43" class="button_team" text="{{text_team_43}}" backgroundColor="{{background_team_43}}" color="{{color_team_43}}" ontap="tapTeam" />
 				<Button id="team_20" class="button_team" text="{{text_team_20}}" backgroundColor="{{background_team_20}}" color="{{color_team_20}}" ontap="tapTeam" />
 				<Button id="team_21" class="button_team" text="{{text_team_21}}" backgroundColor="{{background_team_21}}" color="{{color_team_21}}" ontap="tapTeam" />
 				<Button id="team_22" class="button_team" text="{{text_team_22}}" backgroundColor="{{background_team_22}}" color="{{color_team_22}}" ontap="tapTeam" />
+				<Button id="team_23" class="button_team" text="{{text_team_23}}" backgroundColor="{{background_team_23}}" color="{{color_team_23}}" ontap="tapTeam" />
 			</StackLayout>
 			<StackLayout orientation="horizontal">
-				<Button id="team_23" class="button_team" text="{{text_team_23}}" backgroundColor="{{background_team_23}}" color="{{color_team_23}}" ontap="tapTeam" />
 				<Button id="team_24" class="button_team" text="{{text_team_24}}" backgroundColor="{{background_team_24}}" color="{{color_team_24}}" ontap="tapTeam" />
 				<Button id="team_25" class="button_team" text="{{text_team_25}}" backgroundColor="{{background_team_25}}" color="{{color_team_25}}" ontap="tapTeam" />
 				<Button id="team_26" class="button_team" text="{{text_team_26}}" backgroundColor="{{background_team_26}}" color="{{color_team_26}}" ontap="tapTeam" />

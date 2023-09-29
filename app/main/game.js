@@ -43,6 +43,7 @@ export class Game {
 			game_data = game_data.replace(" Komeet", "")
 			game_data = game_data.replace("Bultman-Hartholt ", "")
 			game_data = game_data.replace("Bielderman Koetsier/", "")
+			game_data = game_data.replace("Ikvolleybal.nl/", "")
 
 			
 			game_data = game_data.replace(" MA ", " MA")
