@@ -195,6 +195,13 @@ class TeamData {
     name = name.replaceAll("Bultman-Hartholt ", "");
     name = name.replaceAll(" DS ", " D");
     name = name.replaceAll(" HS ", " H");
+    name = name.replaceAll(" JA ", " JA");
+    name = name.replaceAll(" JB ", " JB");
+    name = name.replaceAll(" JC ", " JC");
+    name = name.replaceAll(" MA ", " MA");
+    name = name.replaceAll(" MB ", " MB");
+    name = name.replaceAll(" MC ", " MC");
+    name = name.replaceAll(" MD ", " MD");
 
     return name;
   }

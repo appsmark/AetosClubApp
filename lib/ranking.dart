@@ -44,14 +44,16 @@ class _RankingState extends State<Ranking> {
         ),
         body: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: Text(
-                data.competition,
-                style: const TextStyle(
-                    color: Color(0xFF00AADE),
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Text(
+                  data.competition.replaceAll(" Ni", "\nNi"),
+                  style: const TextStyle(
+                      color: Color(0xFF00AADE),
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
             ),
             Expanded(
@@ -75,8 +77,12 @@ class _RankingState extends State<Ranking> {
                               alignment: Alignment.centerRight,
                               child: Text(
                                 (index + 1).toString(),
-                                style: const TextStyle(
-                                    color: Color(0xFFF9B234), fontSize: 20),
+                                style: TextStyle(
+                                    color: listOfItems[index].team() ==
+                                            "AETOS ${team.currentTeam}"
+                                        ? const Color(0xFF00AADE)
+                                        : const Color(0xFFF9B234),
+                                    fontSize: 20),
                               ),
                             ),
                           ),
@@ -98,24 +104,31 @@ class _RankingState extends State<Ranking> {
                           child: Align(
                             alignment: Alignment.centerRight,
                             child: Text(
-                              index == 3
+                              index == 5
                                   ? "45"
                                   : listOfItems[index].pointsPro(),
-                              style: const TextStyle(
+                              style: TextStyle(
                                   //backgroundColor: Colors.amber,
-                                  color: Color(0xFFF9B234),
+                                  color: listOfItems[index].team() ==
+                                          "AETOS ${team.currentTeam}"
+                                      ? const Color(0xFF00AADE)
+                                      : const Color(0xFFF9B234),
                                   fontSize: 20),
                             ),
                           ),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           width: 13,
                           child: Align(
                             alignment: Alignment.centerRight,
                             child: Text(
                               "-",
                               style: TextStyle(
-                                  color: Color(0xFFF9B234),
+                                  color: listOfItems[index].team() ==
+                                          "AETOS ${team.currentTeam}"
+                                      ? const Color(0xFF00AADE)
+                                      : const Color(0xFFF9B234),
+
                                   //backgroundColor: Colors.white,
                                   fontSize: 20),
                             ),
@@ -126,12 +139,15 @@ class _RankingState extends State<Ranking> {
                           child: Align(
                             alignment: Alignment.centerRight,
                             child: Text(
-                              index == 3
+                              index == 5
                                   ? "45"
                                   : listOfItems[index].pointsPro(),
-                              style: const TextStyle(
+                              style: TextStyle(
                                   //backgroundColor: Colors.yellow,
-                                  color: Color(0xFFF9B234),
+                                  color: listOfItems[index].team() ==
+                                          "AETOS ${team.currentTeam}"
+                                      ? const Color(0xFF00AADE)
+                                      : const Color(0xFFF9B234),
                                   fontSize: 20),
                             ),
                           ),
