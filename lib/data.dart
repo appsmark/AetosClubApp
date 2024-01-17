@@ -50,6 +50,7 @@ class TeamInfo {
     ["N6 1", "regio-oost/CN61A1", "meisjes-c/7"],
   ];
 //https://api.nevobo.nl/export/poule/regio-oost/H3F/stand.rss
+//https://api.nevobo.nl/export/poule/regio-oost/H3F/programma.rss
   String getRanking(team) {
     debugPrint("getRanking for $team");
     String competition =

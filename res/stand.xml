@@ -1,0 +1,129 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:stand="https://www.nevobo.nl/competitie/" version="2.0">
+<channel>
+<title>RSS feed Nederlandse Volleybalbond</title>
+<link>https://api.nevobo.nl/export/poule/regio-oost/jaarcompetitie-seniorencompetitie/regio-oost-h3f-8/stand.rss</link>
+<description>Stand van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
+<lastBuildDate>Wed, 17 Jan 2024 19:26:08 +0100</lastBuildDate>
+<atom:link href="https://api.nevobo.nl/export/poule/regio-oost/jaarcompetitie-seniorencompetitie/regio-oost-h3f-8/stand.rss" rel="self" type="text/xml"/>
+<item>
+<title>
+<![CDATA[ Stand Heren 3e Klasse F Regio Oost ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/regio-oost/jaarcompetitie-seniorencompetitie/poule/regio-oost-h3f-8</link>
+<guid>https://api.nevobo.nl/permalink/regio-oost/jaarcompetitie-seniorencompetitie/poule/regio-oost-h3f-8</guid>
+<description>
+<![CDATA[ # Team<br />1. Pegasus HS 10, wedstr: 10, punten: 36<br />2. Sportclub Wychen HS 1, wedstr: 9, punten: 32<br />3. Switch'87 HS 3, wedstr: 7, punten: 27<br />4. Pegasus HS 8, wedstr: 10, punten: 24<br />5. Heyendaal HS 5, wedstr: 9, punten: 19<br />6. AETOS HS 9, wedstr: 9, punten: 18<br />7. Pegasus HS 9, wedstr: 10, punten: 18<br />8. Switch'87 HS 2, wedstr: 8, punten: 15<br />9. Trivos HS 6, wedstr: 8, punten: 11<br /> ]]>
+</description>
+<pubDate>Thu, 11 Jan 2024 23:34:32 +0100</pubDate>
+</item>
+<stand:ranking>
+<stand:nummer>1</stand:nummer>
+<stand:team id="5190HS10">
+<![CDATA[ Pegasus HS 10 ]]>
+</stand:team>
+<stand:wedstrijden>10</stand:wedstrijden>
+<stand:punten>36</stand:punten>
+<stand:setsvoor>30</stand:setsvoor>
+<stand:setstegen>12</stand:setstegen>
+<stand:puntenvoor>963</stand:puntenvoor>
+<stand:puntentegen>782</stand:puntentegen>
+</stand:ranking>
+<stand:ranking>
+<stand:nummer>2</stand:nummer>
+<stand:team id="5218HS 1">
+<![CDATA[ Sportclub Wychen HS 1 ]]>
+</stand:team>
+<stand:wedstrijden>9</stand:wedstrijden>
+<stand:punten>32</stand:punten>
+<stand:setsvoor>25</stand:setsvoor>
+<stand:setstegen>11</stand:setstegen>
+<stand:puntenvoor>857</stand:puntenvoor>
+<stand:puntentegen>704</stand:puntentegen>
+</stand:ranking>
+<stand:ranking>
+<stand:nummer>3</stand:nummer>
+<stand:team id="5186HS 3">
+<![CDATA[ Switch'87 HS 3 ]]>
+</stand:team>
+<stand:wedstrijden>7</stand:wedstrijden>
+<stand:punten>27</stand:punten>
+<stand:setsvoor>21</stand:setsvoor>
+<stand:setstegen>7</stand:setstegen>
+<stand:puntenvoor>664</stand:puntenvoor>
+<stand:puntentegen>538</stand:puntentegen>
+</stand:ranking>
+<stand:ranking>
+<stand:nummer>4</stand:nummer>
+<stand:team id="5190HS 8">
+<![CDATA[ Pegasus HS 8 ]]>
+</stand:team>
+<stand:wedstrijden>10</stand:wedstrijden>
+<stand:punten>24</stand:punten>
+<stand:setsvoor>21</stand:setsvoor>
+<stand:setstegen>22</stand:setstegen>
+<stand:puntenvoor>923</stand:puntenvoor>
+<stand:puntentegen>908</stand:puntentegen>
+</stand:ranking>
+<stand:ranking>
+<stand:nummer>5</stand:nummer>
+<stand:team id="5194HS 5">
+<![CDATA[ Heyendaal HS 5 ]]>
+</stand:team>
+<stand:wedstrijden>9</stand:wedstrijden>
+<stand:punten>19</stand:punten>
+<stand:setsvoor>17</stand:setsvoor>
+<stand:setstegen>21</stand:setstegen>
+<stand:puntenvoor>795</stand:puntenvoor>
+<stand:puntentegen>860</stand:puntentegen>
+</stand:ranking>
+<stand:ranking>
+<stand:nummer>6</stand:nummer>
+<stand:team id="5910HS 9">
+<![CDATA[ AETOS HS 9 ]]>
+</stand:team>
+<stand:wedstrijden>9</stand:wedstrijden>
+<stand:punten>18</stand:punten>
+<stand:setsvoor>15</stand:setsvoor>
+<stand:setstegen>23</stand:setstegen>
+<stand:puntenvoor>783</stand:puntenvoor>
+<stand:puntentegen>814</stand:puntentegen>
+</stand:ranking>
+<stand:ranking>
+<stand:nummer>7</stand:nummer>
+<stand:team id="5190HS 9">
+<![CDATA[ Pegasus HS 9 ]]>
+</stand:team>
+<stand:wedstrijden>10</stand:wedstrijden>
+<stand:punten>18</stand:punten>
+<stand:setsvoor>16</stand:setsvoor>
+<stand:setstegen>27</stand:setstegen>
+<stand:puntenvoor>863</stand:puntenvoor>
+<stand:puntentegen>986</stand:puntentegen>
+</stand:ranking>
+<stand:ranking>
+<stand:nummer>8</stand:nummer>
+<stand:team id="5186HS 2">
+<![CDATA[ Switch'87 HS 2 ]]>
+</stand:team>
+<stand:wedstrijden>8</stand:wedstrijden>
+<stand:punten>15</stand:punten>
+<stand:setsvoor>13</stand:setsvoor>
+<stand:setstegen>21</stand:setstegen>
+<stand:puntenvoor>671</stand:puntenvoor>
+<stand:puntentegen>766</stand:puntentegen>
+</stand:ranking>
+<stand:ranking>
+<stand:nummer>9</stand:nummer>
+<stand:team id="5206HS 6">
+<![CDATA[ Trivos HS 6 ]]>
+</stand:team>
+<stand:wedstrijden>8</stand:wedstrijden>
+<stand:punten>11</stand:punten>
+<stand:setsvoor>10</stand:setsvoor>
+<stand:setstegen>24</stand:setstegen>
+<stand:puntenvoor>625</stand:puntenvoor>
+<stand:puntentegen>786</stand:puntentegen>
+</stand:ranking>
+</channel>
+</rss>

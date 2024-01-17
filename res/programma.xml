@@ -1,0 +1,502 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:nevobo="https://www.api.nevobo.nl/rss/" version="2.0">
+<channel>
+<title>RSS feed Nederlandse Volleybalbond</title>
+<link>https://api.nevobo.nl/export/poule/regio-oost/jaarcompetitie-seniorencompetitie/regio-oost-h3f-8/programma.rss</link>
+<description>Wedstrijdprogramma van de Nederlandse volleybalcompetitie, georganiseerd door de Nederlandse Volleybalbond</description>
+<lastBuildDate>Wed, 17 Jan 2024 20:11:33 +0100</lastBuildDate>
+<atom:link href="https://api.nevobo.nl/export/poule/regio-oost/jaarcompetitie-seniorencompetitie/regio-oost-h3f-8/programma.rss" rel="self" type="text/xml"/>
+<item>
+<title>
+<![CDATA[ 18 jan. 19:30: Pegasus HS 8 - Sportclub Wychen HS 1 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493903</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493903</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F DL-1, Datum: donderdag 18 januari, 19:30, Speellocatie: Ark van Oost, Cipresstraat 154, 6523HR Nijmegen ]]>
+</description>
+<pubDate>Thu, 18 Jan 2024 19:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 18 jan. 20:00: AETOS HS 9 - Switch'87 HS 3 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493915</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493915</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F HC, Datum: donderdag 18 januari, 20:00, Speellocatie: Valkenhuizen, Beukenlaan 15, 6823MA Arnhem ]]>
+</description>
+<pubDate>Thu, 18 Jan 2024 20:00:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 18 jan. 21:30: Pegasus HS 10 - Switch'87 HS 2 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493923</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493923</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F IB, Datum: donderdag 18 januari, 21:30, Speellocatie: Ark van Oost, Cipresstraat 154, 6523HR Nijmegen ]]>
+</description>
+<pubDate>Thu, 18 Jan 2024 21:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 18 jan. 21:30: Pegasus HS 9 - Trivos HS 6 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493931</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493931</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F JA, Datum: donderdag 18 januari, 21:30, Speellocatie: Ark van Oost, Cipresstraat 154, 6523HR Nijmegen ]]>
+</description>
+<pubDate>Thu, 18 Jan 2024 21:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 23 jan. 20:30: Switch'87 HS 2 - Switch'87 HS 3 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493878</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493878</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F BC, Datum: dinsdag 23 januari, 20:30, Speellocatie: De Duffelt, Gengske 10, 6566WB Millingen aan de Rijn ]]>
+</description>
+<pubDate>Tue, 23 Jan 2024 20:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 25 jan. 19:30: Heyendaal HS 5 - Sportclub Wychen HS 1 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493911</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493911</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F EL, Datum: donderdag 25 januari, 19:30, Speellocatie: Radboud Sportcentrum, Heyendaalseweg 141, 6525AJ Nijmegen ]]>
+</description>
+<pubDate>Thu, 25 Jan 2024 19:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 25 jan. 21:30: Trivos HS 6 - Pegasus HS 10 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493873</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493873</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F AI, Datum: donderdag 25 januari, 21:30, Speellocatie: Sportcentrum Arcus, Campuslaan 14, 6602HX Wijchen ]]>
+</description>
+<pubDate>Thu, 25 Jan 2024 21:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 25 jan. 21:30: Switch'87 HS 2 - AETOS HS 9 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493881</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493881</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F BH, Datum: donderdag 25 januari, 21:30, Speellocatie: De Duffelt, Gengske 10, 6566WB Millingen aan de Rijn ]]>
+</description>
+<pubDate>Thu, 25 Jan 2024 21:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 25 jan. 21:30: Pegasus HS 8 - Pegasus HS 9 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493901</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493901</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F DJ, Datum: donderdag 25 januari, 21:30, Speellocatie: Ark van Oost, Cipresstraat 154, 6523HR Nijmegen ]]>
+</description>
+<pubDate>Thu, 25 Jan 2024 21:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 1 feb. 19:30: Heyendaal HS 5 - Pegasus HS 8 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493907</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493907</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F ED, Datum: donderdag 1 februari, 19:30, Speellocatie: Radboud Sportcentrum, Heyendaalseweg 141, 6525AJ Nijmegen ]]>
+</description>
+<pubDate>Thu, 01 Feb 2024 19:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 1 feb. 20:00: AETOS HS 9 - Trivos HS 6 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493913</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493913</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F HA, Datum: donderdag 1 februari, 20:00, Speellocatie: Valkenhuizen, Beukenlaan 15, 6823MA Arnhem ]]>
+</description>
+<pubDate>Thu, 01 Feb 2024 20:00:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 8 feb. 19:30: Pegasus HS 8 - Sportclub Wychen HS 1 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493902</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493902</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F DL, Datum: donderdag 8 februari, 19:30, Speellocatie: Ark van Oost, Cipresstraat 154, 6523HR Nijmegen ]]>
+</description>
+<pubDate>Thu, 08 Feb 2024 19:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 8 feb. 20:00: Switch'87 HS 3 - Heyendaal HS 5 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493889</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493889</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F CE, Datum: donderdag 8 februari, 20:00, Speellocatie: De Duffelt, Gengske 10, 6566WB Millingen aan de Rijn ]]>
+</description>
+<pubDate>Thu, 08 Feb 2024 20:00:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 8 feb. 20:00: AETOS HS 9 - Pegasus HS 10 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493918</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493918</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F HI, Datum: donderdag 8 februari, 20:00, Speellocatie: Valkenhuizen, Beukenlaan 15, 6823MA Arnhem ]]>
+</description>
+<pubDate>Thu, 08 Feb 2024 20:00:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 8 feb. 21:30: Trivos HS 6 - Switch'87 HS 2 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493876</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493876</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F AB-1, Datum: donderdag 8 februari, 21:30, Speellocatie: Sportcentrum Arcus, Campuslaan 14, 6602HX Wijchen ]]>
+</description>
+<pubDate>Thu, 08 Feb 2024 21:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 20 feb. 21:00: Pegasus HS 10 - Pegasus HS 8 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493925</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493925</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F ID, Datum: dinsdag 20 februari, 21:00, Speellocatie: Ark van Oost, Cipresstraat 154, 6523HR Nijmegen ]]>
+</description>
+<pubDate>Tue, 20 Feb 2024 21:00:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 22 feb. 19:30: Switch'87 HS 3 - Switch'87 HS 2 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493887</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493887</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F CB, Datum: donderdag 22 februari, 19:30, Speellocatie: De Duffelt, Gengske 10, 6566WB Millingen aan de Rijn ]]>
+</description>
+<pubDate>Thu, 22 Feb 2024 19:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 29 feb. 19:30: Pegasus HS 8 - Switch'87 HS 3 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493897</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493897</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F DC, Datum: donderdag 29 februari, 19:30, Speellocatie: Ark van Oost, Cipresstraat 154, 6523HR Nijmegen ]]>
+</description>
+<pubDate>Thu, 29 Feb 2024 19:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 29 feb. 19:30: Heyendaal HS 5 - Switch'87 HS 2 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493905</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493905</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F EB, Datum: donderdag 29 februari, 19:30, Speellocatie: Radboud Sportcentrum, Heyendaalseweg 141, 6525AJ Nijmegen ]]>
+</description>
+<pubDate>Thu, 29 Feb 2024 19:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 29 feb. 19:30: Sportclub Wychen HS 1 - Pegasus HS 10 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493946</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493946</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F LI, Datum: donderdag 29 februari, 19:30, Speellocatie: Sportcentrum Arcus, Campuslaan 14, 6602HX Wijchen ]]>
+</description>
+<pubDate>Thu, 29 Feb 2024 19:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 29 feb. 20:00: AETOS HS 9 - Pegasus HS 9 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493919</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493919</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F HJ, Datum: donderdag 29 februari, 20:00, Speellocatie: Valkenhuizen, Beukenlaan 15, 6823MA Arnhem ]]>
+</description>
+<pubDate>Thu, 29 Feb 2024 20:00:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 7 mrt. 19:30: Switch'87 HS 3 - Sportclub Wychen HS 1 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493893</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493893</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F CL, Datum: donderdag 7 maart, 19:30, Speellocatie: De Duffelt, Gengske 10, 6566WB Millingen aan de Rijn ]]>
+</description>
+<pubDate>Thu, 07 Mar 2024 19:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 7 mrt. 21:30: Trivos HS 6 - Heyendaal HS 5 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493871</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493871</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F AE, Datum: donderdag 7 maart, 21:30, Speellocatie: Sportcentrum Arcus, Campuslaan 14, 6602HX Wijchen ]]>
+</description>
+<pubDate>Thu, 07 Mar 2024 21:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 7 mrt. 21:30: Switch'87 HS 2 - Pegasus HS 8 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493879</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493879</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F BD, Datum: donderdag 7 maart, 21:30, Speellocatie: De Duffelt, Gengske 10, 6566WB Millingen aan de Rijn ]]>
+</description>
+<pubDate>Thu, 07 Mar 2024 21:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 7 mrt. 21:30: Pegasus HS 10 - AETOS HS 9 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493927</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493927</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F IH, Datum: donderdag 7 maart, 21:30, Speellocatie: Ark van Oost, Cipresstraat 154, 6523HR Nijmegen ]]>
+</description>
+<pubDate>Thu, 07 Mar 2024 21:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 14 mrt. 19:30: Heyendaal HS 5 - Pegasus HS 9 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493912</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493912</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F EJ-1, Datum: donderdag 14 maart, 19:30, Speellocatie: Radboud Sportcentrum, Heyendaalseweg 141, 6525AJ Nijmegen ]]>
+</description>
+<pubDate>Thu, 14 Mar 2024 19:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 14 mrt. 19:30: Sportclub Wychen HS 1 - AETOS HS 9 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493945</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493945</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F LH, Datum: donderdag 14 maart, 19:30, Speellocatie: Sportcentrum Arcus, Campuslaan 14, 6602HX Wijchen ]]>
+</description>
+<pubDate>Thu, 14 Mar 2024 19:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 14 mrt. 20:00: Switch'87 HS 3 - Pegasus HS 10 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1552239</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1552239</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F CI, Datum: donderdag 14 maart, 20:00, Speellocatie: De Duffelt, Gengske 10, 6566WB Millingen aan de Rijn ]]>
+</description>
+<pubDate>Thu, 14 Mar 2024 20:00:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 14 mrt. 21:30: Pegasus HS 8 - Trivos HS 6 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493895</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493895</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F DA, Datum: donderdag 14 maart, 21:30, Speellocatie: Ark van Oost, Cipresstraat 154, 6523HR Nijmegen ]]>
+</description>
+<pubDate>Thu, 14 Mar 2024 21:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 21 mrt. 19:30: Trivos HS 6 - Switch'87 HS 3 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493869</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493869</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F AC, Datum: donderdag 21 maart, 19:30, Speellocatie: Sportcentrum Arcus, Campuslaan 14, 6602HX Wijchen ]]>
+</description>
+<pubDate>Thu, 21 Mar 2024 19:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 21 mrt. 19:30: Pegasus HS 9 - Heyendaal HS 5 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493935</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493935</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F JE, Datum: donderdag 21 maart, 19:30, Speellocatie: Ark van Oost, Cipresstraat 154, 6523HR Nijmegen ]]>
+</description>
+<pubDate>Thu, 21 Mar 2024 19:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 21 mrt. 21:30: Switch'87 HS 2 - Sportclub Wychen HS 1 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493884</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493884</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F BL, Datum: donderdag 21 maart, 21:30, Speellocatie: De Duffelt, Gengske 10, 6566WB Millingen aan de Rijn ]]>
+</description>
+<pubDate>Thu, 21 Mar 2024 21:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 28 mrt. 21:30: Trivos HS 6 - Switch'87 HS 2 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493868</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493868</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F AB, Datum: donderdag 28 maart, 21:30, Speellocatie: Sportcentrum Arcus, Campuslaan 14, 6602HX Wijchen ]]>
+</description>
+<pubDate>Thu, 28 Mar 2024 21:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 28 mrt. 21:30: Sportclub Wychen HS 1 - Pegasus HS 9 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493947</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493947</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F LJ, Datum: donderdag 28 maart, 21:30, Speellocatie: Sportcentrum Arcus, Campuslaan 14, 6602HX Wijchen ]]>
+</description>
+<pubDate>Thu, 28 Mar 2024 21:30:00 +0100</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 4 apr. 19:30: Heyendaal HS 5 - Pegasus HS 10 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493909</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493909</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F EI, Datum: donderdag 4 april, 19:30, Speellocatie: Radboud Sportcentrum, Heyendaalseweg 141, 6525AJ Nijmegen ]]>
+</description>
+<pubDate>Thu, 04 Apr 2024 19:30:00 +0200</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 4 apr. 21:30: Pegasus HS 9 - Switch'87 HS 3 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493939</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493939</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F JC-1, Datum: donderdag 4 april, 21:30, Speellocatie: Ark van Oost, Cipresstraat 154, 6523HR Nijmegen ]]>
+</description>
+<pubDate>Thu, 04 Apr 2024 21:30:00 +0200</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 6 apr. 14:30: Switch'87 HS 2 - Trivos HS 6 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493877</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493877</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F BA, Datum: zaterdag 6 april, 14:30, Speellocatie: De Duffelt, Gengske 10, 6566WB Millingen aan de Rijn ]]>
+</description>
+<pubDate>Sat, 06 Apr 2024 14:30:00 +0200</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 6 apr. 14:30: Switch'87 HS 3 - AETOS HS 9 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493894</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493894</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F CH-1, Datum: zaterdag 6 april, 14:30, Speellocatie: De Duffelt, Gengske 10, 6566WB Millingen aan de Rijn ]]>
+</description>
+<pubDate>Sat, 06 Apr 2024 14:30:00 +0200</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 11 apr. 20:00: AETOS HS 9 - Heyendaal HS 5 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493917</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493917</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F HE, Datum: donderdag 11 april, 20:00, Speellocatie: Valkenhuizen, Beukenlaan 15, 6823MA Arnhem ]]>
+</description>
+<pubDate>Thu, 11 Apr 2024 20:00:00 +0200</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 11 apr. 21:30: Trivos HS 6 - Sportclub Wychen HS 1 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493875</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493875</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F AL, Datum: donderdag 11 april, 21:30, Speellocatie: Sportcentrum Arcus, Campuslaan 14, 6602HX Wijchen ]]>
+</description>
+<pubDate>Thu, 11 Apr 2024 21:30:00 +0200</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+<item>
+<title>
+<![CDATA[ 11 apr. 21:30: Pegasus HS 9 - Switch'87 HS 3 ]]>
+</title>
+<link>https://api.nevobo.nl/permalink/wedstrijd/1493933</link>
+<guid>https://api.nevobo.nl/permalink/wedstrijd/1493933</guid>
+<description>
+<![CDATA[ Wedstrijd: 5000H3F JC, Datum: donderdag 11 april, 21:30, Speellocatie: Ark van Oost, Cipresstraat 154, 6523HR Nijmegen ]]>
+</description>
+<pubDate>Thu, 11 Apr 2024 21:30:00 +0200</pubDate>
+<nevobo:status>gepland</nevobo:status>
+</item>
+</channel>
+</rss>
