@@ -47,16 +47,24 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ),
         body: Column(
           children: [
-            Container(height: spacing),
+            Container(
+              height: spacing,
+              //      color: Colors.white,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  "TEAM: ",
-                  style: TextStyle(color: Color(0xFFF9B234), fontSize: 25),
+                  " TEAM: ",
+                  style: TextStyle(
+                      backgroundColor: Color(0xFF731816),
+                      color: Color(0xFFF9B234),
+                      fontSize: 25),
                 ),
                 DropdownButton(
                   // Initial Value
+                  underline: const SizedBox(),
+                  dropdownColor: const Color(0xFF00AADE),
                   value: dropdownvalue,
                   autofocus: true,
                   // Down Arrow Icon
@@ -69,7 +77,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       child: Text(
                         items,
                         style: const TextStyle(
-                            //backgroundColor: Color(0xFF731816),
+                            //       backgroundColor: Color(0xFF731816),
                             color: Color(0xFFF9B234), //Color(0xFF00AADE),
                             fontSize: 25),
                       ),
@@ -87,6 +95,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 ),
               ],
             ),
+
+/*            
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -126,6 +136,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 ),
               ],
             ),
+*/
           ],
         ));
   }

@@ -48,7 +48,7 @@ class _RankingState extends State<Ranking> {
               child: Padding(
                 padding: const EdgeInsets.all(10),
                 child: Text(
-                  data.competition.replaceAll(" Ni", "\nNi"),
+                  data.competition,
                   style: const TextStyle(
                       color: Color(0xFF00AADE),
                       fontSize: 22,

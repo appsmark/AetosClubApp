@@ -35,7 +35,7 @@ Future<bool> getRSS(urlRSS) async {
   comp = comp.substring(6 + comp.indexOf("Stand"), comp.indexOf("]"));
   comp = comp.replaceAll("Dames ", "");
   comp = comp.replaceAll("Heren ", "");
-  comp = comp.replaceAll("Arnh/Wag", "Arnhem / Wageningen");
+  comp = comp.replaceAll("Arnh/Wag ", "Arnhem / Wageningen\n");
   if (comp.indexOf("helft") > 0) {
     comp = comp.substring(0, comp.indexOf("Eerste helft"));
 //    comp = comp.substring(0, comp.indexOf("Tweede helft"));

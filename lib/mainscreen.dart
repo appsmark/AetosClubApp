@@ -68,18 +68,24 @@ class _MainScreen extends State<MainScreen> {
                         }));
               },
             ),
+            SizedBox(
+              width: 0.02 * MediaQuery.of(context).size.width,
+            ),
           ],
           title: GestureDetector(
-              child: Text(
-                "TEAM ${team.currentTeam}",
-                style: const TextStyle(color: Color(0xFF00AADE), fontSize: 35),
-              ),
+            child: Text(
+              "TEAM ${team.currentTeam}",
+              style: const TextStyle(color: Color(0xFF00AADE), fontSize: 35),
+            ),
+/*
               onTap: () {
                 team.alternativeTeam;
                 setState(() {
                   getRSS(teamInfo.getRanking(team.alternativeTeam));
                 });
-              }),
+              }
+*/
+          ),
           backgroundColor: const Color(0xFF731816),
           elevation: 0,
         ),
