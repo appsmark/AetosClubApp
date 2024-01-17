@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "template_flutter",
+            "name": "aetos",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "template_flutter (profile mode)",
+            "name": "aetos (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "template_flutter (release mode)",
+            "name": "aetos (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

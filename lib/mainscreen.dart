@@ -54,8 +54,18 @@ class _MainScreen extends State<MainScreen> {
               onTap: () {
                 Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const SettingsScreen()));
+                    PageRouteBuilder(
+                        transitionDuration: const Duration(milliseconds: 100),
+                        transitionsBuilder:
+                            (context, animation, secondaryAnimation, child) {
+                          return FadeTransition(
+                            opacity: animation,
+                            child: child,
+                          );
+                        },
+                        pageBuilder: (context, animation, secondaryAnimation) {
+                          return const SettingsScreen();
+                        }));
               },
             ),
           ],
@@ -87,11 +97,28 @@ class _MainScreen extends State<MainScreen> {
                         ? () {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => Ranking(
-//                                          listOfItems: data.getTeams(),
-                                        )));
+                                PageRouteBuilder(
+                                    transitionDuration:
+                                        const Duration(milliseconds: 100),
+                                    transitionsBuilder: (context, animation,
+                                        secondaryAnimation, child) {
+                                      return FadeTransition(
+                                        opacity: animation,
+                                        child: child,
+                                      );
+                                    },
+                                    pageBuilder: (context, animation,
+                                        secondaryAnimation) {
+                                      return const Ranking();
+                                    }));
                           }
+                        /*
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Ranking(
+                                        )));
+                          }*/
                         : null,
                     style: ElevatedButton.styleFrom(
                         fixedSize: Size(buttonWidth, 90),
@@ -118,10 +145,20 @@ class _MainScreen extends State<MainScreen> {
                         ? () {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => Schedule(
-                                        //                                      listOfItems: data.getGames(),
-                                        )));
+                                PageRouteBuilder(
+                                    transitionDuration:
+                                        const Duration(milliseconds: 100),
+                                    transitionsBuilder: (context, animation,
+                                        secondaryAnimation, child) {
+                                      return FadeTransition(
+                                        opacity: animation,
+                                        child: child,
+                                      );
+                                    },
+                                    pageBuilder: (context, animation,
+                                        secondaryAnimation) {
+                                      return const Schedule();
+                                    }));
                           }
                         : null,
                     style: ElevatedButton.styleFrom(
@@ -149,10 +186,22 @@ class _MainScreen extends State<MainScreen> {
                         ? () {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => Game(
-                                          listOfItems: data.getTeams(),
-                                        )));
+                                PageRouteBuilder(
+                                    transitionDuration:
+                                        const Duration(milliseconds: 100),
+                                    transitionsBuilder: (context, animation,
+                                        secondaryAnimation, child) {
+                                      return FadeTransition(
+                                        opacity: animation,
+                                        child: child,
+                                      );
+                                    },
+                                    pageBuilder: (context, animation,
+                                        secondaryAnimation) {
+                                      return Game(
+                                        listOfItems: data.getTeams(),
+                                      );
+                                    }));
                           }
                         : null,
                     style: ElevatedButton.styleFrom(
@@ -181,10 +230,22 @@ class _MainScreen extends State<MainScreen> {
                         ? () {
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => Duty(
-                                          listOfItems: data.getTeams(),
-                                        )));
+                                PageRouteBuilder(
+                                    transitionDuration:
+                                        const Duration(milliseconds: 100),
+                                    transitionsBuilder: (context, animation,
+                                        secondaryAnimation, child) {
+                                      return FadeTransition(
+                                        opacity: animation,
+                                        child: child,
+                                      );
+                                    },
+                                    pageBuilder: (context, animation,
+                                        secondaryAnimation) {
+                                      return Duty(
+                                        listOfItems: data.getTeams(),
+                                      );
+                                    }));
                           }
                         : null,
                     style: ElevatedButton.styleFrom(

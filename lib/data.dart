@@ -42,7 +42,7 @@ class TeamInfo {
     ["MB5", "regio-oost/MB3I1", "meisjes-b/5"],
     ["MC1", "regio-oost/MC1E1", "meisjes-c/1"],
     ["MC2", "regio-oost/MC1E1", "meisjes-c/2"],
-    ["MC3", "regio-oost/MC2K1", "meisjes-c/3"],
+    ["MC3", "regio-oost/MC2L1", "meisjes-c/3"],
     ["MC4", "regio-oost/MC2K1", "meisjes-c/4"],
     ["MC5", "regio-oost/MC3N1", "meisjes-c/5"],
     ["MC6", "regio-oost/MC3M1", "meisjes-c/6"],

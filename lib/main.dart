@@ -14,10 +14,9 @@ void main() {
   // Device orientation
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
-  // Suppress statusbar
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
-      overlays: [SystemUiOverlay.bottom]);
-  debugPrint("main");
+  // Suppress statusbar and navigation bar
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+
   Team team = Team();
   team.getStoredTeam();
 
@@ -50,7 +49,7 @@ class SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-        const Duration(seconds: 3),
+        const Duration(seconds: 1),
         () => Navigator.pushReplacement(
             context,
             MaterialPageRoute(
