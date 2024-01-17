@@ -47,9 +47,10 @@ class _MainScreen extends State<MainScreen> {
           centerTitle: true,
           actions: [
             GestureDetector(
-              child: const Icon(
+              child: Icon(
                 Icons.more_vert,
-                color: Color(0xFF00AADE),
+                color: const Color(0xFF00AADE),
+                size: 0.12 * MediaQuery.of(context).size.width,
               ),
               onTap: () {
                 Navigator.push(
@@ -68,14 +69,14 @@ class _MainScreen extends State<MainScreen> {
                         }));
               },
             ),
-            SizedBox(
-              width: 0.02 * MediaQuery.of(context).size.width,
-            ),
           ],
           title: GestureDetector(
             child: Text(
               "TEAM ${team.currentTeam}",
-              style: const TextStyle(color: Color(0xFF00AADE), fontSize: 35),
+              style: const TextStyle(
+                  color: Color(0xFF00AADE),
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold),
             ),
 /*
               onTap: () {

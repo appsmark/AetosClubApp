@@ -27,7 +27,7 @@ class _RankingState extends State<Ranking> {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint("ranking");
+    //   debugPrint("ranking");
     listOfItems = data.getTeams();
     return Scaffold(
         backgroundColor: const Color(0xFF731816),
@@ -39,7 +39,10 @@ class _RankingState extends State<Ranking> {
           centerTitle: true,
           title: const Text(
             "STAND",
-            style: TextStyle(color: Color(0xFF00AADE), fontSize: 35),
+            style: TextStyle(
+                color: Color(0xFF00AADE),
+                fontSize: 35,
+                fontWeight: FontWeight.bold),
           ),
         ),
         body: Column(
@@ -104,9 +107,7 @@ class _RankingState extends State<Ranking> {
                           child: Align(
                             alignment: Alignment.centerRight,
                             child: Text(
-                              index == 5
-                                  ? "45"
-                                  : listOfItems[index].pointsPro(),
+                              listOfItems[index].totalgamesPlayed(),
                               style: TextStyle(
                                   //backgroundColor: Colors.amber,
                                   color: listOfItems[index].team() ==
@@ -139,9 +140,7 @@ class _RankingState extends State<Ranking> {
                           child: Align(
                             alignment: Alignment.centerRight,
                             child: Text(
-                              index == 5
-                                  ? "45"
-                                  : listOfItems[index].pointsPro(),
+                              listOfItems[index].totalgamesWon(),
                               style: TextStyle(
                                   //backgroundColor: Colors.yellow,
                                   color: listOfItems[index].team() ==

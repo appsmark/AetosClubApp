@@ -20,7 +20,7 @@ Future<bool> getRSS(urlRSS) async {
 
     //   xml = xml.replaceAll('stand:puntenvoor>0', 'stand:puntenvoor:>3');
     xml = '$xml\n</ranks>';
-//    debugPrint(xml);
+    debugPrint(xml);
     result = true;
   } else {
     debugPrint('Request failed with status: ${response.statusCode}.');
@@ -46,9 +46,10 @@ Future<bool> getRSS(urlRSS) async {
   final rankings = rank.findElements('stand:ranking');
   for (final ranking in rankings) {
     final teamName = ranking.findElements('stand:team').first.text;
-    final pointsTeam =
-        int.parse(ranking.findElements('stand:puntenvoor').first.text);
-    data.addTeam(teamName, pointsTeam);
+    final played =
+        int.parse(ranking.findElements('stand:wedstrijden').first.text);
+    final points = int.parse(ranking.findElements('stand:punten').first.text);
+    data.addTeam(teamName, played, points);
   }
   return result;
 }

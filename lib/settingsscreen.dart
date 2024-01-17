@@ -42,7 +42,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
           centerTitle: true,
           title: const Text(
             "INSTELLINGEN",
-            style: TextStyle(color: Color(0xFF00AADE), fontSize: 35),
+            style: TextStyle(
+                color: Color(0xFF00AADE),
+                fontSize: 35,
+                fontWeight: FontWeight.bold),
           ),
         ),
         body: Column(
@@ -68,7 +71,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   value: dropdownvalue,
                   autofocus: true,
                   // Down Arrow Icon
-                  icon: const Icon(Icons.keyboard_arrow_down),
+                  icon: const Icon(
+                    Icons.keyboard_arrow_down,
+                    color: Color(0xFFF9B234),
+                  ),
 
                   // Array list of items
                   items: items.map((String items) {

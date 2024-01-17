@@ -49,7 +49,7 @@ class TeamInfo {
     ["MC7", "regio-oost/MC3M1", "meisjes-c/7"],
     ["N6 1", "regio-oost/CN61A1", "meisjes-c/7"],
   ];
-
+//https://api.nevobo.nl/export/poule/regio-oost/H3F/stand.rss
   String getRanking(team) {
     debugPrint("getRanking for $team");
     String competition =
@@ -139,8 +139,8 @@ class Data with ChangeNotifier {
     _games.clear();
   }
 
-  void addTeam(name, points) {
-    _teams.add(TeamData(name, points));
+  void addTeam(name, gamesPlayed, gamesWon) {
+    _teams.add(TeamData(name, gamesPlayed, gamesWon));
   }
 
   void addGame(date) {
@@ -165,13 +165,18 @@ class Data with ChangeNotifier {
 final data = Data();
 
 class TeamData {
+  int gamesPlayed;
+  int gamesWon;
   String name;
-  int points;
 
-  TeamData(this.name, this.points);
+  TeamData(this.name, this.gamesPlayed, this.gamesWon);
 
-  String pointsPro() {
-    return points.toString();
+  String totalgamesWon() {
+    return gamesWon.toString();
+  }
+
+  String totalgamesPlayed() {
+    return gamesPlayed.toString();
   }
 
   String team() {

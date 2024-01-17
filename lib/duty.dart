@@ -37,7 +37,10 @@ class _DutyState extends State<Duty> {
           centerTitle: true,
           title: const Text(
             "ZAALDIENST",
-            style: TextStyle(color: Color(0xFF00AADE), fontSize: 35),
+            style: TextStyle(
+                color: Color(0xFF00AADE),
+                fontSize: 35,
+                fontWeight: FontWeight.bold),
           ),
         ),
         body: Column(
@@ -92,9 +95,7 @@ class _DutyState extends State<Duty> {
                           child: Align(
                             alignment: Alignment.centerRight,
                             child: Text(
-                              index == 3
-                                  ? "45"
-                                  : listOfItems[index].pointsPro(),
+                              "45",
                               style: const TextStyle(
                                   //backgroundColor: Colors.amber,
                                   color: Color(0xFFF9B234),
@@ -120,9 +121,7 @@ class _DutyState extends State<Duty> {
                           child: Align(
                             alignment: Alignment.centerRight,
                             child: Text(
-                              index == 3
-                                  ? "45"
-                                  : listOfItems[index].pointsPro(),
+                              "45",
                               style: const TextStyle(
                                   //backgroundColor: Colors.yellow,
                                   color: Color(0xFFF9B234),

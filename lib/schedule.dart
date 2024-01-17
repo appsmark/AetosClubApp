@@ -40,7 +40,10 @@ class _ScheduleState extends State<Schedule> {
           centerTitle: true,
           title: const Text(
             "PROGRAMMA",
-            style: TextStyle(color: Color(0xFF00AADE), fontSize: 35),
+            style: TextStyle(
+                color: Color(0xFF00AADE),
+                fontSize: 35,
+                fontWeight: FontWeight.bold),
           ),
         ),
         body: Column(
