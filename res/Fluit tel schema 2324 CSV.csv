@@ -1,0 +1,302 @@
+﻿ Datum ; Tijd ; Team thuis ; Team uit ; Zaal ; Fluiten ; Tellen 
+ 45.323,00 ; 0,77 ; AETOS MC 6 ; Volamie MC 1 ; Valkenhuizen ; D8 ; D8 
+ 45.323,00 ; 0,83 ; AETOS DS 8 ; Dros-Alterno DS 10 ; Valkenhuizen ; D11 ; D4 
+ 45.323,00 ; 0,83 ; AETOS HS 7 ; Weekenders HS 2 ; Valkenhuizen ; H5 ; D7 
+ 45.323,00 ; 0,83 ; AETOS HS 9 ; Trivos HS 6 ; Valkenhuizen ; H6 ; D9 
+;;;;;;
+ 45.324,00 ; 0,90 ; AETOS HS 5 ; D.O.S. HS 1 ; De Laar ; D8 ; H9 
+;;;;;;
+;;;;;;
+ 45.325,00 ; 0,42 ; AETOS JC 2 ; Scylla JC 1 ; Sporthal Middachtensingel ; MA3 ; MC1 
+ 45.325,00 ; 0,42 ; AETOS MC 3 ; Trivos MC 2 ; Sporthal Middachtensingel ; MA2 ; MC1 
+ 45.325,00 ; 0,42 ; AETOS MC 9 ; Olympia MC 1 ; Sporthal Middachtensingel ; MA2 ; MC1 
+ 45.325,00 ; 0,50 ; AETOS DS 11 ; WaHo DS 11 ; Sporthal Middachtensingel ; H8 ; JC2 
+ 45.325,00 ; 0,50 ; AETOS MA 3 ; AETOS MA 2 ; Sporthal Middachtensingel ; H9 ; MC3 
+ 45.325,00 ; 0,50 ; AETOS MC 1 ; Trivos MC 1 ; Sporthal Middachtensingel ; H4 ; MC9 
+ 45.325,00 ; 0,60 ; AETOS HS 8 ; Scylla HS 6 ; Sporthal Middachtensingel ; D4 ; JC4 
+ 45.325,00 ; 0,60 ; AETOS MB 3 ; Kidang MB 1 ; Sporthal Middachtensingel ; D11 ; JC3 
+ 45.325,00 ; 0,60 ; AETOS MC 6 ; Tweestroom MC 2 ; Sporthal Middachtensingel ; D1 ; MB4 
+ 45.325,00 ; 0,69 ; AETOS JC 3 ; Set Up '69 JC 1 ; Sporthal Middachtensingel ; MA4 ; JB2 
+ 45.325,00 ; 0,69 ; AETOS JC 4 ; Engeltherm WSV JC 1 ; Sporthal Middachtensingel ; MA4 ; JB2 
+ 45.325,00 ; 0,69 ; AETOS MB 4 ; AETOS MB 5 ; Sporthal Middachtensingel ; D4 ; JB2 
+ 45.325,00 ; 0,77 ; AETOS DS 4 ; TiVoC DS 1 ; Sporthal Middachtensingel ; H8 ; MB4 
+ 45.325,00 ; 0,77 ; AETOS JB 2 ; Blok EVC JB 1 ; Sporthal Middachtensingel ; H5 ; JC4 
+ 45.325,00 ; 0,77 ; AETOS MA 4 ; Pegasus MA 3 ; Sporthal Middachtensingel ; D8 ; JC3 
+;;;;;;
+ 45.325,00 ;; CMV ; De Laar ;;;
+;;; Tessa (organisatie) ;; D2 ; D2 
+;;;; Inclusief opbouwen ; H6 ; x 
+;;;; Inclusief opbouwen ; H6 ; x 
+;;;; Inclusief opbouwen ; D8 ; x 
+;;;;; D8 ; MC2 
+;;;;; H7 ; MC2 
+;;;;; H7 ; MC2 
+;;;; inclusief opruimen ; x ; MB4 
+;;;; inclusief opruimen ; x ; MB4 
+;;;; inclusief opruimen ; MA4 ; x 
+;;;; inclusief opruimen ; MA4 ; x 
+;;;; inclusief opruimen ; MA4 ; x 
+;;;; inclusief opruimen ; D6 ; x 
+;;;; inclusief opruimen ; D6 ; x 
+;;;; inclusief opruimen ; D6 ; x 
+;;;;;;
+;;;;;;
+ 45.330,00 ; 0,77 ; AETOS MC 5 ; AETOS MC 7 ; Valkenhuizen ; H9 ; H9 
+ 45.330,00 ; 0,83 ; AETOS DS 5 ; SSS DS 5 ; Valkenhuizen ; D6 ; D4 
+ 45.330,00 ; 0,83 ; AETOS HS 9 ; Pegasus HS 10 ; Valkenhuizen ; D9 ; D6 
+;;;;;;
+ 45.331,00 ; 0,77 ; AETOS MC 8 ; Setash MC 2 ; Sporthal Elderveld ; MA3 ; H4 
+ 45.331,00 ; 0,83 ; AETOS MA 3 ; Voreo MA 1 ; Sporthal Elderveld ; H9 ; H7 
+ 45.331,00 ; 0,79 ; AETOS MC 4 ; Woudenberg MC 1 ; Sporthal Middachtensingel ; D5 ; D5 
+;;;;;;
+;;;;;;
+ 45.332,00 ; 0,50 ; AETOS DS 3 ; SSS DS 4 ; Sporthal Middachtensingel ; H3 ; MA1 
+ 45.332,00 ; 0,50 ; AETOS DS 7 ; Gemini DS 4 ; Sporthal Middachtensingel ; H3 ; MA1 
+;;;;;;
+ 45.332,00 ; 0,60 ; AETOS DS 10 ; Volleybalvereniging Zeewolde DS 5 ; Sporthal Middachtensingel ; D7 ; MC2 
+ 45.332,00 ; 0,60 ; AETOS HS 3 ; WaHo HS 1 ; Sporthal Middachtensingel ; H2 ; MB1 
+ 45.332,00 ; 0,60 ; AETOS MA 1 ; VVH MA 1 ; Sporthal Middachtensingel ; D3 ; MC1 
+ 45.332,00 ; 0,69 ; AETOS MC 2 ; HSC MC 1 ; Sporthal Middachtensingel ; D10 ; MA1 
+ 45.332,00 ; 0,69 ; AETOS MB 1 ; Salvora MB 1 ; Sporthal Middachtensingel ; D1 ; D1 
+ 45.332,00 ; 0,69 ; AETOS MC 1 ; Set Up '69 MC 1 ; Sporthal Middachtensingel ; D11 ; D11 
+ 45.332,00 ; 0,77 ; AETOS DS 11 ; SSS DS 9 ; Sporthal Middachtensingel ; D10 ; MC2 
+ 45.332,00 ; 0,77 ; AETOS DS 1 ; Hellas DS 1 ; Sporthal Middachtensingel ; x ; MB1 
+ 45.332,00 ; 0,77 ; AETOS HS 2 ; Nuovo HS 1 ; Sporthal Middachtensingel ; H3 ; MC1 
+;;;;;;
+;;;;;;
+;;;;;;
+ 45.337,00 ; 0,83 ; AETOS HS 7 ; Xanthos HS 3 ; Valkenhuizen ; H5 ; H5 
+;;;;;;
+ 45.338,00 ; 0,90 ; AETOS HS 5 ; SSS HS 7 ; De Laar ; H7 ; H7 
+;;;;;;
+;;;;;;
+ 45.339,00 ; 0,52 ; AETOS MC 2 ; TiVoC MC 1 ; Sporthal Middachtensingel ; H3 ; MB1 
+ 45.339,00 ; 0,52 ;;;;;
+;;;;;;
+ 45.339,00 ; 0,60 ; AETOS HS 3 ; Heyendaal HS 2 ; Sporthal Middachtensingel ; D1 ; MC9 
+ 45.339,00 ; 0,60 ; AETOS MB 1 ; SV Dynamo Apeldoorn MB 1 ; Sporthal Middachtensingel ; D1 ; MC9 
+;;;;;;
+ 45.339,00 ; 0,69 ; AETOS DS 1 ; SV Dynamo Apeldoorn DS 6 ; Sporthal Middachtensingel ; x ; H3 
+ 45.339,00 ; 0,69 ; AETOS MC 9 ; AETOS MC 8 ; Sporthal Middachtensingel ; H3 ; MB1 
+;;;;;;
+;;;;;;
+ 45.339,00 ; Zit ; De Laar ;;;;
+;;;;;;
+;;;;; x ; D2 
+;;;;; x ; JC4 
+;;;;; x ; MB5 
+;;;;; x ; MC3 
+;;;;; x ; MB2 
+;;;;; x ; MC7 
+;;;;; x ; JC3 
+;;;;; x ; D2 
+;;;;; x ; MC4 
+;;;;; x ; MC5 
+;;;;; x ; D2 
+;;;;;;
+;;;;;;
+;;;;;;
+ 45.344,00 ; 0,83 ; AETOS DS 8 ; BSV DS 3 ; Sporthal Middachtensingel ; D4 ; D5 
+ 45.344,00 ; 0,83 ; AETOS HS 7 ; Hexagon HS 1 ; Valkenhuizen ; D6 ; D6 
+;;;;;;
+;;;;;;
+;;;;;;
+ 45.346,00 ; 0,38 ; AETOS MC 3 ; Kidang MC 1 ; Sporthal Middachtensingel ; D8 ; MC7 
+ 45.346,00 ; 0,38 ; AETOS MA 2 ; Excelsior MA 1 ; Sporthal Middachtensingel ; D8 ; MB5 
+ 45.346,00 ; 0,38 ; AETOS MB 3 ; Setash MB 1 ; Sporthal Middachtensingel ; H7 ; MC7 
+ 45.346,00 ; 0,46 ; AETOS MC 7 ; AETOS MC 5 ; Sporthal Middachtensingel ; MA2 ; MC3 
+ 45.346,00 ; 0,46 ; AETOS MB 5 ; AETOS MB 4 ; Sporthal Middachtensingel ; MA2 ; MC3 
+;;;;;;
+ 45.346,00 ; 0,54 ; AETOS JB 1 ; Bielderman Koetsier/SSS JB 1 ; Sporthal Middachtensingel ; JA2 ; MC8 
+ 45.346,00 ; 0,54 ; AETOS JC 1 ; Surf JC 1 ; Sporthal Middachtensingel ; JA2 ; MB5 
+;;;;;;
+ 45.346,00 ; 0,63 ; AETOS JA 2 ; Eurosped Pollux JA 1 ; Sporthal Middachtensingel ; D11 ; MB2 
+ 45.346,00 ; 0,63 ; AETOS MC 6 ; VoCASA MC 2 ; Sporthal Middachtensingel ; JA1 ; MB2 
+;;;;;;
+ 45.346,00 ; 0,71 ; AETOS MB 2 ; Pegasus MB 1 ; Sporthal Middachtensingel ; H9 ; JA2 
+ 45.346,00 ; 0,71 ; AETOS JA 1 ; Woudenberg JA 1 ; Sporthal Middachtensingel ; H4 ; MC6 
+;;;;;;
+;;;;;;
+;;;;;;
+ 45.351,00 ; 0,83 ; AETOS DS 8 ; Bruvoc DS 3 ; Valkenhuizen ; D6 ; D7 
+ 45.351,00 ; 0,83 ; AETOS HS 7 ; Trivos HS 5 ; Valkenhuizen ; H5 ; D9 
+ 45.351,00 ; 0,83 ; AETOS HS 9 ; Pegasus HS 9 ; Valkenhuizen ; D4 ; D10 
+;;;;;;
+ 45.352,00 ; 0,90 ; AETOS HS 5 ; WaHo HS 2 ; De Laar ; H7 ; D8 
+ 45.352,00 ; 0,77 ; AETOS JC 3 ; Bielderman Koetsier/SSS JC 2 ; Sporthal Elderveld ; H5 ; MA1 
+ 45.352,00 ; 0,77 ; AETOS MC 3 ; Kidang MC 2 ; Sporthal Elderveld ; MA3 ; MA3 
+ 45.352,00 ; 0,83 ; AETOS DS 6 ; LIVO DS 5 ; Sporthal Elderveld ; H7 ; H3 
+ 45.352,00 ; 0,83 ; AETOS MA 3 ; Pegasus MA 1 ; Sporthal Elderveld ; H9 ; H3 
+;;;;;;
+ 45.353,00 ; 0,42 ; AETOS JC 4 ; LIVO JC 2 ; Sporthal Middachtensingel ; JA2 ; JC1 
+ 45.353,00 ; 0,42 ; AETOS MB 4 ; Excelsior MB 1 ; Sporthal Middachtensingel ; MA4 ; MA4 
+ 45.353,00 ; 0,42 ; AETOS MC 9 ; Setash MC 2 ; Sporthal Middachtensingel ; JA2 ; JC1 
+ 45.353,00 ; 0,50 ; AETOS JA 2 ; Rensa Family Orion JA 1 ; Sporthal Middachtensingel ; H3 ; JC4 
+ 45.353,00 ; 0,50 ; AETOS JC 1 ; Volta JC 1 ; Sporthal Middachtensingel ; H4 ; MC9 
+ 45.353,00 ; 0,50 ; AETOS MA 4 ; Xanthos MA 1 ; Sporthal Middachtensingel ; H4 ; JC4 
+ 45.353,00 ; 0,60 ; AETOS HS 3 ; SDS HS 1 ; Sporthal Middachtensingel ; D1 ; JA2 
+ 45.353,00 ; 0,60 ; AETOS MB 3 ; Pegasus MB 3 ; Sporthal Middachtensingel ; D10 ; JA2 
+ 45.353,00 ; 0,60 ; AETOS MB 5 ; Xanthos MB 1 ; Sporthal Middachtensingel ; D9 ; MA4 
+ 45.353,00 ; 0,69 ; AETOS DS 9 ; AETOS DS 10 ; Sporthal Middachtensingel ; D1 ; MB5 
+ 45.353,00 ; 0,69 ; AETOS HS 6 ; Scylla HS 4 ; Sporthal Middachtensingel ; D3 ; MB3 
+ 45.353,00 ; 0,69 ; AETOS JB 2 ; Engeltherm WSV JB 1 ; Sporthal Middachtensingel ; D4 ; MB5 
+ 45.353,00 ; 0,77 ; AETOS DS 2 ; AETOS DS 3 ; Sporthal Middachtensingel ; H3 ; JB2 
+ 45.353,00 ; 0,77 ; AETOS DS 4 ; Scylla DS 1 ; Sporthal Middachtensingel ; H6 ; JB2 
+ 45.353,00 ; 0,77 ; AETOS DS 1 ; Blauw Wit DS 1 ; Sporthal Middachtensingel ; x ; H6 
+;;;;;;
+ 45.353,00 ;; CMV ; Valkenhuizen ;;;
+;;; Tessa (organisatie) ;; D2 ; D2 
+;;;; Inclusief opbouwen ; D3 ; x 
+;;;; Inclusief opbouwen ; D3 ; x 
+;;;; Inclusief opbouwen ; D7 ; x 
+;;;;; D7 ; MC5 
+;;;;; H9 ; MC5 
+;;;;; D8 ; MC8 
+;;;;; x ; MC8 
+;;;; inclusief opruimen ; MA3 ; JC2 
+;;;; inclusief opruimen ; MA3 ; x 
+;;;; inclusief opruimen ; MA3 ; x 
+;;;;;;
+;;;;;;
+ 45.358,00 ; 0,83 ; AETOS DS 5 ; WaHo DS 2 ; Valkenhuizen ; D6 ; D3 
+ 45.358,00 ; 0,83 ; AETOS HS 4 ; SSS HS 6 ; Valkenhuizen ; D7 ; H1 
+;;;;;;
+;;;;;;
+;;;;;;
+ 45.360,00 ; 0,42 ; AETOS JC 1 ; AETOS JC 2 ; Sporthal Middachtensingel ; D7 ; JA1 
+ 45.360,00 ; 0,42 ; AETOS MB 2 ; Trivos MB 2 ; Sporthal Middachtensingel ; JA1 ; JA1 
+ 45.360,00 ; 0,42 ; AETOS MC 4 ; TweeVV MC 1 ; Sporthal Middachtensingel ; MA2 ; MA2 
+ 45.360,00 ; 0,50 ; AETOS DS 7 ; Set Up '69 DS 4 ; Sporthal Middachtensingel ; H3 ; JC1 
+ 45.360,00 ; 0,50 ; AETOS JA 1 ; Voorsterslag/VC Zwolle JA 1 ; Sporthal Middachtensingel ; H3 ; JC2 
+ 45.360,00 ; 0,50 ; AETOS MA 2 ; Voreo MA 1 ; Sporthal Middachtensingel ; H8 ; MB2 
+ 45.360,00 ; 0,60 ; AETOS DS 2 ; SSS DS 4 ; Sporthal Middachtensingel ; H1 ; MB1 
+ 45.360,00 ; 0,60 ; AETOS HS 3 ; Pegasus HS 4 ; Sporthal Middachtensingel ; H2 ; MB1 
+ 45.360,00 ; 0,60 ; AETOS JB 1 ; ESV-Hellas JB 1 ; Sporthal Middachtensingel ; MA2 ; MA2 
+ 45.360,00 ; 0,69 ; AETOS HS 1 ; Ikvolleybal.nl/SSS HS 3 ; Sporthal Middachtensingel ; x ; JB1 
+ 45.360,00 ; 0,69 ; AETOS MB 1 ; SDS MB 1 ; Sporthal Middachtensingel ; MA1 ; H4 
+;;;;;;
+ 45.360,00 ; 0,77 ; AETOS DS 10 ; N.V.C. DS 4 ; Sporthal Middachtensingel ; H1 ; H1 
+ 45.360,00 ; 0,77 ; AETOS HS 2 ; Heyendaal HS 2 ; Sporthal Middachtensingel ; H3 ; D5 
+ 45.360,00 ; 0,77 ; AETOS MA 1 ; SV Dynamo Apeldoorn MA 1 ; Sporthal Middachtensingel ; H1 ; MB1 
+;;;;;;
+;;;;;;
+ 45.365,00 ; 0,79 ; AETOS JB 2 ; Bruvoc JB 1 ; Valkenhuizen ; D10 ; H6 
+ 45.365,00 ; 0,83 ; AETOS DS 5 ; TiVoC DS 1 ; Valkenhuizen ; H5 ; H2 
+ 45.365,00 ; 0,83 ; AETOS DS 8 ; DIAVO DS 5 ; Valkenhuizen ; D4 ; D11 
+;;;;;;
+ 45.366,00 ; 0,90 ; AETOS HS 5 ; Woudenberg HS 2 ; De Laar ; D5 ; H7 
+ 45.366,00 ; 0,83 ; AETOS DS 4 ; Woudenberg DS 2 ; Sporthal Elderveld ; D5 ; H4 
+ 45.366,00 ; 0,79 ; AETOS JC 4 ; Skopein Wivoc JC 2 ; Sporthal Middachtensingel ; D11 ; MA1 
+;;;;;;
+ 45.367,00 ; 0,42 ; AETOS MA 3 ; Excelsior MA 1 ; Sporthal Middachtensingel ; D3 ; JC2 
+ 45.367,00 ; 0,42 ; AETOS MC 5 ; BSVO MC 1 ; Sporthal Middachtensingel ; JA2 ; JC2 
+ 45.367,00 ; 0,42 ; AETOS MC 9 ; Gemini MC 1 ; Sporthal Middachtensingel ; JA2 ; JC2 
+ 45.367,00 ; 0,50 ; AETOS DS 3 ; VVH DS 3 ; Sporthal Middachtensingel ; H6 ; MC9 
+ 45.367,00 ; 0,50 ; AETOS JA 2 ; Time Out'75 JA 1 ; Sporthal Middachtensingel ; H6 ; MC9 
+ 45.367,00 ; 0,50 ; AETOS JC 2 ; Volta JC 1 ; Sporthal Middachtensingel ; MA3 ; MA3 
+ 45.367,00 ; 0,60 ; AETOS HS 6 ; Gemini HS 4 ; Sporthal Middachtensingel ; D1 ; JC3 
+ 45.367,00 ; 0,60 ; AETOS MB 5 ; Excelsior MB 1 ; Sporthal Middachtensingel ; H2 ; JC3 
+ 45.367,00 ; 0,60 ; AETOS MC 1 ; Avior MC 1 ; Sporthal Middachtensingel ; MA3 ; MB3 
+ 45.367,00 ; 0,69 ; AETOS JC 3 ; D.O.S. JC 1 ; Sporthal Middachtensingel ; MA4 ; MB5 
+ 45.367,00 ; 0,69 ; AETOS MB 3 ; LIVO MB 1 ; Sporthal Middachtensingel ; MA4 ; MB5 
+;;;;;;
+ 45.367,00 ; 0,77 ; AETOS DS 1 ; Rebo Woningmakelaars Rebelle DS 2 ; Sporthal Middachtensingel ; x ; MB3 
+ 45.367,00 ; 0,77 ; AETOS MA 4 ; Evoba MA 1 ; Sporthal Middachtensingel ; D3 ; MB3 
+ 45.367,00 ; 0,77 ; AETOS MB 4 ; Xanthos MB 1 ; Sporthal Middachtensingel ; D6 ; JC3 
+;;;;;;
+ 45.367,00 ;; CMV ; De Laar ;;;
+;;; Tessa (organisatie) ;; D2 ; D2 
+;;;; Inclusief opbouwen ; JA2 ; x 
+;;;; Inclusief opbouwen ; JA2 ; x 
+;;;; Inclusief opbouwen ; JA2 ; x 
+;;;;; H2 ; MC7 
+;;;;; H2 ; MC7 
+;;;; inclusief opruimen ; D11 ; MC6 
+;;;; inclusief opruimen ; D11 ; MC6 
+;;;; inclusief opruimen ; D10 ; MC6 
+;;;; inclusief opruimen ; D10 ; x 
+;;;;;;
+;;;;;;
+ 45.372,00 ; 0,79 ; AETOS MA 1 ; Weekenders MA 1 ; Valkenhuizen ; D10 ; D11 
+ 45.372,00 ; 0,83 ; AETOS HS 4 ; Dros-Alterno HS 5 ; Valkenhuizen ; H9 ; H8 
+;;;;;;
+ 45.373,00 ; 0,79 ; AETOS MC 4 ; TweeVV MC 2 ; Sporthal Middachtensingel ; MA1 ; MA1 
+;;;;;;
+ 45.374,00 ; 0,42 ; AETOS MA 2 ; TweeVV MA 1 ; Sporthal Middachtensingel ; H4 ; MA4 
+ 45.374,00 ; 0,42 ; AETOS MB 2 ; Weekenders MB 1 ; Sporthal Middachtensingel ; MA1 ; MA4 
+ 45.374,00 ; 0,42 ; AETOS MC 7 ; Pegasus MC 2 ; Sporthal Middachtensingel ; MA1 ; JA1 
+ 45.374,00 ; 0,50 ; AETOS DS 7 ; Surf DS 3 ; Sporthal Middachtensingel ; D5 ; MC7 
+ 45.374,00 ; 0,50 ; AETOS DS 10 ; HSC DS 3 ; Sporthal Middachtensingel ; H4 ; MC7 
+ 45.374,00 ; 0,50 ; AETOS MA 4 ; Voreo MA 2 ; Sporthal Middachtensingel ; D11 ; MC2 
+ 45.374,00 ; 0,60 ; AETOS DS 11 ; N.V.C. DS 5 ; Sporthal Middachtensingel ; D10 ; MC8 
+ 45.374,00 ; 0,60 ; AETOS HS 8 ; Nuovo HS 3 ; Sporthal Middachtensingel ; D7 ; MC8 
+ 45.374,00 ; 0,60 ; AETOS MC 2 ; Surf MC 1 ; Sporthal Middachtensingel ; JA1 ; MC8 
+ 45.374,00 ; 0,69 ; AETOS HS 1 ; Heyendaal HS 1 ; Sporthal Middachtensingel ; x ; JB1 
+ 45.374,00 ; 0,69 ; AETOS MC 8 ; Scylla MC 1 ; Sporthal Middachtensingel ; JA1 ; JB1 
+ 45.374,00 ; 0,69 ; AETOS JA 2 ; Time Out'75 JA 1 ; Sporthal Middachtensingel ; D9 ; JB1 
+ 45.374,00 ; 0,77 ; AETOS DS 9 ; N.V.C. DS 4 ; Sporthal Middachtensingel ; H1 ; JA2 
+ 45.374,00 ; 0,77 ; AETOS HS 2 ; Pegasus HS 4 ; Sporthal Middachtensingel ; H1 ; JA2 
+ 45.374,00 ; 0,77 ; AETOS JB 1 ; D.O.S. JB 1 ; Sporthal Middachtensingel ; H1 ; MB4 
+;;;;;;
+;;;;;;
+ 45.379,00 ; 0,83 ; AETOS DS 1 ; Voorwaarts DS 2 ; Valkenhuizen ; x ; D3 
+;;;;;;
+;;;;;;
+ 45.386,00 ; 0,83 ; AETOS DS 5 ; Scylla DS 1 ; Valkenhuizen ; D6 ; D6 
+ 45.386,00 ; 0,83 ; AETOS DS 8 ; WSV DS 2 ; Valkenhuizen ; H2 ; H2 
+;;;;;;
+ 45.387,00 ; 0,83 ; AETOS DS 6 ; Victoria DS 2 ; Sporthal Elderveld ; D5 ; D1 
+;;;;;;
+ 45.388,00 ; 0,42 ; AETOS MC 2 ; EVV Bultman-Hartholt MC 1 ; Sporthal Middachtensingel ; H4 ; MC8 
+ 45.388,00 ; 0,42 ; AETOS MB 2 ; Pegasus MB 1 ; Sporthal Middachtensingel ; D3 ; JC1 
+ 45.388,00 ; 0,42 ; AETOS JA 1 ; Apollo 8 JA 1 ; Sporthal Middachtensingel ; D3 ; JC1 
+ 45.388,00 ; 0,50 ; AETOS DS 3 ; EVV Bultman-Hartholt DS 1 ; Sporthal Middachtensingel ; D1 ; MB2 
+ 45.388,00 ; 0,50 ; AETOS JC 1 ; Scylla JC 1 ; Sporthal Middachtensingel ; JA1 ; JA1 
+ 45.388,00 ; 0,50 ; AETOS MC 8 ; Gemini MC 1 ; Sporthal Middachtensingel ; MA1 ; MB2 
+ 45.388,00 ; 0,60 ; AETOS DS 1 ; Jumbo Van Andel-Ormi DS 1 ; Sporthal Middachtensingel ; x ; MC3 
+ 45.388,00 ; 0,60 ; AETOS JB 1 ; Weghorst Makelaardij WVC Volley JB 1 ; Sporthal Middachtensingel ; H4 ; MC6 
+ 45.388,00 ; 0,60 ; AETOS MA 1 ; Volleybalvereniging Zeewolde MA 1 ; Sporthal Middachtensingel ; H2 ; MC6 
+ 45.388,00 ; 0,69 ; AETOS HS 2 ; TiVoC HS 1 ; Sporthal Middachtensingel ; H1 ; JB1 
+ 45.388,00 ; 0,69 ; AETOS MB 1 ; Dros-Alterno MB 1 ; Sporthal Middachtensingel ; MA1 ; MA2 
+ 45.388,00 ; 0,69 ; AETOS MC 6 ; Touché MC 1 ; Sporthal Middachtensingel ; MA1 ; MA2 
+ 45.388,00 ; 0,77 ; AETOS HS 1 ; Rebo Woningmakelaars Rebelle HS 1 ; Sporthal Middachtensingel ; x ; MC6 
+ 45.388,00 ; 0,77 ; AETOS MA 2 ; Scylla MA 1 ; Sporthal Middachtensingel ; H2 ; MB1 
+;;;;;;
+;;;;;;
+ 45.393,00 ; 0,83 ; AETOS DS 8 ; Dros-Alterno DS 9 ; Valkenhuizen ; H8 ; H8 
+ 45.393,00 ; 0,83 ; AETOS HS 7 ; D.V.O.L. HS 1 ; Valkenhuizen ; D4 ; D10 
+ 45.393,00 ; 0,83 ; AETOS HS 9 ; Heyendaal HS 5 ; Valkenhuizen ; H5 ; H5 
+;;;;;;
+ 45.394,00 ; 0,90 ; AETOS HS 5 ; Rensa Family Orion HS 6 ; De Laar ; H7 ; D8 
+ 45.394,00 ; 0,83 ; AETOS DS 4 ; Toesj DS 1 ; Sporthal Elderveld ; H7 ; H7 
+ 45.394,00 ; 0,83 ; AETOS MA 4 ; Trivos MA 2 ; Sporthal Elderveld ; D8 ; H9 
+;;;;;;
+ 45.395,00 ; 0,42 ; AETOS JC 2 ; Surf JC 1 ; Sporthal Middachtensingel ; JA1 ; JC3 
+ 45.395,00 ; 0,42 ; AETOS MA 3 ; TweeVV MA 1 ; Sporthal Middachtensingel ; D10 ; JC3 
+ 45.395,00 ; 0,42 ; AETOS MC 7 ; Tweestroom MC 1 ; Sporthal Middachtensingel ; D7 ; JC3 
+ 45.395,00 ; 0,50 ; AETOS DS 7 ; Invicta DS 3 ; Sporthal Middachtensingel ; D3 ; MC7 
+ 45.395,00 ; 0,50 ; AETOS DS 10 ; TweeVV DS 6 ; Sporthal Middachtensingel ; H8 ; MA3 
+ 45.395,00 ; 0,50 ; AETOS JC 3 ; SDS JC 1 ; Sporthal Middachtensingel ; H6 ; MC7 
+ 45.395,00 ; 0,60 ; AETOS DS 2 ; Libero'99 DS 1 ; Sporthal Middachtensingel ; H2 ; JB2 
+ 45.395,00 ; 0,60 ; AETOS HS 8 ; Excelsior HS 1 ; Sporthal Middachtensingel ; D7 ; JB2 
+ 45.395,00 ; 0,60 ; AETOS MC 3 ; Pegasus MC 1 ; Sporthal Middachtensingel ; D9 ; JC4 
+ 45.395,00 ; 0,69 ; AETOS DS 9 ; HSC DS 3 ; Sporthal Middachtensingel ; D11 ; MB4 
+ 45.395,00 ; 0,69 ; AETOS HS 6 ; Nuovo HS 2 ; Sporthal Middachtensingel ; H8 ; MB4 
+ 45.395,00 ; 0,69 ; AETOS JC 4 ; Toesj JC 1 ; Sporthal Middachtensingel ; H8 ; MB3 
+ 45.395,00 ; 0,77 ; AETOS DS 11 ; O.M.S. DS 4 ; Sporthal Middachtensingel ; D9 ; D9 
+ 45.395,00 ; 0,77 ; AETOS MB 3 ; Tweestroom MB 1 ; Sporthal Middachtensingel ; D9 ; D9 
+ 45.395,00 ; 0,77 ; AETOS MB 4 ; D.O.S. MB 1 ; Sporthal Middachtensingel ; H6 ; JC4 
+;;;;;;
+ 45.395,00 ;; CMV ; De Laar ;;;
+;;; Tessa (organisatie) ;; D2 ; D2 
+;;;; Inclusief opbouwen ; D5 ; x 
+;;;; Inclusief opbouwen ; D5 ; x 
+;;;; Inclusief opbouwen ; D5 ; x 
+;;;;; H8 ; JA1 
+;;;;; H8 ; x 
+;;;; inclusief opruimen ; H5 ; MC4 
+;;;; inclusief opruimen ; H5 ; MC4 
+;;;; inclusief opruimen ; H5 ; MC4 
+;;;; inclusief opruimen ; H9 ; x 
+;;;;inclusief opruimen;H9;x
+;;;;;;

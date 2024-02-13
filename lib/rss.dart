@@ -20,7 +20,7 @@ Future<bool> getRSS(urlRSS) async {
 
     //   xml = xml.replaceAll('stand:puntenvoor>0', 'stand:puntenvoor:>3');
     xml = '$xml\n</ranks>';
-    debugPrint(xml);
+    //   debugPrint(xml);
     result = true;
   } else {
     debugPrint('Request failed with status: ${response.statusCode}.');

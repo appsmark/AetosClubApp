@@ -119,13 +119,6 @@ class _MainScreen extends State<MainScreen> {
                                       return const Ranking();
                                     }));
                           }
-                        /*
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const Ranking(
-                                        )));
-                          }*/
                         : null,
                     style: ElevatedButton.styleFrom(
                         fixedSize: Size(buttonWidth, 90),

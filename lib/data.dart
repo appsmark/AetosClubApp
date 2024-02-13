@@ -218,7 +218,7 @@ class GameData {
 
   GameData(this.date);
 
-  String game() {
+  String gameDate() {
     return date;
   }
 }

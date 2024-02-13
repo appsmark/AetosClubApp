@@ -95,7 +95,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     setState(() {
                       team.set(newValue);
                       dropdownvalue = newValue!;
-                      getRSS(teamInfo.getRanking(team.currentTeam));
+                      //               getRSS(teamInfo.getRanking(team.currentTeam));
+                      teamInfo.getSchedule(team.currentTeam);
                     });
                   },
                 ),
