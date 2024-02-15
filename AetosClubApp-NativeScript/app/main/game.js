@@ -71,6 +71,7 @@ export class Game {
 			var location = r.substring(r.indexOf("Speellocatie:") + 14)
 			location = location.replace(" GLD", "")
 			var game_result = ""
+			location = location.replace("Sporthal Middachtensingel", "Sporthal AETOS")
 			location = location.replace("Verenigde Naties", "VN")
 			location = location.replace("Burgemeester ", "")
 			location = location.substring(0, location.indexOf(']')).split(",")

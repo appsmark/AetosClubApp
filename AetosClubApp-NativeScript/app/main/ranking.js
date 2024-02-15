@@ -45,7 +45,6 @@ export class Ranking {
 				xml = xml.replace("/HEC", "")
 				xml = xml.replace("Vallei Accountants ", "")
 				xml = xml.replace(" VC", "")
-				xml = xml.replace("SV ", "")
 				xml = xml.replace("Rabobank Orion Volleybal Doetinchem ", "Orion ")
 				xml = xml.replace(" Apeldoorn", "")
 				xml = xml.replace("Rebo Woningmakelaars ", "")
@@ -65,7 +64,9 @@ export class Ranking {
 				xml = xml.replace("VoCASA/", "")
 				xml = xml.replace("Ikvolleybal.nl/", "")
 				xml = xml.replace("/VC Zwolle", "")
-
+				xml = xml.replace("Skopein ", "")
+				xml = xml.replace("Engeltherm ", "")
+	
 			}
 			var ranking = xml.split("<stand:ranking>")
 			var rows_ranking = "*"
