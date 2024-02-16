@@ -1,7 +1,7 @@
 {
   "name": "com.appsmark.aetos",
   "main": "app/app.js",
-  "version": "2.9.0",
+  "version": "2.9.1",
   "author": "Martin Keesen",
   "description": "Aetos Club app",
   "license": "None",
