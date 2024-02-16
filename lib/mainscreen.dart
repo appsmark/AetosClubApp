@@ -134,6 +134,7 @@ class _MainScreen extends State<MainScreen> {
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 45,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
@@ -175,6 +176,7 @@ class _MainScreen extends State<MainScreen> {
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 45,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
@@ -218,6 +220,7 @@ class _MainScreen extends State<MainScreen> {
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 45,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
@@ -262,6 +265,7 @@ class _MainScreen extends State<MainScreen> {
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 45,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
