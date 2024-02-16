@@ -49,6 +49,7 @@ export class Duty {
 								this.viewModel.set("text_item_duty_" + index + "_date", date_translation + "   " + data.duty[i].Tijd)
 								visitors = data.duty[i].Uitteam
 								visitors = visitors.replace("Orion Volleybal Doetinchem ", "Orion ")
+								visitors = visitors.replace("Bielderman Koetsier/", "")
 								this.viewModel.set("text_item_duty_" + index + "_game", data.duty[i].Thuisteam + " - " + visitors)
 							}
 							this.viewModel.set("text_item_duty_" + index + "_hall", "Sporthal " + data.duty[i].Locatie)
