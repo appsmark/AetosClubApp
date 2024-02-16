@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'data.dart';
-import 'rss.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({Key? key}) : super(key: key);

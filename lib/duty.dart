@@ -90,13 +90,13 @@ class _DutyState extends State<Duty> {
                                 color: Color(0xFFF9B234), fontSize: 20),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 30,
                           child: Align(
                             alignment: Alignment.centerRight,
                             child: Text(
                               "45",
-                              style: const TextStyle(
+                              style: TextStyle(
                                   //backgroundColor: Colors.amber,
                                   color: Color(0xFFF9B234),
                                   fontSize: 20),
@@ -116,13 +116,13 @@ class _DutyState extends State<Duty> {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 30,
                           child: Align(
                             alignment: Alignment.centerRight,
                             child: Text(
                               "45",
-                              style: const TextStyle(
+                              style: TextStyle(
                                   //backgroundColor: Colors.yellow,
                                   color: Color(0xFFF9B234),
                                   fontSize: 20),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'data.dart';
-//import 'rss.dart';
+import 'rss.dart';
 
 class Schedule extends StatefulWidget {
 //  final List listOfItems;
@@ -21,6 +21,7 @@ class _ScheduleState extends State<Schedule> {
   @override
   void initState() {
     super.initState();
+    getSchedule(teamInfo.getSchedule(team.currentTeam));
     //teamInfo.getSchedule(team.currentTeam);
     listOfItems = data.getGames();
     //  debugPrint(listOfItems.toString());
