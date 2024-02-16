@@ -6,7 +6,7 @@ class Schedule extends StatefulWidget {
 //  final List listOfItems;
 
 //  const Schedule({Key? key, required this.listOfItems}) : super(key: key);
-  const Schedule({Key? key}) : super(key: key);
+  const Schedule({super.key});
 
   @override
   State<Schedule> createState() => _ScheduleState();

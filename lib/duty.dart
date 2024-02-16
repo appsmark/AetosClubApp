@@ -5,7 +5,7 @@ import 'rss.dart';
 class Duty extends StatefulWidget {
   final List listOfItems;
 
-  const Duty({Key? key, required this.listOfItems}) : super(key: key);
+  const Duty({super.key, required this.listOfItems});
 
   @override
   State<Duty> createState() => _DutyState();

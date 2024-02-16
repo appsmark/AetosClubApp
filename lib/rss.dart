@@ -12,7 +12,7 @@ Future<bool> getSchedule(String group) async {
   Client client = Client();
   // String group = "dames/3";
   getRssFeed(client, group).then((value) {
-    if (value != "Not found") {
+    if (value.description!.isNotEmpty) {
       //  List<Information> informationList = parseRSS(value);
       parseRSS(value);
     }
@@ -29,7 +29,7 @@ Future<RssFeed> getRssFeed(Client client, String group) async {
     //          group +
     //        '/programma.rss'));
   } catch (e) {
-    print(e);
+    debugPrint(e.toString());
   }
   if (response.body != "Not Found") {
     return RssFeed.parse(response.body);
@@ -51,7 +51,7 @@ parseRSS(RssFeed feed) {
       debugPrint("${item.title!.replaceAll(RegExp(".*\: "), "")}");
 */
 
-    debugPrint(
-        "${item.description!.replaceAll(RegExp(".*Datum: "), "").replaceAll(RegExp(",.*"), "")}     ${item.description!.substring(time!.start, time.end)}    ${item.title!.replaceAll(RegExp(".*\: "), "")}");
+    //   debugPrint(
+    //     "${item.description!.replaceAll(RegExp(".*Datum: "), "").replaceAll(RegExp(",.*"), "")}     ${item.description!.substring(time!.start, time.end)}    ${item.title!.replaceAll(RegExp(".*: "), "")}");
   }
 }

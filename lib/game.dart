@@ -5,7 +5,7 @@ import 'rss.dart';
 class Game extends StatefulWidget {
   final List listOfItems;
 
-  const Game({Key? key, required this.listOfItems}) : super(key: key);
+  const Game({super.key, required this.listOfItems});
 
   @override
   State<Game> createState() => _GameState();

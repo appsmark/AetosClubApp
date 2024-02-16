@@ -5,7 +5,7 @@ import 'rss.dart';
 class Ranking extends StatefulWidget {
   // final List listOfItems;
 
-  const Ranking({Key? key}) : super(key: key);
+  const Ranking({super.key});
 //  const Ranking({Key? key, required this.listOfItems}) : super(key: key);
 
   @override
