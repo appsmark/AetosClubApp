@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'data.dart';
-import 'rss.dart';
+
+import 'rss_schedule.dart';
+import 'schedule_data.dart';
 
 class Schedule extends StatefulWidget {
-//  final List listOfItems;
-
-//  const Schedule({Key? key, required this.listOfItems}) : super(key: key);
   const Schedule({super.key});
 
   @override
@@ -13,24 +11,25 @@ class Schedule extends StatefulWidget {
 }
 
 class _ScheduleState extends State<Schedule> {
-  var listOfItems = data.getGames();
-  int i = 0;
-  Team team = Team();
-  TeamInfo teamInfo = TeamInfo();
+  ScheduleData data = ScheduleData.instance;
+  List listOfItems = [];
+  RssSchedule rss = RssSchedule();
+
+  Future getData() async {
+    await rss.getSchedule("");
+    setState(() {
+      listOfItems = data.getGames();
+    });
+  }
 
   @override
-  void initState() {
+  initState() {
     super.initState();
-    getSchedule(teamInfo.getSchedule(team.currentTeam));
-    //teamInfo.getSchedule(team.currentTeam);
-    listOfItems = data.getGames();
-    //  debugPrint(listOfItems.toString());
+    getData();
   }
 
   @override
   Widget build(BuildContext context) {
-    // listOfItems = data.getGames();
-    // debugPrint(listOfItems.toString());
     return Scaffold(
         backgroundColor: const Color(0xFF731816),
         appBar: AppBar(
@@ -49,17 +48,48 @@ class _ScheduleState extends State<Schedule> {
         ),
         body: Column(
           children: [
+            separator(),
             Expanded(
                 child: ListView.builder(
                     itemCount: listOfItems.length,
                     itemBuilder: (BuildContext ctxt, int index) {
-                      return Text(
-                        listOfItems[index].gameDate(),
-                        style: const TextStyle(
-                            color: Color(0xFFF9B234), fontSize: 20),
+                      return Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                listOfItems[index]['date'],
+                                style: const TextStyle(
+                                    color: Color(0xFFF9B234), fontSize: 20),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                listOfItems[index]['time'],
+                                style: const TextStyle(
+                                    color: Color(0xFFF9B234), fontSize: 20),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            listOfItems[index]['hall'],
+                            style: const TextStyle(
+                                color: Color(0xFFF9B234), fontSize: 20),
+                          ),
+                          separator(),
+                        ],
                       );
                     }))
           ],
         ));
+  }
+
+  Text separator() {
+    return const Text(
+      "---------------------------------------------------",
+      style: TextStyle(color: Color(0xFFF9B234), fontSize: 20),
+    );
   }
 }
