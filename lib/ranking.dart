@@ -39,7 +39,7 @@ class _RankingState extends State<Ranking> {
           ),
           centerTitle: true,
           title: const Text(
-            "PROGRAMMA",
+            "STAND",
             style: TextStyle(
                 color: Color(0xFF00AADE),
                 fontSize: 35,
@@ -56,10 +56,15 @@ class _RankingState extends State<Ranking> {
                       return Column(
                         children: [
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Text(
-                                listOfItems[index]['date'],
+                                "${index + 1} ",
+                                style: const TextStyle(
+                                    color: Color(0xFFF9B234), fontSize: 20),
+                              ),
+                              Text(
+                                listOfItems[index]['team'],
                                 style: const TextStyle(
                                     color: Color(0xFFF9B234), fontSize: 20),
                               ),
@@ -67,18 +72,12 @@ class _RankingState extends State<Ranking> {
                                 width: 10,
                               ),
                               Text(
-                                listOfItems[index]['time'],
+                                "${listOfItems[index]['games']} -  ${listOfItems[index]['points']}",
                                 style: const TextStyle(
                                     color: Color(0xFFF9B234), fontSize: 20),
                               ),
                             ],
                           ),
-                          Text(
-                            listOfItems[index]['hall'],
-                            style: const TextStyle(
-                                color: Color(0xFFF9B234), fontSize: 20),
-                          ),
-                          separator(),
                         ],
                       );
                     }))
