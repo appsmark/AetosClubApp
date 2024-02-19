@@ -48,6 +48,10 @@ class _RankingState extends State<Ranking> {
         ),
         body: Column(
           children: [
+            Text(
+              data.competition,
+              style: const TextStyle(color: Color(0xFFF9B234), fontSize: 20),
+            ),
             separator(),
             Expanded(
                 child: ListView.builder(
@@ -55,28 +59,38 @@ class _RankingState extends State<Ranking> {
                     itemBuilder: (BuildContext ctxt, int index) {
                       return Column(
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text(
-                                "${index + 1} ",
-                                style: const TextStyle(
-                                    color: Color(0xFFF9B234), fontSize: 20),
-                              ),
-                              Text(
-                                listOfItems[index]['team'],
-                                style: const TextStyle(
-                                    color: Color(0xFFF9B234), fontSize: 20),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                "${listOfItems[index]['games']} -  ${listOfItems[index]['points']}",
-                                style: const TextStyle(
-                                    color: Color(0xFFF9B234), fontSize: 20),
-                              ),
-                            ],
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 0.02 * MediaQuery.of(context).size.height,
+                              left: 0.1 * MediaQuery.of(context).size.width,
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "${index + 1}   ",
+                                  style: const TextStyle(
+                                      color: Color(0xFFF9B234), fontSize: 20),
+                                ),
+                                Text(
+                                  listOfItems[index]['team'],
+                                  style: const TextStyle(
+                                      color: Color(0xFFF9B234), fontSize: 20),
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(left: 10, right: 2),
+                                  child: Text(
+                                    "${listOfItems[index]['games']} - ${listOfItems[index]['points']}",
+                                    style: const TextStyle(
+                                        color: Color(0xFFF9B234), fontSize: 20),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       );

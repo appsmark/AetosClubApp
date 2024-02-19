@@ -35,7 +35,10 @@ class _MainScreen extends State<MainScreen> {
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
+    double buttonHeight = 0.1 * screenHeight;
     double buttonWidth = 0.8 * screenWidth;
+    double paddingButton = 0.01 * screenHeight;
+    double sizeFont = 0.04 * screenHeight;
     double spacingButtons = 0.02 * screenHeight;
     return GestureDetector(
       onDoubleTap: () {
@@ -121,19 +124,19 @@ class _MainScreen extends State<MainScreen> {
                           }
                         : null,
                     style: ElevatedButton.styleFrom(
-                        fixedSize: Size(buttonWidth, 90),
+                        fixedSize: Size(buttonWidth, buttonHeight),
                         shape: const StadiumBorder(),
                         side: const BorderSide(color: Colors.black, width: 4),
                         backgroundColor: const Color(0xFFF9B234)),
-                    child: const Padding(
-                      padding: EdgeInsets.all(28),
+                    child: Padding(
+                      padding: EdgeInsets.all(paddingButton),
                       child: FittedBox(
                         fit: BoxFit.fitWidth,
                         child: Text(
                           "STAND",
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 45,
+                            fontSize: sizeFont,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -163,19 +166,19 @@ class _MainScreen extends State<MainScreen> {
                           }
                         : null,
                     style: ElevatedButton.styleFrom(
-                        fixedSize: Size(buttonWidth, 90),
+                        fixedSize: Size(buttonWidth, buttonHeight),
                         shape: const StadiumBorder(),
                         side: const BorderSide(color: Colors.black, width: 4),
                         backgroundColor: const Color(0xFFF9B234)),
-                    child: const Padding(
-                      padding: EdgeInsets.all(28),
+                    child: Padding(
+                      padding: EdgeInsets.all(paddingButton),
                       child: FittedBox(
                         fit: BoxFit.fitWidth,
                         child: Text(
                           "PROGRAMMA",
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 45,
+                            fontSize: sizeFont,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -207,19 +210,19 @@ class _MainScreen extends State<MainScreen> {
                           }
                         : null,
                     style: ElevatedButton.styleFrom(
-                        fixedSize: Size(buttonWidth, 90),
+                        fixedSize: Size(buttonWidth, buttonHeight),
                         shape: const StadiumBorder(),
                         side: const BorderSide(color: Colors.black, width: 4),
                         backgroundColor: const Color(0xFFF9B234)),
-                    child: const Padding(
-                      padding: EdgeInsets.all(28),
+                    child: Padding(
+                      padding: EdgeInsets.all(paddingButton),
                       child: FittedBox(
                         fit: BoxFit.fitWidth,
                         child: Text(
                           "WEDSTRIJD",
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 45,
+                            fontSize: sizeFont,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -252,19 +255,19 @@ class _MainScreen extends State<MainScreen> {
                           }
                         : null,
                     style: ElevatedButton.styleFrom(
-                        fixedSize: Size(buttonWidth, 90),
+                        fixedSize: Size(buttonWidth, buttonHeight),
                         shape: const StadiumBorder(),
                         side: const BorderSide(color: Colors.black, width: 4),
                         backgroundColor: const Color(0xFFF9B234)),
-                    child: const Padding(
-                      padding: EdgeInsets.all(28),
+                    child: Padding(
+                      padding: EdgeInsets.all(paddingButton),
                       child: FittedBox(
                         fit: BoxFit.fitWidth,
                         child: Text(
                           "ZAALDIENST",
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 45,
+                            fontSize: sizeFont,
                             fontWeight: FontWeight.bold,
                           ),
                         ),

@@ -74,7 +74,7 @@ class _ScheduleState extends State<Schedule> {
                             ],
                           ),
                           Text(
-                            listOfItems[index]['hall'],
+                            listOfItems[index]['game'],
                             style: const TextStyle(
                                 color: Color(0xFFF9B234), fontSize: 20),
                           ),

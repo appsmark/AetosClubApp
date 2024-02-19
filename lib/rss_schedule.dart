@@ -3,9 +3,11 @@ import 'package:http/http.dart';
 import 'package:rss_dart/dart_rss.dart';
 
 import 'data.dart';
+import 'rss_clean.dart';
 import 'schedule_data.dart';
 
 class RssSchedule {
+  RssClean rssClean = RssClean();
   ScheduleData scheduleData = ScheduleData.instance;
 
   Future<bool> getSchedule(String group) async {
@@ -39,7 +41,7 @@ class RssSchedule {
   }
 
   parseRSS(RssFeed feed) {
-    RegExp timeRegex = RegExp(r"\d\d:\d\d");
+    RegExp timeRegex = RegExp(r"\d?\d:\d\d");
     for (var item in feed.items) {
       RegExpMatch? time = timeRegex.firstMatch(item.description!);
       scheduleData.addGame({
@@ -47,7 +49,7 @@ class RssSchedule {
             .replaceAll(RegExp(".*Datum: "), "")
             .replaceAll(RegExp(",.*"), ""),
         'time': item.description!.substring(time!.start, time.end),
-        'hall': item.title!.replaceAll(RegExp(".*: "), ""),
+        'game': rssClean.clean(item.title!.replaceAll(RegExp(".*: "), "")),
       });
       //   debugPrint("${item.description!}");
     }

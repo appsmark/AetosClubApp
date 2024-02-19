@@ -1,5 +1,6 @@
 class RankingData {
   static final instance = RankingData._internal();
+  String competition = "";
   List data = [];
 
   RankingData._internal();

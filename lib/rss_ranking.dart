@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import 'data.dart';
 import 'ranking_data.dart';
+import 'rss_clean.dart';
 
 class RssRanking {
+  RssClean rssClean = RssClean();
+  Team team = Team();
+  TeamInfo teamInfo = TeamInfo();
   RankingData rankingData = RankingData.instance;
 
   Future getRanking() async {
-    final response = await http.get(Uri.parse(
+    //  String group = teamInfo.getSchedule(team.currentTeam);
+/*    final response = await http.get(Uri.parse(
         'https://api.nevobo.nl/export/poule/regio-oost/MC3N1/stand.rss'));
+  */
+    final response =
+        await http.get(Uri.parse(teamInfo.getRanking(team.currentTeam)));
 
     if (response.statusCode == 200) {
       return parseXML(response.body);
@@ -17,11 +26,14 @@ class RssRanking {
     }
   }
 
-  parseXML(stream) {
+  parseXML(inputStream) {
+    rankingData.clear();
+    String stream = rssClean.clean(inputStream);
     var titles = stream.split("title>");
     String competition = titles[3]
         .replaceAll(RegExp('.*Stand '), '')
         .replaceAll(RegExp('].*'), '');
+    rankingData.competition = rssClean.clean(competition);
     var games = stream.split(RegExp("<stand:wedstrijden>"));
     var points = stream.split(RegExp("<stand:punten>"));
     var teams = stream.split(RegExp("<stand:team "));
