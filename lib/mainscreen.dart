@@ -127,7 +127,9 @@ class _MainScreen extends State<MainScreen> {
                     style: ElevatedButton.styleFrom(
                         fixedSize: Size(buttonWidth, buttonHeight),
                         shape: const StadiumBorder(),
-                        side: const BorderSide(color: Colors.black, width: 4),
+                        side: BorderSide(
+                            color: Colors.black,
+                            width: sizes.buttonBorderWidth),
                         backgroundColor: sizes.colorButton),
                     child: Padding(
                       padding: EdgeInsets.all(paddingButton),
@@ -169,7 +171,9 @@ class _MainScreen extends State<MainScreen> {
                     style: ElevatedButton.styleFrom(
                         fixedSize: Size(buttonWidth, buttonHeight),
                         shape: const StadiumBorder(),
-                        side: const BorderSide(color: Colors.black, width: 4),
+                        side: BorderSide(
+                            color: Colors.black,
+                            width: sizes.buttonBorderWidth),
                         backgroundColor: sizes.colorButton),
                     child: Padding(
                       padding: EdgeInsets.all(paddingButton),
@@ -213,7 +217,9 @@ class _MainScreen extends State<MainScreen> {
                     style: ElevatedButton.styleFrom(
                         fixedSize: Size(buttonWidth, buttonHeight),
                         shape: const StadiumBorder(),
-                        side: const BorderSide(color: Colors.black, width: 4),
+                        side: BorderSide(
+                            color: Colors.black,
+                            width: sizes.buttonBorderWidth),
                         backgroundColor: sizes.colorButton),
                     child: Padding(
                       padding: EdgeInsets.all(paddingButton),
@@ -258,7 +264,9 @@ class _MainScreen extends State<MainScreen> {
                     style: ElevatedButton.styleFrom(
                         fixedSize: Size(buttonWidth, buttonHeight),
                         shape: const StadiumBorder(),
-                        side: const BorderSide(color: Colors.black, width: 4),
+                        side: BorderSide(
+                            color: Colors.black,
+                            width: sizes.buttonBorderWidth),
                         backgroundColor: sizes.colorButton),
                     child: Padding(
                       padding: EdgeInsets.all(paddingButton),

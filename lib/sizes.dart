@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class Sizes {
   static final instance = Sizes._internal();
+  double buttonBorderWidth = 0;
   double screenHeight = 0;
   double screenWidth = 0;
   double sizeFontButton = 0;
@@ -25,6 +26,7 @@ class Sizes {
   setSizes(context) {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
+    buttonBorderWidth = 0.005 * screenHeight;
     sizeFontButton = 0.045 * screenHeight;
     sizeFontCompetition = 0.03 * screenHeight;
     sizeFontRanking = 0.025 * screenHeight;
