@@ -33,17 +33,17 @@ class _RankingState extends State<Ranking> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xFF731816),
+        backgroundColor: sizes.colorBackground,
         appBar: AppBar(
-          backgroundColor: const Color(0xFF731816),
-          leading: const BackButton(
-            color: Color(0xFF00AADE),
+          backgroundColor: sizes.colorBackground,
+          leading: BackButton(
+            color: sizes.colorTitle,
           ),
           centerTitle: true,
           title: Text(
             "STAND",
             style: TextStyle(
-                color: Color(0xFF00AADE),
+                color: sizes.colorTitle,
                 fontSize: sizes.sizeFontTitle,
                 fontWeight: FontWeight.bold),
           ),
@@ -70,19 +70,19 @@ class _RankingState extends State<Ranking> {
                       Text(
                         (1 + listOfItems.indexOf(item)).toString(),
                         style: TextStyle(
-                            color: Color(0xFFF9B234),
+                            color: sizes.colorRanking,
                             fontSize: sizes.sizeFontRanking),
                       ),
                       Text(
                         item['team'],
                         style: TextStyle(
-                            color: Color(0xFFF9B234),
+                            color: sizes.colorRanking,
                             fontSize: sizes.sizeFontRanking),
                       ),
                       Text(
                         "${item['games']} - ${item['points']}",
                         style: TextStyle(
-                            color: Color(0xFFF9B234),
+                            color: sizes.colorRanking,
                             fontSize: sizes.sizeFontRanking),
                       ),
                     ])
@@ -94,9 +94,9 @@ class _RankingState extends State<Ranking> {
   }
 
   Text separator() {
-    return const Text(
+    return Text(
       "---------------------------------------------------",
-      style: TextStyle(color: Color(0xFFF9B234), fontSize: 20),
+      style: TextStyle(color: sizes.colorRanking, fontSize: 20),
     );
   }
 }

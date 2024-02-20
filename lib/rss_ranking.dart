@@ -48,7 +48,6 @@ class RssRanking {
       String point = points[index]
           .replaceAll(RegExp('<.*'), '')
           .replaceAll(RegExp('\n.*'), '');
-      debugPrint("$team  $game - $point");
       rankingData.addTeam({'team': team, 'games': game, 'points': point});
     }
   }

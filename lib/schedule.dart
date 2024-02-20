@@ -64,7 +64,8 @@ class _ScheduleState extends State<Schedule> {
                                 listOfItems[index]['date'],
                                 style: TextStyle(
                                     color: sizes.colorSchedule,
-                                    fontSize: sizes.sizeFontSchedule),
+                                    fontSize: sizes.sizeFontSchedule,
+                                    fontWeight: FontWeight.bold),
                               ),
                               const SizedBox(
                                 width: 10,
@@ -73,7 +74,8 @@ class _ScheduleState extends State<Schedule> {
                                 listOfItems[index]['time'],
                                 style: TextStyle(
                                     color: sizes.colorSchedule,
-                                    fontSize: sizes.sizeFontSchedule),
+                                    fontSize: sizes.sizeFontSchedule,
+                                    fontWeight: FontWeight.bold),
                               ),
                             ],
                           ),
@@ -81,7 +83,8 @@ class _ScheduleState extends State<Schedule> {
                             listOfItems[index]['game'],
                             style: TextStyle(
                                 color: sizes.colorSchedule,
-                                fontSize: sizes.sizeFontSchedule),
+                                fontSize: sizes.sizeFontSchedule,
+                                fontWeight: FontWeight.bold),
                           ),
                           separator(),
                         ],
