@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'data.dart';
+import 'sizes.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -14,6 +16,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   // Initial Selected Value
   late String dropdownvalue;
   late String dropdownvalueAlternative;
+  Sizes sizes = Sizes.instance;
   TeamInfo teamInfo = TeamInfo();
   List<String> items = [];
 
@@ -29,39 +32,37 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
-    double spacing = 0.05 * screenHeight;
     return Scaffold(
-        backgroundColor: const Color(0xFF731816),
+        backgroundColor: sizes.colorBackground,
         appBar: AppBar(
-          backgroundColor: const Color(0xFF731816),
+          backgroundColor: sizes.colorBackground,
           leading: const BackButton(
             color: Color(0xFF00AADE),
           ),
           centerTitle: true,
-          title: const Text(
+          title: Text(
             "INSTELLINGEN",
             style: TextStyle(
-                color: Color(0xFF00AADE),
-                fontSize: 35,
+                color: sizes.colorTitle,
+                fontSize: sizes.sizeFontTitle,
                 fontWeight: FontWeight.bold),
           ),
         ),
         body: Column(
           children: [
             Container(
-              height: spacing,
+              height: sizes.spacing,
               //      color: Colors.white,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
+                Text(
                   " TEAM: ",
                   style: TextStyle(
-                      backgroundColor: Color(0xFF731816),
-                      color: Color(0xFFF9B234),
-                      fontSize: 25),
+                      backgroundColor: sizes.colorBackground,
+                      color: sizes.colorSelection,
+                      fontSize: sizes.sizeFontSelection),
                 ),
                 DropdownButton(
                   // Initial Value

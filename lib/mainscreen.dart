@@ -6,6 +6,7 @@ import 'ranking.dart';
 import 'rss.dart';
 import 'schedule.dart';
 import 'settingsscreen.dart';
+import 'sizes.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -20,6 +21,7 @@ class _MainScreen extends State<MainScreen> {
   bool enableRanking = true;
   bool enableSchedule = true;
 
+  Sizes sizes = Sizes.instance;
   Team team = Team();
   TeamInfo teamInfo = TeamInfo();
 
@@ -38,22 +40,21 @@ class _MainScreen extends State<MainScreen> {
     double buttonHeight = 0.1 * screenHeight;
     double buttonWidth = 0.8 * screenWidth;
     double paddingButton = 0.01 * screenHeight;
-    double sizeFont = 0.04 * screenHeight;
     double spacingButtons = 0.02 * screenHeight;
     return GestureDetector(
       onDoubleTap: () {
         debugPrint("easter");
       },
       child: Scaffold(
-        backgroundColor: const Color(0xFF731816),
+        backgroundColor: sizes.colorBackground,
         appBar: AppBar(
           centerTitle: true,
           actions: [
             GestureDetector(
               child: Icon(
                 Icons.more_vert,
-                color: const Color(0xFF00AADE),
-                size: 0.12 * MediaQuery.of(context).size.width,
+                color: sizes.colorTitle,
+                size: sizes.sizeFontTitle,
               ),
               onTap: () {
                 Navigator.push(
@@ -76,9 +77,9 @@ class _MainScreen extends State<MainScreen> {
           title: GestureDetector(
             child: Text(
               "TEAM ${team.currentTeam}",
-              style: const TextStyle(
-                  color: Color(0xFF00AADE),
-                  fontSize: 35,
+              style: TextStyle(
+                  color: sizes.colorTitle,
+                  fontSize: sizes.sizeFontTitle,
                   fontWeight: FontWeight.bold),
             ),
 /*
@@ -90,13 +91,13 @@ class _MainScreen extends State<MainScreen> {
               }
 */
           ),
-          backgroundColor: const Color(0xFF731816),
+          backgroundColor: sizes.colorBackground,
           elevation: 0,
         ),
         body: Column(
           children: [
             Container(
-              color: const Color(0xFF731816),
+              color: sizes.colorBackground,
               height: 0.8 * screenHeight,
               width: screenWidth,
               child: Column(
@@ -127,7 +128,7 @@ class _MainScreen extends State<MainScreen> {
                         fixedSize: Size(buttonWidth, buttonHeight),
                         shape: const StadiumBorder(),
                         side: const BorderSide(color: Colors.black, width: 4),
-                        backgroundColor: const Color(0xFFF9B234)),
+                        backgroundColor: sizes.colorButton),
                     child: Padding(
                       padding: EdgeInsets.all(paddingButton),
                       child: FittedBox(
@@ -136,7 +137,7 @@ class _MainScreen extends State<MainScreen> {
                           "STAND",
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: sizeFont,
+                            fontSize: sizes.sizeFontButton,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -169,7 +170,7 @@ class _MainScreen extends State<MainScreen> {
                         fixedSize: Size(buttonWidth, buttonHeight),
                         shape: const StadiumBorder(),
                         side: const BorderSide(color: Colors.black, width: 4),
-                        backgroundColor: const Color(0xFFF9B234)),
+                        backgroundColor: sizes.colorButton),
                     child: Padding(
                       padding: EdgeInsets.all(paddingButton),
                       child: FittedBox(
@@ -178,7 +179,7 @@ class _MainScreen extends State<MainScreen> {
                           "PROGRAMMA",
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: sizeFont,
+                            fontSize: sizes.sizeFontButton,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -213,7 +214,7 @@ class _MainScreen extends State<MainScreen> {
                         fixedSize: Size(buttonWidth, buttonHeight),
                         shape: const StadiumBorder(),
                         side: const BorderSide(color: Colors.black, width: 4),
-                        backgroundColor: const Color(0xFFF9B234)),
+                        backgroundColor: sizes.colorButton),
                     child: Padding(
                       padding: EdgeInsets.all(paddingButton),
                       child: FittedBox(
@@ -222,7 +223,7 @@ class _MainScreen extends State<MainScreen> {
                           "WEDSTRIJD",
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: sizeFont,
+                            fontSize: sizes.sizeFontButton,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -258,7 +259,7 @@ class _MainScreen extends State<MainScreen> {
                         fixedSize: Size(buttonWidth, buttonHeight),
                         shape: const StadiumBorder(),
                         side: const BorderSide(color: Colors.black, width: 4),
-                        backgroundColor: const Color(0xFFF9B234)),
+                        backgroundColor: sizes.colorButton),
                     child: Padding(
                       padding: EdgeInsets.all(paddingButton),
                       child: FittedBox(
@@ -267,7 +268,7 @@ class _MainScreen extends State<MainScreen> {
                           "ZAALDIENST",
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: sizeFont,
+                            fontSize: sizes.sizeFontButton,
                             fontWeight: FontWeight.bold,
                           ),
                         ),

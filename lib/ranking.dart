@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'rss_ranking.dart';
 import 'ranking_data.dart';
+import 'sizes.dart';
 
 class Ranking extends StatefulWidget {
   const Ranking({super.key});
@@ -14,6 +15,7 @@ class _RankingState extends State<Ranking> {
   RankingData data = RankingData.instance;
   List listOfItems = [];
   RssRanking rss = RssRanking();
+  Sizes sizes = Sizes.instance;
 
   Future getData() async {
     await rss.getRanking();
@@ -38,11 +40,11 @@ class _RankingState extends State<Ranking> {
             color: Color(0xFF00AADE),
           ),
           centerTitle: true,
-          title: const Text(
+          title: Text(
             "STAND",
             style: TextStyle(
                 color: Color(0xFF00AADE),
-                fontSize: 35,
+                fontSize: sizes.sizeFontTitle,
                 fontWeight: FontWeight.bold),
           ),
         ),
@@ -50,12 +52,14 @@ class _RankingState extends State<Ranking> {
           children: [
             Text(
               data.competition,
-              style: const TextStyle(color: Color(0xFFF9B234), fontSize: 20),
+              style: TextStyle(
+                  color: sizes.colorCompetition,
+                  fontSize: sizes.sizeFontCompetition),
             ),
             separator(),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(28.0),
+                padding: EdgeInsets.all(28.0),
                 child: Table(columnWidths: {
                   0: FixedColumnWidth(30),
                   1: FlexColumnWidth(200),
@@ -65,18 +69,21 @@ class _RankingState extends State<Ranking> {
                     TableRow(children: [
                       Text(
                         (1 + listOfItems.indexOf(item)).toString(),
-                        style: const TextStyle(
-                            color: Color(0xFFF9B234), fontSize: 20),
+                        style: TextStyle(
+                            color: Color(0xFFF9B234),
+                            fontSize: sizes.sizeFontRanking),
                       ),
                       Text(
                         item['team'],
-                        style: const TextStyle(
-                            color: Color(0xFFF9B234), fontSize: 20),
+                        style: TextStyle(
+                            color: Color(0xFFF9B234),
+                            fontSize: sizes.sizeFontRanking),
                       ),
                       Text(
                         "${item['games']} - ${item['points']}",
-                        style: const TextStyle(
-                            color: Color(0xFFF9B234), fontSize: 20),
+                        style: TextStyle(
+                            color: Color(0xFFF9B234),
+                            fontSize: sizes.sizeFontRanking),
                       ),
                     ])
                 ]),

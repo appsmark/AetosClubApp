@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'rss_schedule.dart';
 import 'schedule_data.dart';
+import 'sizes.dart';
 
 class Schedule extends StatefulWidget {
   const Schedule({super.key});
@@ -14,6 +15,7 @@ class _ScheduleState extends State<Schedule> {
   ScheduleData data = ScheduleData.instance;
   List listOfItems = [];
   RssSchedule rss = RssSchedule();
+  Sizes sizes = Sizes.instance;
 
   Future getData() async {
     await rss.getSchedule("");
@@ -31,18 +33,18 @@ class _ScheduleState extends State<Schedule> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xFF731816),
+        backgroundColor: sizes.colorBackground,
         appBar: AppBar(
-          backgroundColor: const Color(0xFF731816),
-          leading: const BackButton(
-            color: Color(0xFF00AADE),
+          backgroundColor: sizes.colorBackground,
+          leading: BackButton(
+            color: sizes.colorTitle,
           ),
           centerTitle: true,
-          title: const Text(
+          title: Text(
             "PROGRAMMA",
             style: TextStyle(
-                color: Color(0xFF00AADE),
-                fontSize: 35,
+                color: sizes.colorTitle,
+                fontSize: sizes.sizeFontTitle,
                 fontWeight: FontWeight.bold),
           ),
         ),
@@ -60,23 +62,26 @@ class _ScheduleState extends State<Schedule> {
                             children: [
                               Text(
                                 listOfItems[index]['date'],
-                                style: const TextStyle(
-                                    color: Color(0xFFF9B234), fontSize: 20),
+                                style: TextStyle(
+                                    color: sizes.colorSchedule,
+                                    fontSize: sizes.sizeFontSchedule),
                               ),
                               const SizedBox(
                                 width: 10,
                               ),
                               Text(
                                 listOfItems[index]['time'],
-                                style: const TextStyle(
-                                    color: Color(0xFFF9B234), fontSize: 20),
+                                style: TextStyle(
+                                    color: sizes.colorSchedule,
+                                    fontSize: sizes.sizeFontSchedule),
                               ),
                             ],
                           ),
                           Text(
                             listOfItems[index]['game'],
-                            style: const TextStyle(
-                                color: Color(0xFFF9B234), fontSize: 20),
+                            style: TextStyle(
+                                color: sizes.colorSchedule,
+                                fontSize: sizes.sizeFontSchedule),
                           ),
                           separator(),
                         ],
@@ -87,9 +92,10 @@ class _ScheduleState extends State<Schedule> {
   }
 
   Text separator() {
-    return const Text(
+    return Text(
       "---------------------------------------------------",
-      style: TextStyle(color: Color(0xFFF9B234), fontSize: 20),
+      style: TextStyle(
+          color: sizes.colorSchedule, fontSize: sizes.sizeFontSchedule),
     );
   }
 }

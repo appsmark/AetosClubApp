@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'data.dart';
 import 'rss.dart';
+import 'sizes.dart';
 
 class Game extends StatefulWidget {
   final List listOfItems;
@@ -14,6 +15,7 @@ class Game extends StatefulWidget {
 class _GameState extends State<Game> {
   var listOfItems = data.getTeams();
   int i = 0;
+  Sizes sizes = Sizes.instance;
   Team team = Team();
   TeamInfo teamInfo = TeamInfo();
 
@@ -28,18 +30,18 @@ class _GameState extends State<Game> {
   Widget build(BuildContext context) {
     listOfItems = data.getTeams();
     return Scaffold(
-        backgroundColor: const Color(0xFF731816),
+        backgroundColor: sizes.colorBackground,
         appBar: AppBar(
-          backgroundColor: const Color(0xFF731816),
+          backgroundColor: sizes.colorBackground,
           leading: const BackButton(
             color: Color(0xFF00AADE),
           ),
           centerTitle: true,
-          title: const Text(
+          title: Text(
             "WEDSTRIJD",
             style: TextStyle(
-                color: Color(0xFF00AADE),
-                fontSize: 35,
+                color: sizes.colorTitle,
+                fontSize: sizes.sizeFontTitle,
                 fontWeight: FontWeight.bold),
           ),
         ),
