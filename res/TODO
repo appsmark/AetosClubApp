@@ -1,14 +1,13 @@
 Flutter:
-alle data in List inlezen
 handling by verkeerd adres
 
 Algemeen:
 Aanwezigheid voor wedstrijd 
 Reservering beach volley
-Data laden voordat pagina getoond wordt
 setstanden van wedstrijd die op de dag klaar is
 duty.js, reactie op rss error
-back button in Android
+back button size
 pause/resume app behaviour
-
-
+app bar hoger?
+separator over hele breedte 
+deploy met oude key

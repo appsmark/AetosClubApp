@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 import 'data.dart';
@@ -12,10 +11,6 @@ class RssRanking {
   RankingData rankingData = RankingData.instance;
 
   Future getRanking() async {
-    //  String group = teamInfo.getSchedule(team.currentTeam);
-/*    final response = await http.get(Uri.parse(
-        'https://api.nevobo.nl/export/poule/regio-oost/MC3N1/stand.rss'));
-  */
     final response =
         await http.get(Uri.parse(teamInfo.getRanking(team.currentTeam)));
 

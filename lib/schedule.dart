@@ -18,7 +18,7 @@ class _ScheduleState extends State<Schedule> {
   Sizes sizes = Sizes.instance;
 
   Future getData() async {
-    await rss.getSchedule("");
+    await rss.getSchedule();
     setState(() {
       listOfItems = data.getGames();
     });
