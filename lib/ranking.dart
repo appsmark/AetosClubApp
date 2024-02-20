@@ -54,47 +54,34 @@ class _RankingState extends State<Ranking> {
             ),
             separator(),
             Expanded(
-                child: ListView.builder(
-                    itemCount: listOfItems.length,
-                    itemBuilder: (BuildContext ctxt, int index) {
-                      return Column(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.only(
-                              top: 0.02 * MediaQuery.of(context).size.height,
-                              left: 0.1 * MediaQuery.of(context).size.width,
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "${index + 1}   ",
-                                  style: const TextStyle(
-                                      color: Color(0xFFF9B234), fontSize: 20),
-                                ),
-                                Text(
-                                  listOfItems[index]['team'],
-                                  style: const TextStyle(
-                                      color: Color(0xFFF9B234), fontSize: 20),
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.only(left: 10, right: 2),
-                                  child: Text(
-                                    "${listOfItems[index]['games']} - ${listOfItems[index]['points']}",
-                                    style: const TextStyle(
-                                        color: Color(0xFFF9B234), fontSize: 20),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      );
-                    }))
+              child: Padding(
+                padding: const EdgeInsets.all(28.0),
+                child: Table(columnWidths: {
+                  0: FixedColumnWidth(30),
+                  1: FlexColumnWidth(200),
+                  2: FixedColumnWidth(80)
+                }, children: [
+                  for (var item in listOfItems)
+                    TableRow(children: [
+                      Text(
+                        (1 + listOfItems.indexOf(item)).toString(),
+                        style: const TextStyle(
+                            color: Color(0xFFF9B234), fontSize: 20),
+                      ),
+                      Text(
+                        item['team'],
+                        style: const TextStyle(
+                            color: Color(0xFFF9B234), fontSize: 20),
+                      ),
+                      Text(
+                        "${item['games']} - ${item['points']}",
+                        style: const TextStyle(
+                            color: Color(0xFFF9B234), fontSize: 20),
+                      ),
+                    ])
+                ]),
+              ),
+            )
           ],
         ));
   }
