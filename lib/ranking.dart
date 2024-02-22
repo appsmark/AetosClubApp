@@ -75,10 +75,10 @@ class _RankingState extends State<Ranking> {
                 ),
                 child: Table(columnWidths: {
                   0: FixedColumnWidth(0.15 * sizes.screenWidth),
-                  1: FlexColumnWidth(0.4 * sizes.screenWidth),
-                  2: FixedColumnWidth(0.1 * sizes.screenWidth),
-                  3: FixedColumnWidth(0.02 * sizes.screenWidth),
-                  4: FixedColumnWidth(0.11 * sizes.screenWidth),
+                  1: FixedColumnWidth(0.5 * sizes.screenWidth),
+                  2: FixedColumnWidth(0.15 * sizes.screenWidth),
+                  3: FixedColumnWidth(0.09 * sizes.screenWidth),
+                  //     4: FixedColumnWidth(0.1 * sizes.screenWidth),
                 }, children: [
                   for (var item in listOfItems)
                     TableRow(children: [
@@ -113,7 +113,7 @@ class _RankingState extends State<Ranking> {
                         child: Align(
                           alignment: Alignment.centerRight,
                           child: Text(
-                            "${item['games']}",
+                            "${item['games']} - ",
                             style: TextStyle(
                                 color: sizes.colorRanking,
                                 fontWeight: FontWeight.bold,
@@ -121,6 +121,7 @@ class _RankingState extends State<Ranking> {
                           ),
                         ),
                       ),
+                      /*
                       Padding(
                         padding:
                             EdgeInsets.only(top: 0.01 * sizes.screenHeight),
@@ -135,6 +136,7 @@ class _RankingState extends State<Ranking> {
                           ),
                         ),
                       ),
+                      */
                       Padding(
                         padding:
                             EdgeInsets.only(top: 0.01 * sizes.screenHeight),
