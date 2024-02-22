@@ -77,8 +77,8 @@ class _RankingState extends State<Ranking> {
                   0: FixedColumnWidth(0.15 * sizes.screenWidth),
                   1: FlexColumnWidth(0.4 * sizes.screenWidth),
                   2: FixedColumnWidth(0.1 * sizes.screenWidth),
-                  3: FixedColumnWidth(0.01 * sizes.screenWidth),
-                  4: FixedColumnWidth(0.1 * sizes.screenWidth),
+                  3: FixedColumnWidth(0.02 * sizes.screenWidth),
+                  4: FixedColumnWidth(0.11 * sizes.screenWidth),
                 }, children: [
                   for (var item in listOfItems)
                     TableRow(children: [
