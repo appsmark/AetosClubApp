@@ -201,7 +201,7 @@ class _MainScreen extends State<MainScreen> {
                               },
                               pageBuilder:
                                   (context, animation, secondaryAnimation) {
-                                return Game();
+                                return const Game();
                               }));
                     },
                     style: ElevatedButton.styleFrom(

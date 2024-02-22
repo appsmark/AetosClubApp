@@ -1,23 +1,40 @@
 class RssClean {
   String clean(String stream) {
     String result = stream;
+    result = result.replaceAll(" Nationale competitie", "");
+    result = result.replaceAll(" Regio Oost", "");
     result = result.replaceAll("Tweede ", "2e ");
     result = result.replaceAll("Twedde ", "2e ");
-    result = result.replaceAll("2e helft ", "");
-    result = result.replaceAll("Sportclub ", "");
-    result = result.replaceAll("Rensa Family ", "");
-    result = result.replaceAll("Rebo Woningmakelaars ", "");
+    result = result.replaceAll(" 2e helft", "");
+    result = result.replaceAll("Valkenhuizen", "Sporthal Valkenhuizen");
     result = result.replaceAll(" Apeldoorn ", " ");
-    result = result.replaceAll("Ikvolleybal.nl/", "");
     result = result.replaceAll("'05 ", "");
-    result = result.replaceAll("Bultman-Hartholt ", "");
     result = result.replaceAll("Bielderman Koetsier/", "");
-    result = result.replaceAll("Volleybalvereniging ", "");
-    result = result.replaceAll("Skopein ", "");
+    result = result.replaceAll("Bultman-Hartholt ", "");
+    result = result.replaceAll(
+        "Burgemeester Cees van der Knaapweg", "Burgemeester v.d. Knaapweg");
     result = result.replaceAll("Engeltherm ", "");
     result = result.replaceAll("Eurosped ", "");
+    result = result.replaceAll("Ikvolleybal.nl/", "");
+    result = result.replaceAll("Jumbo Van Andel-", "");
+    result = result.replaceAll("Rebo Woningmakelaars ", "");
+    result = result.replaceAll("Rensa Family ", "");
+    result = result.replaceAll("Skopein ", "");
+    result = result.replaceAll("Sportclub ", "");
+    result = result.replaceAll("'Topklimaat in Volleybal' ", "");
+    result = result.replaceAll("Volleybalvereniging ", "");
     result = result.replaceAll("Voorsterslag/", "");
     result = result.replaceAll("Weghorst Makelaardij ", "");
+    result = result.replaceAll("HS ", "H");
+    result = result.replaceAll(" DS ", " D");
+    result = result.replaceAll("JA ", "JA");
+    result = result.replaceAll("JB ", "JB");
+    result = result.replaceAll("JC ", "JC");
+    result = result.replaceAll("MA ", "MA");
+    result = result.replaceAll("MB ", "MB");
+    result = result.replaceAll("MC ", "MC");
+    result = result.replaceAll("MD ", "MD");
+
     return result;
   }
 }

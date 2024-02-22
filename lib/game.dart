@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'rss_clean.dart';
 import 'rss_schedule.dart';
 import 'schedule_data.dart';
 import 'sizes.dart';
@@ -16,6 +17,7 @@ class _GameState extends State<Game> {
   List listOfItems = [
     {'date': '', 'time': '', 'game': '', 'hall': '', 'street': '', 'postal': ''}
   ];
+  RssClean rssClean = RssClean();
   RssSchedule rss = RssSchedule();
   Sizes sizes = Sizes.instance;
 
@@ -79,7 +81,21 @@ class _GameState extends State<Game> {
               height: 0.05 * sizes.screenHeight,
             ),
             Text(
-              listOfItems[0]['game'],
+              listOfItems[0]['game'].replaceAll(RegExp(' -.*'), ''),
+              style: TextStyle(
+                  color: sizes.colorSchedule,
+                  fontSize: sizes.sizeFontSchedule,
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              "tegen",
+              style: TextStyle(
+                  color: sizes.colorSchedule,
+                  fontSize: sizes.sizeFontSchedule,
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              listOfItems[0]['game'].replaceAll(RegExp('.* - '), ''),
               style: TextStyle(
                   color: sizes.colorSchedule,
                   fontSize: sizes.sizeFontSchedule,
@@ -89,14 +105,14 @@ class _GameState extends State<Game> {
               height: 0.05 * sizes.screenHeight,
             ),
             Text(
-              listOfItems[0]['hall'],
+              rssClean.clean(listOfItems[0]['hall']),
               style: TextStyle(
                   color: sizes.colorSchedule,
                   fontSize: sizes.sizeFontSchedule,
                   fontWeight: FontWeight.bold),
             ),
             Text(
-              listOfItems[0]['street'],
+              rssClean.clean(listOfItems[0]['street']),
               style: TextStyle(
                   color: sizes.colorSchedule,
                   fontSize: sizes.sizeFontSchedule,
