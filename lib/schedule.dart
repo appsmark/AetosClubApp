@@ -35,9 +35,17 @@ class _ScheduleState extends State<Schedule> {
     return Scaffold(
         backgroundColor: sizes.colorBackground,
         appBar: AppBar(
+          toolbarHeight: sizes.heightToolbar,
           backgroundColor: sizes.colorBackground,
-          leading: BackButton(
-            color: sizes.colorTitle,
+          leading: GestureDetector(
+            child: Icon(
+              Icons.arrow_back,
+              size: 0.05 * sizes.screenHeight,
+              color: sizes.colorTitle,
+            ),
+            onTap: () {
+              Navigator.pop(context);
+            },
           ),
           centerTitle: true,
           title: Text(
@@ -94,11 +102,15 @@ class _ScheduleState extends State<Schedule> {
         ));
   }
 
-  Text separator() {
-    return Text(
-      "---------------------------------------------------",
-      style: TextStyle(
-          color: sizes.colorSchedule, fontSize: sizes.sizeFontSchedule),
+  Padding separator() {
+    return Padding(
+      padding: EdgeInsets.only(
+        left: 0.05 * sizes.screenWidth,
+        right: 0.05 * sizes.screenWidth,
+      ),
+      child: Divider(
+        color: sizes.colorTitle,
+      ),
     );
   }
 }

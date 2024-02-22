@@ -12,6 +12,7 @@ class Sizes {
   double sizeFontSelection = 0;
   double sizeFontTitle = 0;
   double spacing = 0;
+  double heightToolbar = 0;
 
   Color colorBackground = const Color(0xFF731816);
   Color colorButton = const Color(0xFFF9B234);
@@ -26,10 +27,11 @@ class Sizes {
   setSizes(context) {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
+    heightToolbar = 0.1 * screenHeight;
     buttonBorderWidth = 0.005 * screenHeight;
     sizeFontButton = 0.045 * screenHeight;
-    sizeFontCompetition = 0.03 * screenHeight;
-    sizeFontRanking = 0.025 * screenHeight;
+    sizeFontCompetition = 0.033 * screenHeight;
+    sizeFontRanking = 0.03 * screenHeight;
     sizeFontSchedule = 0.03 * screenHeight;
     sizeFontSelection = 0.03 * screenHeight;
     sizeFontTitle = 0.04 * screenHeight;

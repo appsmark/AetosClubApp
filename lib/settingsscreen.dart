@@ -35,9 +35,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return Scaffold(
         backgroundColor: sizes.colorBackground,
         appBar: AppBar(
+          toolbarHeight: sizes.heightToolbar,
           backgroundColor: sizes.colorBackground,
-          leading: const BackButton(
-            color: Color(0xFF00AADE),
+          leading: GestureDetector(
+            child: Icon(
+              Icons.arrow_back,
+              size: 0.05 * sizes.screenHeight,
+              color: sizes.colorTitle,
+            ),
+            onTap: () {
+              Navigator.pop(context);
+            },
           ),
           centerTitle: true,
           title: Text(

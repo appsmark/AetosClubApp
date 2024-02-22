@@ -35,9 +35,17 @@ class _RankingState extends State<Ranking> {
     return Scaffold(
         backgroundColor: sizes.colorBackground,
         appBar: AppBar(
+          toolbarHeight: sizes.heightToolbar,
           backgroundColor: sizes.colorBackground,
-          leading: BackButton(
-            color: sizes.colorTitle,
+          leading: GestureDetector(
+            child: Icon(
+              Icons.arrow_back,
+              size: 0.05 * sizes.screenHeight,
+              color: sizes.colorTitle,
+            ),
+            onTap: () {
+              Navigator.pop(context);
+            },
           ),
           centerTitle: true,
           title: Text(
@@ -50,40 +58,96 @@ class _RankingState extends State<Ranking> {
         ),
         body: Column(
           children: [
+            separator(),
             Text(
               data.competition,
               style: TextStyle(
                   color: sizes.colorCompetition,
+                  fontWeight: FontWeight.bold,
                   fontSize: sizes.sizeFontCompetition),
             ),
             separator(),
             Expanded(
               child: Padding(
-                padding: EdgeInsets.all(28.0),
+                padding: EdgeInsets.only(
+                  left: 0.02 * sizes.screenWidth,
+                  right: 0.05 * sizes.screenWidth,
+                ),
                 child: Table(columnWidths: {
-                  0: FixedColumnWidth(30),
-                  1: FlexColumnWidth(200),
-                  2: FixedColumnWidth(80)
+                  0: FixedColumnWidth(0.15 * sizes.screenWidth),
+                  1: FlexColumnWidth(0.4 * sizes.screenWidth),
+                  2: FixedColumnWidth(0.1 * sizes.screenWidth),
+                  3: FixedColumnWidth(0.01 * sizes.screenWidth),
+                  4: FixedColumnWidth(0.1 * sizes.screenWidth),
                 }, children: [
                   for (var item in listOfItems)
                     TableRow(children: [
-                      Text(
-                        (1 + listOfItems.indexOf(item)).toString(),
-                        style: TextStyle(
-                            color: sizes.colorRanking,
-                            fontSize: sizes.sizeFontRanking),
+                      Padding(
+                        padding:
+                            EdgeInsets.only(top: 0.01 * sizes.screenHeight),
+                        child: Align(
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            "${listOfItems.indexOf(item) + 1}  ",
+                            style: TextStyle(
+                                color: sizes.colorRanking,
+                                fontWeight: FontWeight.bold,
+                                fontSize: sizes.sizeFontRanking),
+                          ),
+                        ),
                       ),
-                      Text(
-                        item['team'],
-                        style: TextStyle(
-                            color: sizes.colorRanking,
-                            fontSize: sizes.sizeFontRanking),
+                      Padding(
+                        padding:
+                            EdgeInsets.only(top: 0.01 * sizes.screenHeight),
+                        child: Text(
+                          item['team'],
+                          style: TextStyle(
+                              color: sizes.colorRanking,
+                              fontWeight: FontWeight.bold,
+                              fontSize: sizes.sizeFontRanking),
+                        ),
                       ),
-                      Text(
-                        "${item['games']} - ${item['points']}",
-                        style: TextStyle(
-                            color: sizes.colorRanking,
-                            fontSize: sizes.sizeFontRanking),
+                      Padding(
+                        padding:
+                            EdgeInsets.only(top: 0.01 * sizes.screenHeight),
+                        child: Align(
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            "${item['games']}",
+                            style: TextStyle(
+                                color: sizes.colorRanking,
+                                fontWeight: FontWeight.bold,
+                                fontSize: sizes.sizeFontRanking),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            EdgeInsets.only(top: 0.01 * sizes.screenHeight),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            " - ",
+                            style: TextStyle(
+                                color: sizes.colorRanking,
+                                fontWeight: FontWeight.bold,
+                                fontSize: sizes.sizeFontRanking),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            EdgeInsets.only(top: 0.01 * sizes.screenHeight),
+                        child: Align(
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            "${item['points']}",
+                            style: TextStyle(
+                                color: sizes.colorRanking,
+                                fontWeight: FontWeight.bold,
+                                fontSize: sizes.sizeFontRanking),
+                          ),
+                        ),
                       ),
                     ])
                 ]),
@@ -93,10 +157,15 @@ class _RankingState extends State<Ranking> {
         ));
   }
 
-  Text separator() {
-    return Text(
-      "---------------------------------------------------",
-      style: TextStyle(color: sizes.colorRanking, fontSize: 20),
+  Padding separator() {
+    return Padding(
+      padding: EdgeInsets.only(
+        left: 0.05 * sizes.screenWidth,
+        right: 0.05 * sizes.screenWidth,
+      ),
+      child: Divider(
+        color: sizes.colorTitle,
+      ),
     );
   }
 }

@@ -6,6 +6,7 @@ class RssClean {
     result = result.replaceAll("Tweede ", "2e ");
     result = result.replaceAll("Twedde ", "2e ");
     result = result.replaceAll(" 2e helft", "");
+    result = result.replaceAll("De Laar", "Sporthal De Laar");
     result = result.replaceAll("Valkenhuizen", "Sporthal Valkenhuizen");
     result = result.replaceAll(" Apeldoorn ", " ");
     result = result.replaceAll("'05 ", "");

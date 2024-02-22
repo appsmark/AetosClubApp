@@ -46,6 +46,7 @@ class _MainScreen extends State<MainScreen> {
       child: Scaffold(
         backgroundColor: sizes.colorBackground,
         appBar: AppBar(
+          toolbarHeight: sizes.heightToolbar,
           centerTitle: true,
           actions: [
             GestureDetector(

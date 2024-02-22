@@ -44,19 +44,21 @@ class RssSchedule {
     RegExp timeRegex = RegExp(r"\d?\d:\d\d");
     for (var item in feed.items) {
       RegExpMatch? time = timeRegex.firstMatch(item.description!);
-      var address = item.description!
-          .replaceAll(RegExp(".*Speellocatie: "), '')
-          .split(', ');
-      scheduleData.addGame({
-        'date': item.description!
-            .replaceAll(RegExp(".*Datum: "), "")
-            .replaceAll(RegExp(",.*"), ""),
-        'time': item.description!.substring(time!.start, time.end),
-        'game': rssClean.clean(item.title!.replaceAll(RegExp(".*: "), "")),
-        'hall': address[0],
-        'street': address[1],
-        'postal': address[2],
-      });
+      if (time != null) {
+        var address = item.description!
+            .replaceAll(RegExp(".*Speellocatie: "), '')
+            .split(', ');
+        scheduleData.addGame({
+          'date': item.description!
+              .replaceAll(RegExp(".*Datum: "), "")
+              .replaceAll(RegExp(",.*"), ""),
+          'time': item.description!.substring(time.start, time.end),
+          'game': rssClean.clean(item.title!.replaceAll(RegExp(".*: "), "")),
+          'hall': address[0],
+          'street': address[1],
+          'postal': address[2],
+        });
+      }
       debugPrint(item.description!);
     }
   }
