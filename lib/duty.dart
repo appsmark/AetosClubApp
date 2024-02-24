@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'data.dart';
-import 'rss.dart';
+import 'duty_data.dart';
+import 'duty_json.dart';
+import 'rss_clean.dart';
 import 'sizes.dart';
 
 class Duty extends StatefulWidget {
@@ -13,22 +16,25 @@ class Duty extends StatefulWidget {
 }
 
 class _DutyState extends State<Duty> {
-  var listOfItems = data.getTeams();
   int i = 0;
   Sizes sizes = Sizes.instance;
-  Team team = Team();
-  TeamInfo teamInfo = TeamInfo();
+  JsonDuty duty = JsonDuty();
+  DutyData data = DutyData.instance;
+  RssClean rssClean = RssClean();
+
+  Future getData() async {
+    await duty.getDuty();
+    setState(() {});
+  }
 
   @override
   void initState() {
     super.initState();
-    getRSS(teamInfo.getSchedule(team.currentTeam));
-    listOfItems = data.getTeams();
+    getData();
   }
 
   @override
   Widget build(BuildContext context) {
-    listOfItems = data.getTeams();
     return Scaffold(
         backgroundColor: sizes.colorBackground,
         appBar: AppBar(
@@ -53,141 +59,83 @@ class _DutyState extends State<Duty> {
                 fontWeight: FontWeight.bold),
           ),
         ),
-        body: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: Text(
-                data.competition,
-                style: const TextStyle(
-                    color: Color(0xFF00AADE),
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-            Expanded(
-                child: ListView.builder(
-                    itemCount: listOfItems.length,
-                    itemBuilder: (BuildContext ctxt, int index) {
-                      return Row(children: [
-                        /*
-                CircleAvatar(
-                    child: Text(
-                  index.toString(),
-                  style: TextStyle(fontSize: 20),
-                )),
-              */
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              right: 18.0, bottom: 8, top: 8),
-                          child: SizedBox(
-                            width: 35,
-                            child: Align(
-                              alignment: Alignment.centerRight,
-                              child: Text(
-                                (index + 1).toString(),
-                                style: const TextStyle(
-                                    color: Color(0xFFF9B234), fontSize: 20),
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 180,
-                          child: Text(
-                            listOfItems[index].team(),
-                            style: const TextStyle(
-                                color: Color(0xFFF9B234), fontSize: 20),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 30,
-                          child: Align(
-                            alignment: Alignment.centerRight,
-                            child: Text(
-                              "45",
+        body: Column(children: [
+          separator(),
+          Expanded(
+              child: ListView.builder(
+                  itemCount: data.data.length,
+                  itemBuilder: (BuildContext ctxt, int index) {
+                    return Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              rssClean.clean(data.data[index]['date']),
                               style: TextStyle(
-                                  //backgroundColor: Colors.amber,
-                                  color: Color(0xFFF9B234),
-                                  fontSize: 20),
+                                  color: sizes.colorSchedule,
+                                  fontSize: sizes.sizeFontSchedule,
+                                  fontWeight: FontWeight.bold),
                             ),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 13,
-                          child: Align(
-                            alignment: Alignment.centerRight,
-                            child: Text(
-                              "-",
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              data.data[index]['time'],
                               style: TextStyle(
-                                  color: Color(0xFFF9B234),
-                                  //backgroundColor: Colors.white,
-                                  fontSize: 20),
+                                  color: sizes.colorSchedule,
+                                  fontSize: sizes.sizeFontSchedule,
+                                  fontWeight: FontWeight.bold),
                             ),
-                          ),
+                          ],
                         ),
-                        const SizedBox(
-                          width: 30,
-                          child: Align(
-                            alignment: Alignment.centerRight,
-                            child: Text(
-                              "45",
-                              style: TextStyle(
-                                  //backgroundColor: Colors.yellow,
-                                  color: Color(0xFFF9B234),
-                                  fontSize: 20),
-                            ),
-                          ),
+                        Text(
+                          "Sporthal ${data.data[index]['hall']}",
+                          style: TextStyle(
+                              color: sizes.colorSchedule,
+                              fontSize: sizes.sizeFontSchedule,
+                              fontWeight: FontWeight.bold),
                         ),
-                      ]);
-                    }))
-          ],
-        )
-/*
-      body: ListView.builder(
-          itemCount: listOfItems.length,
-          itemBuilder: (BuildContext context, int index) {
-            return GestureDetector(
-              onTap: () {
-                debugPrint('Tapped on item #$index');
-              },
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(listOfItems[index].team() +
-                        "     " +
-                        listOfItems[index].pointsPro()),
-                  ],
-                ),
-              ),
-            );
-          }),
-*/
-/*
-        body: ListView.separated(
-          separatorBuilder: (context, inta) {
-            return const Divider(
-              color: Colors.black,
-            );
-          },
-          // shrinkWrap: true,
-          itemBuilder: (BuildContext context, int index) {
-            return GridView.count(
-              shrinkWrap: true,
-              crossAxisCount: 3,
-              childAspectRatio: 2.0,
-              children: [
-                Center(child: Text(listOfItems[index].team())),
-                Center(child: Text(listOfItems[index].pointsPro())),
-                Center(child: Text(listOfItems[index].team())),
-              ],
-            );
-          },
-          itemCount: listOfItems.length,
-        ));
-        */
-        );
+                        Text(
+                          rssClean.clean(
+                              "${data.data[index]['hometeam']} - ${data.data[index]['visitor']}"),
+                          style: TextStyle(
+                              color: sizes.colorSchedule,
+                              fontSize: sizes.sizeFontSchedule,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "Fluiten: ${data.data[index]['referee']}",
+                          style: TextStyle(
+                              color: team.currentTeam ==
+                                      data.data[index]['referee']
+                                  ? sizes.colorTitle
+                                  : sizes.colorSchedule,
+                              fontSize: sizes.sizeFontSchedule,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "Tellen: ${data.data[index]['counter']}",
+                          style: TextStyle(
+                              color: team.currentTeam ==
+                                      data.data[index]['counter']
+                                  ? sizes.colorTitle
+                                  : sizes.colorSchedule,
+                              fontSize: sizes.sizeFontSchedule,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        separator(),
+                      ],
+                    );
+                  }))
+        ]));
+  }
+
+  Divider separator() {
+    return Divider(
+      indent: 0.05 * sizes.screenWidth,
+      endIndent: 0.05 * sizes.screenWidth,
+      color: sizes.colorTitle,
+    );
   }
 }

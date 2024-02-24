@@ -138,15 +138,11 @@ class _GameState extends State<Game> {
         ));
   }
 
-  Padding separator() {
-    return Padding(
-      padding: EdgeInsets.only(
-        left: 0.05 * sizes.screenWidth,
-        right: 0.05 * sizes.screenWidth,
-      ),
-      child: Divider(
-        color: sizes.colorTitle,
-      ),
+  Divider separator() {
+    return Divider(
+      indent: 0.05 * sizes.screenWidth,
+      endIndent: 0.05 * sizes.screenWidth,
+      color: sizes.colorTitle,
     );
   }
 }
