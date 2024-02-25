@@ -59,7 +59,7 @@ class RssSchedule {
           'postal': address[2],
         });
       }
-      debugPrint(item.description!);
+      //   debugPrint(item.description!);
     }
   }
 }

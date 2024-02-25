@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'data.dart';
 import 'rss_ranking.dart';
 import 'ranking_data.dart';
 import 'sizes.dart';
@@ -77,7 +78,7 @@ class _RankingState extends State<Ranking> {
                   0: FixedColumnWidth(0.15 * sizes.screenWidth),
                   1: FixedColumnWidth(0.5 * sizes.screenWidth),
                   2: FixedColumnWidth(0.15 * sizes.screenWidth),
-                  3: FixedColumnWidth(0.06 * sizes.screenWidth),
+                  3: FixedColumnWidth(0.09 * sizes.screenWidth),
                   //     4: FixedColumnWidth(0.1 * sizes.screenWidth),
                 }, children: [
                   for (var item in listOfItems)
@@ -90,7 +91,10 @@ class _RankingState extends State<Ranking> {
                           child: Text(
                             "${listOfItems.indexOf(item) + 1}  ",
                             style: TextStyle(
-                                color: sizes.colorRanking,
+                                color: item['team']
+                                        .contains("AETOS ${team.currentTeam}")
+                                    ? sizes.colorTitle
+                                    : sizes.colorRanking,
                                 fontWeight: FontWeight.bold,
                                 fontSize: sizes.sizeFontRanking),
                           ),
@@ -102,7 +106,10 @@ class _RankingState extends State<Ranking> {
                         child: Text(
                           item['team'],
                           style: TextStyle(
-                              color: sizes.colorRanking,
+                              color: item['team']
+                                      .contains("AETOS ${team.currentTeam}")
+                                  ? sizes.colorTitle
+                                  : sizes.colorRanking,
                               fontWeight: FontWeight.bold,
                               fontSize: sizes.sizeFontRanking),
                         ),
@@ -115,28 +122,15 @@ class _RankingState extends State<Ranking> {
                           child: Text(
                             "${item['games']} - ",
                             style: TextStyle(
-                                color: sizes.colorRanking,
+                                color: item['team']
+                                        .contains("AETOS ${team.currentTeam}")
+                                    ? sizes.colorTitle
+                                    : sizes.colorRanking,
                                 fontWeight: FontWeight.bold,
                                 fontSize: sizes.sizeFontRanking),
                           ),
                         ),
                       ),
-                      /*
-                      Padding(
-                        padding:
-                            EdgeInsets.only(top: 0.01 * sizes.screenHeight),
-                        child: Align(
-                          alignment: Alignment.center,
-                          child: Text(
-                            " - ",
-                            style: TextStyle(
-                                color: sizes.colorRanking,
-                                fontWeight: FontWeight.bold,
-                                fontSize: sizes.sizeFontRanking),
-                          ),
-                        ),
-                      ),
-                      */
                       Padding(
                         padding:
                             EdgeInsets.only(top: 0.01 * sizes.screenHeight),
@@ -145,7 +139,10 @@ class _RankingState extends State<Ranking> {
                           child: Text(
                             "${item['points']}",
                             style: TextStyle(
-                                color: sizes.colorRanking,
+                                color: item['team']
+                                        .contains("AETOS ${team.currentTeam}")
+                                    ? sizes.colorTitle
+                                    : sizes.colorRanking,
                                 fontWeight: FontWeight.bold,
                                 fontSize: sizes.sizeFontRanking),
                           ),

@@ -41,7 +41,7 @@ class _MainScreen extends State<MainScreen> {
     double spacingButtons = 0.02 * screenHeight;
     return GestureDetector(
       onDoubleTap: () {
-        debugPrint("easter");
+        debugPrint("easter egg");
       },
       child: Scaffold(
         backgroundColor: sizes.colorBackground,

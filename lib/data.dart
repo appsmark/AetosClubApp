@@ -12,7 +12,6 @@ class TeamInfo {
     ["D7", "regio-oost/D2N", "dames/7"],
     ["D8", "regio-oost/D3J", "dames/8"],
     ["D9", "regio-oost/D3M", "dames/9"],
-    ["D10", "regio-oost/D3M", "dames/10"],
     ["D11", "regio-oost/D4F", "dames/11"],
     ["H1", "nationale-competitie/2BH", "heren/1"],
     ["H2", "regio-oost/HPD", "heren/2"],
@@ -53,28 +52,28 @@ class TeamInfo {
 //https://api.nevobo.nl/export/poule/regio-oost/H3F/stand.rss
 //https://api.nevobo.nl/export/poule/regio-oost/H3F/programma.rss
   String getRanking(team) {
-    debugPrint("getRanking for $team");
+//    debugPrint("getRanking for $team");
     String competition =
         "https://api.nevobo.nl/export/poule/${teamsInfo[1][1]}/stand.rss";
     for (var index = 0; index < teamsInfo.length; index++) {
       if (team == teamsInfo[index][0]) {
         competition =
             "https://api.nevobo.nl/export/poule/${teamsInfo[index][1]}/stand.rss";
-        debugPrint("poule ${teamsInfo[index][0]}  $competition");
+        //     debugPrint("poule ${teamsInfo[index][0]}  $competition");
       }
     }
     return competition;
   }
 
   String getSchedule(team) {
-    debugPrint("getSchedule for $team");
+    //   debugPrint("getSchedule for $team");
     String competition =
         "https://api.nevobo.nl/export/team/CNH8Q1U/${teamsInfo[1][2]}/programma.rss";
     for (var index = 0; index < teamsInfo.length; index++) {
       if (team == teamsInfo[index][0]) {
         competition =
             "https://api.nevobo.nl/export/team/CNH8Q1U/${teamsInfo[index][2]}/programma.rss";
-        debugPrint("poule ${teamsInfo[index][0]}  $competition");
+        //     debugPrint("poule ${teamsInfo[index][0]}  $competition");
       }
     }
 
@@ -88,7 +87,7 @@ class Team with ChangeNotifier {
   String alternativeTeam = "H1";
 
   factory Team() {
-    debugPrint("INITIALIZING");
+    //   debugPrint("INITIALIZING");
     return _team;
   }
 
@@ -102,7 +101,7 @@ class Team with ChangeNotifier {
     final prefs = await SharedPreferences.getInstance();
     currentTeam = (prefs.getString('team') ?? "H9");
     set(currentTeam);
-    debugPrint("Get stored $currentTeam");
+    // debugPrint("Get stored $currentTeam");
   }
 
   setStoredTeam(value) async {
@@ -130,7 +129,7 @@ class Data with ChangeNotifier {
   String competition = "";
 
   factory Data() {
-    debugPrint("INIT DATA");
+    //  debugPrint("INIT DATA");
     return _data;
   }
 
