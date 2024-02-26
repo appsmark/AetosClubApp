@@ -79,9 +79,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   value: dropdownvalue,
                   autofocus: true,
                   // Down Arrow Icon
-                  icon: const Icon(
+                  icon: Icon(
                     Icons.keyboard_arrow_down,
-                    color: Color(0xFFF9B234),
+                    color: sizes.colorSelection,
                   ),
 
                   // Array list of items
@@ -90,10 +90,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       value: items,
                       child: Text(
                         items,
-                        style: const TextStyle(
-                            //       backgroundColor: Color(0xFF731816),
-                            color: Color(0xFFF9B234), //Color(0xFF00AADE),
-                            fontSize: 25),
+                        style: TextStyle(
+                            color: sizes.colorSelection,
+                            fontSize: sizes.sizeFontSelection),
                       ),
                     );
                   }).toList(),
@@ -103,7 +102,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     setState(() {
                       team.set(newValue);
                       dropdownvalue = newValue!;
-                      //               getRSS(teamInfo.getRanking(team.currentTeam));
                       teamInfo.getSchedule(team.currentTeam);
                     });
                   },

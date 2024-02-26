@@ -22,6 +22,7 @@ class RssClean {
     result = result.replaceAll("Rensa Family ", "");
     result = result.replaceAll("Skopein ", "");
     result = result.replaceAll("Sportclub ", "");
+    result = result.replaceAll("Steenderen ", "");
     result = result.replaceAll("'Topklimaat in Volleybal' ", "");
     result = result.replaceAll("Volleybalvereniging ", "");
     result = result.replaceAll("Voorsterslag/", "");
