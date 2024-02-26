@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import 'data.dart';
@@ -68,6 +70,84 @@ class _RankingState extends State<Ranking> {
                   fontSize: sizes.sizeFontCompetition),
             ),
             separator(),
+            for (var item in listOfItems)
+              Padding(
+                padding: EdgeInsets.only(top: 0.02 * sizes.screenHeight),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                        width: 0.075 * sizes.screenWidth,
+                        child: Text(
+                          "${listOfItems.indexOf(item) + 1}",
+                          textAlign: TextAlign.end,
+                          style: TextStyle(
+                              color: item['team']
+                                      .contains("AETOS ${team.currentTeam}")
+                                  ? sizes.colorTitle
+                                  : sizes.colorRanking,
+                              fontWeight: FontWeight.bold,
+                              fontSize: sizes.sizeFontRanking),
+                        )),
+                    SizedBox(
+                      width: 0.05 * sizes.screenWidth,
+                    ),
+                    SizedBox(
+                        width: 0.5 * sizes.screenWidth,
+                        child: Text(
+                          item['team'],
+                          style: TextStyle(
+                              color: item['team']
+                                      .contains("AETOS ${team.currentTeam}")
+                                  ? sizes.colorTitle
+                                  : sizes.colorRanking,
+                              fontWeight: FontWeight.bold,
+                              fontSize: sizes.sizeFontRanking),
+                        )),
+                    SizedBox(
+                        width: 0.075 * sizes.screenWidth,
+                        child: Text(
+                          item['games'],
+                          textAlign: TextAlign.end,
+                          style: TextStyle(
+                              color: item['team']
+                                      .contains("AETOS ${team.currentTeam}")
+                                  ? sizes.colorTitle
+                                  : sizes.colorRanking,
+                              fontWeight: FontWeight.bold,
+                              fontSize: sizes.sizeFontRanking),
+                        )),
+                    SizedBox(
+                        width: 0.05 * sizes.screenWidth,
+                        child: Text(
+                          "-",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: item['team']
+                                      .contains("AETOS ${team.currentTeam}")
+                                  ? sizes.colorTitle
+                                  : sizes.colorRanking,
+                              fontWeight: FontWeight.bold,
+                              fontSize: sizes.sizeFontRanking),
+                        )),
+                    SizedBox(
+                        width: 0.075 * sizes.screenWidth,
+                        child: Text(
+                          item['points'],
+                          textAlign: TextAlign.end,
+                          style: TextStyle(
+                              color: item['team']
+                                      .contains("AETOS ${team.currentTeam}")
+                                  ? sizes.colorTitle
+                                  : sizes.colorRanking,
+                              fontWeight: FontWeight.bold,
+                              fontSize: sizes.sizeFontRanking),
+                        ))
+                  ],
+                ),
+              ),
+
+            /*
             Expanded(
               child: Padding(
                 padding: EdgeInsets.only(
@@ -152,6 +232,7 @@ class _RankingState extends State<Ranking> {
                 ]),
               ),
             )
+            */
           ],
         ));
   }

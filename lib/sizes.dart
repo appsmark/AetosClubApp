@@ -31,11 +31,10 @@ class Sizes {
     buttonBorderWidth = 0.005 * screenHeight;
     sizeFontButton = 0.045 * screenHeight;
     sizeFontCompetition = 0.035 * screenHeight;
-//    sizeFontRanking = 0.05 * screenWidth;
-    sizeFontRanking = 0.028 * screenHeight;
+    sizeFontRanking = 0.03 * screenHeight;
     sizeFontSchedule = 0.03 * screenHeight;
     sizeFontSelection = 0.03 * screenHeight;
-    sizeFontTitle = 0.04 * screenHeight;
+    sizeFontTitle = 0.045 * screenHeight;
     spacing = 0.1 * screenHeight;
     /*
     colorButton = const Color(0xFFF9B234);
