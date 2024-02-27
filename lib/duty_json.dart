@@ -38,7 +38,7 @@ class JsonDuty {
         if ((inputStream[index]["scheids"] == team.currentTeam) ||
             (inputStream[index]["teller"] == team.currentTeam)) {
           dutyData.add({
-            "date": inputStream[index]["Datum"],
+            "date": inputStream[index]["Datum"].replaceAll(" 2024", ""),
             "time": inputStream[index]["Tijd"],
             "hometeam": inputStream[index]["Thuisteam"],
             "visitor": inputStream[index]["Uitteam"],

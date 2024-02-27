@@ -36,8 +36,8 @@ class RssClean {
     result = result.replaceAll("MB ", "MB");
     result = result.replaceAll("MC ", "MC");
     result = result.replaceAll("MD ", "MD");
-    result = result.replaceAll(" march ", " maart ");
-    result = result.replaceAll(" may ", " mei ");
+    result = result.replaceAll(" march", " maart");
+    result = result.replaceAll(" may", " mei");
 
     return result;
   }
