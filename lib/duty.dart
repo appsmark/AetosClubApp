@@ -61,73 +61,86 @@ class _DutyState extends State<Duty> {
         ),
         body: Column(children: [
           separator(),
-          Expanded(
-              child: ListView.builder(
-                  itemCount: data.data.length,
-                  itemBuilder: (BuildContext ctxt, int index) {
-                    return Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              rssClean.clean(data.data[index]['date']),
-                              style: TextStyle(
-                                  color: sizes.colorSchedule,
-                                  fontSize: sizes.sizeFontSchedule,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Text(
-                              data.data[index]['time'],
-                              style: TextStyle(
-                                  color: sizes.colorSchedule,
-                                  fontSize: sizes.sizeFontSchedule,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                        Text(
-                          "Sporthal ${data.data[index]['hall']}",
-                          style: TextStyle(
-                              color: sizes.colorSchedule,
-                              fontSize: sizes.sizeFontSchedule,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          rssClean.clean(
-                              "${data.data[index]['hometeam']} - ${data.data[index]['visitor']}"),
-                          style: TextStyle(
-                              color: sizes.colorSchedule,
-                              fontSize: sizes.sizeFontSchedule,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          "Fluiten: ${data.data[index]['referee']}",
-                          style: TextStyle(
-                              color: team.currentTeam ==
-                                      data.data[index]['referee']
-                                  ? sizes.colorTitle
-                                  : sizes.colorSchedule,
-                              fontSize: sizes.sizeFontSchedule,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          "Tellen: ${data.data[index]['counter']}",
-                          style: TextStyle(
-                              color: team.currentTeam ==
-                                      data.data[index]['counter']
-                                  ? sizes.colorTitle
-                                  : sizes.colorSchedule,
-                              fontSize: sizes.sizeFontSchedule,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        separator(),
-                      ],
-                    );
-                  }))
+          if (data.data.isNotEmpty)
+            Expanded(
+                child: ListView.builder(
+                    itemCount: data.data.length,
+                    itemBuilder: (BuildContext ctxt, int index) {
+                      return Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                rssClean.clean(data.data[index]['date']),
+                                style: TextStyle(
+                                    color: sizes.colorSchedule,
+                                    fontSize: sizes.sizeFontSchedule,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                data.data[index]['hometeam'] == "CMV"
+                                    ? "${data.data[index]['time']} - ${data.data[index]['endtime']}"
+                                    : data.data[index]['time'],
+                                style: TextStyle(
+                                    color: sizes.colorSchedule,
+                                    fontSize: sizes.sizeFontSchedule,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            "Sporthal ${data.data[index]['hall']}",
+                            style: TextStyle(
+                                color: sizes.colorSchedule,
+                                fontSize: sizes.sizeFontSchedule,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            data.data[index]['hometeam'] == "CMV"
+                                ? "CMV wedstrijden"
+                                : rssClean.clean(
+                                    "${data.data[index]['hometeam']} - ${data.data[index]['visitor']}"),
+                            style: TextStyle(
+                                color: sizes.colorSchedule,
+                                fontSize: sizes.sizeFontSchedule,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            "Fluiten: ${data.data[index]['referee']}",
+                            style: TextStyle(
+                                color: team.currentTeam ==
+                                        data.data[index]['referee']
+                                    ? sizes.colorTitle
+                                    : sizes.colorSchedule,
+                                fontSize: sizes.sizeFontSchedule,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            "Tellen: ${data.data[index]['counter']}",
+                            style: TextStyle(
+                                color: team.currentTeam ==
+                                        data.data[index]['counter']
+                                    ? sizes.colorTitle
+                                    : sizes.colorSchedule,
+                                fontSize: sizes.sizeFontSchedule,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          separator(),
+                        ],
+                      );
+                    })),
+          if (data.data.isEmpty)
+            Text(
+              "GEEN DIENST",
+              style: TextStyle(
+                  color: sizes.colorSchedule,
+                  fontSize: 1.5 * sizes.sizeFontSchedule,
+                  fontWeight: FontWeight.bold),
+            ),
         ]));
   }
 

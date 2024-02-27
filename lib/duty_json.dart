@@ -40,6 +40,7 @@ class JsonDuty {
           dutyData.add({
             "date": inputStream[index]["Datum"].replaceAll(" 2024", ""),
             "time": inputStream[index]["Tijd"],
+            "endtime": inputStream[index]["Eindtijd"],
             "hometeam": inputStream[index]["Thuisteam"],
             "visitor": inputStream[index]["Uitteam"],
             "hall": inputStream[index]["Locatie"],
