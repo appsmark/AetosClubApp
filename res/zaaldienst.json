@@ -72,6 +72,36 @@
         "scheids": "H9",
         "teller": "H3"
     },
+     {
+        "Datum": "2 march 2024",
+        "Tijd": "09:15",
+		"Eindtijd": "13:30",
+        "Zaalwacht": "H6"
+    },
+     {
+        "Datum": "2 march 2024",
+        "Tijd": "09:15",
+		"Eindtijd": "13:30",
+        "Zaalwacht": "MB3"
+    },
+     {
+        "Datum": "2 march 2024",
+        "Tijd": "13:00",
+		"Eindtijd": "17:30",
+        "Zaalwacht": "D4"
+    },
+     {
+        "Datum": "2 march 2024",
+        "Tijd": "13:00",
+		"Eindtijd": "17:30",
+        "Zaalwacht": "MB4"
+    },
+     {
+        "Datum": "2 march 2024",
+        "Tijd": "17:00",
+		"Eindtijd": "einde",
+        "Zaalwacht": "H5"
+    },
     {
         "Datum": "2 march 2024",
         "Tijd": "10:00",
@@ -459,6 +489,42 @@
         "scheids": "D11",
         "teller": "MA1"
     },
+     {
+        "Datum": "16 march 2024",
+        "Tijd": "09:15",
+		"Eindtijd": "13:30",
+        "Zaalwacht": "H6"
+    },
+     {
+        "Datum": "16 march 2024",
+        "Tijd": "09:15",
+		"Eindtijd": "13:30",
+        "Zaalwacht": "MC1"
+    },
+     {
+        "Datum": "16 march 2024",
+        "Tijd": "13:00",
+		"Eindtijd": "17:30",
+        "Zaalwacht": "D1"
+    },
+     {
+        "Datum": "16 march 2024",
+        "Tijd": "13:00",
+		"Eindtijd": "17:30",
+        "Zaalwacht": "MC5"
+    },
+     {
+        "Datum": "16 march 2024",
+        "Tijd": "17:00",
+		"Eindtijd": "einde",
+        "Zaalwacht": "D4"
+    },
+     {
+        "Datum": "16 march 2024",
+        "Tijd": "17:00",
+		"Eindtijd": "einde",
+        "Zaalwacht": "D5"
+    },
     {
         "Datum": "16 march 2024",
         "Tijd": "10:00",
@@ -663,7 +729,37 @@
         "scheids": "H7",
         "teller": "D9"
     },
-    {
+     {
+        "Datum": "23 march 2024",
+        "Tijd": "09:15",
+		"Eindtijd": "13:30",
+        "Zaalwacht": "H1"
+    },
+     {
+        "Datum": "23 march 2024",
+        "Tijd": "09:15",
+		"Eindtijd": "13:30",
+        "Zaalwacht": "MC2"
+    },
+     {
+        "Datum": "23 march 2024",
+        "Tijd": "13:00",
+		"Eindtijd": "17:30",
+        "Zaalwacht": "D9"
+    },
+     {
+        "Datum": "23 march 2024",
+        "Tijd": "13:00",
+		"Eindtijd": "17:30",
+        "Zaalwacht": "MB2"
+    },
+     {
+        "Datum": "23 march 2024",
+        "Tijd": "17:00",
+		"Eindtijd": "einde",
+        "Zaalwacht": "H4"
+    },
+   {
         "Datum": "23 march 2024",
         "Tijd": "10:00",
         "Thuisteam": "AETOS MA 2",
@@ -824,6 +920,42 @@
         "Locatie": "Elderveld",
         "scheids": "D5",
         "teller": "D1"
+    },
+     {
+        "Datum": "6 april 2024",
+        "Tijd": "09:15",
+		"Eindtijd": "13:30",
+        "Zaalwacht": "H2"
+    },
+     {
+        "Datum": "6 april 2024",
+        "Tijd": "09:15",
+		"Eindtijd": "13:30",
+        "Zaalwacht": "JB1"
+    },
+     {
+        "Datum": "6 april 2024",
+        "Tijd": "13:00",
+		"Eindtijd": "17:30",
+        "Zaalwacht": "H1"
+    },
+     {
+        "Datum": "6 april 2024",
+        "Tijd": "13:00",
+		"Eindtijd": "17:30",
+        "Zaalwacht": "MC2"
+    },
+     {
+        "Datum": "6 april 2024",
+        "Tijd": "17:00",
+		"Eindtijd": "einde",
+        "Zaalwacht": "D3"
+    },
+     {
+        "Datum": "6 april 2024",
+        "Tijd": "17:00",
+		"Eindtijd": "einde",
+        "Zaalwacht": "D6"
     },
     {
         "Datum": "6 april 2024",
@@ -1004,6 +1136,42 @@
         "Locatie": "Elderveld",
         "scheids": "D8",
         "teller": "H9"
+    },
+     {
+        "Datum": "13 april 2024",
+        "Tijd": "09:15",
+		"Eindtijd": "13:30",
+        "Zaalwacht": "MC3"
+    },
+     {
+        "Datum": "13 april 2024",
+        "Tijd": "09:15",
+		"Eindtijd": "13:30",
+        "Zaalwacht": "H8"
+    },
+     {
+        "Datum": "13 april 2024",
+        "Tijd": "13:00",
+		"Eindtijd": "17:30",
+        "Zaalwacht": "D9"
+    },
+     {
+        "Datum": "13 april 2024",
+        "Tijd": "13:00",
+		"Eindtijd": "17:30",
+        "Zaalwacht": "JC2"
+    },
+     {
+        "Datum": "13 april 2024",
+        "Tijd": "17:00",
+		"Eindtijd": "einde",
+        "Zaalwacht": "H2"
+    },
+     {
+        "Datum": "13 april 2024",
+        "Tijd": "17:00",
+		"Eindtijd": "einde",
+        "Zaalwacht": "D3"
     },
 
     {

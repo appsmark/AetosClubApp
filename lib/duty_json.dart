@@ -36,7 +36,8 @@ class JsonDuty {
           DateFormat("dd MMM yyyy").parse(convert(inputStream[index]["Datum"]));
       if (tempDate.difference(DateTime.now()).inDays >= 0) {
         if ((inputStream[index]["scheids"] == team.currentTeam) ||
-            (inputStream[index]["teller"] == team.currentTeam)) {
+            (inputStream[index]["teller"] == team.currentTeam) ||
+            (inputStream[index]["Zaalwacht"] == team.currentTeam)) {
           dutyData.add({
             "date": inputStream[index]["Datum"].replaceAll(" 2024", ""),
             "time": inputStream[index]["Tijd"],
@@ -46,6 +47,7 @@ class JsonDuty {
             "hall": inputStream[index]["Locatie"],
             "referee": inputStream[index]["scheids"],
             "counter": inputStream[index]["teller"],
+            "duty": inputStream[index]["Zaalwacht"],
           });
         }
       }
