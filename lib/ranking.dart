@@ -70,7 +70,7 @@ class _RankingState extends State<Ranking> {
             separator(),
             for (var item in listOfItems)
               Padding(
-                padding: EdgeInsets.only(top: 0.02 * sizes.screenHeight),
+                padding: EdgeInsets.only(top: 0.018 * sizes.screenHeight),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -129,7 +129,7 @@ class _RankingState extends State<Ranking> {
                               fontSize: sizes.sizeFontRanking),
                         )),
                     SizedBox(
-                        width: 0.075 * sizes.screenWidth,
+                        width: 0.079 * sizes.screenWidth,
                         child: Text(
                           item['points'],
                           textAlign: TextAlign.end,
