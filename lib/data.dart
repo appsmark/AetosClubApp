@@ -79,6 +79,20 @@ class TeamInfo {
 
     return competition;
   }
+
+  String getResults(team) {
+    String competition =
+        "https://api.nevobo.nl/export/team/CNH8Q1U/${teamsInfo[1][2]}/resultaten.rss";
+    for (var index = 0; index < teamsInfo.length; index++) {
+      if (team == teamsInfo[index][0]) {
+        competition =
+            "https://api.nevobo.nl/export/team/CNH8Q1U/${teamsInfo[index][2]}/resultaten.rss";
+        //     debugPrint("poule ${teamsInfo[index][0]}  $competition");
+      }
+    }
+
+    return competition;
+  }
 }
 
 class Team with ChangeNotifier {
