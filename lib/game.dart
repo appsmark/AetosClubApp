@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'duty_data.dart';
+import 'duty_json.dart';
 import 'rss_clean.dart';
 import 'rss_schedule.dart';
 import 'schedule_data.dart';
@@ -13,19 +15,36 @@ class Game extends StatefulWidget {
 }
 
 class _GameState extends State<Game> {
+  DutyData dutyData = DutyData.instance;
   ScheduleData data = ScheduleData.instance;
+  List listOfDuties = [
+    {'date': '', 'counter': '', 'referee': ''}
+  ];
   List listOfItems = [
     {'date': '', 'time': '', 'game': '', 'hall': '', 'street': '', 'postal': ''}
   ];
   RssClean rssClean = RssClean();
   RssSchedule rss = RssSchedule();
   Sizes sizes = Sizes.instance;
+  JsonDuty duty = JsonDuty();
+  String referee = "";
+  String counter = "";
 
   Future getData() async {
     await rss.getSchedule();
-    setState(() {
-      listOfItems = data.getGames();
-    });
+    await duty.getDuty(true);
+    listOfItems = data.getGames();
+    listOfDuties = dutyData.getGameData();
+    counter = "";
+    referee = "";
+    if (listOfDuties.length > 0) {
+      String compare = listOfDuties[0]['date'].replaceAll('march', 'maart');
+      if (listOfItems[0]['date'].contains(compare)) {
+        counter = listOfDuties[0]['counter'];
+        referee = listOfDuties[0]['referee'];
+      }
+    }
+    setState(() {});
   }
 
   @override
@@ -108,6 +127,29 @@ class _GameState extends State<Game> {
                   color: sizes.colorSchedule,
                   fontSize: sizes.sizeFontSchedule,
                   fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 0.05 * sizes.screenHeight,
+            ),
+            Visibility(
+              visible: counter != "",
+              child: Text(
+                "Teller: $counter",
+                style: TextStyle(
+                    color: sizes.colorSchedule,
+                    fontSize: sizes.sizeFontSchedule,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            Visibility(
+              visible: referee != "",
+              child: Text(
+                "Scheidsrechter: $referee",
+                style: TextStyle(
+                    color: sizes.colorSchedule,
+                    fontSize: sizes.sizeFontSchedule,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
             SizedBox(
               height: 0.05 * sizes.screenHeight,

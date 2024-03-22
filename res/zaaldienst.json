@@ -1,562 +1,10 @@
 {
 	"duty": [
     {
-        "Datum": "29 februari 2024",
-        "Tijd": "20:00",
-        "Thuisteam": "AETOS DS 8",
-        "Uitteam": "Bruvoc DS 3",
-        "Locatie": "Valkenhuizen",
-        "scheids": "D6",
-        "teller": "D7"
-    },
-    {
-        "Datum": "29 februari 2024",
-        "Tijd": "20:00",
-        "Thuisteam": "AETOS HS 7",
-        "Uitteam": "Trivos HS 5",
-        "Locatie": "Valkenhuizen",
-        "scheids": "H5",
-        "teller": "D9"
-    },
-    {
-        "Datum": "29 februari 2024",
-        "Tijd": "20:00",
-        "Thuisteam": "AETOS HS 9",
-        "Uitteam": "Pegasus HS 9",
-        "Locatie": "Valkenhuizen",
-        "scheids": "D4",
-        "teller": "D10"
-    },
-    {
-        "Datum": "1 march 2024",
-        "Tijd": "21:30",
-        "Thuisteam": "AETOS HS 5",
-        "Uitteam": "WaHo HS 2",
-        "Locatie": "De Laar",
-        "scheids": "H7",
-        "teller": "D8"
-    },
-    {
-        "Datum": "1 march 2024",
-        "Tijd": "18:30",
-        "Thuisteam": "AETOS JC 3",
-        "Uitteam": "Bielderman Koetsier/SSS JC 2",
-        "Locatie": "Elderveld",
-        "scheids": "H5",
-        "teller": "MA1"
-    },
-    {
-        "Datum": "1 march 2024",
-        "Tijd": "18:30",
-        "Thuisteam": "AETOS MC 3",
-        "Uitteam": "Kidang MC 2",
-        "Locatie": "Elderveld",
-        "scheids": "MA3",
-        "teller": "MA3"
-    },
-    {
-        "Datum": "1 march 2024",
-        "Tijd": "20:00",
-        "Thuisteam": "AETOS DS 6",
-        "Uitteam": "LIVO DS 5",
-        "Locatie": "Elderveld",
-        "scheids": "H7",
-        "teller": "H3"
-    },
-    {
-        "Datum": "1 march 2024",
-        "Tijd": "20:00",
-        "Thuisteam": "AETOS MA 3",
-        "Uitteam": "Pegasus MA 1",
-        "Locatie": "Elderveld",
-        "scheids": "H9",
-        "teller": "H3"
-    },
-     {
-        "Datum": "2 march 2024",
-        "Tijd": "09:15",
-		"Eindtijd": "13:30",
-        "Zaalwacht": "H6"
-    },
-     {
-        "Datum": "2 march 2024",
-        "Tijd": "09:15",
-		"Eindtijd": "13:30",
-        "Zaalwacht": "MB3"
-    },
-     {
-        "Datum": "2 march 2024",
-        "Tijd": "13:00",
-		"Eindtijd": "17:30",
-        "Zaalwacht": "D4"
-    },
-     {
-        "Datum": "2 march 2024",
-        "Tijd": "13:00",
-		"Eindtijd": "17:30",
-        "Zaalwacht": "MB4"
-    },
-     {
-        "Datum": "2 march 2024",
-        "Tijd": "17:00",
-		"Eindtijd": "einde",
-        "Zaalwacht": "H5"
-    },
-    {
-        "Datum": "2 march 2024",
-        "Tijd": "10:00",
-        "Thuisteam": "AETOS JC 4",
-        "Uitteam": "LIVO JC 2",
-        "Locatie": "Middachtensingel",
-        "scheids": "JA2",
-        "teller": "JC1"
-    },
-    {
-        "Datum": "2 march 2024",
-        "Tijd": "10:00",
-        "Thuisteam": "AETOS MB 4",
-        "Uitteam": "Excelsior MB 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "MA4",
-        "teller": "MA4"
-    },
-    {
-        "Datum": "2 march 2024",
-        "Tijd": "10:00",
-        "Thuisteam": "AETOS MC 9",
-        "Uitteam": "Setash MC 2",
-        "Locatie": "Middachtensingel",
-        "scheids": "JA2",
-        "teller": "JC1"
-    },
-    {
-        "Datum": "2 march 2024",
-        "Tijd": "12:00",
-        "Thuisteam": "AETOS JA 2",
-        "Uitteam": "Orion JA 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "H3",
-        "teller": "JC4"
-    },
-    {
-        "Datum": "2 march 2024",
-        "Tijd": "12:00",
-        "Thuisteam": "AETOS JC 1",
-        "Uitteam": "Volta JC 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "H4",
-        "teller": "MC9"
-    },
-    {
-        "Datum": "2 march 2024",
-        "Tijd": "12:00",
-        "Thuisteam": "AETOS MA 4",
-        "Uitteam": "Xanthos MA 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "H4",
-        "teller": "JC4"
-    },
-    {
-        "Datum": "2 march 2024",
-        "Tijd": "14:30",
-        "Thuisteam": "AETOS HS 3",
-        "Uitteam": "SDS HS 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "D1",
-        "teller": "JA2"
-    },
-    {
-        "Datum": "2 march 2024",
-        "Tijd": "14:30",
-        "Thuisteam": "AETOS MB 3",
-        "Uitteam": "Pegasus MB 3",
-        "Locatie": "Middachtensingel",
-        "scheids": "D1",
-        "teller": "JA2"
-    },
-    {
-        "Datum": "2 march 2024",
-        "Tijd": "14:30",
-        "Thuisteam": "AETOS MB 5",
-        "Uitteam": "Xanthos MB 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "D9",
-        "teller": "MA4"
-    },
-
-    {
-        "Datum": "2 march 2024",
-        "Tijd": "16:30",
-        "Thuisteam": "AETOS HS 6",
-        "Uitteam": "Scylla HS 4",
-        "Locatie": "Middachtensingel",
-        "scheids": "D3",
-        "teller": "MB3"
-    },
-    {
-        "Datum": "2 march 2024",
-        "Tijd": "16:30",
-        "Thuisteam": "AETOS JB 2",
-        "Uitteam": "WSV JB 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "D4",
-        "teller": "MB5"
-    },
-    {
-        "Datum": "2 march 2024",
-        "Tijd": "18:30",
-        "Thuisteam": "AETOS DS 2",
-        "Uitteam": "AETOS DS 3",
-        "Locatie": "Middachtensingel",
-        "scheids": "H3",
-        "teller": "JB2"
-    },
-    {
-        "Datum": "2 march 2024",
-        "Tijd": "18:30",
-        "Thuisteam": "AETOS DS 4",
-        "Uitteam": "Scylla DS 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "H6",
-        "teller": "JB2"
-    },
-    {
-        "Datum": "2 march 2024",
-        "Tijd": "18:30",
-        "Thuisteam": "AETOS DS 1",
-        "Uitteam": "Blauw Wit DS 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "",
-        "teller": "H6"
-    },
-    {
-        "Datum": "2 march 2024",
-        "Tijd": "08:00",
-        "Eindtijd": "11:00",
-        "Thuisteam": "CMV",
-        "Uitteam": "CMV",
-        "Locatie": "De Laar",
-        "scheids": "D3",
-        "teller": ""
-    },
-    {
-        "Datum": "2 march 2024",
-        "Tijd": "08:00",
-        "Eindtijd": "11:00",
-        "Thuisteam": "CMV",
-        "Uitteam": "CMV",
-        "Locatie": "De Laar",
-        "scheids": "D7",
-        "teller": ""
-    },
-	
-	    {
-        "Datum": "2 march 2024",
-        "Tijd": "08:45",
-        "Eindtijd": "11:00",
-        "Thuisteam": "CMV",
-        "Uitteam": "CMV",
-        "Locatie": "De Laar",
-        "scheids": "D7",
-        "teller": "MC5"
-    },
-	    {
-        "Datum": "2 march 2024",
-        "Tijd": "08:45",
-        "Eindtijd": "11:00",
-        "Thuisteam": "CMV",
-        "Uitteam": "CMV",
-        "Locatie": "De Laar",
-        "scheids": "H9",
-        "teller": "MC5"
-    },
-	    {
-        "Datum": "2 march 2024",
-        "Tijd": "08:45",
-        "Eindtijd": "11:00",
-        "Thuisteam": "CMV",
-        "Uitteam": "CMV",
-        "Locatie": "De Laar",
-        "scheids": "D8",
-        "teller": "MC8"
-    },
-	    {
-        "Datum": "2 march 2024",
-        "Tijd": "10:45",
-        "Eindtijd": "12:15",
-        "Thuisteam": "CMV",
-        "Uitteam": "CMV",
-        "Locatie": "De Laar",
-        "scheids": "MA3",
-        "teller": "JC2"
-    },
-    {
-        "Datum": "7 march 2024",
-        "Tijd": "18:30",
-        "Thuisteam": "AETOS MB 1",
-        "Uitteam": "Dynamo MB 1",
-        "Locatie": "Valkenhuizen",
-        "scheids": "D5",
-        "teller": "MB5"
-    },
-    {
-        "Datum": "7 march 2024",
-        "Tijd": "20:00",
-        "Thuisteam": "AETOS DS 5",
-        "Uitteam": "WaHo DS 2",
-        "Locatie": "Valkenhuizen",
-        "scheids": "D6",
-        "teller": "D3"
-    },
-    {
-        "Datum": "7 march 2024",
-        "Tijd": "20:00",
-        "Thuisteam": "AETOS HS 4",
-        "Uitteam": "SSS HS 6",
-        "Locatie": "Valkenhuizen",
-        "scheids": "D7",
-        "teller": "H1"
-    },
-    {
-        "Datum": "9 march 2024",
-        "Tijd": "10:00",
-        "Thuisteam": "AETOS JC 1",
-        "Uitteam": "AETOS JC 2",
-        "Locatie": "Middachtensingel",
-        "scheids": "D7",
-        "teller": "JA1"
-    },
-    {
-        "Datum": "9 march 2024",
-        "Tijd": "10:00",
-        "Thuisteam": "AETOS MB 2",
-        "Uitteam": "Trivos MB 2",
-        "Locatie": "Middachtensingel",
-        "scheids": "JA1",
-        "teller": "JA1"
-    },
-    {
-        "Datum": "9 march 2024",
-        "Tijd": "10:00",
-        "Thuisteam": "AETOS MC 4",
-        "Uitteam": "TweeVV MC 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "MA2",
-        "teller": "MA2"
-    },
-    {
-        "Datum": "9 march 2024",
-        "Tijd": "12:00",
-        "Thuisteam": "AETOS DS 7",
-        "Uitteam": "Set Up '69 DS 4",
-        "Locatie": "Middachtensingel",
-        "scheids": "H3",
-        "teller": "JC1"
-    },
-    {
-        "Datum": "9 march 2024",
-        "Tijd": "12:00",
-        "Thuisteam": "AETOS JA 1",
-        "Uitteam": "VC Zwolle JA 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "H3",
-        "teller": "JC2"
-    },
-    {
-        "Datum": "9 march 2024",
-        "Tijd": "12:00",
-        "Thuisteam": "AETOS MA 2",
-        "Uitteam": "Voreo MA 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "H8",
-        "teller": "MB2"
-    },
-    {
-        "Datum": "9 march 2024",
-        "Tijd": "14:30",
-        "Thuisteam": "AETOS DS 2",
-        "Uitteam": "SSS DS 4",
-        "Locatie": "Middachtensingel",
-        "scheids": "H1",
-        "teller": "MB1"
-    },
-    {
-        "Datum": "9 march 2024",
-        "Tijd": "14:30",
-        "Thuisteam": "AETOS HS 3",
-        "Uitteam": "Pegasus HS 4",
-        "Locatie": "Middachtensingel",
-        "scheids": "H2",
-        "teller": "MB1"
-    },
-    {
-        "Datum": "9 march 2024",
-        "Tijd": "14:30",
-        "Thuisteam": "AETOS JB 1",
-        "Uitteam": "ESV-Hellas JB 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "MA2",
-        "teller": "MA2"
-    },
-    {
-        "Datum": "9 march 2024",
-        "Tijd": "16:30",
-        "Thuisteam": "AETOS HS 1",
-        "Uitteam": "SSS HS 3",
-        "Locatie": "Middachtensingel",
-        "scheids": "",
-        "teller": "JB1"
-    },
-    {
-        "Datum": "9 march 2024",
-        "Tijd": "16:30",
-        "Thuisteam": "AETOS MB 1",
-        "Uitteam": "SDS MB 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "MA1",
-        "teller": "H4"
-    },
- 
-    {
-        "Datum": "9 march 2024",
-        "Tijd": "18:30",
-        "Thuisteam": "AETOS HS 2",
-        "Uitteam": "Heyendaal HS 2",
-        "Locatie": "Middachtensingel",
-        "scheids": "H3",
-        "teller": "D5"
-    },
-    {
-        "Datum": "9 march 2024",
-        "Tijd": "18:30",
-        "Thuisteam": "AETOS MA 1",
-        "Uitteam": "SV Dynamo MA 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "H1",
-        "teller": "MB1"
-    },
-    {
-        "Datum": "14 march 2024",
-        "Tijd": "19:00",
-        "Thuisteam": "AETOS JB 2",
-        "Uitteam": "Bruvoc JB 1",
-        "Locatie": "Valkenhuizen",
-        "scheids": "H1",
-        "teller": "H6"
-    },
-    {
-        "Datum": "14 march 2024",
-        "Tijd": "20:00",
-        "Thuisteam": "AETOS DS 5",
-        "Uitteam": "TiVoC DS 1",
-        "Locatie": "Valkenhuizen",
-        "scheids": "H5",
-        "teller": "H2"
-    },
-    {
-        "Datum": "14 march 2024",
-        "Tijd": "20:00",
-        "Thuisteam": "AETOS DS 8",
-        "Uitteam": "DIAVO DS 5",
-        "Locatie": "Valkenhuizen",
-        "scheids": "D4",
-        "teller": "D11"
-    },
-    {
-        "Datum": "15 march 2024",
-        "Tijd": "21:30",
-        "Thuisteam": "AETOS HS 5",
-        "Uitteam": "Woudenberg HS 2",
-        "Locatie": "De Laar",
-        "scheids": "D5",
-        "teller": "H7"
-    },
-    {
-        "Datum": "15 march 2024",
-        "Tijd": "20:00",
-        "Thuisteam": "AETOS DS 4",
-        "Uitteam": "Woudenberg DS 2",
-        "Locatie": "Elderveld",
-        "scheids": "D5",
-        "teller": "H4"
-    },
-    {
-        "Datum": "15 march 2024",
-        "Tijd": "19:00",
-        "Thuisteam": "AETOS JC 4",
-        "Uitteam": "Skopein Wivoc JC 2",
-        "Locatie": "Middachtensingel",
-        "scheids": "D11",
-        "teller": "MA1"
-    },
-     {
-        "Datum": "16 march 2024",
-        "Tijd": "09:15",
-		"Eindtijd": "13:30",
-        "Zaalwacht": "H6"
-    },
-     {
-        "Datum": "16 march 2024",
-        "Tijd": "09:15",
-		"Eindtijd": "13:30",
-        "Zaalwacht": "MC1"
-    },
-     {
-        "Datum": "16 march 2024",
-        "Tijd": "13:00",
-		"Eindtijd": "17:30",
-        "Zaalwacht": "D1"
-    },
-     {
-        "Datum": "16 march 2024",
-        "Tijd": "13:00",
-		"Eindtijd": "17:30",
-        "Zaalwacht": "MC5"
-    },
-     {
-        "Datum": "16 march 2024",
-        "Tijd": "17:00",
-		"Eindtijd": "einde",
-        "Zaalwacht": "D4"
-    },
-     {
-        "Datum": "16 march 2024",
-        "Tijd": "17:00",
-		"Eindtijd": "einde",
-        "Zaalwacht": "D5"
-    },
-    {
-        "Datum": "16 march 2024",
-        "Tijd": "10:00",
-        "Thuisteam": "AETOS MA 3",
-        "Uitteam": "Excelsior MA 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "D3",
-        "teller": "JC2"
-    },
-    {
-        "Datum": "16 march 2024",
-        "Tijd": "10:00",
-        "Thuisteam": "AETOS MC 5",
-        "Uitteam": "BSVO MC 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "JA2",
-        "teller": "JC2"
-    },
-    {
-        "Datum": "16 march 2024",
-        "Tijd": "10:00",
-        "Thuisteam": "AETOS MC 9",
-        "Uitteam": "Gemini MC 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "JA2",
-        "teller": "JC2"
-    },
-    {
         "Datum": "16 march 2024",
         "Tijd": "12:00",
-        "Thuisteam": "AETOS DS 3",
-        "Uitteam": "VVH DS 3",
+        "Thuisteam": "AETOS JA2",
+        "Uitteam": "Time Out'75 JA1",
         "Locatie": "Middachtensingel",
         "scheids": "H6",
         "teller": "MC9"
@@ -564,17 +12,8 @@
     {
         "Datum": "16 march 2024",
         "Tijd": "12:00",
-        "Thuisteam": "AETOS JA 2",
-        "Uitteam": "Time Out'75 JA 1",
-        "Locatie": "Middachtensingel",
-        "scheids": "H6",
-        "teller": "MC9"
-    },
-    {
-        "Datum": "16 march 2024",
-        "Tijd": "12:00",
-        "Thuisteam": "AETOS JC 2",
-        "Uitteam": "Volta JC 1",
+        "Thuisteam": "AETOS JC2",
+        "Uitteam": "Volta JC1",
         "Locatie": "Middachtensingel",
         "scheids": "MA3",
         "teller": "MA3"
@@ -582,8 +21,8 @@
     {
         "Datum": "16 march 2024",
         "Tijd": "14:30",
-        "Thuisteam": "AETOS HS 6",
-        "Uitteam": "Gemini HS 4",
+        "Thuisteam": "AETOS H6",
+        "Uitteam": "Gemini H4",
         "Locatie": "Middachtensingel",
         "scheids": "D1",
         "teller": "JC3"
@@ -591,8 +30,8 @@
     {
         "Datum": "16 march 2024",
         "Tijd": "14:30",
-        "Thuisteam": "AETOS MB 5",
-        "Uitteam": "Excelsior MB 1",
+        "Thuisteam": "AETOS MB5",
+        "Uitteam": "Excelsior MB1",
         "Locatie": "Middachtensingel",
         "scheids": "H2",
         "teller": "JC3"
@@ -600,8 +39,8 @@
     {
         "Datum": "16 march 2024",
         "Tijd": "14:30",
-        "Thuisteam": "AETOS MC 1",
-        "Uitteam": "Avior MC 1",
+        "Thuisteam": "AETOS MC1",
+        "Uitteam": "Avior MC1",
         "Locatie": "Middachtensingel",
         "scheids": "MA3",
         "teller": "MB3"
@@ -609,8 +48,8 @@
     {
         "Datum": "16 march 2024",
         "Tijd": "16:30",
-        "Thuisteam": "AETOS JC 3",
-        "Uitteam": "D.O.S. JC 1",
+        "Thuisteam": "AETOS JC3",
+        "Uitteam": "D.O.S. JC1",
         "Locatie": "Middachtensingel",
         "scheids": "MA4",
         "teller": "MB5"
@@ -618,8 +57,8 @@
     {
         "Datum": "16 march 2024",
         "Tijd": "16:30",
-        "Thuisteam": "AETOS MB 3",
-        "Uitteam": "LIVO MB 1",
+        "Thuisteam": "AETOS MB3",
+        "Uitteam": "LIVO MB1",
         "Locatie": "Middachtensingel",
         "scheids": "MA4",
         "teller": "MB5"
@@ -627,8 +66,8 @@
     {
         "Datum": "16 march 2024",
         "Tijd": "18:30",
-        "Thuisteam": "AETOS DS 1",
-        "Uitteam": "Rebelle DS 2",
+        "Thuisteam": "AETOS D1",
+        "Uitteam": "Rebelle D2",
         "Locatie": "Middachtensingel",
         "scheids": "",
         "teller": "MB3"
@@ -636,8 +75,8 @@
     {
         "Datum": "16 march 2024",
         "Tijd": "18:30",
-        "Thuisteam": "AETOS MA 4",
-        "Uitteam": "Evoba MA 1",
+        "Thuisteam": "AETOS MA4",
+        "Uitteam": "Evoba MA1",
         "Locatie": "Middachtensingel",
         "scheids": "D3",
         "teller": "MB3"
@@ -645,8 +84,8 @@
     {
         "Datum": "16 march 2024",
         "Tijd": "18:30",
-        "Thuisteam": "AETOS MB 4",
-        "Uitteam": "Xanthos MB 1",
+        "Thuisteam": "AETOS MB4",
+        "Uitteam": "Xanthos MB1",
         "Locatie": "Middachtensingel",
         "scheids": "D6",
         "teller": "JC3"
@@ -696,8 +135,8 @@
 	{
         "Datum": "21 march 2024",
         "Tijd": "19:00",
-        "Thuisteam": "AETOS MA 1",
-        "Uitteam": "Weekenders MA 1",
+        "Thuisteam": "AETOS MA1",
+        "Uitteam": "Weekenders MA1",
         "Locatie": "Valkenhuizen",
         "scheids": "D11",
         "teller": "MA3"
@@ -705,8 +144,8 @@
     {
         "Datum": "21 march 2024",
         "Tijd": "20:00",
-        "Thuisteam": "AETOS HS 4",
-        "Uitteam": "Alterno HS 5",
+        "Thuisteam": "AETOS H4",
+        "Uitteam": "Alterno H5",
         "Locatie": "Valkenhuizen",
         "scheids": "H9",
         "teller": "H8"
@@ -714,8 +153,8 @@
     {
         "Datum": "22 march 2024",
         "Tijd": "19:00",
-        "Thuisteam": "AETOS MC 4",
-        "Uitteam": "TweeVV MC 2",
+        "Thuisteam": "AETOS MC4",
+        "Uitteam": "TweeVV MC2",
         "Locatie": "Middachtensingel",
         "scheids": "MA1",
         "teller": "MA1"
@@ -723,8 +162,8 @@
     {
         "Datum": "22 march 2024",
         "Tijd": "20:00",
-        "Thuisteam": "AETOS JA 2",
-        "Uitteam": "Pollux JA 1",
+        "Thuisteam": "AETOS JA2",
+        "Uitteam": "Pollux JA1",
         "Locatie": "Elderveld",
         "scheids": "H7",
         "teller": "D9"
@@ -762,8 +201,8 @@
    {
         "Datum": "23 march 2024",
         "Tijd": "10:00",
-        "Thuisteam": "AETOS MA 2",
-        "Uitteam": "TweeVV MA 1",
+        "Thuisteam": "AETOS MA2",
+        "Uitteam": "TweeVV MA1",
         "Locatie": "Middachtensingel",
         "scheids": "H4",
         "teller": "MA4"
@@ -771,8 +210,8 @@
     {
         "Datum": "23 march 2024",
         "Tijd": "10:00",
-        "Thuisteam": "AETOS MB 2",
-        "Uitteam": "Weekenders MB 1",
+        "Thuisteam": "AETOS MB2",
+        "Uitteam": "Weekenders MB1",
         "Locatie": "Middachtensingel",
         "scheids": "MA1",
         "teller": "MA4"
@@ -780,8 +219,8 @@
     {
         "Datum": "23 march 2024",
         "Tijd": "10:00",
-        "Thuisteam": "AETOS MC 7",
-        "Uitteam": "Pegasus MC 2",
+        "Thuisteam": "AETOS MC7",
+        "Uitteam": "Pegasus MC2",
         "Locatie": "Middachtensingel",
         "scheids": "MA1",
         "teller": "JA1"
@@ -789,8 +228,8 @@
     {
         "Datum": "23 march 2024",
         "Tijd": "12:00",
-        "Thuisteam": "AETOS DS 7",
-        "Uitteam": "Surf DS 3",
+        "Thuisteam": "AETOS D7",
+        "Uitteam": "Surf D3",
         "Locatie": "Middachtensingel",
         "scheids": "D5",
         "teller": "MC7"
@@ -798,8 +237,8 @@
     {
         "Datum": "23 march 2024",
         "Tijd": "12:00",
-        "Thuisteam": "AETOS MA 4",
-        "Uitteam": "Voreo MA 2",
+        "Thuisteam": "AETOS MA4",
+        "Uitteam": "Voreo MA2",
         "Locatie": "Middachtensingel",
         "scheids": "D11",
         "teller": "MC2"
@@ -807,8 +246,8 @@
     {
         "Datum": "23 march 2024",
         "Tijd": "14:30",
-        "Thuisteam": "AETOS DS 11",
-        "Uitteam": "N.V.C. DS 5",
+        "Thuisteam": "AETOS D11",
+        "Uitteam": "N.V.C. D5",
         "Locatie": "Middachtensingel",
         "scheids": "D9",
         "teller": "MC8"
@@ -816,8 +255,8 @@
     {
         "Datum": "23 march 2024",
         "Tijd": "14:30",
-        "Thuisteam": "AETOS HS 8",
-        "Uitteam": "Nuovo HS 3",
+        "Thuisteam": "AETOS H8",
+        "Uitteam": "Nuovo H3",
         "Locatie": "Middachtensingel",
         "scheids": "D7",
         "teller": "MC8"
@@ -825,8 +264,8 @@
     {
         "Datum": "23 march 2024",
         "Tijd": "14:30",
-        "Thuisteam": "AETOS MC 2",
-        "Uitteam": "Surf MC 1",
+        "Thuisteam": "AETOS MC2",
+        "Uitteam": "Surf MC1",
         "Locatie": "Middachtensingel",
         "scheids": "JA1",
         "teller": "MC8"
@@ -834,8 +273,8 @@
     {
         "Datum": "23 march 2024",
         "Tijd": "16:30",
-        "Thuisteam": "AETOS HS 1",
-        "Uitteam": "Heyendaal HS 1",
+        "Thuisteam": "AETOS H1",
+        "Uitteam": "Heyendaal H1",
         "Locatie": "Middachtensingel",
         "scheids": "",
         "teller": "JB1"
@@ -843,8 +282,8 @@
     {
         "Datum": "23 march 2024",
         "Tijd": "16:30",
-        "Thuisteam": "AETOS MC 8",
-        "Uitteam": "Scylla MC 1",
+        "Thuisteam": "AETOS MC8",
+        "Uitteam": "Scylla MC1",
         "Locatie": "Middachtensingel",
         "scheids": "JA1",
         "teller": "JB1"
@@ -852,8 +291,8 @@
     {
         "Datum": "23 march 2024",
         "Tijd": "16:30",
-        "Thuisteam": "AETOS JA 2",
-        "Uitteam": "Time Out'75 JA 1",
+        "Thuisteam": "AETOS JA2",
+        "Uitteam": "Time Out'75 JA1",
         "Locatie": "Middachtensingel",
         "scheids": "D9",
         "teller": "JB1"
@@ -861,8 +300,8 @@
     {
         "Datum": "23 march 2024",
         "Tijd": "18:30",
-        "Thuisteam": "AETOS DS 9",
-        "Uitteam": "N.V.C. DS 4",
+        "Thuisteam": "AETOS D9",
+        "Uitteam": "N.V.C. D4",
         "Locatie": "Middachtensingel",
         "scheids": "H1",
         "teller": "JA2"
@@ -870,8 +309,8 @@
     {
         "Datum": "23 march 2024",
         "Tijd": "18:30",
-        "Thuisteam": "AETOS HS 2",
-        "Uitteam": "Pegasus HS 4",
+        "Thuisteam": "AETOS H2",
+        "Uitteam": "Pegasus H4",
         "Locatie": "Middachtensingel",
         "scheids": "H1",
         "teller": "JA2"
@@ -879,8 +318,8 @@
     {
         "Datum": "23 march 2024",
         "Tijd": "18:30",
-        "Thuisteam": "AETOS JB 1",
-        "Uitteam": "D.O.S. JB 1",
+        "Thuisteam": "AETOS JB1",
+        "Uitteam": "D.O.S. JB1",
         "Locatie": "Middachtensingel",
         "scheids": "H1",
         "teller": "MB4"
@@ -888,8 +327,8 @@
     {
         "Datum": "28 march 2024",
         "Tijd": "20:00",
-        "Thuisteam": "AETOS DS 1",
-        "Uitteam": "Voorwaarts DS 2",
+        "Thuisteam": "AETOS D1",
+        "Uitteam": "Voorwaarts D2",
         "Locatie": "Valkenhuizen",
         "scheids": "",
         "teller": "D3"
@@ -897,8 +336,8 @@
     {
         "Datum": "4 april 2024",
         "Tijd": "20:00",
-        "Thuisteam": "AETOS DS 5",
-        "Uitteam": "Scylla DS 1",
+        "Thuisteam": "AETOS D5",
+        "Uitteam": "Scylla D1",
         "Locatie": "Valkenhuizen",
         "scheids": "D6",
         "teller": "D6"
@@ -906,8 +345,8 @@
     {
         "Datum": "4 april 2024",
         "Tijd": "20:00",
-        "Thuisteam": "AETOS DS 8",
-        "Uitteam": "WSV DS 2",
+        "Thuisteam": "AETOS D8",
+        "Uitteam": "WSV D2",
         "Locatie": "Valkenhuizen",
         "scheids": "H2",
         "teller": "H2"
@@ -915,8 +354,8 @@
     {
         "Datum": "5 april 2024",
         "Tijd": "20:00",
-        "Thuisteam": "AETOS DS 6",
-        "Uitteam": "Victoria DS 2",
+        "Thuisteam": "AETOS D6",
+        "Uitteam": "Victoria D2",
         "Locatie": "Elderveld",
         "scheids": "D5",
         "teller": "D1"
@@ -960,8 +399,8 @@
     {
         "Datum": "6 april 2024",
         "Tijd": "10:00",
-        "Thuisteam": "AETOS MC 2",
-        "Uitteam": "EVV MC 1",
+        "Thuisteam": "AETOS MC2",
+        "Uitteam": "EVV MC1",
         "Locatie": "Middachtensingel",
         "scheids": "H4",
         "teller": "MC8"
@@ -969,8 +408,8 @@
     {
         "Datum": "6 april 2024",
         "Tijd": "10:00",
-        "Thuisteam": "AETOS MB 2",
-        "Uitteam": "Pegasus MB 1",
+        "Thuisteam": "AETOS MB2",
+        "Uitteam": "Pegasus MB1",
         "Locatie": "Middachtensingel",
         "scheids": "D3",
         "teller": "JC1"
@@ -978,8 +417,8 @@
     {
         "Datum": "6 april 2024",
         "Tijd": "10:00",
-        "Thuisteam": "AETOS JA 1",
-        "Uitteam": "Apollo 8 JA 1",
+        "Thuisteam": "AETOS JA1",
+        "Uitteam": "Apollo 8 JA1",
         "Locatie": "Middachtensingel",
         "scheids": "D3",
         "teller": "JC1"
@@ -987,8 +426,8 @@
     {
         "Datum": "6 april 2024",
         "Tijd": "12:00",
-        "Thuisteam": "AETOS DS 3",
-        "Uitteam": "EVV DS 1",
+        "Thuisteam": "AETOS D3",
+        "Uitteam": "EVV D1",
         "Locatie": "Middachtensingel",
         "scheids": "D1",
         "teller": "MB2"
@@ -996,8 +435,8 @@
     {
         "Datum": "6 april 2024",
         "Tijd": "12:00",
-        "Thuisteam": "AETOS JC 1",
-        "Uitteam": "Scylla JC 1",
+        "Thuisteam": "AETOS JC1",
+        "Uitteam": "Scylla JC1",
         "Locatie": "Middachtensingel",
         "scheids": "JA1",
         "teller": "JA1"
@@ -1005,8 +444,8 @@
     {
         "Datum": "6 april 2024",
         "Tijd": "12:00",
-        "Thuisteam": "AETOS MC 8",
-        "Uitteam": "Gemini MC 1",
+        "Thuisteam": "AETOS MC8",
+        "Uitteam": "Gemini MC1",
         "Locatie": "Middachtensingel",
         "scheids": "MA1",
         "teller": "MB2"
@@ -1014,8 +453,8 @@
     {
         "Datum": "6 april 2024",
         "Tijd": "14:30",
-        "Thuisteam": "AETOS DS 1",
-        "Uitteam": "Ormi DS 1",
+        "Thuisteam": "AETOS D1",
+        "Uitteam": "Ormi D1",
         "Locatie": "Middachtensingel",
         "scheids": "",
         "teller": "MC3"
@@ -1023,8 +462,8 @@
     {
         "Datum": "6 april 2024",
         "Tijd": "14:30",
-        "Thuisteam": "AETOS JB 1",
-        "Uitteam": "WVC Volley JB 1",
+        "Thuisteam": "AETOS JB1",
+        "Uitteam": "WVC Volley JB1",
         "Locatie": "Middachtensingel",
         "scheids": "H4",
         "teller": "MC6"
@@ -1032,8 +471,8 @@
     {
         "Datum": "6 april 2024",
         "Tijd": "14:30",
-        "Thuisteam": "AETOS MA 1",
-        "Uitteam": "Zeewolde MA 1",
+        "Thuisteam": "AETOS MA1",
+        "Uitteam": "Zeewolde MA1",
         "Locatie": "Middachtensingel",
         "scheids": "H2",
         "teller": "MC6"
@@ -1041,8 +480,8 @@
     {
         "Datum": "6 april 2024",
         "Tijd": "16:30",
-        "Thuisteam": "AETOS HS 2",
-        "Uitteam": "TiVoC HS 1",
+        "Thuisteam": "AETOS H2",
+        "Uitteam": "TiVoC H1",
         "Locatie": "Middachtensingel",
         "scheids": "H1",
         "teller": "JB1"
@@ -1050,8 +489,8 @@
     {
         "Datum": "6 april 2024",
         "Tijd": "16:30",
-        "Thuisteam": "AETOS MB 1",
-        "Uitteam": "Alterno MB 1",
+        "Thuisteam": "AETOS MB1",
+        "Uitteam": "Alterno MB1",
         "Locatie": "Middachtensingel",
         "scheids": "MA1",
         "teller": "MA2"
@@ -1059,8 +498,8 @@
     {
         "Datum": "6 april 2024",
         "Tijd": "16:30",
-        "Thuisteam": "AETOS MC 6",
-        "Uitteam": "Touch&#1081; MC 1",
+        "Thuisteam": "AETOS MC6",
+        "Uitteam": "Touch&#1081; MC1",
         "Locatie": "Middachtensingel",
         "scheids": "MA1",
         "teller": "MA2"
@@ -1068,8 +507,8 @@
     {
         "Datum": "6 april 2024",
         "Tijd": "18:30",
-        "Thuisteam": "AETOS HS 1",
-        "Uitteam": "Rebelle HS 1",
+        "Thuisteam": "AETOS H1",
+        "Uitteam": "Rebelle H1",
         "Locatie": "Middachtensingel",
         "scheids": "",
         "teller": "MC6"
@@ -1077,8 +516,8 @@
     {
         "Datum": "6 april 2024",
         "Tijd": "18:30",
-        "Thuisteam": "AETOS MA 2",
-        "Uitteam": "Scylla MA 1",
+        "Thuisteam": "AETOS MA2",
+        "Uitteam": "Scylla MA1",
         "Locatie": "Middachtensingel",
         "scheids": "H2",
         "teller": "MB1"
@@ -1086,8 +525,8 @@
     {
         "Datum": "11 april 2024",
         "Tijd": "20:00",
-        "Thuisteam": "AETOS DS 8",
-        "Uitteam": "Alterno DS 9",
+        "Thuisteam": "AETOS D8",
+        "Uitteam": "Alterno D9",
         "Locatie": "Valkenhuizen",
         "scheids": "H8",
         "teller": "H8"
@@ -1095,8 +534,8 @@
     {
         "Datum": "11 april 2024",
         "Tijd": "20:00",
-        "Thuisteam": "AETOS HS 7",
-        "Uitteam": "D.V.O.L. HS 1",
+        "Thuisteam": "AETOS H7",
+        "Uitteam": "D.V.O.L. H1",
         "Locatie": "Valkenhuizen",
         "scheids": "D4",
         "teller": "H1"
@@ -1104,8 +543,8 @@
     {
         "Datum": "11 april 2024",
         "Tijd": "20:00",
-        "Thuisteam": "AETOS HS 9",
-        "Uitteam": "Heyendaal HS 5",
+        "Thuisteam": "AETOS H9",
+        "Uitteam": "Heyendaal H5",
         "Locatie": "Valkenhuizen",
         "scheids": "H5",
         "teller": "H5"
@@ -1113,8 +552,8 @@
     {
         "Datum": "12 april 2024",
         "Tijd": "21:30",
-        "Thuisteam": "AETOS HS 5",
-        "Uitteam": "Orion HS 6",
+        "Thuisteam": "AETOS H5",
+        "Uitteam": "Orion H6",
         "Locatie": "De Laar",
         "scheids": "H7",
         "teller": "D8"
@@ -1122,8 +561,8 @@
     {
         "Datum": "12 april 2024",
         "Tijd": "20:00",
-        "Thuisteam": "AETOS DS 4",
-        "Uitteam": "Toesj DS 1",
+        "Thuisteam": "AETOS D4",
+        "Uitteam": "Toesj D1",
         "Locatie": "Elderveld",
         "scheids": "H7",
         "teller": "H7"
@@ -1131,8 +570,8 @@
     {
         "Datum": "12 april 2024",
         "Tijd": "20:00",
-        "Thuisteam": "AETOS MA 4",
-        "Uitteam": "Trivos MA 2",
+        "Thuisteam": "AETOS MA4",
+        "Uitteam": "Trivos MA2",
         "Locatie": "Elderveld",
         "scheids": "D8",
         "teller": "H9"
@@ -1177,8 +616,8 @@
     {
         "Datum": "13 april 2024",
         "Tijd": "10:00",
-        "Thuisteam": "AETOS JC 2",
-        "Uitteam": "Surf JC 1",
+        "Thuisteam": "AETOS JC2",
+        "Uitteam": "Surf JC1",
         "Locatie": "Middachtensingel",
         "scheids": "JA1",
         "teller": "JC3"
@@ -1186,8 +625,8 @@
     {
         "Datum": "13 april 2024",
         "Tijd": "10:00",
-        "Thuisteam": "AETOS MA 3",
-        "Uitteam": "TweeVV MA 1",
+        "Thuisteam": "AETOS MA3",
+        "Uitteam": "TweeVV MA1",
         "Locatie": "Middachtensingel",
         "scheids": "D7",
         "teller": "JC3"
@@ -1195,8 +634,8 @@
     {
         "Datum": "13 april 2024",
         "Tijd": "10:00",
-        "Thuisteam": "AETOS MC 7",
-        "Uitteam": "Tweestroom MC 1",
+        "Thuisteam": "AETOS MC7",
+        "Uitteam": "Tweestroom MC1",
         "Locatie": "Middachtensingel",
         "scheids": "D7",
         "teller": "JC3"
@@ -1204,8 +643,8 @@
     {
         "Datum": "13 april 2024",
         "Tijd": "12:00",
-        "Thuisteam": "AETOS DS 7",
-        "Uitteam": "Invicta DS 3",
+        "Thuisteam": "AETOS D7",
+        "Uitteam": "Invicta D3",
         "Locatie": "Middachtensingel",
         "scheids": "D3",
         "teller": "MC7"
@@ -1213,8 +652,8 @@
     {
         "Datum": "13 april 2024",
         "Tijd": "12:00",
-        "Thuisteam": "AETOS JC 3",
-        "Uitteam": "SDS JC 1",
+        "Thuisteam": "AETOS JC3",
+        "Uitteam": "SDJC1",
         "Locatie": "Middachtensingel",
         "scheids": "H6",
         "teller": "MC7"
@@ -1222,8 +661,8 @@
     {
         "Datum": "13 april 2024",
         "Tijd": "14:30",
-        "Thuisteam": "AETOS DS 2",
-        "Uitteam": "Libero'99 DS 1",
+        "Thuisteam": "AETOS D2",
+        "Uitteam": "Libero'99 D1",
         "Locatie": "Middachtensingel",
         "scheids": "H2",
         "teller": "JB2"
@@ -1231,8 +670,8 @@
     {
         "Datum": "13 april 2024",
         "Tijd": "14:30",
-        "Thuisteam": "AETOS HS 8",
-        "Uitteam": "Excelsior HS 1",
+        "Thuisteam": "AETOS H8",
+        "Uitteam": "Excelsior H1",
         "Locatie": "Middachtensingel",
         "scheids": "D7",
         "teller": "JB2"
@@ -1240,8 +679,8 @@
     {
         "Datum": "13 april 2024",
         "Tijd": "14:30",
-        "Thuisteam": "AETOS MC 3",
-        "Uitteam": "Pegasus MC 1",
+        "Thuisteam": "AETOS MC3",
+        "Uitteam": "Pegasus MC1",
         "Locatie": "Middachtensingel",
         "scheids": "D9",
         "teller": "JC4"
@@ -1249,8 +688,8 @@
     {
         "Datum": "13 april 2024",
         "Tijd": "16:30",
-        "Thuisteam": "AETOS DS 9",
-        "Uitteam": "HSC DS 3",
+        "Thuisteam": "AETOS D9",
+        "Uitteam": "HSC D3",
         "Locatie": "Middachtensingel",
         "scheids": "D11",
         "teller": "MB4"
@@ -1258,8 +697,8 @@
     {
         "Datum": "13 april 2024",
         "Tijd": "16:30",
-        "Thuisteam": "AETOS HS 6",
-        "Uitteam": "Nuovo HS 2",
+        "Thuisteam": "AETOS H6",
+        "Uitteam": "Nuovo H2",
         "Locatie": "Middachtensingel",
         "scheids": "H8",
         "teller": "MB4"
@@ -1267,8 +706,8 @@
     {
         "Datum": "13 april 2024",
         "Tijd": "16:30",
-        "Thuisteam": "AETOS JC 4",
-        "Uitteam": "Toesj JC 1",
+        "Thuisteam": "AETOS JC4",
+        "Uitteam": "Toesj JC1",
         "Locatie": "Middachtensingel",
         "scheids": "H8",
         "teller": "MB3"
@@ -1276,8 +715,8 @@
     {
         "Datum": "13 april 2024",
         "Tijd": "18:30",
-        "Thuisteam": "AETOS DS 11",
-        "Uitteam": "O.M.S. DS 4",
+        "Thuisteam": "AETOS D11",
+        "Uitteam": "O.M.S. D4",
         "Locatie": "Middachtensingel",
         "scheids": "D9",
         "teller": "D9"
@@ -1285,8 +724,8 @@
     {
         "Datum": "13 april 2024",
         "Tijd": "18:30",
-        "Thuisteam": "AETOS MB 3",
-        "Uitteam": "Tweestroom MB 1",
+        "Thuisteam": "AETOS MB3",
+        "Uitteam": "Tweestroom MB1",
         "Locatie": "Middachtensingel",
         "scheids": "D9",
         "teller": "D9"
@@ -1294,8 +733,8 @@
     {
         "Datum": "13 april 2024",
         "Tijd": "18:30",
-        "Thuisteam": "AETOS MB 4",
-        "Uitteam": "D.O.S. MB 1",
+        "Thuisteam": "AETOS MB4",
+        "Uitteam": "D.O.S. MB1",
         "Locatie": "Middachtensingel",
         "scheids": "H6",
         "teller": "JC4"

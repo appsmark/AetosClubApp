@@ -23,7 +23,7 @@ class _DutyState extends State<Duty> {
   RssClean rssClean = RssClean();
 
   Future getData() async {
-    await duty.getDuty();
+    await duty.getDuty(false);
     setState(() {});
   }
 

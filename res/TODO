@@ -1,9 +1,11 @@
 Duty koppelen aan huidige datum
 
-teller/scheids bij eigen wedstrijd
-
-setstanden van wedstrijd die op de dag klaar is
-
 pause/resume app behaviour
 
 Aanwezigheid voor wedstrijd 
+
+Game.dart: counter en referee netter bepalen aan de hand van datum
+
+Zaalwacht aangeven bij game.dart
+
+Directe selectie team in hoofdmenu
