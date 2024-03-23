@@ -23,6 +23,8 @@ class _MainScreen extends State<MainScreen> {
   Sizes sizes = Sizes.instance;
   Team team = Team();
   TeamInfo teamInfo = TeamInfo();
+  List<String> items = [];
+  late String dropdownvalue;
 
   @override
   void initState() {
@@ -30,6 +32,10 @@ class _MainScreen extends State<MainScreen> {
     team.currentTeam;
     rssRanking.getRanking();
     rssSchedule.getSchedule();
+    dropdownvalue = team.currentTeam;
+    for (int index = 0; index < teamInfo.teamsInfo.length; index++) {
+      items.add(teamInfo.teamsInfo[index][0]);
+    }
   }
 
   @override
@@ -49,6 +55,7 @@ class _MainScreen extends State<MainScreen> {
         appBar: AppBar(
           toolbarHeight: sizes.heightToolbar,
           centerTitle: true,
+          /*
           actions: [
             GestureDetector(
               child: Icon(
@@ -74,22 +81,31 @@ class _MainScreen extends State<MainScreen> {
               },
             ),
           ],
-          title: GestureDetector(
-            child: Text(
-              "TEAM ${team.currentTeam}",
-              style: TextStyle(
-                  color: sizes.colorTitle,
-                  fontSize: sizes.sizeFontTitle,
-                  fontWeight: FontWeight.bold),
-            ),
-/*
-              onTap: () {
-                team.alternativeTeam;
-                setState(() {
-                  getRSS(teamInfo.getRanking(team.alternativeTeam));
-                });
-              }
-*/
+          */
+          title: DropdownButton(
+            underline: const SizedBox(),
+            dropdownColor: sizes.colorSelection,
+            value: dropdownvalue,
+            autofocus: true,
+            iconSize: 0.0,
+            items: items.map((String items) {
+              return DropdownMenuItem(
+                value: items,
+                child: Text(
+                  items.length < 3 ? " TEAM $items" : "TEAM $items",
+                  style: TextStyle(
+                      color: sizes.colorTitle, fontSize: sizes.sizeFontTitle),
+                ),
+              );
+            }).toList(),
+            onChanged: (String? newValue) {
+              setState(() {
+                team.set(newValue);
+                dropdownvalue = newValue!;
+                teamInfo.getSchedule(team.currentTeam);
+                teamInfo.getRanking(team.currentTeam);
+              });
+            },
           ),
           backgroundColor: sizes.colorBackground,
           elevation: 0,

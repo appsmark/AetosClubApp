@@ -108,48 +108,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 ),
               ],
             ),
-
-/*            
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text(
-                  "ALTERNATIEF: ",
-                  style: TextStyle(color: Color(0xFFF9B234), fontSize: 25),
-                ),
-                DropdownButton(
-                  // Initial Value
-                  value: dropdownvalueAlternative,
-                  autofocus: true,
-                  // Down Arrow Icon
-                  icon: const Icon(Icons.keyboard_arrow_down),
-
-                  // Array list of items
-                  items: items.map((String items) {
-                    return DropdownMenuItem(
-                      value: items,
-                      child: Text(
-                        items,
-                        style: const TextStyle(
-                            //backgroundColor: Color(0xFF731816),
-                            color: Color(0xFFF9B234), //Color(0xFF00AADE),
-                            fontSize: 25),
-                      ),
-                    );
-                  }).toList(),
-                  // After selecting the desired option,it will
-                  // change button value to selected value
-                  onChanged: (String? newValue) {
-                    setState(() {
-                      team.setAlternativeTeam(newValue!);
-                      dropdownvalueAlternative = newValue;
-//                      getRSS(teamInfo.getRanking(team.currentTeam));
-                    });
-                  },
-                ),
-              ],
-            ),
-*/
           ],
         ));
   }
