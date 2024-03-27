@@ -22,6 +22,7 @@ class TeamInfo {
     ["H7", "regio-oost/H2J", "heren/7"],
     ["H8", "regio-oost/H3E", "heren/8"],
     ["H9", "regio-oost/H3F", "heren/9"],
+    ["BEACH", "", ""],
     ["JA1", "regio-oost/JATA2", "jongens-a/1"],
     ["JA2", "regio-oost/JA1A2", "jongens-a/2"],
     ["JB1", "regio-oost/JBHA2", "jongens-b/1"],
