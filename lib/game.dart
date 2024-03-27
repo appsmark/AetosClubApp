@@ -37,7 +37,7 @@ class _GameState extends State<Game> {
     listOfDuties = dutyData.getGameData();
     counter = "";
     referee = "";
-    if (listOfDuties.length > 0) {
+    if (listOfDuties.isNotEmpty) {
       String compare = listOfDuties[0]['date'].replaceAll('march', 'maart');
       if (listOfItems[0]['date'].contains(compare)) {
         counter = listOfDuties[0]['counter'];
@@ -115,7 +115,7 @@ class _GameState extends State<Game> {
                   fontWeight: FontWeight.bold),
             ),
             Text(
-              "tegen",
+              listOfItems[0]['game'] == "" ? "" : "tegen",
               style: TextStyle(
                   color: sizes.colorSchedule,
                   fontSize: sizes.sizeFontSchedule,
