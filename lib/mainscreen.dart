@@ -7,7 +7,6 @@ import 'results.dart';
 import 'rss_ranking.dart';
 import 'rss_schedule.dart';
 import 'schedule.dart';
-import 'settingsscreen.dart';
 import 'sizes.dart';
 
 class MainScreen extends StatefulWidget {
@@ -30,8 +29,6 @@ class _MainScreen extends State<MainScreen> {
   void initState() {
     super.initState();
     team.currentTeam;
-    rssRanking.getRanking();
-    rssSchedule.getSchedule();
     dropdownvalue = team.currentTeam;
     for (int index = 0; index < teamInfo.teamsInfo.length; index++) {
       items.add(teamInfo.teamsInfo[index][0]);
@@ -55,33 +52,6 @@ class _MainScreen extends State<MainScreen> {
         appBar: AppBar(
           toolbarHeight: sizes.heightToolbar,
           centerTitle: true,
-          /*
-          actions: [
-            GestureDetector(
-              child: Icon(
-                Icons.more_vert,
-                color: sizes.colorTitle,
-                size: sizes.sizeFontTitle,
-              ),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    PageRouteBuilder(
-                        transitionDuration: const Duration(milliseconds: 100),
-                        transitionsBuilder:
-                            (context, animation, secondaryAnimation, child) {
-                          return FadeTransition(
-                            opacity: animation,
-                            child: child,
-                          );
-                        },
-                        pageBuilder: (context, animation, secondaryAnimation) {
-                          return const SettingsScreen();
-                        }));
-              },
-            ),
-          ],
-          */
           title: DropdownButton(
             underline: const SizedBox(),
             dropdownColor: sizes.colorSelection,

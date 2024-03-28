@@ -6,6 +6,7 @@ class RankingData {
   RankingData._internal();
 
   clear() {
+    competition = "";
     data = [];
   }
 

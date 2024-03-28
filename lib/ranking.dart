@@ -28,6 +28,7 @@ class _RankingState extends State<Ranking> {
   @override
   initState() {
     super.initState();
+    data.clear();
     getData();
   }
 
