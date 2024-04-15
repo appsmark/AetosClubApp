@@ -53,7 +53,9 @@ class _MainScreen extends State<MainScreen> {
           toolbarHeight: sizes.heightToolbar,
           centerTitle: true,
           title: DropdownButton(
-            underline: const SizedBox(),
+            underline: const SizedBox(
+              height: 10,
+            ),
             dropdownColor: sizes.colorSelection,
             value: dropdownvalue,
             autofocus: true,
@@ -64,7 +66,11 @@ class _MainScreen extends State<MainScreen> {
                 child: Text(
                   items.length < 3 ? " TEAM $items" : "TEAM $items",
                   style: TextStyle(
-                      color: sizes.colorTitle, fontSize: sizes.sizeFontTitle),
+                      color: sizes.colorTitle,
+                      fontWeight: FontWeight.bold,
+                      fontSize: sizes.tablet
+                          ? 0.7 * sizes.sizeFontTitle
+                          : sizes.sizeFontTitle),
                 ),
               );
             }).toList(),

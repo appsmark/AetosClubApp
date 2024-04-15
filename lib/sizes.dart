@@ -14,6 +14,7 @@ class Sizes {
   double sizeFontTitle = 0;
   double spacing = 0;
   double heightToolbar = 0;
+  bool tablet = false;
 
   Color colorBackground = const Color(0xFF731816);
   Color colorButton = const Color(0xFFF9B234);
@@ -33,12 +34,13 @@ class Sizes {
     buttonBorderWidth = 0.005 * screenHeight;
     sizeFontButton = 0.045 * screenHeight;
     sizeFontCompetition = 0.035 * screenHeight;
-    sizeFontRanking = 0.054 * screenWidth;
-    sizeFontResults = 0.028 * screenHeight;
+    sizeFontRanking = 0.05 * screenWidth;
+    sizeFontResults = 0.025 * screenHeight;
     sizeFontSchedule = 0.03 * screenHeight;
     sizeFontSelection = 0.03 * screenHeight;
     sizeFontTitle = 0.045 * screenHeight;
     spacing = 0.1 * screenHeight;
+    tablet = MediaQuery.of(context).size.shortestSide > 550;
     /*
     colorButton = const Color(0xFFF9B234);
     colorCompetition = const Color(0xFFF9B234);
