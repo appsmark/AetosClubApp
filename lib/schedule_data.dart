@@ -1,11 +1,22 @@
 class ScheduleData {
   static final instance = ScheduleData._internal();
-  List data = [];
+  List data = [
+    {'date': '', 'time': '', 'game': '', 'hall': '', 'street': '', 'postal': ''}
+  ];
 
   ScheduleData._internal();
 
   clear() {
-    data = [];
+    data = [
+      {
+        'date': '',
+        'time': '',
+        'game': '',
+        'hall': '',
+        'street': '',
+        'postal': ''
+      }
+    ];
   }
 
   addGame(Map map) {
