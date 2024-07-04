@@ -9,3 +9,5 @@ Game.dart: counter en referee netter bepalen aan de hand van datum
 Zaalwacht aangeven bij game.dart
 
 Directe selectie team in hoofdmenu
+
+Voorkom cash ranking.dart bij niet bestaand team
