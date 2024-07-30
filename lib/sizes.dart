@@ -33,7 +33,7 @@ class Sizes {
     heightToolbar = 0.1 * screenHeight;
     buttonBorderWidth = 0.005 * screenHeight;
     sizeFontButton = 0.045 * screenHeight;
-    sizeFontCompetition = 0.035 * screenHeight;
+    sizeFontCompetition = 0.032 * screenHeight;
     sizeFontRanking = 0.05 * screenWidth;
     sizeFontResults = 0.025 * screenHeight;
     sizeFontSchedule = 0.03 * screenHeight;
