@@ -1,0 +1,758 @@
+{
+	"duty": [
+        {
+            "Datum": "2025-03-16",
+            "Tijd": "18:30",
+            "Thuisteam": "AETOS MA4",
+            "Uitteam": "Evoba MA1",
+            "Locatie": "Middachtensingel",
+            "scheids": "D3",
+            "teller": "MB3"
+        },
+        {
+        "Datum": "2025-03-16",
+        "Tijd": "12:00",
+        "Thuisteam": "AETOS JA2",
+        "Uitteam": "Time Out'75 JA1",
+        "Locatie": "Middachtensingel",
+        "scheids": "H6",
+        "teller": "MC9"
+    },
+    {
+        "Datum": "2025-03-16",
+        "Tijd": "12:00",
+        "Thuisteam": "AETOS JC2",
+        "Uitteam": "Volta JC1",
+        "Locatie": "Middachtensingel",
+        "scheids": "MA3",
+        "teller": "MA3"
+    },
+    {
+        "Datum": "2025-03-16",
+        "Tijd": "14:30",
+        "Thuisteam": "AETOS H6",
+        "Uitteam": "Gemini H4",
+        "Locatie": "Middachtensingel",
+        "scheids": "D1",
+        "teller": "JC3"
+    },
+    {
+        "Datum": "2025-03-16",
+        "Tijd": "14:30",
+        "Thuisteam": "AETOS MB5",
+        "Uitteam": "Excelsior MB1",
+        "Locatie": "Middachtensingel",
+        "scheids": "H2",
+        "teller": "JC3"
+    },
+    {
+        "Datum": "2025-03-16",
+        "Tijd": "14:30",
+        "Thuisteam": "AETOS MC1",
+        "Uitteam": "Avior MC1",
+        "Locatie": "Middachtensingel",
+        "scheids": "MA3",
+        "teller": "MB3"
+    },
+    {
+        "Datum": "2025-03-16",
+        "Tijd": "16:30",
+        "Thuisteam": "AETOS JC3",
+        "Uitteam": "D.O.S. JC1",
+        "Locatie": "Middachtensingel",
+        "scheids": "MA4",
+        "teller": "MB5"
+    },
+    {
+        "Datum": "2025-03-16",
+        "Tijd": "16:30",
+        "Thuisteam": "AETOS MB3",
+        "Uitteam": "LIVO MB1",
+        "Locatie": "Middachtensingel",
+        "scheids": "MA4",
+        "teller": "MB5"
+    },
+    {
+        "Datum": "2025-03-16",
+        "Tijd": "18:30",
+        "Thuisteam": "AETOS D1",
+        "Uitteam": "Rebelle D2",
+        "Locatie": "Middachtensingel",
+        "scheids": "",
+        "teller": "MB3"
+    },
+    {
+        "Datum": "2025-03-16",
+        "Tijd": "18:30",
+        "Thuisteam": "AETOS MA4",
+        "Uitteam": "Evoba MA1",
+        "Locatie": "Middachtensingel",
+        "scheids": "D3",
+        "teller": "MB3"
+    },
+    {
+        "Datum": "2025-03-16",
+        "Tijd": "18:30",
+        "Thuisteam": "AETOS MB4",
+        "Uitteam": "Xanthos MB1",
+        "Locatie": "Middachtensingel",
+        "scheids": "D6",
+        "teller": "JC3"
+    },    
+	
+	{
+        "Datum": "2025-03-16",
+        "Tijd": "08:00",
+        "Eindtijd": "10:30",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV",
+        "Locatie": "De Laar",
+        "scheids": "JA2",
+        "teller": ""
+    },
+	{
+        "Datum": "2025-03-16",
+        "Tijd": "08:45",
+        "Eindtijd": "11:00",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV",
+        "Locatie": "De Laar",
+        "scheids": "H2",
+        "teller": "MC7"
+    },
+	{
+        "Datum": "2025-03-16",
+        "Tijd": "10:15",
+        "Eindtijd": "12:15",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV",
+        "Locatie": "De Laar",
+        "scheids": "D11",
+        "teller": "MC6"
+    },
+	{
+        "Datum": "2025-03-16",
+        "Tijd": "10:15",
+        "Eindtijd": "12:15",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV",
+        "Locatie": "De Laar",
+        "scheids": "D1",
+        "teller": "MC6"
+    },
+    
+	{
+        "Datum": "2025-03-21",
+        "Tijd": "19:00",
+        "Thuisteam": "AETOS MA1",
+        "Uitteam": "Weekenders MA1",
+        "Locatie": "Valkenhuizen",
+        "scheids": "D11",
+        "teller": "MA3"
+    },
+    {
+        "Datum": "2025-03-21",
+        "Tijd": "20:00",
+        "Thuisteam": "AETOS H4",
+        "Uitteam": "Alterno H5",
+        "Locatie": "Valkenhuizen",
+        "scheids": "H9",
+        "teller": "H8"
+    },
+    {
+        "Datum": "2025-03-22",
+        "Tijd": "19:00",
+        "Thuisteam": "AETOS MC4",
+        "Uitteam": "TweeVV MC2",
+        "Locatie": "Middachtensingel",
+        "scheids": "MA1",
+        "teller": "MA1"
+    },
+    {
+        "Datum": "2025-03-22",
+        "Tijd": "20:00",
+        "Thuisteam": "AETOS JA2",
+        "Uitteam": "Pollux JA1",
+        "Locatie": "Elderveld",
+        "scheids": "H7",
+        "teller": "D9"
+    },
+     {
+        "Datum": "2025-03-23",
+        "Tijd": "09:15",
+		"Eindtijd": "13:30",
+        "Zaalwacht": "H1"
+    },
+     {
+        "Datum": "2025-03-23",
+        "Tijd": "09:15",
+		"Eindtijd": "13:30",
+        "Zaalwacht": "MC2"
+    },
+     {
+        "Datum": "2025-03-23",
+        "Tijd": "13:00",
+		"Eindtijd": "17:30",
+        "Zaalwacht": "D9"
+    },
+     {
+        "Datum": "2025-03-23",
+        "Tijd": "13:00",
+		"Eindtijd": "17:30",
+        "Zaalwacht": "MB2"
+    },
+     {
+        "Datum": "2025-03-23",
+        "Tijd": "17:00",
+		"Eindtijd": "einde",
+        "Zaalwacht": "H4"
+    },
+   {
+        "Datum": "2025-03-23",
+        "Tijd": "10:00",
+        "Thuisteam": "AETOS MA2",
+        "Uitteam": "TweeVV MA1",
+        "Locatie": "Middachtensingel",
+        "scheids": "H4",
+        "teller": "MA4"
+    },
+    {
+        "Datum": "2025-03-23",
+        "Tijd": "10:00",
+        "Thuisteam": "AETOS MB2",
+        "Uitteam": "Weekenders MB1",
+        "Locatie": "Middachtensingel",
+        "scheids": "MA1",
+        "teller": "MA4"
+    },
+    {
+        "Datum": "2025-03-23",
+        "Tijd": "10:00",
+        "Thuisteam": "AETOS MC7",
+        "Uitteam": "Pegasus MC2",
+        "Locatie": "Middachtensingel",
+        "scheids": "MA1",
+        "teller": "JA1"
+    },
+    {
+        "Datum": "2025-03-23",
+        "Tijd": "12:00",
+        "Thuisteam": "AETOS D7",
+        "Uitteam": "Surf D3",
+        "Locatie": "Middachtensingel",
+        "scheids": "D5",
+        "teller": "MC7"
+    },
+    {
+        "Datum": "2025-03-23",
+        "Tijd": "12:00",
+        "Thuisteam": "AETOS MA4",
+        "Uitteam": "Voreo MA2",
+        "Locatie": "Middachtensingel",
+        "scheids": "D11",
+        "teller": "MC2"
+    },
+    {
+        "Datum": "2025-03-23",
+        "Tijd": "14:30",
+        "Thuisteam": "AETOS D11",
+        "Uitteam": "N.V.C. D5",
+        "Locatie": "Middachtensingel",
+        "scheids": "D9",
+        "teller": "MC8"
+    },
+    {
+        "Datum": "2025-03-23",
+        "Tijd": "14:30",
+        "Thuisteam": "AETOS H8",
+        "Uitteam": "Nuovo H3",
+        "Locatie": "Middachtensingel",
+        "scheids": "D7",
+        "teller": "MC8"
+    },
+    {
+        "Datum": "2025-03-23",
+        "Tijd": "14:30",
+        "Thuisteam": "AETOS MC2",
+        "Uitteam": "Surf MC1",
+        "Locatie": "Middachtensingel",
+        "scheids": "JA1",
+        "teller": "MC8"
+    },
+    {
+        "Datum": "2025-03-23",
+        "Tijd": "16:30",
+        "Thuisteam": "AETOS H1",
+        "Uitteam": "Heyendaal H1",
+        "Locatie": "Middachtensingel",
+        "scheids": "",
+        "teller": "JB1"
+    },
+    {
+        "Datum": "2025-03-23",
+        "Tijd": "16:30",
+        "Thuisteam": "AETOS MC8",
+        "Uitteam": "Scylla MC1",
+        "Locatie": "Middachtensingel",
+        "scheids": "JA1",
+        "teller": "JB1"
+    },
+    {
+        "Datum": "2025-03-23",
+        "Tijd": "16:30",
+        "Thuisteam": "AETOS JA2",
+        "Uitteam": "Time Out'75 JA1",
+        "Locatie": "Middachtensingel",
+        "scheids": "D9",
+        "teller": "JB1"
+    },
+    {
+        "Datum": "2025-03-23",
+        "Tijd": "18:30",
+        "Thuisteam": "AETOS D9",
+        "Uitteam": "N.V.C. D4",
+        "Locatie": "Middachtensingel",
+        "scheids": "H1",
+        "teller": "JA2"
+    },
+    {
+        "Datum": "2025-03-23",
+        "Tijd": "18:30",
+        "Thuisteam": "AETOS H2",
+        "Uitteam": "Pegasus H4",
+        "Locatie": "Middachtensingel",
+        "scheids": "H1",
+        "teller": "JA2"
+    },
+    {
+        "Datum": "2025-03-23",
+        "Tijd": "18:30",
+        "Thuisteam": "AETOS JB1",
+        "Uitteam": "D.O.S. JB1",
+        "Locatie": "Middachtensingel",
+        "scheids": "H1",
+        "teller": "MB4"
+    },
+        {
+        "Datum": "2025-04-06",
+        "Tijd": "09:15",
+		"Eindtijd": "13:30",
+        "Zaalwacht": "H2"
+    },
+     {
+        "Datum": "2025-04-06",
+        "Tijd": "09:15",
+		"Eindtijd": "13:30",
+        "Zaalwacht": "JB1"
+    },
+     {
+        "Datum": "2025-04-06",
+        "Tijd": "13:00",
+		"Eindtijd": "17:30",
+        "Zaalwacht": "H1"
+    },
+     {
+        "Datum": "2025-04-06",
+        "Tijd": "13:00",
+		"Eindtijd": "17:30",
+        "Zaalwacht": "MC2"
+    },
+     {
+        "Datum": "2025-04-06",
+        "Tijd": "17:00",
+		"Eindtijd": "einde",
+        "Zaalwacht": "D3"
+    },
+     {
+        "Datum": "2025-04-06",
+        "Tijd": "17:00",
+		"Eindtijd": "einde",
+        "Zaalwacht": "D6"
+    },
+    {
+        "Datum": "2025-04-06",
+        "Tijd": "10:00",
+        "Thuisteam": "AETOS MC2",
+        "Uitteam": "EVV MC1",
+        "Locatie": "Middachtensingel",
+        "scheids": "H4",
+        "teller": "MC8"
+    },
+    {
+        "Datum": "2025-04-06",
+        "Tijd": "10:00",
+        "Thuisteam": "AETOS MB2",
+        "Uitteam": "Pegasus MB1",
+        "Locatie": "Middachtensingel",
+        "scheids": "D3",
+        "teller": "JC1"
+    },
+    {
+        "Datum": "2025-04-06",
+        "Tijd": "10:00",
+        "Thuisteam": "AETOS JA1",
+        "Uitteam": "Apollo 8 JA1",
+        "Locatie": "Middachtensingel",
+        "scheids": "D3",
+        "teller": "JC1"
+    },
+    {
+        "Datum": "2025-04-06",
+        "Tijd": "12:00",
+        "Thuisteam": "AETOS D3",
+        "Uitteam": "EVV D1",
+        "Locatie": "Middachtensingel",
+        "scheids": "D1",
+        "teller": "MB2"
+    },
+    {
+        "Datum": "2025-04-06",
+        "Tijd": "12:00",
+        "Thuisteam": "AETOS JC1",
+        "Uitteam": "Scylla JC1",
+        "Locatie": "Middachtensingel",
+        "scheids": "JA1",
+        "teller": "JA1"
+    },
+    {
+        "Datum": "2025-04-06",
+        "Tijd": "12:00",
+        "Thuisteam": "AETOS MC8",
+        "Uitteam": "Gemini MC1",
+        "Locatie": "Middachtensingel",
+        "scheids": "MA1",
+        "teller": "MB2"
+    },
+    {
+        "Datum": "2025-04-06",
+        "Tijd": "14:30",
+        "Thuisteam": "AETOS D1",
+        "Uitteam": "Ormi D1",
+        "Locatie": "Middachtensingel",
+        "scheids": "",
+        "teller": "MC3"
+    },
+    {
+        "Datum": "2025-04-06",
+        "Tijd": "14:30",
+        "Thuisteam": "AETOS JB1",
+        "Uitteam": "WVC Volley JB1",
+        "Locatie": "Middachtensingel",
+        "scheids": "H4",
+        "teller": "MC6"
+    },
+    {
+        "Datum": "2025-04-06",
+        "Tijd": "14:30",
+        "Thuisteam": "AETOS MA1",
+        "Uitteam": "Zeewolde MA1",
+        "Locatie": "Middachtensingel",
+        "scheids": "H2",
+        "teller": "MC6"
+    },
+    {
+        "Datum": "2025-04-06",
+        "Tijd": "16:30",
+        "Thuisteam": "AETOS H2",
+        "Uitteam": "TiVoC H1",
+        "Locatie": "Middachtensingel",
+        "scheids": "H1",
+        "teller": "JB1"
+    },
+    {
+        "Datum": "2025-04-06",
+        "Tijd": "16:30",
+        "Thuisteam": "AETOS MB1",
+        "Uitteam": "Alterno MB1",
+        "Locatie": "Middachtensingel",
+        "scheids": "MA1",
+        "teller": "MA2"
+    },
+    {
+        "Datum": "2025-04-06",
+        "Tijd": "16:30",
+        "Thuisteam": "AETOS MC6",
+        "Uitteam": "Touch&#1081; MC1",
+        "Locatie": "Middachtensingel",
+        "scheids": "MA1",
+        "teller": "MA2"
+    },
+    {
+        "Datum": "2025-04-06",
+        "Tijd": "18:30",
+        "Thuisteam": "AETOS H1",
+        "Uitteam": "Rebelle H1",
+        "Locatie": "Middachtensingel",
+        "scheids": "",
+        "teller": "MC6"
+    },
+    {
+        "Datum": "2025-04-06",
+        "Tijd": "18:30",
+        "Thuisteam": "AETOS MA2",
+        "Uitteam": "Scylla MA1",
+        "Locatie": "Middachtensingel",
+        "scheids": "H2",
+        "teller": "MB1"
+    },
+    {
+        "Datum": "2025-04-11",
+        "Tijd": "20:00",
+        "Thuisteam": "AETOS D8",
+        "Uitteam": "Alterno D9",
+        "Locatie": "Valkenhuizen",
+        "scheids": "H8",
+        "teller": "H8"
+    },
+    {
+        "Datum": "2025-04-11",
+        "Tijd": "20:00",
+        "Thuisteam": "AETOS H7",
+        "Uitteam": "D.V.O.L. H1",
+        "Locatie": "Valkenhuizen",
+        "scheids": "D4",
+        "teller": "H1"
+    },
+    {
+        "Datum": "2025-04-11",
+        "Tijd": "20:00",
+        "Thuisteam": "AETOS H9",
+        "Uitteam": "Heyendaal H5",
+        "Locatie": "Valkenhuizen",
+        "scheids": "H5",
+        "teller": "H5"
+    },
+    {
+        "Datum": "2025-04-12",
+        "Tijd": "21:30",
+        "Thuisteam": "AETOS H5",
+        "Uitteam": "Orion H6",
+        "Locatie": "De Laar",
+        "scheids": "H7",
+        "teller": "D8"
+    },
+    {
+        "Datum": "2025-04-12",
+        "Tijd": "20:00",
+        "Thuisteam": "AETOS D4",
+        "Uitteam": "Toesj D1",
+        "Locatie": "Elderveld",
+        "scheids": "H7",
+        "teller": "H7"
+    },
+    {
+        "Datum": "2025-04-12",
+        "Tijd": "20:00",
+        "Thuisteam": "AETOS MA4",
+        "Uitteam": "Trivos MA2",
+        "Locatie": "Elderveld",
+        "scheids": "D8",
+        "teller": "H9"
+    },
+     {
+        "Datum": "2025-04-13",
+        "Tijd": "09:15",
+		"Eindtijd": "13:30",
+        "Zaalwacht": "MC3"
+    },
+     {
+        "Datum": "2025-04-13",
+        "Tijd": "09:15",
+		"Eindtijd": "13:30",
+        "Zaalwacht": "H8"
+    },
+     {
+        "Datum": "2025-04-13",
+        "Tijd": "13:00",
+		"Eindtijd": "17:30",
+        "Zaalwacht": "D9"
+    },
+     {
+        "Datum": "2025-04-13",
+        "Tijd": "13:00",
+		"Eindtijd": "17:30",
+        "Zaalwacht": "JC2"
+    },
+     {
+        "Datum": "2025-04-13",
+        "Tijd": "17:00",
+		"Eindtijd": "einde",
+        "Zaalwacht": "H2"
+    },
+     {
+        "Datum": "2025-04-13",
+        "Tijd": "17:00",
+		"Eindtijd": "einde",
+        "Zaalwacht": "D3"
+    },
+
+    {
+        "Datum": "2025-04-13",
+        "Tijd": "10:00",
+        "Thuisteam": "AETOS JC2",
+        "Uitteam": "Surf JC1",
+        "Locatie": "Middachtensingel",
+        "scheids": "JA1",
+        "teller": "JC3"
+    },
+    {
+        "Datum": "2025-04-13",
+        "Tijd": "10:00",
+        "Thuisteam": "AETOS MA3",
+        "Uitteam": "TweeVV MA1",
+        "Locatie": "Middachtensingel",
+        "scheids": "D7",
+        "teller": "JC3"
+    },
+    {
+        "Datum": "2025-04-13",
+        "Tijd": "10:00",
+        "Thuisteam": "AETOS MC7",
+        "Uitteam": "Tweestroom MC1",
+        "Locatie": "Middachtensingel",
+        "scheids": "D7",
+        "teller": "JC3"
+    },
+    {
+        "Datum": "2025-04-13",
+        "Tijd": "12:00",
+        "Thuisteam": "AETOS D7",
+        "Uitteam": "Invicta D3",
+        "Locatie": "Middachtensingel",
+        "scheids": "D3",
+        "teller": "MC7"
+    },
+    {
+        "Datum": "2025-04-13",
+        "Tijd": "12:00",
+        "Thuisteam": "AETOS JC3",
+        "Uitteam": "SDJC1",
+        "Locatie": "Middachtensingel",
+        "scheids": "H6",
+        "teller": "MC7"
+    },
+    {
+        "Datum": "2025-04-13",
+        "Tijd": "14:30",
+        "Thuisteam": "AETOS D2",
+        "Uitteam": "Libero'99 D1",
+        "Locatie": "Middachtensingel",
+        "scheids": "H2",
+        "teller": "JB2"
+    },
+    {
+        "Datum": "2025-04-13",
+        "Tijd": "14:30",
+        "Thuisteam": "AETOS H8",
+        "Uitteam": "Excelsior H1",
+        "Locatie": "Middachtensingel",
+        "scheids": "D7",
+        "teller": "JB2"
+    },
+    {
+        "Datum": "2025-04-13",
+        "Tijd": "14:30",
+        "Thuisteam": "AETOS MC3",
+        "Uitteam": "Pegasus MC1",
+        "Locatie": "Middachtensingel",
+        "scheids": "D9",
+        "teller": "JC4"
+    },
+    {
+        "Datum": "2025-04-13",
+        "Tijd": "16:30",
+        "Thuisteam": "AETOS D9",
+        "Uitteam": "HSC D3",
+        "Locatie": "Middachtensingel",
+        "scheids": "D11",
+        "teller": "MB4"
+    },
+    {
+        "Datum": "2025-04-13",
+        "Tijd": "16:30",
+        "Thuisteam": "AETOS H6",
+        "Uitteam": "Nuovo H2",
+        "Locatie": "Middachtensingel",
+        "scheids": "H8",
+        "teller": "MB4"
+    },
+    {
+        "Datum": "2025-04-13",
+        "Tijd": "16:30",
+        "Thuisteam": "AETOS JC4",
+        "Uitteam": "Toesj JC1",
+        "Locatie": "Middachtensingel",
+        "scheids": "H8",
+        "teller": "MB3"
+    },
+    {
+        "Datum": "2025-04-13",
+        "Tijd": "18:30",
+        "Thuisteam": "AETOS D11",
+        "Uitteam": "O.M.S. D4",
+        "Locatie": "Middachtensingel",
+        "scheids": "D9",
+        "teller": "D9"
+    },
+    {
+        "Datum": "2025-04-13",
+        "Tijd": "18:30",
+        "Thuisteam": "AETOS MB3",
+        "Uitteam": "Tweestroom MB1",
+        "Locatie": "Middachtensingel",
+        "scheids": "D9",
+        "teller": "D9"
+    },
+    {
+        "Datum": "2025-04-13",
+        "Tijd": "18:30",
+        "Thuisteam": "AETOS MB4",
+        "Uitteam": "D.O.S. MB1",
+        "Locatie": "Middachtensingel",
+        "scheids": "H6",
+        "teller": "JC4"
+    },
+	    {
+        "Datum": "2025-04-13",
+        "Tijd": "08:00",
+        "Eindtijd": "10:30",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV",
+        "Locatie": "De Laar",
+        "scheids": "D5",
+        "teller": ""
+    },
+	    {
+        "Datum": "2025-04-13",
+        "Tijd": "08:45",
+        "Eindtijd": "10:30",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV",
+        "Locatie": "De Laar",
+        "scheids": "H8",
+        "teller": "JA1"
+    },
+		    {
+        "Datum": "2025-04-13",
+        "Tijd": "10:15",
+        "Eindtijd": "12:15",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV",
+        "Locatie": "De Laar",
+        "scheids": "H5",
+        "teller": "MC4"
+    },
+		    {
+        "Datum": "2025-04-13",
+        "Tijd": "10:15",
+        "Eindtijd": "12:15",
+        "Thuisteam": "CMV",
+        "Uitteam": "CMV",
+        "Locatie": "De Laar",
+        "scheids": "H9",
+        "teller": ""
+    }
+
+
+	]
+}

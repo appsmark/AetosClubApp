@@ -1,4 +1,6 @@
 import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 
@@ -8,15 +10,22 @@ import 'duty_data.dart';
 class JsonDuty {
   DutyData dutyData = DutyData.instance;
   DateTime now = DateTime.now();
+  bool testLocal = true;
 
   Future getDuty(bool mode) async {
-    var result =
-        await http.get(Uri.parse("http://apps-mark.nl/zaaldienst.json"));
-
-    if (result.statusCode == 200) {
-      return parse(jsonDecode(result.body)['duty'], mode);
+    if (testLocal) {
+      String fileText = await rootBundle.loadString('assets/zaaldienst.json');
+      debugPrint(fileText);
+      return parse(jsonDecode(fileText)['duty'], mode);
     } else {
-      throw Exception('Failed to load duty');
+      var result =
+          await http.get(Uri.parse("http://apps-mark.nl/zaaldienst.json"));
+
+      if (result.statusCode == 200) {
+        return parse(jsonDecode(result.body)['duty'], mode);
+      } else {
+        throw Exception('Failed to load duty');
+      }
     }
   }
 
@@ -33,7 +42,8 @@ class JsonDuty {
     dutyData.clear();
     for (int index = 0; index < inputStream.length; index++) {
       DateTime tempDate =
-          DateFormat("dd MMM yyyy").parse(convert(inputStream[index]["Datum"]));
+          DateFormat("yyyy-mm-dd").parse(convert(inputStream[index]["Datum"]));
+//          DateFormat("dd MMM yyyy").parse(convert(inputStream[index]["Datum"]));
       if (tempDate.difference(DateTime.now()).inDays >= 0) {
         if (mode) {
           if (inputStream[index]["Thuisteam"] != null) {
