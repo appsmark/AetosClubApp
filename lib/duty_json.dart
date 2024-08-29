@@ -10,12 +10,12 @@ import 'duty_data.dart';
 class JsonDuty {
   DutyData dutyData = DutyData.instance;
   DateTime now = DateTime.now();
-  bool testLocal = true;
+  bool testLocal = false;
 
   Future getDuty(bool mode) async {
     if (testLocal) {
       String fileText = await rootBundle.loadString('assets/zaaldienst.json');
-      debugPrint(fileText);
+      //   debugPrint(fileText);
       return parse(jsonDecode(fileText)['duty'], mode);
     } else {
       var result =
@@ -39,11 +39,17 @@ class JsonDuty {
   }
 
   parse(inputStream, bool mode) {
+    DateTime tempDate;
     dutyData.clear();
     for (int index = 0; index < inputStream.length; index++) {
-      DateTime tempDate =
-          DateFormat("yyyy-mm-dd").parse(convert(inputStream[index]["Datum"]));
-//          DateFormat("dd MMM yyyy").parse(convert(inputStream[index]["Datum"]));
+      if (testLocal) {
+        tempDate = DateFormat("yyyy-MM-dd")
+            .parse(convert(inputStream[index]["Datum"]));
+      } else {
+        tempDate = DateFormat("yyyy-MM-dd")
+//        tempDate = DateFormat("dd MMM yyyy")
+            .parse(convert(inputStream[index]["Datum"]));
+      }
       if (tempDate.difference(DateTime.now()).inDays >= 0) {
         if (mode) {
           if (inputStream[index]["Thuisteam"] != null) {

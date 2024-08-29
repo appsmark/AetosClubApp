@@ -94,7 +94,7 @@ class _DutyState extends State<Duty> {
                               ],
                             ),
                             Text(
-                              "Sporthal ${data.data[index]['hall']}",
+                              "${data.data[index]['hall']}",
                               style: TextStyle(
                                   color: sizes.colorSchedule,
                                   fontSize: sizes.sizeFontSchedule,
