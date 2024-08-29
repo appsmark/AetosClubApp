@@ -6,7 +6,7 @@ publish_to: 'none'
 version: 3.7.0+370000
 
 environment:
-  sdk: '>=2.19.4 <=3.5.0'
+  sdk: '>=2.19.4 <=3.24.0'
 
 dependencies:
   flutter:

@@ -27,6 +27,7 @@ class RssClean {
     result = result.replaceAll("Steenderen ", "");
     result = result.replaceAll("'Topklimaat in Volleybal' ", "");
     result = result.replaceAll("Volleybalvereniging ", "");
+    result = result.replaceAll("Volleybal Club Varsseveld ", "");
     result = result.replaceAll("Voorsterslag/", "");
     result = result.replaceAll("Weghorst Makelaardij ", "");
     result = result.replaceAll("(IJsselmuiden) ", "");
