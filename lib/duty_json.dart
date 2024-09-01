@@ -40,6 +40,8 @@ class JsonDuty {
 
   parse(inputStream, bool mode) {
     DateTime tempDate;
+    String date = "";
+    String endtime = "";
     dutyData.clear();
     for (int index = 0; index < inputStream.length; index++) {
       if (testLocal) {
@@ -68,10 +70,15 @@ class JsonDuty {
           if ((inputStream[index]["scheids"] == team.currentTeam) ||
               (inputStream[index]["teller"] == team.currentTeam) ||
               (inputStream[index]["Zaalwacht"] == team.currentTeam)) {
+            date = inputStream[index]["Datum"];
+            if (inputStream[index]["Eindtijd"] != null) {
+              endtime = inputStream[index]["Eindtijd"];
+              endtime = endtime.replaceAll("eind", "einde");
+            }
             dutyData.add({
-              "date": inputStream[index]["Datum"].replaceAll(" 2024", ""),
+              "date": date,
               "time": inputStream[index]["Tijd"],
-              "endtime": inputStream[index]["Eindtijd"],
+              "endtime": endtime,
               "hometeam": inputStream[index]["Thuisteam"],
               "visitor": inputStream[index]["Uitteam"],
               "hall": inputStream[index]["Locatie"],
