@@ -42,6 +42,8 @@ class JsonDuty {
     DateTime tempDate;
     String date = "";
     String endtime = "";
+    String month = "";
+    String day = "";
     dutyData.clear();
     for (int index = 0; index < inputStream.length; index++) {
       if (testLocal) {
@@ -71,12 +73,26 @@ class JsonDuty {
               (inputStream[index]["teller"] == team.currentTeam) ||
               (inputStream[index]["Zaalwacht"] == team.currentTeam)) {
             date = inputStream[index]["Datum"];
+            month = date.split('-')[1];
+            month = month.replaceAll("09", "september");
+            month = month.replaceAll("10", "oktober");
+            month = month.replaceAll("11", "november");
+            month = month.replaceAll("12", "december");
+            month = month.replaceAll("01", "januari");
+            month = month.replaceAll("02", "februari");
+            month = month.replaceAll("03", "maart");
+            month = month.replaceAll("04", "april");
+            month = month.replaceAll("05", "mei");
+            day = date.split('-')[2];
+            if (day[0] == "0") {
+              day = day[1];
+            }
             if (inputStream[index]["Eindtijd"] != null) {
               endtime = inputStream[index]["Eindtijd"];
               endtime = endtime.replaceAll("eind", "einde");
             }
             dutyData.add({
-              "date": date,
+              "date": "$day $month",
               "time": inputStream[index]["Tijd"],
               "endtime": endtime,
               "hometeam": inputStream[index]["Thuisteam"],

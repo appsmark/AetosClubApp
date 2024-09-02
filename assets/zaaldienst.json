@@ -60,7 +60,7 @@
 "Zaalwacht":"MB3"}
 ,
 {"Datum":"2024-09-14",
-"Tijd":"13:15:00",
+"Tijd":"13:15",
 "Thuisteam":"AETOS MB 2",
 "Uitteam":"SV Loil MB 1",
 "Locatie":"Sporthal Middachtensingel",
@@ -73,7 +73,7 @@
 "Zaalwacht":"D2"}
 ,
 {"Datum":"2024-09-14",
-"Tijd":"13:15:00",
+"Tijd":"13:15",
 "Thuisteam":"AETOS HS 7",
 "Uitteam":"SSS HS 7",
 "Locatie":"Sporthal Middachtensingel",
@@ -81,7 +81,7 @@
 "teller":"MB7"}
 ,
 {"Datum":"2024-09-14",
-"Tijd":"13:15:00",
+"Tijd":"13:15",
 "Thuisteam":"AETOS MC 6",
 "Uitteam":"Evoba JC 1",
 "Locatie":"Sporthal Middachtensingel",
@@ -89,7 +89,7 @@
 "teller":"MC6"}
 ,
 {"Datum":"2024-09-14",
-"Tijd":"15:15:00",
+"Tijd":"15:15",
 "Thuisteam":"AETOS DS 5",
 "Uitteam":"Gemini DS 7",
 "Locatie":"Sporthal Middachtensingel",
@@ -97,7 +97,7 @@
 "teller":"MC6"}
 ,
 {"Datum":"2024-09-14",
-"Tijd":"15:15:00",
+"Tijd":"15:15",
 "Thuisteam":"AETOS MB 3",
 "Uitteam":"LIVO MB 2",
 "Locatie":"Sporthal Middachtensingel",
@@ -226,7 +226,7 @@
 "Zaalwacht":"JB3"}
 ,
 {"Datum":"2024-09-21",
-"Tijd":"13:15:00",
+"Tijd":"13:15",
 "Thuisteam":"AETOS DS 5",
 "Uitteam":"PSC DS 1",
 "Locatie":"Sporthal Middachtensingel",
@@ -239,7 +239,7 @@
 "Zaalwacht":"D2"}
 ,
 {"Datum":"2024-09-21",
-"Tijd":"13:15:00",
+"Tijd":"13:15",
 "Thuisteam":"AETOS JC 3",
 "Uitteam":"Volleybal Voorst XC 1",
 "Locatie":"Sporthal Middachtensingel",
@@ -247,7 +247,7 @@
 "teller":"JC3"}
 ,
 {"Datum":"2024-09-21",
-"Tijd":"13:15:00",
+"Tijd":"13:15",
 "Thuisteam":"AETOS JA 1",
 "Uitteam":"Rensa Family Orion JA 1",
 "Locatie":"Sporthal Middachtensingel",
@@ -255,7 +255,7 @@
 "teller":"JB1"}
 ,
 {"Datum":"2024-09-21",
-"Tijd":"15:15:00",
+"Tijd":"15:15",
 "Thuisteam":"AETOS DS 1",
 "Uitteam":"Labyellov DS 1",
 "Locatie":"Sporthal Middachtensingel",
@@ -268,7 +268,7 @@
 "Zaalwacht":"MA2"}
 ,
 {"Datum":"2024-09-21",
-"Tijd":"15:15:00",
+"Tijd":"15:15",
 "Thuisteam":"AETOS MC 4",
 "Uitteam":"N.V.C. MC 1",
 "Locatie":"Sporthal Middachtensingel",
@@ -276,7 +276,7 @@
 "teller":"MC4"}
 ,
 {"Datum":"2024-09-21",
-"Tijd":"15:15:00",
+"Tijd":"15:15",
 "Thuisteam":"AETOS JB 3",
 "Uitteam":"Toesj JB 1",
 "Locatie":"Sporthal Middachtensingel",
@@ -410,7 +410,7 @@
 "Zaalwacht":"mb1"}
 ,
 {"Datum":"2024-09-28",
-"Tijd":"13:15:00",
+"Tijd":"13:15",
 "Thuisteam":"AETOS MC 7",
 "Uitteam":"BSVO MC 1",
 "Locatie":"Sporthal Middachtensingel",
@@ -423,7 +423,7 @@
 "Zaalwacht":"D8"}
 ,
 {"Datum":"2024-09-28",
-"Tijd":"13:15:00",
+"Tijd":"13:15",
 "Thuisteam":"AETOS JC 3",
 "Uitteam":"DIAVO JC 2",
 "Locatie":"Sporthal Middachtensingel",
@@ -431,7 +431,7 @@
 "teller":"JC3"}
 ,
 {"Datum":"2024-09-28",
-"Tijd":"15:15:00",
+"Tijd":"15:15",
 "Thuisteam":"AETOS MC 4",
 "Uitteam":"Set Up '69 MC 1",
 "Locatie":"Sporthal Middachtensingel",
@@ -444,7 +444,7 @@
 "Zaalwacht":"jb1"}
 ,
 {"Datum":"2024-09-28",
-"Tijd":"15:15:00",
+"Tijd":"15:15",
 "Thuisteam":"AETOS MB 8",
 "Uitteam":"AETOS MB 7",
 "Locatie":"Sporthal Middachtensingel",
@@ -452,7 +452,7 @@
 "teller":"MB8"}
 ,
 {"Datum":"2024-09-28",
-"Tijd":"15:15:00",
+"Tijd":"15:15",
 "Thuisteam":"AETOS MC 2",
 "Uitteam":"Excelsior MC 1",
 "Locatie":"Sporthal Middachtensingel",

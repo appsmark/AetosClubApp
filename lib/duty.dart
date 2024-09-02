@@ -23,6 +23,7 @@ class _DutyState extends State<Duty> {
   RssClean rssClean = RssClean();
 
   Future getData() async {
+    data.clear();
     await duty.getDuty(false);
     setState(() {});
   }
@@ -180,6 +181,7 @@ class _DutyState extends State<Duty> {
                         );
                       }
                     })),
+/*
           if (data.data.isEmpty)
             Text(
               "GEEN DIENST",
@@ -188,6 +190,7 @@ class _DutyState extends State<Duty> {
                   fontSize: 1.5 * sizes.sizeFontSchedule,
                   fontWeight: FontWeight.bold),
             ),
+*/
         ]));
   }
 
