@@ -3,7 +3,7 @@ description: Aetos Team App
 
 publish_to: 'none'
 
-version: 3.7.0+370000
+version: 3.8.0+380000
 
 environment:
   sdk: '>=2.19.4 <=3.24.0'
@@ -20,6 +20,7 @@ dependencies:
   provider: ^6.1.1
   xml: ^6.5.0
   excel: ^4.0.3
+  new_version_plus: ^0.0.11
 
 dev_dependencies:
   flutter_test:

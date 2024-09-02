@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:new_version_plus/new_version_plus.dart';
 import 'data.dart';
 import 'duty.dart';
 import 'game.dart';
@@ -24,10 +25,33 @@ class _MainScreen extends State<MainScreen> {
   TeamInfo teamInfo = TeamInfo();
   List<String> items = [];
   late String dropdownvalue;
+  String release = "";
+
+  final newVersion = NewVersionPlus(
+    iOSId: 'com.appsmark.aetos',
+    androidId: 'com.appsmark.aetos',
+    androidPlayStoreCountry: "",
+    androidHtmlReleaseNotes: true, //support country code
+  );
+
+  basicStatusCheck(NewVersionPlus newVersion) async {
+    final version = await newVersion.getVersionStatus();
+    if (version != null) {
+      release = version.releaseNotes ?? "";
+      setState(() {});
+    }
+    if (mounted) {
+      newVersion.showAlertIfNecessary(
+        context: context,
+        launchModeVersion: LaunchModeVersion.external,
+      );
+    }
+  }
 
   @override
   void initState() {
     super.initState();
+    basicStatusCheck(newVersion);
     team.currentTeam;
     dropdownvalue = team.currentTeam;
     for (int index = 0; index < teamInfo.teamsInfo.length; index++) {
