@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import 'duty_data.dart';
 import 'duty_json.dart';
@@ -31,6 +32,7 @@ class _GameState extends State<Game> {
   String counter = "";
 
   Future getData() async {
+    DateTime tempDate;
     await rss.getSchedule();
     await duty.getDuty(true);
     listOfItems = data.getGames();
@@ -38,10 +40,12 @@ class _GameState extends State<Game> {
     counter = "";
     referee = "";
     if (listOfDuties.isNotEmpty) {
-      String compare = listOfDuties[0]['date'].replaceAll('march', 'maart');
-      if (listOfItems[0]['date'].contains(compare)) {
-        counter = listOfDuties[0]['counter'];
-        referee = listOfDuties[0]['referee'];
+      if (listOfDuties[0]["date"] != null) {
+        tempDate = DateFormat("yyyy-MM-dd").parse(listOfDuties[0]["date"]);
+        if (tempDate.difference(DateTime.now()).inDays >= 0) {
+          counter = listOfDuties[0]['counter'];
+          referee = listOfDuties[0]['referee'];
+        }
       }
     }
     setState(() {});
@@ -129,7 +133,7 @@ class _GameState extends State<Game> {
                   fontWeight: FontWeight.bold),
             ),
             SizedBox(
-              height: 0.02 * sizes.screenHeight,
+              height: 0.05 * sizes.screenHeight,
             ),
             Visibility(
               visible: counter != "",

@@ -44,6 +44,8 @@ class JsonDuty {
     String endtime = "";
     String month = "";
     String day = "";
+    String referee;
+
     dutyData.clear();
     for (int index = 0; index < inputStream.length; index++) {
       if (testLocal) {
@@ -51,7 +53,6 @@ class JsonDuty {
             .parse(convert(inputStream[index]["Datum"]));
       } else {
         tempDate = DateFormat("yyyy-MM-dd")
-//        tempDate = DateFormat("dd MMM yyyy")
             .parse(convert(inputStream[index]["Datum"]));
       }
       if (tempDate.difference(DateTime.now()).inDays >= 0) {
@@ -59,10 +60,16 @@ class JsonDuty {
           if (inputStream[index]["Thuisteam"] != null) {
             String compare =
                 inputStream[index]["Thuisteam"].replaceAll(" ", "");
+            compare = compare.replaceAll("HS", "H");
+            compare = compare.replaceAll("DS", "D");
             if (compare == "AETOS${team.currentTeam}") {
+              referee = inputStream[index]["scheids"];
+              if (referee == "x") {
+                referee = "NeVoBo";
+              }
               dutyData.addGameData({
-                "date": inputStream[index]["Datum"].replaceAll(" 2024", ""),
-                "referee": inputStream[index]["scheids"],
+                "date": inputStream[index]["Datum"],
+                "referee": referee,
                 "counter": inputStream[index]["teller"],
                 "duty": inputStream[index]["Zaalwacht"],
               });

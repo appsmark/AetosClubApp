@@ -1,13 +1,11 @@
-Duty koppelen aan huidige datum
-
 pause/resume app behaviour
 
 Aanwezigheid voor wedstrijd 
 
-Game.dart: counter en referee netter bepalen aan de hand van datum
-
 Zaalwacht aangeven bij game.dart
 
-Directe selectie team in hoofdmenu
-
 Voorkom cash ranking.dart bij niet bestaand team
+
+Local data gebruiken voor testen
+
+Selectie team bij maiden situatie
