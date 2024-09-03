@@ -129,7 +129,7 @@ class _GameState extends State<Game> {
                   fontWeight: FontWeight.bold),
             ),
             SizedBox(
-              height: 0.05 * sizes.screenHeight,
+              height: 0.02 * sizes.screenHeight,
             ),
             Visibility(
               visible: counter != "",
