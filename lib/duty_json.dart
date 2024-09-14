@@ -44,7 +44,7 @@ class JsonDuty {
     String endtime = "";
     String month = "";
     String day = "";
-    String referee;
+    String referee = "";
 
     dutyData.clear();
     for (int index = 0; index < inputStream.length; index++) {
@@ -98,6 +98,12 @@ class JsonDuty {
               endtime = inputStream[index]["Eindtijd"];
               endtime = endtime.replaceAll("eind", "einde");
             }
+            if (inputStream[index]["scheids"] != null) {
+              referee = inputStream[index]["scheids"];
+              if (referee == "x") {
+                referee = "NeVoBo";
+              }
+            }
             dutyData.add({
               "date": "$day $month",
               "time": inputStream[index]["Tijd"],
@@ -105,7 +111,7 @@ class JsonDuty {
               "hometeam": inputStream[index]["Thuisteam"],
               "visitor": inputStream[index]["Uitteam"],
               "hall": inputStream[index]["Locatie"],
-              "referee": inputStream[index]["scheids"],
+              "referee": referee,
               "counter": inputStream[index]["teller"],
               "duty": inputStream[index]["Zaalwacht"],
             });
