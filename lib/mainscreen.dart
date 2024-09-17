@@ -29,6 +29,7 @@ class _MainScreen extends State<MainScreen> {
 
   final newVersion = NewVersionPlus(
     iOSId: 'com.appsmark.aetos',
+    iOSAppStoreCountry: 'nl',
     androidId: 'com.appsmark.aetos',
     androidPlayStoreCountry: "",
     androidHtmlReleaseNotes: true, //support country code
