@@ -44,6 +44,7 @@ class RssClean {
     result = result.replaceAll("MB ", "MB");
     result = result.replaceAll("MC ", "MC");
     result = result.replaceAll("MD ", "MD");
+    result = result.replaceAll(" Arnh/Wag", " Arnhem/Wageningen\n");
     result = result.replaceAll(" march", " maart");
     result = result.replaceAll(" may", " mei");
 

@@ -5,17 +5,15 @@ class TeamInfo {
   List teamsInfo = [
     ["D1", "regio-oost/DPE", "dames/1"],
     ["D2", "regio-oost/D1Q", "dames/2"],
-    ["D3", "regio-oost/D1R", "dames/3"],
+    ["D3", "regio-oost/D1H", "dames/3"],
     ["D4", "regio-oost/D1S", "dames/4"],
     ["D5", "regio-oost/D1Q", "dames/5"],
     ["D6", "regio-oost/D1R", "dames/6"],
     ["D7", "regio-oost/D2S", "dames/7"],
     ["D8", "regio-oost/D2R", "dames/8"],
-    ["D9", "regio-oost/D3Q", "dames/9"],
-    ["D10", "regio-oost/D3P", "dames/10"],
+    ["D9", "regio-oost/D3P", "dames/9"],
+    ["D10", "regio-oost/D3Q", "dames/10"],
     ["D11", "regio-oost/D4D", "dames/11"],
-    //  ["D12", "regio-oost/D4D", "dames/12"],
-    //  ["D13", "regio-oost/D4D", "dames/13"],
     ["H1", "nationale-competitie/2BH", "heren/1"],
     ["H2", "regio-oost/HPD", "heren/2"],
     ["H3", "regio-oost/HPE", "heren/3"],
@@ -27,14 +25,12 @@ class TeamInfo {
     ["H9", "regio-oost/H2I", "heren/9"],
     ["H10", "regio-oost/H3F", "heren/10"],
     ["JA1", "regio-oost/JAHB1", "jongens-a/1"],
-    // ["JA2", "regio-oost/JA1A1", "jongens-a/2"],
     ["JB1", "regio-oost/JB1F1", "jongens-b/1"],
     ["JB2", "regio-oost/JB1E1", "jongens-b/2"],
     ["JB3", "regio-oost/JB1E1", "jongens-b/3"],
     ["JC1", "regio-oost/JCHA1", "jongens-c/1"],
     ["JC2", "regio-oost/JC2B1", "jongens-c/2"],
     ["JC3", "regio-oost/XC4B1", "jongens-c/3"],
-    //  ["JC4", "regio-oost/JC3A1", "jongens-c/4"],
     ["MA1", "regio-oost/MAHB1", "meiden-a/1"],
     ["MA2", "regio-oost/MA1D1", "meiden-a/2"],
     ["MA3", "regio-oost/MA2I1", "meiden-a/3"],
@@ -55,12 +51,29 @@ class TeamInfo {
     ["MC6", "regio-oost/MC3M1", "meiden-c/6"],
     ["MC7", "regio-oost/MC3I1", "meiden-c/7"],
     ["MC8", "regio-oost/XC4C1", "meiden-c/8"],
-    //   ["MC9", "regio-oost/MC3K1", "meiden-c/9"],
+    [
+      "N6-1",
+      "regio-oost/eerste-helft-cmv-arnhem-wageningen-1/regio-oost-cn61a1-10",
+      "cmv-niveau-6/1"
+    ],
+    [
+      "N6-2",
+      "regio-oost/eerste-helft-cmv-arnhem-wageningen-1/regio-oost-cn61b1-8",
+      "cmv-niveau-6/2"
+    ],
+    [
+      "N5-1",
+      "regio-oost/eerste-helft-cmv-arnhem-wageningen-1/regio-oost-cn51a1-10",
+      "cmv-niveau-5/1"
+    ],
+    [
+      "N5-2",
+      "regio-oost/eerste-helft-cmv-arnhem-wageningen-1/regio-oost-cn51a1-10",
+      "cmv-niveau-5/2"
+    ],
   ];
-//https://api.nevobo.nl/export/poule/regio-oost/H3F/stand.rss
-//https://api.nevobo.nl/export/poule/regio-oost/H3F/programma.rss
+
   String getRanking(team) {
-//    debugPrint("getRanking for $team");
     String competition =
         "https://api.nevobo.nl/export/poule/${teamsInfo[1][1]}/stand.rss";
     for (var index = 0; index < teamsInfo.length; index++) {
@@ -105,11 +118,9 @@ class TeamInfo {
 
 class Team with ChangeNotifier {
   static final Team _team = Team._internal();
-  String currentTeam = "H9";
-  String alternativeTeam = "H1";
+  String currentTeam = "D1";
 
   factory Team() {
-    //   debugPrint("INITIALIZING");
     return _team;
   }
 
@@ -121,7 +132,7 @@ class Team with ChangeNotifier {
 
   Future<void> getStoredTeam() async {
     final prefs = await SharedPreferences.getInstance();
-    currentTeam = (prefs.getString('team') ?? "H9");
+    currentTeam = (prefs.getString('team') ?? "D1");
     set(currentTeam);
     // debugPrint("Get stored $currentTeam");
   }
@@ -135,10 +146,6 @@ class Team with ChangeNotifier {
     currentTeam = newValue;
 //    notifyListeners();
     setStoredTeam(currentTeam);
-  }
-
-  setAlternativeTeam(String value) {
-    alternativeTeam = value;
   }
 }
 

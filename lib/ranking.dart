@@ -81,8 +81,8 @@ class _RankingState extends State<Ranking> {
                           "${listOfItems.indexOf(item) + 1}",
                           textAlign: TextAlign.end,
                           style: TextStyle(
-                              color: item['team']
-                                      .contains("AETOS ${team.currentTeam}")
+                              color: item['team'].contains(
+                                      "AETOS ${team.currentTeam.replaceAll('-', ' ')}")
                                   ? sizes.colorTitle
                                   : sizes.colorRanking,
                               fontWeight: FontWeight.bold,
@@ -96,8 +96,8 @@ class _RankingState extends State<Ranking> {
                         child: Text(
                           item['team'],
                           style: TextStyle(
-                              color: item['team']
-                                      .contains("AETOS ${team.currentTeam}")
+                              color: item['team'].contains(
+                                      "AETOS ${team.currentTeam.replaceAll('-', ' ')}")
                                   ? sizes.colorTitle
                                   : sizes.colorRanking,
                               fontWeight: FontWeight.bold,
@@ -109,8 +109,8 @@ class _RankingState extends State<Ranking> {
                           item['games'],
                           textAlign: TextAlign.end,
                           style: TextStyle(
-                              color: item['team']
-                                      .contains("AETOS ${team.currentTeam}")
+                              color: item['team'].contains(
+                                      "AETOS ${team.currentTeam.replaceAll('-', ' ')}")
                                   ? sizes.colorTitle
                                   : sizes.colorRanking,
                               fontWeight: FontWeight.bold,
@@ -122,8 +122,8 @@ class _RankingState extends State<Ranking> {
                           "-",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              color: item['team']
-                                      .contains("AETOS ${team.currentTeam}")
+                              color: item['team'].contains(
+                                      "AETOS ${team.currentTeam.replaceAll('-', ' ')}")
                                   ? sizes.colorTitle
                                   : sizes.colorRanking,
                               fontWeight: FontWeight.bold,
@@ -135,8 +135,8 @@ class _RankingState extends State<Ranking> {
                           item['points'],
                           textAlign: TextAlign.end,
                           style: TextStyle(
-                              color: item['team']
-                                      .contains("AETOS ${team.currentTeam}")
+                              color: item['team'].contains(
+                                      "AETOS ${team.currentTeam.replaceAll('-', ' ')}")
                                   ? sizes.colorTitle
                                   : sizes.colorRanking,
                               fontWeight: FontWeight.bold,
@@ -145,93 +145,6 @@ class _RankingState extends State<Ranking> {
                   ],
                 ),
               ),
-
-            /*
-            Expanded(
-              child: Padding(
-                padding: EdgeInsets.only(
-                  left: 0.02 * sizes.screenWidth,
-                  right: 0.05 * sizes.screenWidth,
-                ),
-                child: Table(columnWidths: {
-                  0: FixedColumnWidth(0.15 * sizes.screenWidth),
-                  1: FixedColumnWidth(0.5 * sizes.screenWidth),
-                  2: FixedColumnWidth(0.15 * sizes.screenWidth),
-                  3: FixedColumnWidth(0.09 * sizes.screenWidth),
-                  //     4: FixedColumnWidth(0.1 * sizes.screenWidth),
-                }, children: [
-                  for (var item in listOfItems)
-                    TableRow(children: [
-                      Padding(
-                        padding:
-                            EdgeInsets.only(top: 0.01 * sizes.screenHeight),
-                        child: Align(
-                          alignment: Alignment.centerRight,
-                          child: Text(
-                            "${listOfItems.indexOf(item) + 1}  ",
-                            style: TextStyle(
-                                color: item['team']
-                                        .contains("AETOS ${team.currentTeam}")
-                                    ? sizes.colorTitle
-                                    : sizes.colorRanking,
-                                fontWeight: FontWeight.bold,
-                                fontSize: sizes.sizeFontRanking),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding:
-                            EdgeInsets.only(top: 0.01 * sizes.screenHeight),
-                        child: Text(
-                          item['team'],
-                          style: TextStyle(
-                              color: item['team']
-                                      .contains("AETOS ${team.currentTeam}")
-                                  ? sizes.colorTitle
-                                  : sizes.colorRanking,
-                              fontWeight: FontWeight.bold,
-                              fontSize: sizes.sizeFontRanking),
-                        ),
-                      ),
-                      Padding(
-                        padding:
-                            EdgeInsets.only(top: 0.01 * sizes.screenHeight),
-                        child: Align(
-                          alignment: Alignment.centerRight,
-                          child: Text(
-                            "${item['games']} - ",
-                            style: TextStyle(
-                                color: item['team']
-                                        .contains("AETOS ${team.currentTeam}")
-                                    ? sizes.colorTitle
-                                    : sizes.colorRanking,
-                                fontWeight: FontWeight.bold,
-                                fontSize: sizes.sizeFontRanking),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding:
-                            EdgeInsets.only(top: 0.01 * sizes.screenHeight),
-                        child: Align(
-                          alignment: Alignment.centerRight,
-                          child: Text(
-                            "${item['points']}",
-                            style: TextStyle(
-                                color: item['team']
-                                        .contains("AETOS ${team.currentTeam}")
-                                    ? sizes.colorTitle
-                                    : sizes.colorRanking,
-                                fontWeight: FontWeight.bold,
-                                fontSize: sizes.sizeFontRanking),
-                          ),
-                        ),
-                      ),
-                    ])
-                ]),
-              ),
-            )
-            */
           ],
         ));
   }
