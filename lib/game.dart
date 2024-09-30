@@ -39,12 +39,14 @@ class _GameState extends State<Game> {
     listOfDuties = dutyData.getGameData();
     counter = "";
     referee = "";
-    if (listOfDuties.isNotEmpty) {
-      if (listOfDuties[0]["date"] != null) {
-        tempDate = DateFormat("yyyy-MM-dd").parse(listOfDuties[0]["date"]);
-        if (tempDate.difference(DateTime.now()).inDays >= 0) {
-          counter = listOfDuties[0]['counter'];
-          referee = listOfDuties[0]['referee'];
+    if (listOfItems[0]["game"].toString().startsWith("AETOS")) {
+      if (listOfDuties.isNotEmpty) {
+        if (listOfDuties[0]["date"] != null) {
+          tempDate = DateFormat("yyyy-MM-dd").parse(listOfDuties[0]["date"]);
+          if (tempDate.difference(DateTime.now()).inDays >= 0) {
+            counter = listOfDuties[0]['counter'];
+            referee = listOfDuties[0]['referee'];
+          }
         }
       }
     }
