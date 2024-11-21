@@ -5,7 +5,7 @@ class TeamInfo {
   List teamsInfo = [
     ["D1", "regio-oost/DPE", "dames/1"],
     ["D2", "regio-oost/D1Q", "dames/2"],
-    ["D3", "regio-oost/D1H", "dames/3"],
+    // ["D3", "regio-oost/D1H", "dames/3"],
     ["D4", "regio-oost/D1S", "dames/4"],
     ["D5", "regio-oost/D1Q", "dames/5"],
     ["D6", "regio-oost/D1R", "dames/6"],
@@ -22,7 +22,7 @@ class TeamInfo {
     ["H6", "regio-oost/H1H", "heren/6"],
     ["H7", "regio-oost/H1I", "heren/7"],
     ["H8", "regio-oost/H2H", "heren/8"],
-    ["H9", "regio-oost/H2I", "heren/9"],
+    //   ["H9", "regio-oost/H2I", "heren/9"],
     ["H10", "regio-oost/H3F", "heren/10"],
     ["JA1", "regio-oost/JAHB1", "jongens-a/1"],
     ["JB1", "regio-oost/JB1F1", "jongens-b/1"],
@@ -39,7 +39,7 @@ class TeamInfo {
     ["MB2", "regio-oost/MB1H1", "meiden-b/2"],
     ["MB3", "regio-oost/MB2H1", "meiden-b/3"],
     ["MB4", "regio-oost/MB2H1", "meiden-b/4"],
-    ["MB5", "regio-oost/MB2G1", "meiden-b/5"],
+    //   ["MB5", "regio-oost/MB2G1", "meiden-b/5"],
     ["MB6", "regio-oost/MB3I1", "meiden-b/6"],
     ["MB7", "regio-oost/MB3F1", "meiden-b/7"],
     ["MB8", "regio-oost/MB3F1", "meiden-b/8"],
@@ -48,9 +48,9 @@ class TeamInfo {
     ["MC3", "regio-oost/MC2M1", "meiden-c/3"],
     ["MC4", "regio-oost/MC2L1", "meiden-c/4"],
     ["MC5", "regio-oost/MC2M1", "meiden-c/5"],
-    ["MC6", "regio-oost/MC3M1", "meiden-c/6"],
-    ["MC7", "regio-oost/MC3I1", "meiden-c/7"],
-    ["MC8", "regio-oost/XC4C1", "meiden-c/8"],
+    ["MC6", "regio-oost/XC4C1", "meiden-c/6"],
+    ["MC7", "regio-oost/MC3M1", "meiden-c/7"],
+    ["MC8", "regio-oost/MC3I1", "meiden-c/8"],
     [
       "N6-1",
       "regio-oost/eerste-helft-cmv-arnhem-wageningen-1/regio-oost-cn61a1-10",
@@ -72,6 +72,16 @@ class TeamInfo {
       "cmv-niveau-5/2"
     ],
   ];
+
+  bool availabe(String target) {
+    bool result = false;
+    for (int index = 0; index < teamsInfo.length; index++) {
+      if (teamsInfo[index][0] == target) {
+        result = true;
+      }
+    }
+    return result;
+  }
 
   String getRanking(team) {
     String competition =
@@ -133,7 +143,11 @@ class Team with ChangeNotifier {
   Future<void> getStoredTeam() async {
     final prefs = await SharedPreferences.getInstance();
     currentTeam = (prefs.getString('team') ?? "D1");
-    set(currentTeam);
+    if (TeamInfo().availabe(currentTeam)) {
+      set(currentTeam);
+    } else {
+      set("D1");
+    }
     // debugPrint("Get stored $currentTeam");
   }
 

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'data.dart';
 import 'duty_data.dart';
 import 'duty_json.dart';
+import 'points_data.dart';
+import 'points_json.dart';
 import 'rss_clean.dart';
 import 'sizes.dart';
 
@@ -20,11 +22,17 @@ class _DutyState extends State<Duty> {
   Sizes sizes = Sizes.instance;
   JsonDuty duty = JsonDuty();
   DutyData dutyData = DutyData.instance;
+  JsonPoints points = JsonPoints();
+  PointsData pointsData = PointsData.instance;
+  List pointsInfo = [];
   RssClean rssClean = RssClean();
 
   Future getData() async {
     dutyData.clear();
     await duty.getDuty(false);
+    pointsData.clear();
+    await points.getPoints();
+    pointsInfo = pointsData.get(team.currentTeam);
     setState(() {});
   }
 
@@ -61,6 +69,24 @@ class _DutyState extends State<Duty> {
           ),
         ),
         body: Column(children: [
+          separator(),
+          pointsInfo.isNotEmpty
+              ? pointsInfo[3]
+                  ? Text(
+                      "Stand Aetos punten: Doel behaald",
+                      style: TextStyle(
+                          color: sizes.colorTitle,
+                          fontSize: sizes.sizeFontSchedule,
+                          fontWeight: FontWeight.bold),
+                    )
+                  : Text(
+                      "Stand Aetos punten: ${pointsInfo[1]} van ${pointsInfo[2]}",
+                      style: TextStyle(
+                          color: sizes.colorTitle,
+                          fontSize: sizes.sizeFontSchedule,
+                          fontWeight: FontWeight.bold),
+                    )
+              : Text(""),
           separator(),
           if (dutyData.data.isNotEmpty)
             Expanded(
