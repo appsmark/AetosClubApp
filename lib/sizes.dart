@@ -30,17 +30,21 @@ class Sizes {
   setSizes(context) {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
+    tablet = MediaQuery.of(context).size.shortestSide > 550;
     heightToolbar = 0.1 * screenHeight;
     buttonBorderWidth = 0.005 * screenHeight;
     sizeFontButton = 0.045 * screenHeight;
     sizeFontCompetition = 0.032 * screenHeight;
-    sizeFontRanking = 0.05 * screenWidth;
+    if (tablet) {
+      sizeFontRanking = 0.04 * screenWidth;
+    } else {
+      sizeFontRanking = 0.05 * screenWidth;
+    }
     sizeFontResults = 0.025 * screenHeight;
     sizeFontSchedule = 0.025 * screenHeight;
     sizeFontSelection = 0.03 * screenHeight;
     sizeFontTitle = 0.045 * screenHeight;
     spacing = 0.1 * screenHeight;
-    tablet = MediaQuery.of(context).size.shortestSide > 550;
     /*
     colorButton = const Color(0xFFF9B234);
     colorCompetition = const Color(0xFFF9B234);

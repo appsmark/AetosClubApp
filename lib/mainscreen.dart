@@ -94,7 +94,7 @@ class _MainScreen extends State<MainScreen> {
                       color: sizes.colorTitle,
                       fontWeight: FontWeight.bold,
                       fontSize: sizes.tablet
-                          ? 0.7 * sizes.sizeFontTitle
+                          ? 0.55 * sizes.sizeFontTitle
                           : sizes.sizeFontTitle),
                 ),
               );
