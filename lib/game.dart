@@ -102,7 +102,9 @@ class _GameState extends State<Game> {
                   width: 10,
                 ),
                 Text(
-                  listOfItems[0]['time'],
+                  listOfItems[0]['time'] == "0:00"
+                      ? ""
+                      : listOfItems[0]['time'],
                   style: TextStyle(
                       color: sizes.colorSchedule,
                       fontSize: sizes.sizeFontSchedule,

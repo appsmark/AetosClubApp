@@ -79,7 +79,9 @@ class _ScheduleState extends State<Schedule> {
                                 width: 10,
                               ),
                               Text(
-                                listOfItems[index]['time'],
+                                listOfItems[index]['time'] == "0:00"
+                                    ? ""
+                                    : listOfItems[index]['time'],
                                 style: TextStyle(
                                     color: sizes.colorSchedule,
                                     fontSize: sizes.sizeFontSchedule,
