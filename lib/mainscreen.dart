@@ -204,6 +204,7 @@ class _MainScreen extends State<MainScreen> {
                     ),
                   ),
                   Container(height: spacingButtons),
+                  /*
                   ElevatedButton(
                     onPressed: () {
                       Navigator.push(
@@ -245,6 +246,7 @@ class _MainScreen extends State<MainScreen> {
                       ),
                     ),
                   ),
+                  */
                   Container(height: spacingButtons),
                   ElevatedButton(
                     onPressed: () {
