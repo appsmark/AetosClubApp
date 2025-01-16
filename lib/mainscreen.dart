@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:new_version_plus/new_version_plus.dart';
 import 'data.dart';
 import 'duty.dart';
-import 'game.dart';
 import 'ranking.dart';
 import 'results.dart';
 import 'rss_ranking.dart';
@@ -161,49 +160,6 @@ class _MainScreen extends State<MainScreen> {
                       ),
                     ),
                   ),
-                  Container(height: spacingButtons),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          PageRouteBuilder(
-                              transitionDuration:
-                                  const Duration(milliseconds: 100),
-                              transitionsBuilder: (context, animation,
-                                  secondaryAnimation, child) {
-                                return FadeTransition(
-                                  opacity: animation,
-                                  child: child,
-                                );
-                              },
-                              pageBuilder:
-                                  (context, animation, secondaryAnimation) {
-                                return const Schedule();
-                              }));
-                    },
-                    style: ElevatedButton.styleFrom(
-                        fixedSize: Size(buttonWidth, buttonHeight),
-                        shape: const StadiumBorder(),
-                        side: BorderSide(
-                            color: Colors.black,
-                            width: sizes.buttonBorderWidth),
-                        backgroundColor: sizes.colorButton),
-                    child: Padding(
-                      padding: EdgeInsets.all(paddingButton),
-                      child: FittedBox(
-                        fit: BoxFit.fitWidth,
-                        child: Text(
-                          "PROGRAMMA",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: sizes.sizeFontButton,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(height: spacingButtons),
                   /*
                   ElevatedButton(
                     onPressed: () {
@@ -280,6 +236,50 @@ class _MainScreen extends State<MainScreen> {
                         fit: BoxFit.fitWidth,
                         child: Text(
                           "UITSLAGEN",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: sizes.sizeFontButton,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: spacingButtons,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                              transitionDuration:
+                                  const Duration(milliseconds: 100),
+                              transitionsBuilder: (context, animation,
+                                  secondaryAnimation, child) {
+                                return FadeTransition(
+                                  opacity: animation,
+                                  child: child,
+                                );
+                              },
+                              pageBuilder:
+                                  (context, animation, secondaryAnimation) {
+                                return const Schedule();
+                              }));
+                    },
+                    style: ElevatedButton.styleFrom(
+                        fixedSize: Size(buttonWidth, buttonHeight),
+                        shape: const StadiumBorder(),
+                        side: BorderSide(
+                            color: Colors.black,
+                            width: sizes.buttonBorderWidth),
+                        backgroundColor: sizes.colorButton),
+                    child: Padding(
+                      padding: EdgeInsets.all(paddingButton),
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text(
+                          "PROGRAMMA",
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: sizes.sizeFontButton,

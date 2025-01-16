@@ -1,6 +1,7 @@
 class PointsData {
   static final instance = PointsData._internal();
   List data = [];
+  List ranking = [0, 4, 5, 1, 2, 6, 3];
 
   PointsData._internal();
 
@@ -28,5 +29,31 @@ class PointsData {
       }
     }
     return result;
+  }
+
+  List getRanking() {
+    ranking = [];
+    for (int index = 0; index < data.length; index++) {
+      ranking.add([
+        data[index]["team"],
+        (int.parse(data[index]["need"]) - int.parse(data[index]["points"])) /
+            int.parse(data[index]["need"])
+      ]);
+    }
+    // sortit();
+    for (var i = 0; i < ranking.length; i++) {
+      ranking.sort((a, b) {
+        return a[1].compareTo(b[1]);
+      });
+    }
+    return ranking;
+  }
+
+  sortit() {
+    for (var i = 0; i < ranking.length; i++) {
+      ranking.sort((a, b) {
+        return a[1].compareTo(b[1]);
+      });
+    }
   }
 }

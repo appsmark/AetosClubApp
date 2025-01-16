@@ -70,23 +70,28 @@ class _DutyState extends State<Duty> {
         ),
         body: Column(children: [
           separator(),
-          pointsInfo.isNotEmpty
-              ? pointsInfo[3]
-                  ? Text(
-                      "Stand Aetos punten: Doel behaald",
-                      style: TextStyle(
-                          color: sizes.colorTitle,
-                          fontSize: sizes.sizeFontSchedule,
-                          fontWeight: FontWeight.bold),
-                    )
-                  : Text(
-                      "Stand Aetos punten: ${pointsInfo[1]} van ${pointsInfo[2]}",
-                      style: TextStyle(
-                          color: sizes.colorTitle,
-                          fontSize: sizes.sizeFontSchedule,
-                          fontWeight: FontWeight.bold),
-                    )
-              : Text(""),
+          GestureDetector(
+            onTap: () {
+              popupRanking(context);
+            },
+            child: pointsInfo.isNotEmpty
+                ? pointsInfo[3]
+                    ? Text(
+                        "Stand Aetos punten: Doel behaald",
+                        style: TextStyle(
+                            color: sizes.colorTitle,
+                            fontSize: sizes.sizeFontSchedule,
+                            fontWeight: FontWeight.bold),
+                      )
+                    : Text(
+                        "Stand Aetos punten: ${pointsInfo[1]} van ${pointsInfo[2]}",
+                        style: TextStyle(
+                            color: sizes.colorTitle,
+                            fontSize: sizes.sizeFontSchedule,
+                            fontWeight: FontWeight.bold),
+                      )
+                : Text(""),
+          ),
           separator(),
           if (dutyData.data.isNotEmpty)
             Expanded(
@@ -225,6 +230,68 @@ class _DutyState extends State<Duty> {
       indent: 0.05 * sizes.screenWidth,
       endIndent: 0.05 * sizes.screenWidth,
       color: sizes.colorTitle,
+    );
+  }
+
+  Future<void> popupRanking(BuildContext context) {
+    pointsData.getRanking();
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          backgroundColor: sizes.colorRanking,
+          title: Text(
+            "ONDERLINGE STAND\nAETOS PUNTEN",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: sizes.colorTitle,
+                fontSize: sizes.tablet
+                    ? 0.015 * sizes.screenHeight
+                    : 0.025 * sizes.screenHeight,
+                fontWeight: FontWeight.bold),
+          ),
+          actions: <Widget>[
+            SizedBox(
+              height: 0.6 * sizes.screenHeight,
+              width: 0.8 * sizes.screenWidth,
+              child: ListView.builder(
+                  itemCount: pointsData.ranking.length,
+                  itemBuilder: (BuildContext ctxt, int index) {
+                    return Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          textAlign: TextAlign.left,
+                          "${pointsData.ranking[index][0]}",
+                          style: TextStyle(
+                              color: pointsData.ranking[index][1] < 0
+                                  ? sizes.colorBackground
+                                  : sizes.colorTitle,
+                              fontSize: sizes.tablet
+                                  ? 0.015 * sizes.screenHeight
+                                  : 0.025 * sizes.screenHeight,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Spacer(),
+                        Text(
+                          textAlign: TextAlign.end,
+                          "${(-100 * pointsData.ranking[index][1]).round()}%",
+                          style: TextStyle(
+                              color: pointsData.ranking[index][1] < 0
+                                  ? sizes.colorBackground
+                                  : sizes.colorTitle,
+                              fontSize: sizes.tablet
+                                  ? 0.015 * sizes.screenHeight
+                                  : 0.025 * sizes.screenHeight,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    );
+                  }),
+            )
+          ],
+        );
+      },
     );
   }
 }
