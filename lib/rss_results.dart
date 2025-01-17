@@ -41,25 +41,22 @@ class RssResults {
   }
 
   parseRSS(RssFeed feed) {
-    //  RegExp timeRegex = RegExp(r"\d?\d:\d\d");
     for (var item in feed.items) {
-      //     RegExpMatch? time = timeRegex.firstMatch(item.description!);
-      //   if (time != null) {
       var address = item.description!
           .replaceAll(RegExp(".*Speellocatie: "), '')
           .split(', ');
-      resultsData.addGame({
-        'game': rssClean.clean(address[0].replaceAll(RegExp(".*: "), "")),
-        'result': address[1].replaceAll("Uitslag: ", ""),
-        if (address.length == 7)
-          'sets':
-              "${address[2].replaceAll("Setstanden: ", "")} ${address[3]} ${address[4]} ${address[5]} ${address[6]}",
-        if (address.length == 6)
-          'sets':
-              "${address[2].replaceAll("Setstanden: ", "")} ${address[3]} ${address[4]} ${address[5]}",
-      });
-//      }
-      //   debugPrint(item.description!);
+      if (address.length > 5) {
+        resultsData.addGame({
+          'game': rssClean.clean(address[0].replaceAll(RegExp(".*: "), "")),
+          'result': address[1].replaceAll("Uitslag: ", ""),
+          if (address.length == 7)
+            'sets':
+                "${address[2].replaceAll("Setstanden: ", "")} ${address[3]} ${address[4]} ${address[5]} ${address[6]}",
+          if (address.length == 6)
+            'sets':
+                "${address[2].replaceAll("Setstanden: ", "")} ${address[3]} ${address[4]} ${address[5]}",
+        });
+      }
     }
   }
 }

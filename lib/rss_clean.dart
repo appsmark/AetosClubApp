@@ -3,8 +3,10 @@ class RssClean {
     String result = stream;
     result = result.replaceAll(" Nationale competitie", "");
     result = result.replaceAll(" Regio Oost", "");
+    result = result.replaceAll("Eerste ", "1e ");
     result = result.replaceAll("Tweede ", "2e ");
     result = result.replaceAll("Twedde ", "2e ");
+    result = result.replaceAll(" 1e helft", "");
     result = result.replaceAll(" 2e helft", "");
     result = result.replaceAll("De Laar", "Sporthal De Laar");
     result = result.replaceAll("Valkenhuizen", "Sporthal Valkenhuizen");
@@ -25,8 +27,14 @@ class RssClean {
     result = result.replaceAll("Steenderen ", "");
     result = result.replaceAll("'Topklimaat in Volleybal' ", "");
     result = result.replaceAll("Volleybalvereniging ", "");
+    result = result.replaceAll("Volleybal Club Varsseveld ", "");
     result = result.replaceAll("Voorsterslag/", "");
     result = result.replaceAll("Weghorst Makelaardij ", "");
+    result = result.replaceAll("(IJsselmuiden) ", "");
+    result = result.replaceAll("Athena Business Support ", "");
+    result = result.replaceAll("Lammerink Installatiegroep/", "");
+    result = result.replaceAll("Komeet ", "");
+    result = result.replaceAll("Nieuwleusen ", "");
     result = result.replaceAll("HS ", "H");
     result = result.replaceAll(" DS ", " D");
     result = result.replaceAll("JA ", "JA");
@@ -36,6 +44,7 @@ class RssClean {
     result = result.replaceAll("MB ", "MB");
     result = result.replaceAll("MC ", "MC");
     result = result.replaceAll("MD ", "MD");
+    result = result.replaceAll(" Arnh/Wag", " Arnhem/Wageningen\n");
     result = result.replaceAll(" march", " maart");
     result = result.replaceAll(" may", " mei");
 

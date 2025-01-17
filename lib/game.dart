@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import 'duty_data.dart';
 import 'duty_json.dart';
@@ -31,17 +32,22 @@ class _GameState extends State<Game> {
   String counter = "";
 
   Future getData() async {
+    DateTime tempDate;
     await rss.getSchedule();
     await duty.getDuty(true);
     listOfItems = data.getGames();
     listOfDuties = dutyData.getGameData();
     counter = "";
     referee = "";
-    if (listOfDuties.isNotEmpty) {
-      String compare = listOfDuties[0]['date'].replaceAll('march', 'maart');
-      if (listOfItems[0]['date'].contains(compare)) {
-        counter = listOfDuties[0]['counter'];
-        referee = listOfDuties[0]['referee'];
+    if (listOfItems[0]["game"].toString().startsWith("AETOS")) {
+      if (listOfDuties.isNotEmpty) {
+        if (listOfDuties[0]["date"] != null) {
+          tempDate = DateFormat("yyyy-MM-dd").parse(listOfDuties[0]["date"]);
+          if (tempDate.difference(DateTime.now()).inDays >= 0) {
+            counter = listOfDuties[0]['counter'];
+            referee = listOfDuties[0]['referee'];
+          }
+        }
       }
     }
     setState(() {});
@@ -96,7 +102,9 @@ class _GameState extends State<Game> {
                   width: 10,
                 ),
                 Text(
-                  listOfItems[0]['time'],
+                  listOfItems[0]['time'] == "0:00"
+                      ? ""
+                      : listOfItems[0]['time'],
                   style: TextStyle(
                       color: sizes.colorSchedule,
                       fontSize: sizes.sizeFontSchedule,

@@ -1,6 +1,8 @@
 class ScheduleData {
   static final instance = ScheduleData._internal();
-  List data = [];
+  List data = [
+    //  {'date': '', 'time': '', 'game': '', 'hall': '', 'street': '', 'postal': ''}
+  ];
 
   ScheduleData._internal();
 

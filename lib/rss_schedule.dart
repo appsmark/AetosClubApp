@@ -19,8 +19,10 @@ class RssSchedule {
     scheduleData.clear();
 
     await getRssFeed(client, group).then((value) {
-      if (value.description!.isNotEmpty) {
-        parseRSS(value);
+      if (value.description != null) {
+        if (value.description!.isNotEmpty) {
+          parseRSS(value);
+        }
       }
     });
     return result;
