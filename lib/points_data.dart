@@ -40,20 +40,11 @@ class PointsData {
             int.parse(data[index]["need"])
       ]);
     }
-    // sortit();
     for (var i = 0; i < ranking.length; i++) {
       ranking.sort((a, b) {
         return a[1].compareTo(b[1]);
       });
     }
     return ranking;
-  }
-
-  sortit() {
-    for (var i = 0; i < ranking.length; i++) {
-      ranking.sort((a, b) {
-        return a[1].compareTo(b[1]);
-      });
-    }
   }
 }
