@@ -20,8 +20,9 @@ class Schedule extends StatefulWidget {
 class _ScheduleState extends State<Schedule> {
   String counter = "";
   ScheduleData data = ScheduleData.instance;
-  JsonDuty duty = JsonDuty();
   DutyData dutyData = DutyData.instance;
+  String dutyTeam = "";
+  JsonDuty jsonDuty = JsonDuty();
   List listOfDuties = [
     {'date': '', 'counter': '', 'referee': ''}
   ];
@@ -35,7 +36,7 @@ class _ScheduleState extends State<Schedule> {
   Future getData() async {
     DateTime tempDate;
     await rss.getSchedule();
-    await duty.getDuty(true);
+    await jsonDuty.getDuty(true);
 
     setState(() {
       listOfItems = data.getGames();
@@ -140,6 +141,16 @@ class _ScheduleState extends State<Schedule> {
               visible: referee != "",
               child: Text(
                 "Scheidsrechter: $referee",
+                style: TextStyle(
+                    color: sizes.colorSchedule,
+                    fontSize: sizes.sizeFontSchedule,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            Visibility(
+              visible: dutyTeam != "",
+              child: Text(
+                "Zaalwacht: $dutyTeam",
                 style: TextStyle(
                     color: sizes.colorSchedule,
                     fontSize: sizes.sizeFontSchedule,

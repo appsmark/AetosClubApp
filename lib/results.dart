@@ -72,12 +72,27 @@ class _ResultsState extends State<Results> {
                                 fontSize: sizes.sizeFontResults,
                                 fontWeight: FontWeight.bold),
                           ),
-                          Text(
-                            listOfItems[index]['result'],
-                            style: TextStyle(
-                                color: sizes.colorResults,
-                                fontSize: sizes.sizeFontResults,
-                                fontWeight: FontWeight.bold),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                listOfItems[index]['result'],
+                                style: TextStyle(
+                                    color: sizes.colorResults,
+                                    fontSize: sizes.sizeFontResults,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(width: 0.05 * sizes.screenWidth),
+                              Text(
+                                listOfItems[index]['totals1'] != ""
+                                    ? "${listOfItems[index]['totals1']} - ${listOfItems[index]['totals2']}"
+                                    : "",
+                                style: TextStyle(
+                                    color: sizes.colorResults,
+                                    fontSize: sizes.sizeFontResults,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
                           ),
                           Text(
                             listOfItems[index]['sets'],

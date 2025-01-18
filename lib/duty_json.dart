@@ -1,5 +1,5 @@
 import 'dart:convert';
-//import 'package:flutter/material.dart';
+
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
@@ -15,7 +15,6 @@ class JsonDuty {
   Future getDuty(bool mode) async {
     if (testLocal) {
       String fileText = await rootBundle.loadString('assets/zaaldienst.json');
-      //   debugPrint(fileText);
       return parse(jsonDecode(fileText)['duty'], mode);
     } else {
       var result =

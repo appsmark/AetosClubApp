@@ -175,7 +175,6 @@ class Data with ChangeNotifier {
   String competition = "";
 
   factory Data() {
-    //  debugPrint("INIT DATA");
     return _data;
   }
 

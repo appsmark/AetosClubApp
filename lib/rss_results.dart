@@ -52,9 +52,35 @@ class RssResults {
           if (address.length == 7)
             'sets':
                 "${address[2].replaceAll("Setstanden: ", "")} ${address[3]} ${address[4]} ${address[5]} ${address[6]}",
+          if (address.length == 7)
+            'totals1': int.parse(
+                    address[2].replaceAll("Setstanden: ", "").split("-")[0]) +
+                int.parse(address[3].split("-")[0]) +
+                int.parse(address[4].split("-")[0]) +
+                int.parse(address[5].split("-")[0]) +
+                int.parse(address[6].split("-")[0]),
+          if (address.length == 7)
+            'totals2': int.parse(
+                    address[2].replaceAll("Setstanden: ", "").split("-")[1]) +
+                int.parse(address[3].split("-")[1]) +
+                int.parse(address[4].split("-")[1]) +
+                int.parse(address[5].split("-")[1]) +
+                int.parse(address[6].split("-")[1]),
           if (address.length == 6)
             'sets':
                 "${address[2].replaceAll("Setstanden: ", "")} ${address[3]} ${address[4]} ${address[5]}",
+          if (address.length == 6)
+            'totals1': int.parse(
+                    address[2].replaceAll("Setstanden: ", "").split("-")[0]) +
+                int.parse(address[3].split("-")[0]) +
+                int.parse(address[4].split("-")[0]) +
+                int.parse(address[5].split("-")[0]),
+          if (address.length == 6)
+            'totals2': int.parse(
+                    address[2].replaceAll("Setstanden: ", "").split("-")[1]) +
+                int.parse(address[3].split("-")[1]) +
+                int.parse(address[4].split("-")[1]) +
+                int.parse(address[5].split("-")[1]),
         });
       }
     }
