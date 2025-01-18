@@ -261,8 +261,7 @@ class _DutyState extends State<Duty> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          textAlign: TextAlign.left,
-                          "${pointsData.ranking[index][0]}",
+                          "           ${pointsData.ranking[index][0]}",
                           style: TextStyle(
                               color: pointsData.ranking[index][1] < 0
                                   ? sizes.colorBackground
@@ -274,8 +273,7 @@ class _DutyState extends State<Duty> {
                         ),
                         Spacer(),
                         Text(
-                          textAlign: TextAlign.end,
-                          "${(-100 * pointsData.ranking[index][1]).round()}%",
+                          "${(-100 * pointsData.ranking[index][1]).round()}%           ",
                           style: TextStyle(
                               color: pointsData.ranking[index][1] < 0
                                   ? sizes.colorBackground
