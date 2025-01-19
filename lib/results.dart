@@ -82,10 +82,10 @@ class _ResultsState extends State<Results> {
                                     fontSize: sizes.sizeFontResults,
                                     fontWeight: FontWeight.bold),
                               ),
-                              SizedBox(width: 0.05 * sizes.screenWidth),
+                              SizedBox(width: 0.06 * sizes.screenWidth),
                               Text(
                                 listOfItems[index]['totals1'] != ""
-                                    ? "${listOfItems[index]['totals1']} - ${listOfItems[index]['totals2']}"
+                                    ? "${listOfItems[index]['totals1']}-${listOfItems[index]['totals2']}"
                                     : "",
                                 style: TextStyle(
                                     color: sizes.colorResults,

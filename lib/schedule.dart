@@ -48,6 +48,7 @@ class _ScheduleState extends State<Schedule> {
             if (tempDate.difference(DateTime.now()).inDays >= 0) {
               counter = listOfDuties[0]['counter'];
               referee = listOfDuties[0]['referee'];
+              dutyTeam = listOfDuties[0]['duty'];
             }
           }
         }

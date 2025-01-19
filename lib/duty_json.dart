@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
@@ -38,12 +39,13 @@ class JsonDuty {
   }
 
   parse(inputStream, bool mode) {
-    DateTime tempDate;
     String date = "";
+    String day = "";
+    String dutyTeam = "";
     String endtime = "";
     String month = "";
-    String day = "";
     String referee = "";
+    DateTime tempDate;
 
     dutyData.clear();
     for (int index = 0; index < inputStream.length; index++) {
@@ -54,6 +56,16 @@ class JsonDuty {
         tempDate = DateFormat("yyyy-MM-dd")
             .parse(convert(inputStream[index]["Datum"]));
       }
+
+      if (inputStream[index]["Zaalwacht"] != null) {
+        log('${inputStream[index]["Zaalwacht"]}  ${inputStream[index]["Tijd"]} ${inputStream[index]["Eindtijd"]}');
+        dutyTeam = inputStream[index]["Zaalwacht"];
+      }
+      if ((inputStream[index]["Locatie"] != null) &&
+          (inputStream[index]["Locatie"] != "Middachtensingel")) {
+        dutyTeam = "";
+      }
+
       if (tempDate.difference(DateTime.now()).inDays >= 0) {
         if (mode) {
           if (inputStream[index]["Thuisteam"] != null) {
@@ -70,7 +82,7 @@ class JsonDuty {
                 "date": inputStream[index]["Datum"],
                 "referee": referee,
                 "counter": inputStream[index]["teller"],
-                "duty": inputStream[index]["Zaalwacht"],
+                "duty": dutyTeam,
               });
             }
           }
@@ -112,7 +124,7 @@ class JsonDuty {
               "hall": inputStream[index]["Locatie"],
               "referee": referee,
               "counter": inputStream[index]["teller"],
-              "duty": inputStream[index]["Zaalwacht"],
+              "duty": dutyTeam,
             });
           }
         }
