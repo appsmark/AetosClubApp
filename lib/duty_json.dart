@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
@@ -58,7 +57,6 @@ class JsonDuty {
       }
 
       if (inputStream[index]["Zaalwacht"] != null) {
-        log('${inputStream[index]["Zaalwacht"]}  ${inputStream[index]["Tijd"]} ${inputStream[index]["Eindtijd"]}');
         dutyTeam = inputStream[index]["Zaalwacht"];
       }
       if ((inputStream[index]["Locatie"] != null) &&
