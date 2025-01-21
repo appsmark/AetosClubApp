@@ -16,6 +16,7 @@ class Ranking extends StatefulWidget {
 class _RankingState extends State<Ranking> {
   RankingData data = RankingData.instance;
   int displayMode = 0;
+  List displayModeString = ["", "sets voor/tegen", "punten voor/tegen"];
   List listOfItems = [];
   RssRanking rss = RssRanking();
   Sizes sizes = Sizes.instance;
@@ -72,7 +73,10 @@ class _RankingState extends State<Ranking> {
                 setState(() {});
               },
               child: Text(
-                data.competition,
+                textAlign: TextAlign.center,
+                displayMode == 0
+                    ? data.competition
+                    : "${data.competition}\n${displayModeString[displayMode]}",
                 style: TextStyle(
                     color: sizes.colorCompetition,
                     fontWeight: FontWeight.bold,

@@ -31,13 +31,15 @@ class Sizes {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
     tablet = MediaQuery.of(context).size.shortestSide > 550;
-    heightToolbar = 0.1 * screenHeight;
+
     buttonBorderWidth = 0.005 * screenHeight;
     sizeFontButton = 0.045 * screenHeight;
     sizeFontCompetition = 0.032 * screenHeight;
     if (tablet) {
+      heightToolbar = 0.15 * screenHeight;
       sizeFontRanking = 0.04 * screenWidth;
     } else {
+      heightToolbar = 0.1 * screenHeight;
       sizeFontRanking = 0.05 * screenWidth;
     }
     sizeFontResults = 0.025 * screenHeight;

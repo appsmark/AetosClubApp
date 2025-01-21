@@ -33,16 +33,20 @@ class RssRanking {
     List gamesArray = [];
     var points = stream.split(RegExp("<stand:punten>"));
     List pointsArray = [];
+    int pointsMaxLength = 0;
     var teams = stream.split(RegExp("<stand:team "));
     List teamsArray = [];
     var setswon = stream.split(RegExp("<stand:setsvoor>"));
     List setswonArray = [];
     var setslost = stream.split(RegExp("<stand:setstegen>"));
     List setslostArray = [];
+    int setslostMaxLength = 0;
     var pointswon = stream.split(RegExp("<stand:puntenvoor>"));
     List pointswonArray = [];
     var pointslost = stream.split(RegExp("<stand:puntentegen>"));
     List pointslostArray = [];
+    int pointslostMaxLength = 0;
+
     for (int index = 1; index < teams.length; index++) {
       String team = teams[index]
           .replaceAll(RegExp(r'.*DATA\['), '')
@@ -84,22 +88,6 @@ class RssRanking {
           .replaceAll(RegExp('<.*'), '')
           .replaceAll(RegExp('\n.*'), '');
       pointswonArray.add(pointwon);
-      /*
-      switch (index) {
-        case 1:
-          pointwon = "1234";
-          break;
-        case 2:
-          pointwon = "123";
-          break;
-        case 3:
-          pointwon = "12";
-          break;
-        case 4:
-          pointwon = "1";
-          break;
-      }
-      */
       switch (pointwon.length) {
         case 1:
           pointwon = "      $pointwon";
@@ -114,27 +102,8 @@ class RssRanking {
       String pointlost = pointslost[index]
           .replaceAll(RegExp('<.*'), '')
           .replaceAll(RegExp('\n.*'), '');
-/*
-      switch (index) {
-        case 1:
-          pointlost = "1234";
-          break;
-        case 2:
-          pointlost = "123";
-          break;
-        case 3:
-          pointlost = "12";
-          break;
-        case 4:
-          pointlost = "1";
-          break;
-      }
-  */
       pointslostArray.add(pointlost);
     }
-    int pointslostMaxLength = 0;
-    int pointsMaxLength = 0;
-    int setslostMaxLength = 0;
     for (int index = 0; index < teamsArray.length; index++) {
       if (pointslostArray[index].length > pointslostMaxLength) {
         pointslostMaxLength = pointslostArray[index].length;
