@@ -26,6 +26,7 @@ class RssClean {
     result = result.replaceAll("Sportclub ", "");
     result = result.replaceAll("Steenderen ", "");
     result = result.replaceAll("'Topklimaat in Volleybal' ", "");
+    result = result.replaceAll("VoCASA/Pegasus ", "VOCASA ");
     result = result.replaceAll("Volleybalvereniging ", "");
     result = result.replaceAll("Volleybal Club Varsseveld ", "");
     result = result.replaceAll("Voorsterslag/", "");

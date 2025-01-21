@@ -308,9 +308,7 @@ class _MainScreen extends State<MainScreen> {
                               },
                               pageBuilder:
                                   (context, animation, secondaryAnimation) {
-                                return Duty(
-                                  listOfItems: data.getTeams(),
-                                );
+                                return Duty();
                               }));
                     },
                     style: ElevatedButton.styleFrom(

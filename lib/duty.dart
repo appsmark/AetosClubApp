@@ -9,9 +9,7 @@ import 'rss_clean.dart';
 import 'sizes.dart';
 
 class Duty extends StatefulWidget {
-  final List listOfItems;
-
-  const Duty({super.key, required this.listOfItems});
+  const Duty({super.key});
 
   @override
   State<Duty> createState() => _DutyState();

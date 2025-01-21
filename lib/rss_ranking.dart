@@ -30,20 +30,175 @@ class RssRanking {
         .replaceAll(RegExp('].*'), '');
     rankingData.competition = rssClean.clean(competition);
     var games = stream.split(RegExp("<stand:wedstrijden>"));
+    List gamesArray = [];
     var points = stream.split(RegExp("<stand:punten>"));
+    List pointsArray = [];
     var teams = stream.split(RegExp("<stand:team "));
+    List teamsArray = [];
+    var setswon = stream.split(RegExp("<stand:setsvoor>"));
+    List setswonArray = [];
+    var setslost = stream.split(RegExp("<stand:setstegen>"));
+    List setslostArray = [];
+    var pointswon = stream.split(RegExp("<stand:puntenvoor>"));
+    List pointswonArray = [];
+    var pointslost = stream.split(RegExp("<stand:puntentegen>"));
+    List pointslostArray = [];
     for (int index = 1; index < teams.length; index++) {
       String team = teams[index]
           .replaceAll(RegExp(r'.*DATA\['), '')
           .replaceAll(RegExp('].*'), '')
           .replaceAll(RegExp('\n.*'), '');
+      teamsArray.add(team);
       String game = games[index]
           .replaceAll(RegExp('<.*'), '')
           .replaceAll(RegExp('\n.*'), '');
+      gamesArray.add(game);
       String point = points[index]
           .replaceAll(RegExp('<.*'), '')
           .replaceAll(RegExp('\n.*'), '');
-      rankingData.addTeam({'team': team, 'games': game, 'points': point});
+      pointsArray.add(point);
+      switch (point.length) {
+        case 1:
+          point = " $point";
+          break;
+      }
+      String setwon = setswon[index]
+          .replaceAll(RegExp('<.*'), '')
+          .replaceAll(RegExp('\n.*'), '');
+      setswonArray.add(setwon);
+      switch (setwon.length) {
+        case 1:
+          setwon = "  $setwon";
+          break;
+      }
+      String setlost = setslost[index]
+          .replaceAll(RegExp('<.*'), '')
+          .replaceAll(RegExp('\n.*'), '');
+      setslostArray.add(setlost);
+      switch (setlost.length) {
+        case 1:
+          setlost = "  $setlost";
+          break;
+      }
+      String pointwon = pointswon[index]
+          .replaceAll(RegExp('<.*'), '')
+          .replaceAll(RegExp('\n.*'), '');
+      pointswonArray.add(pointwon);
+      /*
+      switch (index) {
+        case 1:
+          pointwon = "1234";
+          break;
+        case 2:
+          pointwon = "123";
+          break;
+        case 3:
+          pointwon = "12";
+          break;
+        case 4:
+          pointwon = "1";
+          break;
+      }
+      */
+      switch (pointwon.length) {
+        case 1:
+          pointwon = "      $pointwon";
+          break;
+        case 2:
+          pointwon = "    $pointwon";
+          break;
+        case 3:
+          pointwon = "  $pointwon";
+          break;
+      }
+      String pointlost = pointslost[index]
+          .replaceAll(RegExp('<.*'), '')
+          .replaceAll(RegExp('\n.*'), '');
+/*
+      switch (index) {
+        case 1:
+          pointlost = "1234";
+          break;
+        case 2:
+          pointlost = "123";
+          break;
+        case 3:
+          pointlost = "12";
+          break;
+        case 4:
+          pointlost = "1";
+          break;
+      }
+  */
+      pointslostArray.add(pointlost);
+    }
+    int pointslostMaxLength = 0;
+    int pointsMaxLength = 0;
+    int setslostMaxLength = 0;
+    for (int index = 0; index < teamsArray.length; index++) {
+      if (pointslostArray[index].length > pointslostMaxLength) {
+        pointslostMaxLength = pointslostArray[index].length;
+      }
+      if (pointsArray[index].length > pointsMaxLength) {
+        pointsMaxLength = pointsArray[index].length;
+      }
+      if (gamesArray[index].length > setslostMaxLength) {
+        setslostMaxLength = gamesArray[index].length;
+      }
+    }
+    for (int index = 0; index < teamsArray.length; index++) {
+      switch (pointsMaxLength) {
+        case 2:
+          switch (pointsArray[index].length) {
+            case 1:
+              pointsArray[index] = " ${pointsArray[index]}";
+              break;
+          }
+          break;
+      }
+      switch (setslostMaxLength) {
+        case 2:
+          switch (setslostArray[index].length) {
+            case 1:
+              setslostArray[index] = " ${setslostArray[index]}";
+              break;
+          }
+          break;
+      }
+      switch (pointslostMaxLength) {
+        case 3:
+          switch (pointslostArray[index].length) {
+            case 1:
+              pointslostArray[index] = "  ${pointslostArray[index]}";
+              break;
+            case 2:
+              pointslostArray[index] = " ${pointslostArray[index]}";
+              break;
+          }
+          break;
+        case 4:
+          switch (pointslostArray[index].length) {
+            case 1:
+              pointslostArray[index] = "   ${pointslostArray[index]}";
+              break;
+            case 2:
+              pointslostArray[index] = "  ${pointslostArray[index]}";
+              break;
+            case 3:
+              pointslostArray[index] = " ${pointslostArray[index]}";
+              break;
+          }
+          break;
+      }
+      rankingData.addTeam({
+        'team': teamsArray[index],
+        'games': gamesArray[index],
+        'points': pointsArray[index],
+        'setswon': setswonArray[index],
+        'setslost': setslostArray[index],
+        'pointswon': pointswonArray[index],
+        'pointslost': pointslostArray[index]
+      });
     }
   }
 }

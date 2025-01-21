@@ -168,48 +168,6 @@ class Team with ChangeNotifier {
 
 final team = Team();
 
-class Data with ChangeNotifier {
-  static final Data _data = Data._internal();
-  final List _games = [];
-  final List _teams = [];
-  String competition = "";
-
-  factory Data() {
-    return _data;
-  }
-
-  Data._internal();
-
-  void clear() {
-    _teams.clear();
-    _games.clear();
-  }
-
-  void addTeam(name, gamesPlayed, gamesWon) {
-    _teams.add(TeamData(name, gamesPlayed, gamesWon));
-  }
-
-  void addGame(date) {
-    _games.add(GameData(date));
-  }
-
-  List getGames() {
-    //   notifyListeners();
-    return _games;
-  }
-
-  List getTeams() {
-    notifyListeners();
-    return _teams;
-  }
-
-  setCompetition(String value) {
-    competition = value;
-  }
-}
-
-final data = Data();
-
 class TeamData {
   int gamesPlayed;
   int gamesWon;
