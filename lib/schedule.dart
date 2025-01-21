@@ -19,6 +19,7 @@ class Schedule extends StatefulWidget {
 
 class _ScheduleState extends State<Schedule> {
   String counter = "";
+  bool counterOwnTeam = false;
   ScheduleData data = ScheduleData.instance;
   DutyData dutyData = DutyData.instance;
   String dutyTeam = "";
@@ -47,6 +48,9 @@ class _ScheduleState extends State<Schedule> {
             tempDate = DateFormat("yyyy-MM-dd").parse(listOfDuties[0]["date"]);
             if (tempDate.difference(DateTime.now()).inDays >= 0) {
               counter = listOfDuties[0]['counter'];
+              counterOwnTeam = listOfItems[0]["game"]
+                  .toString()
+                  .startsWith("AETOS $counter");
               referee = listOfDuties[0]['referee'];
               dutyTeam = listOfDuties[0]['duty'];
             }
@@ -133,7 +137,8 @@ class _ScheduleState extends State<Schedule> {
               child: Text(
                 "Teller: $counter",
                 style: TextStyle(
-                    color: sizes.colorSchedule,
+                    color:
+                        counterOwnTeam ? sizes.colorTitle : sizes.colorSchedule,
                     fontSize: sizes.sizeFontSchedule,
                     fontWeight: FontWeight.bold),
               ),
