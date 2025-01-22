@@ -150,15 +150,20 @@ class _DutyState extends State<Duty> {
                                   fontSize: sizes.sizeFontSchedule,
                                   fontWeight: FontWeight.bold),
                             ),
-                            Text(
-                              "Tellen: ${dutyData.data[index]['counter']}",
-                              style: TextStyle(
-                                  color: team.currentTeam ==
-                                          dutyData.data[index]['counter']
-                                      ? sizes.colorTitle
-                                      : sizes.colorSchedule,
-                                  fontSize: sizes.sizeFontSchedule,
-                                  fontWeight: FontWeight.bold),
+                            Visibility(
+                              visible: dutyData.data[index]['counter']
+                                  .toString()
+                                  .isNotEmpty,
+                              child: Text(
+                                "Tellen: ${dutyData.data[index]['counter']}",
+                                style: TextStyle(
+                                    color: team.currentTeam ==
+                                            dutyData.data[index]['counter']
+                                        ? sizes.colorTitle
+                                        : sizes.colorSchedule,
+                                    fontSize: sizes.sizeFontSchedule,
+                                    fontWeight: FontWeight.bold),
+                              ),
                             ),
                             separator(),
                           ],
