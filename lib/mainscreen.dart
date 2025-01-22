@@ -77,9 +77,7 @@ class _MainScreen extends State<MainScreen> {
           toolbarHeight: sizes.heightToolbar,
           centerTitle: true,
           title: DropdownButton(
-            underline: Container(
-              color: Colors.black,
-            ),
+            underline: SizedBox(),
             dropdownColor: sizes.colorSelection,
             value: dropdownvalue,
             autofocus: true,
@@ -87,22 +85,14 @@ class _MainScreen extends State<MainScreen> {
             items: items.map((String items) {
               return DropdownMenuItem(
                 value: items,
-                child: Column(
-                  children: [
-                    Text(
-                      items.length < 3 ? " TEAM $items" : "TEAM $items",
-                      style: TextStyle(
-                          color: sizes.colorTitle,
-                          fontWeight: FontWeight.bold,
-                          fontSize: sizes.tablet
-                              ? 0.45 * sizes.sizeFontTitle
-                              : 0.92 * sizes.sizeFontTitle),
-                    ),
-                    Container(
-                      height: 1,
-                      color: Colors.black,
-                    ),
-                  ],
+                child: Text(
+                  items.length < 3 ? " TEAM $items" : "TEAM $items",
+                  style: TextStyle(
+                      color: sizes.colorTitle,
+                      fontWeight: FontWeight.bold,
+                      fontSize: sizes.tablet
+                          ? 0.82 * sizes.sizeFontTitle
+                          : 0.92 * sizes.sizeFontTitle),
                 ),
               );
             }).toList(),

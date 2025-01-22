@@ -93,7 +93,7 @@ class _RankingState extends State<Ranking> {
                 child: Row(
                   children: [
                     SizedBox(
-                        width: 0.06 * sizes.screenWidth,
+                        width: 0.065 * sizes.screenWidth,
                         child: Text(
                           "${listOfItems.indexOf(item) + 1}",
                           textAlign: TextAlign.end,
