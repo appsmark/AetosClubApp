@@ -1,13 +1,13 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import 'constants.dart';
 import 'duty_data.dart';
 import 'duty_json.dart';
 import 'rss_clean.dart';
 import 'rss_schedule.dart';
 import 'schedule_data.dart';
+import 'scheduledetails.dart';
 import 'sizes.dart';
 
 class Schedule extends StatefulWidget {
@@ -69,15 +69,15 @@ class _ScheduleState extends State<Schedule> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: sizes.colorBackground,
+        backgroundColor: Constants().colorBackground,
         appBar: AppBar(
           toolbarHeight: sizes.heightToolbar,
-          backgroundColor: sizes.colorBackground,
+          backgroundColor: Constants().colorBackground,
           leading: GestureDetector(
             child: Icon(
               Icons.arrow_back,
               size: 0.05 * sizes.screenHeight,
-              color: sizes.colorTitle,
+              color: Constants().colorTitle,
             ),
             onTap: () {
               Navigator.pop(context);
@@ -87,7 +87,7 @@ class _ScheduleState extends State<Schedule> {
           title: Text(
             "PROGRAMMA",
             style: TextStyle(
-                color: sizes.colorTitle,
+                color: Constants().colorTitle,
                 fontSize: sizes.sizeFontTitle,
                 fontWeight: FontWeight.bold),
           ),
@@ -95,97 +95,108 @@ class _ScheduleState extends State<Schedule> {
         body: Column(
           children: [
             separator(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  listOfItems[0]['date'],
-                  style: TextStyle(
-                      color: sizes.colorSchedule,
-                      fontSize: sizes.sizeFontSchedule,
-                      fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  listOfItems[0]['time'] == "0:00"
-                      ? ""
-                      : listOfItems[0]['time'],
-                  style: TextStyle(
-                      color: sizes.colorSchedule,
-                      fontSize: sizes.sizeFontSchedule,
-                      fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            Text(
-              listOfItems[0]['game'],
-              style: TextStyle(
-                  color: sizes.colorSchedule,
-                  fontSize: sizes.sizeFontSchedule,
-                  fontWeight: FontWeight.bold),
-            ),
-            Visibility(
-              visible: counter != "",
-              child: SizedBox(
-                height: 0.01 * sizes.screenHeight,
+            GestureDetector(
+              onTap: () {
+                ScheduleDetails().scheduleDetails(
+                    context, 0, listOfItems, counter, referee, dutyTeam);
+              },
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        listOfItems[0]['date'],
+                        style: TextStyle(
+                            color: Constants().colorSchedule,
+                            fontSize: sizes.sizeFontSchedule,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        listOfItems[0]['time'] == "0:00"
+                            ? ""
+                            : listOfItems[0]['time'],
+                        style: TextStyle(
+                            color: Constants().colorSchedule,
+                            fontSize: sizes.sizeFontSchedule,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  Text(
+                    listOfItems[0]['game'],
+                    style: TextStyle(
+                        color: Constants().colorSchedule,
+                        fontSize: sizes.sizeFontSchedule,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Visibility(
+                    visible: counter != "",
+                    child: SizedBox(
+                      height: 0.01 * sizes.screenHeight,
+                    ),
+                  ),
+                  Visibility(
+                    visible: counter != "",
+                    child: Text(
+                      "Teller: $counter",
+                      style: TextStyle(
+                          color: counterOwnTeam
+                              ? Constants().colorTitle
+                              : Constants().colorSchedule,
+                          fontSize: sizes.sizeFontSchedule,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Visibility(
+                    visible: referee != "",
+                    child: Text(
+                      "Scheidsrechter: $referee",
+                      style: TextStyle(
+                          color: Constants().colorSchedule,
+                          fontSize: sizes.sizeFontSchedule,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Visibility(
+                    visible: dutyTeam != "",
+                    child: Text(
+                      "Zaalwacht: $dutyTeam",
+                      style: TextStyle(
+                          color: Constants().colorSchedule,
+                          fontSize: sizes.sizeFontSchedule,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 0.01 * sizes.screenHeight,
+                  ),
+                  Text(
+                    RssClean().clean(listOfItems[0]['hall']),
+                    style: TextStyle(
+                        color: Constants().colorSchedule,
+                        fontSize: sizes.sizeFontSchedule,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    RssClean().clean(listOfItems[0]['street']),
+                    style: TextStyle(
+                        color: Constants().colorSchedule,
+                        fontSize: sizes.sizeFontSchedule,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    listOfItems[0]['postal'],
+                    style: TextStyle(
+                        color: Constants().colorSchedule,
+                        fontSize: sizes.sizeFontSchedule,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
-            ),
-            Visibility(
-              visible: counter != "",
-              child: Text(
-                "Teller: $counter",
-                style: TextStyle(
-                    color:
-                        counterOwnTeam ? sizes.colorTitle : sizes.colorSchedule,
-                    fontSize: sizes.sizeFontSchedule,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-            Visibility(
-              visible: referee != "",
-              child: Text(
-                "Scheidsrechter: $referee",
-                style: TextStyle(
-                    color: sizes.colorSchedule,
-                    fontSize: sizes.sizeFontSchedule,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-            Visibility(
-              visible: dutyTeam != "",
-              child: Text(
-                "Zaalwacht: $dutyTeam",
-                style: TextStyle(
-                    color: sizes.colorSchedule,
-                    fontSize: sizes.sizeFontSchedule,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-            SizedBox(
-              height: 0.01 * sizes.screenHeight,
-            ),
-            Text(
-              RssClean().clean(listOfItems[0]['hall']),
-              style: TextStyle(
-                  color: sizes.colorSchedule,
-                  fontSize: sizes.sizeFontSchedule,
-                  fontWeight: FontWeight.bold),
-            ),
-            Text(
-              RssClean().clean(listOfItems[0]['street']),
-              style: TextStyle(
-                  color: sizes.colorSchedule,
-                  fontSize: sizes.sizeFontSchedule,
-                  fontWeight: FontWeight.bold),
-            ),
-            Text(
-              listOfItems[0]['postal'],
-              style: TextStyle(
-                  color: sizes.colorSchedule,
-                  fontSize: sizes.sizeFontSchedule,
-                  fontWeight: FontWeight.bold),
             ),
             separator(),
             Expanded(
@@ -196,7 +207,8 @@ class _ScheduleState extends State<Schedule> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              log("==========$index");
+                              ScheduleDetails().scheduleDetails(
+                                  context, index + 1, listOfItems, "", "", "");
                             },
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -204,7 +216,7 @@ class _ScheduleState extends State<Schedule> {
                                 Text(
                                   listOfItems[index + 1]['date'],
                                   style: TextStyle(
-                                      color: sizes.colorSchedule,
+                                      color: Constants().colorSchedule,
                                       fontSize: sizes.sizeFontSchedule,
                                       fontWeight: FontWeight.bold),
                                 ),
@@ -216,19 +228,25 @@ class _ScheduleState extends State<Schedule> {
                                       ? ""
                                       : listOfItems[index + 1]['time'],
                                   style: TextStyle(
-                                      color: sizes.colorSchedule,
+                                      color: Constants().colorSchedule,
                                       fontSize: sizes.sizeFontSchedule,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ],
                             ),
                           ),
-                          Text(
-                            listOfItems[index + 1]['game'],
-                            style: TextStyle(
-                                color: sizes.colorSchedule,
-                                fontSize: sizes.sizeFontSchedule,
-                                fontWeight: FontWeight.bold),
+                          GestureDetector(
+                            onTap: () {
+                              ScheduleDetails().scheduleDetails(
+                                  context, index + 1, listOfItems, "", "", "");
+                            },
+                            child: Text(
+                              listOfItems[index + 1]['game'],
+                              style: TextStyle(
+                                  color: Constants().colorSchedule,
+                                  fontSize: sizes.sizeFontSchedule,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
                           separator(),
                         ],
@@ -242,7 +260,7 @@ class _ScheduleState extends State<Schedule> {
     return Divider(
       indent: 0.05 * sizes.screenWidth,
       endIndent: 0.05 * sizes.screenWidth,
-      color: sizes.colorTitle,
+      color: Constants().colorTitle,
     );
   }
 }
