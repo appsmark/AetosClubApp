@@ -45,7 +45,7 @@ class RssResults {
       var address = item.description!
           .replaceAll(RegExp(".*Speellocatie: "), '')
           .split(', ');
-      if (address.length > 5) {
+      if (address.length >= 5) {
         resultsData.addGame({
           'game': rssClean.clean(address[0].replaceAll(RegExp(".*: "), "")),
           'result': address[1].replaceAll("Uitslag: ", ""),
@@ -81,6 +81,19 @@ class RssResults {
                 int.parse(address[3].split("-")[1]) +
                 int.parse(address[4].split("-")[1]) +
                 int.parse(address[5].split("-")[1]),
+          if (address.length == 5)
+            'sets':
+                "${address[2].replaceAll("Setstanden: ", "")} ${address[3]} ${address[4]} ",
+          if (address.length == 5)
+            'totals1': int.parse(
+                    address[2].replaceAll("Setstanden: ", "").split("-")[0]) +
+                int.parse(address[3].split("-")[0]) +
+                int.parse(address[4].split("-")[0]),
+          if (address.length == 5)
+            'totals2': int.parse(
+                    address[2].replaceAll("Setstanden: ", "").split("-")[1]) +
+                int.parse(address[3].split("-")[1]) +
+                int.parse(address[4].split("-")[1]),
         });
       }
     }

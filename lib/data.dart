@@ -52,6 +52,11 @@ class TeamInfo {
     ["MC6", "regio-oost/MC3O2", "meiden-c/6"],
     ["MC7", "regio-oost/MC3P2", "meiden-c/7"],
     ["MC8", "regio-oost/MC3O2", "meiden-c/8"],
+    [
+      "XZ1",
+      "nationale-competitie/zitvolleybal-zitvolleybal-1/nationale-competitie-2zv2-3",
+      "mix-zitvolleybal/1"
+    ],
     /*
     [
       "N6-1",

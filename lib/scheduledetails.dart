@@ -9,7 +9,12 @@ class ScheduleDetails {
   Players players = Players.instance;
   Sizes sizes = Sizes.instance;
 
-  Future<void> scheduleDetails(BuildContext context, int index,
+  scheduleDetails(BuildContext context, int index, List listOfItems,
+      String counter, String referee, String dutyTeam) {
+    return Null;
+  }
+
+  Future<void> xscheduleDetails(BuildContext context, int index,
       List listOfItems, String counter, String referee, String dutyTeam) {
     return showDialog<void>(
       context: context,

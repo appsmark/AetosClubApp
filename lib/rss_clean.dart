@@ -4,6 +4,7 @@ class RssClean {
     result = result.replaceAll(" Nationale competitie", "");
     result = result.replaceAll(" Regio Oost", "");
     result = result.replaceAll("Eerste ", "1e ");
+    result = result.replaceAll("tweede ", "2e ");
     result = result.replaceAll("Tweede ", "2e ");
     result = result.replaceAll("Twedde ", "2e ");
     result = result.replaceAll(" 1e helft", "");
@@ -30,12 +31,15 @@ class RssClean {
     result = result.replaceAll("Volleybalvereniging ", "");
     result = result.replaceAll("Volleybal Club Varsseveld ", "");
     result = result.replaceAll("Voorsterslag/", "");
+    result = result.replaceAll("Fortis in Unum", "Fortis");
     result = result.replaceAll("Weghorst Makelaardij ", "");
     result = result.replaceAll("(IJsselmuiden) ", "");
     result = result.replaceAll("Athena Business Support ", "");
     result = result.replaceAll("Lammerink Installatiegroep/", "");
     result = result.replaceAll("Komeet ", "");
     result = result.replaceAll("Nieuwleusen ", "");
+    result = result.replaceAll("Zitvolley ", "");
+    result = result.replaceAll("Zitvolleybal ", "");
     result = result.replaceAll("HS ", "H");
     result = result.replaceAll(" DS ", " D");
     result = result.replaceAll("JA ", "JA");
@@ -45,6 +49,7 @@ class RssClean {
     result = result.replaceAll("MB ", "MB");
     result = result.replaceAll("MC ", "MC");
     result = result.replaceAll("MD ", "MD");
+    result = result.replaceAll("XZ ", "XZ");
     result = result.replaceAll(" Arnh/Wag", " Arnhem/Wageningen\n");
     result = result.replaceAll(" march", " maart");
     result = result.replaceAll(" may", " mei");

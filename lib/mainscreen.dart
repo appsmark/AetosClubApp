@@ -290,42 +290,45 @@ class _MainScreen extends State<MainScreen> {
                   Container(
                     height: 2 * spacingButtons,
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          PageRouteBuilder(
-                              transitionDuration:
-                                  const Duration(milliseconds: 100),
-                              transitionsBuilder: (context, animation,
-                                  secondaryAnimation, child) {
-                                return FadeTransition(
-                                  opacity: animation,
-                                  child: child,
-                                );
-                              },
-                              pageBuilder:
-                                  (context, animation, secondaryAnimation) {
-                                return Duty();
-                              }));
-                    },
-                    style: ElevatedButton.styleFrom(
-                        fixedSize: Size(buttonWidth, buttonHeight),
-                        shape: const StadiumBorder(),
-                        side: BorderSide(
-                            color: Colors.black,
-                            width: sizes.buttonBorderWidth),
-                        backgroundColor: sizes.colorButton),
-                    child: Padding(
-                      padding: EdgeInsets.all(paddingButton),
-                      child: FittedBox(
-                        fit: BoxFit.fitWidth,
-                        child: Text(
-                          "ZAALDIENST",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: sizes.sizeFontButton,
-                            fontWeight: FontWeight.bold,
+                  Visibility(
+                    visible: team.currentTeam != "XZ1",
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            PageRouteBuilder(
+                                transitionDuration:
+                                    const Duration(milliseconds: 100),
+                                transitionsBuilder: (context, animation,
+                                    secondaryAnimation, child) {
+                                  return FadeTransition(
+                                    opacity: animation,
+                                    child: child,
+                                  );
+                                },
+                                pageBuilder:
+                                    (context, animation, secondaryAnimation) {
+                                  return Duty();
+                                }));
+                      },
+                      style: ElevatedButton.styleFrom(
+                          fixedSize: Size(buttonWidth, buttonHeight),
+                          shape: const StadiumBorder(),
+                          side: BorderSide(
+                              color: Colors.black,
+                              width: sizes.buttonBorderWidth),
+                          backgroundColor: sizes.colorButton),
+                      child: Padding(
+                        padding: EdgeInsets.all(paddingButton),
+                        child: FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: Text(
+                            "ZAALDIENST",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: sizes.sizeFontButton,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
