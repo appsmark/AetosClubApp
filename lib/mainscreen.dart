@@ -1,7 +1,10 @@
+import 'package:aetos/constants.dart';
+import 'package:aetos/select_team.dart';
 import 'package:flutter/material.dart';
 import 'package:new_version_plus/new_version_plus.dart';
 import 'data.dart';
 import 'duty.dart';
+import 'manual.dart';
 import 'ranking.dart';
 import 'results.dart';
 import 'rss_ranking.dart';
@@ -76,35 +79,31 @@ class _MainScreen extends State<MainScreen> {
         appBar: AppBar(
           toolbarHeight: sizes.heightToolbar,
           centerTitle: true,
-          title: DropdownButton(
-            underline: SizedBox(),
-            dropdownColor: sizes.colorSelection,
-            value: dropdownvalue,
-            autofocus: true,
-            iconSize: 0.0,
-            items: items.map((String items) {
-              return DropdownMenuItem(
-                value: items,
-                child: Text(
-                  items.length < 3 ? " TEAM $items" : "TEAM $items",
-                  style: TextStyle(
-                      color: sizes.colorTitle,
-                      fontWeight: FontWeight.bold,
-                      fontSize: sizes.tablet
-                          ? 0.82 * sizes.sizeFontTitle
-                          : 0.92 * sizes.sizeFontTitle),
-                ),
-              );
-            }).toList(),
-            onChanged: (String? newValue) {
-              setState(() {
-                team.set(newValue);
-                dropdownvalue = newValue!;
-                teamInfo.getSchedule(team.currentTeam);
-                teamInfo.getRanking(team.currentTeam);
-              });
-            },
-          ),
+          title: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    PageRouteBuilder(
+                        transitionDuration: const Duration(milliseconds: 100),
+                        transitionsBuilder:
+                            (context, animation, secondaryAnimation, child) {
+                          return FadeTransition(
+                            opacity: animation,
+                            child: child,
+                          );
+                        },
+                        pageBuilder: (context, animation, secondaryAnimation) {
+                          return const SelectTeam();
+                        }));
+              },
+              child: Text(
+                "TEAM ${team.currentTeam}",
+                style: TextStyle(
+                    backgroundColor: Constants().colorBackground,
+                    color: sizes.colorTitle,
+                    fontWeight: FontWeight.bold,
+                    fontSize: sizes.sizeFontTitle),
+              )),
           backgroundColor: sizes.colorBackground,
           elevation: 0,
         ),
@@ -332,6 +331,55 @@ class _MainScreen extends State<MainScreen> {
                           ),
                         ),
                       ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                PageRouteBuilder(
+                                    transitionDuration:
+                                        const Duration(milliseconds: 100),
+                                    transitionsBuilder: (context, animation,
+                                        secondaryAnimation, child) {
+                                      return FadeTransition(
+                                        opacity: animation,
+                                        child: child,
+                                      );
+                                    },
+                                    pageBuilder: (context, animation,
+                                        secondaryAnimation) {
+                                      return Manual();
+                                    }));
+                          },
+                          style: ElevatedButton.styleFrom(
+                              fixedSize: Size(buttonWidth, buttonHeight),
+                              shape: const StadiumBorder(),
+                              side: BorderSide(
+                                  color: Colors.black,
+                                  width: sizes.buttonBorderWidth),
+                              backgroundColor: sizes.colorButton),
+                          child: Padding(
+                            padding: EdgeInsets.all(paddingButton),
+                            child: FittedBox(
+                              fit: BoxFit.fitWidth,
+                              child: Text(
+                                "HANDLEIDING",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: sizes.sizeFontButton,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],

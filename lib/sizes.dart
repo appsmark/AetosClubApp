@@ -11,6 +11,7 @@ class Sizes {
   double sizeFontResults = 0;
   double sizeFontSchedule = 0;
   double sizeFontSelection = 0;
+  double sizeFontSelectTeamButton = 0;
   double sizeFontTitle = 0;
   double spacing = 0;
   double heightToolbar = 0;
@@ -34,6 +35,7 @@ class Sizes {
 
     buttonBorderWidth = 0.005 * screenHeight;
     sizeFontButton = 0.045 * screenHeight;
+    sizeFontSelectTeamButton = 0.025 * screenHeight;
     sizeFontCompetition = 0.032 * screenHeight;
     if (tablet) {
       heightToolbar = 0.15 * screenHeight;
