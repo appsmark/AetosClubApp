@@ -36,7 +36,7 @@ class _ManualState extends State<Manual> {
         ),
         centerTitle: true,
         title: Text(
-          "HANDLEIDING",
+          "OPBERGEN",
           style: TextStyle(
               color: sizes.colorTitle,
               fontSize: sizes.sizeFontTitle,

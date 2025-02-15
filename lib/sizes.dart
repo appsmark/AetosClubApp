@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 class Sizes {
   static final instance = Sizes._internal();
   double buttonBorderWidth = 0;
+  double buttonHeight = 0;
+  double buttonPadding = 0;
+  double buttonWidth = 0;
   double screenHeight = 0;
   double screenWidth = 0;
   double sizeFontButton = 0;
@@ -14,6 +17,7 @@ class Sizes {
   double sizeFontSelectTeamButton = 0;
   double sizeFontTitle = 0;
   double spacing = 0;
+  double spacingButtons = 0;
   double heightToolbar = 0;
   bool tablet = false;
 
@@ -34,6 +38,9 @@ class Sizes {
     tablet = MediaQuery.of(context).size.shortestSide > 550;
 
     buttonBorderWidth = 0.005 * screenHeight;
+    buttonHeight = 0.1 * screenHeight;
+    buttonPadding = 0.01 * screenHeight;
+    buttonWidth = 0.8 * screenWidth;
     sizeFontButton = 0.045 * screenHeight;
     sizeFontSelectTeamButton = 0.025 * screenHeight;
     sizeFontCompetition = 0.032 * screenHeight;
@@ -49,6 +56,7 @@ class Sizes {
     sizeFontSelection = 0.03 * screenHeight;
     sizeFontTitle = 0.045 * screenHeight;
     spacing = 0.1 * screenHeight;
+    spacingButtons = 0.02 * screenHeight;
     /*
     colorButton = const Color(0xFFF9B234);
     colorCompetition = const Color(0xFFF9B234);

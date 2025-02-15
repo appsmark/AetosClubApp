@@ -1,15 +1,16 @@
-import 'package:aetos/constants.dart';
-import 'package:aetos/select_team.dart';
 import 'package:flutter/material.dart';
 import 'package:new_version_plus/new_version_plus.dart';
+
+import 'constants.dart';
 import 'data.dart';
 import 'duty.dart';
-import 'manual.dart';
+import 'information.dart';
 import 'ranking.dart';
 import 'results.dart';
 import 'rss_ranking.dart';
 import 'rss_schedule.dart';
 import 'schedule.dart';
+import 'select_team.dart';
 import 'sizes.dart';
 
 class MainScreen extends StatefulWidget {
@@ -157,49 +158,6 @@ class _MainScreen extends State<MainScreen> {
                       ),
                     ),
                   ),
-                  /*
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          PageRouteBuilder(
-                              transitionDuration:
-                                  const Duration(milliseconds: 100),
-                              transitionsBuilder: (context, animation,
-                                  secondaryAnimation, child) {
-                                return FadeTransition(
-                                  opacity: animation,
-                                  child: child,
-                                );
-                              },
-                              pageBuilder:
-                                  (context, animation, secondaryAnimation) {
-                                return const Game();
-                              }));
-                    },
-                    style: ElevatedButton.styleFrom(
-                        fixedSize: Size(buttonWidth, buttonHeight),
-                        shape: const StadiumBorder(),
-                        side: BorderSide(
-                            color: Colors.black,
-                            width: sizes.buttonBorderWidth),
-                        backgroundColor: sizes.colorButton),
-                    child: Padding(
-                      padding: EdgeInsets.all(paddingButton),
-                      child: FittedBox(
-                        fit: BoxFit.fitWidth,
-                        child: Text(
-                          "WEDSTRIJD",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: sizes.sizeFontButton,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  */
                   Container(height: spacingButtons),
                   ElevatedButton(
                     onPressed: () {
@@ -354,7 +312,7 @@ class _MainScreen extends State<MainScreen> {
                                     },
                                     pageBuilder: (context, animation,
                                         secondaryAnimation) {
-                                      return Manual();
+                                      return Information();
                                     }));
                           },
                           style: ElevatedButton.styleFrom(
@@ -369,7 +327,7 @@ class _MainScreen extends State<MainScreen> {
                             child: FittedBox(
                               fit: BoxFit.fitWidth,
                               child: Text(
-                                "HANDLEIDING",
+                                "INFORMATIE",
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: sizes.sizeFontButton,
