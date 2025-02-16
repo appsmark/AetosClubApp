@@ -16,8 +16,8 @@ class JsonPoints {
       //   debugPrint(fileText);
       return parse(jsonDecode(fileText)['points']);
     } else {
-      var result = await http.get(Uri.parse("http://apps-mark.nl/punten.json"));
-
+      var result =
+          await http.get(Uri.parse("http://apps-mark.nl/aetos/punten.json"));
       if (result.statusCode == 200) {
         return parse(jsonDecode(result.body)['points']);
       } else {

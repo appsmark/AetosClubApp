@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import 'constants.dart';
+import 'data.dart';
 import 'duty_data.dart';
 import 'duty_json.dart';
 import 'rss_clean.dart';
@@ -47,12 +48,15 @@ class _ScheduleState extends State<Schedule> {
           if (listOfDuties[0]["date"] != null) {
             tempDate = DateFormat("yyyy-MM-dd").parse(listOfDuties[0]["date"]);
             if (tempDate.difference(DateTime.now()).inDays >= 0) {
-              counter = listOfDuties[0]['counter'];
-              counterOwnTeam = listOfItems[0]["game"]
-                  .toString()
-                  .startsWith("AETOS $counter");
-              referee = listOfDuties[0]['referee'];
-              dutyTeam = listOfDuties[0]['duty'];
+              if ((listOfItems[0]["game"].toString().split(' - ')[1] !=
+                  "AETOS ${team.currentTeam}")) {
+                counter = listOfDuties[0]['counter'];
+                counterOwnTeam = listOfItems[0]["game"]
+                    .toString()
+                    .startsWith("AETOS $counter");
+                referee = listOfDuties[0]['referee'];
+                dutyTeam = listOfDuties[0]['duty'];
+              }
             }
           }
         }

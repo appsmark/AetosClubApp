@@ -96,7 +96,54 @@ class _DutyState extends State<Duty> {
                 child: ListView.builder(
                     itemCount: dutyData.data.length,
                     itemBuilder: (BuildContext ctxt, int index) {
-                      if (dutyData.data[index]['duty'] != team.currentTeam) {
+                      if ((dutyData.data[index]['duty'] == team.currentTeam) &&
+                          (dutyData.data[index]['referee'] !=
+                              team.currentTeam)) {
+                        return Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  rssClean.clean(dutyData.data[index]['date']),
+                                  style: TextStyle(
+                                      color: sizes.colorSchedule,
+                                      fontSize: sizes.sizeFontSchedule,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  "${dutyData.data[index]['time']} - ${dutyData.data[index]['endtime']}",
+                                  style: TextStyle(
+                                      color: sizes.colorSchedule,
+                                      fontSize: sizes.sizeFontSchedule,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                            Text(
+                              "Sporthal Middachtensingel",
+                              style: TextStyle(
+                                  color: sizes.colorSchedule,
+                                  fontSize: sizes.sizeFontSchedule,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              "Zaalwacht: ${dutyData.data[index]['duty']}",
+                              style: TextStyle(
+                                  color: team.currentTeam ==
+                                          dutyData.data[index]['duty']
+                                      ? sizes.colorTitle
+                                      : sizes.colorSchedule,
+                                  fontSize: sizes.sizeFontSchedule,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            separator(),
+                          ],
+                        );
+                      } else {
                         return Column(
                           children: [
                             Row(
@@ -164,51 +211,6 @@ class _DutyState extends State<Duty> {
                                     fontSize: sizes.sizeFontSchedule,
                                     fontWeight: FontWeight.bold),
                               ),
-                            ),
-                            separator(),
-                          ],
-                        );
-                      } else {
-                        return Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  rssClean.clean(dutyData.data[index]['date']),
-                                  style: TextStyle(
-                                      color: sizes.colorSchedule,
-                                      fontSize: sizes.sizeFontSchedule,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Text(
-                                  "${dutyData.data[index]['time']} - ${dutyData.data[index]['endtime']}",
-                                  style: TextStyle(
-                                      color: sizes.colorSchedule,
-                                      fontSize: sizes.sizeFontSchedule,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                            Text(
-                              "Sporthal Middachtensingel",
-                              style: TextStyle(
-                                  color: sizes.colorSchedule,
-                                  fontSize: sizes.sizeFontSchedule,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "Zaalwacht: ${dutyData.data[index]['duty']}",
-                              style: TextStyle(
-                                  color: team.currentTeam ==
-                                          dutyData.data[index]['duty']
-                                      ? sizes.colorTitle
-                                      : sizes.colorSchedule,
-                                  fontSize: sizes.sizeFontSchedule,
-                                  fontWeight: FontWeight.bold),
                             ),
                             separator(),
                           ],

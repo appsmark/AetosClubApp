@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:mailto/mailto.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'sizes.dart';
 
@@ -14,6 +16,15 @@ class _InformationContactsState extends State<InformationContacts> {
   List contacts = [];
   Sizes sizes = Sizes.instance;
   List listOfItems = [];
+
+  launchMailto(String address) async {
+    final mailtoLink = Mailto(
+      to: [address],
+      subject: 'Mail vanuit Aetos app',
+      body: 'Beste lezer,',
+    );
+    await launchUrl(Uri.parse('$mailtoLink'));
+  }
 
   Future getData() async {
     final response =
@@ -62,7 +73,7 @@ class _InformationContactsState extends State<InformationContacts> {
           textAlign: TextAlign.center,
           style: TextStyle(
               color: sizes.colorTitle,
-              fontSize: sizes.sizeFontTitle,
+              fontSize: 0.8 * sizes.sizeFontTitle,
               fontWeight: FontWeight.bold),
         ),
       ),
@@ -87,13 +98,17 @@ class _InformationContactsState extends State<InformationContacts> {
                         fontWeight: FontWeight.bold,
                         fontSize: sizes.sizeFontRanking),
                   ),
-                Text(
-                  contacts[index]['mail'],
-                  style: TextStyle(
-                      color: const Color(0xFF00AADE),
-                      fontWeight: FontWeight.bold,
-                      //      decoration: TextDecoration.underline,
-                      fontSize: sizes.sizeFontRanking),
+                GestureDetector(
+                  onTap: () {
+                    launchMailto(contacts[index]['mail']);
+                  },
+                  child: Text(
+                    contacts[index]['mail'],
+                    style: TextStyle(
+                        color: const Color(0xFF00AADE),
+                        fontWeight: FontWeight.bold,
+                        fontSize: sizes.sizeFontRanking),
+                  ),
                 ),
               ],
             );

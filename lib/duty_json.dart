@@ -17,8 +17,8 @@ class JsonDuty {
       String fileText = await rootBundle.loadString('assets/zaaldienst.json');
       return parse(jsonDecode(fileText)['duty'], mode);
     } else {
-      var result =
-          await http.get(Uri.parse("http://apps-mark.nl/zaaldienst.json"));
+      var result = await http
+          .get(Uri.parse("http://apps-mark.nl/aetos/zaaldienst.json"));
 
       if (result.statusCode == 200) {
         return parse(jsonDecode(result.body)['duty'], mode);
