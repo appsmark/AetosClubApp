@@ -69,11 +69,13 @@ class _InformationContactsState extends State<InformationContacts> {
         ),
         centerTitle: true,
         title: Text(
-          "CONTACT\nPERSONEN",
+          sizes.tablet ? "CONTACT PERSONEN" : "CONTACT\nPERSONEN",
           textAlign: TextAlign.center,
           style: TextStyle(
               color: sizes.colorTitle,
-              fontSize: 0.8 * sizes.sizeFontTitle,
+              fontSize: sizes.tablet
+                  ? sizes.sizeFontTitle
+                  : 0.8 * sizes.sizeFontTitle,
               fontWeight: FontWeight.bold),
         ),
       ),

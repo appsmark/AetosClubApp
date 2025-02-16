@@ -11,18 +11,17 @@ import 'root.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Device orientation
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-
   // Suppress statusbar and navigation bar
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
 
   Team team = Team();
   team.getStoredTeam();
 
-  runApp(
-    const MyApp(),
-  );
+  // Device orientation
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((value) => runApp(
+            const MyApp(),
+          ));
 }
 
 class MyApp extends StatelessWidget {

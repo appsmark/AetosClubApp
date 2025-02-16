@@ -52,11 +52,13 @@ class _InformationDutiesState extends State<InformationDuties> {
         ),
         centerTitle: true,
         title: Text(
-          "TEL/FLUIT\nZAAL DIENST",
+          sizes.tablet ? "TEL/FLUIT/ZAAL DIENST" : "TEL/FLUIT\nZAAL DIENST",
           textAlign: TextAlign.center,
           style: TextStyle(
               color: sizes.colorTitle,
-              fontSize: 0.8 * sizes.sizeFontTitle,
+              fontSize: sizes.tablet
+                  ? sizes.sizeFontTitle
+                  : 0.8 * sizes.sizeFontTitle,
               fontWeight: FontWeight.bold),
         ),
       ),

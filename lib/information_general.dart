@@ -52,11 +52,13 @@ class _InformationGeneralState extends State<InformationGeneral> {
         ),
         centerTitle: true,
         title: Text(
-          "ALGEMENE\nINFORMATIE",
+          sizes.tablet ? "ALGEMENE INFORMATIE" : "ALGEMENE\nINFORMATIE",
           textAlign: TextAlign.center,
           style: TextStyle(
               color: sizes.colorTitle,
-              fontSize: 0.8 * sizes.sizeFontTitle,
+              fontSize: sizes.tablet
+                  ? sizes.sizeFontTitle
+                  : 0.8 * sizes.sizeFontTitle,
               fontWeight: FontWeight.bold),
         ),
       ),

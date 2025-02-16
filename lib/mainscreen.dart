@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:new_version_plus/new_version_plus.dart';
 
 import 'constants.dart';
@@ -61,6 +62,8 @@ class _MainScreen extends State<MainScreen> {
     for (int index = 0; index < teamInfo.teamsInfo.length; index++) {
       items.add(teamInfo.teamsInfo[index][0]);
     }
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+    setState(() {});
   }
 
   @override
