@@ -1,11 +1,13 @@
-import 'package:aetos/information_calendar.dart';
-import 'package:aetos/information_contacts.dart';
-import 'package:aetos/information_duties.dart';
-import 'package:aetos/information_points.dart';
-import 'package:aetos/manual.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
+import 'easter_egg.dart';
+import 'information_calendar.dart';
+import 'information_contacts.dart';
+import 'information_duties.dart';
 import 'information_general.dart';
+import 'information_points.dart';
+import 'manual.dart';
 import 'sizes.dart';
 
 class Information extends StatefulWidget {
@@ -16,10 +18,12 @@ class Information extends StatefulWidget {
 }
 
 class _InformationState extends State<Information> {
+  EasterEgg easterEgg = EasterEgg.instance;
   Sizes sizes = Sizes.instance;
 
   @override
   void initState() {
+    easterEgg.reset();
     super.initState();
   }
 
@@ -41,12 +45,20 @@ class _InformationState extends State<Information> {
             },
           ),
           centerTitle: true,
-          title: Text(
-            "INFORMATIE",
-            style: TextStyle(
-                color: sizes.colorTitle,
-                fontSize: sizes.sizeFontTitle,
-                fontWeight: FontWeight.bold),
+          title: GestureDetector(
+            onDoubleTap: () {
+              easterEgg.trigger();
+              setState(() {});
+            },
+            child: Text(
+              easterEgg.triggered()
+                  ? "${easterEgg.result(0)}     ${easterEgg.result(1)}"
+                  : "INFORMATIE",
+              style: TextStyle(
+                  color: sizes.colorTitle,
+                  fontSize: sizes.sizeFontTitle,
+                  fontWeight: FontWeight.bold),
+            ),
           ),
         ),
         body: Column(
@@ -163,7 +175,7 @@ class _InformationState extends State<Information> {
                     "INFORMATIE OVER\nTEL/FLUIT/ZAALDIENST",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.grey,
                       fontSize: sizes.sizeFontButton,
                       fontWeight: FontWeight.bold,
                     ),
@@ -203,7 +215,7 @@ class _InformationState extends State<Information> {
                     "INFORMATIE OVER\nAETOS PUNTEN",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.grey,
                       fontSize: sizes.sizeFontButton,
                       fontWeight: FontWeight.bold,
                     ),
@@ -283,7 +295,7 @@ class _InformationState extends State<Information> {
                     "KALENDER\n2025",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.grey,
                       fontSize: sizes.sizeFontButton,
                       fontWeight: FontWeight.bold,
                     ),
@@ -294,6 +306,20 @@ class _InformationState extends State<Information> {
             Container(
               height: sizes.spacingButtons,
             ),
+            Expanded(
+                child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                GestureDetector(
+                    onTap: () {
+                      launchAppsMark();
+                    },
+                    child: Text(
+                      "www.apps-mark.nl",
+                      style: TextStyle(fontSize: sizes.sizeFontTitle),
+                    )),
+              ],
+            )),
           ],
         ));
   }
@@ -304,5 +330,16 @@ class _InformationState extends State<Information> {
       endIndent: 0.05 * sizes.screenWidth,
       color: sizes.colorTitle,
     );
+  }
+
+  Future<void> launchAppsMark() async {
+    final Uri url = Uri(scheme: 'http', host: 'www.apps-mark.nl');
+
+    if (!await launchUrl(
+      url,
+      mode: LaunchMode.externalApplication,
+    )) {
+      throw Exception('Could not launch $url');
+    }
   }
 }

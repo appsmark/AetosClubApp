@@ -107,6 +107,7 @@ class JsonDuty {
               endtime = inputStream[index]["Eindtijd"];
               endtime = endtime.replaceAll("eind", "einde");
             }
+            referee = "";
             if (inputStream[index]["scheids"] != null) {
               referee = inputStream[index]["scheids"];
               if (referee == "x") {
