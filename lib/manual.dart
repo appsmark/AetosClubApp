@@ -44,7 +44,7 @@ class _ManualState extends State<Manual> {
         ),
       ),
       body: ListView.builder(
-          itemCount: 8,
+          itemCount: 10,
           itemBuilder: (BuildContext ctxt, int index) {
             return Column(
               children: [
