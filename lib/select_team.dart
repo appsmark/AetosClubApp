@@ -57,6 +57,11 @@ class _SelectTeamState extends State<SelectTeam> {
                 team.set(teamInfo.teamsInfo[index][0]);
                 setState(() {});
               },
+              onLongPress: () {
+                team.set(teamInfo.teamsInfo[index][0]);
+                setState(() {});
+                Navigator.pop(context);
+              },
               child: Card(
                 color: team.currentTeam == teamInfo.teamsInfo[index][0]
                     ? Constants().colorTitle

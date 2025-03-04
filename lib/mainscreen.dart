@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:new_version_plus/new_version_plus.dart';
 
 import 'constants.dart';
 import 'data.dart';
@@ -13,6 +12,7 @@ import 'rss_schedule.dart';
 import 'schedule.dart';
 import 'select_team.dart';
 import 'sizes.dart';
+import 'version.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -27,36 +27,14 @@ class _MainScreen extends State<MainScreen> {
   Sizes sizes = Sizes.instance;
   Team team = Team();
   TeamInfo teamInfo = TeamInfo();
+  Version version = Version.instance;
   List<String> items = [];
   late String dropdownvalue;
-  String release = "";
-
-  final newVersion = NewVersionPlus(
-    iOSId: 'com.appsmark.aetos',
-    iOSAppStoreCountry: 'nl',
-    androidId: 'com.appsmark.aetos',
-    androidPlayStoreCountry: "",
-    androidHtmlReleaseNotes: true, //support country code
-  );
-
-  basicStatusCheck(NewVersionPlus newVersion) async {
-    final version = await newVersion.getVersionStatus();
-    if (version != null) {
-      release = version.releaseNotes ?? "";
-      setState(() {});
-    }
-    if (mounted) {
-      newVersion.showAlertIfNecessary(
-        context: context,
-        launchModeVersion: LaunchModeVersion.external,
-      );
-    }
-  }
 
   @override
   void initState() {
     super.initState();
-    basicStatusCheck(newVersion);
+    version.updateDialog(context);
     team.currentTeam;
     dropdownvalue = team.currentTeam;
     for (int index = 0; index < teamInfo.teamsInfo.length; index++) {

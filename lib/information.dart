@@ -295,7 +295,7 @@ class _InformationState extends State<Information> {
                     "KALENDER\n2025",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.grey,
+                      color: Colors.black,
                       fontSize: sizes.sizeFontButton,
                       fontWeight: FontWeight.bold,
                     ),
