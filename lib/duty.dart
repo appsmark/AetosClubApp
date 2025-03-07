@@ -276,6 +276,7 @@ class _DutyState extends State<Duty> {
                                   : 0.025 * sizes.screenHeight,
                               fontWeight: FontWeight.bold),
                         ),
+                        /*
                         Spacer(),
                         Text(
                           "${(-100 * pointsData.ranking[index][1]).round()}%           ",
@@ -288,6 +289,7 @@ class _DutyState extends State<Duty> {
                                   : 0.025 * sizes.screenHeight,
                               fontWeight: FontWeight.bold),
                         ),
+                        */
                       ],
                     );
                   }),
