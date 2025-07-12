@@ -59,11 +59,12 @@ class JsonDuty {
       if (inputStream[index]["Zaalwacht"] != null) {
         dutyTeam = inputStream[index]["Zaalwacht"];
       }
+      /*
       if ((inputStream[index]["Locatie"] != null) &&
           (inputStream[index]["Locatie"] != "Middachtensingel")) {
         dutyTeam = "";
       }
-
+*/
       if (tempDate.difference(DateTime.now()).inDays >= 0) {
         if (mode) {
           if (inputStream[index]["Thuisteam"] != null) {
@@ -114,17 +115,26 @@ class JsonDuty {
                 referee = "NeVoBo";
               }
             }
-            dutyData.add({
-              "date": "$day $month",
-              "time": inputStream[index]["Tijd"],
-              "endtime": endtime,
-              "hometeam": inputStream[index]["Thuisteam"],
-              "visitor": inputStream[index]["Uitteam"],
-              "hall": inputStream[index]["Locatie"],
-              "referee": referee,
-              "counter": inputStream[index]["teller"],
-              "duty": dutyTeam,
-            });
+            if (referee.isEmpty) {
+              dutyData.add({
+                "date": "$day $month",
+                "time": inputStream[index]["Tijd"],
+                "endtime": endtime,
+                "duty": dutyTeam,
+              });
+            } else {
+              dutyData.add({
+                "date": "$day $month",
+                "time": inputStream[index]["Tijd"],
+                "endtime": endtime,
+                "hometeam": inputStream[index]["Thuisteam"],
+                "visitor": inputStream[index]["Uitteam"],
+                "hall": inputStream[index]["Locatie"],
+                "referee": referee,
+                "counter": inputStream[index]["teller"],
+                "duty": dutyTeam,
+              });
+            }
           }
         }
       }

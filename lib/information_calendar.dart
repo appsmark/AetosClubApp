@@ -20,6 +20,37 @@ class _InformationCalendarState extends State<InformationCalendar> {
         await http.get(Uri.parse("http://apps-mark.nl/aetos/info_calendar"));
     if (response.statusCode == 200) {
       htmlcontent = response.body;
+
+      htmlcontent = r"""
+<font color="#F9B234">
+<html>
+<head>
+<style>
+h1 {text-align: center;}
+h2 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+<body>
+<hr style="border: 1px solid #00AADE">
+whoopy
+<h1>Abeach start vrij spelen</h1>
+<h1>7 april</h2>
+
+<hr style="height:20px;border-width:0;color:gray;background-color:gray">
+<h1>Abeach start trainingen</h1>
+<h1>7 mei</h2>
+<hr />
+<h1>Abeach Openingstoernooi</h1>
+<h2>31 mei</h2>
+<hr style="border: 1px solid #00AADE">
+<h1>EINDFEEST 2024-2025</h1>
+<h2>21 juni 20:00 - 01:00</h2>
+<hr style="border: 1px solid #00AADE">
+</body>
+</font>
+""";
     } else {
       htmlcontent =
           '<font color="#F9B234"><h1>NOG NIET BESCHIKBAAR</h1></font>';
@@ -60,11 +91,24 @@ class _InformationCalendarState extends State<InformationCalendar> {
               fontWeight: FontWeight.bold),
         ),
       ),
-      body: SizedBox(
-        child: Html(
-          data: htmlcontent,
-        ),
+      body: Column(
+        children: [
+          separator(),
+          SingleChildScrollView(
+            child: Html(
+              data: htmlcontent,
+            ),
+          ),
+        ],
       ),
+    );
+  }
+
+  Divider separator() {
+    return Divider(
+      indent: 0.05 * sizes.screenWidth,
+      endIndent: 0.05 * sizes.screenWidth,
+      color: sizes.colorTitle,
     );
   }
 }

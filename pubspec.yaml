@@ -3,7 +3,7 @@ description: Aetos Team App
 
 publish_to: 'none'
 
-version: 5.1.0+510000
+version: 5.1.1+510001
 
 environment:
   sdk: ">=3.5.3 <=4.0.0"
@@ -22,7 +22,7 @@ dependencies:
   excel: ^4.0.6
   new_version_plus: ^0.1.0
   google_fonts: ^6.2.1
-  flutter_html: ^3.0.0-beta.2
+  flutter_html: ^3.0.0
   mailto: ^2.0.0
   url_launcher: ^6.3.1
   device_info_plus: ^11.3.0
