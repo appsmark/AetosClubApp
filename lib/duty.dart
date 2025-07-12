@@ -97,8 +97,7 @@ class _DutyState extends State<Duty> {
                     itemCount: dutyData.data.length,
                     itemBuilder: (BuildContext ctxt, int index) {
                       if ((dutyData.data[index]['duty'] == team.currentTeam) &&
-                          (dutyData.data[index]['referee'] !=
-                              team.currentTeam)) {
+                          (dutyData.data[index].length == 4)) {
                         return Column(
                           children: [
                             Row(
@@ -144,77 +143,85 @@ class _DutyState extends State<Duty> {
                           ],
                         );
                       } else {
-                        return Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  rssClean.clean(dutyData.data[index]['date']),
-                                  style: TextStyle(
-                                      color: sizes.colorSchedule,
-                                      fontSize: sizes.sizeFontSchedule,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Text(
-                                  dutyData.data[index]['hometeam'] == "CMV"
-                                      ? "${dutyData.data[index]['time']} - ${dutyData.data[index]['endtime']}"
-                                      : dutyData.data[index]['time'],
-                                  style: TextStyle(
-                                      color: sizes.colorSchedule,
-                                      fontSize: sizes.sizeFontSchedule,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                            Text(
-                              "${dutyData.data[index]['hall']}",
-                              style: TextStyle(
-                                  color: sizes.colorSchedule,
-                                  fontSize: sizes.sizeFontSchedule,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              dutyData.data[index]['hometeam'] == "CMV"
-                                  ? "CMV wedstrijden"
-                                  : rssClean.clean(
-                                      "${dutyData.data[index]['hometeam']} - ${dutyData.data[index]['visitor']}"),
-                              style: TextStyle(
-                                  color: sizes.colorSchedule,
-                                  fontSize: sizes.sizeFontSchedule,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "Fluiten: ${dutyData.data[index]['referee']}",
-                              style: TextStyle(
-                                  color: team.currentTeam ==
-                                          dutyData.data[index]['referee']
-                                      ? sizes.colorTitle
-                                      : sizes.colorSchedule,
-                                  fontSize: sizes.sizeFontSchedule,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Visibility(
-                              visible: dutyData.data[index]['counter']
-                                  .toString()
-                                  .isNotEmpty,
-                              child: Text(
-                                "Tellen: ${dutyData.data[index]['counter']}",
+                        if ((dutyData.data[index]['referee'] ==
+                                team.currentTeam) ||
+                            (dutyData.data[index]['counter'] ==
+                                team.currentTeam)) {
+                          return Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    rssClean
+                                        .clean(dutyData.data[index]['date']),
+                                    style: TextStyle(
+                                        color: sizes.colorSchedule,
+                                        fontSize: sizes.sizeFontSchedule,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    dutyData.data[index]['hometeam'] == "CMV"
+                                        ? "${dutyData.data[index]['time']} - ${dutyData.data[index]['endtime']}"
+                                        : dutyData.data[index]['time'],
+                                    style: TextStyle(
+                                        color: sizes.colorSchedule,
+                                        fontSize: sizes.sizeFontSchedule,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ],
+                              ),
+                              Text(
+                                "${dutyData.data[index]['hall']}",
+                                style: TextStyle(
+                                    color: sizes.colorSchedule,
+                                    fontSize: sizes.sizeFontSchedule,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                dutyData.data[index]['hometeam'] == "CMV"
+                                    ? "CMV wedstrijden"
+                                    : rssClean.clean(
+                                        "${dutyData.data[index]['hometeam']} - ${dutyData.data[index]['visitor']}"),
+                                style: TextStyle(
+                                    color: sizes.colorSchedule,
+                                    fontSize: sizes.sizeFontSchedule,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                "Fluiten: ${dutyData.data[index]['referee']}",
                                 style: TextStyle(
                                     color: team.currentTeam ==
-                                            dutyData.data[index]['counter']
+                                            dutyData.data[index]['referee']
                                         ? sizes.colorTitle
                                         : sizes.colorSchedule,
                                     fontSize: sizes.sizeFontSchedule,
                                     fontWeight: FontWeight.bold),
                               ),
-                            ),
-                            separator(),
-                          ],
-                        );
+                              Visibility(
+                                visible: dutyData.data[index]['counter']
+                                    .toString()
+                                    .isNotEmpty,
+                                child: Text(
+                                  "Tellen: ${dutyData.data[index]['counter']}",
+                                  style: TextStyle(
+                                      color: team.currentTeam ==
+                                              dutyData.data[index]['counter']
+                                          ? sizes.colorTitle
+                                          : sizes.colorSchedule,
+                                      fontSize: sizes.sizeFontSchedule,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              separator(),
+                            ],
+                          );
+                        } else {
+                          return Column();
+                        }
                       }
                     })),
 /*
