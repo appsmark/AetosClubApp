@@ -25,12 +25,14 @@ class _PDFScreenState extends State<PDFScreen> with WidgetsBindingObserver {
     return Scaffold(
       appBar: AppBar(
         title: Text("Document"),
+        /*
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.share),
             onPressed: () {},
           ),
         ],
+        */
       ),
       body: Stack(
         children: <Widget>[

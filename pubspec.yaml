@@ -3,7 +3,7 @@ description: Aetos Team App
 
 publish_to: 'none'
 
-version: 5.1.1+510001
+version: 5.2.0+520000
 
 environment:
   sdk: ">=3.5.3 <=4.0.0"
@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
-  http: ^1.2.2
+  http: ^1.4.0
   intl: ^0.19.0
   material: ^1.0.0+2
   rss_dart: ^1.0.12
@@ -28,6 +28,9 @@ dependencies:
   device_info_plus: ^11.3.0
   path_provider: ^2.1.5
   flutter_pdfview: ^1.4.1+1
+  firebase_core: ^2.17.0
+  open_file: ^3.5.10
+  googledrivehandler: ^1.0.5
 
 dev_dependencies:
   flutter_test:

@@ -1,12 +1,11 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'data.dart';
 import 'root.dart';
-
-// Device orientation
-// Debug banner
-// Splashscreen
+import 'version_switch.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,6 +15,9 @@ void main() {
 
   Team team = Team();
   team.getStoredTeam();
+
+  VersionSwitch versionSwitch = VersionSwitch.instance;
+  versionSwitch.get();
 
   // Device orientation
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])

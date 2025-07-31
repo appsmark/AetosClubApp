@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'constants.dart';
 import 'data.dart';
 import 'duty.dart';
+import 'easter_egg.dart';
 import 'information.dart';
 import 'ranking.dart';
 import 'results.dart';
@@ -13,6 +14,7 @@ import 'schedule.dart';
 import 'select_team.dart';
 import 'sizes.dart';
 import 'version.dart';
+import 'version_switch.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -22,6 +24,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreen extends State<MainScreen> {
+  EasterEgg easterEgg = EasterEgg.instance;
   RssRanking rssRanking = RssRanking();
   RssSchedule rssSchedule = RssSchedule();
   Sizes sizes = Sizes.instance;
@@ -30,6 +33,7 @@ class _MainScreen extends State<MainScreen> {
   Version version = Version.instance;
   List<String> items = [];
   late String dropdownvalue;
+  VersionSwitch versionSwitch = VersionSwitch.instance;
 
   @override
   void initState() {
@@ -54,7 +58,10 @@ class _MainScreen extends State<MainScreen> {
     double spacingButtons = 0.02 * screenHeight;
     return GestureDetector(
       onDoubleTap: () {
-        //debugPrint("easter egg");
+        if (easterEgg.trigger()) {
+          versionSwitch.switchState();
+        }
+        setState(() {});
       },
       child: Scaffold(
         backgroundColor: sizes.colorBackground,
@@ -82,7 +89,9 @@ class _MainScreen extends State<MainScreen> {
                 "TEAM ${team.currentTeam}",
                 style: TextStyle(
                     backgroundColor: Constants().colorBackground,
-                    color: sizes.colorTitle,
+                    color: versionSwitch.newVersion
+                        ? Colors.black
+                        : sizes.colorTitle,
                     fontWeight: FontWeight.bold,
                     fontSize: sizes.sizeFontTitle),
               )),
@@ -229,7 +238,8 @@ class _MainScreen extends State<MainScreen> {
                     height: 2 * spacingButtons,
                   ),
                   Visibility(
-                    visible: team.currentTeam != "XZ1",
+                    visible:
+                        false, // team.currentTeam != "XZ1",///////////////////////////
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(

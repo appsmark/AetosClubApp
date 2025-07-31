@@ -33,7 +33,7 @@ class _PDFviewingState extends State<PDFviewing> {
   Future<File> createFileOfPdfUrl() async {
     Completer<File> completer = Completer();
     try {
-      final url = DataInfo().data[0][1];
+      final url = DataInfo().data[1][1];
       final filename = url.substring(url.lastIndexOf("/") + 1);
       var request = await HttpClient().getUrl(Uri.parse(url));
       var response = await request.close();
@@ -65,6 +65,7 @@ class _PDFviewingState extends State<PDFviewing> {
               children: <Widget>[
                 pageItem(0, context),
                 pageItem(1, context),
+                pageItem(2, context),
               ],
             );
           },

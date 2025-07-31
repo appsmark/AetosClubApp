@@ -1,7 +1,10 @@
-import 'package:aetos/pdf.dart';
-import 'package:aetos/ranking.dart';
-import 'package:aetos/schedule.dart';
 import 'package:flutter/material.dart';
+
+import 'easter_egg.dart';
+import 'pdf.dart';
+import 'ranking.dart';
+import 'schedule.dart';
+import 'version_switch.dart';
 
 // Stateful widget to manage the
 // state of the BottomNavigationBar
@@ -15,6 +18,8 @@ class MyStatefulWidget extends StatefulWidget {
 class _MyStatefulWidget extends State<MyStatefulWidget> {
   // Index to keep track of the selected tab
   int _selectedIndex = 0;
+  EasterEgg easterEgg = EasterEgg.instance;
+  VersionSwitch versionSwitch = VersionSwitch.instance;
 
   final List<Widget> widgetOptions = const [
     Ranking(),
@@ -23,6 +28,9 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
   ];
 
   void _onItemTapped(int index) {
+    if (easterEgg.trigger()) {
+      versionSwitch.switchState();
+    }
     setState(() {
       _selectedIndex = index;
     });
@@ -33,12 +41,12 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'GeeksForGeeks',
+          'xxx',
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.yellow,
           ),
         ),
-        backgroundColor: Colors.green,
+//        backgroundColor: Colors.green,
       ),
       body: Center(
         child: widgetOptions.elementAt(_selectedIndex),
@@ -59,7 +67,8 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor:
+            versionSwitch.newVersion ? Colors.amber[800] : Colors.blue,
         onTap: _onItemTapped,
       ),
     );
