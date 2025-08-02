@@ -58,7 +58,7 @@ class MainScreen extends StatelessWidget {
                   /// Do something with the file
                   /// for instance open the file
                   OpenFile.open(myFile.path);
-                  print(myFile.path);
+                  //     print(myFile.path);
                 } else {
                   /// Discard...
                 }

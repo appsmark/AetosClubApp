@@ -31,6 +31,7 @@ class _InformationState extends State<Information> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: sizes.colorBackground,
+        /*
         appBar: AppBar(
           toolbarHeight: sizes.heightToolbar,
           backgroundColor: sizes.colorBackground,
@@ -61,6 +62,7 @@ class _InformationState extends State<Information> {
             ),
           ),
         ),
+        */
         body: Column(
           children: [
             Container(height: sizes.spacingButtons),

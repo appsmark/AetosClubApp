@@ -3,9 +3,7 @@ import 'package:provider/provider.dart';
 
 import 'data.dart';
 import 'mainscreen.dart';
-import 'mainscreen_new.dart';
 import 'sizes.dart';
-import 'version_switch.dart';
 
 class Root extends StatefulWidget {
   const Root({super.key});
@@ -17,7 +15,6 @@ class Root extends StatefulWidget {
 class _RootState extends State<Root> {
   Sizes sizes = Sizes.instance;
   Team team = Team();
-  VersionSwitch versionSwitch = VersionSwitch.instance;
 
   @override
   void initState() {
@@ -30,8 +27,7 @@ class _RootState extends State<Root> {
     sizes.setSizes(context);
     return ChangeNotifierProvider(
       create: (context) => Team(),
-//      child: const MainScreen(),
-      child: versionSwitch.newVersion ? MyStatefulWidget() : MainScreen(),
+      child: MainScreen(),
     );
   }
 }

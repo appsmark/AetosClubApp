@@ -5,8 +5,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 
+import 'constants.dart';
 import 'data_info.dart';
 import 'pdfscreen.dart';
+import 'sizes.dart';
 
 class PDFviewing extends StatefulWidget {
   const PDFviewing({super.key});
@@ -18,6 +20,7 @@ class PDFviewing extends StatefulWidget {
 class _PDFviewingState extends State<PDFviewing> {
   String pathPDF = "";
   String remotePDFpath = "";
+  Sizes sizes = Sizes.instance;
 
   @override
   void initState() {
@@ -58,7 +61,8 @@ class _PDFviewingState extends State<PDFviewing> {
       title: 'Flutter PDF View',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(title: const Text("INFO PAGINA'S")),
+        backgroundColor: Constants().colorBackground,
+        //      appBar: AppBar(title: const Text("INFO PAGINA'S")),
         body: Center(child: Builder(
           builder: (BuildContext context) {
             return Column(
@@ -76,14 +80,18 @@ class _PDFviewingState extends State<PDFviewing> {
 
   TextButton pageItem(int index, BuildContext context) {
     return TextButton(
-      child: Text(DataInfo().data[index][0]),
+      child: Text(
+        DataInfo().data[index][0],
+        style: TextStyle(
+            color: Constants().colorAetosAmber, fontSize: sizes.sizeFontButton),
+      ),
       onPressed: () {
         if (remotePDFpath.isNotEmpty) {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => PDFScreen(path: DataInfo().data[index][2]),
-//              builder: (context) => PDFScreen(path: remotePDFpath),
+              //             builder: (context) => PDFScreen(path: DataInfo().data[index][2]),
+              builder: (context) => PDFScreen(path: remotePDFpath),
             ),
           );
         }

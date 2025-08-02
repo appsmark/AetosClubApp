@@ -74,9 +74,11 @@ class _ScheduleState extends State<Schedule> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Constants().colorBackground,
+        /*
         appBar: AppBar(
-          toolbarHeight: sizes.heightToolbar,
+          //toolbarHeight: sizes.heightToolbar,
           backgroundColor: Constants().colorBackground,
+          /*
           leading: GestureDetector(
             child: Icon(
               Icons.arrow_back,
@@ -86,18 +88,21 @@ class _ScheduleState extends State<Schedule> {
             onTap: () {
               Navigator.pop(context);
             },
-          ),
+          ),*/
           centerTitle: true,
-          title: Text(
+          /*        title: Text(
             "PROGRAMMA",
             style: TextStyle(
                 color: Constants().colorTitle,
                 fontSize: sizes.sizeFontTitle,
                 fontWeight: FontWeight.bold),
-          ),
-        ),
+          ),*/
+        ),*/
         body: Column(
           children: [
+            SizedBox(
+              height: 0.05 * sizes.screenHeight,
+            ),
             separator(),
             GestureDetector(
               onTap: () {
@@ -203,6 +208,10 @@ class _ScheduleState extends State<Schedule> {
               ),
             ),
             separator(),
+            SizedBox(
+              height: 0.05 * sizes.screenHeight,
+            ),
+            separator(),
             Expanded(
                 child: ListView.builder(
                     itemCount: listOfItems.length - 1,
@@ -262,6 +271,15 @@ class _ScheduleState extends State<Schedule> {
 
   Divider separator() {
     return Divider(
+      indent: 0.05 * sizes.screenWidth,
+      endIndent: 0.05 * sizes.screenWidth,
+      color: Constants().colorTitle,
+    );
+  }
+
+  Divider separatorThick() {
+    return Divider(
+      height: 0.01 * sizes.screenHeight,
       indent: 0.05 * sizes.screenWidth,
       endIndent: 0.05 * sizes.screenWidth,
       color: Constants().colorTitle,

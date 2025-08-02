@@ -39,9 +39,11 @@ class _RankingState extends State<Ranking> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: sizes.colorBackground,
+        /*
         appBar: AppBar(
-          toolbarHeight: sizes.heightToolbar,
+          // toolbarHeight: sizes.heightToolbar,
           backgroundColor: sizes.colorBackground,
+          /*
           leading: GestureDetector(
             child: Icon(
               Icons.arrow_back,
@@ -59,10 +61,13 @@ class _RankingState extends State<Ranking> {
                 color: sizes.colorTitle,
                 fontSize: sizes.sizeFontTitle,
                 fontWeight: FontWeight.bold),
-          ),
-        ),
+          ),*/
+        ),*/
         body: Column(
           children: [
+            SizedBox(
+              height: 0.05 * sizes.screenHeight,
+            ),
             separator(),
             GestureDetector(
               onTap: () {

@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 
 import 'data.dart';
 import 'root.dart';
-import 'version_switch.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,9 +14,6 @@ void main() {
 
   Team team = Team();
   team.getStoredTeam();
-
-  VersionSwitch versionSwitch = VersionSwitch.instance;
-  versionSwitch.get();
 
   // Device orientation
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])

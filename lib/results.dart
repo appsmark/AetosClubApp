@@ -34,6 +34,7 @@ class _ResultsState extends State<Results> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: sizes.colorBackground,
+        /*
         appBar: AppBar(
           toolbarHeight: sizes.heightToolbar,
           backgroundColor: sizes.colorBackground,
@@ -48,6 +49,7 @@ class _ResultsState extends State<Results> {
             },
           ),
           centerTitle: true,
+          
           title: Text(
             "UITSLAGEN",
             style: TextStyle(
@@ -55,9 +57,12 @@ class _ResultsState extends State<Results> {
                 fontSize: sizes.sizeFontTitle,
                 fontWeight: FontWeight.bold),
           ),
-        ),
+        ),*/
         body: Column(
           children: [
+            SizedBox(
+              height: 0.05 * sizes.screenHeight,
+            ),
             separator(),
             Expanded(
                 child: ListView.builder(

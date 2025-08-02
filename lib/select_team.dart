@@ -27,6 +27,7 @@ class _SelectTeamState extends State<SelectTeam> {
       appBar: AppBar(
         toolbarHeight: sizes.heightToolbar,
         backgroundColor: sizes.colorBackground,
+        /*
         leading: GestureDetector(
           child: Icon(
             Icons.arrow_back,
@@ -34,12 +35,13 @@ class _SelectTeamState extends State<SelectTeam> {
             color: sizes.colorTitle,
           ),
           onTap: () {
-            Navigator.pop(context);
+   //         Navigator.pop(context);
           },
         ),
+        */
         centerTitle: true,
         title: Text(
-          "SELECTEER",
+          "SELECTEER TEAM",
           style: TextStyle(
               color: sizes.colorTitle,
               fontSize: sizes.sizeFontTitle,
@@ -60,7 +62,7 @@ class _SelectTeamState extends State<SelectTeam> {
               onLongPress: () {
                 team.set(teamInfo.teamsInfo[index][0]);
                 setState(() {});
-                Navigator.pop(context);
+                //        Navigator.pop(context);
               },
               child: Card(
                 color: team.currentTeam == teamInfo.teamsInfo[index][0]

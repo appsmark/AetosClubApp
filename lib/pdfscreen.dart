@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:aetos/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 
@@ -24,15 +25,27 @@ class _PDFScreenState extends State<PDFScreen> with WidgetsBindingObserver {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Document"),
-        /*
+        backgroundColor: Constants().colorBackground,
+        //     title: Text("Document"),
+        leading: GestureDetector(
+          child: Icon(
+            Icons.arrow_back,
+            //      size: 0.05 * sizes.screenHeight,
+            color: Constants().colorAetosAmber,
+          ),
+          onTap: () {
+            Navigator.pop(context);
+          },
+        ),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.share),
+            icon: Icon(
+              Icons.share,
+              color: Constants().colorAetosAmber,
+            ),
             onPressed: () {},
           ),
         ],
-        */
       ),
       body: Stack(
         children: <Widget>[

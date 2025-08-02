@@ -47,6 +47,7 @@ class _DutyState extends State<Duty> {
         appBar: AppBar(
           toolbarHeight: sizes.heightToolbar,
           backgroundColor: sizes.colorBackground,
+          /*
           leading: GestureDetector(
             child: Icon(
               Icons.arrow_back,
@@ -57,6 +58,7 @@ class _DutyState extends State<Duty> {
               Navigator.pop(context);
             },
           ),
+          */
           centerTitle: true,
           title: Text(
             "ZAALDIENST",
@@ -70,9 +72,9 @@ class _DutyState extends State<Duty> {
           separator(),
           GestureDetector(
             onTap: () {
-              popupRanking(context);
+              //          popupRanking(context);
             },
-            child: pointsInfo.isNotEmpty
+            child: /*pointsInfo.isNotEmpty
                 ? pointsInfo[3]
                     ? Text(
                         "Stand Aetos punten: Doel behaald",
@@ -88,9 +90,10 @@ class _DutyState extends State<Duty> {
                             fontSize: sizes.sizeFontSchedule,
                             fontWeight: FontWeight.bold),
                       )
-                : Text(""),
+                : */
+                Text(""),
           ),
-          separator(),
+//          separator(),
           if (dutyData.data.isNotEmpty)
             Expanded(
                 child: ListView.builder(
