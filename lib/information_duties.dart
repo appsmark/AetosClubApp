@@ -2,6 +2,7 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 
+import 'constants.dart';
 import 'sizes.dart';
 
 class InformationDuties extends StatefulWidget {
@@ -36,15 +37,15 @@ class _InformationDutiesState extends State<InformationDuties> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: sizes.colorBackground,
+      backgroundColor: Constants().colorBackground,
       appBar: AppBar(
         toolbarHeight: sizes.heightToolbar,
-        backgroundColor: sizes.colorBackground,
+        backgroundColor: Constants().colorBackground,
         leading: GestureDetector(
           child: Icon(
             Icons.arrow_back,
             size: 0.05 * sizes.screenHeight,
-            color: sizes.colorTitle,
+            color: Constants().colorTitle,
           ),
           onTap: () {
             Navigator.pop(context);
@@ -55,7 +56,7 @@ class _InformationDutiesState extends State<InformationDuties> {
           sizes.tablet ? "TEL/FLUIT/ZAAL DIENST" : "TEL/FLUIT\nZAAL DIENST",
           textAlign: TextAlign.center,
           style: TextStyle(
-              color: sizes.colorTitle,
+              color: Constants().colorTitle,
               fontSize: sizes.tablet
                   ? sizes.sizeFontTitle
                   : 0.8 * sizes.sizeFontTitle,

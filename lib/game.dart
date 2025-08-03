@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import 'constants.dart';
 import 'duty_data.dart';
 import 'duty_json.dart';
 import 'rss_clean.dart';
@@ -62,15 +63,15 @@ class _GameState extends State<Game> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: sizes.colorBackground,
+        backgroundColor: Constants().colorBackground,
         appBar: AppBar(
           toolbarHeight: sizes.heightToolbar,
-          backgroundColor: sizes.colorBackground,
+          backgroundColor: Constants().colorBackground,
           leading: GestureDetector(
             child: Icon(
               Icons.arrow_back,
               size: 0.05 * sizes.screenHeight,
-              color: sizes.colorTitle,
+              color: Constants().colorTitle,
             ),
             onTap: () {
               Navigator.pop(context);
@@ -80,7 +81,7 @@ class _GameState extends State<Game> {
           title: Text(
             "WEDSTRIJD",
             style: TextStyle(
-                color: sizes.colorTitle,
+                color: Constants().colorTitle,
                 fontSize: sizes.sizeFontTitle,
                 fontWeight: FontWeight.bold),
           ),
@@ -94,7 +95,7 @@ class _GameState extends State<Game> {
                 Text(
                   listOfItems[0]['date'],
                   style: TextStyle(
-                      color: sizes.colorSchedule,
+                      color: Constants().colorSchedule,
                       fontSize: sizes.sizeFontSchedule,
                       fontWeight: FontWeight.bold),
                 ),
@@ -106,7 +107,7 @@ class _GameState extends State<Game> {
                       ? ""
                       : listOfItems[0]['time'],
                   style: TextStyle(
-                      color: sizes.colorSchedule,
+                      color: Constants().colorSchedule,
                       fontSize: sizes.sizeFontSchedule,
                       fontWeight: FontWeight.bold),
                 ),
@@ -118,21 +119,21 @@ class _GameState extends State<Game> {
             Text(
               listOfItems[0]['game'].replaceAll(RegExp(' -.*'), ''),
               style: TextStyle(
-                  color: sizes.colorSchedule,
+                  color: Constants().colorSchedule,
                   fontSize: sizes.sizeFontSchedule,
                   fontWeight: FontWeight.bold),
             ),
             Text(
               listOfItems[0]['game'] == "" ? "" : "tegen",
               style: TextStyle(
-                  color: sizes.colorSchedule,
+                  color: Constants().colorSchedule,
                   fontSize: sizes.sizeFontSchedule,
                   fontWeight: FontWeight.bold),
             ),
             Text(
               listOfItems[0]['game'].replaceAll(RegExp('.* - '), ''),
               style: TextStyle(
-                  color: sizes.colorSchedule,
+                  color: Constants().colorSchedule,
                   fontSize: sizes.sizeFontSchedule,
                   fontWeight: FontWeight.bold),
             ),
@@ -144,7 +145,7 @@ class _GameState extends State<Game> {
               child: Text(
                 "Teller: $counter",
                 style: TextStyle(
-                    color: sizes.colorSchedule,
+                    color: Constants().colorSchedule,
                     fontSize: sizes.sizeFontSchedule,
                     fontWeight: FontWeight.bold),
               ),
@@ -154,7 +155,7 @@ class _GameState extends State<Game> {
               child: Text(
                 "Scheidsrechter: $referee",
                 style: TextStyle(
-                    color: sizes.colorSchedule,
+                    color: Constants().colorSchedule,
                     fontSize: sizes.sizeFontSchedule,
                     fontWeight: FontWeight.bold),
               ),
@@ -165,21 +166,21 @@ class _GameState extends State<Game> {
             Text(
               rssClean.clean(listOfItems[0]['hall']),
               style: TextStyle(
-                  color: sizes.colorSchedule,
+                  color: Constants().colorSchedule,
                   fontSize: sizes.sizeFontSchedule,
                   fontWeight: FontWeight.bold),
             ),
             Text(
               rssClean.clean(listOfItems[0]['street']),
               style: TextStyle(
-                  color: sizes.colorSchedule,
+                  color: Constants().colorSchedule,
                   fontSize: sizes.sizeFontSchedule,
                   fontWeight: FontWeight.bold),
             ),
             Text(
               listOfItems[0]['postal'],
               style: TextStyle(
-                  color: sizes.colorSchedule,
+                  color: Constants().colorSchedule,
                   fontSize: sizes.sizeFontSchedule,
                   fontWeight: FontWeight.bold),
             ),
@@ -192,7 +193,7 @@ class _GameState extends State<Game> {
     return Divider(
       indent: 0.05 * sizes.screenWidth,
       endIndent: 0.05 * sizes.screenWidth,
-      color: sizes.colorTitle,
+      color: Constants().colorTitle,
     );
   }
 }

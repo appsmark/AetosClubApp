@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'constants.dart';
 import 'data.dart';
 import 'rss_ranking.dart';
 import 'ranking_data.dart';
@@ -38,17 +39,17 @@ class _RankingState extends State<Ranking> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: sizes.colorBackground,
+        backgroundColor: Constants().colorBackground,
         /*
         appBar: AppBar(
           // toolbarHeight: sizes.heightToolbar,
-          backgroundColor: sizes.colorBackground,
+          backgroundColor: Constants().colorBackground,
           /*
           leading: GestureDetector(
             child: Icon(
               Icons.arrow_back,
               size: 0.05 * sizes.screenHeight,
-              color: sizes.colorTitle,
+              color: Constants().colorTitle,
             ),
             onTap: () {
               Navigator.pop(context);
@@ -58,7 +59,7 @@ class _RankingState extends State<Ranking> {
           title: Text(
             "STAND",
             style: TextStyle(
-                color: sizes.colorTitle,
+                color: Constants().colorTitle,
                 fontSize: sizes.sizeFontTitle,
                 fontWeight: FontWeight.bold),
           ),*/
@@ -83,7 +84,7 @@ class _RankingState extends State<Ranking> {
                     ? data.competition
                     : "${data.competition}\n${displayModeString[displayMode]}",
                 style: TextStyle(
-                    color: sizes.colorCompetition,
+                    color: Constants().colorCompetition,
                     fontWeight: FontWeight.bold,
                     fontSize: sizes.sizeFontCompetition),
               ),
@@ -105,8 +106,8 @@ class _RankingState extends State<Ranking> {
                           style: TextStyle(
                               color: item['team'].contains(
                                       "AETOS ${team.currentTeam.replaceAll('-', ' ')}")
-                                  ? sizes.colorTitle
-                                  : sizes.colorRanking,
+                                  ? Constants().colorTitle
+                                  : Constants().colorRanking,
                               fontWeight: FontWeight.bold,
                               fontSize: sizes.sizeFontRanking),
                         )),
@@ -120,8 +121,8 @@ class _RankingState extends State<Ranking> {
                           style: TextStyle(
                               color: item['team'].contains(
                                       "AETOS ${team.currentTeam.replaceAll('-', ' ')}")
-                                  ? sizes.colorTitle
-                                  : sizes.colorRanking,
+                                  ? Constants().colorTitle
+                                  : Constants().colorRanking,
                               fontWeight: FontWeight.bold,
                               fontSize: sizes.sizeFontRanking),
                         )),
@@ -137,8 +138,8 @@ class _RankingState extends State<Ranking> {
                         style: GoogleFonts.robotoMono(
                           color: item['team'].contains(
                                   "AETOS ${team.currentTeam.replaceAll('-', ' ')}")
-                              ? sizes.colorTitle
-                              : sizes.colorRanking,
+                              ? Constants().colorTitle
+                              : Constants().colorRanking,
                           fontWeight: FontWeight.bold,
                           fontSize: sizes.sizeFontRanking,
                         ),
@@ -155,7 +156,7 @@ class _RankingState extends State<Ranking> {
     return Divider(
       indent: 0.05 * sizes.screenWidth,
       endIndent: 0.05 * sizes.screenWidth,
-      color: sizes.colorTitle,
+      color: Constants().colorTitle,
     );
   }
 }

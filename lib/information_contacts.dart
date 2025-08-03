@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:mailto/mailto.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'constants.dart';
 import 'sizes.dart';
 
 class InformationContacts extends StatefulWidget {
@@ -53,15 +54,15 @@ class _InformationContactsState extends State<InformationContacts> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: sizes.colorBackground,
+      backgroundColor: Constants().colorBackground,
       appBar: AppBar(
         toolbarHeight: sizes.heightToolbar,
-        backgroundColor: sizes.colorBackground,
+        backgroundColor: Constants().colorBackground,
         leading: GestureDetector(
           child: Icon(
             Icons.arrow_back,
             size: 0.05 * sizes.screenHeight,
-            color: sizes.colorTitle,
+            color: Constants().colorTitle,
           ),
           onTap: () {
             Navigator.pop(context);
@@ -72,7 +73,7 @@ class _InformationContactsState extends State<InformationContacts> {
           sizes.tablet ? "CONTACT PERSONEN" : "CONTACT\nPERSONEN",
           textAlign: TextAlign.center,
           style: TextStyle(
-              color: sizes.colorTitle,
+              color: Constants().colorTitle,
               fontSize: sizes.tablet
                   ? sizes.sizeFontTitle
                   : 0.8 * sizes.sizeFontTitle,
@@ -122,7 +123,7 @@ class _InformationContactsState extends State<InformationContacts> {
     return Divider(
       indent: 0.05 * sizes.screenWidth,
       endIndent: 0.05 * sizes.screenWidth,
-      color: sizes.colorTitle,
+      color: Constants().colorTitle,
     );
   }
 }

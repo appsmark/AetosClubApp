@@ -21,15 +21,6 @@ class Sizes {
   double heightToolbar = 0;
   bool tablet = false;
 
-  Color colorBackground = const Color(0xFF731816);
-  Color colorButton = const Color(0xFFF9B234);
-  Color colorTitle = const Color(0xFF00AADE);
-  Color colorCompetition = const Color(0xFFF9B234);
-  Color colorRanking = const Color(0xFFF9B234);
-  Color colorResults = const Color(0xFFF9B234);
-  Color colorSchedule = const Color(0xFFF9B234);
-  Color colorSelection = const Color(0xFFF9B234);
-
   Sizes._internal();
 
   setSizes(context) {
@@ -57,13 +48,5 @@ class Sizes {
     sizeFontTitle = 0.045 * screenHeight;
     spacing = 0.1 * screenHeight;
     spacingButtons = 0.02 * screenHeight;
-    /*
-    colorButton = const Color(0xFFF9B234);
-    colorCompetition = const Color(0xFFF9B234);
-    colorResults = const Color(0xFF731816);
-    colorSchedule = const Color(0xFF731816);
-    colorTitle = const Color(0xFF731816);
-    colorBackground = const Color(0xFF00AADE);
-    */
   }
 }

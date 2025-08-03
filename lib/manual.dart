@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'constants.dart';
 import 'sizes.dart';
 
 class Manual extends StatefulWidget {
@@ -20,15 +21,15 @@ class _ManualState extends State<Manual> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: sizes.colorBackground,
+      backgroundColor: Constants().colorBackground,
       appBar: AppBar(
         toolbarHeight: sizes.heightToolbar,
-        backgroundColor: sizes.colorBackground,
+        backgroundColor: Constants().colorBackground,
         leading: GestureDetector(
           child: Icon(
             Icons.arrow_back,
             size: 0.05 * sizes.screenHeight,
-            color: sizes.colorTitle,
+            color: Constants().colorTitle,
           ),
           onTap: () {
             Navigator.pop(context);
@@ -38,7 +39,7 @@ class _ManualState extends State<Manual> {
         title: Text(
           "OPBERGEN",
           style: TextStyle(
-              color: sizes.colorTitle,
+              color: Constants().colorTitle,
               fontSize: sizes.sizeFontTitle,
               fontWeight: FontWeight.bold),
         ),
@@ -60,7 +61,7 @@ class _ManualState extends State<Manual> {
     return Divider(
       indent: 0.05 * sizes.screenWidth,
       endIndent: 0.05 * sizes.screenWidth,
-      color: sizes.colorTitle,
+      color: Constants().colorTitle,
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'constants.dart';
 import 'easter_egg.dart';
 import 'information_calendar.dart';
 import 'information_contacts.dart';
@@ -30,16 +31,16 @@ class _InformationState extends State<Information> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: sizes.colorBackground,
+        backgroundColor: Constants().colorBackground,
         /*
         appBar: AppBar(
           toolbarHeight: sizes.heightToolbar,
-          backgroundColor: sizes.colorBackground,
+          backgroundColor: Constants().colorBackground,
           leading: GestureDetector(
             child: Icon(
               Icons.arrow_back,
               size: 0.05 * sizes.screenHeight,
-              color: sizes.colorTitle,
+              color: Constants().colorTitle,
             ),
             onTap: () {
               Navigator.pop(context);
@@ -56,7 +57,7 @@ class _InformationState extends State<Information> {
                   ? "${easterEgg.result(0)}     ${easterEgg.result(1)}"
                   : "INFORMATIE",
               style: TextStyle(
-                  color: sizes.colorTitle,
+                  color: Constants().colorTitle,
                   fontSize: sizes.sizeFontTitle,
                   fontWeight: FontWeight.bold),
             ),
@@ -88,7 +89,7 @@ class _InformationState extends State<Information> {
                   shape: const StadiumBorder(),
                   side: BorderSide(
                       color: Colors.black, width: sizes.buttonBorderWidth),
-                  backgroundColor: sizes.colorButton),
+                  backgroundColor: Constants().colorButton),
               child: Padding(
                 padding: EdgeInsets.all(sizes.buttonPadding),
                 child: FittedBox(
@@ -128,7 +129,7 @@ class _InformationState extends State<Information> {
                   shape: const StadiumBorder(),
                   side: BorderSide(
                       color: Colors.black, width: sizes.buttonBorderWidth),
-                  backgroundColor: sizes.colorButton),
+                  backgroundColor: Constants().colorButton),
               child: Padding(
                 padding: EdgeInsets.all(sizes.buttonPadding),
                 child: FittedBox(
@@ -168,7 +169,7 @@ class _InformationState extends State<Information> {
                   shape: const StadiumBorder(),
                   side: BorderSide(
                       color: Colors.black, width: sizes.buttonBorderWidth),
-                  backgroundColor: sizes.colorButton),
+                  backgroundColor: Constants().colorButton),
               child: Padding(
                 padding: EdgeInsets.all(sizes.buttonPadding),
                 child: FittedBox(
@@ -208,7 +209,7 @@ class _InformationState extends State<Information> {
                   shape: const StadiumBorder(),
                   side: BorderSide(
                       color: Colors.black, width: sizes.buttonBorderWidth),
-                  backgroundColor: sizes.colorButton),
+                  backgroundColor: Constants().colorButton),
               child: Padding(
                 padding: EdgeInsets.all(sizes.buttonPadding),
                 child: FittedBox(
@@ -248,7 +249,7 @@ class _InformationState extends State<Information> {
                   shape: const StadiumBorder(),
                   side: BorderSide(
                       color: Colors.black, width: sizes.buttonBorderWidth),
-                  backgroundColor: sizes.colorButton),
+                  backgroundColor: Constants().colorButton),
               child: Padding(
                 padding: EdgeInsets.all(sizes.buttonPadding),
                 child: FittedBox(
@@ -288,7 +289,7 @@ class _InformationState extends State<Information> {
                   shape: const StadiumBorder(),
                   side: BorderSide(
                       color: Colors.black, width: sizes.buttonBorderWidth),
-                  backgroundColor: sizes.colorButton),
+                  backgroundColor: Constants().colorButton),
               child: Padding(
                 padding: EdgeInsets.all(sizes.buttonPadding),
                 child: FittedBox(
@@ -330,7 +331,7 @@ class _InformationState extends State<Information> {
     return Divider(
       indent: 0.05 * sizes.screenWidth,
       endIndent: 0.05 * sizes.screenWidth,
-      color: sizes.colorTitle,
+      color: Constants().colorTitle,
     );
   }
 

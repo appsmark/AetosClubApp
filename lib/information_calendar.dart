@@ -2,6 +2,7 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 
+import 'constants.dart';
 import 'sizes.dart';
 
 class InformationCalendar extends StatefulWidget {
@@ -67,15 +68,15 @@ whoopy
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: sizes.colorBackground,
+      backgroundColor: Constants().colorBackground,
       appBar: AppBar(
         toolbarHeight: sizes.heightToolbar,
-        backgroundColor: sizes.colorBackground,
+        backgroundColor: Constants().colorBackground,
         leading: GestureDetector(
           child: Icon(
             Icons.arrow_back,
             size: 0.05 * sizes.screenHeight,
-            color: sizes.colorTitle,
+            color: Constants().colorTitle,
           ),
           onTap: () {
             Navigator.pop(context);
@@ -86,7 +87,7 @@ whoopy
           "KALENDER",
           textAlign: TextAlign.center,
           style: TextStyle(
-              color: sizes.colorTitle,
+              color: Constants().colorTitle,
               fontSize: sizes.sizeFontTitle,
               fontWeight: FontWeight.bold),
         ),
@@ -108,7 +109,7 @@ whoopy
     return Divider(
       indent: 0.05 * sizes.screenWidth,
       endIndent: 0.05 * sizes.screenWidth,
-      color: sizes.colorTitle,
+      color: Constants().colorTitle,
     );
   }
 }
