@@ -51,7 +51,7 @@ class _MainScreen extends State<MainScreen> {
         appBar: AppBar(
           centerTitle: true,
           title: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(18.0),
             child: Image.asset(
               "assets/images/logo.png",
               height: 0.5 * sizes.heightToolbar,

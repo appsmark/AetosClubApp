@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 class Sizes {
@@ -35,12 +37,22 @@ class Sizes {
     sizeFontButton = 0.045 * screenHeight;
     sizeFontSelectTeamButton = 0.025 * screenHeight;
     sizeFontCompetition = 0.032 * screenHeight;
-    if (tablet) {
-      heightToolbar = 0.15 * screenHeight;
-      sizeFontRanking = 0.04 * screenWidth;
+    if (Platform.isIOS) {
+      if (tablet) {
+        heightToolbar = 0.09 * screenHeight;
+        sizeFontRanking = 0.04 * screenWidth;
+      } else {
+        heightToolbar = 0.1 * screenHeight;
+        sizeFontRanking = 0.05 * screenWidth;
+      }
     } else {
-      heightToolbar = 0.1 * screenHeight;
-      sizeFontRanking = 0.05 * screenWidth;
+      if (tablet) {
+        heightToolbar = 0.15 * screenHeight;
+        sizeFontRanking = 0.04 * screenWidth;
+      } else {
+        heightToolbar = 0.1 * screenHeight;
+        sizeFontRanking = 0.05 * screenWidth;
+      }
     }
     sizeFontResults = 0.025 * screenHeight;
     sizeFontSchedule = 0.025 * screenHeight;
