@@ -276,13 +276,4 @@ class _ScheduleState extends State<Schedule> {
       color: Constants().colorTitle,
     );
   }
-
-  Divider separatorThick() {
-    return Divider(
-      height: 0.01 * sizes.screenHeight,
-      indent: 0.05 * sizes.screenWidth,
-      endIndent: 0.05 * sizes.screenWidth,
-      color: Constants().colorTitle,
-    );
-  }
 }

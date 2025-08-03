@@ -1,13 +1,16 @@
 import 'dart:async';
 
-import 'package:aetos/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 
-class PDFScreen extends StatefulWidget {
-  final String? path;
+import 'constants.dart';
+import 'data_info.dart';
 
-  const PDFScreen({super.key, this.path});
+class PDFScreen extends StatefulWidget {
+  final String path;
+  final int index;
+
+  const PDFScreen({super.key, required this.path, required this.index});
 
   @override
   State<PDFScreen> createState() => _PDFScreenState();
@@ -22,21 +25,44 @@ class _PDFScreenState extends State<PDFScreen> with WidgetsBindingObserver {
   String errorMessage = '';
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Constants().colorBackground,
-        //     title: Text("Document"),
+        title: Text(
+          DataInfo().data[widget.index]['title'],
+          style: TextStyle(color: Constants().colorAetosAmber),
+        ),
         leading: GestureDetector(
           child: Icon(
             Icons.arrow_back,
-            //      size: 0.05 * sizes.screenHeight,
             color: Constants().colorAetosAmber,
           ),
           onTap: () {
             Navigator.pop(context);
+            /*
+            Navigator.push(
+                context,
+                PageRouteBuilder(
+                    transitionDuration: const Duration(milliseconds: 100),
+                    transitionsBuilder:
+                        (context, animation, secondaryAnimation, child) {
+                      return FadeTransition(
+                        opacity: animation,
+                        child: child,
+                      );
+                    },
+                    pageBuilder: (context, animation, secondaryAnimation) {
+                      return InformationNew();
+                    }));*/
           },
         ),
+        /*
         actions: <Widget>[
           IconButton(
             icon: Icon(
@@ -45,7 +71,7 @@ class _PDFScreenState extends State<PDFScreen> with WidgetsBindingObserver {
             ),
             onPressed: () {},
           ),
-        ],
+        ],*/
       ),
       body: Stack(
         children: <Widget>[

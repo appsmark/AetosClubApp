@@ -4,7 +4,7 @@ import 'constants.dart';
 import 'data.dart';
 import 'duty.dart';
 //import 'information.dart';
-import 'pdf.dart';
+import 'information_new.dart';
 import 'ranking.dart';
 import 'results.dart';
 import 'schedule.dart';
@@ -30,8 +30,7 @@ class _MainScreen extends State<MainScreen> {
     Ranking(),
     Results(),
     Duty(),
-    // Information(),
-    PDFviewing(),
+    InformationNew(),
   ];
 
   void _onItemTapped(int index) {

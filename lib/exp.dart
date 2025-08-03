@@ -1,3 +1,4 @@
+/*
 import 'dart:io';
 
 // import 'package:example/firebase_options.dart';
@@ -73,3 +74,4 @@ class MainScreen extends StatelessWidget {
     );
   }
 }
+*/
