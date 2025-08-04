@@ -38,6 +38,9 @@ class RssClean {
     result = result.replaceAll("Lammerink Installatiegroep/", "");
     result = result.replaceAll("Komeet ", "");
     result = result.replaceAll("Nieuwleusen ", "");
+    result = result.replaceAll("/Vollverijs", "");
+    result = result.replaceAll("Seesing Flex | ", "");
+    result = result.replaceAll("D.V.C.", "DVC");
     result = result.replaceAll("Zitvolley ", "");
     result = result.replaceAll("Zitvolleybal ", "");
     result = result.replaceAll("HS ", "H");

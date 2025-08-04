@@ -40,30 +40,6 @@ class _RankingState extends State<Ranking> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Constants().colorBackground,
-        /*
-        appBar: AppBar(
-          // toolbarHeight: sizes.heightToolbar,
-          backgroundColor: Constants().colorBackground,
-          /*
-          leading: GestureDetector(
-            child: Icon(
-              Icons.arrow_back,
-              size: 0.05 * sizes.screenHeight,
-              color: Constants().colorTitle,
-            ),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          centerTitle: true,
-          title: Text(
-            "STAND",
-            style: TextStyle(
-                color: Constants().colorTitle,
-                fontSize: sizes.sizeFontTitle,
-                fontWeight: FontWeight.bold),
-          ),*/
-        ),*/
         body: Column(
           children: [
             SizedBox(
