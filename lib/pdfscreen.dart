@@ -58,7 +58,7 @@ class _PDFScreenState extends State<PDFScreen> with WidgetsBindingObserver {
                       );
                     },
                     pageBuilder: (context, animation, secondaryAnimation) {
-                      return InformationNew();
+                      return Info();
                     }));*/
           },
         ),

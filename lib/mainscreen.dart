@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'data.dart';
 import 'duty.dart';
-//import 'information.dart';
-import 'information_new.dart';
+import 'info.dart';
 import 'ranking.dart';
 import 'results.dart';
 import 'schedule.dart';
@@ -30,7 +29,7 @@ class _MainScreen extends State<MainScreen> {
     Ranking(),
     Results(),
     Duty(),
-    InformationNew(),
+    Info(),
   ];
 
   void _onItemTapped(int index) {

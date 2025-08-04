@@ -74,36 +74,12 @@ class _ScheduleState extends State<Schedule> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Constants().colorBackground,
-        /*
-        appBar: AppBar(
-          //toolbarHeight: sizes.heightToolbar,
-          backgroundColor: Constants().colorBackground,
-          /*
-          leading: GestureDetector(
-            child: Icon(
-              Icons.arrow_back,
-              size: 0.05 * sizes.screenHeight,
-              color: Constants().colorTitle,
-            ),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),*/
-          centerTitle: true,
-          /*        title: Text(
-            "PROGRAMMA",
-            style: TextStyle(
-                color: Constants().colorTitle,
-                fontSize: sizes.sizeFontTitle,
-                fontWeight: FontWeight.bold),
-          ),*/
-        ),*/
         body: Column(
           children: [
             SizedBox(
-              height: 0.05 * sizes.screenHeight,
+              height: 0.02 * sizes.screenHeight,
             ),
-            separator(),
+            separatorWide(),
             GestureDetector(
               onTap: () {
                 ScheduleDetails().scheduleDetails(
@@ -207,64 +183,67 @@ class _ScheduleState extends State<Schedule> {
                 ],
               ),
             ),
-            separator(),
+            separatorWide(),
             SizedBox(
-              height: 0.05 * sizes.screenHeight,
+              height: 0.01 * sizes.screenHeight,
             ),
             separator(),
             Expanded(
-                child: ListView.builder(
-                    itemCount: listOfItems.length - 1,
-                    itemBuilder: (BuildContext ctxt, int index) {
-                      return Column(
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              ScheduleDetails().scheduleDetails(
-                                  context, index + 1, listOfItems, "", "", "");
-                            },
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  listOfItems[index + 1]['date'],
-                                  style: TextStyle(
-                                      color: Constants().colorSchedule,
-                                      fontSize: sizes.sizeFontSchedule,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Text(
-                                  listOfItems[index]['time'] == "0:00"
-                                      ? ""
-                                      : listOfItems[index + 1]['time'],
-                                  style: TextStyle(
-                                      color: Constants().colorSchedule,
-                                      fontSize: sizes.sizeFontSchedule,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
+                child: Scrollbar(
+              thumbVisibility: true,
+              child: ListView.builder(
+                  itemCount: listOfItems.length - 1,
+                  itemBuilder: (BuildContext ctxt, int index) {
+                    return Column(
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            ScheduleDetails().scheduleDetails(
+                                context, index + 1, listOfItems, "", "", "");
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                listOfItems[index + 1]['date'],
+                                style: TextStyle(
+                                    color: Constants().colorSchedule,
+                                    fontSize: sizes.sizeFontSchedule,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                listOfItems[index]['time'] == "0:00"
+                                    ? ""
+                                    : listOfItems[index + 1]['time'],
+                                style: TextStyle(
+                                    color: Constants().colorSchedule,
+                                    fontSize: sizes.sizeFontSchedule,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
                           ),
-                          GestureDetector(
-                            onTap: () {
-                              ScheduleDetails().scheduleDetails(
-                                  context, index + 1, listOfItems, "", "", "");
-                            },
-                            child: Text(
-                              listOfItems[index + 1]['game'],
-                              style: TextStyle(
-                                  color: Constants().colorSchedule,
-                                  fontSize: sizes.sizeFontSchedule,
-                                  fontWeight: FontWeight.bold),
-                            ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            ScheduleDetails().scheduleDetails(
+                                context, index + 1, listOfItems, "", "", "");
+                          },
+                          child: Text(
+                            listOfItems[index + 1]['game'],
+                            style: TextStyle(
+                                color: Constants().colorSchedule,
+                                fontSize: sizes.sizeFontSchedule,
+                                fontWeight: FontWeight.bold),
                           ),
-                          separator(),
-                        ],
-                      );
-                    }))
+                        ),
+                        separator(),
+                      ],
+                    );
+                  }),
+            ))
           ],
         ));
   }
@@ -273,6 +252,12 @@ class _ScheduleState extends State<Schedule> {
     return Divider(
       indent: 0.05 * sizes.screenWidth,
       endIndent: 0.05 * sizes.screenWidth,
+      color: Constants().colorTitle,
+    );
+  }
+
+  Divider separatorWide() {
+    return Divider(
       color: Constants().colorTitle,
     );
   }

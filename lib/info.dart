@@ -10,14 +10,14 @@ import 'constants.dart';
 import 'data_info.dart';
 import 'sizes.dart';
 
-class InformationNew extends StatefulWidget {
-  const InformationNew({super.key});
+class Info extends StatefulWidget {
+  const Info({super.key});
 
   @override
-  State<InformationNew> createState() => _InformationNewState();
+  State<Info> createState() => _InfoState();
 }
 
-class _InformationNewState extends State<InformationNew> {
+class _InfoState extends State<Info> {
   List listOfItems = [
     {'type': '', 'title': '', 'file': ''}
   ];
