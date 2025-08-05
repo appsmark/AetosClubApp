@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
+import 'package:share_plus/share_plus.dart';
 
 import 'constants.dart';
 import 'data_info.dart';
@@ -45,31 +46,28 @@ class _PDFScreenState extends State<PDFScreen> with WidgetsBindingObserver {
           ),
           onTap: () {
             Navigator.pop(context);
-            /*
-            Navigator.push(
-                context,
-                PageRouteBuilder(
-                    transitionDuration: const Duration(milliseconds: 100),
-                    transitionsBuilder:
-                        (context, animation, secondaryAnimation, child) {
-                      return FadeTransition(
-                        opacity: animation,
-                        child: child,
-                      );
-                    },
-                    pageBuilder: (context, animation, secondaryAnimation) {
-                      return Info();
-                    }));*/
           },
         ),
-        /*
-        actions: <Widget>[
+        /*actions: <Widget>[
           IconButton(
             icon: Icon(
               Icons.share,
               color: Constants().colorAetosAmber,
             ),
-            onPressed: () {},
+          
+            onPressed: () {
+              SharePlus.instance.share(
+                ShareParams(
+                  text:
+                      "Aetos document ${DataInfo().data[widget.index]['title']}",
+                  subject:
+                      'Aetos document ${DataInfo().data[widget.index]['title']}',
+                  //    sharePositionOrigin:
+                  //      box!.localToGlobal(Offset.zero) & box.size,
+                ),
+              );
+            },
+            
           ),
         ],*/
       ),

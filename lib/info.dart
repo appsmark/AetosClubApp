@@ -92,7 +92,6 @@ class _InfoState extends State<Info> {
         builder: (BuildContext context) {
           return Column(
             children: [
-              separator(),
               Expanded(
                   child: Scrollbar(
                 thumbVisibility: true,
@@ -105,49 +104,22 @@ class _InfoState extends State<Info> {
                             separator(),
                           GestureDetector(
                             onTap: () {
-                              //        create(index, context);
                               if (listOfItems[index]['type'] == 'image') {
                                 Navigator.push(
-                                    mounted
-                                        ? context
-                                        : context, /////////////////
-                                    PageRouteBuilder(
-                                        transitionDuration:
-                                            const Duration(milliseconds: 100),
-                                        transitionsBuilder: (context, animation,
-                                            secondaryAnimation, child) {
-                                          return FadeTransition(
-                                            opacity: animation,
-                                            child: child,
-                                          );
-                                        },
-                                        pageBuilder: (context, animation,
-                                            secondaryAnimation) {
-                                          return InfoImage(index: index);
-                                        }));
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          InfoImage(index: index)),
+                                );
                               }
                               if (listOfItems[index]['type'] == 'file') {
                                 Navigator.push(
-                                    mounted
-                                        ? context
-                                        : context, /////////////////
-                                    PageRouteBuilder(
-                                        transitionDuration:
-                                            const Duration(milliseconds: 100),
-                                        transitionsBuilder: (context, animation,
-                                            secondaryAnimation, child) {
-                                          return FadeTransition(
-                                            opacity: animation,
-                                            child: child,
-                                          );
-                                        },
-                                        pageBuilder: (context, animation,
-                                            secondaryAnimation) {
-                                          return PDFScreen(
-                                              path: listOfItems[index]
-                                                  ['internal'],
-                                              index: index);
-                                        }));
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => PDFScreen(
+                                          path: listOfItems[index]['internal'],
+                                          index: index)),
+                                );
                               }
                             },
                             child: Row(
@@ -173,10 +145,11 @@ class _InfoState extends State<Info> {
                               ],
                             ),
                           ),
+                          //                 separator(),
                         ],
                       );
                     }),
-              ))
+              )),
             ],
           );
         },

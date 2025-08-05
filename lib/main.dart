@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'data.dart';
+import 'persistent.dart';
 import 'root.dart';
 
 void main() {
@@ -11,6 +12,9 @@ void main() {
 
   // Suppress statusbar and navigation bar
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+
+  Persistent persistent = Persistent.instance;
+  persistent.getMenuIndex();
 
   Team team = Team();
   team.getStoredTeam();

@@ -1,6 +1,10 @@
 class DataInfo {
   List data = [
     {
+      'type': 'header',
+      'title': 'Zaaldienst',
+    },
+    {
       'type': 'file',
       'title': 'Opruimen Middachtensingel',
       'file': 'http://www.apps-mark.nl/aetos/Opruimen Middachtensingel.pdf',

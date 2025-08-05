@@ -4,6 +4,7 @@ import 'constants.dart';
 import 'data.dart';
 import 'duty.dart';
 import 'info.dart';
+import 'persistent.dart';
 import 'ranking.dart';
 import 'results.dart';
 import 'schedule.dart';
@@ -19,9 +20,10 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreen extends State<MainScreen> {
   // Index to keep track of the selected tab
-  int _selectedIndex = 1;
+  Persistent persistent = Persistent.instance;
   Sizes sizes = Sizes.instance;
   Team team = Team();
+  int _selectedIndex = 1;
 
   final List<Widget> widgetOptions = const [
     SelectTeam(),
@@ -35,11 +37,13 @@ class _MainScreen extends State<MainScreen> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      persistent.setMenuIndex(index);
     });
   }
 
   @override
   void initState() {
+    _selectedIndex = persistent.menuIndex;
     super.initState();
   }
 
