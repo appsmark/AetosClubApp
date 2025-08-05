@@ -21,7 +21,7 @@ class RssRanking {
     }
   }
 
-  parseXML(inputStream) {
+  void parseXML(String inputStream) {
     rankingData.clear();
     String stream = rssClean.clean(inputStream);
     var titles = stream.split("title>");

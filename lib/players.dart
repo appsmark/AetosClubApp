@@ -11,11 +11,11 @@ class Players {
     data.add({'name': 'Rohan', 'number': 8});
   }
 
-  clear() {
+  void clear() {
     data = [];
   }
 
-  addPlayer(Map map) {
+  void addPlayer(Map map) {
     data.add(map);
   }
 

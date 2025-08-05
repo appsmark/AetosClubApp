@@ -9,6 +9,7 @@ class ScheduleDetails {
   Players players = Players.instance;
   Sizes sizes = Sizes.instance;
 
+  // ignore: strict_top_level_inference
   scheduleDetails(BuildContext context, int index, List listOfItems,
       String counter, String referee, String dutyTeam) {
     return Null;

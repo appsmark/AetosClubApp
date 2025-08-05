@@ -17,7 +17,7 @@ class Version {
     androidHtmlReleaseNotes: true, //support country code
   );
 
-  basicStatusCheck(NewVersionPlus newVersion) async {
+  Future<void> basicStatusCheck(NewVersionPlus newVersion) async {
     final versionApp = await newVersion.getVersionStatus();
     if (versionApp != null) {
       version = versionApp.localVersion;
@@ -25,7 +25,8 @@ class Version {
     }
   }
 
-  updateDialog(context) async {
+  // ignore: strict_top_level_inference
+  Future<void> updateDialog(context) async {
     final status = await newVersion.getVersionStatus();
     if (status != null) {
       if (status.canUpdate) {

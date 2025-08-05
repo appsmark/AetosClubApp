@@ -40,7 +40,7 @@ class RssResults {
     }
   }
 
-  parseRSS(RssFeed feed) {
+  void parseRSS(RssFeed feed) {
     for (var item in feed.items) {
       var address = item.description!
           .replaceAll(RegExp(".*Speellocatie: "), '')

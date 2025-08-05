@@ -5,16 +5,16 @@ class DutyData {
 
   DutyData._internal();
 
-  clear() {
+  void clear() {
     data = [];
     dataGame = [];
   }
 
-  add(Map map) {
+  void add(Map map) {
     data.add(map);
   }
 
-  addGameData(Map map) {
+  void addGameData(Map map) {
     dataGame.add(map);
   }
 

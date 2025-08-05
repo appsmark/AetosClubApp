@@ -42,7 +42,7 @@ class RssSchedule {
     }
   }
 
-  parseRSS(RssFeed feed) {
+  void parseRSS(RssFeed feed) {
     RegExp timeRegex = RegExp(r"\d?\d:\d\d");
     for (var item in feed.items) {
       RegExpMatch? time = timeRegex.firstMatch(item.description!);

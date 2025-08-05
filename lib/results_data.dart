@@ -4,11 +4,11 @@ class ResultsData {
 
   ResultsData._internal();
 
-  clear() {
+  void clear() {
     data = [];
   }
 
-  addGame(Map map) {
+  void addGame(Map map) {
     data.add(map);
   }
 

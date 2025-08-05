@@ -37,7 +37,7 @@ class JsonDuty {
     return result;
   }
 
-  parse(inputStream, bool mode) {
+  void parse(List inputStream, bool mode) {
     String date = "";
     String day = "";
     String dutyTeam = "";

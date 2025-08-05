@@ -25,6 +25,13 @@ class TeamInfo {
     ["H7", "regio-oost/H2J", "heren/7"],
     ["H8", "regio-oost/H2J", "heren/8"],
     ["H9", "regio-oost/H3E", "heren/9"],
+    ["JA1", "regio-oost/JAHA1", "jongens-a/1"],
+    ["JA2", "regio-oost/JA2A1", "jongens-a/2"],
+    ["JB1", "regio-oost/JBHA1", "jongens-b/1"],
+    ["JB2", "regio-oost/JB2D1", "jongens-b/2"],
+    ["JC1", "regio-oost/XCHC1", "jongens-c/1"],
+    ["JC2", "regio-oost/XC2M1", "jongens-c/2"],
+    ["JC3", "regio-oost/XC4C1", "jongens-c/3"],
     ["MA1", "regio-oost/MAHC1", "meiden-a/1"],
     ["MA2", "regio-oost/MA1H1", "meiden-a/2"],
     ["MB1", "regio-oost/MBHC1", "meiden-b/1"],
@@ -43,13 +50,6 @@ class TeamInfo {
     ["MC6", "regio-oost/XC2N1", "meiden-c/6"],
     ["MC7", "regio-oost/XC3N1", "meiden-c/7"],
     ["MC8", "regio-oost/XC3M1", "meiden-c/8"],
-    ["JA1", "regio-oost/JAHA1", "jongens-a/1"],
-    ["JA2", "regio-oost/JA2A1", "jongens-a/2"],
-    ["JB1", "regio-oost/JBHA1", "jongens-b/1"],
-    ["JB2", "regio-oost/JB2D1", "jongens-b/2"],
-    ["JC1", "regio-oost/XCHC1", "jongens-c/1"],
-    ["JC2", "regio-oost/XC2M1", "jongens-c/2"],
-    ["JC3", "regio-oost/XC4C1", "jongens-c/3"],
     [
       "XZ1",
       "nationale-competitie/zitvolleybal-zitvolleybal-2/nationale-competitie-2zv1-3",
@@ -89,7 +89,7 @@ class TeamInfo {
     return result;
   }
 
-  String getRanking(team) {
+  String getRanking(String team) {
     String competition =
         "https://api.nevobo.nl/export/poule/${teamsInfo[1][1]}/stand.rss";
     for (var index = 0; index < teamsInfo.length; index++) {
@@ -102,7 +102,7 @@ class TeamInfo {
     return competition;
   }
 
-  String getSchedule(team) {
+  String getSchedule(String team) {
     //   debugPrint("getSchedule for $team");
     String competition =
         "https://api.nevobo.nl/export/team/CNH8Q1U/${teamsInfo[1][2]}/programma.rss";
@@ -117,7 +117,7 @@ class TeamInfo {
     return competition;
   }
 
-  String getResults(team) {
+  String getResults(String team) {
     String competition =
         "https://api.nevobo.nl/export/team/CNH8Q1U/${teamsInfo[1][2]}/resultaten.rss";
     for (var index = 0; index < teamsInfo.length; index++) {
@@ -157,12 +157,12 @@ class Team with ChangeNotifier {
     // debugPrint("Get stored $currentTeam");
   }
 
-  setStoredTeam(value) async {
+  Future<void> setStoredTeam(String value) async {
     final prefs = await SharedPreferences.getInstance();
     prefs.setString('team', value);
   }
 
-  void set(newValue) {
+  void set(String newValue) {
     currentTeam = newValue;
 //    notifyListeners();
     setStoredTeam(currentTeam);

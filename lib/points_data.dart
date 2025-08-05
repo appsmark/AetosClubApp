@@ -5,11 +5,11 @@ class PointsData {
 
   PointsData._internal();
 
-  clear() {
+  void clear() {
     data = [];
   }
 
-  add(Map map) {
+  void add(Map map) {
     data.add(map);
   }
 

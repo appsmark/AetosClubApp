@@ -5,12 +5,12 @@ class RankingData {
 
   RankingData._internal();
 
-  clear() {
+  void clear() {
     competition = "";
     data = [];
   }
 
-  addTeam(Map map) {
+  void addTeam(Map map) {
     data.add(map);
   }
 

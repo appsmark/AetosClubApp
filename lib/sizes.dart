@@ -25,7 +25,7 @@ class Sizes {
 
   Sizes._internal();
 
-  setSizes(context) {
+  void setSizes(BuildContext context) {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
     tablet = MediaQuery.of(context).size.shortestSide > 550;

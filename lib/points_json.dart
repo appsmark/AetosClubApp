@@ -26,7 +26,7 @@ class JsonPoints {
     }
   }
 
-  parse(inputStream) {
+  void parse(List inputStream) {
     /*
     String date = "";
     String team = "";
