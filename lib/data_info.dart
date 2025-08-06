@@ -1,4 +1,47 @@
+import 'dart:async';
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
+import 'package:path_provider/path_provider.dart';
+
 class DataInfo {
+  static final instance = DataInfo._internal();
+
+  DataInfo._internal();
+
+  void getInfo() {
+    for (int index = 0; index < data.length; index++) {
+      if (data[index]['type'] == 'file') {
+        createFileOfPdfUrl(index).then((f) {
+          debugPrint("=== $index remotePDFPath ${f.path}");
+          data[index]['internal'] = f.path;
+        });
+      }
+    }
+  }
+
+  Future<File> createFileOfPdfUrl(int index) async {
+    Completer<File> completer = Completer();
+    try {
+      final url = data[index]['file'];
+      final filename = url.substring(url.lastIndexOf("/") + 1);
+      var request = await HttpClient().getUrl(Uri.parse(url));
+      var response = await request.close();
+      var bytes = await consolidateHttpClientResponseBytes(response);
+      var dir = await getApplicationDocumentsDirectory();
+      //    debugPrint("=== Download files");
+      //  debugPrint("=== ${dir.path}/$filename");
+      File file = File("${dir.path}/$filename");
+
+      await file.writeAsBytes(bytes, flush: true);
+      completer.complete(file);
+    } catch (e) {
+      throw Exception('Error parsing asset file!');
+    }
+
+    return completer.future;
+  }
+
   List data = [
     {
       'type': 'header',
@@ -121,7 +164,7 @@ class DataInfo {
     },
     {
       'type': 'header',
-      'title': 'T/F/Z dienst',
+      'title': 'Scheidsrechter en Teller',
     },
     {
       'type': 'file',
@@ -132,7 +175,7 @@ class DataInfo {
     },
     {
       'type': 'image',
-      'title': 'Scheidsrechter en Teller',
+      'title': 'Taakverdeling',
       'file':
           'http://www.apps-mark.nl/aetos/T-F-Z dienst/Taak scheids teller.jpg',
       'internal': '',

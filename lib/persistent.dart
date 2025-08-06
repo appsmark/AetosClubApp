@@ -11,7 +11,7 @@ class Persistent {
     menuIndex = (preferences.getInt('menuIndex') ?? 1);
   }
 
-  setMenuIndex(value) async {
+  Future<void> setMenuIndex(int value) async {
     final preferences = await SharedPreferences.getInstance();
     preferences.setInt('menuIndex', value);
     menuIndex = value;

@@ -6,7 +6,7 @@ import 'duty.dart';
 import 'info.dart';
 import 'persistent.dart';
 import 'ranking.dart';
-import 'results.dart';
+//import 'results.dart';
 import 'schedule.dart';
 import 'select_team.dart';
 import 'sizes.dart';
@@ -29,7 +29,7 @@ class _MainScreen extends State<MainScreen> {
     SelectTeam(),
     Schedule(),
     Ranking(),
-    Results(),
+//    Results(),
     Duty(),
     Info(),
   ];
@@ -86,13 +86,15 @@ class _MainScreen extends State<MainScreen> {
               label: 'Programma',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.bar_chart), // format_list_numbered),
+              icon: Icon(Icons.format_list_numbered),
               label: 'Stand',
             ),
+            /*
             BottomNavigationBarItem(
               icon: Icon(Icons.format_list_numbered),
               label: 'Uitslagen',
             ),
+            */
             BottomNavigationBarItem(
               icon: Icon(Icons.task),
               label: 'Taken',

@@ -2,10 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
-import 'package:share_plus/share_plus.dart';
+//import 'package:share_plus/share_plus.dart';
 
 import 'constants.dart';
 import 'data_info.dart';
+import 'sizes.dart';
 
 class PDFScreen extends StatefulWidget {
   final String path;
@@ -20,10 +21,12 @@ class PDFScreen extends StatefulWidget {
 class _PDFScreenState extends State<PDFScreen> with WidgetsBindingObserver {
   final Completer<PDFViewController> _controller =
       Completer<PDFViewController>();
+  DataInfo dataInfo = DataInfo.instance;
   int? pages = 0;
   int? currentPage = 0;
   bool isReady = false;
   String errorMessage = '';
+  Sizes sizes = Sizes.instance;
 
   @override
   void initState() {
@@ -36,13 +39,14 @@ class _PDFScreenState extends State<PDFScreen> with WidgetsBindingObserver {
       appBar: AppBar(
         backgroundColor: Constants().colorBackground,
         title: Text(
-          DataInfo().data[widget.index]['title'],
+          dataInfo.data[widget.index]['title'],
           style: TextStyle(color: Constants().colorAetosAmber),
         ),
         leading: GestureDetector(
           child: Icon(
             Icons.arrow_back,
-            color: Constants().colorAetosAmber,
+            color: Constants().colorAetosBlue,
+            size: 0.04 * sizes.screenHeight,
           ),
           onTap: () {
             Navigator.pop(context);

@@ -1,11 +1,6 @@
-import 'dart:async';
-import 'dart:io';
-
 import 'package:aetos/info_image.dart';
 import 'package:aetos/pdfscreen.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:path_provider/path_provider.dart';
 
 import 'constants.dart';
 import 'data_info.dart';
@@ -19,69 +14,13 @@ class Info extends StatefulWidget {
 }
 
 class _InfoState extends State<Info> {
-  List listOfItems = [
-    {'type': '', 'title': '', 'file': ''}
-  ];
+  DataInfo dataInfo = DataInfo.instance;
   String remotePDFpath = "";
   Sizes sizes = Sizes.instance;
 
   @override
   void initState() {
-    listOfItems = DataInfo().data;
-    for (int index = 0; index < listOfItems.length; index++) {
-      if (listOfItems[index]['type'] == 'file') {
-        createFileOfPdfUrl(index).then((f) {
-          debugPrint("=== $index remotePDFPath ${f.path}");
-          listOfItems[index]['internal'] = f.path;
-        });
-      }
-    }
     super.initState();
-  }
-
-  void create(int index, BuildContext context) {
-    createFileOfPdfUrl(index).then((f) {
-      remotePDFpath = f.path;
-      debugPrint("=== remotePDFPath $remotePDFpath");
-      if (mounted) {
-        Navigator.push(
-            mounted ? context : context,
-            PageRouteBuilder(
-                transitionDuration: const Duration(milliseconds: 100),
-                transitionsBuilder:
-                    (context, animation, secondaryAnimation, child) {
-                  return FadeTransition(
-                    opacity: animation,
-                    child: child,
-                  );
-                },
-                pageBuilder: (context, animation, secondaryAnimation) {
-                  return PDFScreen(path: remotePDFpath, index: index);
-                }));
-      }
-    });
-  }
-
-  Future<File> createFileOfPdfUrl(int index) async {
-    Completer<File> completer = Completer();
-    try {
-      final url = DataInfo().data[index]['file'];
-      final filename = url.substring(url.lastIndexOf("/") + 1);
-      var request = await HttpClient().getUrl(Uri.parse(url));
-      var response = await request.close();
-      var bytes = await consolidateHttpClientResponseBytes(response);
-      var dir = await getApplicationDocumentsDirectory();
-      //    debugPrint("=== Download files");
-      //  debugPrint("=== ${dir.path}/$filename");
-      File file = File("${dir.path}/$filename");
-
-      await file.writeAsBytes(bytes, flush: true);
-      completer.complete(file);
-    } catch (e) {
-      throw Exception('Error parsing asset file!');
-    }
-
-    return completer.future;
   }
 
   @override
@@ -96,15 +35,15 @@ class _InfoState extends State<Info> {
                   child: Scrollbar(
                 thumbVisibility: true,
                 child: ListView.builder(
-                    itemCount: listOfItems.length,
+                    itemCount: dataInfo.data.length,
                     itemBuilder: (BuildContext ctxt, int index) {
                       return Column(
                         children: [
-                          if (listOfItems[index]['type'] == 'header')
+                          if (dataInfo.data[index]['type'] == 'header')
                             separator(),
                           GestureDetector(
                             onTap: () {
-                              if (listOfItems[index]['type'] == 'image') {
+                              if (dataInfo.data[index]['type'] == 'image') {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
@@ -112,12 +51,13 @@ class _InfoState extends State<Info> {
                                           InfoImage(index: index)),
                                 );
                               }
-                              if (listOfItems[index]['type'] == 'file') {
+                              if (dataInfo.data[index]['type'] == 'file') {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => PDFScreen(
-                                          path: listOfItems[index]['internal'],
+                                          path: dataInfo.data[index]
+                                              ['internal'],
                                           index: index)),
                                 );
                               }
@@ -127,14 +67,14 @@ class _InfoState extends State<Info> {
                               children: [
                                 Padding(
                                   padding: EdgeInsets.only(
-                                      left:
-                                          listOfItems[index]['type'] == 'header'
-                                              ? 0.05 * sizes.screenWidth
-                                              : 0.1 * sizes.screenWidth),
+                                      left: dataInfo.data[index]['type'] ==
+                                              'header'
+                                          ? 0.05 * sizes.screenWidth
+                                          : 0.1 * sizes.screenWidth),
                                   child: Text(
-                                    listOfItems[index]['title'],
+                                    dataInfo.data[index]['title'],
                                     style: TextStyle(
-                                        color: listOfItems[index]['type'] ==
+                                        color: dataInfo.data[index]['type'] ==
                                                 'header'
                                             ? Constants().colorAetosBlue
                                             : Constants().colorAetosAmber,

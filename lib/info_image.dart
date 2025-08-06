@@ -12,6 +12,7 @@ class InfoImage extends StatefulWidget {
 }
 
 class _InfoImageState extends State<InfoImage> {
+  DataInfo dataInfo = DataInfo.instance;
   Sizes sizes = Sizes.instance;
 
   @override
@@ -25,38 +26,24 @@ class _InfoImageState extends State<InfoImage> {
       appBar: AppBar(
         backgroundColor: Constants().colorBackground,
         title: Text(
-          DataInfo().data[widget.index]['title'],
+          dataInfo.data[widget.index]['title'],
           style: TextStyle(color: Constants().colorAetosAmber),
         ),
         leading: GestureDetector(
           child: Icon(
             Icons.arrow_back,
-            color: Constants().colorAetosAmber,
+            color: Constants().colorAetosBlue,
+            size: 0.04 * sizes.screenHeight,
           ),
           onTap: () {
             Navigator.pop(context);
-            /*
-            Navigator.push(
-                context,
-                PageRouteBuilder(
-                    transitionDuration: const Duration(milliseconds: 100),
-                    transitionsBuilder:
-                        (context, animation, secondaryAnimation, child) {
-                      return FadeTransition(
-                        opacity: animation,
-                        child: child,
-                      );
-                    },
-                    pageBuilder: (context, animation, secondaryAnimation) {
-                      return Info();
-                    }));*/
           },
         ),
       ),
-      body: Center(
-        child: InteractiveViewer(
-            child: Image.network(DataInfo().data[widget.index]['file'])),
-      ),
+      body: InteractiveViewer(
+          child: Image.network(
+        dataInfo.data[widget.index]['file'],
+      )),
     );
   }
 }
