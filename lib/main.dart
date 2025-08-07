@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'data.dart';
-import 'data_info.dart';
 import 'persistent.dart';
 import 'root.dart';
 
@@ -13,9 +12,6 @@ void main() {
 
   // Suppress statusbar and navigation bar
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
-
-  DataInfo dataInfo = DataInfo.instance;
-  dataInfo.getInfo();
 
   Persistent persistent = Persistent.instance;
   persistent.getMenuIndex();

@@ -29,6 +29,10 @@ dependencies:
   path_provider: ^2.1.5
   flutter_pdfview: ^1.4.1+1
   share_plus: ^11.0.0
+  docx_file_viewer: ^0.0.7
+  file_picker: ^10.2.1
+  flutter_document_viewer: ^0.1.0+1
+  flutter_cached_pdfview: ^0.4.3
 
 dev_dependencies:
   flutter_test:

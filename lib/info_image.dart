@@ -5,8 +5,10 @@ import 'constants.dart';
 import 'sizes.dart';
 
 class InfoImage extends StatefulWidget {
-  const InfoImage({super.key, required this.index});
-  final int index;
+  const InfoImage({super.key, required this.file, required this.title});
+  final String file;
+  final String title;
+
   @override
   State<InfoImage> createState() => _InfoImageState();
 }
@@ -26,7 +28,7 @@ class _InfoImageState extends State<InfoImage> {
       appBar: AppBar(
         backgroundColor: Constants().colorBackground,
         title: Text(
-          dataInfo.data[widget.index]['title'],
+          widget.title,
           style: TextStyle(color: Constants().colorAetosAmber),
         ),
         leading: GestureDetector(
@@ -40,10 +42,16 @@ class _InfoImageState extends State<InfoImage> {
           },
         ),
       ),
-      body: InteractiveViewer(
-          child: Image.network(
-        dataInfo.data[widget.index]['file'],
-      )),
+      body: Container(
+        color: Constants().colorAetosAmber,
+        child: Center(
+          child: InteractiveViewer(
+            child: Image.network(
+              widget.file,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

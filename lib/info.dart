@@ -1,9 +1,11 @@
+import 'package:aetos/info_doc.dart';
 import 'package:aetos/info_image.dart';
-import 'package:aetos/pdfscreen.dart';
+//import 'package:aetos/pdfscreen.dart';
 import 'package:flutter/material.dart';
 
 import 'constants.dart';
 import 'data_info.dart';
+import 'info_pdf.dart';
 import 'sizes.dart';
 
 class Info extends StatefulWidget {
@@ -47,17 +49,30 @@ class _InfoState extends State<Info> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) =>
-                                          InfoImage(index: index)),
+                                      builder: (context) => InfoImage(
+                                            title: dataInfo.data[index]
+                                                ['title'],
+                                            file: dataInfo.data[index]['file'],
+                                          )),
                                 );
                               }
                               if (dataInfo.data[index]['type'] == 'file') {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => PDFScreen(
-                                          path: dataInfo.data[index]
-                                              ['internal'],
+                                      builder: (context) => ViewPDFFromUrl(
+                                            url: dataInfo.data[index]['file'],
+                                            title: dataInfo.data[index]
+                                                ['title'],
+                                          )),
+                                );
+                              }
+                              if (dataInfo.data[index]['type'] == 'doc') {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => InfoDoc(
+                                          file: dataInfo.data[index]['file'],
                                           index: index)),
                                 );
                               }
