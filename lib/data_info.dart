@@ -128,10 +128,10 @@ class DataInfo {
       'title': 'Puntensysteem',
     },
     {
-      'type': 'doc',
+      'type': 'file',
       'title': 'Opzet puntensysteem',
       'file':
-          'http://www.apps-mark.nl/aetos/Puntensysteem/Aetos puntensysteem opzet _v3_.docx',
+          'http://www.apps-mark.nl/aetos/Puntensysteem/Aetos puntensysteem opzet _v3_.docx.pdf',
     },
     {
       'type': 'header',
@@ -196,6 +196,190 @@ class DataInfo {
       'title': 'Contactpersonen',
     },
     {
+      'type': 'subheader',
+      'title': 'Technische Commissie',
+    },
+    {
+      'type': 'mail',
+      'title': 'Prestatie',
+      'mail': 'tc@aetos.nl',
+    },
+    {
+      'type': 'mail',
+      'title': 'Dames',
+      'mail': 'tc@aetos.nl',
+    },
+    {
+      'type': 'mail',
+      'title': 'Heren',
+      'mail': 'tc@aetos.nl',
+    },
+    {
+      'type': 'subheader',
+      'title': 'Wedstrijdzaken',
+    },
+    {
+      'type': 'mail',
+      'title': 'A en B Jeugd',
+      'mail': 'wedstrijdsecretariaat@aetos.nl',
+    },
+    {
+      'type': 'mail',
+      'title': 'C Jeugd',
+      'mail': 'wedstrijdsecretariaat@aetos.nl',
+    },
+    {
+      'type': 'mail',
+      'title': 'Dames',
+      'mail': 'wedstrijdsecretariaat@aetos.nl',
+    },
+    {
+      'type': 'mail',
+      'title': 'Heren',
+      'mail': 'wedstrijdsecretariaat@aetos.nl',
+    },
+    {
+      'type': 'mail',
+      'title': 'FTZ Schema',
+      'mail': 'wedstrijdsecretariaat@aetos.nl',
+    },
+    {
+      'type': 'subheader',
+      'title': 'Volley Stars / Jeugd',
+    },
+    {
+      'type': 'mail',
+      'title': 'Volley Stars',
+      'mail': 'cmv@aetos.nl',
+    },
+    {
+      'type': 'mail',
+      'title': 'Jeugd 12-18 jaar',
+      'mail': 'Jeugdcoordinator@aetos.nl',
+    },
+    {
+      'type': 'subheader',
+      'title': 'Bestuur',
+    },
+    {
+      'type': 'mail',
+      'title': 'Algemeen bestuur',
+      'mail': 'bestuur@aetos.nl',
+    },
+    {
+      'type': 'mail',
+      'title': 'Penningmeester',
+      'mail': 'penningmeester@aetos.nl',
+    },
+    {
+      'type': 'mail',
+      'title': 'Voorzitter',
+      'mail': 'voorzitter@aetos.nl',
+    },
+    {
+      'type': 'mail',
+      'title': 'Secretaris',
+      'mail': 'secretaris@aetos.nl',
+    },
+    {
+      'type': 'mail',
+      'title': 'Technische zaken',
+      'mail': 'tc@aetos.nl',
+    },
+    {
+      'type': 'subheader',
+      'title': 'Technisch hart ',
+    },
+    {
+      'type': 'mail',
+      'title': 'Beleid/advies Aetos',
+      'mail': 'Technischhart@aetos.nl',
+    },
+    {
+      'type': 'subheader',
+      'title': 'Vertrouwenspersoon',
+    },
+    {
+      'type': 'mail',
+      'title': 'Ulrik Veenbaas',
+      'mail': 'uveenbaas@hotmail.com',
+    },
+    {
+      'type': 'mail',
+      'title': 'Marleen Stoltenborg',
+      'mail': 'mail@marleenstoltenborg.nl',
+    },
+    {
+      'type': 'mail',
+      'title': 'Heidi Scholte',
+      'mail': 'heidi@goedjezelf.nl',
+    },
+    {
+      'type': 'subheader',
+      'title': 'Volleybal aanbod',
+    },
+    {
+      'type': 'mail',
+      'title': 'A-Beach',
+      'mail': 'info@abeach.nl ',
+    },
+    {
+      'type': 'mail',
+      'title': 'Recreanten',
+      'mail': 'rmc@aetos.nl',
+    },
+    {
+      'type': 'mail',
+      'title': 'Start to volley',
+      'mail': 'starttovolley@aetos.nl',
+    },
+    {
+      'type': 'mail',
+      'title': 'No Jump',
+      'mail': 'nojump@aetos.nl',
+    },
+    {
+      'type': 'mail',
+      'title': 'Zitvolleybal',
+      'mail': 'zit@aetos.nl',
+    },
+    {
+      'type': 'subheader',
+      'title': 'Ledenadministratie',
+    },
+    {
+      'type': 'mail',
+      'title': 'Frank Bulten',
+      'mail': 'ledenadministratie@aetos.nl',
+    },
+    {
+      'type': 'header',
+      'title': 'Team',
+    },
+    {
+      'type': 'file',
+      'title': 'Teamindeling Dames',
+      'file':
+          'http://www.apps-mark.nl/aetos/Team/Teamindeling_2025_2026_Dames.pdf',
+    },
+    {
+      'type': 'file',
+      'title': 'Teamindeling Heren',
+      'file':
+          'http://www.apps-mark.nl/aetos/Team/Teamindeling_2025_2026_Heren.pdf',
+    },
+    {
+      'type': 'file',
+      'title': 'Trainingsschema',
+      'file':
+          'http://www.apps-mark.nl/aetos/Team/Aetos_trainingschema_2025_2026.pdf',
+    },
+    {
+      'type': 'file',
+      'title': 'Ballen',
+      'file': 'http://www.apps-mark.nl/aetos/Team/ballenpublicatie.pdf',
+    },
+    {
       'type': 'header',
       'title': 'Commissies',
     },
@@ -208,6 +392,42 @@ class DataInfo {
       'type': 'file',
       'title': 'TC commissie',
       'file': 'http://www.apps-mark.nl/aetos/Commissies/TC commissie info.pdf',
+    },
+    {
+      'type': 'file',
+      'title': 'Commissie Kamp',
+      'file':
+          'http://www.apps-mark.nl/aetos/Commissies/Commissie kamp Info.docx.pdf',
+    },
+    {
+      'type': 'file',
+      'title': 'Commissie Kleding',
+      'file':
+          'http://www.apps-mark.nl/aetos/Commissies/Commissie kleding Info.docx.pdf',
+    },
+    {
+      'type': 'file',
+      'title': 'Communicatie commissie',
+      'file':
+          'http://www.apps-mark.nl/aetos/Commissies/Communicatie commissie Info_.docx.pdf',
+    },
+    {
+      'type': 'file',
+      'title': 'Jeugdcommissie',
+      'file':
+          'http://www.apps-mark.nl/aetos/Commissies/Jeugcommissie  info.docx.pdf',
+    },
+    {
+      'type': 'file',
+      'title': 'Technisch hart',
+      'file':
+          'http://www.apps-mark.nl/aetos/Commissies/Technisch hart Info.docx.pdf',
+    },
+    {
+      'type': 'file',
+      'title': 'Vrijwilligerscommissie',
+      'file':
+          'http://www.apps-mark.nl/aetos/Commissies/Vrijwilligerscommissie Info.docx.pdf',
     },
     {
       'type': 'file',

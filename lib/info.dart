@@ -43,6 +43,7 @@ class _InfoState extends State<Info> {
                         children: [
                           if (dataInfo.data[index]['type'] == 'header')
                             separator(),
+
                           GestureDetector(
                             onTap: () {
                               if (dataInfo.data[index]['type'] == 'image') {
@@ -80,23 +81,56 @@ class _InfoState extends State<Info> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Padding(
-                                  padding: EdgeInsets.only(
-                                      left: dataInfo.data[index]['type'] ==
-                                              'header'
-                                          ? 0.05 * sizes.screenWidth
-                                          : 0.1 * sizes.screenWidth),
-                                  child: Text(
-                                    dataInfo.data[index]['title'],
-                                    style: TextStyle(
-                                        color: dataInfo.data[index]['type'] ==
-                                                'header'
-                                            ? Constants().colorAetosBlue
-                                            : Constants().colorAetosAmber,
-                                        fontSize: sizes.sizeFontSchedule,
-                                        fontWeight: FontWeight.bold),
+                                if (dataInfo.data[index]['type'] == 'header')
+                                  Padding(
+                                    padding: EdgeInsets.only(
+                                        left: 0.1 * sizes.screenWidth),
+                                    child: Text(
+                                      dataInfo.data[index]['title'],
+                                      style: TextStyle(
+                                          color: Constants().colorAetosBlue,
+                                          fontSize: sizes.sizeFontSchedule,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
-                                ),
+                                if (dataInfo.data[index]['type'] == 'subheader')
+                                  Padding(
+                                    padding: EdgeInsets.only(
+                                        left: 0.2 * sizes.screenWidth),
+                                    child: Text(
+                                      dataInfo.data[index]['title'],
+                                      style: TextStyle(
+                                          color: Constants().colorAetosBlue,
+                                          fontSize: sizes.sizeFontSchedule,
+                                          fontStyle: FontStyle.italic,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                if ((dataInfo.data[index]['type'] == 'file') ||
+                                    (dataInfo.data[index]['type'] == 'image'))
+                                  Padding(
+                                    padding: EdgeInsets.only(
+                                        left: 0.1 * sizes.screenWidth),
+                                    child: Text(
+                                      dataInfo.data[index]['title'],
+                                      style: TextStyle(
+                                          color: Constants().colorAetosAmber,
+                                          fontSize: sizes.sizeFontSchedule,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                if (dataInfo.data[index]['type'] == 'mail')
+                                  Padding(
+                                    padding: EdgeInsets.only(
+                                        left: 0.2 * sizes.screenWidth),
+                                    child: Text(
+                                      dataInfo.data[index]['title'],
+                                      style: TextStyle(
+                                          color: Constants().colorAetosAmber,
+                                          fontSize: sizes.sizeFontSchedule,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
                               ],
                             ),
                           ),
