@@ -72,7 +72,7 @@ class ViewPDFFromUrl extends StatelessWidget {
         },
       ).fromUrl(
         url,
-        placeholder: (double progress) => Center(child: Text('$progress %')),
+        //placeholder: (double progress) => Center(child: Text('$progress %')),
         errorWidget: (dynamic error) => Center(
           child: Text(error.toString()),
         ),
