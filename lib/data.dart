@@ -15,7 +15,7 @@ class TeamInfo {
     ["D10", "regio-oost/D2J", "dames/10"],
     ["D11", "regio-oost/D3Q", "dames/11"],
     ["D12", "regio-oost/D4F", "dames/12"],
-    ["D13", "regio-oost/D4G", "dames/13"],
+    //  ["D13", "regio-oost/D4G", "dames/13"],
     ["H1", "regio-oost/3BH", "heren/1"],
     ["H2", "regio-oost/HPC", "heren/2"],
     ["H3", "regio-oost/HPC", "heren/3"],

@@ -18,6 +18,8 @@ https://drive.google.com/drive/folders/1ZOLh4Yk5iQEhB_GEAk_nCY2pwxlas8p-?usp=sha
 
 Duty koppelen aan huidige datum
 
+Handle exceptions in info_pdf.dart
+
 pause/resume app behaviour
 
 Aanwezigheid voor wedstrijd 
@@ -26,7 +28,6 @@ Game.dart: counter en referee netter bepalen aan de hand van datum
 
 Zaalwacht aangeven bij game.dart
 
-Trainingsschema toevoegen
-
-Logo op hoofdscherm
 Klik op wedstrijd in programma geeft meer details
+
+pubspec.yaml update/clean

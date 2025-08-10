@@ -1,10 +1,10 @@
-import 'package:aetos/info_doc.dart';
-import 'package:aetos/info_image.dart';
-//import 'package:aetos/pdfscreen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_email_sender/flutter_email_sender.dart';
 
 import 'constants.dart';
 import 'data_info.dart';
+import 'info_doc.dart';
+import 'info_image.dart';
 import 'info_pdf.dart';
 import 'sizes.dart';
 
@@ -43,7 +43,6 @@ class _InfoState extends State<Info> {
                         children: [
                           if (dataInfo.data[index]['type'] == 'header')
                             separator(),
-
                           GestureDetector(
                             onTap: () {
                               if (dataInfo.data[index]['type'] == 'image') {
@@ -68,6 +67,10 @@ class _InfoState extends State<Info> {
                                           )),
                                 );
                               }
+                              if (dataInfo.data[index]['type'] == 'mail') {
+                                sendEmail(dataInfo.data[index]['mail']);
+                              }
+
                               if (dataInfo.data[index]['type'] == 'doc') {
                                 Navigator.push(
                                   context,
@@ -96,7 +99,7 @@ class _InfoState extends State<Info> {
                                 if (dataInfo.data[index]['type'] == 'subheader')
                                   Padding(
                                     padding: EdgeInsets.only(
-                                        left: 0.2 * sizes.screenWidth),
+                                        left: 0.15 * sizes.screenWidth),
                                     child: Text(
                                       dataInfo.data[index]['title'],
                                       style: TextStyle(
@@ -134,7 +137,6 @@ class _InfoState extends State<Info> {
                               ],
                             ),
                           ),
-                          //                 separator(),
                         ],
                       );
                     }),
@@ -152,5 +154,19 @@ class _InfoState extends State<Info> {
       endIndent: 0.05 * sizes.screenWidth,
       color: Constants().colorTitle,
     );
+  }
+
+  void sendEmail(String address) async {
+    final Email email = Email(
+      body: 'Beste Aetos vrijwilliger,',
+      subject: 'Bericht vanuit Aetos app',
+      recipients: [address],
+      //  cc: ['cc@example.com'],
+      //  bcc: ['bcc@example.com'],
+      //  attachmentPaths: ['/path/to/attachment.zip'],
+      isHTML: false,
+    );
+
+    await FlutterEmailSender.send(email);
   }
 }

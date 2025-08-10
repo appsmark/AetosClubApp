@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
+import 'package:mailto/mailto.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'constants.dart';
@@ -62,11 +63,11 @@ class ViewPDFFromUrl extends StatelessWidget {
         fitPolicy: FitPolicy.BOTH,
         onLinkHandler: (uri) {
           if (uri!.isNotEmpty) {
-            uri = uri.replaceAll('http://', '');
-            if (uri[uri.length - 1] == '/') {
-              uri = uri.substring(0, uri.length - 1);
+            if (uri.startsWith('mailto')) {
+              launchMailto(uri);
+            } else {
+              launch(uri);
             }
-            launch(uri);
           }
         },
       ).fromUrl(
@@ -79,8 +80,12 @@ class ViewPDFFromUrl extends StatelessWidget {
     );
   }
 
-  Future<void> launch(String value) async {
-    final Uri url = Uri(scheme: 'http', host: value);
+  Future<void> launch(String inputValue) async {
+    final Uri url;
+    url = Uri(
+        scheme: Uri.parse(inputValue).scheme,
+        host: Uri.parse(inputValue).host,
+        path: Uri.parse(inputValue).path);
 
     if (!await launchUrl(
       url,
@@ -88,5 +93,20 @@ class ViewPDFFromUrl extends StatelessWidget {
     )) {
 //      throw Exception('Could not launch $url');
     }
+  }
+
+  Future<void> launchMailto(String uri) async {
+    String path = Uri.parse(uri).path.replaceAll('///', '');
+    final mailtoLink = Mailto(
+      to: [path], //  'to@example.com'],
+      //  cc: ['cc1@example.com', 'cc2@example.com'],
+      //    subject: 'mailto example subject',
+      //  body: 'mailto example body',
+    );
+    debugPrint("=== mail: $uri");
+    // Convert the Mailto instance into a string.
+    // Use either Dart's string interpolation
+    // or the toString() method.
+    await launch('$mailtoLink');
   }
 }
