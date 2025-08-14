@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'constants.dart';
+import 'contact.dart';
 import 'data.dart';
 import 'duty.dart';
 import 'info.dart';
@@ -32,6 +33,7 @@ class _MainScreen extends State<MainScreen> {
 //    Results(),
     Duty(),
     Info(),
+    Contact(),
   ];
 
   void _onItemTapped(int index) {
@@ -60,17 +62,6 @@ class _MainScreen extends State<MainScreen> {
               height: 0.5 * sizes.heightToolbar,
             ),
           ),
-          /*
-            title: Text(
-              "", // "TEAM ${team.currentTeam}",
-              style: TextStyle(
-                backgroundColor: Constants().colorBackground,
-                color: Constants().colorTitle,
-                fontWeight: FontWeight.bold,
-                //      fontSize: sizes.sizeFontTitle,
-              ),
-            )*/
-          //        backgroundColor: Colors.green,
         ),
         body: Center(
           child: widgetOptions.elementAt(_selectedIndex),
@@ -89,12 +80,6 @@ class _MainScreen extends State<MainScreen> {
               icon: Icon(Icons.format_list_numbered),
               label: 'Stand',
             ),
-            /*
-            BottomNavigationBarItem(
-              icon: Icon(Icons.format_list_numbered),
-              label: 'Uitslagen',
-            ),
-            */
             BottomNavigationBarItem(
               icon: Icon(Icons.task),
               label: 'Taken',
@@ -102,6 +87,10 @@ class _MainScreen extends State<MainScreen> {
             BottomNavigationBarItem(
               icon: Icon(Icons.menu_book),
               label: 'Info',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.contact_emergency),
+              label: 'Contact',
             ),
           ],
           currentIndex: _selectedIndex,

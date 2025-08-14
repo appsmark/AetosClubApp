@@ -103,7 +103,7 @@ class ViewPDFFromUrl extends StatelessWidget {
       //    subject: 'mailto example subject',
       //  body: 'mailto example body',
     );
-    debugPrint("=== mail: $uri");
+//    debugPrint("=== mail: $uri");
     // Convert the Mailto instance into a string.
     // Use either Dart's string interpolation
     // or the toString() method.
