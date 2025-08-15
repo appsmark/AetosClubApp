@@ -33,6 +33,7 @@ class _ScheduleState extends State<Schedule> {
   ];
   String referee = "";
   RssSchedule rss = RssSchedule();
+  ScrollController scrollController = ScrollController(keepScrollOffset: true);
   Sizes sizes = Sizes.instance;
 
   Future getData() async {
@@ -190,8 +191,11 @@ class _ScheduleState extends State<Schedule> {
             separator(),
             Expanded(
                 child: Scrollbar(
+              controller: scrollController,
+              interactive: true,
               thumbVisibility: true,
               child: ListView.builder(
+                  controller: scrollController,
                   itemCount: listOfItems.length - 1,
                   itemBuilder: (BuildContext ctxt, int index) {
                     return Column(

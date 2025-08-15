@@ -15,6 +15,7 @@ class Contact extends StatefulWidget {
 class _ContactState extends State<Contact> {
   DataContact dataContact = DataContact.instance;
   String remotePDFpath = "";
+  ScrollController scrollController = ScrollController(keepScrollOffset: true);
   Sizes sizes = Sizes.instance;
 
   @override
@@ -32,9 +33,11 @@ class _ContactState extends State<Contact> {
             children: [
               Expanded(
                   child: Scrollbar(
+                controller: scrollController,
                 interactive: true,
                 thumbVisibility: true,
                 child: ListView.builder(
+                    controller: scrollController,
                     itemCount: dataContact.data.length,
                     itemBuilder: (BuildContext ctxt, int index) {
                       return Column(

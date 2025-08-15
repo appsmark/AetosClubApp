@@ -18,13 +18,9 @@ class _InfoState extends State<Info> {
   String remotePDFpath = "";
   Sizes sizes = Sizes.instance;
   ScrollController scrollController = ScrollController(keepScrollOffset: true);
-  double offset = 0;
 
   @override
   void initState() {
-    scrollController.addListener(() {
-      scrollController.offset;
-    });
     super.initState();
   }
 
@@ -51,7 +47,6 @@ class _InfoState extends State<Info> {
                             separator(),
                           GestureDetector(
                             onTap: () {
-                              offset = scrollController.offset;
                               if (dataInfo.data[index]['type'] == 'image') {
                                 Navigator.push(
                                   context,
