@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'constants.dart';
 import 'data_info.dart';
-import 'info_doc.dart';
 import 'info_image.dart';
 import 'info_pdf.dart';
 import 'sizes.dart';
@@ -18,9 +17,14 @@ class _InfoState extends State<Info> {
   DataInfo dataInfo = DataInfo.instance;
   String remotePDFpath = "";
   Sizes sizes = Sizes.instance;
+  ScrollController scrollController = ScrollController(keepScrollOffset: true);
+  double offset = 0;
 
   @override
   void initState() {
+    scrollController.addListener(() {
+      scrollController.offset;
+    });
     super.initState();
   }
 
@@ -34,8 +38,11 @@ class _InfoState extends State<Info> {
             children: [
               Expanded(
                   child: Scrollbar(
+                controller: scrollController,
+                interactive: true,
                 thumbVisibility: true,
                 child: ListView.builder(
+                    controller: scrollController,
                     itemCount: dataInfo.data.length,
                     itemBuilder: (BuildContext ctxt, int index) {
                       return Column(
@@ -44,6 +51,7 @@ class _InfoState extends State<Info> {
                             separator(),
                           GestureDetector(
                             onTap: () {
+                              offset = scrollController.offset;
                               if (dataInfo.data[index]['type'] == 'image') {
                                 Navigator.push(
                                   context,
@@ -64,15 +72,6 @@ class _InfoState extends State<Info> {
                                             title: dataInfo.data[index]
                                                 ['title'],
                                           )),
-                                );
-                              }
-                              if (dataInfo.data[index]['type'] == 'doc') {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => InfoDoc(
-                                          file: dataInfo.data[index]['file'],
-                                          index: index)),
                                 );
                               }
                             },

@@ -32,6 +32,7 @@ class _ContactState extends State<Contact> {
             children: [
               Expanded(
                   child: Scrollbar(
+                interactive: true,
                 thumbVisibility: true,
                 child: ListView.builder(
                     itemCount: dataContact.data.length,

@@ -12,15 +12,12 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
-  excel: ^4.0.6
-  file_picker: ^10.2.1
   flutter_cached_pdfview: ^0.4.3
   flutter_email_sender: ^7.0.0
   flutter_html: ^3.0.0
   google_fonts: ^6.2.1
   http: ^1.4.0
   intl: ^0.20.2
-  material: ^1.0.0+2
   new_version_plus: ^0.1.0
   path_provider: ^2.1.5
   provider: ^6.1.1
@@ -28,10 +25,6 @@ dependencies:
   share_plus: ^11.0.0
   shared_preferences: ^2.3.5
   url_launcher: ^6.3.2
-  xml: ^6.5.0
-
-  docx_file_viewer: ^0.0.7
-  flutter_document_viewer: ^0.1.0+1
 
 dev_dependencies:
   flutter_test:
