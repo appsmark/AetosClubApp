@@ -47,7 +47,7 @@ class Sizes {
       }
     } else {
       if (tablet) {
-        heightToolbar = 0.15 * screenHeight;
+        heightToolbar = 0.06 * screenHeight;
         sizeFontRanking = 0.04 * screenWidth;
       } else {
         heightToolbar = 0.1 * screenHeight;

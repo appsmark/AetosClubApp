@@ -30,7 +30,6 @@ class _MainScreen extends State<MainScreen> {
     SelectTeam(),
     Schedule(),
     Ranking(),
-//    Results(),
     Duty(),
     Info(),
     Contact(),
@@ -54,13 +53,11 @@ class _MainScreen extends State<MainScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          toolbarHeight: sizes.heightToolbar,
           centerTitle: true,
-          title: Padding(
-            padding: const EdgeInsets.all(18.0),
-            child: Image.asset(
-              "assets/images/logo.png",
-              height: 0.5 * sizes.heightToolbar,
-            ),
+          title: Image.asset(
+            "assets/images/logo.png",
+            height: 0.9 * sizes.heightToolbar,
           ),
         ),
         body: Center(
