@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'data.dart';
+import 'data_info.dart';
 import 'persistent.dart';
 import 'root.dart';
 
@@ -18,6 +19,9 @@ void main() {
 
   Team team = Team();
   team.getStoredTeam();
+
+  DataInfo dataInfo = DataInfo.instance;
+  dataInfo.getData();
 
   // Device orientation
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])

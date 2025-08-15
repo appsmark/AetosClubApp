@@ -27,27 +27,6 @@ class _SelectTeamState extends State<SelectTeam> {
       appBar: AppBar(
         toolbarHeight: sizes.heightToolbar,
         backgroundColor: Constants().colorBackground,
-        /*
-        leading: GestureDetector(
-          child: Icon(
-            Icons.arrow_back,
-            size: 0.05 * sizes.screenHeight,
-            color: Constants().colorTitle,
-          ),
-          onTap: () {
-   //         Navigator.pop(context);
-          },
-        ),
-        */
-        /*
-        centerTitle: true,
-        title: Text(
-          "SELECTEER TEAM",
-          style: TextStyle(
-              color: Constants().colorTitle,
-              fontSize: sizes.sizeFontTitle,
-              fontWeight: FontWeight.bold),
-        ),*/
       ),
       body: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -63,7 +42,6 @@ class _SelectTeamState extends State<SelectTeam> {
               onLongPress: () {
                 team.set(teamInfo.teamsInfo[index][0]);
                 setState(() {});
-                //        Navigator.pop(context);
               },
               child: Card(
                 color: team.currentTeam == teamInfo.teamsInfo[index][0]
@@ -74,22 +52,14 @@ class _SelectTeamState extends State<SelectTeam> {
                   teamInfo.teamsInfo[index][0],
                   style: TextStyle(
                       color: team.currentTeam == teamInfo.teamsInfo[index][0]
-                          ? Colors.black //Constants().colorTitle
-                          : Colors.black, // Constants().colorBackground,
+                          ? Constants().colorAetosAmber
+                          : Constants().colorAetosMaroon,
                       fontSize: sizes.sizeFontSelectTeamButton,
                       fontWeight: FontWeight.bold),
                 )),
               ),
             );
           }),
-    );
-  }
-
-  Divider separator() {
-    return Divider(
-      indent: 0.05 * sizes.screenWidth,
-      endIndent: 0.05 * sizes.screenWidth,
-      color: Constants().colorTitle,
     );
   }
 }

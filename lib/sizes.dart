@@ -57,7 +57,7 @@ class Sizes {
     sizeFontResults = 0.025 * screenHeight;
     sizeFontSchedule = 0.025 * screenHeight;
     sizeFontSelection = 0.03 * screenHeight;
-    sizeFontTitle = 0.045 * screenHeight;
+    sizeFontTitle = 0.03 * screenHeight;
     spacing = 0.1 * screenHeight;
     spacingButtons = 0.02 * screenHeight;
   }

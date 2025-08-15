@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
-import 'package:mailto/mailto.dart';
+import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'constants.dart';
@@ -16,10 +16,13 @@ class ViewPDFFromUrl extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: sizes.heightToolbar,
         backgroundColor: Constants().colorBackground,
         title: Text(
           title,
-          style: TextStyle(color: Constants().colorAetosAmber),
+          style: TextStyle(
+              color: Constants().colorAetosAmber,
+              fontSize: sizes.sizeFontTitle),
         ),
         leading: GestureDetector(
           child: Icon(
@@ -64,7 +67,7 @@ class ViewPDFFromUrl extends StatelessWidget {
         onLinkHandler: (uri) {
           if (uri!.isNotEmpty) {
             if (uri.startsWith('mailto')) {
-              launchMailto(uri);
+              sendEmail(uri);
             } else {
               launch(uri);
             }
@@ -95,18 +98,15 @@ class ViewPDFFromUrl extends StatelessWidget {
     }
   }
 
-  Future<void> launchMailto(String uri) async {
-    String path = Uri.parse(uri).path.replaceAll('///', '');
-    final mailtoLink = Mailto(
-      to: [path], //  'to@example.com'],
-      //  cc: ['cc1@example.com', 'cc2@example.com'],
-      //    subject: 'mailto example subject',
-      //  body: 'mailto example body',
+  void sendEmail(String address) async {
+    address = address.replaceAll("mailto:", "");
+    final Email email = Email(
+      body: 'Beste Aetos vrijwilliger,',
+      subject: 'Bericht vanuit Aetos app',
+      recipients: [address],
+      isHTML: false,
     );
-//    debugPrint("=== mail: $uri");
-    // Convert the Mailto instance into a string.
-    // Use either Dart's string interpolation
-    // or the toString() method.
-    await launch('$mailtoLink');
+
+    await FlutterEmailSender.send(email);
   }
 }

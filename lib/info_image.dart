@@ -26,10 +26,13 @@ class _InfoImageState extends State<InfoImage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: sizes.heightToolbar,
         backgroundColor: Constants().colorBackground,
         title: Text(
           widget.title,
-          style: TextStyle(color: Constants().colorAetosAmber),
+          style: TextStyle(
+              color: Constants().colorAetosAmber,
+              fontSize: sizes.sizeFontTitle),
         ),
         leading: GestureDetector(
           child: Icon(

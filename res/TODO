@@ -28,4 +28,14 @@ Zaalwacht aangeven bij game.dart
 
 Klik op wedstrijd in programma geeft meer details
 
-pubspec.yaml update/clean
+pubspec.yaml update/clean (excel, google_fonts, file_picker, docx_file_viewer, flutter_document_viewer)
+
+Inloggen (voor meer functionaliteit)
+
+Ingelogd:
+- aanwezigheid wedstrijd opgeven
+- zaaldienst verdelen binnen team
+- email/whatsapp naar teamgenoten
+- bellen met zaaldienst
+
+

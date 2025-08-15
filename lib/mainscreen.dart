@@ -11,6 +11,7 @@ import 'ranking.dart';
 import 'schedule.dart';
 import 'select_team.dart';
 import 'sizes.dart';
+import 'version.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -24,6 +25,7 @@ class _MainScreen extends State<MainScreen> {
   Persistent persistent = Persistent.instance;
   Sizes sizes = Sizes.instance;
   Team team = Team();
+  Version version = Version.instance;
   int _selectedIndex = 1;
 
   final List<Widget> widgetOptions = const [
@@ -45,6 +47,7 @@ class _MainScreen extends State<MainScreen> {
   @override
   void initState() {
     _selectedIndex = persistent.menuIndex;
+    version.updateDialog(context);
     super.initState();
   }
 
