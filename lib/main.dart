@@ -16,6 +16,7 @@ void main() {
 
   Persistent persistent = Persistent.instance;
   persistent.getMenuIndex();
+  persistent.setInfoListIndex(0);
 
   Team team = Team();
   team.getStoredTeam();

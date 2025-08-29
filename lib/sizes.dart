@@ -8,6 +8,7 @@ class Sizes {
   double buttonHeight = 0;
   double buttonPadding = 0;
   double buttonWidth = 0;
+  double infoItemHeight = 0;
   double screenHeight = 0;
   double screenWidth = 0;
   double sizeFontButton = 0;
@@ -60,5 +61,6 @@ class Sizes {
     sizeFontTitle = 0.029 * screenHeight;
     spacing = 0.1 * screenHeight;
     spacingButtons = 0.02 * screenHeight;
+    infoItemHeight = 0.058 * screenHeight;
   }
 }

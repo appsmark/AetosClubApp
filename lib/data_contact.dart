@@ -129,7 +129,7 @@ class DataContact {
     },
     {
       'type': 'mail',
-      'title': 'A-Beach',
+      'title': 'Abeach',
       'mail': 'info@abeach.nl ',
     },
     {
