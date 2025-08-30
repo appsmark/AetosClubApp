@@ -25,16 +25,8 @@ class _InfoState extends State<Info> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      scrollToIndex(persistent.infoListIndex);
+      scrollController.jumpTo(sizes.infoItemHeight * persistent.infoListIndex);
     });
-  }
-
-  void scrollToIndex(int index) {
-    scrollController.animateTo(
-      sizes.infoItemHeight * index,
-      duration: Duration(milliseconds: 300),
-      curve: Curves.easeInOut,
-    );
   }
 
   @override
