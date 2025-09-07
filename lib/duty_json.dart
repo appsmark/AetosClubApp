@@ -10,7 +10,7 @@ import 'duty_data.dart';
 class JsonDuty {
   DutyData dutyData = DutyData.instance;
   DateTime now = DateTime.now();
-  bool testLocal = false;
+  bool testLocal = true;
 
   Future getDuty(bool mode) async {
     if (testLocal) {
