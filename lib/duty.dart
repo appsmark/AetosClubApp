@@ -45,10 +45,11 @@ class _DutyState extends State<Duty> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Constants().colorBackground,
-        appBar: AppBar(
+        /*
+         appBar: AppBar(
           toolbarHeight: sizes.heightToolbar,
           backgroundColor: Constants().colorBackground,
-          /*
+         
           leading: GestureDetector(
             child: Icon(
               Icons.arrow_back,
@@ -59,7 +60,6 @@ class _DutyState extends State<Duty> {
               Navigator.pop(context);
             },
           ),
-          */
           centerTitle: true,
           title: Text(
             "ZAALDIENST",
@@ -69,6 +69,7 @@ class _DutyState extends State<Duty> {
                 fontWeight: FontWeight.bold),
           ),
         ),
+         */
         body: Column(children: [
           separator(),
           GestureDetector(
