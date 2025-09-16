@@ -106,7 +106,7 @@ class DataContact {
     },
     {
       'type': 'header',
-      'title': 'Vertrouwenspersoon',
+      'title': 'Vertrouwenscontactpersoon',
     },
     {
       'type': 'mail',
