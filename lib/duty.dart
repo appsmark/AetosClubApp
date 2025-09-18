@@ -45,31 +45,6 @@ class _DutyState extends State<Duty> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Constants().colorBackground,
-        /*
-         appBar: AppBar(
-          toolbarHeight: sizes.heightToolbar,
-          backgroundColor: Constants().colorBackground,
-         
-          leading: GestureDetector(
-            child: Icon(
-              Icons.arrow_back,
-              size: 0.05 * sizes.screenHeight,
-              color: Constants().colorTitle,
-            ),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          centerTitle: true,
-          title: Text(
-            "ZAALDIENST",
-            style: TextStyle(
-                color: Constants().colorTitle,
-                fontSize: sizes.sizeFontTitle,
-                fontWeight: FontWeight.bold),
-          ),
-        ),
-         */
         body: Column(children: [
           separator(),
           GestureDetector(
@@ -102,7 +77,8 @@ class _DutyState extends State<Duty> {
                     itemCount: dutyData.data.length,
                     itemBuilder: (BuildContext ctxt, int index) {
                       if ((dutyData.data[index]['duty'] == team.currentTeam) &&
-                          (dutyData.data[index].length == 4)) {
+                          (dutyData.data[index].length == 5)) {
+                        // Zaalwacht
                         return Column(
                           children: [
                             Row(
@@ -128,7 +104,7 @@ class _DutyState extends State<Duty> {
                               ],
                             ),
                             Text(
-                              "Sporthal Middachtensingel",
+                              "Sporthal ${dutyData.data[index]['hall']}",
                               style: TextStyle(
                                   color: Constants().colorSchedule,
                                   fontSize: sizes.sizeFontSchedule,
@@ -151,7 +127,10 @@ class _DutyState extends State<Duty> {
                         if ((dutyData.data[index]['referee'] ==
                                 team.currentTeam) ||
                             (dutyData.data[index]['counter'] ==
-                                team.currentTeam)) {
+                                team.currentTeam) ||
+                            dutyData.data[index]['hometeam']
+                                .toString()
+                                .contains("VolleyStars")) {
                           return Column(
                             children: [
                               Row(
@@ -169,8 +148,12 @@ class _DutyState extends State<Duty> {
                                     width: 10,
                                   ),
                                   Text(
-                                    dutyData.data[index]['hometeam'] == "CMV"
-                                        ? "${dutyData.data[index]['time']} - ${dutyData.data[index]['endtime']}"
+                                    dutyData.data[index]['hometeam']
+                                            .toString()
+                                            .contains("VolleyStars")
+                                        ? dutyData.data[index]['time'] == "null"
+                                            ? ""
+                                            : "${dutyData.data[index]['time']} - ${dutyData.data[index]['endtime']}"
                                         : dutyData.data[index]['time'],
                                     style: TextStyle(
                                         color: Constants().colorSchedule,
@@ -180,15 +163,17 @@ class _DutyState extends State<Duty> {
                                 ],
                               ),
                               Text(
-                                "${dutyData.data[index]['hall']}",
+                                "Sporthal ${dutyData.data[index]['hall']}",
                                 style: TextStyle(
                                     color: Constants().colorSchedule,
                                     fontSize: sizes.sizeFontSchedule,
                                     fontWeight: FontWeight.bold),
                               ),
                               Text(
-                                dutyData.data[index]['hometeam'] == "CMV"
-                                    ? "CMV wedstrijden"
+                                dutyData.data[index]['hometeam']
+                                        .toString()
+                                        .contains("VolleyStars")
+                                    ? "Volley Stars wedstrijden"
                                     : rssClean.clean(
                                         "${dutyData.data[index]['hometeam']} - ${dutyData.data[index]['visitor']}"),
                                 style: TextStyle(
@@ -207,9 +192,7 @@ class _DutyState extends State<Duty> {
                                     fontWeight: FontWeight.bold),
                               ),
                               Visibility(
-                                visible: dutyData.data[index]['counter']
-                                    .toString()
-                                    .isNotEmpty,
+                                visible: dutyData.data[index]['counter'] != "",
                                 child: Text(
                                   "Tellen: ${dutyData.data[index]['counter']}",
                                   style: TextStyle(

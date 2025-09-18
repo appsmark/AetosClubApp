@@ -10,7 +10,7 @@ import 'duty_data.dart';
 class JsonDuty {
   DutyData dutyData = DutyData.instance;
   DateTime now = DateTime.now();
-  bool testLocal = true;
+  bool testLocal = false;
 
   Future getDuty(bool mode) async {
     if (testLocal) {
@@ -18,7 +18,7 @@ class JsonDuty {
       return parse(jsonDecode(fileText)['duty'], mode);
     } else {
       var result = await http
-          .get(Uri.parse("http://apps-mark.nl/aetos/zaaldienst.json"));
+          .get(Uri.parse("http://apps-mark.nl/aetos/zaaldienst2526.json"));
 
       if (result.statusCode == 200) {
         return parse(jsonDecode(result.body)['duty'], mode);
@@ -48,23 +48,13 @@ class JsonDuty {
 
     dutyData.clear();
     for (int index = 0; index < inputStream.length; index++) {
-      if (testLocal) {
-        tempDate = DateFormat("yyyy-MM-dd")
-            .parse(convert(inputStream[index]["Datum"]));
-      } else {
-        tempDate = DateFormat("yyyy-MM-dd")
-            .parse(convert(inputStream[index]["Datum"]));
-      }
+      tempDate =
+          DateFormat("yyyy-MM-dd").parse(convert(inputStream[index]["Datum"]));
 
       if (inputStream[index]["Zaalwacht"] != null) {
         dutyTeam = inputStream[index]["Zaalwacht"];
       }
-      /*
-      if ((inputStream[index]["Locatie"] != null) &&
-          (inputStream[index]["Locatie"] != "Middachtensingel")) {
-        dutyTeam = "";
-      }
-*/
+
       if (tempDate.difference(DateTime.now()).inDays >= 0) {
         if (mode) {
           if (inputStream[index]["Thuisteam"] != null) {
@@ -120,6 +110,7 @@ class JsonDuty {
                 "date": "$day $month",
                 "time": inputStream[index]["Tijd"],
                 "endtime": endtime,
+                "hall": inputStream[index]["Locatie"],
                 "duty": dutyTeam,
               });
             } else {

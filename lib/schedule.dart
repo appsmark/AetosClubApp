@@ -126,6 +126,16 @@ class _ScheduleState extends State<Schedule> {
                     ),
                   ),
                   Visibility(
+                    visible: referee != "",
+                    child: Text(
+                      "Scheidsrechter: $referee",
+                      style: TextStyle(
+                          color: Constants().colorSchedule,
+                          fontSize: sizes.sizeFontSchedule,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Visibility(
                     visible: counter != "",
                     child: Text(
                       "Teller: $counter",
@@ -133,16 +143,6 @@ class _ScheduleState extends State<Schedule> {
                           color: counterOwnTeam
                               ? Constants().colorTitle
                               : Constants().colorSchedule,
-                          fontSize: sizes.sizeFontSchedule,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  Visibility(
-                    visible: referee != "",
-                    child: Text(
-                      "Scheidsrechter: $referee",
-                      style: TextStyle(
-                          color: Constants().colorSchedule,
                           fontSize: sizes.sizeFontSchedule,
                           fontWeight: FontWeight.bold),
                     ),
