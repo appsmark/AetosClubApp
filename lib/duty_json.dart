@@ -105,7 +105,8 @@ class JsonDuty {
                 referee = "NeVoBo";
               }
             }
-            if (referee.isEmpty) {
+            if (referee.isEmpty &&
+                (inputStream[index]["Thuisteam"] != "VolleyStars")) {
               dutyData.add({
                 "date": "$day $month",
                 "time": inputStream[index]["Tijd"],
