@@ -50,16 +50,18 @@ class RssSchedule {
         var address = item.description!
             .replaceAll(RegExp(".*Speellocatie: "), '')
             .split(', ');
-        scheduleData.addGame({
-          'date': item.description!
-              .replaceAll(RegExp(".*Datum: "), "")
-              .replaceAll(RegExp(",.*"), ""),
-          'time': item.description!.substring(time.start, time.end),
-          'game': rssClean.clean(item.title!.replaceAll(RegExp(".*: "), "")),
-          'hall': address[0],
-          'street': address[1],
-          'postal': address[2],
-        });
+        if (!item.description.toString().contains("Vervallen")) {
+          scheduleData.addGame({
+            'date': item.description!
+                .replaceAll(RegExp(".*Datum: "), "")
+                .replaceAll(RegExp(",.*"), ""),
+            'time': item.description!.substring(time.start, time.end),
+            'game': rssClean.clean(item.title!.replaceAll(RegExp(".*: "), "")),
+            'hall': address[0],
+            'street': address[1],
+            'postal': address[2],
+          });
+        }
       }
       //   debugPrint(item.description!);
     }
