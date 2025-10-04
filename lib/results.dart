@@ -20,9 +20,11 @@ class _ResultsState extends State<Results> {
 
   Future getData() async {
     await rss.getResults();
-    setState(() {
-      listOfItems = data.getGames();
-    });
+    if (mounted) {
+      setState(() {
+        listOfItems = data.getGames();
+      });
+    }
   }
 
   @override
@@ -101,7 +103,9 @@ class _ResultsState extends State<Results> {
                             ],
                           ),
                           Text(
-                            listOfItems[index]['sets'],
+                            listOfItems[index]['sets']
+                                .toString()
+                                .replaceAll(' ', '  '),
                             style: TextStyle(
                                 color: Constants().colorResults,
                                 fontSize: sizes.sizeFontResults,

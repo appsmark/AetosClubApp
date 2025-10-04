@@ -24,9 +24,11 @@ class _RankingState extends State<Ranking> {
 
   Future getData() async {
     await rss.getRanking();
-    setState(() {
-      listOfItems = data.getTeams();
-    });
+    if (mounted) {
+      setState(() {
+        listOfItems = data.getTeams();
+      });
+    }
   }
 
   @override

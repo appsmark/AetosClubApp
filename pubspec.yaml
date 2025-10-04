@@ -3,10 +3,10 @@ description: Aetos Team App
 
 publish_to: 'none'
 
-version: 5.8.4+580004
+version: 5.8.5+580005
 
 environment:
-  sdk: ">=3.5.3 <=4.0.0"
+  sdk: ">=3.8.1 <=4.0.0"
 
 dependencies:
   flutter:
@@ -17,7 +17,7 @@ dependencies:
   flutter_email_sender: ^8.0.0
   flutter_html: ^3.0.0
   google_fonts: ^6.3.1
-  http: ^1.4.0
+  http: ^1.5.0
   intl: ^0.20.2
   new_version_plus: ^0.1.0
   path_provider: ^2.1.5

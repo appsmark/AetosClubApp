@@ -7,7 +7,7 @@ import 'duty.dart';
 import 'info.dart';
 import 'persistent.dart';
 import 'ranking.dart';
-//import 'results.dart';
+import 'results.dart';
 import 'schedule.dart';
 import 'select_team.dart';
 import 'sizes.dart';
@@ -32,6 +32,7 @@ class _MainScreen extends State<MainScreen> {
     SelectTeam(),
     Schedule(),
     Ranking(),
+    Results(),
     Duty(),
     Info(),
     Contact(),
@@ -69,27 +70,31 @@ class _MainScreen extends State<MainScreen> {
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.people),
+              icon: Icon(Icons.people_outline),
               label: 'Team',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.calendar_month_rounded),
-              label: 'Programma',
+              label: 'Rooster',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.format_list_numbered),
               label: 'Stand',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.task),
+              icon: Icon(Icons.scoreboard_outlined),
+              label: 'Scores',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.task_outlined),
               label: 'Taken',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.menu_book),
+              icon: Icon(Icons.menu_book_outlined),
               label: 'Info',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.contact_emergency),
+              icon: Icon(Icons.contact_emergency_outlined),
               label: 'Contact',
             ),
           ],
