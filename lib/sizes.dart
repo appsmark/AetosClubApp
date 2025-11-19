@@ -41,7 +41,7 @@ class Sizes {
     if (Platform.isIOS) {
       if (tablet) {
         heightToolbar = 0.09 * screenHeight;
-        sizeFontRanking = 0.04 * screenWidth;
+        sizeFontRanking = 0.03 * screenWidth;
       } else {
         heightToolbar = 0.1 * screenHeight;
         sizeFontRanking = 0.04 * screenWidth;
