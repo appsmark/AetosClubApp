@@ -24,58 +24,36 @@ class TeamInfo {
     ["H7", "regio-oost/H2J", "heren/7"],
     ["H8", "regio-oost/H2J", "heren/8"],
     ["H9", "regio-oost/H3E", "heren/9"],
-    ["JA1", "regio-oost/JAHA1", "jongens-a/1"],
-    ["JA2", "regio-oost/JA2A1", "jongens-a/2"],
-    ["JB1", "regio-oost/JBHA1", "jongens-b/1"],
-    ["JB2", "regio-oost/JB2D1", "jongens-b/2"],
-    ["JC1", "regio-oost/XCHC1", "jongens-c/1"],
-    ["JC2", "regio-oost/XC2M1", "jongens-c/2"],
-    ["JC3", "regio-oost/XC4C1", "jongens-c/3"],
-    ["MA1", "regio-oost/MAHC1", "meiden-a/1"],
-    ["MA2", "regio-oost/MA1H1", "meiden-a/2"],
-    ["MB1", "regio-oost/MBHC1", "meiden-b/1"],
-    ["MB2", "regio-oost/MB1E1", "meiden-b/2"],
-    ["MB3", "regio-oost/MB1H1", "meiden-b/3"],
-    ["MB4", "regio-oost/MB1G1", "meiden-b/4"],
-    ["MB5", "regio-oost/MB2L1", "meiden-b/5"],
-    ["MB6", "regio-oost/MB2K1", "meiden-b/6"],
-    ["MB7", "regio-oost/MB3F1", "meiden-b/7"],
-    ["MB8", "regio-oost/MB3J1", "meiden-b/8"],
-    ["MC1", "regio-oost/XCHC1", "meiden-c/1"],
-    ["MC2", "regio-oost/XC2K1", "meiden-c/2"],
-    ["MC3", "regio-oost/XC2L1", "meiden-c/3"],
-    ["MC4", "regio-oost/XC2O1", "meiden-c/4"],
-    ["MC5", "regio-oost/XC2F1", "meiden-c/5"],
-    ["MC6", "regio-oost/XC2N1", "meiden-c/6"],
-    ["MC7", "regio-oost/XC3N1", "meiden-c/7"],
-    ["MC8", "regio-oost/XC3M1", "meiden-c/8"],
+    ["JA1", "regio-oost/JATA2", "jongens-a/1"],
+    ["JA2", "regio-oost/JA1A2", "jongens-a/2"],
+    ["JB1", "regio-oost/JBTA2", "jongens-b/1"],
+    ["JB2", "regio-oost/JB2C2", "jongens-b/2"],
+    ["JC1", "regio-oost/XCTA2", "jongens-c/1"],
+    ["JC2", "regio-oost/XC1A2", "jongens-c/2"],
+    ["JC3", "regio-oost/XC4G2", "jongens-c/3"],
+    ["MA1", "regio-oost/MA1J2", "meiden-a/1"],
+    ["MA2", "regio-oost/MA1I2", "meiden-a/2"],
+    ["MB1", "regio-oost/MB1H2", "meiden-b/1"],
+    ["MB2", "regio-oost/MB1I2", "meiden-b/2"],
+    ["MB3", "regio-oost/MB2F2", "meiden-b/3"],
+    ["MB4", "regio-oost/MB1H2", "meiden-b/4"],
+    ["MB5", "regio-oost/MB2G2", "meiden-b/5"],
+    ["MB6", "regio-oost/MB2F2", "meiden-b/6"],
+    ["MB7", "regio-oost/MB3H2", "meiden-b/7"],
+    ["MB8", "regio-oost/MB3H2", "meiden-b/8"],
+    ["MC1", "regio-oost/XCHC2", "meiden-c/1"],
+    ["MC2", "regio-oost/XC1I2", "meiden-c/2"],
+    ["MC3", "regio-oost/XC1I2", "meiden-c/3"],
+    ["MC4", "regio-oost/XC2H2", "meiden-c/4"],
+    ["MC5", "regio-oost/XC2J2", "meiden-c/5"],
+    ["MC6", "regio-oost/XC2I2", "meiden-c/6"],
+    ["MC7", "regio-oost/XC2J2", "meiden-c/7"],
+    ["MC8", "regio-oost/XC3P2", "meiden-c/8"],
     [
       "XZ1",
-      "nationale-competitie/zitvolleybal-zitvolleybal-2/nationale-competitie-2zv1-3",
-      "mix-zitvolleybal/1"
+      "nationale-competitie/zitvolleybal-zitvolleybal-2/nationale-competitie-2zv2-4",
+      "mix-zitvolleybal/1",
     ],
-    /*
-    [
-      "N6-1",
-      "regio-oost/eerste-helft-cmv-arnhem-wageningen-1/regio-oost-cn61a1-10",
-      "cmv-niveau-6/1"
-    ],
-    [
-      "N6-2",
-      "regio-oost/eerste-helft-cmv-arnhem-wageningen-1/regio-oost-cn61b1-8",
-      "cmv-niveau-6/2"
-    ],
-    [
-      "N5-1",
-      "regio-oost/eerste-helft-cmv-arnhem-wageningen-1/regio-oost-cn51a1-10",
-      "cmv-niveau-5/1"
-    ],
-    [
-      "N5-2",
-      "regio-oost/eerste-helft-cmv-arnhem-wageningen-1/regio-oost-cn51a1-10",
-      "cmv-niveau-5/2"
-    ],
-    */
   ];
 
   bool availabe(String target) {
@@ -95,24 +73,20 @@ class TeamInfo {
       if (team == teamsInfo[index][0]) {
         competition =
             "https://api.nevobo.nl/export/poule/${teamsInfo[index][1]}/stand.rss";
-        //     debugPrint("poule ${teamsInfo[index][0]}  $competition");
       }
     }
     return competition;
   }
 
   String getSchedule(String team) {
-    //   debugPrint("getSchedule for $team");
     String competition =
         "https://api.nevobo.nl/export/team/CNH8Q1U/${teamsInfo[1][2]}/programma.rss";
     for (var index = 0; index < teamsInfo.length; index++) {
       if (team == teamsInfo[index][0]) {
         competition =
             "https://api.nevobo.nl/export/team/CNH8Q1U/${teamsInfo[index][2]}/programma.rss";
-        //     debugPrint("poule ${teamsInfo[index][0]}  $competition");
       }
     }
-
     return competition;
   }
 
@@ -123,10 +97,8 @@ class TeamInfo {
       if (team == teamsInfo[index][0]) {
         competition =
             "https://api.nevobo.nl/export/team/CNH8Q1U/${teamsInfo[index][2]}/resultaten.rss";
-        //     debugPrint("poule ${teamsInfo[index][0]}  $competition");
       }
     }
-
     return competition;
   }
 }
@@ -153,7 +125,6 @@ class Team with ChangeNotifier {
     } else {
       set("D1");
     }
-    // debugPrint("Get stored $currentTeam");
   }
 
   Future<void> setStoredTeam(String value) async {
@@ -163,7 +134,6 @@ class Team with ChangeNotifier {
 
   void set(String newValue) {
     currentTeam = newValue;
-//    notifyListeners();
     setStoredTeam(currentTeam);
   }
 }

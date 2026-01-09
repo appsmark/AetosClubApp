@@ -16,11 +16,14 @@ class RssClean {
     result = result.replaceAll("Bielderman Koetsier/", "");
     result = result.replaceAll("Bultman-Hartholt ", "");
     result = result.replaceAll(
-        "Burgemeester Cees van der Knaapweg", "Burgemeester v.d. Knaapweg");
+      "Burgemeester Cees van der Knaapweg",
+      "Burgemeester v.d. Knaapweg",
+    );
     result = result.replaceAll("Engeltherm ", "");
     result = result.replaceAll("Eurosped ", "");
     result = result.replaceAll("Ikvolleybal.nl/", "");
     result = result.replaceAll("Jumbo Van Andel-", "");
+    result = result.replaceAll("Rageroom Venlo ", "");
     result = result.replaceAll("Rebo Woningmakelaars ", "");
     result = result.replaceAll("Rensa Family ", "");
     result = result.replaceAll("Skopein ", "");
