@@ -3,7 +3,7 @@ description: Aetos Team App
 
 publish_to: 'none'
 
-version: 5.9.0+590000
+version: 6.0.0+600000
 
 environment:
   sdk: ">=3.9.2 <=4.0.0"
@@ -16,10 +16,10 @@ dependencies:
   flutter_cached_pdfview: ^0.4.3
   flutter_email_sender: ^8.0.0
   flutter_html: ^3.0.0
-  google_fonts: ^6.3.1
+  google_fonts: ^8.0.1
   http: ^1.5.0
   intl: ^0.20.2
-  new_version_plus: ^0.1.0
+  new_version_plus: ^1.0.1
   path_provider: ^2.1.5
   provider: ^6.1.5+1
   rss_dart: ^1.0.12

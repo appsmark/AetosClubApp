@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 
 import 'data.dart';
 import 'data_info.dart';
+import 'hall_info.dart';
 import 'persistent.dart';
 import 'root.dart';
 
@@ -23,11 +24,13 @@ void main() {
   DataInfo dataInfo = DataInfo.instance;
   dataInfo.getData();
 
+  HallInfo hallInfo = HallInfo.instance;
+  hallInfo.get();
+
   // Device orientation
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-      .then((value) => runApp(
-            const MyApp(),
-          ));
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]).then((value) => runApp(const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -54,22 +57,28 @@ class SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-        const Duration(seconds: 1),
-        () => Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                maintainState: false, builder: (context) => const Root())));
+      const Duration(seconds: 1),
+      () => Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          maintainState: false,
+          builder: (context) => const Root(),
+        ),
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: const Color(0xFFC1C1C1),
-        child: const Center(
-          child: Image(
-              image: AssetImage('assets/splashscreen.png'),
-              height: 1400, // Just a random value
-              fit: BoxFit.fitWidth),
-        ));
+      color: const Color(0xFFC1C1C1),
+      child: const Center(
+        child: Image(
+          image: AssetImage('assets/splashscreen.png'),
+          height: 1400, // Just a random value
+          fit: BoxFit.fitWidth,
+        ),
+      ),
+    );
   }
 }

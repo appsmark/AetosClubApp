@@ -135,6 +135,7 @@ class Team with ChangeNotifier {
   void set(String newValue) {
     currentTeam = newValue;
     setStoredTeam(currentTeam);
+    notifyListeners();
   }
 }
 

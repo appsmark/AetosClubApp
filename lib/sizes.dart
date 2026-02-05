@@ -13,6 +13,7 @@ class Sizes {
   double screenWidth = 0;
   double sizeFontButton = 0;
   double sizeFontCompetition = 0;
+  double sizeFontHallInfo = 0;
   double sizeFontRanking = 0;
   double sizeFontResults = 0;
   double sizeFontSchedule = 0;
@@ -42,17 +43,21 @@ class Sizes {
       if (tablet) {
         heightToolbar = 0.09 * screenHeight;
         sizeFontRanking = 0.03 * screenWidth;
+        sizeFontHallInfo = 0.02 * screenWidth;
       } else {
         heightToolbar = 0.1 * screenHeight;
         sizeFontRanking = 0.04 * screenWidth;
+        sizeFontHallInfo = 0.025 * screenWidth;
       }
     } else {
       if (tablet) {
         heightToolbar = 0.06 * screenHeight;
         sizeFontRanking = 0.04 * screenWidth;
+        sizeFontHallInfo = 0.025 * screenWidth;
       } else {
         heightToolbar = 0.1 * screenHeight;
         sizeFontRanking = 0.047 * screenWidth;
+        sizeFontHallInfo = 0.04 * screenWidth;
       }
     }
     sizeFontResults = 0.025 * screenHeight;

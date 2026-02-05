@@ -24,12 +24,19 @@ class _ScheduleState extends State<Schedule> {
   ScheduleData data = ScheduleData.instance;
   DutyData dutyData = DutyData.instance;
   String dutyTeam = "";
-  JsonDuty jsonDuty = JsonDuty();
+  DutyJson dutyJson = DutyJson();
   List listOfDuties = [
-    {'date': '', 'counter': '', 'referee': ''}
+    {'date': '', 'counter': '', 'referee': ''},
   ];
   List listOfItems = [
-    {'date': '', 'time': '', 'game': '', 'hall': '', 'street': '', 'postal': ''}
+    {
+      'date': '',
+      'time': '',
+      'game': '',
+      'hall': '',
+      'street': '',
+      'postal': '',
+    },
   ];
   String referee = "";
   RssSchedule rss = RssSchedule();
@@ -39,7 +46,7 @@ class _ScheduleState extends State<Schedule> {
   Future getData() async {
     DateTime tempDate;
     await rss.getSchedule();
-    await jsonDuty.getDuty(true);
+    await dutyJson.getDuty(true);
 
     setState(() {
       listOfItems = data.getGames();
@@ -52,9 +59,9 @@ class _ScheduleState extends State<Schedule> {
               if ((listOfItems[0]["game"].toString().split(' - ')[1] !=
                   "AETOS ${team.currentTeam}")) {
                 counter = listOfDuties[0]['counter'];
-                counterOwnTeam = listOfItems[0]["game"]
-                    .toString()
-                    .startsWith("AETOS $counter");
+                counterOwnTeam = listOfItems[0]["game"].toString().startsWith(
+                  "AETOS $counter",
+                );
                 referee = listOfDuties[0]['referee'];
                 dutyTeam = listOfDuties[0]['duty'];
               }
@@ -74,182 +81,203 @@ class _ScheduleState extends State<Schedule> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Constants().colorBackground,
-        body: Column(
-          children: [
-            SizedBox(
-              height: 0.02 * sizes.screenHeight,
-            ),
-            separatorWide(),
-            GestureDetector(
-              onTap: () {
-                ScheduleDetails().scheduleDetails(
-                    context, 0, listOfItems, counter, referee, dutyTeam);
-              },
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        listOfItems[0]['date'],
-                        style: TextStyle(
-                            color: Constants().colorSchedule,
-                            fontSize: sizes.sizeFontSchedule,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        listOfItems[0]['time'] == "0:00"
-                            ? ""
-                            : listOfItems[0]['time'],
-                        style: TextStyle(
-                            color: Constants().colorSchedule,
-                            fontSize: sizes.sizeFontSchedule,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  Text(
-                    listOfItems[0]['game'],
-                    style: TextStyle(
-                        color: Constants().colorSchedule,
-                        fontSize: sizes.sizeFontSchedule,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  Visibility(
-                    visible: counter != "",
-                    child: SizedBox(
-                      height: 0.01 * sizes.screenHeight,
-                    ),
-                  ),
-                  Visibility(
-                    visible: referee != "",
-                    child: Text(
-                      "Scheidsrechter: $referee",
+      backgroundColor: Constants().colorBackground,
+      body: Column(
+        children: [
+          SizedBox(height: 0.02 * sizes.screenHeight),
+          separatorWide(),
+          GestureDetector(
+            onTap: () {
+              ScheduleDetails().scheduleDetails(
+                context,
+                0,
+                listOfItems,
+                counter,
+                referee,
+                dutyTeam,
+              );
+            },
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      listOfItems[0]['date'],
                       style: TextStyle(
-                          color: Constants().colorSchedule,
-                          fontSize: sizes.sizeFontSchedule,
-                          fontWeight: FontWeight.bold),
+                        color: Constants().colorSchedule,
+                        fontSize: sizes.sizeFontSchedule,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                  Visibility(
-                    visible: counter != "",
-                    child: Text(
-                      "Teller: $counter",
+                    const SizedBox(width: 10),
+                    Text(
+                      listOfItems[0]['time'] == "0:00"
+                          ? ""
+                          : listOfItems[0]['time'],
                       style: TextStyle(
-                          color: counterOwnTeam
-                              ? Constants().colorTitle
-                              : Constants().colorSchedule,
-                          fontSize: sizes.sizeFontSchedule,
-                          fontWeight: FontWeight.bold),
+                        color: Constants().colorSchedule,
+                        fontSize: sizes.sizeFontSchedule,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+                Text(
+                  listOfItems[0]['game'],
+                  style: TextStyle(
+                    color: Constants().colorSchedule,
+                    fontSize: sizes.sizeFontSchedule,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Visibility(
+                  visible: counter != "",
+                  child: SizedBox(height: 0.01 * sizes.screenHeight),
+                ),
+                Visibility(
+                  visible: referee != "",
+                  child: Text(
+                    "Scheidsrechter: $referee",
+                    style: TextStyle(
+                      color: Constants().colorSchedule,
+                      fontSize: sizes.sizeFontSchedule,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Visibility(
-                    visible: dutyTeam != "",
-                    child: Text(
-                      "Zaalwacht: $dutyTeam",
-                      style: TextStyle(
-                          color: Constants().colorSchedule,
-                          fontSize: sizes.sizeFontSchedule,
-                          fontWeight: FontWeight.bold),
+                ),
+                Visibility(
+                  visible: counter != "",
+                  child: Text(
+                    "Teller: $counter",
+                    style: TextStyle(
+                      color: counterOwnTeam
+                          ? Constants().colorTitle
+                          : Constants().colorSchedule,
+                      fontSize: sizes.sizeFontSchedule,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(
-                    height: 0.01 * sizes.screenHeight,
-                  ),
-                  Text(
-                    RssClean().clean(listOfItems[0]['hall']),
+                ),
+                Visibility(
+                  visible: dutyTeam != "",
+                  child: Text(
+                    "Zaalwacht: $dutyTeam",
                     style: TextStyle(
-                        color: Constants().colorSchedule,
-                        fontSize: sizes.sizeFontSchedule,
-                        fontWeight: FontWeight.bold),
+                      color: Constants().colorSchedule,
+                      fontSize: sizes.sizeFontSchedule,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                  Text(
-                    RssClean().clean(listOfItems[0]['street']),
-                    style: TextStyle(
-                        color: Constants().colorSchedule,
-                        fontSize: sizes.sizeFontSchedule,
-                        fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: 0.01 * sizes.screenHeight),
+                Text(
+                  RssClean().clean(listOfItems[0]['hall']),
+                  style: TextStyle(
+                    color: Constants().colorSchedule,
+                    fontSize: sizes.sizeFontSchedule,
+                    fontWeight: FontWeight.bold,
                   ),
-                  Text(
-                    listOfItems[0]['postal'],
-                    style: TextStyle(
-                        color: Constants().colorSchedule,
-                        fontSize: sizes.sizeFontSchedule,
-                        fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  RssClean().clean(listOfItems[0]['street']),
+                  style: TextStyle(
+                    color: Constants().colorSchedule,
+                    fontSize: sizes.sizeFontSchedule,
+                    fontWeight: FontWeight.bold,
                   ),
-                ],
-              ),
+                ),
+                Text(
+                  listOfItems[0]['postal'],
+                  style: TextStyle(
+                    color: Constants().colorSchedule,
+                    fontSize: sizes.sizeFontSchedule,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
-            separatorWide(),
-            SizedBox(
-              height: 0.01 * sizes.screenHeight,
-            ),
-            separator(),
-            Expanded(
-                child: Scrollbar(
+          ),
+          separatorWide(),
+          SizedBox(height: 0.01 * sizes.screenHeight),
+          separator(),
+          Expanded(
+            child: Scrollbar(
               controller: scrollController,
               interactive: true,
               thumbVisibility: true,
               child: ListView.builder(
-                  controller: scrollController,
-                  itemCount: listOfItems.length - 1,
-                  itemBuilder: (BuildContext ctxt, int index) {
-                    return Column(
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            ScheduleDetails().scheduleDetails(
-                                context, index + 1, listOfItems, "", "", "");
-                          },
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                listOfItems[index + 1]['date'],
-                                style: TextStyle(
-                                    color: Constants().colorSchedule,
-                                    fontSize: sizes.sizeFontSchedule,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                listOfItems[index]['time'] == "0:00"
-                                    ? ""
-                                    : listOfItems[index + 1]['time'],
-                                style: TextStyle(
-                                    color: Constants().colorSchedule,
-                                    fontSize: sizes.sizeFontSchedule,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            ScheduleDetails().scheduleDetails(
-                                context, index + 1, listOfItems, "", "", "");
-                          },
-                          child: Text(
-                            listOfItems[index + 1]['game'],
-                            style: TextStyle(
+                controller: scrollController,
+                itemCount: listOfItems.length - 1,
+                itemBuilder: (BuildContext ctxt, int index) {
+                  return Column(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          ScheduleDetails().scheduleDetails(
+                            context,
+                            index + 1,
+                            listOfItems,
+                            "",
+                            "",
+                            "",
+                          );
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              listOfItems[index + 1]['date'],
+                              style: TextStyle(
                                 color: Constants().colorSchedule,
                                 fontSize: sizes.sizeFontSchedule,
-                                fontWeight: FontWeight.bold),
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const SizedBox(width: 10),
+                            Text(
+                              listOfItems[index]['time'] == "0:00"
+                                  ? ""
+                                  : listOfItems[index + 1]['time'],
+                              style: TextStyle(
+                                color: Constants().colorSchedule,
+                                fontSize: sizes.sizeFontSchedule,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          ScheduleDetails().scheduleDetails(
+                            context,
+                            index + 1,
+                            listOfItems,
+                            "",
+                            "",
+                            "",
+                          );
+                        },
+                        child: Text(
+                          listOfItems[index + 1]['game'],
+                          style: TextStyle(
+                            color: Constants().colorSchedule,
+                            fontSize: sizes.sizeFontSchedule,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
-                        separator(),
-                      ],
-                    );
-                  }),
-            ))
-          ],
-        ));
+                      ),
+                      separator(),
+                    ],
+                  );
+                },
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   Divider separator() {
@@ -261,8 +289,6 @@ class _ScheduleState extends State<Schedule> {
   }
 
   Divider separatorWide() {
-    return Divider(
-      color: Constants().colorTitle,
-    );
+    return Divider(color: Constants().colorTitle);
   }
 }

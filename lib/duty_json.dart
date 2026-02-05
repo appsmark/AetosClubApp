@@ -7,7 +7,7 @@ import 'package:intl/intl.dart';
 import 'data.dart';
 import 'duty_data.dart';
 
-class JsonDuty {
+class DutyJson {
   DutyData dutyData = DutyData.instance;
   DateTime now = DateTime.now();
   bool testLocal = false;
@@ -17,8 +17,9 @@ class JsonDuty {
       String fileText = await rootBundle.loadString('assets/zaaldienst.json');
       return parse(jsonDecode(fileText)['duty'], mode);
     } else {
-      var result = await http
-          .get(Uri.parse("http://apps-mark.nl/aetos/zaaldienst2526.json"));
+      var result = await http.get(
+        Uri.parse("http://apps-mark.nl/aetos/zaaldienst2526.json"),
+      );
 
       if (result.statusCode == 200) {
         return parse(jsonDecode(result.body)['duty'], mode);
@@ -48,8 +49,9 @@ class JsonDuty {
 
     dutyData.clear();
     for (int index = 0; index < inputStream.length; index++) {
-      tempDate =
-          DateFormat("yyyy-MM-dd").parse(convert(inputStream[index]["Datum"]));
+      tempDate = DateFormat(
+        "yyyy-MM-dd",
+      ).parse(convert(inputStream[index]["Datum"]));
 
       if (inputStream[index]["Zaalwacht"] != null) {
         dutyTeam = inputStream[index]["Zaalwacht"];
@@ -58,8 +60,10 @@ class JsonDuty {
       if (tempDate.difference(DateTime.now()).inDays >= 0) {
         if (mode) {
           if (inputStream[index]["Thuisteam"] != null) {
-            String compare =
-                inputStream[index]["Thuisteam"].replaceAll(" ", "");
+            String compare = inputStream[index]["Thuisteam"].replaceAll(
+              " ",
+              "",
+            );
             compare = compare.replaceAll("HS", "H");
             compare = compare.replaceAll("DS", "D");
             if (compare == "AETOS${team.currentTeam}") {

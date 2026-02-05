@@ -20,15 +20,22 @@ class _GameState extends State<Game> {
   DutyData dutyData = DutyData.instance;
   ScheduleData data = ScheduleData.instance;
   List listOfDuties = [
-    {'date': '', 'counter': '', 'referee': ''}
+    {'date': '', 'counter': '', 'referee': ''},
   ];
   List listOfItems = [
-    {'date': '', 'time': '', 'game': '', 'hall': '', 'street': '', 'postal': ''}
+    {
+      'date': '',
+      'time': '',
+      'game': '',
+      'hall': '',
+      'street': '',
+      'postal': '',
+    },
   ];
   RssClean rssClean = RssClean();
   RssSchedule rss = RssSchedule();
   Sizes sizes = Sizes.instance;
-  JsonDuty duty = JsonDuty();
+  DutyJson duty = DutyJson();
   String referee = "";
   String counter = "";
 
@@ -63,130 +70,132 @@ class _GameState extends State<Game> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Constants().colorBackground,
+      appBar: AppBar(
+        toolbarHeight: sizes.heightToolbar,
         backgroundColor: Constants().colorBackground,
-        appBar: AppBar(
-          toolbarHeight: sizes.heightToolbar,
-          backgroundColor: Constants().colorBackground,
-          leading: GestureDetector(
-            child: Icon(
-              Icons.arrow_back,
-              size: 0.05 * sizes.screenHeight,
-              color: Constants().colorTitle,
-            ),
-            onTap: () {
-              Navigator.pop(context);
-            },
+        leading: GestureDetector(
+          child: Icon(
+            Icons.arrow_back,
+            size: 0.05 * sizes.screenHeight,
+            color: Constants().colorTitle,
           ),
-          centerTitle: true,
-          title: Text(
-            "WEDSTRIJD",
-            style: TextStyle(
-                color: Constants().colorTitle,
-                fontSize: sizes.sizeFontTitle,
-                fontWeight: FontWeight.bold),
+          onTap: () {
+            Navigator.pop(context);
+          },
+        ),
+        centerTitle: true,
+        title: Text(
+          "WEDSTRIJD",
+          style: TextStyle(
+            color: Constants().colorTitle,
+            fontSize: sizes.sizeFontTitle,
+            fontWeight: FontWeight.bold,
           ),
         ),
-        body: Column(
-          children: [
-            separator(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  listOfItems[0]['date'],
-                  style: TextStyle(
-                      color: Constants().colorSchedule,
-                      fontSize: sizes.sizeFontSchedule,
-                      fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  listOfItems[0]['time'] == "0:00"
-                      ? ""
-                      : listOfItems[0]['time'],
-                  style: TextStyle(
-                      color: Constants().colorSchedule,
-                      fontSize: sizes.sizeFontSchedule,
-                      fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 0.05 * sizes.screenHeight,
-            ),
-            Text(
-              listOfItems[0]['game'].replaceAll(RegExp(' -.*'), ''),
-              style: TextStyle(
-                  color: Constants().colorSchedule,
-                  fontSize: sizes.sizeFontSchedule,
-                  fontWeight: FontWeight.bold),
-            ),
-            Text(
-              listOfItems[0]['game'] == "" ? "" : "tegen",
-              style: TextStyle(
-                  color: Constants().colorSchedule,
-                  fontSize: sizes.sizeFontSchedule,
-                  fontWeight: FontWeight.bold),
-            ),
-            Text(
-              listOfItems[0]['game'].replaceAll(RegExp('.* - '), ''),
-              style: TextStyle(
-                  color: Constants().colorSchedule,
-                  fontSize: sizes.sizeFontSchedule,
-                  fontWeight: FontWeight.bold),
-            ),
-            SizedBox(
-              height: 0.05 * sizes.screenHeight,
-            ),
-            Visibility(
-              visible: counter != "",
-              child: Text(
-                "Teller: $counter",
+      ),
+      body: Column(
+        children: [
+          separator(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                listOfItems[0]['date'],
                 style: TextStyle(
-                    color: Constants().colorSchedule,
-                    fontSize: sizes.sizeFontSchedule,
-                    fontWeight: FontWeight.bold),
+                  color: Constants().colorSchedule,
+                  fontSize: sizes.sizeFontSchedule,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(width: 10),
+              Text(
+                listOfItems[0]['time'] == "0:00" ? "" : listOfItems[0]['time'],
+                style: TextStyle(
+                  color: Constants().colorSchedule,
+                  fontSize: sizes.sizeFontSchedule,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 0.05 * sizes.screenHeight),
+          Text(
+            listOfItems[0]['game'].replaceAll(RegExp(' -.*'), ''),
+            style: TextStyle(
+              color: Constants().colorSchedule,
+              fontSize: sizes.sizeFontSchedule,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Text(
+            listOfItems[0]['game'] == "" ? "" : "tegen",
+            style: TextStyle(
+              color: Constants().colorSchedule,
+              fontSize: sizes.sizeFontSchedule,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Text(
+            listOfItems[0]['game'].replaceAll(RegExp('.* - '), ''),
+            style: TextStyle(
+              color: Constants().colorSchedule,
+              fontSize: sizes.sizeFontSchedule,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 0.05 * sizes.screenHeight),
+          Visibility(
+            visible: counter != "",
+            child: Text(
+              "Teller: $counter",
+              style: TextStyle(
+                color: Constants().colorSchedule,
+                fontSize: sizes.sizeFontSchedule,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            Visibility(
-              visible: referee != "",
-              child: Text(
-                "Scheidsrechter: $referee",
-                style: TextStyle(
-                    color: Constants().colorSchedule,
-                    fontSize: sizes.sizeFontSchedule,
-                    fontWeight: FontWeight.bold),
+          ),
+          Visibility(
+            visible: referee != "",
+            child: Text(
+              "Scheidsrechter: $referee",
+              style: TextStyle(
+                color: Constants().colorSchedule,
+                fontSize: sizes.sizeFontSchedule,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
-              height: 0.05 * sizes.screenHeight,
+          ),
+          SizedBox(height: 0.05 * sizes.screenHeight),
+          Text(
+            rssClean.clean(listOfItems[0]['hall']),
+            style: TextStyle(
+              color: Constants().colorSchedule,
+              fontSize: sizes.sizeFontSchedule,
+              fontWeight: FontWeight.bold,
             ),
-            Text(
-              rssClean.clean(listOfItems[0]['hall']),
-              style: TextStyle(
-                  color: Constants().colorSchedule,
-                  fontSize: sizes.sizeFontSchedule,
-                  fontWeight: FontWeight.bold),
+          ),
+          Text(
+            rssClean.clean(listOfItems[0]['street']),
+            style: TextStyle(
+              color: Constants().colorSchedule,
+              fontSize: sizes.sizeFontSchedule,
+              fontWeight: FontWeight.bold,
             ),
-            Text(
-              rssClean.clean(listOfItems[0]['street']),
-              style: TextStyle(
-                  color: Constants().colorSchedule,
-                  fontSize: sizes.sizeFontSchedule,
-                  fontWeight: FontWeight.bold),
+          ),
+          Text(
+            listOfItems[0]['postal'],
+            style: TextStyle(
+              color: Constants().colorSchedule,
+              fontSize: sizes.sizeFontSchedule,
+              fontWeight: FontWeight.bold,
             ),
-            Text(
-              listOfItems[0]['postal'],
-              style: TextStyle(
-                  color: Constants().colorSchedule,
-                  fontSize: sizes.sizeFontSchedule,
-                  fontWeight: FontWeight.bold),
-            ),
-            separator(),
-          ],
-        ));
+          ),
+          separator(),
+        ],
+      ),
+    );
   }
 
   Divider separator() {
