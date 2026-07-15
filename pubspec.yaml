@@ -3,7 +3,7 @@ description: Aetos Team App
 
 publish_to: 'none'
 
-version: 6.0.0+600000
+version: 7.0.0+700000
 
 environment:
   sdk: ">=3.9.2 <=4.0.0"

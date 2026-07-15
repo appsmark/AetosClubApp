@@ -21,8 +21,11 @@ class RssClean {
     );
     result = result.replaceAll("Engeltherm ", "");
     result = result.replaceAll("Eurosped ", "");
+    result = result.replaceAll("Grol/", "");
+    result = result.replaceAll("GTH/", "");
     result = result.replaceAll("Ikvolleybal.nl/", "");
     result = result.replaceAll("Jumbo Van Andel-", "");
+    result = result.replaceAll("Morgana ", "");
     result = result.replaceAll("Rageroom Venlo ", "");
     result = result.replaceAll("Rebo Woningmakelaars ", "");
     result = result.replaceAll("Rensa Family ", "");
@@ -30,6 +33,7 @@ class RssClean {
     result = result.replaceAll("Sportclub ", "");
     result = result.replaceAll("Steenderen ", "");
     result = result.replaceAll("'Topklimaat in Volleybal' ", "");
+    result = result.replaceAll("Vallei Finance Group ", "");
     result = result.replaceAll("VoCASA/Pegasus ", "VOCASA ");
     result = result.replaceAll("Volleybalvereniging ", "");
     result = result.replaceAll("Volleybal Club Varsseveld ", "");
