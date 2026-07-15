@@ -39,6 +39,7 @@ class Sizes {
     sizeFontButton = 0.045 * screenHeight;
     sizeFontSelectTeamButton = 0.025 * screenHeight;
     sizeFontCompetition = 0.032 * screenHeight;
+    sizeFontTitle = 0.029 * screenHeight;
     if (Platform.isIOS) {
       if (tablet) {
         heightToolbar = 0.09 * screenHeight;
@@ -48,6 +49,7 @@ class Sizes {
         heightToolbar = 0.1 * screenHeight;
         sizeFontRanking = 0.04 * screenWidth;
         sizeFontHallInfo = 0.025 * screenWidth;
+        sizeFontTitle = 0.024 * screenHeight;
       }
     } else {
       if (tablet) {
@@ -63,7 +65,7 @@ class Sizes {
     sizeFontResults = 0.025 * screenHeight;
     sizeFontSchedule = 0.025 * screenHeight;
     sizeFontSelection = 0.03 * screenHeight;
-    sizeFontTitle = 0.029 * screenHeight;
+
     spacing = 0.1 * screenHeight;
     spacingButtons = 0.02 * screenHeight;
     infoItemHeight = 0.058 * screenHeight;
