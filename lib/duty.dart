@@ -45,6 +45,10 @@ class _DutyState extends State<Duty> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Constants().colorBackground,
+      appBar: AppBar(
+        toolbarHeight: 0.01 * sizes.screenHeight,
+        backgroundColor: Constants().colorBackground,
+      ),
       body: Column(
         children: [
           separator(),

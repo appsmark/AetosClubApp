@@ -41,93 +41,102 @@ class _RankingState extends State<Ranking> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Constants().colorBackground,
-        body: Column(
-          children: [
-            SizedBox(
-              height: 0.05 * sizes.screenHeight,
-            ),
-            separator(),
-            GestureDetector(
-              onTap: () {
-                displayMode++;
-                if (displayMode > 2) {
-                  displayMode = 0;
-                }
-                setState(() {});
-              },
-              child: Text(
-                textAlign: TextAlign.center,
-                displayMode == 0
-                    ? data.competition
-                    : "${data.competition}\n${displayModeString[displayMode]}",
-                style: TextStyle(
-                    color: Constants().colorCompetition,
-                    fontWeight: FontWeight.bold,
-                    fontSize: sizes.sizeFontCompetition),
+      backgroundColor: Constants().colorBackground,
+      body: Column(
+        children: [
+          SizedBox(height: 0.01 * sizes.screenHeight),
+          separator(),
+          GestureDetector(
+            onTap: () {
+              displayMode++;
+              if (displayMode > 2) {
+                displayMode = 0;
+              }
+              setState(() {});
+            },
+            child: Text(
+              textAlign: TextAlign.center,
+              displayMode == 0
+                  ? data.competition
+                  : "${data.competition}\n${displayModeString[displayMode]}",
+              style: TextStyle(
+                color: Constants().colorCompetition,
+                fontWeight: FontWeight.bold,
+                fontSize: sizes.sizeFontCompetition,
               ),
             ),
-            separator(),
-            for (var item in listOfItems)
-              Padding(
-                padding: EdgeInsets.only(
-                    top: 0.018 * sizes.screenHeight,
-                    left: 0.06 * sizes.screenWidth,
-                    right: 0.04 * sizes.screenWidth),
-                child: Row(
-                  children: [
-                    SizedBox(
-                        width: 0.065 * sizes.screenWidth,
-                        child: Text(
-                          "${listOfItems.indexOf(item) + 1}",
-                          textAlign: TextAlign.end,
-                          style: TextStyle(
-                              color: item['team'].contains(
-                                      "AETOS ${team.currentTeam.replaceAll('-', ' ')}")
-                                  ? Constants().colorTitle
-                                  : Constants().colorRanking,
-                              fontWeight: FontWeight.bold,
-                              fontSize: sizes.sizeFontRanking),
-                        )),
-                    SizedBox(
-                      width: 0.05 * sizes.screenWidth,
-                    ),
-                    SizedBox(
-                        width: 0.4 * sizes.screenWidth,
-                        child: Text(
-                          item['team'],
-                          style: TextStyle(
-                              color: item['team'].contains(
-                                      "AETOS ${team.currentTeam.replaceAll('-', ' ')}")
-                                  ? Constants().colorTitle
-                                  : Constants().colorRanking,
-                              fontWeight: FontWeight.bold,
-                              fontSize: sizes.sizeFontRanking),
-                        )),
-                    Container(
-                      alignment: Alignment.centerRight,
-                      width: 0.34 * sizes.screenWidth,
-                      child: Text(
-                        displayMode == 0
-                            ? "${item['games']} - ${item['points']}"
-                            : displayMode == 1
-                                ? "${item['setswon']} - ${item['setslost']}"
-                                : "${item['pointswon']} - ${item['pointslost']}",
-                        style: GoogleFonts.robotoMono(
-                          color: item['team'].contains(
-                                  "AETOS ${team.currentTeam.replaceAll('-', ' ')}")
-                              ? Constants().colorTitle
-                              : Constants().colorRanking,
-                          fontWeight: FontWeight.bold,
-                          fontSize: sizes.sizeFontRanking,
-                        ),
+          ),
+          separator(),
+          for (var item in listOfItems)
+            Padding(
+              padding: EdgeInsets.only(
+                top: 0.018 * sizes.screenHeight,
+                left: 0.06 * sizes.screenWidth,
+                right: 0.04 * sizes.screenWidth,
+              ),
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 0.065 * sizes.screenWidth,
+                    child: Text(
+                      "${listOfItems.indexOf(item) + 1}",
+                      textAlign: TextAlign.end,
+                      style: TextStyle(
+                        color:
+                            item['team'].contains(
+                              "AETOS ${team.currentTeam.replaceAll('-', ' ')}",
+                            )
+                            ? Constants().colorTitle
+                            : Constants().colorRanking,
+                        fontWeight: FontWeight.bold,
+                        fontSize: sizes.sizeFontRanking,
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                  SizedBox(width: 0.05 * sizes.screenWidth),
+                  SizedBox(
+                    width: 0.4 * sizes.screenWidth,
+                    child: Text(
+                      item['team'],
+                      style: TextStyle(
+                        color:
+                            item['team'].contains(
+                              "AETOS ${team.currentTeam.replaceAll('-', ' ')}",
+                            )
+                            ? Constants().colorTitle
+                            : Constants().colorRanking,
+                        fontWeight: FontWeight.bold,
+                        fontSize: sizes.sizeFontRanking,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.centerRight,
+                    width: 0.34 * sizes.screenWidth,
+                    child: Text(
+                      displayMode == 0
+                          ? "${item['games']} - ${item['points']}"
+                          : displayMode == 1
+                          ? "${item['setswon']} - ${item['setslost']}"
+                          : "${item['pointswon']} - ${item['pointslost']}",
+                      style: GoogleFonts.robotoMono(
+                        color:
+                            item['team'].contains(
+                              "AETOS ${team.currentTeam.replaceAll('-', ' ')}",
+                            )
+                            ? Constants().colorTitle
+                            : Constants().colorRanking,
+                        fontWeight: FontWeight.bold,
+                        fontSize: sizes.sizeFontRanking,
+                      ),
+                    ),
+                  ),
+                ],
               ),
-          ],
-        ));
+            ),
+        ],
+      ),
+    );
   }
 
   Divider separator() {

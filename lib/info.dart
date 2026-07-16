@@ -33,95 +33,108 @@ class _InfoState extends State<Info> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Constants().colorBackground,
-      body: Center(child: Builder(
-        builder: (BuildContext context) {
-          return Column(
-            children: [
-              Expanded(
+      appBar: AppBar(
+        toolbarHeight: 0.02 * sizes.screenHeight,
+        backgroundColor: Constants().colorBackground,
+      ),
+      body: Center(
+        child: Builder(
+          builder: (BuildContext context) {
+            return Column(
+              children: [
+                Expanded(
                   child: Scrollbar(
-                controller: scrollController,
-                interactive: true,
-                thumbVisibility: true,
-                child: ListView.builder(
                     controller: scrollController,
-                    itemCount: dataInfo.data.length,
-                    itemBuilder: (BuildContext ctxt, int index) {
-                      return SizedBox(
-                        height: sizes.infoItemHeight,
-                        child: Column(
-                          children: [
-                            if (dataInfo.data[index]['type'] == 'header')
-                              separator(),
-                            GestureDetector(
-                              onTap: () {
-                                persistent.setInfoListIndex(index - 5);
-                                if (dataInfo.data[index]['type'] == 'image') {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
+                    interactive: true,
+                    thumbVisibility: true,
+                    child: ListView.builder(
+                      controller: scrollController,
+                      itemCount: dataInfo.data.length,
+                      itemBuilder: (BuildContext ctxt, int index) {
+                        return SizedBox(
+                          height: sizes.infoItemHeight,
+                          child: Column(
+                            children: [
+                              if (dataInfo.data[index]['type'] == 'header')
+                                separator(),
+                              GestureDetector(
+                                onTap: () {
+                                  persistent.setInfoListIndex(index - 5);
+                                  if (dataInfo.data[index]['type'] == 'image') {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
                                         builder: (context) => InfoImage(
-                                              title: dataInfo.data[index]
-                                                  ['title'],
-                                              file: dataInfo.data[index]
-                                                  ['file'],
-                                            )),
-                                  );
-                                }
-                                if (dataInfo.data[index]['type'] == 'file') {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
+                                          title: dataInfo.data[index]['title'],
+                                          file: dataInfo.data[index]['file'],
+                                        ),
+                                      ),
+                                    );
+                                  }
+                                  if (dataInfo.data[index]['type'] == 'file') {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
                                         builder: (context) => ViewPDFFromUrl(
-                                              url: dataInfo.data[index]['file'],
-                                              title: dataInfo.data[index]
-                                                  ['title'],
-                                            )),
-                                  );
-                                }
-                              },
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  if (dataInfo.data[index]['type'] == 'header')
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                          left: 0.1 * sizes.screenWidth),
-                                      child: Text(
-                                        dataInfo.data[index]['title'],
-                                        style: TextStyle(
+                                          url: dataInfo.data[index]['file'],
+                                          title: dataInfo.data[index]['title'],
+                                        ),
+                                      ),
+                                    );
+                                  }
+                                },
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    if (dataInfo.data[index]['type'] ==
+                                        'header')
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                          left: 0.1 * sizes.screenWidth,
+                                        ),
+                                        child: Text(
+                                          dataInfo.data[index]['title'],
+                                          style: TextStyle(
                                             color: Constants().colorAetosBlue,
                                             fontSize: sizes.sizeFontSchedule,
-                                            fontWeight: FontWeight.bold),
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
                                       ),
-                                    ),
-                                  if ((dataInfo.data[index]['type'] ==
-                                          'file') ||
-                                      (dataInfo.data[index]['type'] == 'image'))
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                          left: 0.15 * sizes.screenWidth),
-                                      child: Text(
-                                        dataInfo.data[index]['title'],
-                                        style: TextStyle(
+                                    if ((dataInfo.data[index]['type'] ==
+                                            'file') ||
+                                        (dataInfo.data[index]['type'] ==
+                                            'image'))
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                          left: 0.15 * sizes.screenWidth,
+                                        ),
+                                        child: Text(
+                                          dataInfo.data[index]['title'],
+                                          style: TextStyle(
                                             color: Constants().colorAetosAmber,
                                             fontSize: sizes.sizeFontSchedule,
-                                            fontWeight: FontWeight.bold),
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
                                       ),
-                                    ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                            if (dataInfo.data[index]['type'] == 'header')
-                              separator(),
-                          ],
-                        ),
-                      );
-                    }),
-              )),
-            ],
-          );
-        },
-      )),
+                              if (dataInfo.data[index]['type'] == 'header')
+                                separator(),
+                            ],
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ),
+              ],
+            );
+          },
+        ),
+      ),
     );
   }
 

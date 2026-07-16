@@ -36,87 +36,70 @@ class _ResultsState extends State<Results> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Constants().colorBackground,
-        /*
-        appBar: AppBar(
-          toolbarHeight: sizes.heightToolbar,
-          backgroundColor: Constants().colorBackground,
-          leading: GestureDetector(
-            child: Icon(
-              Icons.arrow_back,
-              size: 0.05 * sizes.screenHeight,
-              color: Constants().colorTitle,
+      backgroundColor: Constants().colorBackground,
+
+      body: Column(
+        children: [
+          SizedBox(height: 0.01 * sizes.screenHeight),
+          separator(),
+          Expanded(
+            child: ListView.builder(
+              itemCount: listOfItems.length,
+              itemBuilder: (BuildContext ctxt, int index) {
+                return Column(
+                  children: [
+                    Text(
+                      listOfItems[index]['game'],
+                      style: TextStyle(
+                        color: Constants().colorResults,
+                        fontSize: sizes.sizeFontResults,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          listOfItems[index]['result'],
+                          style: TextStyle(
+                            color: Constants().colorResults,
+                            fontSize: sizes.sizeFontResults,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(width: 0.06 * sizes.screenWidth),
+                        Text(
+                          listOfItems[index]['totals1'] != ""
+                              ? "${listOfItems[index]['totals1']}-${listOfItems[index]['totals2']}"
+                              : "",
+                          style: TextStyle(
+                            color: Constants().colorResults,
+                            fontSize: sizes.sizeFontResults,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Text(
+                      listOfItems[index]['sets'].toString().replaceAll(
+                        ' ',
+                        '  ',
+                      ),
+                      style: TextStyle(
+                        color: Constants().colorResults,
+                        fontSize: sizes.sizeFontResults,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    separator(),
+                  ],
+                );
+              },
             ),
-            onTap: () {
-              Navigator.pop(context);
-            },
           ),
-          centerTitle: true,
-          
-          title: Text(
-            "UITSLAGEN",
-            style: TextStyle(
-                color: Constants().colorTitle,
-                fontSize: sizes.sizeFontTitle,
-                fontWeight: FontWeight.bold),
-          ),
-        ),*/
-        body: Column(
-          children: [
-            SizedBox(
-              height: 0.05 * sizes.screenHeight,
-            ),
-            separator(),
-            Expanded(
-                child: ListView.builder(
-                    itemCount: listOfItems.length,
-                    itemBuilder: (BuildContext ctxt, int index) {
-                      return Column(
-                        children: [
-                          Text(
-                            listOfItems[index]['game'],
-                            style: TextStyle(
-                                color: Constants().colorResults,
-                                fontSize: sizes.sizeFontResults,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                listOfItems[index]['result'],
-                                style: TextStyle(
-                                    color: Constants().colorResults,
-                                    fontSize: sizes.sizeFontResults,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(width: 0.06 * sizes.screenWidth),
-                              Text(
-                                listOfItems[index]['totals1'] != ""
-                                    ? "${listOfItems[index]['totals1']}-${listOfItems[index]['totals2']}"
-                                    : "",
-                                style: TextStyle(
-                                    color: Constants().colorResults,
-                                    fontSize: sizes.sizeFontResults,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                          Text(
-                            listOfItems[index]['sets']
-                                .toString()
-                                .replaceAll(' ', '  '),
-                            style: TextStyle(
-                                color: Constants().colorResults,
-                                fontSize: sizes.sizeFontResults,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          separator(),
-                        ],
-                      );
-                    }))
-          ],
-        ));
+        ],
+      ),
+    );
   }
 
   Divider separator() {

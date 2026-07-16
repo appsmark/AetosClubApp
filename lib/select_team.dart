@@ -25,41 +25,44 @@ class _SelectTeamState extends State<SelectTeam> {
     return Scaffold(
       backgroundColor: Constants().colorBackground,
       appBar: AppBar(
-        toolbarHeight: sizes.heightToolbar,
+        toolbarHeight: 0.01 * sizes.screenHeight,
         backgroundColor: Constants().colorBackground,
       ),
       body: GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 6,
-          ),
-          itemCount: teamInfo.teamsInfo.length,
-          itemBuilder: (BuildContext context, int index) {
-            return GestureDetector(
-              onTap: () {
-                team.set(teamInfo.teamsInfo[index][0]);
-                setState(() {});
-              },
-              onLongPress: () {
-                team.set(teamInfo.teamsInfo[index][0]);
-                setState(() {});
-              },
-              child: Card(
-                color: team.currentTeam == teamInfo.teamsInfo[index][0]
-                    ? Constants().colorTitle
-                    : Constants().colorButton,
-                child: Center(
-                    child: Text(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 6,
+        ),
+        itemCount: teamInfo.teamsInfo.length,
+        itemBuilder: (BuildContext context, int index) {
+          return GestureDetector(
+            onTap: () {
+              team.set(teamInfo.teamsInfo[index][0]);
+              setState(() {});
+            },
+            onLongPress: () {
+              team.set(teamInfo.teamsInfo[index][0]);
+              setState(() {});
+            },
+            child: Card(
+              color: team.currentTeam == teamInfo.teamsInfo[index][0]
+                  ? Constants().colorTitle
+                  : Constants().colorButton,
+              child: Center(
+                child: Text(
                   teamInfo.teamsInfo[index][0],
                   style: TextStyle(
-                      color: team.currentTeam == teamInfo.teamsInfo[index][0]
-                          ? Constants().colorAetosAmber
-                          : Constants().colorAetosMaroon,
-                      fontSize: sizes.sizeFontSelectTeamButton,
-                      fontWeight: FontWeight.bold),
-                )),
+                    color: team.currentTeam == teamInfo.teamsInfo[index][0]
+                        ? Constants().colorAetosAmber
+                        : Constants().colorAetosMaroon,
+                    fontSize: sizes.sizeFontSelectTeamButton,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
-            );
-          }),
+            ),
+          );
+        },
+      ),
     );
   }
 }

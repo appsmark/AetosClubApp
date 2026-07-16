@@ -84,7 +84,7 @@ class _ScheduleState extends State<Schedule> {
       backgroundColor: Constants().colorBackground,
       body: Column(
         children: [
-          SizedBox(height: 0.02 * sizes.screenHeight),
+          SizedBox(height: 0.01 * sizes.screenHeight),
           separatorWide(),
           GestureDetector(
             onTap: () {
