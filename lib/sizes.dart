@@ -60,6 +60,7 @@ class Sizes {
         heightToolbar = 0.1 * screenHeight;
         sizeFontRanking = 0.047 * screenWidth;
         sizeFontHallInfo = 0.04 * screenWidth;
+        sizeFontTitle = 0.024 * screenHeight;
       }
     }
     sizeFontResults = 0.025 * screenHeight;

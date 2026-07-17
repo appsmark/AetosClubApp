@@ -24,10 +24,6 @@ class _SelectTeamState extends State<SelectTeam> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Constants().colorBackground,
-      appBar: AppBar(
-        toolbarHeight: 0.01 * sizes.screenHeight,
-        backgroundColor: Constants().colorBackground,
-      ),
       body: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 6,

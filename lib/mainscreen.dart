@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
+import 'ads.dart';
 import 'constants.dart';
 import 'contact.dart';
 import 'data.dart';
@@ -22,6 +24,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreen extends State<MainScreen> {
+  Ads ads = Ads.instance;
   HallInfo hallInfo = HallInfo.instance;
   Persistent persistent = Persistent.instance;
   Sizes sizes = Sizes.instance;
@@ -43,6 +46,7 @@ class _MainScreen extends State<MainScreen> {
     setState(() {
       _selectedIndex = index;
       persistent.setMenuIndex(index);
+      ads.next();
     });
   }
 
@@ -50,6 +54,15 @@ class _MainScreen extends State<MainScreen> {
     setState(() {
       _selectedIndex = persistent.menuIndex;
     });
+  }
+
+  Future<void> launchWebsite() async {
+    String website = 'www.${ads.getWebsite()}';
+    final Uri url = Uri(scheme: 'http', host: website);
+
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      throw Exception('Could not launch $url');
+    }
   }
 
   @override
@@ -71,7 +84,9 @@ class _MainScreen extends State<MainScreen> {
             child: Text(
               " ${team.currentTeam}",
               style: TextStyle(
-                fontSize: sizes.sizeFontTitle,
+                fontSize: sizes.tablet
+                    ? 0.48 * sizes.sizeFontTitle
+                    : sizes.sizeFontTitle,
                 fontWeight: FontWeight.bold,
                 color: Constants().colorAetosBlue,
               ),
@@ -86,6 +101,20 @@ class _MainScreen extends State<MainScreen> {
               height: 0.9 * sizes.heightToolbar,
             ),
           ),
+          actions: [
+            Padding(
+              padding: EdgeInsets.only(right: 0.02 * sizes.screenWidth),
+              child: GestureDetector(
+                onTap: () {
+                  launchWebsite();
+                },
+                child: Image.asset(
+                  "assets/ads/${ads.getLogo()}",
+                  width: 0.25 * sizes.screenWidth,
+                ),
+              ),
+            ),
+          ],
         ),
         body: Center(child: widgetOptions.elementAt(_selectedIndex)),
         bottomNavigationBar: BottomNavigationBar(
