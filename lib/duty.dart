@@ -7,6 +7,7 @@ import 'duty_json.dart';
 import 'points_data.dart';
 import 'points_json.dart';
 import 'rss_clean.dart';
+import 'rss_duty.dart';
 import 'sizes.dart';
 
 class Duty extends StatefulWidget {
@@ -25,20 +26,18 @@ class _DutyState extends State<Duty> {
   PointsData pointsData = PointsData.instance;
   List pointsInfo = [];
   RssClean rssClean = RssClean();
+  RssDuty rssDuty = RssDuty.instance;
 
-  Future getData() async {
-    dutyData.clear();
-    await duty.getDuty(false);
-    pointsData.clear();
-    await points.getPoints();
-    pointsInfo = pointsData.get(team.currentTeam);
-    setState(() {});
+  void update() {
+    if (mounted) {
+      setState(() {});
+    }
   }
 
   @override
   void initState() {
     super.initState();
-    getData();
+    rssDuty.addListener(update);
   }
 
   @override

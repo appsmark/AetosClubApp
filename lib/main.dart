@@ -8,6 +8,7 @@ import 'data_info.dart';
 import 'hall_info.dart';
 import 'persistent.dart';
 import 'root.dart';
+import 'rss_duty.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,6 +27,9 @@ void main() {
 
   HallInfo hallInfo = HallInfo.instance;
   hallInfo.get();
+
+  RssDuty rssDuty = RssDuty.instance;
+  rssDuty.getSchedule();
 
   // Device orientation
   SystemChrome.setPreferredOrientations([

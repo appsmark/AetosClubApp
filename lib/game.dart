@@ -42,7 +42,7 @@ class _GameState extends State<Game> {
   Future getData() async {
     DateTime tempDate;
     await rss.getSchedule();
-    await duty.getDuty(true);
+    //   await duty.getDuty(true);
     listOfItems = data.getGames();
     listOfDuties = dutyData.getGameData();
     counter = "";

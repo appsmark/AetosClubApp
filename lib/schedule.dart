@@ -46,7 +46,7 @@ class _ScheduleState extends State<Schedule> {
   Future getData() async {
     DateTime tempDate;
     await rss.getSchedule();
-    await dutyJson.getDuty(true);
+    // await dutyJson.getDuty(true);
 
     setState(() {
       listOfItems = data.getGames();
