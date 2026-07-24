@@ -4,7 +4,6 @@ import 'package:intl/intl.dart';
 import 'constants.dart';
 import 'data.dart';
 import 'duty_data.dart';
-import 'duty_json.dart';
 import 'rss_clean.dart';
 import 'rss_schedule.dart';
 import 'schedule_data.dart';
@@ -24,7 +23,6 @@ class _ScheduleState extends State<Schedule> {
   ScheduleData data = ScheduleData.instance;
   DutyData dutyData = DutyData.instance;
   String dutyTeam = "";
-  DutyJson dutyJson = DutyJson();
   List listOfDuties = [
     {'date': '', 'counter': '', 'referee': ''},
   ];

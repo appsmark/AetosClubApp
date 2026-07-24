@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'data.dart';
 import 'duty_data.dart';
-import 'duty_json.dart';
 import 'points_data.dart';
 import 'points_json.dart';
 import 'rss_clean.dart';
@@ -20,7 +19,6 @@ class Duty extends StatefulWidget {
 class _DutyState extends State<Duty> {
   int i = 0;
   Sizes sizes = Sizes.instance;
-  DutyJson duty = DutyJson();
   DutyData dutyData = DutyData.instance;
   JsonPoints points = JsonPoints();
   PointsData pointsData = PointsData.instance;

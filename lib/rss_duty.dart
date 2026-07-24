@@ -43,7 +43,10 @@ class RssDuty extends ChangeNotifier {
     String endtime = "";
     String hall = "";
     String starttime = "";
-
+    String hometeam = "";
+    String visitor = "";
+    String referee = "";
+    String counter = "";
     Iterable creatorElement;
     XmlElement? node;
     final document = XmlDocument.parse(response.body);
@@ -96,7 +99,126 @@ class RssDuty extends ChangeNotifier {
           "hall": hall,
           "duty": dutyTeam,
         });
-      } else {}
+      } else {
+        if (node.firstChild?.value == "Volley Stars") {
+          creatorElement = item
+              .elementAt(i)
+              .findElements(
+                'datum',
+                namespace: 'https://aetos-arnhem.nl/rss/ns',
+              );
+          date = creatorElement.single.text;
+
+          creatorElement = item
+              .elementAt(i)
+              .findElements(
+                'begintijd',
+                namespace: 'https://aetos-arnhem.nl/rss/ns',
+              );
+          starttime = creatorElement.single.text;
+
+          creatorElement = item
+              .elementAt(i)
+              .findElements(
+                'eindtijd',
+                namespace: 'https://aetos-arnhem.nl/rss/ns',
+              );
+          endtime = creatorElement.single.text;
+          creatorElement = item
+              .elementAt(i)
+              .findElements(
+                'sporthal',
+                namespace: 'https://aetos-arnhem.nl/rss/ns',
+              );
+          hall = creatorElement.single.text;
+          creatorElement = item
+              .elementAt(i)
+              .findElements(
+                'team',
+                namespace: 'https://aetos-arnhem.nl/rss/ns',
+              );
+          dutyTeam = creatorElement.single.text;
+          dutyTeam = dutyTeam.replaceAll('DS ', "D");
+          dutyTeam = dutyTeam.replaceAll('HS ', "H");
+          dutyTeam = dutyTeam.replaceAll(' ', "");
+          dutyData.add({
+            "date": date,
+            "time": starttime,
+            "endtime": endtime,
+            "hall": hall,
+            "duty": dutyTeam,
+          });
+        } else {
+          creatorElement = item
+              .elementAt(i)
+              .findElements(
+                'datum',
+                namespace: 'https://aetos-arnhem.nl/rss/ns',
+              );
+          date = creatorElement.single.text;
+          creatorElement = item
+              .elementAt(i)
+              .findElements(
+                'tijd',
+                namespace: 'https://aetos-arnhem.nl/rss/ns',
+              );
+          starttime = creatorElement.single.text;
+          creatorElement = item
+              .elementAt(i)
+              .findElements(
+                'sporthal',
+                namespace: 'https://aetos-arnhem.nl/rss/ns',
+              );
+          hall = creatorElement.single.text;
+
+          creatorElement = item
+              .elementAt(i)
+              .findElements(
+                'fluiten',
+                namespace: 'https://aetos-arnhem.nl/rss/ns',
+              );
+          referee = creatorElement.single.text;
+          referee = referee.replaceAll('DS ', "D");
+          referee = referee.replaceAll('HS ', "H");
+          referee = referee.replaceAll(' ', "");
+          creatorElement = item
+              .elementAt(i)
+              .findElements(
+                'tellen',
+                namespace: 'https://aetos-arnhem.nl/rss/ns',
+              );
+          counter = creatorElement.single.text;
+          counter = counter.replaceAll('DS ', "D");
+          counter = counter.replaceAll('HS ', "H");
+          counter = counter.replaceAll(' ', "");
+          creatorElement = item
+              .elementAt(i)
+              .findElements(
+                'thuisteam',
+                namespace: 'https://aetos-arnhem.nl/rss/ns',
+              );
+          hometeam = creatorElement.single.text;
+          creatorElement = item
+              .elementAt(i)
+              .findElements(
+                'uitteam',
+                namespace: 'https://aetos-arnhem.nl/rss/ns',
+              );
+          visitor = creatorElement.single.text;
+
+          dutyData.add({
+            "date": date,
+            "time": starttime,
+            "endtime": endtime,
+            "hall": hall,
+            //            "duty": dutyTeam,
+            "hometeam": hometeam,
+            "visitor": visitor,
+            "referee": referee,
+            "counter": counter,
+          });
+        }
+      }
     }
 
     notifyListeners();

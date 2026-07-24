@@ -3,7 +3,6 @@ import 'package:intl/intl.dart';
 
 import 'constants.dart';
 import 'duty_data.dart';
-import 'duty_json.dart';
 import 'rss_clean.dart';
 import 'rss_schedule.dart';
 import 'schedule_data.dart';
@@ -35,7 +34,6 @@ class _GameState extends State<Game> {
   RssClean rssClean = RssClean();
   RssSchedule rss = RssSchedule();
   Sizes sizes = Sizes.instance;
-  DutyJson duty = DutyJson();
   String referee = "";
   String counter = "";
 
