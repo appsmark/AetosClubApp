@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
+import 'package:intl/intl.dart';
 import 'package:rss_dart/dart_rss.dart';
 import 'package:xml/xml.dart';
 
@@ -14,13 +15,13 @@ class RssDuty extends ChangeNotifier {
 
   RssDuty._internal();
 
-  void getIt() {}
   Future<bool> getSchedule() async {
     bool result = false;
     Client client = Client();
-    getRssFeed(client).then((value) {
-      result = true;
-    });
+    getRssFeed(client);
+    //    getRssFeed(client).then((value) {
+    //    result = true;
+    //});
     return result;
   }
 
@@ -30,13 +31,20 @@ class RssDuty extends ChangeNotifier {
       response = await client.get(
         Uri(
           scheme: 'https',
-          host: 'aetos-wedstijden.lovable.app',
+          host: 'aetos-wedstrijden.lovable.app',
           path: '/api/public/rss',
         ),
+        //Uri(scheme: 'http', host: 'apps-mark.nl', path: '/aetos/testRss'),
       );
+      parseRss(response.body);
     } catch (e) {
       debugPrint(e.toString());
     }
+    return (response.body);
+  }
+
+  void parseRss(String response) {
+    DateTime tempDate;
     String date = "";
 
     String dutyTeam = "";
@@ -49,66 +57,20 @@ class RssDuty extends ChangeNotifier {
     String counter = "";
     Iterable creatorElement;
     XmlElement? node;
-    final document = XmlDocument.parse(response.body);
-    final item = document.findAllElements('item');
+    XmlDocument document = XmlDocument.parse(response);
+    Iterable<XmlElement> item = document.findAllElements('item');
+
     for (int i = 0; i < document.findAllElements('item').length; i++) {
-      //    debugPrint(document.findAllElements('item').toString());
       node = item.elementAt(i).getElement('category');
-      if (node!.firstChild?.value == "Zaaldienst") {
-        creatorElement = item
-            .elementAt(i)
-            .findElements('datum', namespace: 'https://aetos-arnhem.nl/rss/ns');
-        date = creatorElement.single.text;
 
-        creatorElement = item
-            .elementAt(i)
-            .findElements(
-              'begintijd',
-              namespace: 'https://aetos-arnhem.nl/rss/ns',
-            );
-        starttime = creatorElement.single.text;
+      creatorElement = item
+          .elementAt(i)
+          .findElements('datum', namespace: 'https://aetos-arnhem.nl/rss/ns');
+      date = creatorElement.single.text;
+      tempDate = DateFormat("dd-MM-yyyy").parse(date);
 
-        creatorElement = item
-            .elementAt(i)
-            .findElements(
-              'eindtijd',
-              namespace: 'https://aetos-arnhem.nl/rss/ns',
-            );
-        endtime = creatorElement.single.text;
-
-        creatorElement = item
-            .elementAt(i)
-            .findElements(
-              'sporthal',
-              namespace: 'https://aetos-arnhem.nl/rss/ns',
-            );
-        hall = creatorElement.single.text;
-
-        creatorElement = item
-            .elementAt(i)
-            .findElements('team', namespace: 'https://aetos-arnhem.nl/rss/ns');
-        dutyTeam = creatorElement.single.text;
-        dutyTeam = dutyTeam.replaceAll('DS ', "D");
-        dutyTeam = dutyTeam.replaceAll('HS ', "H");
-        dutyTeam = dutyTeam.replaceAll(' ', "");
-
-        dutyData.add({
-          "date": date,
-          "time": starttime,
-          "endtime": endtime,
-          "hall": hall,
-          "duty": dutyTeam,
-        });
-      } else {
-        if (node.firstChild?.value == "Volley Stars") {
-          creatorElement = item
-              .elementAt(i)
-              .findElements(
-                'datum',
-                namespace: 'https://aetos-arnhem.nl/rss/ns',
-              );
-          date = creatorElement.single.text;
-
+      if (tempDate.difference(DateTime.now()).inDays >= 0) {
+        if (node!.firstChild?.value == "Zaaldienst") {
           creatorElement = item
               .elementAt(i)
               .findElements(
@@ -124,6 +86,7 @@ class RssDuty extends ChangeNotifier {
                 namespace: 'https://aetos-arnhem.nl/rss/ns',
               );
           endtime = creatorElement.single.text;
+
           creatorElement = item
               .elementAt(i)
               .findElements(
@@ -131,6 +94,7 @@ class RssDuty extends ChangeNotifier {
                 namespace: 'https://aetos-arnhem.nl/rss/ns',
               );
           hall = creatorElement.single.text;
+
           creatorElement = item
               .elementAt(i)
               .findElements(
@@ -141,7 +105,9 @@ class RssDuty extends ChangeNotifier {
           dutyTeam = dutyTeam.replaceAll('DS ', "D");
           dutyTeam = dutyTeam.replaceAll('HS ', "H");
           dutyTeam = dutyTeam.replaceAll(' ', "");
+
           dutyData.add({
+            "type": "zaaldienst",
             "date": date,
             "time": starttime,
             "endtime": endtime,
@@ -149,80 +115,115 @@ class RssDuty extends ChangeNotifier {
             "duty": dutyTeam,
           });
         } else {
-          creatorElement = item
-              .elementAt(i)
-              .findElements(
-                'datum',
-                namespace: 'https://aetos-arnhem.nl/rss/ns',
-              );
-          date = creatorElement.single.text;
-          creatorElement = item
-              .elementAt(i)
-              .findElements(
-                'tijd',
-                namespace: 'https://aetos-arnhem.nl/rss/ns',
-              );
-          starttime = creatorElement.single.text;
-          creatorElement = item
-              .elementAt(i)
-              .findElements(
-                'sporthal',
-                namespace: 'https://aetos-arnhem.nl/rss/ns',
-              );
-          hall = creatorElement.single.text;
+          if (node.firstChild?.value == "Volley Stars") {
+            creatorElement = item
+                .elementAt(i)
+                .findElements(
+                  'begintijd',
+                  namespace: 'https://aetos-arnhem.nl/rss/ns',
+                );
+            starttime = creatorElement.single.text;
 
-          creatorElement = item
-              .elementAt(i)
-              .findElements(
-                'fluiten',
-                namespace: 'https://aetos-arnhem.nl/rss/ns',
-              );
-          referee = creatorElement.single.text;
-          referee = referee.replaceAll('DS ', "D");
-          referee = referee.replaceAll('HS ', "H");
-          referee = referee.replaceAll(' ', "");
-          creatorElement = item
-              .elementAt(i)
-              .findElements(
-                'tellen',
-                namespace: 'https://aetos-arnhem.nl/rss/ns',
-              );
-          counter = creatorElement.single.text;
-          counter = counter.replaceAll('DS ', "D");
-          counter = counter.replaceAll('HS ', "H");
-          counter = counter.replaceAll(' ', "");
-          creatorElement = item
-              .elementAt(i)
-              .findElements(
-                'thuisteam',
-                namespace: 'https://aetos-arnhem.nl/rss/ns',
-              );
-          hometeam = creatorElement.single.text;
-          creatorElement = item
-              .elementAt(i)
-              .findElements(
-                'uitteam',
-                namespace: 'https://aetos-arnhem.nl/rss/ns',
-              );
-          visitor = creatorElement.single.text;
+            creatorElement = item
+                .elementAt(i)
+                .findElements(
+                  'eindtijd',
+                  namespace: 'https://aetos-arnhem.nl/rss/ns',
+                );
+            endtime = creatorElement.single.text;
+            creatorElement = item
+                .elementAt(i)
+                .findElements(
+                  'sporthal',
+                  namespace: 'https://aetos-arnhem.nl/rss/ns',
+                );
+            hall = creatorElement.single.text;
+            creatorElement = item
+                .elementAt(i)
+                .findElements(
+                  'team',
+                  namespace: 'https://aetos-arnhem.nl/rss/ns',
+                );
+            dutyTeam = creatorElement.single.text;
+            dutyTeam = dutyTeam.replaceAll('DS ', "D");
+            dutyTeam = dutyTeam.replaceAll('HS ', "H");
+            dutyTeam = dutyTeam.replaceAll(' ', "");
+            dutyData.add({
+              "type": "volleystars",
+              "date": date,
+              "time": starttime,
+              "endtime": endtime,
+              "hall": hall,
+              "duty": dutyTeam,
+            });
+          } else {
+            creatorElement = item
+                .elementAt(i)
+                .findElements(
+                  'tijd',
+                  namespace: 'https://aetos-arnhem.nl/rss/ns',
+                );
+            starttime = creatorElement.single.text;
+            creatorElement = item
+                .elementAt(i)
+                .findElements(
+                  'sporthal',
+                  namespace: 'https://aetos-arnhem.nl/rss/ns',
+                );
+            hall = creatorElement.single.text;
 
-          dutyData.add({
-            "date": date,
-            "time": starttime,
-            "endtime": endtime,
-            "hall": hall,
-            //            "duty": dutyTeam,
-            "hometeam": hometeam,
-            "visitor": visitor,
-            "referee": referee,
-            "counter": counter,
-          });
+            creatorElement = item
+                .elementAt(i)
+                .findElements(
+                  'fluiten',
+                  namespace: 'https://aetos-arnhem.nl/rss/ns',
+                );
+            referee = creatorElement.single.text;
+            referee = referee.replaceAll('DS ', "D");
+            referee = referee.replaceAll('HS ', "H");
+            referee = referee.replaceAll(' ', "");
+            creatorElement = item
+                .elementAt(i)
+                .findElements(
+                  'tellen',
+                  namespace: 'https://aetos-arnhem.nl/rss/ns',
+                );
+            counter = creatorElement.single.text;
+            counter = counter.replaceAll('DS ', "D");
+            counter = counter.replaceAll('HS ', "H");
+            counter = counter.replaceAll(' ', "");
+            creatorElement = item
+                .elementAt(i)
+                .findElements(
+                  'thuisteam',
+                  namespace: 'https://aetos-arnhem.nl/rss/ns',
+                );
+            hometeam = creatorElement.single.text;
+            creatorElement = item
+                .elementAt(i)
+                .findElements(
+                  'uitteam',
+                  namespace: 'https://aetos-arnhem.nl/rss/ns',
+                );
+            visitor = creatorElement.single.text;
+
+            dutyData.add({
+              "type": "wedstrijd",
+              "date": date,
+              "time": starttime,
+              "endtime": endtime,
+              "hall": hall,
+              "hometeam": hometeam,
+              "visitor": visitor,
+              "referee": referee,
+              "counter": counter,
+            });
+          }
         }
       }
     }
 
     notifyListeners();
-    return (response.body);
   }
 
   Future<RssFeed> xgetRssFeed(Client client, String group) async {

@@ -48,42 +48,16 @@ class _DutyState extends State<Duty> {
       ),
       body: Column(
         children: [
-          separator(),
-          GestureDetector(
-            onTap: () {
-              //          popupRanking(context);
-            },
-            child: /*pointsInfo.isNotEmpty
-                ? pointsInfo[3]
-                    ? Text(
-                        "Stand Aetos punten: Doel behaald",
-                        style: TextStyle(
-                            color: Constants().colorTitle,
-                            fontSize: sizes.sizeFontSchedule,
-                            fontWeight: FontWeight.bold),
-                      )
-                    : Text(
-                        "Stand Aetos punten: ${pointsInfo[1]} van ${pointsInfo[2]}",
-                        style: TextStyle(
-                            color: Constants().colorTitle,
-                            fontSize: sizes.sizeFontSchedule,
-                            fontWeight: FontWeight.bold),
-                      )
-                : */ Text(
-              "",
-            ),
-          ),
-          //          separator(),
           if (dutyData.data.isNotEmpty)
             Expanded(
               child: ListView.builder(
                 itemCount: dutyData.data.length,
                 itemBuilder: (BuildContext ctxt, int index) {
                   if ((dutyData.data[index]['duty'] == team.currentTeam) &&
-                      (dutyData.data[index].length == 5)) {
-                    // Zaalwacht
+                      (dutyData.data[index]['type'] == "zaaldienst")) {
                     return Column(
                       children: [
+                        separator(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -125,17 +99,17 @@ class _DutyState extends State<Duty> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        separator(),
                       ],
                     );
-                  } else {
+                  }
+
+                  if (dutyData.data[index]['type'] == "volleystars") {}
+                  if (dutyData.data[index]['type'] == "wedstrijd") {
                     if ((dutyData.data[index]['referee'] == team.currentTeam) ||
-                        (dutyData.data[index]['counter'] == team.currentTeam) ||
-                        dutyData.data[index]['hometeam'].toString().contains(
-                          "VolleyStars",
-                        )) {
+                        (dutyData.data[index]['counter'] == team.currentTeam)) {
                       return Column(
                         children: [
+                          separator(),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -149,13 +123,7 @@ class _DutyState extends State<Duty> {
                               ),
                               const SizedBox(width: 10),
                               Text(
-                                dutyData.data[index]['hometeam']
-                                        .toString()
-                                        .contains("VolleyStars")
-                                    ? dutyData.data[index]['time'] == "null"
-                                          ? ""
-                                          : "${dutyData.data[index]['time']} - ${dutyData.data[index]['endtime']}"
-                                    : dutyData.data[index]['time'],
+                                dutyData.data[index]['time'],
                                 style: TextStyle(
                                   color: Constants().colorSchedule,
                                   fontSize: sizes.sizeFontSchedule,
@@ -173,13 +141,9 @@ class _DutyState extends State<Duty> {
                             ),
                           ),
                           Text(
-                            dutyData.data[index]['hometeam']
-                                    .toString()
-                                    .contains("VolleyStars")
-                                ? "Volley Stars wedstrijden"
-                                : rssClean.clean(
-                                    "${dutyData.data[index]['hometeam']} - ${dutyData.data[index]['visitor']}",
-                                  ),
+                            rssClean.clean(
+                              "AETOS ${dutyData.data[index]['hometeam']} - ${dutyData.data[index]['visitor']}",
+                            ),
                             style: TextStyle(
                               color: Constants().colorSchedule,
                               fontSize: sizes.sizeFontSchedule,
@@ -213,26 +177,34 @@ class _DutyState extends State<Duty> {
                               ),
                             ),
                           ),
-                          separator(),
+                          //      separator(),
                         ],
                       );
                     } else {
                       return Column();
                     }
+                  } else {
+                    return Column();
                   }
                 },
               ),
             ),
-          /*
+
           if (dutyData.data.isEmpty)
-            Text(
-              "GEEN DIENST",
-              style: TextStyle(
+            Center(
+              child: Text(
+                """
+
+  GEGEVENS
+   WORDEN 
+OPGEHAALD""",
+                style: TextStyle(
                   color: Constants().colorSchedule,
                   fontSize: 1.5 * sizes.sizeFontSchedule,
-                  fontWeight: FontWeight.bold),
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
-*/
         ],
       ),
     );

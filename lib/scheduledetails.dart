@@ -1,22 +1,32 @@
 import 'package:flutter/material.dart';
 
 import 'constants.dart';
-import 'players.dart';
 import 'rss_clean.dart';
 import 'sizes.dart';
 
 class ScheduleDetails {
-  Players players = Players.instance;
   Sizes sizes = Sizes.instance;
 
   // ignore: strict_top_level_inference
-  scheduleDetails(BuildContext context, int index, List listOfItems,
-      String counter, String referee, String dutyTeam) {
+  scheduleDetails(
+    BuildContext context,
+    int index,
+    List listOfItems,
+    String counter,
+    String referee,
+    String dutyTeam,
+  ) {
     return Null;
   }
 
-  Future<void> xscheduleDetails(BuildContext context, int index,
-      List listOfItems, String counter, String referee, String dutyTeam) {
+  Future<void> xscheduleDetails(
+    BuildContext context,
+    int index,
+    List listOfItems,
+    String counter,
+    String referee,
+    String dutyTeam,
+  ) {
     return showDialog<void>(
       context: context,
       builder: (BuildContext context) {
@@ -26,11 +36,12 @@ class ScheduleDetails {
             "DETAILS WEDSTRIJD",
             textAlign: TextAlign.center,
             style: TextStyle(
-                color: Constants().colorTitle,
-                fontSize: sizes.tablet
-                    ? 0.015 * sizes.screenHeight
-                    : 0.025 * sizes.screenHeight,
-                fontWeight: FontWeight.bold),
+              color: Constants().colorTitle,
+              fontSize: sizes.tablet
+                  ? 0.015 * sizes.screenHeight
+                  : 0.025 * sizes.screenHeight,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           actions: <Widget>[
             SizedBox(
@@ -44,48 +55,48 @@ class ScheduleDetails {
                       Text(
                         listOfItems[index]['date'],
                         style: TextStyle(
-                            color: Constants().colorScheduleDetails,
-                            fontSize: 0.9 * sizes.sizeFontSchedule,
-                            fontWeight: FontWeight.bold),
+                          color: Constants().colorScheduleDetails,
+                          fontSize: 0.9 * sizes.sizeFontSchedule,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                      const SizedBox(
-                        width: 10,
-                      ),
+                      const SizedBox(width: 10),
                       Text(
                         listOfItems[index]['time'] == "0:00"
                             ? ""
                             : listOfItems[index]['time'],
                         style: TextStyle(
-                            color: Constants().colorScheduleDetails,
-                            fontSize: sizes.sizeFontSchedule,
-                            fontWeight: FontWeight.bold),
+                          color: Constants().colorScheduleDetails,
+                          fontSize: sizes.sizeFontSchedule,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ],
                   ),
                   Text(
                     listOfItems[index]['game'],
                     style: TextStyle(
-                        color: Constants().colorScheduleDetails,
-                        fontSize: sizes.sizeFontSchedule,
-                        fontWeight: FontWeight.bold),
+                      color: Constants().colorScheduleDetails,
+                      fontSize: sizes.sizeFontSchedule,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   Visibility(
                     visible: counter != "",
-                    child: SizedBox(
-                      height: 0.01 * sizes.screenHeight,
-                    ),
+                    child: SizedBox(height: 0.01 * sizes.screenHeight),
                   ),
                   Visibility(
                     visible: counter != "",
                     child: Text(
                       "Teller: $counter",
                       style: TextStyle(
-                          color: /*counterOwnTeam
+                        color: /*counterOwnTeam
                               ? Constants().colorTitle
                               : */
-                              Constants().colorScheduleDetails,
-                          fontSize: sizes.sizeFontSchedule,
-                          fontWeight: FontWeight.bold),
+                            Constants().colorScheduleDetails,
+                        fontSize: sizes.sizeFontSchedule,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                   Visibility(
@@ -93,9 +104,10 @@ class ScheduleDetails {
                     child: Text(
                       "Scheidsrechter: $referee",
                       style: TextStyle(
-                          color: Constants().colorScheduleDetails,
-                          fontSize: sizes.sizeFontSchedule,
-                          fontWeight: FontWeight.bold),
+                        color: Constants().colorScheduleDetails,
+                        fontSize: sizes.sizeFontSchedule,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                   Visibility(
@@ -103,46 +115,41 @@ class ScheduleDetails {
                     child: Text(
                       "Zaalwacht: $dutyTeam",
                       style: TextStyle(
-                          color: Constants().colorScheduleDetails,
-                          fontSize: sizes.sizeFontSchedule,
-                          fontWeight: FontWeight.bold),
+                        color: Constants().colorScheduleDetails,
+                        fontSize: sizes.sizeFontSchedule,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                  SizedBox(
-                    height: 0.01 * sizes.screenHeight,
-                  ),
+                  SizedBox(height: 0.01 * sizes.screenHeight),
                   Text(
                     RssClean().clean(listOfItems[index]['hall']),
                     style: TextStyle(
-                        color: Constants().colorScheduleDetails,
-                        fontSize: sizes.sizeFontSchedule,
-                        fontWeight: FontWeight.bold),
+                      color: Constants().colorScheduleDetails,
+                      fontSize: sizes.sizeFontSchedule,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   Text(
                     RssClean().clean(listOfItems[index]['street']),
                     style: TextStyle(
-                        color: Constants().colorScheduleDetails,
-                        fontSize: sizes.sizeFontSchedule,
-                        fontWeight: FontWeight.bold),
+                      color: Constants().colorScheduleDetails,
+                      fontSize: sizes.sizeFontSchedule,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   Text(
                     listOfItems[index]['postal'],
                     style: TextStyle(
-                        color: Constants().colorScheduleDetails,
-                        fontSize: sizes.sizeFontSchedule,
-                        fontWeight: FontWeight.bold),
+                      color: Constants().colorScheduleDetails,
+                      fontSize: sizes.sizeFontSchedule,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   separator(),
-                  for (int indexPlayer = 0;
-                      indexPlayer < players.data.length;
-                      indexPlayer++)
-                    Text(
-                      players.data[indexPlayer]['name'],
-                      style: TextStyle(decoration: TextDecoration.lineThrough),
-                    )
                 ],
               ),
-            )
+            ),
           ],
         );
       },

@@ -94,7 +94,7 @@ class _MainScreen extends State<MainScreen> {
           ),
           title: GestureDetector(
             onTap: () {
-              displayHallInfo(context);
+              //    displayHallInfo(context);
             },
             child: Image.asset(
               "assets/images/logo.png",
