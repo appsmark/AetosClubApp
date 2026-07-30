@@ -14,7 +14,6 @@ class Contact extends StatefulWidget {
 
 class _ContactState extends State<Contact> {
   DataContact dataContact = DataContact.instance;
-  String remotePDFpath = "";
   ScrollController scrollController = ScrollController(keepScrollOffset: true);
   Sizes sizes = Sizes.instance;
 
@@ -63,6 +62,8 @@ class _ContactState extends State<Contact> {
                                     Padding(
                                       padding: EdgeInsets.only(
                                         left: 0.1 * sizes.screenWidth,
+                                        //  bottom: 0,
+                                        //top: 0,
                                       ),
                                       child: Text(
                                         dataContact.data[index]['title'],
@@ -77,6 +78,8 @@ class _ContactState extends State<Contact> {
                                     Padding(
                                       padding: EdgeInsets.only(
                                         left: 0.15 * sizes.screenWidth,
+                                        bottom: 0.01 * sizes.screenHeight,
+                                        top: 0.01 * sizes.screenHeight,
                                       ),
                                       child: Text(
                                         dataContact.data[index]['title'],
@@ -90,12 +93,15 @@ class _ContactState extends State<Contact> {
                                 ],
                               ),
                             ),
+                            if (dataContact.data[index]['type'] == 'header')
+                              separator(),
                           ],
                         );
                       },
                     ),
                   ),
                 ),
+                //     separator(),
               ],
             );
           },

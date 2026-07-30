@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'data.dart';
+import 'data_contact.dart';
 import 'data_info.dart';
 import 'hall_info.dart';
 import 'persistent.dart';
@@ -21,6 +22,9 @@ void main() {
 
   Team team = Team();
   team.getStoredTeam();
+
+  DataContact dataContact = DataContact.instance;
+  dataContact.getContacts();
 
   DataInfo dataInfo = DataInfo.instance;
   dataInfo.getData();
