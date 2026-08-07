@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'constants.dart';
+import 'data_info.dart';
 import 'sizes.dart';
 
 class ViewPDFFromUrl extends StatelessWidget {
-  ViewPDFFromUrl({super.key, required this.url, required this.title});
+  ViewPDFFromUrl({
+    super.key,
+    required this.url,
+    required this.title,
+    required this.index,
+  });
+  final DataInfo dataInfo = DataInfo.instance;
   final Sizes sizes = Sizes.instance;
+  final int index;
   final String title;
   final String url;
 
@@ -19,10 +28,11 @@ class ViewPDFFromUrl extends StatelessWidget {
         toolbarHeight: sizes.heightToolbar,
         backgroundColor: Constants().colorBackground,
         title: Text(
-          title,
+          dataInfo.data[index]['title'],
           style: TextStyle(
-              color: Constants().colorAetosAmber,
-              fontSize: sizes.sizeFontTitle),
+            color: Constants().colorAetosAmber,
+            fontSize: sizes.sizeFontTitle,
+          ),
         ),
         leading: GestureDetector(
           child: Icon(
@@ -34,67 +44,59 @@ class ViewPDFFromUrl extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        /*actions: <Widget>[
+
+        actions: <Widget>[
           IconButton(
-            icon: Icon(
-              Icons.share,
-              color: Constants().colorAetosAmber,
-            ),
-          
+            icon: Icon(Icons.share, color: Constants().colorAetosAmber),
             onPressed: () {
               SharePlus.instance.share(
                 ShareParams(
-                  text:
-                      "Aetos document ${DataInfo().data[widget.index]['title']}",
-                  subject:
-                      'Aetos document ${DataInfo().data[widget.index]['title']}',
+                  text: "'${dataInfo.data[index]['file']}'",
+                  subject: "Aetos document ${dataInfo.data[index]['title']}",
                   //    sharePositionOrigin:
                   //      box!.localToGlobal(Offset.zero) & box.size,
                 ),
               );
             },
-            
           ),
-        ],*/
+        ],
       ),
-      body: PDF(
-        backgroundColor: Constants().colorAetosAmber,
-        swipeHorizontal: true,
-        pageFling: true,
-        pageSnap: true,
-        fitEachPage: true,
-        fitPolicy: FitPolicy.BOTH,
-        onLinkHandler: (uri) {
-          if (uri!.isNotEmpty) {
-            if (uri.startsWith('mailto')) {
-              sendEmail(uri);
-            } else {
-              launch(uri);
-            }
-          }
-        },
-      ).fromUrl(
-        url,
-        //placeholder: (double progress) => Center(child: Text('$progress %')),
-        errorWidget: (dynamic error) => Center(
-          child: Text(error.toString()),
-        ),
-      ),
+      body:
+          PDF(
+            backgroundColor: Constants().colorAetosAmber,
+            swipeHorizontal: true,
+            pageFling: true,
+            pageSnap: true,
+            fitEachPage: true,
+            fitPolicy: FitPolicy.BOTH,
+            onLinkHandler: (uri) {
+              if (uri!.isNotEmpty) {
+                if (uri.startsWith('mailto')) {
+                  sendEmail(uri);
+                } else {
+                  launch(uri);
+                }
+              }
+            },
+          ).fromUrl(
+            url,
+            //placeholder: (double progress) => Center(child: Text('$progress %')),
+            errorWidget: (dynamic error) =>
+                Center(child: Text(error.toString())),
+          ),
     );
   }
 
   Future<void> launch(String inputValue) async {
     final Uri url;
     url = Uri(
-        scheme: Uri.parse(inputValue).scheme,
-        host: Uri.parse(inputValue).host,
-        path: Uri.parse(inputValue).path);
+      scheme: Uri.parse(inputValue).scheme,
+      host: Uri.parse(inputValue).host,
+      path: Uri.parse(inputValue).path,
+    );
 
-    if (!await launchUrl(
-      url,
-      mode: LaunchMode.externalApplication,
-    )) {
-//      throw Exception('Could not launch $url');
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      //      throw Exception('Could not launch $url');
     }
   }
 

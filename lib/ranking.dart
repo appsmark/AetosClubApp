@@ -84,10 +84,11 @@ class _RankingState extends State<Ranking> {
                       style: TextStyle(
                         color:
                             item['team'].contains(
-                              "AETOS ${team.currentTeam.replaceAll('-', ' ')}",
-                            )
-                            ? Constants().colorTitle
-                            : Constants().colorRanking,
+                                  "AETOS ${team.currentTeam.replaceAll('-', ' ')}",
+                                ) ||
+                                item['team'].contains("AETOS Plauti")
+                            ? Constants().colorAetosBlue
+                            : Constants().colorAetosAmber,
                         fontWeight: FontWeight.bold,
                         fontSize: sizes.sizeFontRanking,
                       ),
@@ -101,10 +102,11 @@ class _RankingState extends State<Ranking> {
                       style: TextStyle(
                         color:
                             item['team'].contains(
-                              "AETOS ${team.currentTeam.replaceAll('-', ' ')}",
-                            )
-                            ? Constants().colorTitle
-                            : Constants().colorRanking,
+                                  "AETOS ${team.currentTeam.replaceAll('-', ' ')}",
+                                ) ||
+                                item['team'].contains("AETOS Plauti")
+                            ? Constants().colorAetosBlue
+                            : Constants().colorAetosAmber,
                         fontWeight: FontWeight.bold,
                         fontSize: sizes.sizeFontRanking,
                       ),
@@ -122,10 +124,11 @@ class _RankingState extends State<Ranking> {
                       style: GoogleFonts.robotoMono(
                         color:
                             item['team'].contains(
-                              "AETOS ${team.currentTeam.replaceAll('-', ' ')}",
-                            )
-                            ? Constants().colorTitle
-                            : Constants().colorRanking,
+                                  "AETOS ${team.currentTeam.replaceAll('-', ' ')}",
+                                ) ||
+                                item['team'].contains("AETOS Plauti")
+                            ? Constants().colorAetosBlue
+                            : Constants().colorAetosAmber,
                         fontWeight: FontWeight.bold,
                         fontSize: sizes.sizeFontRanking,
                       ),

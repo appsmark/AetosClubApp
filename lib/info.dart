@@ -76,6 +76,7 @@ class _InfoState extends State<Info> {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) => ViewPDFFromUrl(
+                                          index: index,
                                           url: dataInfo.data[index]['file'],
                                           title: dataInfo.data[index]['title'],
                                         ),

@@ -51,6 +51,7 @@ class RssClean {
     result = result.replaceAll("Zitvolley ", "");
     result = result.replaceAll("Zitvolleybal ", "");
     result = result.replaceAll("Rageroom Venlo ", "");
+    result = result.replaceAll("WRA Juristen - ", "");
     result = result.replaceAll("HS ", "H");
     result = result.replaceAll(" DS ", " D");
     result = result.replaceAll("JA ", "JA");
