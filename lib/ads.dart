@@ -12,6 +12,7 @@ class Ads {
     ["verandago", "verandago.nl"],
     ["plauti", "plauti.com"],
     ["bestliving", "bestliving.nl"],
+    ["rijssenbeek", "rijssenbeek.nl"],
     ["apps-mark", "apps-mark.nl"],
   ];
   int index = 0;
