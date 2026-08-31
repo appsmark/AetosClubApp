@@ -3,7 +3,7 @@ description: Aetos Team App
 
 publish_to: 'none'
 
-version: 7.4.0+740000
+version: 7.5.0+750000
 
 environment:
   sdk: '>=3.12.2 <4.0.0'
@@ -27,8 +27,6 @@ dependencies:
   shared_preferences: ^2.5.3
   url_launcher: ^6.3.2
   xml: ^6.6.1
-  any_link_preview: ^3.0.3
-  url_launcher_platform_interface: ^2.3.2
  
 dev_dependencies:
   flutter_lints: ^6.0.0

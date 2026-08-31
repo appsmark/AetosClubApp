@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'constants.dart';
 import 'data_info.dart';
 import 'info_image.dart';
-import 'info_link.dart';
 import 'info_pdf.dart';
 import 'persistent.dart';
 import 'sizes.dart';
@@ -85,15 +85,28 @@ class _InfoState extends State<Info> {
                                     );
                                   }
                                   if (dataInfo.data[index]['type'] == 'link') {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => InfoLink(
-                                          title: dataInfo.data[index]['title'],
-                                          file: dataInfo.data[index]['file'],
-                                        ),
-                                      ),
-                                    );
+                                    final String url =
+                                        dataInfo.data[index]['file'];
+                                    final uri = Uri.tryParse(url);
+                                    if (uri != null) {
+                                      final Uri launchUri =
+                                          uri.host.contains(
+                                                'docs.google.com',
+                                              ) &&
+                                              uri.path.contains('/document/')
+                                          ? uri.replace(
+                                              queryParameters: {
+                                                ...uri.queryParameters,
+                                                'embedded': 'true',
+                                              },
+                                            )
+                                          : uri;
+
+                                      launchUrl(
+                                        launchUri,
+                                        mode: LaunchMode.externalApplication,
+                                      );
+                                    }
                                   }
                                 },
                                 child: Row(
