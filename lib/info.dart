@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'data_info.dart';
 import 'info_image.dart';
+import 'info_link.dart';
 import 'info_pdf.dart';
 import 'persistent.dart';
 import 'sizes.dart';
@@ -83,6 +84,17 @@ class _InfoState extends State<Info> {
                                       ),
                                     );
                                   }
+                                  if (dataInfo.data[index]['type'] == 'link') {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => InfoLink(
+                                          title: dataInfo.data[index]['title'],
+                                          file: dataInfo.data[index]['file'],
+                                        ),
+                                      ),
+                                    );
+                                  }
                                 },
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -102,10 +114,8 @@ class _InfoState extends State<Info> {
                                           ),
                                         ),
                                       ),
-                                    if ((dataInfo.data[index]['type'] ==
-                                            'file') ||
-                                        (dataInfo.data[index]['type'] ==
-                                            'image'))
+                                    if (dataInfo.data[index]['type'] !=
+                                        'header')
                                       Padding(
                                         padding: EdgeInsets.only(
                                           left: 0.15 * sizes.screenWidth,
