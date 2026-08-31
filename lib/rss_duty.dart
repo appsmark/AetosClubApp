@@ -226,20 +226,6 @@ class RssDuty extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<RssFeed> xgetRssFeed(Client client, String group) async {
-    Response response = Response('', 200);
-    try {
-      response = await client.get(Uri.parse(group));
-    } catch (e) {
-      debugPrint(e.toString());
-    }
-    if (response.body != "Not Found") {
-      return RssFeed.parse(response.body);
-    } else {
-      return const RssFeed();
-    }
-  }
-
   void parseRSS(RssFeed feed) {
     //RegExp timeRegex = RegExp(r"\d?\d:\d\d");
     String? home = "";
