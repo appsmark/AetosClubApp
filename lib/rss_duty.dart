@@ -29,12 +29,7 @@ class RssDuty extends ChangeNotifier {
     Response response = Response('', 200);
     try {
       response = await client.get(
-        Uri(
-          scheme: 'https',
-          host: 'aetos-wedstrijden.lovable.app',
-          path: '/api/public/rss',
-        ),
-        //Uri(scheme: 'http', host: 'apps-mark.nl', path: '/aetos/testRss'),
+        Uri(scheme: 'https', host: 'aetos.nl', path: 'rss'),
       );
       parseRss(response.body);
     } catch (e) {
@@ -70,7 +65,7 @@ class RssDuty extends ChangeNotifier {
       tempDate = DateFormat("dd-MM-yyyy").parse(date);
 
       if (tempDate.difference(DateTime.now()).inDays >= 0) {
-        if (node!.firstChild?.value == "Zaaldienst") {
+        if (node!.firstChild?.value == "zaaldienst") {
           creatorElement = item
               .elementAt(i)
               .findElements(

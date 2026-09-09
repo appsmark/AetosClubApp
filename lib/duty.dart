@@ -142,7 +142,7 @@ class _DutyState extends State<Duty> {
                           ),
                           Text(
                             rssClean.clean(
-                              "AETOS ${dutyData.data[index]['hometeam']} - ${dutyData.data[index]['visitor']}",
+                              "${dutyData.data[index]['hometeam']} - ${dutyData.data[index]['visitor']}",
                             ),
                             style: TextStyle(
                               color: Constants().colorSchedule,

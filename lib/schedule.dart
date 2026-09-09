@@ -44,10 +44,21 @@ class _ScheduleState extends State<Schedule> {
   Future getData() async {
     DateTime tempDate;
     await rss.getSchedule();
-    // await dutyJson.getDuty(true);
 
     setState(() {
       listOfItems = data.getGames();
+      if (listOfItems.isEmpty) {
+        listOfItems = [
+          {
+            'date': '',
+            'time': '',
+            'game': '',
+            'hall': '',
+            'street': '',
+            'postal': '',
+          },
+        ];
+      }
       listOfDuties = dutyData.getGameData();
       if (listOfItems[0]["game"].toString().startsWith("AETOS")) {
         if (listOfDuties.isNotEmpty) {
