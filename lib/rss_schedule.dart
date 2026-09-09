@@ -63,7 +63,6 @@ class RssSchedule {
           });
         }
       }
-      //   debugPrint(item.description!);
     }
   }
 }

@@ -13,12 +13,19 @@ class Ads {
     ["plauti", "plauti.com"],
     ["bestliving", "bestliving.nl"],
     ["rijssenbeek", "rijssenbeek.nl"],
-    ["apps-mark", "apps-mark.nl"],
+    ["apps-mark", "apps-mark.nl", "indexNL.html"],
   ];
   int index = 0;
 
   String getLogo() {
     return "${ads[index][0]}.png";
+  }
+
+  String getPath() {
+    if (ads[index].length > 2) {
+      return ads[index][2];
+    }
+    return "";
   }
 
   String getWebsite() {

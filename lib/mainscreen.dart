@@ -58,7 +58,7 @@ class _MainScreen extends State<MainScreen> {
 
   Future<void> launchWebsite() async {
     String website = 'www.${ads.getWebsite()}';
-    final Uri url = Uri(scheme: 'http', host: website);
+    final Uri url = Uri(scheme: 'http', host: website, path: ads.getPath());
 
     if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
       throw Exception('Could not launch $url');
