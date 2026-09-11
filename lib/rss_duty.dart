@@ -43,6 +43,7 @@ class RssDuty extends ChangeNotifier {
     String date = "";
 
     String dutyTeam = "";
+    String dutyTeamOld = "";
     String endtime = "";
     String hall = "";
     String starttime = "";
@@ -50,6 +51,8 @@ class RssDuty extends ChangeNotifier {
     String visitor = "";
     String referee = "";
     String counter = "";
+    String task = "";
+    int taskCount = 0;
     Iterable creatorElement;
     XmlElement? node;
     XmlDocument document = XmlDocument.parse(response);
@@ -110,7 +113,7 @@ class RssDuty extends ChangeNotifier {
             "duty": dutyTeam,
           });
         } else {
-          if (node.firstChild?.value == "Volley Stars") {
+          if (node.firstChild?.value == "volleystars") {
             creatorElement = item
                 .elementAt(i)
                 .findElements(
@@ -143,12 +146,28 @@ class RssDuty extends ChangeNotifier {
             dutyTeam = dutyTeam.replaceAll('DS ', "D");
             dutyTeam = dutyTeam.replaceAll('HS ', "H");
             dutyTeam = dutyTeam.replaceAll(' ', "");
+            creatorElement = item
+                .elementAt(i)
+                .findElements(
+                  'omschrijving',
+                  namespace: 'https://aetos-arnhem.nl/rss/ns',
+                );
+            task = creatorElement.single.text;
+            if (dutyTeam == dutyTeamOld) {
+              taskCount++;
+              dutyTeamOld = dutyTeam;
+            } else {
+              taskCount = 1;
+              dutyTeamOld = dutyTeam;
+            }
             dutyData.add({
               "type": "volleystars",
               "date": date,
               "time": starttime,
               "endtime": endtime,
               "hall": hall,
+              "task": task,
+              "taskCount": taskCount,
               "duty": dutyTeam,
             });
           } else {

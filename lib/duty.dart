@@ -103,7 +103,60 @@ class _DutyState extends State<Duty> {
                     );
                   }
 
-                  if (dutyData.data[index]['type'] == "volleystars") {}
+                  if ((dutyData.data[index]['duty'] == team.currentTeam) &&
+                      dutyData.data[index]['type'] == "volleystars") {
+                    return Column(
+                      children: [
+                        separator(),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              rssClean.clean(dutyData.data[index]['date']),
+                              style: TextStyle(
+                                color: Constants().colorSchedule,
+                                fontSize: sizes.sizeFontSchedule,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const SizedBox(width: 10),
+                            Text(
+                              dutyData.data[index]['time'],
+                              style: TextStyle(
+                                color: Constants().colorSchedule,
+                                fontSize: sizes.sizeFontSchedule,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          "Sporthal ${dutyData.data[index]['hall']}",
+                          style: TextStyle(
+                            color: Constants().colorSchedule,
+                            fontSize: sizes.sizeFontSchedule,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          "Volley Stars",
+                          style: TextStyle(
+                            color: Constants().colorSchedule,
+                            fontSize: sizes.sizeFontSchedule,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          "${dutyData.data[index]['task']}: ${dutyData.data[index]['duty']} (${dutyData.data[index]['taskCount']}e persoon)",
+                          style: TextStyle(
+                            color: Constants().colorTitle,
+                            fontSize: sizes.sizeFontSchedule,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    );
+                  }
                   if (dutyData.data[index]['type'] == "wedstrijd") {
                     if ((dutyData.data[index]['referee'] == team.currentTeam) ||
                         (dutyData.data[index]['counter'] == team.currentTeam)) {

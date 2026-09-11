@@ -52,11 +52,7 @@ class TeamInfo {
     ["MC5", "regio-oost/XC3K1", "meiden-c/5"],
     ["MC6", "regio-oost/XC4H1", "meiden-c/6"],
     ["MC7", "regio-oost/XC3J1", "meiden-c/7"],
-    [
-      "XZ1",
-      "nationale-competitie/zitvolleybal-zitvolleybal/nationale-competitie-3zv1",
-      "mix-zitvolleybal/1",
-    ],
+
     ["L2 1", "regio-oost/VW21A1", "volley-stars-level-2/1"],
     ["L3 1", "regio-oost/VW31A1", "volley-stars-level-3/1"],
     ["L3 2", "regio-oost/VW31B1", "volley-stars-level-3/2"],
@@ -75,6 +71,12 @@ class TeamInfo {
     ["L5 7", "regio-oost/VW51A1", "volley-stars-level-5/7"],
     ["L5 8", "regio-oost/VW51B1", "volley-stars-level-5/8"],
     ["L5 9", "regio-oost/VW52DA", "volley-stars-level-5/9"],
+
+    [
+      "XZ1",
+      "nationale-competitie/zitvolleybal-zitvolleybal/nationale-competitie-3zv1",
+      "mix-zitvolleybal/1",
+    ],
   ];
 
   bool availabe(String target) {
