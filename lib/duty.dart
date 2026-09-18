@@ -121,7 +121,7 @@ class _DutyState extends State<Duty> {
                             ),
                             const SizedBox(width: 10),
                             Text(
-                              dutyData.data[index]['time'],
+                              "${dutyData.data[index]['time']} - ${dutyData.data[index]['endtime']}",
                               style: TextStyle(
                                 color: Constants().colorSchedule,
                                 fontSize: sizes.sizeFontSchedule,

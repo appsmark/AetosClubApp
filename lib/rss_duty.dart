@@ -153,6 +153,12 @@ class RssDuty extends ChangeNotifier {
                   namespace: 'https://aetos-arnhem.nl/rss/ns',
                 );
             task = creatorElement.single.text;
+            if (task == "Afbouwen") {
+              task = "Tellen/Opruimen";
+            }
+            if (task == "Opbouwen") {
+              task = "Opbouwen/Tellen";
+            }
             if (dutyTeam == dutyTeamOld) {
               taskCount++;
               dutyTeamOld = dutyTeam;
@@ -192,7 +198,11 @@ class RssDuty extends ChangeNotifier {
                   'fluiten',
                   namespace: 'https://aetos-arnhem.nl/rss/ns',
                 );
-            referee = creatorElement.single.text;
+            if (creatorElement.isNotEmpty) {
+              referee = creatorElement.single.text;
+            } else {
+              referee = "?";
+            }
             referee = referee.replaceAll('DS ', "D");
             referee = referee.replaceAll('HS ', "H");
             referee = referee.replaceAll(' ', "");
@@ -202,10 +212,14 @@ class RssDuty extends ChangeNotifier {
                   'tellen',
                   namespace: 'https://aetos-arnhem.nl/rss/ns',
                 );
-            counter = creatorElement.single.text;
-            counter = counter.replaceAll('DS ', "D");
-            counter = counter.replaceAll('HS ', "H");
-            counter = counter.replaceAll(' ', "");
+            if (creatorElement.isNotEmpty) {
+              counter = creatorElement.single.text;
+              counter = counter.replaceAll('DS ', "D");
+              counter = counter.replaceAll('HS ', "H");
+              counter = counter.replaceAll(' ', "");
+            } else {
+              counter = "?";
+            }
             creatorElement = item
                 .elementAt(i)
                 .findElements(
