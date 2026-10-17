@@ -166,7 +166,7 @@ class _MainScreen extends State<MainScreen> {
       //   fullscreenDialog: true,
       context: context,
       builder: (BuildContext context) {
-        hallInfo.get();
+        //        hallInfo.get();
         return AlertDialog(
           backgroundColor: Constants().colorAetosMaroon,
           contentTextStyle: TextStyle(

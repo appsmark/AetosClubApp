@@ -1,7 +1,4 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 
 class HallInfo {
@@ -41,6 +38,8 @@ class HallInfo {
   }
 
   Future getDuty() async {
+    return;
+    /*
     var result = await http.get(
       Uri.parse("http://apps-mark.nl/aetos/zaaldienst2526.json"),
     );
@@ -50,6 +49,7 @@ class HallInfo {
     } else {
       throw Exception('Failed to load duty');
     }
+    */
   }
 
   String convert(String inputStream) {

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:intl/intl.dart';
-import 'package:rss_dart/dart_rss.dart';
 import 'package:xml/xml.dart';
 
 import 'duty_data.dart';
@@ -27,6 +26,7 @@ class RssDuty extends ChangeNotifier {
 
   Future<String> getRssFeed(Client client) async {
     Response response = Response('', 200);
+    debugPrint("==== getRssFeed");
     try {
       response = await client.get(
         Uri(scheme: 'https', host: 'aetos.nl', path: 'rss'),
@@ -35,6 +35,8 @@ class RssDuty extends ChangeNotifier {
     } catch (e) {
       debugPrint(e.toString());
     }
+    debugPrint("==== getRssFeed ready");
+    notifyListeners();
     return (response.body);
   }
 
@@ -46,6 +48,7 @@ class RssDuty extends ChangeNotifier {
     String dutyTeamOld = "";
     String endtime = "";
     String hall = "";
+    String license = "";
     String starttime = "";
     String hometeam = "";
     String visitor = "";
@@ -209,6 +212,17 @@ class RssDuty extends ChangeNotifier {
             creatorElement = item
                 .elementAt(i)
                 .findElements(
+                  'fluitlicentie',
+                  namespace: 'https://aetos-arnhem.nl/rss/ns',
+                );
+            if (creatorElement.isNotEmpty) {
+              license = "(${creatorElement.single.text})";
+            } else {
+              license = "";
+            }
+            creatorElement = item
+                .elementAt(i)
+                .findElements(
                   'tellen',
                   namespace: 'https://aetos-arnhem.nl/rss/ns',
                 );
@@ -244,42 +258,12 @@ class RssDuty extends ChangeNotifier {
               "hometeam": hometeam,
               "visitor": visitor,
               "referee": referee,
+              "license": license,
               "counter": counter,
             });
           }
         }
       }
-    }
-
-    notifyListeners();
-  }
-
-  void parseRSS(RssFeed feed) {
-    //RegExp timeRegex = RegExp(r"\d?\d:\d\d");
-    String? home = "";
-    String? visitor = "";
-    for (var item in feed.items) {
-      //   RegExpMatch? time = timeRegex.firstMatch(item.description!);
-      // if (time != null) {
-
-      home = item.title
-          ?.replaceAll("Wedstrijd: ", "")
-          .replaceAll(RegExp(" -.*"), "");
-      visitor = item.title
-          ?.replaceAll("Wedstrijd: ", "")
-          .replaceAll(RegExp(".*- "), "");
-      dutyData.add({
-        "date": "12 10",
-        "time": "12:30",
-        //"endtime": endtime,
-        "hometeam": home,
-        "visitor": visitor,
-        //        "hall": inputStream[index]["Locatie"],
-        "referee": 'D1',
-        //    "counter": inputStream[index]["teller"],
-        //  "duty": dutyTeam,
-      });
-      //   debugPrint(item.description!);
     }
   }
 }

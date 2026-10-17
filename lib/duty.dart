@@ -204,7 +204,7 @@ class _DutyState extends State<Duty> {
                             ),
                           ),
                           Text(
-                            "Fluiten: ${dutyData.data[index]['referee']}",
+                            "Fluiten ${dutyData.data[index]['license']}: ${dutyData.data[index]['referee']}",
                             style: TextStyle(
                               color:
                                   team.currentTeam ==

@@ -6,7 +6,6 @@ import 'package:flutter/services.dart';
 import 'data.dart';
 import 'data_contact.dart';
 import 'data_info.dart';
-import 'hall_info.dart';
 import 'persistent.dart';
 import 'root.dart';
 import 'rss_duty.dart';
@@ -29,8 +28,8 @@ void main() {
   DataInfo dataInfo = DataInfo.instance;
   dataInfo.getData();
 
-  HallInfo hallInfo = HallInfo.instance;
-  hallInfo.get();
+  //  HallInfo hallInfo = HallInfo.instance;
+  //  hallInfo.get();
 
   RssDuty rssDuty = RssDuty.instance;
   rssDuty.getSchedule();

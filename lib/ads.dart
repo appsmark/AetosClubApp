@@ -14,7 +14,7 @@ class Ads {
     ["bestliving", "bestliving.nl"],
     ["rijssenbeek", "rijssenbeek.nl"],
     ["flink", "goflink.com", "nl-NL"],
-    ["publiqbelasting", "publiqbelastingadviseurs.nl"],
+    //    ["publiqbelasting", "publiqbelastingadviseurs.nl"],
     ["kicken", "kicken-om.nl"],
     ["jeroenkleinbussink", "jeroenkleinbussink.nl"],
     ["vinoos", "vinoos.nl"],
