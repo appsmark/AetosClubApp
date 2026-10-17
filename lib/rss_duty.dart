@@ -18,15 +18,11 @@ class RssDuty extends ChangeNotifier {
     bool result = false;
     Client client = Client();
     getRssFeed(client);
-    //    getRssFeed(client).then((value) {
-    //    result = true;
-    //});
     return result;
   }
 
   Future<String> getRssFeed(Client client) async {
     Response response = Response('', 200);
-    debugPrint("==== getRssFeed");
     try {
       response = await client.get(
         Uri(scheme: 'https', host: 'aetos.nl', path: 'rss'),
@@ -35,7 +31,6 @@ class RssDuty extends ChangeNotifier {
     } catch (e) {
       debugPrint(e.toString());
     }
-    debugPrint("==== getRssFeed ready");
     notifyListeners();
     return (response.body);
   }
